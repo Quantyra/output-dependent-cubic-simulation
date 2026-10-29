@@ -564,6 +564,40 @@
       "axioms": [],
       "build_audit_receipt": "lean/evidence/monomial-difference-audit.md",
       "unresolved_bridge": "Translate these pointwise identities into an algorithm producing square-free bit-mask ANFs, bound monomial degree for all masks, and lift to arbitrary cubic phase lists."
+    },
+    {
+      "id": "quadratic-coordinate-difference",
+      "section": "2",
+      "target": "SectorSimulation.quadraticVariable_derivative",
+      "assumptions": "Boolean-vector coordinates and pointwise XOR translation; repeated indices are permitted.",
+      "quantifiers": "All index types, coordinate indices, input vectors and shift vectors.",
+      "statement": "The derivative of the function w -> w_i AND w_k under binary shift j is (j_i AND v_k) XOR (v_i AND j_k) XOR (j_i AND j_k).",
+      "dependencies": [
+        "quadratic-monomial-difference",
+        "cubic-monomial-difference",
+        "binary-coordinate-derivative"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/coordinate-monomial-audit.md",
+      "unresolved_bridge": "Connect explicit coordinate products to arbitrary bit-mask monomial evaluation and construct a quadratic ANF with a proved degree bound."
+    },
+    {
+      "id": "cubic-coordinate-difference",
+      "section": "2",
+      "target": "SectorSimulation.cubicVariable_derivative",
+      "assumptions": "Boolean-vector coordinates and pointwise XOR translation; repeated indices are permitted.",
+      "quantifiers": "All index types, coordinate indices, input vectors and shift vectors.",
+      "statement": "The derivative of w -> w_i AND w_k AND w_l under binary shift j equals the seven explicit terms in MonomialDifference.lean, each involving at most two original coordinates.",
+      "dependencies": [
+        "quadratic-monomial-difference",
+        "cubic-monomial-difference",
+        "binary-coordinate-derivative"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/coordinate-monomial-audit.md",
+      "unresolved_bridge": "Connect explicit coordinate products to arbitrary bit-mask monomial evaluation and construct a quadratic ANF with a proved degree bound."
     }
   ],
   "paper_source": "manuscript/main.tex",

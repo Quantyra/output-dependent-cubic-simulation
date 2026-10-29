@@ -30,3 +30,7 @@ import SectorSimulation
 #print axioms SectorSimulation.quadratic_difference_expansion
 #check SectorSimulation.cubic_difference_expansion
 #print axioms SectorSimulation.cubic_difference_expansion
+#check SectorSimulation.quadraticVariable_derivative
+#print axioms SectorSimulation.quadraticVariable_derivative
+#check SectorSimulation.cubicVariable_derivative
+#print axioms SectorSimulation.cubicVariable_derivative

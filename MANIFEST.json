@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 1606,
-      "sha256": "461c89dd2da1509bf0467a12bcbcd1bf932791260959e70ff0abb16a2a117b28"
+      "bytes": 1824,
+      "sha256": "40b3db75b2a3752fcfb356710ad20cbd551a99102540bc2be33f5ef96a3d3fcd"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 31630,
-      "sha256": "210d642bf10474e25ce3c05f4a834561029d4bdd344ab6bb4c65b187a9b522c3"
+      "bytes": 33584,
+      "sha256": "239ee2f8589e74bd3c91768fb2060e3786251390e82d5b510899e6d7c94f5c3a"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -174,8 +174,8 @@
     },
     {
       "path": "lean/SectorSimulation/MonomialDifference.lean",
-      "bytes": 1294,
-      "sha256": "a4c29be4dc0ad133c75cb43af07dfa3e52c16aaa0d60a1411b22ee4203e3c5ae"
+      "bytes": 2306,
+      "sha256": "a31d7ebf86d0f3806d9da3e33b97b20e91cf560806591ac7c8043a51eeef4bc9"
     },
     {
       "path": "lean/SourceExamples.lean",
@@ -203,6 +203,11 @@
       "sha256": "367a4ccac6e8fe81fa2a825be3791e92ed62bd54ab635374171e208be1e5ba28"
     },
     {
+      "path": "lean/evidence/coordinate-monomial-audit.md",
+      "bytes": 1385,
+      "sha256": "6146c7b3a9df35b40f76c3046815810ed4cc586657f90666f6ba662210861dc4"
+    },
+    {
       "path": "lean/evidence/derivative-additivity-audit.md",
       "bytes": 1423,
       "sha256": "422a6f9d0da060171200805c8dfabe7f2635d412864a9beb1dd933855f5302c5"
@@ -224,8 +229,8 @@
     },
     {
       "path": "lean/evidence/monomial-difference-audit.md",
-      "bytes": 1253,
-      "sha256": "c1c8468538165db52565a296e082c466256efb1ea114974f0c83864e2bc20cfc"
+      "bytes": 1294,
+      "sha256": "c8f38269f8e5a879c9ce4947ebd9eea3d278c67ca0409d0559534727d790546e"
     },
     {
       "path": "lean/evidence/second-phase-shift-audit.md",
@@ -634,8 +639,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 1907,
-      "sha256": "1ad9856c8ce1f5fa9131d58fab451435ed17aebdfc56dd0f711e74d1087f876f"
+      "bytes": 2023,
+      "sha256": "5c0b11629b7b645d1b50451ab0f4f11cc6ff421e1a66c8703534857dbe0577ac"
     },
     {
       "path": "tools/check_metadata.py",

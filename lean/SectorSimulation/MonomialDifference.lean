@@ -31,4 +31,23 @@ theorem cubic_difference_expansion (a b c ja jb jc : Bool) :
   cases a <;> cases b <;> cases c <;>
     cases ja <;> cases jb <;> cases jc <;> rfl
 
+/-- The explicit quadratic-monomial expansion instantiated on binary vectors. -/
+theorem quadraticVariable_derivative {ι : Type} (i k : ι) (v j : ι → Bool) :
+    booleanDerivative (fun w => w i && w k) (binaryShift j) v =
+      Bool.xor (Bool.xor (j i && v k) (v i && j k)) (j i && j k) := by
+  exact quadratic_difference_expansion (v i) (v k) (j i) (j k)
+
+/-- The explicit cubic-monomial expansion instantiated on binary vectors.
+Repeated indices are allowed; no distinctness or oracle hypothesis is needed. -/
+theorem cubicVariable_derivative {ι : Type} (i k l : ι) (v j : ι → Bool) :
+    booleanDerivative (fun w => w i && w k && w l) (binaryShift j) v =
+      Bool.xor
+        (Bool.xor
+          (Bool.xor (j i && v k && v l) (v i && j k && v l))
+          (Bool.xor (v i && v k && j l) (j i && j k && v l)))
+        (Bool.xor
+          (Bool.xor (j i && v k && j l) (v i && j k && j l))
+          (j i && j k && j l)) := by
+  exact cubic_difference_expansion (v i) (v k) (v l) (j i) (j k) (j l)
+
 end SectorSimulation
