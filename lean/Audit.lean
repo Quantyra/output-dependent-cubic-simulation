@@ -686,3 +686,16 @@ import SectorSimulation
 
 #check SectorSimulation.threeBitDecomposition_correct
 #print axioms SectorSimulation.threeBitDecomposition_correct
+
+#check SectorSimulation.toffoliBasisResult_replay
+#print axioms SectorSimulation.toffoliBasisResult_replay
+#check SectorSimulation.weightedBasis_replay
+#print axioms SectorSimulation.weightedBasis_replay
+#check SectorSimulation.weightedBasis_exponent
+#print axioms SectorSimulation.weightedBasis_exponent
+#check SectorSimulation.weightedBasisResult_exponent
+#print axioms SectorSimulation.weightedBasisResult_exponent
+#check SectorSimulation.sharedAddSame_exponent
+#print axioms SectorSimulation.sharedAddSame_exponent
+#check SectorSimulation.toffoli_threeBit_replay_sum
+#print axioms SectorSimulation.toffoli_threeBit_replay_sum

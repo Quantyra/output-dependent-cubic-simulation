@@ -129,3 +129,5 @@ import SectorSimulation.ToffoliScaledBasis
 import SectorSimulation.SharedAdditionAmplitude
 
 import SectorSimulation.ThreeBitDecomposition
+
+import SectorSimulation.ToffoliSuperposition

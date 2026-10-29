@@ -246,6 +246,12 @@ EXPECTED = {
     'SectorSimulation.replayExactNative_equal_exponents': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.replayExactNative_add_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.threeBitDecomposition_correct': {'propext', 'Quot.sound'},
+    'SectorSimulation.toffoliBasisResult_replay': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.weightedBasis_replay': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.weightedBasis_exponent': {'propext', 'Quot.sound'},
+    'SectorSimulation.weightedBasisResult_exponent': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedAddSame_exponent': set(),
+    'SectorSimulation.toffoli_threeBit_replay_sum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

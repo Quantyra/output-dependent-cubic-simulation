@@ -3631,6 +3631,103 @@
       ],
       "build_audit_receipt": "lean/evidence/three-bit-decomposition-audit.md",
       "unresolved_bridge": "Combine basis decomposition with replay and exact amplitude addition to prove arbitrary-state Toffoli action; establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-superposition-toffoliBasisResult_replay",
+      "section": "2",
+      "target": "SectorSimulation.toffoliBasisResult_replay",
+      "assumptions": "The defined shared-denominator exact three-wire states and literal Toffoli record list.",
+      "quantifiers": "Every represented three-wire state and, where applicable, every three-bit basis index or pair of indices.",
+      "statement": "The chosen three-bit basis result is the result of the literal Toffoli replay.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-replay-sum-audit.md",
+      "unresolved_bridge": "Show the replay sum has the ideal Toffoli output amplitudes, then establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-superposition-weightedBasis_replay",
+      "section": "2",
+      "target": "SectorSimulation.weightedBasis_replay",
+      "assumptions": "The defined shared-denominator exact three-wire states and literal Toffoli record list.",
+      "quantifiers": "Every represented three-wire state and, where applicable, every three-bit basis index or pair of indices.",
+      "statement": "The literal Toffoli replay succeeds on each weighted basis component and yields its corresponding weighted basis result.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-replay-sum-audit.md",
+      "unresolved_bridge": "Show the replay sum has the ideal Toffoli output amplitudes, then establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-superposition-weightedBasis_exponent",
+      "section": "2",
+      "target": "SectorSimulation.weightedBasis_exponent",
+      "assumptions": "The defined shared-denominator exact three-wire states and literal Toffoli record list.",
+      "quantifiers": "Every represented three-wire state and, where applicable, every three-bit basis index or pair of indices.",
+      "statement": "Each weighted basis component has the same denominator exponent as the original state.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-replay-sum-audit.md",
+      "unresolved_bridge": "Show the replay sum has the ideal Toffoli output amplitudes, then establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-superposition-weightedBasisResult_exponent",
+      "section": "2",
+      "target": "SectorSimulation.weightedBasisResult_exponent",
+      "assumptions": "The defined shared-denominator exact three-wire states and literal Toffoli record list.",
+      "quantifiers": "Every represented three-wire state and, where applicable, every three-bit basis index or pair of indices.",
+      "statement": "All weighted basis replay results for a given input have equal denominator exponents.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-replay-sum-audit.md",
+      "unresolved_bridge": "Show the replay sum has the ideal Toffoli output amplitudes, then establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-superposition-sharedAddSame_exponent",
+      "section": "2",
+      "target": "SectorSimulation.sharedAddSame_exponent",
+      "assumptions": "The defined shared-denominator exact three-wire states and literal Toffoli record list.",
+      "quantifiers": "Every represented three-wire state and, where applicable, every three-bit basis index or pair of indices.",
+      "statement": "Adding two shared-denominator state numerators retains the first exponent.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/toffoli-replay-sum-audit.md",
+      "unresolved_bridge": "Show the replay sum has the ideal Toffoli output amplitudes, then establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-superposition-toffoli_threeBit_replay_sum",
+      "section": "2",
+      "target": "SectorSimulation.toffoli_threeBit_replay_sum",
+      "assumptions": "The defined shared-denominator exact three-wire states and literal Toffoli record list.",
+      "quantifiers": "Every represented three-wire state and, where applicable, every three-bit basis index or pair of indices.",
+      "statement": "Literal three-wire Toffoli replay on any represented state succeeds and equals the sum of the eight weighted basis replay results.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-replay-sum-audit.md",
+      "unresolved_bridge": "Show the replay sum has the ideal Toffoli output amplitudes, then establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
