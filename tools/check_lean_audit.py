@@ -305,6 +305,12 @@ EXPECTED = {
     'SectorSimulation.idealLowerPhaseLayer_phase': {'propext'},
     'SectorSimulation.idealLowerPhaseLayer_exponent': set(),
     'SectorSimulation.combinedPhaseNative_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.selectedTriple_values': {'propext'},
+    'SectorSimulation.selectedVariables_nodup': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.selectedTriple_injective': {'propext', 'Quot.sound'},
+    'SectorSimulation.cubicMask_supported_block': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cubicPhase_supported_blocks': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cubicPhase_native_exists': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

@@ -153,3 +153,5 @@ import SectorSimulation.CubicLayerANF
 import SectorSimulation.LowerPhaseNative
 
 import SectorSimulation.CombinedPhaseNative
+
+import SectorSimulation.CubicMaskCoverage

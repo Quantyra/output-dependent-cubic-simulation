@@ -4590,6 +4590,105 @@
       ],
       "build_audit_receipt": "lean/evidence/combined-phase-native-audit.md",
       "unresolved_bridge": "Establish coverage and compilation of arbitrary source ANF descriptors, Python correspondence, complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-mask-coverage-selectedTriple_values",
+      "section": "2",
+      "target": "SectorSimulation.selectedTriple_values",
+      "assumptions": "The modeled Boolean masks, exact native interpreter and an available wire; each source mask has degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded source masks and phase lists, represented states and output vectors as applicable.",
+      "statement": "The selected triple map returns its three specified wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-mask-coverage-audit.md",
+      "unresolved_bridge": "Construct and verify an executable source-to-record compiler and its Python correspondence; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-mask-coverage-selectedVariables_nodup",
+      "section": "2",
+      "target": "SectorSimulation.selectedVariables_nodup",
+      "assumptions": "The modeled Boolean masks, exact native interpreter and an available wire; each source mask has degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded source masks and phase lists, represented states and output vectors as applicable.",
+      "statement": "The selected-variable list of a Boolean monomial mask has no duplicates.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-mask-coverage-audit.md",
+      "unresolved_bridge": "Construct and verify an executable source-to-record compiler and its Python correspondence; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-mask-coverage-selectedTriple_injective",
+      "section": "2",
+      "target": "SectorSimulation.selectedTriple_injective",
+      "assumptions": "The modeled Boolean masks, exact native interpreter and an available wire; each source mask has degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded source masks and phase lists, represented states and output vectors as applicable.",
+      "statement": "Three pairwise distinct wires define an injective selected triple.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-mask-coverage-audit.md",
+      "unresolved_bridge": "Construct and verify an executable source-to-record compiler and its Python correspondence; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-mask-coverage-cubicMask_supported_block",
+      "section": "2",
+      "target": "SectorSimulation.cubicMask_supported_block",
+      "assumptions": "The modeled Boolean masks, exact native interpreter and an available wire; each source mask has degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded source masks and phase lists, represented states and output vectors as applicable.",
+      "statement": "Every degree-at-most-three source mask has a semantically matching valid lower-degree or cubic block when a wire is available.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-mask-coverage-audit.md",
+      "unresolved_bridge": "Construct and verify an executable source-to-record compiler and its Python correspondence; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-mask-coverage-cubicPhase_supported_blocks",
+      "section": "2",
+      "target": "SectorSimulation.cubicPhase_supported_blocks",
+      "assumptions": "The modeled Boolean masks, exact native interpreter and an available wire; each source mask has degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded source masks and phase lists, represented states and output vectors as applicable.",
+      "statement": "Every degree-at-most-three phase list has valid lower and cubic block lists with the same Boolean evaluation when a wire is available.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-mask-coverage-audit.md",
+      "unresolved_bridge": "Construct and verify an executable source-to-record compiler and its Python correspondence; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-mask-coverage-cubicPhase_native_exists",
+      "section": "2",
+      "target": "SectorSimulation.cubicPhase_native_exists",
+      "assumptions": "The modeled Boolean masks, exact native interpreter and an available wire; each source mask has degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded source masks and phase lists, represented states and output vectors as applicable.",
+      "statement": "Every degree-at-most-three phase list has a native record sequence whose replay implements its exact sign on any represented state when a wire is available.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-mask-coverage-audit.md",
+      "unresolved_bridge": "Construct and verify an executable source-to-record compiler and its Python correspondence; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -816,3 +816,16 @@ import SectorSimulation
 #print axioms SectorSimulation.idealLowerPhaseLayer_exponent
 #check SectorSimulation.combinedPhaseNative_correct
 #print axioms SectorSimulation.combinedPhaseNative_correct
+
+#check SectorSimulation.selectedTriple_values
+#print axioms SectorSimulation.selectedTriple_values
+#check SectorSimulation.selectedVariables_nodup
+#print axioms SectorSimulation.selectedVariables_nodup
+#check SectorSimulation.selectedTriple_injective
+#print axioms SectorSimulation.selectedTriple_injective
+#check SectorSimulation.cubicMask_supported_block
+#print axioms SectorSimulation.cubicMask_supported_block
+#check SectorSimulation.cubicPhase_supported_blocks
+#print axioms SectorSimulation.cubicPhase_supported_blocks
+#check SectorSimulation.cubicPhase_native_exists
+#print axioms SectorSimulation.cubicPhase_native_exists
