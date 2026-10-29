@@ -260,6 +260,95 @@
       ],
       "build_audit_receipt": "lean/evidence/binary-shift-audit.md",
       "unresolved_bridge": "instantiate the index type as Fin n and connect Boolean phases and shift j=J^-1 e to the literal circuit semantics; the full sector proposition remains open"
+    },
+    {
+      "id": "source-replay-and-output",
+      "section": "1-2",
+      "target": "SectorSimulation.Source.nativeReplayCorrect",
+      "assumptions": "A canonical native source formed from a descriptor with n>=1, invertible symmetric J, degree<=3 phases f0,f1, input beta and coordinate output e.",
+      "quantifiers": "For every well-formed descriptor and its exact encoded gate list; invalid headers and body mismatches are rejected.",
+      "statement": "Decoding and full replay recover the source exactly, its circuit denotation is FJ Df1 FJ Df0 FJ|beta>, and the output probability equals the squared norm of the e=1 projection.",
+      "dependencies": [
+        "source-encoding",
+        "native-gate-semantics",
+        "matrix-semantics"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "A mere supplied denotational equality does not establish recognition, source encoding or replay cost."
+    },
+    {
+      "id": "output-quadratic-derivative",
+      "section": "2",
+      "target": "SectorSimulation.Source.outputDerivativeQuadratic",
+      "assumptions": "Any n, Boolean ANF f1 of degree at most three, invertible J and output coordinate e; j=J^-1 e.",
+      "quantifiers": "For every admitted source and every v in F2^n.",
+      "statement": "Q(v)=f1(v)+f1(v+j) has degree at most two and Q(v+j)=Q(v).",
+      "dependencies": [
+        "boolean-polynomial-semantics",
+        "binary-derivative-invariance"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "The shift-invariance helper is proved; connect it to square-free ANF and prove the degree drop."
+    },
+    {
+      "id": "walsh-matching-support",
+      "section": "2",
+      "target": "SectorSimulation.Sectors.walshMatchingSupport",
+      "assumptions": "Quadratic derivative Q, its Walsh affine support J(d0+S), annihilator C and eta=C d0.",
+      "quantifiers": "For all admitted sources, including r=0, c=0 and eta=0.",
+      "statement": "Derivative shift invariance implies e annihilates S and e dot d0=0; a nonzero O matrix entry connects exactly cosets a and a+eta, with an invertible cross bilinear form.",
+      "dependencies": [
+        "lem:walsh",
+        "output-quadratic-derivative",
+        "binary-linear-algebra"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "Prove the Fourier character duality and the nonsingularity argument, rather than assume an operator kernel."
+    },
+    {
+      "id": "control-shortcut-soundness",
+      "section": "3",
+      "target": "SectorSimulation.Controls.shortcutSoundness",
+      "assumptions": "A restricted cubic tensor T, cap q and the explicitly specified zero, linear exterior and scanned two-form tests.",
+      "quantifiers": "For all restricted cubics and every deterministic returned certificate; one-control completeness applies only at cap one.",
+      "statement": "Zero tensor yields k=0; the linear exterior kernel exactly detects a one-control factor; every scanned two-form output is verified, but scanning a returned basis is not complete for arbitrary decomposable linear combinations.",
+      "dependencies": [
+        "boolean-polynomial-semantics",
+        "exterior-algebra"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "Construct the computed kernels and avoid assuming two-form basis scanning is complete."
+    },
+    {
+      "id": "norm-access-arithmetic",
+      "section": "4-5",
+      "target": "SectorSimulation.Norm.exactSourceAccess",
+      "assumptions": "A verified restricted control frame, computed sector phases and Clifford kernel, and equatorial word A.",
+      "quantifiers": "For every admitted sector, graph draw and accepted k-control frame, including zero norm.",
+      "statement": "Compute Z exactly as |2^(r/2) A+B|^2/2^(2r) with 2^k Z4 sums of each stated width; each Z4 sum reduces to two real quadratic sums, giving exactly 4*2^k real calls per draw.",
+      "dependencies": [
+        "lem:branches",
+        "prop:sector",
+        "quadratic-gauss-evaluation"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "Derive Gaussian integer and dyadic arithmetic from source coordinates and count every call."
+    },
+    {
+      "id": "finite-sampling-implementation",
+      "section": "4-5",
+      "target": "SectorSimulation.Estimator.finiteTapeImplementation",
+      "assumptions": "Verified orbit representatives, independent fair-bit equatorial words, b,h>=1 and the specified median group schedule.",
+      "quantifiers": "For every accepted control frame and every finite random tape under the stated caps.",
+      "statement": "Sampling, exact group accumulation, median, final projection and downward rounding implement the random variable analyzed by the estimator theorem, with the specified fair-bit and arithmetic bounds.",
+      "dependencies": [
+        "orbit-representatives",
+        "norm-access-arithmetic",
+        "thm:estimator",
+        "resource-contract"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "Prove executable tape and bit-cost refinement; bounded variance alone does not provide sample access."
     }
   ],
   "paper_source": "manuscript/main.tex",

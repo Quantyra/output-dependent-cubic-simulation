@@ -124,8 +124,8 @@
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 14450,
-      "sha256": "f97a906f104e9c62bd5ff068101e1a05019a5fb4d56b14d31078b4ecea7de88e"
+      "bytes": 19556,
+      "sha256": "af017f28fbfc25c61437b403126824b9452698342e46aead4d4cbeb80d56d491"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
