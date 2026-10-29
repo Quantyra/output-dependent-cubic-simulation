@@ -32,11 +32,11 @@ def main():
         'affiliation': a['affiliation'], 'orcid': a['orcid'].rsplit('/', 1)[1]}]
     assert software['upload_type'] == 'software'
     assert paper['upload_type'] == 'publication' and paper['publication_type'] == 'preprint'
-    assert 'doi' not in citation and 'doi' not in preferred and 'date-released' not in citation
+    assert 'doi' not in citation and preferred['doi'] == '10.5281/zenodo.23754698' and 'date-released' not in citation
     result = {'status': 'pass', 'cff_schema_sha256': hashlib.sha256(schema_raw).hexdigest(),
               'cff_schema_id': schema.get('$id', schema.get('id')),
               'zenodo_check': 'Documented field types/roles and author/title/license/version consistency; not an ingestion test.',
-              'no_doi_or_release_date_fabricated': True}
+              'preferred_citation_verified_paper_doi': preferred['doi']}
     output = ROOT / 'build/metadata.json'
     output.parent.mkdir(exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')

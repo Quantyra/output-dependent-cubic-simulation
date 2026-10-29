@@ -19,8 +19,8 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 1212,
-      "sha256": "7026ccbebd7738f8b57f34f781d9479b251e6e66890d41c3e98ab7dde45b2d3f"
+      "bytes": 1228,
+      "sha256": "166c7903d186f68de17f42f92ed62d672220af1121226bee52ebf9f3c7b4a9bc"
     },
     {
       "path": "AGENTS.md",
@@ -34,8 +34,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 1247,
-      "sha256": "3972a2295d25dcf6971a1762feb24b35995e93043a7842ee9842cc56428b24af"
+      "bytes": 1251,
+      "sha256": "abd2a73eaedf8d09dffe19cffbefdbc6ee39f7f11e46ec596ed8477d98351e74"
     },
     {
       "path": "INTEGRITY.md",
@@ -69,8 +69,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3092,
-      "sha256": "e07ba94e0de8466c7e3038458c2180b12dafc6f29a5120a5d7130d2926b290b5"
+      "bytes": 3130,
+      "sha256": "4ac89b39347244078ea57b055920f4e8571d800ac1d2dea1bb4fbc68884464bf"
     },
     {
       "path": "REPRODUCING.md",
@@ -136,6 +136,11 @@
       "path": "publication/LEAN-PLAN.md",
       "bytes": 2664,
       "sha256": "49ad33077a56ea97f17ca9f6c60426a4c38ec5d93e72bea09fd2ed1df71bdd5b"
+    },
+    {
+      "path": "publication/PUBLICATION-RECEIPT.md",
+      "bytes": 1256,
+      "sha256": "4d53e223290d28252753d7f420a2472248abc0a859c491a70e16f343f07c0691"
     },
     {
       "path": "publication/README.md",
@@ -489,8 +494,8 @@
     },
     {
       "path": "tools/check_metadata.py",
-      "bytes": 2239,
-      "sha256": "4d408b249593109631d70c853793aab9a6372d3aeed009bd84eb45ee46eca730"
+      "bytes": 2278,
+      "sha256": "bba71e96792d772e84ea6a5c1ca32b819bf01b27338630d4425f9b3238d08b27"
     },
     {
       "path": "tools/check_package.py",

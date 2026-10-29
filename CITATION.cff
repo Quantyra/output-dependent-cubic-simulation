@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the manuscript in preferred-citation; this repository is its source and reproducibility companion. No DOI is available yet."
+message: "Please cite the manuscript in preferred-citation; this repository is its source and reproducibility companion. The preferred citation identifies the published paper."
 type: software
 title: "Classical Simulation of Two-Layer Quantum Circuits via Output-Dependent Cubic Structure: source and reproducibility archive"
 version: 0.1.0
@@ -25,5 +25,6 @@ preferred-citation:
       affiliation: Quantyra Inc.
       orcid: https://orcid.org/0009-0002-9123-7435
   year: 2026
-  notes: "Informal preprint, version 0.1.0 candidate; first Zenodo publication pending."
-  url: https://github.com/Quantyra/output-dependent-cubic-simulation/blob/main/manuscript/main.pdf
+  doi: 10.5281/zenodo.23754698
+  notes: "Informal preprint, version 0.1.0; paper concept DOI 10.5281/zenodo.23754697."
+  url: https://zenodo.org/records/23754698

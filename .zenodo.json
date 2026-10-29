@@ -3,10 +3,27 @@
   "description": "Source and reproducibility companion for Daniel Fredriksen's informal methods preprint on output-dependent cubic simulation. Contains the manuscript PDF and source, exact arithmetic implementation, finite checks and provenance. The canonical paper will have a separate PDF-first publication/preprint record. Code is Apache-2.0; manuscript and prose are CC-BY-4.0 as detailed in LICENSE. No Lean certification, peer review, universal simulation or practical superiority is claimed.",
   "version": "0.1.0",
   "upload_type": "software",
-  "creators": [{"name": "Fredriksen, Daniel", "affiliation": "Quantyra Inc.", "orcid": "0009-0002-9123-7435"}],
+  "creators": [
+    {
+      "name": "Fredriksen, Daniel",
+      "affiliation": "Quantyra Inc.",
+      "orcid": "0009-0002-9123-7435"
+    }
+  ],
   "access_right": "open",
   "license": "Apache-2.0",
   "language": "eng",
-  "keywords": ["quantum circuit simulation", "cubic Boolean polynomials", "stabilizer norm estimation", "reproducibility"],
-  "related_identifiers": [{"identifier": "https://github.com/Quantyra/output-dependent-cubic-simulation/blob/main/manuscript/main.pdf", "relation": "isSupplementTo", "resource_type": "publication-preprint"}]
+  "keywords": [
+    "quantum circuit simulation",
+    "cubic Boolean polynomials",
+    "stabilizer norm estimation",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23754698",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ]
 }
