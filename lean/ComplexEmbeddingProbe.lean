@@ -61,7 +61,7 @@ theorem dyadicInterpret_mul (a b : DyadicCyclo) :
       simp only [dyadicInterpret, dyadicMultiply, pow_add]
       change cycloInterpret standardOmega (cycloMul an bn) / ((2 : ℂ)^ae * 2^be) = _
       rw [cycloInterpret_mul standardOmega standardOmega_fourth]
-      exact div_mul_div_comm _ _ _ _
+      field_simp <;> ring
 
 theorem dyadicInterpret_add (a b : DyadicCyclo) :
     dyadicInterpret (dyadicAdd a b) = dyadicInterpret a + dyadicInterpret b := by
@@ -69,7 +69,6 @@ theorem dyadicInterpret_add (a b : DyadicCyclo) :
     cases b with | mk bn be =>
       simp only [dyadicInterpret, dyadicAdd, cycloInterpret_add, cycloInterpret_scale,
         Int.cast_pow, Int.cast_ofNat, pow_add]
-      field_simp
-      ring
+      field_simp <;> ring
 
 end SectorSimulation
