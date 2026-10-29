@@ -1111,3 +1111,27 @@ import SectorSimulation
 
 #check SectorSimulation.exactAdd_mul
 #print axioms SectorSimulation.exactAdd_mul
+
+#check SectorSimulation.exactAdd_left_comm
+#print axioms SectorSimulation.exactAdd_left_comm
+
+#check SectorSimulation.exactNeg_add
+#print axioms SectorSimulation.exactNeg_add
+
+#check SectorSimulation.exactMul_neg
+#print axioms SectorSimulation.exactMul_neg
+
+#check SectorSimulation.hadamardKernelStep_add
+#print axioms SectorSimulation.hadamardKernelStep_add
+
+#check SectorSimulation.hadamardKernel_add
+#print axioms SectorSimulation.hadamardKernel_add
+
+#check SectorSimulation.hadamardKernelStep_scale
+#print axioms SectorSimulation.hadamardKernelStep_scale
+
+#check SectorSimulation.hadamardKernel_scale
+#print axioms SectorSimulation.hadamardKernel_scale
+
+#check SectorSimulation.exactMul_left_comm
+#print axioms SectorSimulation.exactMul_left_comm

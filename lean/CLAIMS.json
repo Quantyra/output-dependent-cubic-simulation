@@ -6557,6 +6557,158 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-distributivity.md",
       "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-linearity-exactAdd_left_comm",
+      "section": "2",
+      "target": "SectorSimulation.exactAdd_left_comm",
+      "assumptions": "Lean exact cyclotomic amplitudes and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists and amplitude functions.",
+      "statement": "Exact-amplitude addition satisfies left commutation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-linearity-exactNeg_add",
+      "section": "2",
+      "target": "SectorSimulation.exactNeg_add",
+      "assumptions": "Lean exact cyclotomic amplitudes and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists and amplitude functions.",
+      "statement": "Exact negation distributes over addition.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-linearity-exactMul_neg",
+      "section": "2",
+      "target": "SectorSimulation.exactMul_neg",
+      "assumptions": "Lean exact cyclotomic amplitudes and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists and amplitude functions.",
+      "statement": "Exact multiplication commutes with negation of its second factor.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-linearity-hadamardKernelStep_add",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernelStep_add",
+      "assumptions": "Lean exact cyclotomic amplitudes and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists and amplitude functions.",
+      "statement": "One Hadamard kernel step preserves addition of amplitude functions.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-linearity-hadamardKernel_add",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_add",
+      "assumptions": "Lean exact cyclotomic amplitudes and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists and amplitude functions.",
+      "statement": "The iterated Hadamard kernel preserves addition of amplitude functions.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-linearity-hadamardKernelStep_scale",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernelStep_scale",
+      "assumptions": "Lean exact cyclotomic amplitudes and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists and amplitude functions.",
+      "statement": "One Hadamard kernel step commutes with an exact scalar factor.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-linearity-hadamardKernel_scale",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_scale",
+      "assumptions": "Lean exact cyclotomic amplitudes and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists and amplitude functions.",
+      "statement": "The iterated Hadamard kernel commutes with an exact scalar factor.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-linearity-exactMul_left_comm",
+      "section": "2",
+      "target": "SectorSimulation.exactMul_left_comm",
+      "assumptions": "Lean exact cyclotomic amplitudes and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists and amplitude functions.",
+      "statement": "Exact-amplitude multiplication satisfies left commutation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

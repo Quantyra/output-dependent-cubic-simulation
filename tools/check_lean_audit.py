@@ -419,6 +419,14 @@ EXPECTED = {
     'SectorSimulation.dyadicMultiply_add_equiv': {'Classical.choice', 'Quot.sound', 'propext'},
     'SectorSimulation.exactMul_add': {'Classical.choice', 'Quot.sound', 'propext'},
     'SectorSimulation.exactAdd_mul': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.exactAdd_left_comm': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.exactNeg_add': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.exactMul_neg': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.hadamardKernelStep_add': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_add': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.hadamardKernelStep_scale': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_scale': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.exactMul_left_comm': {'Classical.choice', 'propext', 'Quot.sound'},
 }
 
 
