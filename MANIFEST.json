@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 11896,
-      "sha256": "c729f89c10e6380a50c7d6c868acf81cab997a831fe31851c0bc52c1fadbf5ab"
+      "bytes": 14450,
+      "sha256": "f97a906f104e9c62bd5ff068101e1a05019a5fb4d56b14d31078b4ecea7de88e"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
-      "bytes": 1974,
-      "sha256": "6c6abc70649baa519ae423ff662a487c748e27632052a398c526a82ac45191f9"
+      "bytes": 2184,
+      "sha256": "08dd914c4241d1ccb0c6e589994970eeba1b201bea1b4537b13e7038c75b1201"
     },
     {
       "path": "lean/SEMANTICS.md",
@@ -158,19 +158,29 @@
       "sha256": "a01e0a5cc7927886b9e30b67d1e109896fe4f53c8c9873771194088f3f092269"
     },
     {
+      "path": "lean/evidence/clean-core-replay.md",
+      "bytes": 1167,
+      "sha256": "367a4ccac6e8fe81fa2a825be3791e92ed62bd54ab635374171e208be1e5ba28"
+    },
+    {
       "path": "lean/evidence/derivative-core-audit.md",
       "bytes": 1809,
       "sha256": "ed1e16665a1c7cb76b84549b70a99375e00d8fde65fa896b4ef8f35ed8d68195"
     },
     {
+      "path": "lean/evidence/locked-environment.md",
+      "bytes": 2023,
+      "sha256": "bb2ae638f086295f33d6fe8f28f3aa1d3f978a875cc80e9a00dbcff905b6d9c0"
+    },
+    {
       "path": "lean/lake-manifest.json",
-      "bytes": 149,
-      "sha256": "9f10a2f011e14586d02c0a07649737f32d13d34a7f1ef073edd05b082fc972ff"
+      "bytes": 3173,
+      "sha256": "ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642"
     },
     {
       "path": "lean/lakefile.toml",
-      "bytes": 123,
-      "sha256": "2c0ee058f849a90054123ad43660e02ed420049315dc3df9762f8033bbaa5c7e"
+      "bytes": 263,
+      "sha256": "23acc3822ceecadc77efb8a352d973f7c63ee25d688849093169112d73775ac4"
     },
     {
       "path": "lean/lean-toolchain",

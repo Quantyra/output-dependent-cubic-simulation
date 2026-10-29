@@ -15,7 +15,7 @@
       "target": "SectorSimulation.Walsh.quadraticWalshElimination",
       "assumptions": "finite binary space; Boolean quadratic with alternating polar rank r",
       "quantifiers": "all dimensions and quadratics, including zero rank",
-      "statement": "r even; affine Walsh support of dimension r; magnitude and quadratic sign, computable by binary elimination",
+      "statement": "For every n and degree-at-most-two q:F2^n->F2 with alternating polar Bq of rank r, r is even, Wq support is affine l0+im(Bq), each supported normalized value has magnitude 2^(-r/2), its sign is quadratic in support coordinates, and binary elimination constructs the support, origin and sign.",
       "dependencies": [
         "boolean-polynomial-semantics",
         "binary-linear-algebra",
@@ -30,7 +30,7 @@
       "target": "SectorSimulation.Sectors.matchedSectorIdentity",
       "assumptions": "literal two-phase source, symmetric invertible J, basis input, measured output, derived Q/support/coordinates",
       "quantifiers": "all admitted sources, affine origins, inputs, offsets and r=0",
-      "statement": "real Hermitian Clifford observable; normalized matched sector kernel; bounded symmetric overlaps average to 1-2p",
+      "statement": "For every admitted n,J,f0,f1,beta,e and constructed r,S,D,C,R,d0,eta,s, O=FJ Df1 FJ Ze FJ Df1 FJ=FJ DQ FJ Ze is real Hermitian unitary Clifford, maps sector a to a+eta with the stated flat quadratic kernel, and X_a is real, bounded by 1, shift-symmetric, and averages to 1-2p; norm(psi_(a+eta)+O_a psi_a)^2=2+2X_a.",
       "dependencies": [
         "lem:walsh",
         "source-semantics",
@@ -46,7 +46,7 @@
       "target": "SectorSimulation.Controls.conditionalQuadraticBranches",
       "assumptions": "verified restricted tensor certificate T(K,K,K)=0, codimension k",
       "quantifiers": "all sectors and verified control frames",
-      "statement": "construct 2^k normalized stabilizer branches per sector and 4^k coherent quadratic pair sums",
+      "statement": "For every sector a and verified k-dimensional restricted control space U with T(ker U,ker U,ker U)=0, construction yields exactly 2^k normalized stabilizer slices with coefficients 2^(-k/2), and conditioning both sides expresses the coherent overlap as 4^k real quadratic sums.",
       "dependencies": [
         "prop:sector",
         "boolean-polynomial-semantics",
@@ -78,7 +78,7 @@
       "target": "SectorSimulation.Norm.equatorialMoments",
       "assumptions": "finite complex vector; independent uniform Z4 diagonal phases and fair graph bits",
       "quantifiers": "all even or odd widths and all vectors, including zero",
-      "statement": "exact first and second norm-estimator moments and variance bound",
+      "statement": "For every r>=0 and u:F2^r->C, independent d_j uniform in Z4 and graph bits uniform in F2 give Z=2^r|<phi_A,u>|^2, E[Z]=||u||^2, E[Z^2]=2||u||^4-sum_t|u(t)|^4, and Var(Z)<=||u||^4.",
       "dependencies": [
         "finite-probability",
         "complex-inner-product",
@@ -93,7 +93,7 @@
       "target": "SectorSimulation.Estimator.jointAccuracy",
       "assumptions": "sound discovered frame and uniform orbit/equatorial sampling; b,h>=1",
       "quantifiers": "all accepted frames and all admitted source inputs",
-      "statement": "unbiased joint estimator, variance <=4, median schedule and <=3epsilon/4 error with stated failure allocation",
+      "statement": "For b,h>=1 and every sound accepted control frame, independent uniform orbit and equatorial draws give E[Y]=1-2p and Var(Y)<=4. L=32*4^b draws in each of K=2h+3 independent groups, median, final projection and b+2 bit downward rounding give error <=3*2^(-b)/4 except with probability <2^(-h-1); the promised discovery/readout union failure is <2^(-h).",
       "dependencies": [
         "prop:sector",
         "thm:discovery",
@@ -110,7 +110,7 @@
       "target": "SectorSimulation.Cost.completeResourceBound",
       "assumptions": "specified dense algorithms, cap q, literal source length B, b,h>=1",
       "quantifiers": "all tapes, including refusals; success conditional on stated promises",
-      "statement": "paper's conservative time, space, randomness, arithmetic and exact shortcut bounds",
+      "statement": "For literal source bit length B, m=n+r, cap q, A_q=4^q(h+2), C_q=4(q+1)2^(q^2), K=2h+3 and N=32*4^b*K: time is O~((B+m+q+2)^12+(r+A_q)(1+C_q)(m+q+2)^10+N*2^(k+2)*(m+q+2)^10+(N+K+1)*(m+b+h+q+2)^4); space is O~((B+m+q+2)^8+(m+b+h+q+2)^4); fair bits are <=r*A_q+N*(c-1_(eta != 0)+2r+r(r-1)/2). Exact quadratic shortcut uses one real Gaussian sum, zero random bits and polynomial precision cost.",
       "dependencies": [
         "thm:discovery",
         "thm:estimator",
@@ -125,7 +125,7 @@
       "target": "SectorSimulation.Families.determinantFamily",
       "assumptions": "even t>=2 and explicitly specified source family",
       "quantifiers": "all such t and separately qualified variations",
-      "statement": "r=t^2+2, k=1, specified global certificate g>=t-sqrt(t), exact probability and complement",
+      "statement": "For every even t>=2, n=t^2+2t+2, identity J, zero input and measured c0, the specified f0,f1 yield r=t^2+2 and a deterministic restricted k=1 certificate. Every global first-cubic certificate has g>=t-sqrt(t); the output probability is 1/4-2^(-t-1)+2^(-2t-1), complemented by the specified output-linear term.",
       "dependencies": [
         "prop:sector",
         "lem:branches",
@@ -178,9 +178,9 @@
       "id": "quadratic-gauss-evaluation",
       "section": "2,4",
       "target": "SectorSimulation.Pending.QuadraticGaussEvaluation",
-      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
-      "quantifiers": "All inputs satisfying the published hypotheses.",
-      "statement": "Exact real quadratic Gaussian evaluation and Z4-to-two-real-sum conversion, including affine pullbacks.",
+      "assumptions": "A Boolean quadratic or a Z4 quadratic with even off-diagonal coefficients, with any affine substitution; the latter has odd linear set I and parity L.",
+      "quantifiers": "For every finite width, coefficient assignment and affine map.",
+      "statement": "The Z4 sum is, up to its constant phase, (G0+G1)/2 + i(G0-G1)/2 for two real Boolean quadratic sums; both numerators are even. A joint norm draw uses exactly 4*2^k such real calls of the specified widths.",
       "dependencies": [
         "lem:walsh",
         "boolean-polynomial-semantics"
@@ -192,9 +192,9 @@
       "id": "orbit-representatives",
       "section": "2,4",
       "target": "SectorSimulation.Pending.OrbitRepresentatives",
-      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
-      "quantifiers": "All inputs satisfying the published hypotheses.",
-      "statement": "Uniform matching-orbit representatives use c bits when eta=0 and c-1 otherwise and preserve the average.",
+      "assumptions": "An affine sector label space F2^c and matching offset eta; the sector statistic obeys X_a=X_(a+eta).",
+      "quantifiers": "For every c>=0, offset eta and shift-symmetric statistic.",
+      "statement": "A uniform representative uses c bits if eta=0, otherwise c-1 bits by fixing a nonzero coordinate; its mean equals the uniform sector mean.",
       "dependencies": [
         "prop:sector",
         "finite-probability"
@@ -206,9 +206,9 @@
       "id": "global-parameter-corollary",
       "section": "5",
       "target": "SectorSimulation.Pending.GlobalParameterCorollary",
-      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
-      "quantifiers": "All inputs satisfying the published hypotheses.",
-      "statement": "Under q squared logarithmic in the literal input size, total promised cost is polynomial in input size and inverse error.",
+      "assumptions": "Literal encoded source of length B, m=n+r, search cap q, accuracy epsilon=2^-b, confidence 2^-h, and the admitted shortcuts or full-rank-anchor promise.",
+      "quantifiers": "For every admitted input family with q^2=O(log(B+m+2)) and b,h>=1.",
+      "statement": "The complete promised runtime is polynomial in source size and inverse error with the stated confidence dependence; it is not polynomial in sampled precision bits b.",
       "dependencies": [
         "resource-contract"
       ],
@@ -219,9 +219,9 @@
       "id": "family-variations",
       "section": "6",
       "target": "SectorSimulation.Pending.FamilyVariations",
-      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
-      "quantifiers": "All inputs satisfying the published hypotheses.",
-      "statement": "The stated lower-term, input and invertible-coordinate variations retain the indicated structural certificates, with qualifications for cubic extensions.",
+      "assumptions": "The published determinant family, arbitrary affine/quadratic additions to f0 or f1, basis input changes and invertible physical coordinate changes with consistently transformed J.",
+      "quantifiers": "For every even t>=2 and each stated variation; cubic extensions are separately qualified.",
+      "statement": "Lower terms of f0 preserve restricted and global tensors; lower terms of f1 preserve the polar support direction but may change affine origins; basis inputs add characters. Restricted-vanishing cubic additions preserve k=1 but need not preserve the global lower bound.",
       "dependencies": [
         "prop:family",
         "source-semantics"
@@ -233,9 +233,9 @@
       "id": "comparison-reductions",
       "section": "7",
       "target": "SectorSimulation.Pending.ComparisonReductions",
-      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
-      "quantifiers": "All inputs satisfying the published hypotheses.",
-      "statement": "Walsh coefficient absolute mass and resulting normalized-Pauli sampling upper bound.",
+      "assumptions": "Q is the measured-output derivative of the second cubic phase, with polar rank r and J symmetric invertible.",
+      "quantifiers": "For every source in the paper grammar and every designated output.",
+      "statement": "The quadratic Walsh expansion has 2^r nonzero coefficients of magnitude 2^(-r/2), giving l1 mass 2^(r/2) and the stated generic 2^r epsilon^-2 log(1/delta) normalized-Pauli sampling upper bound, not a lower bound.",
       "dependencies": [
         "lem:walsh",
         "finite-probability"
@@ -261,5 +261,8 @@
       "build_audit_receipt": "lean/evidence/binary-shift-audit.md",
       "unresolved_bridge": "instantiate the index type as Fin n and connect Boolean phases and shift j=J^-1 e to the literal circuit semantics; the full sector proposition remains open"
     }
-  ]
+  ],
+  "paper_source": "manuscript/main.tex",
+  "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
+  "coverage_note": "Only explicitly identified derivative helper declarations are kernel checked; all published theorems and cost claims remain planned. Proposed target names are not declarations."
 }
