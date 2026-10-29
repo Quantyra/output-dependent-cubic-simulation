@@ -2811,6 +2811,119 @@
       ],
       "build_audit_receipt": "lean/evidence/dyadic-multiplication-audit.md",
       "unresolved_bridge": "Establish additive compatibility, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-add-dyadicAdd_congr_left",
+      "section": "2",
+      "target": "SectorSimulation.dyadicAdd_congr_left",
+      "assumptions": "The defined eighth-root dyadic representation and cross-multiplication equivalence.",
+      "quantifiers": "All represented dyadic operands.",
+      "statement": "Addition preserves equivalence of its first operand.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-addition-audit.md",
+      "unresolved_bridge": "Construct quotient arithmetic, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-add-dyadicAdd_comm",
+      "section": "2",
+      "target": "SectorSimulation.dyadicAdd_comm",
+      "assumptions": "The defined eighth-root dyadic representation and cross-multiplication equivalence.",
+      "quantifiers": "All represented dyadic operands.",
+      "statement": "Represented dyadic addition is commutative.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-addition-audit.md",
+      "unresolved_bridge": "Construct quotient arithmetic, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-add-dyadicAdd_congr_right",
+      "section": "2",
+      "target": "SectorSimulation.dyadicAdd_congr_right",
+      "assumptions": "The defined eighth-root dyadic representation and cross-multiplication equivalence.",
+      "quantifiers": "All represented dyadic operands.",
+      "statement": "Addition preserves equivalence of its second operand.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-addition-audit.md",
+      "unresolved_bridge": "Construct quotient arithmetic, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-add-dyadicAdd_congr",
+      "section": "2",
+      "target": "SectorSimulation.dyadicAdd_congr",
+      "assumptions": "The defined eighth-root dyadic representation and cross-multiplication equivalence.",
+      "quantifiers": "All represented dyadic operands.",
+      "statement": "Addition preserves equivalence of both operands.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-addition-audit.md",
+      "unresolved_bridge": "Construct quotient arithmetic, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-add-dyadicNeg_congr",
+      "section": "2",
+      "target": "SectorSimulation.dyadicNeg_congr",
+      "assumptions": "The defined eighth-root dyadic representation and cross-multiplication equivalence.",
+      "quantifiers": "All represented dyadic operands.",
+      "statement": "Negation preserves dyadic equivalence.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-addition-audit.md",
+      "unresolved_bridge": "Construct quotient arithmetic, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-add-dyadicSubtract_eq_add_neg",
+      "section": "2",
+      "target": "SectorSimulation.dyadicSubtract_eq_add_neg",
+      "assumptions": "The defined eighth-root dyadic representation and cross-multiplication equivalence.",
+      "quantifiers": "All represented dyadic operands.",
+      "statement": "Represented subtraction equals addition of the represented negation.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-addition-audit.md",
+      "unresolved_bridge": "Construct quotient arithmetic, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-add-dyadicSubtract_congr",
+      "section": "2",
+      "target": "SectorSimulation.dyadicSubtract_congr",
+      "assumptions": "The defined eighth-root dyadic representation and cross-multiplication equivalence.",
+      "quantifiers": "All represented dyadic operands.",
+      "statement": "Subtraction preserves equivalence of both operands.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-addition-audit.md",
+      "unresolved_bridge": "Construct quotient arithmetic, complex embedding, normalized gate semantics, native replay and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -541,3 +541,24 @@ import SectorSimulation
 
 #check SectorSimulation.dyadicMultiply_congr
 #print axioms SectorSimulation.dyadicMultiply_congr
+
+#check SectorSimulation.dyadicAdd_congr_left
+#print axioms SectorSimulation.dyadicAdd_congr_left
+
+#check SectorSimulation.dyadicAdd_comm
+#print axioms SectorSimulation.dyadicAdd_comm
+
+#check SectorSimulation.dyadicAdd_congr_right
+#print axioms SectorSimulation.dyadicAdd_congr_right
+
+#check SectorSimulation.dyadicAdd_congr
+#print axioms SectorSimulation.dyadicAdd_congr
+
+#check SectorSimulation.dyadicNeg_congr
+#print axioms SectorSimulation.dyadicNeg_congr
+
+#check SectorSimulation.dyadicSubtract_eq_add_neg
+#print axioms SectorSimulation.dyadicSubtract_eq_add_neg
+
+#check SectorSimulation.dyadicSubtract_congr
+#print axioms SectorSimulation.dyadicSubtract_congr

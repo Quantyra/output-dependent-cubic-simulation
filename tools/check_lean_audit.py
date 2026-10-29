@@ -196,6 +196,13 @@ EXPECTED = {
     'SectorSimulation.dyadicMultiply_comm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.dyadicMultiply_congr_right': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.dyadicMultiply_congr': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.dyadicAdd_congr_left': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.dyadicAdd_comm': {'propext'},
+    'SectorSimulation.dyadicAdd_congr_right': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.dyadicAdd_congr': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.dyadicNeg_congr': {'propext'},
+    'SectorSimulation.dyadicSubtract_eq_add_neg': {'propext'},
+    'SectorSimulation.dyadicSubtract_congr': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
