@@ -1048,6 +1048,38 @@
       ],
       "build_audit_receipt": "lean/evidence/derivative-size-audit.md",
       "unresolved_bridge": "Prove operational time, source encoding and bit-cost bounds; native circuit decoding and manuscript theorems remain open."
+    },
+    {
+      "id": "matrix-xor",
+      "section": "2",
+      "target": "SectorSimulation.matrixApply_xor",
+      "assumptions": "Finite Boolean vectors and the source matrix evaluator.",
+      "quantifiers": "All finite dimensions, binary matrices and vectors as stated in the declaration.",
+      "statement": "The actual source matrix application preserves vector XOR.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-linearity-audit.md",
+      "unresolved_bridge": "Establish matrix invertibility checks and inverse computation, output shift, native gate replay and circuit semantics."
+    },
+    {
+      "id": "matrix-zero",
+      "section": "2",
+      "target": "SectorSimulation.matrixApply_zero",
+      "assumptions": "Finite Boolean vectors and the source matrix evaluator.",
+      "quantifiers": "All finite dimensions, binary matrices and vectors as stated in the declaration.",
+      "statement": "The actual source matrix application maps the zero vector to zero.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-linearity-audit.md",
+      "unresolved_bridge": "Establish matrix invertibility checks and inverse computation, output shift, native gate replay and circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

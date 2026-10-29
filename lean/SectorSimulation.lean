@@ -13,3 +13,5 @@ import SectorSimulation.QuadraticMasks
 import SectorSimulation.CubicDerivativeANF
 
 import SectorSimulation.DerivativeSize
+
+import SectorSimulation.MatrixLinearity

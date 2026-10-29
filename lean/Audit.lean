@@ -107,3 +107,12 @@ import SectorSimulation
 
 #check SectorSimulation.cubicPhaseDerivativeANF_length
 #print axioms SectorSimulation.cubicPhaseDerivativeANF_length
+
+#check SectorSimulation.matrixFold_xor
+#print axioms SectorSimulation.matrixFold_xor
+
+#check SectorSimulation.matrixApply_xor
+#print axioms SectorSimulation.matrixApply_xor
+
+#check SectorSimulation.matrixApply_zero
+#print axioms SectorSimulation.matrixApply_zero

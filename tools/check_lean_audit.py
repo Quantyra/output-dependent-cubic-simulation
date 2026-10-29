@@ -51,6 +51,9 @@ EXPECTED = {
     'SectorSimulation.cubicMaskDerivativeTerms_length': {'propext', 'Quot.sound'},
     'SectorSimulation.cubicPhaseDerivativeTerms_length': {'propext', 'Quot.sound'},
     'SectorSimulation.cubicPhaseDerivativeANF_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.matrixFold_xor': {'propext'},
+    'SectorSimulation.matrixApply_xor': {'propext', 'Quot.sound'},
+    'SectorSimulation.matrixApply_zero': {'propext', 'Quot.sound'},
 }
 
 
