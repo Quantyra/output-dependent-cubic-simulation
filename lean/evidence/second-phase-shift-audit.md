@@ -1,6 +1,6 @@
 # Second-phase derivative shift invariance
 
-Target bridge: section 2 of https://doi.org/10.5281/zenodo.23754698. Source `lean/SectorSimulation/BooleanSource.lean` SHA-256 `debf9cbf950439c1e26a7bacd59cace7f960157a5038757b314438b3ad00ef25`.
+Target bridge: section 2 of https://doi.org/10.5281/zenodo.23754698. Audited historical source at commit `1a9783a`, `lean/SectorSimulation/BooleanSource.lean`, SHA-256 `debf9cbf950439c1e26a7bacd59cace7f960157a5038757b314438b3ad00ef25`.
 
 `secondPhaseDerivative d j v` evaluates the actual represented second-phase ANF at `v` and `v XOR j` and takes their Boolean XOR. The proved declaration is:
 

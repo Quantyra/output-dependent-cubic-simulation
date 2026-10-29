@@ -427,6 +427,62 @@
       ],
       "build_audit_receipt": "lean/evidence/derivative-additivity-audit.md",
       "unresolved_bridge": "Lift additivity to the represented ANF fold, construct the differentiated monomials and prove the cubic-to-quadratic degree bound."
+    },
+    {
+      "id": "anf-fold-initial",
+      "section": "1-2",
+      "target": "SectorSimulation.phaseFold_from",
+      "assumptions": "Finite Boolean vectors and phases represented by lists of monomial masks; the derivative statement permits an arbitrary shift.",
+      "quantifiers": "All dimensions, represented phase lists, input vectors and, where applicable, shifts.",
+      "statement": "Folding a represented ANF from an arbitrary initial bit equals XOR of that bit with the zero-initial ANF evaluation.",
+      "dependencies": [
+        "boolean-anf-representation",
+        "boolean-derivative-additivity"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/anf-derivative-audit.md",
+      "unresolved_bridge": "Construct differentiated monomials and prove the cubic-to-quadratic degree bound; connect the representation and computed shift to literal native source and circuit semantics."
+    },
+    {
+      "id": "anf-append-evaluation",
+      "section": "1-2",
+      "target": "SectorSimulation.evalPhase_append",
+      "assumptions": "Finite Boolean vectors and phases represented by lists of monomial masks; the derivative statement permits an arbitrary shift.",
+      "quantifiers": "All dimensions, represented phase lists, input vectors and, where applicable, shifts.",
+      "statement": "Evaluation of an ANF list concatenation equals the XOR of the two individual evaluations.",
+      "dependencies": [
+        "boolean-anf-representation",
+        "boolean-derivative-additivity"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/anf-derivative-audit.md",
+      "unresolved_bridge": "Construct differentiated monomials and prove the cubic-to-quadratic degree bound; connect the representation and computed shift to literal native source and circuit semantics."
+    },
+    {
+      "id": "anf-derivative-additivity",
+      "section": "1-2",
+      "target": "SectorSimulation.phaseDerivative_append",
+      "assumptions": "Finite Boolean vectors and phases represented by lists of monomial masks; the derivative statement permits an arbitrary shift.",
+      "quantifiers": "All dimensions, represented phase lists, input vectors and, where applicable, shifts.",
+      "statement": "The Boolean derivative of the represented concatenated ANF equals the XOR of the two represented phase derivatives.",
+      "dependencies": [
+        "boolean-anf-representation",
+        "boolean-derivative-additivity"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/anf-derivative-audit.md",
+      "unresolved_bridge": "Construct differentiated monomials and prove the cubic-to-quadratic degree bound; connect the representation and computed shift to literal native source and circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -1,4 +1,5 @@
 import SectorSimulation.BinaryShift
+import SectorSimulation.DerivativeLinear
 
 /-!
 Finite Boolean ANF source data for the literal circuit interface.
@@ -53,6 +54,40 @@ theorem evalPhase_empty {n : Nat} (x : BinaryVector n) : evalPhase [] x = false 
 theorem evalPhase_duplicate_cancel {n : Nat} (m : Monomial n) (x : BinaryVector n) :
     evalPhase [m, m] x = false := by
   cases h : evalMonomial m x <;> simp [evalPhase, h]
+
+/-- Folding from an arbitrary initial bit translates the zero-initial fold. -/
+theorem phaseFold_from {n : Nat} (p : PhaseANF n) (x : BinaryVector n) (initial : Bool) :
+    p.foldl (fun acc m => Bool.xor acc (evalMonomial m x)) initial =
+      Bool.xor initial (evalPhase p x) := by
+  induction p generalizing initial with
+  | nil => cases initial <;> rfl
+  | cons m rest ih =>
+    simp only [evalPhase, List.foldl_cons] at ih ⊢
+    rw [ih (Bool.xor initial (evalMonomial m x)),
+      ih (Bool.xor false (evalMonomial m x))]
+    cases initial <;> cases h : evalMonomial m x <;>
+      cases t : rest.foldl (fun acc m => Bool.xor acc (evalMonomial m x)) false <;>
+      simp
+
+/-- ANF concatenation evaluates as XOR, retaining duplicate cancellation. -/
+theorem evalPhase_append {n : Nat} (p q : PhaseANF n) (x : BinaryVector n) :
+    evalPhase (p ++ q) x = Bool.xor (evalPhase p x) (evalPhase q x) := by
+  unfold evalPhase
+  rw [List.foldl_append]
+  exact phaseFold_from q x (p.foldl (fun acc m => Bool.xor acc (evalMonomial m x)) false)
+
+/-- Differentiation distributes over the actual represented ANF concatenation. -/
+theorem phaseDerivative_append {n : Nat} (p q : PhaseANF n)
+    (shift : BinaryVector n → BinaryVector n) (x : BinaryVector n) :
+    booleanDerivative (evalPhase (p ++ q)) shift x =
+      Bool.xor (booleanDerivative (evalPhase p) shift x)
+        (booleanDerivative (evalPhase q) shift x) := by
+  have h : evalPhase (p ++ q) =
+      fun v => Bool.xor (evalPhase p v) (evalPhase q v) := by
+    funext v
+    exact evalPhase_append p q v
+  rw [h]
+  exact booleanDerivative_xor (evalPhase p) (evalPhase q) shift x
 
 /-- The output derivative before connecting `j` to the computed `J⁻¹ e`. -/
 def secondPhaseDerivative {n : Nat} (d : CircuitDescriptor n)

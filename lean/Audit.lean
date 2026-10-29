@@ -14,3 +14,9 @@ import SectorSimulation
 #print axioms SectorSimulation.secondPhaseDerivative_shift_invariant
 #check SectorSimulation.booleanDerivative_xor
 #print axioms SectorSimulation.booleanDerivative_xor
+#check SectorSimulation.phaseFold_from
+#print axioms SectorSimulation.phaseFold_from
+#check SectorSimulation.evalPhase_append
+#print axioms SectorSimulation.evalPhase_append
+#check SectorSimulation.phaseDerivative_append
+#print axioms SectorSimulation.phaseDerivative_append

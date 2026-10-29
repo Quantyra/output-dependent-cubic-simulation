@@ -11,6 +11,9 @@ EXPECTED = {
     'SectorSimulation.evalPhase_duplicate_cancel': {'propext'},
     'SectorSimulation.secondPhaseDerivative_shift_invariant': {'Quot.sound'},
     'SectorSimulation.booleanDerivative_xor': {'propext'},
+    'SectorSimulation.phaseFold_from': {'propext'},
+    'SectorSimulation.evalPhase_append': {'propext', 'Quot.sound'},
+    'SectorSimulation.phaseDerivative_append': {'propext', 'Quot.sound'},
 }
 
 

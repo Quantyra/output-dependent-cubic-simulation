@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 796,
-      "sha256": "cede37b9eedf5a96059364cb88a842b6a7e00e2e4748c47c32fd690c2a5c83bc"
+      "bytes": 1071,
+      "sha256": "75a3f1774fd8a8ebdfc49d77049e25b1af6c0b69c40f7ba144cfa086f821b3c8"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 23797,
-      "sha256": "b12ee432c4e3fb795c7a53f5e6e245f92c1f39e161451ccd95346df07a344db4"
+      "bytes": 26825,
+      "sha256": "c06909e521db457a493a3a5b430e1ab7dd4eca70a341b8f27f0017d09ec7d5ce"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -154,8 +154,8 @@
     },
     {
       "path": "lean/SectorSimulation/BooleanSource.lean",
-      "bytes": 2826,
-      "sha256": "debf9cbf950439c1e26a7bacd59cace7f960157a5038757b314438b3ad00ef25"
+      "bytes": 4501,
+      "sha256": "8343bb46249fdeba26a7e853c2ff4afc335e5dd6936970599fe2b73162e44b11"
     },
     {
       "path": "lean/SectorSimulation/Derivative.lean",
@@ -173,14 +173,19 @@
       "sha256": "7c7d04db9c8c5c69d6c9f30c1b1019b980f4dc10407ea6a4f0329340e72b7622"
     },
     {
+      "path": "lean/evidence/anf-derivative-audit.md",
+      "bytes": 2039,
+      "sha256": "e21ddd0c54f939c7c45a318405b259b32ccfe30aaf783e6e920b1fdbea26dc8a"
+    },
+    {
       "path": "lean/evidence/binary-shift-audit.md",
       "bytes": 1619,
       "sha256": "a01e0a5cc7927886b9e30b67d1e109896fe4f53c8c9873771194088f3f092269"
     },
     {
       "path": "lean/evidence/boolean-source-audit.md",
-      "bytes": 1795,
-      "sha256": "47fb8543ec5b52c2f3f2901d152f067985eda52db8f18fda94b76efe9c088564"
+      "bytes": 1836,
+      "sha256": "c851776dbefe2ac1b03c634cf1d0e3959d9ca6ceb21d8eb1031e1e8a34987739"
     },
     {
       "path": "lean/evidence/clean-core-replay.md",
@@ -204,8 +209,8 @@
     },
     {
       "path": "lean/evidence/second-phase-shift-audit.md",
-      "bytes": 1272,
-      "sha256": "78c6251ac55b5cc45b8cd79d25e66f44188aa0acae4b6c247f5a81580868a5ec"
+      "bytes": 1313,
+      "sha256": "5c967e262c557e82f9180115bd4d5bd9306a0684800e08fac2fd9aa81571f038"
     },
     {
       "path": "lean/lake-manifest.json",
@@ -609,8 +614,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 1416,
-      "sha256": "1cd54d2a0189382a2710e490e9450e7a124acbff85e0355350fc17b3cb65547a"
+      "bytes": 1610,
+      "sha256": "965f7747ad3be42e3db5b597ad83868a5e1162e1ff1d938f200f57e95774c5fb"
     },
     {
       "path": "tools/check_metadata.py",
