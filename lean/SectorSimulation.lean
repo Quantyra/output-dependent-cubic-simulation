@@ -85,3 +85,5 @@ import SectorSimulation.HadamardInteger
 import SectorSimulation.CubicPhaseInteger
 
 import SectorSimulation.ToffoliPhasePolynomial
+
+import SectorSimulation.ToffoliRecordTrace

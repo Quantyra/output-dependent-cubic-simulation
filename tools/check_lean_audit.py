@@ -163,6 +163,8 @@ EXPECTED = {
     'SectorSimulation.toffoli_target_network_restores': set(),
     'SectorSimulation.toffoli_control_network_restores': set(),
     'SectorSimulation.toffoli_phase_polynomial': set(),
+    'SectorSimulation.toffoli_literal_phase_trace': {'propext'},
+    'SectorSimulation.toffoli_literal_phase_trace_mod8': {'propext'},
 }
 
 

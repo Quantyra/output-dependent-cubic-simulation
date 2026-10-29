@@ -442,3 +442,9 @@ import SectorSimulation
 
 #check SectorSimulation.toffoli_phase_polynomial
 #print axioms SectorSimulation.toffoli_phase_polynomial
+
+#check SectorSimulation.toffoli_literal_phase_trace
+#print axioms SectorSimulation.toffoli_literal_phase_trace
+
+#check SectorSimulation.toffoli_literal_phase_trace_mod8
+#print axioms SectorSimulation.toffoli_literal_phase_trace_mod8

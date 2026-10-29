@@ -2303,6 +2303,36 @@
       "axioms": [],
       "build_audit_receipt": "lean/evidence/toffoli-phase-polynomial-audit.md",
       "unresolved_bridge": "Connect exponent and XOR model to literal gate sequence, eighth-root complex amplitudes, normalized Hadamards and full compiler/circuit semantics."
+    },
+    {
+      "id": "toffoli-record-toffoli_literal_phase_trace",
+      "section": "2",
+      "target": "SectorSimulation.toffoli_literal_phase_trace",
+      "assumptions": "The fixed three-wire copied Toffoli record list with H records removed, and Lean symbolic CX/T/TDG phase trace.",
+      "quantifiers": "All Boolean values on the three wires.",
+      "statement": "Tracing the copied three-wire Toffoli record list after removing H records restores all three bits and computes the modeled phase exponent.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-record-trace-audit.md",
+      "unresolved_bridge": "Prove H commutation and normalized complex semantics, general wire relabeling, Python list equivalence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "toffoli-record-toffoli_literal_phase_trace_mod8",
+      "section": "2",
+      "target": "SectorSimulation.toffoli_literal_phase_trace_mod8",
+      "assumptions": "The fixed three-wire copied Toffoli record list with H records removed, and Lean symbolic CX/T/TDG phase trace.",
+      "quantifiers": "All Boolean values on the three wires.",
+      "statement": "That non-H record trace has cubic controlled-sign phase exponent modulo eight for all three-bit inputs.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-record-trace-audit.md",
+      "unresolved_bridge": "Prove H commutation and normalized complex semantics, general wire relabeling, Python list equivalence, full circuit and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
