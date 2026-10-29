@@ -7253,6 +7253,115 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-unique-path.md",
       "unresolved_bridge": "Identify accumulated selected-path signs and scales with the closed Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-path-endpoint-alignPathWire_at",
+      "section": "2",
+      "target": "SectorSimulation.alignPathWire_at",
+      "assumptions": "Lean finite binary vectors, exact-amplitude quotient and selected-path Hadamard model.",
+      "quantifiers": "All finite widths, applicable wire lists, vectors and exact amplitudes.",
+      "statement": "A path alignment step sets its selected bit to the output bit and retains every other bit.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-path-endpoint.md",
+      "unresolved_bridge": "Identify recursive coefficients with Walsh dot-product signs and normalization, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-path-endpoint-selectedPathFinal_at",
+      "section": "2",
+      "target": "SectorSimulation.selectedPathFinal_at",
+      "assumptions": "Lean finite binary vectors, exact-amplitude quotient and selected-path Hadamard model.",
+      "quantifiers": "All finite widths, applicable wire lists, vectors and exact amplitudes.",
+      "statement": "A selected-path endpoint agrees with output on processed wires and input on untouched wires.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-path-endpoint.md",
+      "unresolved_bridge": "Identify recursive coefficients with Walsh dot-product signs and normalization, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-path-endpoint-selectedPathFinal_all",
+      "section": "2",
+      "target": "SectorSimulation.selectedPathFinal_all",
+      "assumptions": "Lean finite binary vectors, exact-amplitude quotient and selected-path Hadamard model.",
+      "quantifiers": "All finite widths, applicable wire lists, vectors and exact amplitudes.",
+      "statement": "The all-wire selected path ends at the requested output, including at zero width.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-path-endpoint.md",
+      "unresolved_bridge": "Identify recursive coefficients with Walsh dot-product signs and normalization, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-path-endpoint-basisSelectedPath_components",
+      "section": "2",
+      "target": "SectorSimulation.basisSelectedPath_components",
+      "assumptions": "Lean finite binary vectors, exact-amplitude quotient and selected-path Hadamard model.",
+      "quantifiers": "All finite widths, applicable wire lists, vectors and exact amplitudes.",
+      "statement": "The selected-path amplitude equals its accumulated coefficient when its endpoint equals the output and zero otherwise.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-path-endpoint.md",
+      "unresolved_bridge": "Identify recursive coefficients with Walsh dot-product signs and normalization, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-path-endpoint-hadamardKernel_allWire_basis_coefficient",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_allWire_basis_coefficient",
+      "assumptions": "Lean finite binary vectors, exact-amplitude quotient and selected-path Hadamard model.",
+      "quantifiers": "All finite widths, applicable wire lists, vectors and exact amplitudes.",
+      "statement": "The all-wire Hadamard kernel on a basis input equals the selected-path exact coefficient.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-path-endpoint.md",
+      "unresolved_bridge": "Identify recursive coefficients with Walsh dot-product signs and normalization, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-path-endpoint-hadamardKernel_allWire_coefficient_sum",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_allWire_coefficient_sum",
+      "assumptions": "Lean finite binary vectors, exact-amplitude quotient and selected-path Hadamard model.",
+      "quantifiers": "All finite widths, applicable wire lists, vectors and exact amplitudes.",
+      "statement": "The all-wire Hadamard kernel on an arbitrary input is the finite sum of selected-path exact coefficients.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-path-endpoint.md",
+      "unresolved_bridge": "Identify recursive coefficients with Walsh dot-product signs and normalization, prove complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

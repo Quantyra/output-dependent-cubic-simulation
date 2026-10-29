@@ -218,3 +218,5 @@ import SectorSimulation.HadamardBasisSupport
 import SectorSimulation.HadamardBasisBranching
 
 import SectorSimulation.HadamardUniquePath
+
+import SectorSimulation.HadamardPathEndpoint

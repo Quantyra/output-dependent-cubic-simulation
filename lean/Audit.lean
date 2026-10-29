@@ -1222,3 +1222,21 @@ import SectorSimulation
 
 #check SectorSimulation.hadamardKernel_uniquePath_sum
 #print axioms SectorSimulation.hadamardKernel_uniquePath_sum
+
+#check SectorSimulation.alignPathWire_at
+#print axioms SectorSimulation.alignPathWire_at
+
+#check SectorSimulation.selectedPathFinal_at
+#print axioms SectorSimulation.selectedPathFinal_at
+
+#check SectorSimulation.selectedPathFinal_all
+#print axioms SectorSimulation.selectedPathFinal_all
+
+#check SectorSimulation.basisSelectedPath_components
+#print axioms SectorSimulation.basisSelectedPath_components
+
+#check SectorSimulation.hadamardKernel_allWire_basis_coefficient
+#print axioms SectorSimulation.hadamardKernel_allWire_basis_coefficient
+
+#check SectorSimulation.hadamardKernel_allWire_coefficient_sum
+#print axioms SectorSimulation.hadamardKernel_allWire_coefficient_sum
