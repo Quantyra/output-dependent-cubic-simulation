@@ -9315,6 +9315,25 @@
       ],
       "build_audit_receipt": "lean/evidence/binary-transpose-character.md",
       "unresolved_bridge": "Connect this identity to the conditional source Walsh formula; construct arbitrary-source canonical coordinates and establish rank, support and costs."
+    },
+    {
+      "id": "source-transpose-canonical-sourceWalshSum_transposedCanonical",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_transposedCanonical",
+      "assumptions": "A successful modeled Gaussian row program, matching canonical coefficient lengths and a pointwise transformed-phase identity.",
+      "quantifiers": "All finite block dimensions, source ANFs, binary characters and transformations satisfying the stated hypotheses.",
+      "statement": "The source Walsh sum has the canonical closed form with the transformed character computed by the transpose matrix.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/source-transpose-canonical.md",
+      "unresolved_bridge": "Construct the canonical basis for arbitrary source quadratics and establish rank, general support and elimination costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -1570,3 +1570,6 @@ import SectorSimulation
 
 #check SectorSimulation.binaryTranspose_character
 #print axioms SectorSimulation.binaryTranspose_character
+
+#check SectorSimulation.sourceWalshSum_transposedCanonical
+#print axioms SectorSimulation.sourceWalshSum_transposedCanonical
