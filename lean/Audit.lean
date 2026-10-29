@@ -1024,3 +1024,24 @@ import SectorSimulation
 
 #check SectorSimulation.sortedNormalizeMasks_idempotent
 #print axioms SectorSimulation.sortedNormalizeMasks_idempotent
+
+#check SectorSimulation.sortedNormalizeMasks_subset
+#print axioms SectorSimulation.sortedNormalizeMasks_subset
+
+#check SectorSimulation.sortedNormalizeMasks_all
+#print axioms SectorSimulation.sortedNormalizeMasks_all
+
+#check SectorSimulation.normalizedRaw_phases
+#print axioms SectorSimulation.normalizedRaw_phases
+
+#check SectorSimulation.normalizedRaw_boundary
+#print axioms SectorSimulation.normalizedRaw_boundary
+
+#check SectorSimulation.normalizeRawDescriptor_idempotent
+#print axioms SectorSimulation.normalizeRawDescriptor_idempotent
+
+#check SectorSimulation.normalizedRaw_maskChecks
+#print axioms SectorSimulation.normalizedRaw_maskChecks
+
+#check SectorSimulation.normalizedRaw_degreeChecks
+#print axioms SectorSimulation.normalizedRaw_degreeChecks

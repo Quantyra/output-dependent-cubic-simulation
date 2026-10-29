@@ -6015,6 +6015,138 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-mask-normalization.md",
       "unresolved_bridge": "Prove actual Python candidate satisfies the hypotheses, descriptor text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "raw-descriptor-normalization-sortedNormalizeMasks_subset",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_subset",
+      "assumptions": "Lean raw two-phase descriptor and toggle-and-sort mask normalizer; checks assumed true where stated.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Every normalized mask is present in the input list.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/raw-descriptor-normalization.md",
+      "unresolved_bridge": "Prove full raw-validator preservation and original-input rejection, Python implementation refinement, text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "raw-descriptor-normalization-sortedNormalizeMasks_all",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_all",
+      "assumptions": "Lean raw two-phase descriptor and toggle-and-sort mask normalizer; checks assumed true where stated.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Every predicate true for all input masks remains true of all normalized masks.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/raw-descriptor-normalization.md",
+      "unresolved_bridge": "Prove full raw-validator preservation and original-input rejection, Python implementation refinement, text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "raw-descriptor-normalization-normalizedRaw_phases",
+      "section": "2",
+      "target": "SectorSimulation.normalizedRaw_phases",
+      "assumptions": "Lean raw two-phase descriptor and toggle-and-sort mask normalizer; checks assumed true where stated.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Both normalized raw descriptor phases preserve their Boolean evaluations.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/raw-descriptor-normalization.md",
+      "unresolved_bridge": "Prove full raw-validator preservation and original-input rejection, Python implementation refinement, text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "raw-descriptor-normalization-normalizedRaw_boundary",
+      "section": "2",
+      "target": "SectorSimulation.normalizedRaw_boundary",
+      "assumptions": "Lean raw two-phase descriptor and toggle-and-sort mask normalizer; checks assumed true where stated.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Raw normalization retains width, pairing rows, basis and output.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/raw-descriptor-normalization.md",
+      "unresolved_bridge": "Prove full raw-validator preservation and original-input rejection, Python implementation refinement, text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "raw-descriptor-normalization-normalizeRawDescriptor_idempotent",
+      "section": "2",
+      "target": "SectorSimulation.normalizeRawDescriptor_idempotent",
+      "assumptions": "Lean raw two-phase descriptor and toggle-and-sort mask normalizer; checks assumed true where stated.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Raw descriptor normalization is idempotent.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/raw-descriptor-normalization.md",
+      "unresolved_bridge": "Prove full raw-validator preservation and original-input rejection, Python implementation refinement, text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "raw-descriptor-normalization-normalizedRaw_maskChecks",
+      "section": "2",
+      "target": "SectorSimulation.normalizedRaw_maskChecks",
+      "assumptions": "Lean raw two-phase descriptor and toggle-and-sort mask normalizer; checks assumed true where stated.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Raw normalization preserves existing phase mask-width checks.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/raw-descriptor-normalization.md",
+      "unresolved_bridge": "Prove full raw-validator preservation and original-input rejection, Python implementation refinement, text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "raw-descriptor-normalization-normalizedRaw_degreeChecks",
+      "section": "2",
+      "target": "SectorSimulation.normalizedRaw_degreeChecks",
+      "assumptions": "Lean raw two-phase descriptor and toggle-and-sort mask normalizer; checks assumed true where stated.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Raw normalization preserves existing phase degree checks.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/raw-descriptor-normalization.md",
+      "unresolved_bridge": "Prove full raw-validator preservation and original-input rejection, Python implementation refinement, text parsing, native compiler correspondence, circuit-to-sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -390,6 +390,13 @@ EXPECTED = {
     'SectorSimulation.sortedNormalizeMasks_unique': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sortedNormalizeMasks_perm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sortedNormalizeMasks_idempotent': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sortedNormalizeMasks_subset': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.sortedNormalizeMasks_all': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.normalizedRaw_phases': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.normalizedRaw_boundary': {'Quot.sound', 'propext'},
+    'SectorSimulation.normalizeRawDescriptor_idempotent': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.normalizedRaw_maskChecks': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.normalizedRaw_degreeChecks': {'Classical.choice', 'Quot.sound', 'propext'},
 }
 
 
