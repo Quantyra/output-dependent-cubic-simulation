@@ -1910,6 +1910,88 @@
       ],
       "build_audit_receipt": "lean/evidence/linear-gate-basis-audit.md",
       "unresolved_bridge": "Connect the reversed elimination program to matrix action, prove equivalence to Python emitted records, and establish quantum gate and full circuit semantics."
+    },
+    {
+      "id": "linear-circuit-rowOperationCNOTs_valid",
+      "section": "2",
+      "target": "SectorSimulation.rowOperationCNOTs_valid",
+      "assumptions": "Finite Boolean basis vectors, typed wires and successful modeled Gaussian elimination where stated.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "Each modeled row-operation CNOT sequence has distinct control and target wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-circuit-matrix-audit.md",
+      "unresolved_bridge": "Prove correspondence to Python emitted gate records and quantum gate semantics, then full circuit replay and manuscript theorem claims."
+    },
+    {
+      "id": "linear-circuit-rowProgramCNOTs_valid",
+      "section": "2",
+      "target": "SectorSimulation.rowProgramCNOTs_valid",
+      "assumptions": "Finite Boolean basis vectors, typed wires and successful modeled Gaussian elimination where stated.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "Every gate in a modeled row-program CNOT compilation has distinct wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-circuit-matrix-audit.md",
+      "unresolved_bridge": "Prove correspondence to Python emitted gate records and quantum gate semantics, then full circuit replay and manuscript theorem claims."
+    },
+    {
+      "id": "linear-circuit-runCNOTs_reverse_cancels",
+      "section": "2",
+      "target": "SectorSimulation.runCNOTs_reverse_cancels",
+      "assumptions": "Finite Boolean basis vectors, typed wires and successful modeled Gaussian elimination where stated.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "The reversed distinct-wire CNOT sequence cancels its forward action on every basis vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-circuit-matrix-audit.md",
+      "unresolved_bridge": "Prove correspondence to Python emitted gate records and quantum gate semantics, then full circuit replay and manuscript theorem claims."
+    },
+    {
+      "id": "linear-circuit-gaussianCNOTs_forward_inverse",
+      "section": "2",
+      "target": "SectorSimulation.gaussianCNOTs_forward_inverse",
+      "assumptions": "Finite Boolean basis vectors, typed wires and successful modeled Gaussian elimination where stated.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "For successful modeled Gaussian elimination the forward CNOT program maps each matrix-applied basis vector back to the original vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-circuit-matrix-audit.md",
+      "unresolved_bridge": "Prove correspondence to Python emitted gate records and quantum gate semantics, then full circuit replay and manuscript theorem claims."
+    },
+    {
+      "id": "linear-circuit-gaussianCNOTs_reversed_implements_matrix",
+      "section": "2",
+      "target": "SectorSimulation.gaussianCNOTs_reversed_implements_matrix",
+      "assumptions": "Finite Boolean basis vectors, typed wires and successful modeled Gaussian elimination where stated.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "For successful modeled Gaussian elimination the reversed CNOT program applies the original matrix to every Boolean basis vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-circuit-matrix-audit.md",
+      "unresolved_bridge": "Prove correspondence to Python emitted gate records and quantum gate semantics, then full circuit replay and manuscript theorem claims."
     }
   ],
   "paper_source": "manuscript/main.tex",

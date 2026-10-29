@@ -367,3 +367,18 @@ import SectorSimulation
 
 #check SectorSimulation.rowProgramCNOTs_correct
 #print axioms SectorSimulation.rowProgramCNOTs_correct
+
+#check SectorSimulation.rowOperationCNOTs_valid
+#print axioms SectorSimulation.rowOperationCNOTs_valid
+
+#check SectorSimulation.rowProgramCNOTs_valid
+#print axioms SectorSimulation.rowProgramCNOTs_valid
+
+#check SectorSimulation.runCNOTs_reverse_cancels
+#print axioms SectorSimulation.runCNOTs_reverse_cancels
+
+#check SectorSimulation.gaussianCNOTs_forward_inverse
+#print axioms SectorSimulation.gaussianCNOTs_forward_inverse
+
+#check SectorSimulation.gaussianCNOTs_reversed_implements_matrix
+#print axioms SectorSimulation.gaussianCNOTs_reversed_implements_matrix

@@ -138,6 +138,11 @@ EXPECTED = {
     'SectorSimulation.CNOT_involutive': {'propext', 'Quot.sound'},
     'SectorSimulation.rowOperationCNOTs_correct': {'propext', 'Quot.sound'},
     'SectorSimulation.rowProgramCNOTs_correct': {'propext', 'Quot.sound'},
+    'SectorSimulation.rowOperationCNOTs_valid': {'propext', 'Quot.sound'},
+    'SectorSimulation.rowProgramCNOTs_valid': {'propext', 'Quot.sound'},
+    'SectorSimulation.runCNOTs_reverse_cancels': {'propext', 'Quot.sound'},
+    'SectorSimulation.gaussianCNOTs_forward_inverse': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.gaussianCNOTs_reversed_implements_matrix': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
