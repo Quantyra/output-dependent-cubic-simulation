@@ -1372,3 +1372,13 @@ import SectorSimulation
 
 #check SectorSimulation.canonicalWalshSum_naturalAbs
 #print axioms SectorSimulation.canonicalWalshSum_naturalAbs
+
+
+#check SectorSimulation.explicitPairSum_eq
+#print axioms SectorSimulation.explicitPairSum_eq
+
+#check SectorSimulation.explicitCanonicalSum_eq
+#print axioms SectorSimulation.explicitCanonicalSum_eq
+
+#check SectorSimulation.explicitCanonicalSum_closed
+#print axioms SectorSimulation.explicitCanonicalSum_closed

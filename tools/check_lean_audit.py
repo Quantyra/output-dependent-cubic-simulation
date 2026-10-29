@@ -504,6 +504,9 @@ EXPECTED = {
     'SectorSimulation.canonicalWalshSum_closed': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalWalshSum_zero_iff': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalWalshSum_naturalAbs': {'propext', 'Quot.sound'},
+    'SectorSimulation.explicitPairSum_eq': {'propext'},
+    'SectorSimulation.explicitCanonicalSum_eq': {'propext', 'Quot.sound'},
+    'SectorSimulation.explicitCanonicalSum_closed': {'propext', 'Quot.sound'},
 }
 
 

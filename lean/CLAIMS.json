@@ -8151,6 +8151,59 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-walsh.md",
       "unresolved_bridge": "Connect arbitrary quadratic ANF to a computed canonical basis, polar rank, affine support, sign coordinates and elimination costs."
+    },
+    {
+      "id": "explicit-canonical-walsh-explicitPairSum_eq",
+      "section": "3",
+      "target": "SectorSimulation.explicitPairSum_eq",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The explicit Boolean-pair assignment sum equals the recursive hyperbolic Walsh sum.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/explicit-canonical-walsh.md",
+      "unresolved_bridge": "Connect assignment lists to finite vectors and source ANF; construct canonical basis for arbitrary quadratics, prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "explicit-canonical-walsh-explicitCanonicalSum_eq",
+      "section": "3",
+      "target": "SectorSimulation.explicitCanonicalSum_eq",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The explicit Boolean pair and radical assignment sum equals the recursive canonical Walsh sum.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/explicit-canonical-walsh.md",
+      "unresolved_bridge": "Connect assignment lists to finite vectors and source ANF; construct canonical basis for arbitrary quadratics, prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "explicit-canonical-walsh-explicitCanonicalSum_closed",
+      "section": "3",
+      "target": "SectorSimulation.explicitCanonicalSum_closed",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The explicit canonical assignment sum has the signed power-of-two or zero closed value.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/explicit-canonical-walsh.md",
+      "unresolved_bridge": "Connect assignment lists to finite vectors and source ANF; construct canonical basis for arbitrary quadratics, prove rank, affine support and elimination costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
