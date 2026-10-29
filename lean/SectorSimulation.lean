@@ -166,3 +166,5 @@ import SectorSimulation.SourcePhaseCompiler
 import SectorSimulation.ExactGaussianCNOTReplay
 
 import SectorSimulation.ExactHadamardProgram
+
+import SectorSimulation.ModeledFourier

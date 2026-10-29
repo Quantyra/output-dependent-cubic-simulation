@@ -892,3 +892,16 @@ import SectorSimulation
 #print axioms SectorSimulation.exactNativeHadamard_reverse_cancel
 #check SectorSimulation.exactNativeFourier_decomposition
 #print axioms SectorSimulation.exactNativeFourier_decomposition
+
+#check SectorSimulation.sharedCNOTs_amplitude
+#print axioms SectorSimulation.sharedCNOTs_amplitude
+#check SectorSimulation.sharedCNOTs_amplitude_congr
+#print axioms SectorSimulation.sharedCNOTs_amplitude_congr
+#check SectorSimulation.modeledFourier_amplitude_congr
+#print axioms SectorSimulation.modeledFourier_amplitude_congr
+#check SectorSimulation.exactNativeFourier_program
+#print axioms SectorSimulation.exactNativeFourier_program
+#check SectorSimulation.sharedPhaseSign_congr
+#print axioms SectorSimulation.sharedPhaseSign_congr
+#check SectorSimulation.compileModeledSourceBody_correct
+#print axioms SectorSimulation.compileModeledSourceBody_correct

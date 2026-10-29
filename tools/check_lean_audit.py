@@ -340,6 +340,12 @@ EXPECTED = {
     'SectorSimulation.runSharedHadamards_reverse_cancel': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.exactNativeHadamard_reverse_cancel': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.exactNativeFourier_decomposition': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedCNOTs_amplitude': {'propext', 'Quot.sound'},
+    'SectorSimulation.sharedCNOTs_amplitude_congr': {'propext', 'Quot.sound'},
+    'SectorSimulation.modeledFourier_amplitude_congr': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactNativeFourier_program': {'propext', 'Quot.sound'},
+    'SectorSimulation.sharedPhaseSign_congr': {'propext', 'Quot.sound'},
+    'SectorSimulation.compileModeledSourceBody_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

@@ -5144,6 +5144,104 @@
       ],
       "build_audit_receipt": "lean/evidence/native-hadamard-program-audit.md",
       "unresolved_bridge": "Prove the all-wire Hadamard sequence equals the normalized Fourier kernel, establish complex embedding, Python correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-source-body-sharedCNOTs_amplitude",
+      "section": "2",
+      "target": "SectorSimulation.sharedCNOTs_amplitude",
+      "assumptions": "The exact shared-denominator native interpreter; degree-checked source phases and successful Gaussian row program for the source-body theorem.",
+      "quantifiers": "All modeled source descriptors, represented input states and output vectors; applicable finite programs.",
+      "statement": "A shared CNOT program transports exact amplitudes according to its reverse basis action.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
+    },
+    {
+      "id": "modeled-source-body-sharedCNOTs_amplitude_congr",
+      "section": "2",
+      "target": "SectorSimulation.sharedCNOTs_amplitude_congr",
+      "assumptions": "The exact shared-denominator native interpreter; degree-checked source phases and successful Gaussian row program for the source-body theorem.",
+      "quantifiers": "All modeled source descriptors, represented input states and output vectors; applicable finite programs.",
+      "statement": "A shared CNOT program preserves pointwise exact-amplitude equivalence.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
+    },
+    {
+      "id": "modeled-source-body-modeledFourier_amplitude_congr",
+      "section": "2",
+      "target": "SectorSimulation.modeledFourier_amplitude_congr",
+      "assumptions": "The exact shared-denominator native interpreter; degree-checked source phases and successful Gaussian row program for the source-body theorem.",
+      "quantifiers": "All modeled source descriptors, represented input states and output vectors; applicable finite programs.",
+      "statement": "The modeled Hadamard-and-CNOT transform preserves pointwise exact-amplitude equivalence.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
+    },
+    {
+      "id": "modeled-source-body-exactNativeFourier_program",
+      "section": "2",
+      "target": "SectorSimulation.exactNativeFourier_program",
+      "assumptions": "The exact shared-denominator native interpreter; degree-checked source phases and successful Gaussian row program for the source-body theorem.",
+      "quantifiers": "All modeled source descriptors, represented input states and output vectors; applicable finite programs.",
+      "statement": "Native records for the modeled Hadamard-and-CNOT transform replay to its shared-state action.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
+    },
+    {
+      "id": "modeled-source-body-sharedPhaseSign_congr",
+      "section": "2",
+      "target": "SectorSimulation.sharedPhaseSign_congr",
+      "assumptions": "The exact shared-denominator native interpreter; degree-checked source phases and successful Gaussian row program for the source-body theorem.",
+      "quantifiers": "All modeled source descriptors, represented input states and output vectors; applicable finite programs.",
+      "statement": "A Boolean phase sign preserves pointwise exact-amplitude equivalence.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
+    },
+    {
+      "id": "modeled-source-body-compileModeledSourceBody_correct",
+      "section": "2",
+      "target": "SectorSimulation.compileModeledSourceBody_correct",
+      "assumptions": "The exact shared-denominator native interpreter; degree-checked source phases and successful Gaussian row program for the source-body theorem.",
+      "quantifiers": "All modeled source descriptors, represented input states and output vectors; applicable finite programs.",
+      "statement": "The executable source-body compiler returns native records whose replay matches the modeled three-transform, two-phase body at every output amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
