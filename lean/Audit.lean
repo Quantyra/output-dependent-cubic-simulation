@@ -870,3 +870,12 @@ import SectorSimulation
 #print axioms SectorSimulation.phaseWithinDegree_sound
 #check SectorSimulation.circuitDescriptor_phase_compilation
 #print axioms SectorSimulation.circuitDescriptor_phase_compilation
+
+#check SectorSimulation.runSharedCNOTs_numerator
+#print axioms SectorSimulation.runSharedCNOTs_numerator
+#check SectorSimulation.runSharedCNOTs_exponent
+#print axioms SectorSimulation.runSharedCNOTs_exponent
+#check SectorSimulation.exactNativeCNOTProgram
+#print axioms SectorSimulation.exactNativeCNOTProgram
+#check SectorSimulation.exactNativeGaussianCNOTs
+#print axioms SectorSimulation.exactNativeGaussianCNOTs

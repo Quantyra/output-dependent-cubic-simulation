@@ -330,6 +330,10 @@ EXPECTED = {
     'SectorSimulation.noZeroWireCircuitDescriptor': set(),
     'SectorSimulation.phaseWithinDegree_sound': {'propext', 'Quot.sound'},
     'SectorSimulation.circuitDescriptor_phase_compilation': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.runSharedCNOTs_numerator': set(),
+    'SectorSimulation.runSharedCNOTs_exponent': set(),
+    'SectorSimulation.exactNativeCNOTProgram': {'propext'},
+    'SectorSimulation.exactNativeGaussianCNOTs': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
