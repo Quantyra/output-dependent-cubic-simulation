@@ -5528,6 +5528,108 @@
       ],
       "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "descriptor-json-encode-jsonNat_getNat",
+      "section": "2",
+      "target": "SectorSimulation.jsonNat_getNat",
+      "assumptions": "Lean JSON value constructors and extractor; the recognizer existence result additionally assumes successful ASCII/JSON parsing and descriptor validation.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "A natural JSON value decodes to its original natural number.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/descriptor-json-encode.md",
+      "unresolved_bridge": "Construct and verify text/ASCII serialization and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
+    },
+    {
+      "id": "descriptor-json-encode-jsonNatArray_extract",
+      "section": "2",
+      "target": "SectorSimulation.jsonNatArray_extract",
+      "assumptions": "Lean JSON value constructors and extractor; the recognizer existence result additionally assumes successful ASCII/JSON parsing and descriptor validation.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "A JSON natural array decodes to its original natural list.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/descriptor-json-encode.md",
+      "unresolved_bridge": "Construct and verify text/ASCII serialization and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
+    },
+    {
+      "id": "descriptor-json-encode-jsonArr_get",
+      "section": "2",
+      "target": "SectorSimulation.jsonArr_get",
+      "assumptions": "Lean JSON value constructors and extractor; the recognizer existence result additionally assumes successful ASCII/JSON parsing and descriptor validation.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "A JSON array constructor decodes to its original array.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/descriptor-json-encode.md",
+      "unresolved_bridge": "Construct and verify text/ASCII serialization and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
+    },
+    {
+      "id": "descriptor-json-encode-jsonStr_get",
+      "section": "2",
+      "target": "SectorSimulation.jsonStr_get",
+      "assumptions": "Lean JSON value constructors and extractor; the recognizer existence result additionally assumes successful ASCII/JSON parsing and descriptor validation.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "A JSON string constructor decodes to its original string.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/descriptor-json-encode.md",
+      "unresolved_bridge": "Construct and verify text/ASCII serialization and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
+    },
+    {
+      "id": "descriptor-json-encode-rawDescriptorJson_extract",
+      "section": "2",
+      "target": "SectorSimulation.rawDescriptorJson_extract",
+      "assumptions": "Lean JSON value constructors and extractor; the recognizer existence result additionally assumes successful ASCII/JSON parsing and descriptor validation.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "The constructed two-phase descriptor JSON value extracts to the original raw descriptor.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/descriptor-json-encode.md",
+      "unresolved_bridge": "Construct and verify text/ASCII serialization and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
+    },
+    {
+      "id": "descriptor-json-encode-serializedValidDescriptor_has_recognizedBody",
+      "section": "2",
+      "target": "SectorSimulation.serializedValidDescriptor_has_recognizedBody",
+      "assumptions": "Lean JSON value constructors and extractor; the recognizer existence result additionally assumes successful ASCII/JSON parsing and descriptor validation.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "If bytes decode as text parsing to the constructed descriptor JSON value and the raw descriptor validates, an accepted modeled compiled body exists.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/descriptor-json-encode.md",
+      "unresolved_bridge": "Construct and verify text/ASCII serialization and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

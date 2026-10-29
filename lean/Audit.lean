@@ -943,3 +943,21 @@ import SectorSimulation
 #print axioms SectorSimulation.validatedDescriptor_has_modeledBody
 #check SectorSimulation.encodedValidSource_has_recognizedBody
 #print axioms SectorSimulation.encodedValidSource_has_recognizedBody
+
+#check SectorSimulation.jsonNat_getNat
+#print axioms SectorSimulation.jsonNat_getNat
+
+#check SectorSimulation.jsonNatArray_extract
+#print axioms SectorSimulation.jsonNatArray_extract
+
+#check SectorSimulation.jsonArr_get
+#print axioms SectorSimulation.jsonArr_get
+
+#check SectorSimulation.jsonStr_get
+#print axioms SectorSimulation.jsonStr_get
+
+#check SectorSimulation.rawDescriptorJson_extract
+#print axioms SectorSimulation.rawDescriptorJson_extract
+
+#check SectorSimulation.serializedValidDescriptor_has_recognizedBody
+#print axioms SectorSimulation.serializedValidDescriptor_has_recognizedBody

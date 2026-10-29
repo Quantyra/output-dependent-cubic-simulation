@@ -176,3 +176,5 @@ import SectorSimulation.ValidatedHeaderReplay
 import SectorSimulation.ModeledSourceRecognizer
 
 import SectorSimulation.ModeledRecognizerCompleteness
+
+import SectorSimulation.DescriptorJsonEncode

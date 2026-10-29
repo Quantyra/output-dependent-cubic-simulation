@@ -363,6 +363,12 @@ EXPECTED = {
     'SectorSimulation.encodedModeledSource_recognized': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.validatedDescriptor_has_modeledBody': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.encodedValidSource_has_recognizedBody': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.jsonNat_getNat': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.jsonNatArray_extract': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.jsonArr_get': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.jsonStr_get': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.rawDescriptorJson_extract': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.serializedValidDescriptor_has_recognizedBody': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
