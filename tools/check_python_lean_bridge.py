@@ -22,6 +22,14 @@ CASES = [
 
 
 def main():
+    # Validation must precede cancellation: both copies of mask 2 exceed width 1.
+    invalid = ["cubic-field-v1", 1, [1], [[2, 2], []], 0, 0]
+    try:
+        compiler.normalize_descriptor(invalid)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Python accepted duplicate out-of-range masks")
     lines = ["import SectorSimulation.ModeledSourceRecognizer", "open SectorSimulation"]
     for index, desc in enumerate(CASES):
         result = compiler.compile_native(desc)

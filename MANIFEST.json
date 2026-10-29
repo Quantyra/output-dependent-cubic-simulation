@@ -139,8 +139,8 @@
     },
     {
       "path": "lean/ModeledRecognizerExamples.lean",
-      "bytes": 1264,
-      "sha256": "3c75f9de750a81f5f0d9e57147e5b7a7ba6a3b42564ab959e27e02a2b712e54e"
+      "bytes": 1692,
+      "sha256": "708389762fb88d2a1ed1b064f0258194aead96fb07c82135a54f701eaee46620"
     },
     {
       "path": "lean/NativeJsonExamples.lean",
@@ -1268,6 +1268,11 @@
       "sha256": "c1c7c29d02257e81975966399dda7b6324f3ab7772e7cf3cf0152c4e3bc1638d"
     },
     {
+      "path": "lean/evidence/validation-order-regression.md",
+      "bytes": 879,
+      "sha256": "9886980d5ea2f882ad7ed5fe68501f5662699bea44bc72ae98ebc20e787e263b"
+    },
+    {
       "path": "lean/lake-manifest.json",
       "bytes": 3173,
       "sha256": "ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642"
@@ -1684,8 +1689,8 @@
     },
     {
       "path": "tools/check_python_lean_bridge.py",
-      "bytes": 1821,
-      "sha256": "246a253c0cdc462a258f369afa5191534007a82fbdd45e9abf63a8694c210211"
+      "bytes": 2143,
+      "sha256": "368aba779d796e247424a0e46cfdc2556a00b1e45adf573604d6dbce58fd56db"
     },
     {
       "path": "tools/check_toffoli_template.py",
