@@ -1428,3 +1428,22 @@ import SectorSimulation
 
 #check SectorSimulation.radicalAssignment_has_unique_vector
 #print axioms SectorSimulation.radicalAssignment_has_unique_vector
+
+
+#check SectorSimulation.vectorPairAssignment_length
+#print axioms SectorSimulation.vectorPairAssignment_length
+
+#check SectorSimulation.vectorPairAssignment_mem
+#print axioms SectorSimulation.vectorPairAssignment_mem
+
+#check SectorSimulation.vectorPairAssignment_get
+#print axioms SectorSimulation.vectorPairAssignment_get
+
+#check SectorSimulation.vectorPairAssignment_injective
+#print axioms SectorSimulation.vectorPairAssignment_injective
+
+#check SectorSimulation.vectorPairAssignment_roundtrip
+#print axioms SectorSimulation.vectorPairAssignment_roundtrip
+
+#check SectorSimulation.pairAssignment_has_unique_vectors
+#print axioms SectorSimulation.pairAssignment_has_unique_vectors

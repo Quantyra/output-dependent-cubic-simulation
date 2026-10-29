@@ -522,6 +522,12 @@ EXPECTED = {
     'SectorSimulation.vectorAssignment_injective': {'propext', 'Quot.sound'},
     'SectorSimulation.vectorAssignment_of_assignmentVector': {'propext', 'Quot.sound'},
     'SectorSimulation.radicalAssignment_has_unique_vector': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.vectorPairAssignment_length': {'propext'},
+    'SectorSimulation.vectorPairAssignment_mem': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.vectorPairAssignment_get': {'propext'},
+    'SectorSimulation.vectorPairAssignment_injective': {'propext', 'Quot.sound'},
+    'SectorSimulation.vectorPairAssignment_roundtrip': {'propext', 'Quot.sound'},
+    'SectorSimulation.pairAssignment_has_unique_vectors': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

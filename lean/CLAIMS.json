@@ -8476,6 +8476,114 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
       "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-pair-vectors-vectorPairAssignment_length",
+      "section": "3",
+      "target": "SectorSimulation.vectorPairAssignment_length",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The list extracted from two finite vectors has the expected pair count.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-pair-vectors.md",
+      "unresolved_bridge": "Relate paired vectors to a single finite vector coordinate layout, connect phase evaluation to source ANF, and construct a general canonical basis with rank and cost proofs."
+    },
+    {
+      "id": "canonical-pair-vectors-vectorPairAssignment_mem",
+      "section": "3",
+      "target": "SectorSimulation.vectorPairAssignment_mem",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Every pair of finite binary vectors gives an enumerated pair assignment.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-pair-vectors.md",
+      "unresolved_bridge": "Relate paired vectors to a single finite vector coordinate layout, connect phase evaluation to source ANF, and construct a general canonical basis with rank and cost proofs."
+    },
+    {
+      "id": "canonical-pair-vectors-vectorPairAssignment_get",
+      "section": "3",
+      "target": "SectorSimulation.vectorPairAssignment_get",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Each extracted pair contains the two corresponding vector coordinates.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-pair-vectors.md",
+      "unresolved_bridge": "Relate paired vectors to a single finite vector coordinate layout, connect phase evaluation to source ANF, and construct a general canonical basis with rank and cost proofs."
+    },
+    {
+      "id": "canonical-pair-vectors-vectorPairAssignment_injective",
+      "section": "3",
+      "target": "SectorSimulation.vectorPairAssignment_injective",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The pair-list map uniquely determines both input vectors.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-pair-vectors.md",
+      "unresolved_bridge": "Relate paired vectors to a single finite vector coordinate layout, connect phase evaluation to source ANF, and construct a general canonical basis with rank and cost proofs."
+    },
+    {
+      "id": "canonical-pair-vectors-vectorPairAssignment_roundtrip",
+      "section": "3",
+      "target": "SectorSimulation.vectorPairAssignment_roundtrip",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Every correctly sized pair list round-trips through its two finite vectors.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-pair-vectors.md",
+      "unresolved_bridge": "Relate paired vectors to a single finite vector coordinate layout, connect phase evaluation to source ANF, and construct a general canonical basis with rank and cost proofs."
+    },
+    {
+      "id": "canonical-pair-vectors-pairAssignment_has_unique_vectors",
+      "section": "3",
+      "target": "SectorSimulation.pairAssignment_has_unique_vectors",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Each enumerated pair list corresponds to exactly one pair of finite binary vectors.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-pair-vectors.md",
+      "unresolved_bridge": "Relate paired vectors to a single finite vector coordinate layout, connect phase evaluation to source ANF, and construct a general canonical basis with rank and cost proofs."
     }
   ],
   "paper_source": "manuscript/main.tex",
