@@ -5426,6 +5426,108 @@
       ],
       "build_audit_receipt": "lean/evidence/modeled-recognizer-audit.md",
       "unresolved_bridge": "Prove Python recognizer/compiler correspondence, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-recognizer-completeness-recognizeModeledSource_complete",
+      "section": "2",
+      "target": "SectorSimulation.recognizeModeledSource_complete",
+      "assumptions": "The Lean modeled recognizer and compiler; byte completeness assumes successful ASCII decoding, JSON parsing and extraction to a validated descriptor.",
+      "quantifiers": "All modeled gate lists and validated descriptors, and all bytes and parsed values satisfying the stated hypotheses.",
+      "statement": "A decoded validated descriptor with its matching compiled body and Gaussian program is accepted by the modeled recognizer.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-recognizer-completeness-recognizeModeledSource_iff",
+      "section": "2",
+      "target": "SectorSimulation.recognizeModeledSource_iff",
+      "assumptions": "The Lean modeled recognizer and compiler; byte completeness assumes successful ASCII decoding, JSON parsing and extraction to a validated descriptor.",
+      "quantifiers": "All modeled gate lists and validated descriptors, and all bytes and parsed values satisfying the stated hypotheses.",
+      "statement": "Modeled recognizer acceptance is equivalent to validated decoding, a successful Gaussian program and a matching compiled body.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-recognizer-completeness-encodedValidatedHeader_roundtrip",
+      "section": "2",
+      "target": "SectorSimulation.encodedValidatedHeader_roundtrip",
+      "assumptions": "The Lean modeled recognizer and compiler; byte completeness assumes successful ASCII decoding, JSON parsing and extraction to a validated descriptor.",
+      "quantifiers": "All modeled gate lists and validated descriptors, and all bytes and parsed values satisfying the stated hypotheses.",
+      "statement": "A numeric-byte header whose ASCII, JSON extraction and descriptor validation succeed decodes back to the validated descriptor and body.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-recognizer-completeness-encodedModeledSource_recognized",
+      "section": "2",
+      "target": "SectorSimulation.encodedModeledSource_recognized",
+      "assumptions": "The Lean modeled recognizer and compiler; byte completeness assumes successful ASCII decoding, JSON parsing and extraction to a validated descriptor.",
+      "quantifiers": "All modeled gate lists and validated descriptors, and all bytes and parsed values satisfying the stated hypotheses.",
+      "statement": "Such a header followed by its matching compiled body is accepted by the modeled recognizer.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-recognizer-completeness-validatedDescriptor_has_modeledBody",
+      "section": "2",
+      "target": "SectorSimulation.validatedDescriptor_has_modeledBody",
+      "assumptions": "The Lean modeled recognizer and compiler; byte completeness assumes successful ASCII decoding, JSON parsing and extraction to a validated descriptor.",
+      "quantifiers": "All modeled gate lists and validated descriptors, and all bytes and parsed values satisfying the stated hypotheses.",
+      "statement": "Every validated modeled descriptor has a successful Gaussian program and compiled body.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-recognizer-completeness-encodedValidSource_has_recognizedBody",
+      "section": "2",
+      "target": "SectorSimulation.encodedValidSource_has_recognizedBody",
+      "assumptions": "The Lean modeled recognizer and compiler; byte completeness assumes successful ASCII decoding, JSON parsing and extraction to a validated descriptor.",
+      "quantifiers": "All modeled gate lists and validated descriptors, and all bytes and parsed values satisfying the stated hypotheses.",
+      "statement": "Given bytes that decode and parse to a validated modeled descriptor, an accepted compiled body exists.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -174,3 +174,5 @@ import SectorSimulation.ExactNativeHeader
 import SectorSimulation.ValidatedHeaderReplay
 
 import SectorSimulation.ModeledSourceRecognizer
+
+import SectorSimulation.ModeledRecognizerCompleteness

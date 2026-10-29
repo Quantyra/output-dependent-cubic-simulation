@@ -357,6 +357,12 @@ EXPECTED = {
     'SectorSimulation.decodedValidatedHeader_replay_and_derivative': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recognizeModeledSource_sound': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recognizeModeledSource_replay': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recognizeModeledSource_complete': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recognizeModeledSource_iff': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.encodedValidatedHeader_roundtrip': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.encodedModeledSource_recognized': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.validatedDescriptor_has_modeledBody': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.encodedValidSource_has_recognizedBody': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

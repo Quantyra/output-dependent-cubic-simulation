@@ -930,3 +930,16 @@ import SectorSimulation
 #print axioms SectorSimulation.recognizeModeledSource_sound
 #check SectorSimulation.recognizeModeledSource_replay
 #print axioms SectorSimulation.recognizeModeledSource_replay
+
+#check SectorSimulation.recognizeModeledSource_complete
+#print axioms SectorSimulation.recognizeModeledSource_complete
+#check SectorSimulation.recognizeModeledSource_iff
+#print axioms SectorSimulation.recognizeModeledSource_iff
+#check SectorSimulation.encodedValidatedHeader_roundtrip
+#print axioms SectorSimulation.encodedValidatedHeader_roundtrip
+#check SectorSimulation.encodedModeledSource_recognized
+#print axioms SectorSimulation.encodedModeledSource_recognized
+#check SectorSimulation.validatedDescriptor_has_modeledBody
+#print axioms SectorSimulation.validatedDescriptor_has_modeledBody
+#check SectorSimulation.encodedValidSource_has_recognizedBody
+#print axioms SectorSimulation.encodedValidSource_has_recognizedBody
