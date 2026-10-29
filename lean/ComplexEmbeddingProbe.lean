@@ -176,3 +176,40 @@ theorem realFourierScale_rpow (n : Nat) :
   rw [he, Real.rpow_neg (by norm_num), Real.rpow_mul_natCast (by norm_num), ← Real.sqrt_eq_rpow]
 
 end SectorSimulation
+
+
+#print axioms SectorSimulation.standardOmega_fourth
+
+#print axioms SectorSimulation.cycloInterpret_mul
+
+#print axioms SectorSimulation.cycloInterpret_scale
+
+#print axioms SectorSimulation.dyadicInterpret_congr
+
+#print axioms SectorSimulation.cycloInterpret_add
+
+#print axioms SectorSimulation.dyadicInterpret_mul
+
+#print axioms SectorSimulation.dyadicInterpret_add
+
+#print axioms SectorSimulation.exactComplex_add
+
+#print axioms SectorSimulation.exactComplex_mul
+
+#print axioms SectorSimulation.exactComplex_one
+
+#print axioms SectorSimulation.exactComplex_hadamard
+
+#print axioms SectorSimulation.exactComplex_iterateHadamardScale
+
+#print axioms SectorSimulation.exactComplex_zero
+
+#print axioms SectorSimulation.exactComplex_neg
+
+#print axioms SectorSimulation.exactComplex_signed
+
+#print axioms SectorSimulation.exactComplex_foldr
+
+#print axioms SectorSimulation.nativePythonFourier_complex_sum
+
+#print axioms SectorSimulation.realFourierScale_rpow
