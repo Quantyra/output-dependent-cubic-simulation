@@ -101,6 +101,9 @@ EXPECTED = {
     'SectorSimulation.gaussianSolveChecked_returns_of_program': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.rowProgram_preserves_injective': {'propext', 'Quot.sound'},
     'SectorSimulation.successfulProgram_injective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.matrixApply_basis': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.matrixApply_lowerPivot': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.pivot_exists_of_injective': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

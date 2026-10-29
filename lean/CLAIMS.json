@@ -1480,6 +1480,26 @@
       ],
       "build_audit_receipt": "lean/evidence/pivot-injectivity-audit.md",
       "unresolved_bridge": "Prove the converse: every injective matrix admits all required pivots; prove finite-encoding cost and source/circuit semantics."
+    },
+    {
+      "id": "injective-pivot-exists",
+      "section": "2",
+      "target": "SectorSimulation.pivot_exists_of_injective",
+      "assumptions": "The matrix evaluator is injective and all earlier columns are unit columns.",
+      "quantifiers": "All finite dimensions, matrices and pivot indices.",
+      "statement": "The actual eligible-row pivot search returns a pivot under the stated injectivity and earlier-column hypotheses.",
+      "dependencies": [
+        "row-program-injective",
+        "pivot-search-none"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-exists-audit.md",
+      "unresolved_bridge": "Induct over the full consecutive pivot sequence to establish generator success, then prove finite-encoding costs and native circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

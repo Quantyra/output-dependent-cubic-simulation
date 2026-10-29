@@ -257,3 +257,12 @@ import SectorSimulation
 
 #check SectorSimulation.successfulProgram_injective
 #print axioms SectorSimulation.successfulProgram_injective
+
+#check SectorSimulation.matrixApply_basis
+#print axioms SectorSimulation.matrixApply_basis
+
+#check SectorSimulation.matrixApply_lowerPivot
+#print axioms SectorSimulation.matrixApply_lowerPivot
+
+#check SectorSimulation.pivot_exists_of_injective
+#print axioms SectorSimulation.pivot_exists_of_injective
