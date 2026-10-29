@@ -5630,6 +5630,39 @@
       ],
       "build_audit_receipt": "lean/evidence/descriptor-json-encode.md",
       "unresolved_bridge": "Construct and verify text/ASCII serialization and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
+    },
+    {
+      "id": "ascii-descriptor-encode-asciiBytes_decode",
+      "section": "2",
+      "target": "SectorSimulation.asciiBytes_decode",
+      "assumptions": "Characters are represented by Fin 128; the recognizer consequence additionally assumes successful JSON parsing and raw descriptor validation.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Constructed ASCII bytes decode to the text defined by any bounded ASCII character list.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/ascii-descriptor-encode.md",
+      "unresolved_bridge": "Construct descriptor JSON text and verify parser round trip and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
+    },
+    {
+      "id": "ascii-descriptor-encode-asciiSerializedValidDescriptor_has_recognizedBody",
+      "section": "2",
+      "target": "SectorSimulation.asciiSerializedValidDescriptor_has_recognizedBody",
+      "assumptions": "Characters are represented by Fin 128; the recognizer consequence additionally assumes successful JSON parsing and raw descriptor validation.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "For bounded ASCII characters whose text parses to the constructed JSON descriptor, any validated descriptor has an accepted modeled body.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/ascii-descriptor-encode.md",
+      "unresolved_bridge": "Construct descriptor JSON text and verify parser round trip and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

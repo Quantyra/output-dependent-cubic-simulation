@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 39011,
-      "sha256": "b81dd675def0818bdc7e618d2ac01ee1796db3a01eea54903c8fa54ace53c6ba"
+      "bytes": 39259,
+      "sha256": "b57c4d7c747ef740a4b153465ae5046e1f0a22658f55110a050c5ba737b1ddbc"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 315113,
-      "sha256": "adb6b3c89682c6f2fc72fdd5b55d52a1e82f52e15c2ebd50cc3ca64892dba9bd"
+      "bytes": 317065,
+      "sha256": "cdb54d5bb54303be4ca9c2f0f002d39777f8edb4170204657ea319846101a5e3"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -169,8 +169,13 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 4155,
-      "sha256": "f490062ee57f4eae6960f3a6a0ee3406058b8521ec9b2586488a6a37f7e4e98a"
+      "bytes": 4202,
+      "sha256": "8a6eddead0f569cf4c6b98ca0ab728de60213e410dda425dbcb9395f628224b0"
+    },
+    {
+      "path": "lean/SectorSimulation/AsciiDescriptorEncode.lean",
+      "bytes": 1124,
+      "sha256": "3542023d903d8526225292a704ca800fd5e9aa565a53ca96d3e9eeb633c4ada4"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -661,6 +666,11 @@
       "path": "lean/evidence/anf-derivative-audit.md",
       "bytes": 2080,
       "sha256": "56251b119db01a8363c2ff743c61500d76b7be424c3059901b1e41ed23325b18"
+    },
+    {
+      "path": "lean/evidence/ascii-descriptor-encode.md",
+      "bytes": 882,
+      "sha256": "56efab1ec4cb4c21428a6406f0157e2e0315f00f562fac9b8691368487d28166"
     },
     {
       "path": "lean/evidence/binary-shift-audit.md",
@@ -1589,8 +1599,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 30345,
-      "sha256": "a7f545d36f0329344a4feae23790a681af676eb9dac6c978b87bae0066021f7b"
+      "bytes": 30535,
+      "sha256": "283cf3344a8412f49a57a330105673a0dd8c85fa2d92cdc70ccf5aaa1509cd3d"
     },
     {
       "path": "tools/check_metadata.py",

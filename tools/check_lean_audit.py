@@ -369,6 +369,8 @@ EXPECTED = {
     'SectorSimulation.jsonStr_get': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.rawDescriptorJson_extract': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.serializedValidDescriptor_has_recognizedBody': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.asciiBytes_decode': {'propext', 'Quot.sound'},
+    'SectorSimulation.asciiSerializedValidDescriptor_has_recognizedBody': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

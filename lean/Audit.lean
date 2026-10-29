@@ -961,3 +961,9 @@ import SectorSimulation
 
 #check SectorSimulation.serializedValidDescriptor_has_recognizedBody
 #print axioms SectorSimulation.serializedValidDescriptor_has_recognizedBody
+
+#check SectorSimulation.asciiBytes_decode
+#print axioms SectorSimulation.asciiBytes_decode
+
+#check SectorSimulation.asciiSerializedValidDescriptor_has_recognizedBody
+#print axioms SectorSimulation.asciiSerializedValidDescriptor_has_recognizedBody
