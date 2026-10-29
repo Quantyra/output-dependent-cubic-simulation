@@ -1138,6 +1138,42 @@
       ],
       "build_audit_receipt": "lean/evidence/source-output-derivative-audit.md",
       "unresolved_bridge": "Surjectivity is assumed rather than decoded or checked; the exhaustive solver is exponential. Verify efficient elimination, native circuit replay, physical output, Walsh and sector results."
+    },
+    {
+      "id": "row-swap-solutions",
+      "section": "2",
+      "target": "SectorSimulation.rowSwap_preserves_solutions",
+      "assumptions": "Finite Boolean matrix and vectors; row addition requires distinct indices.",
+      "quantifiers": "All finite dimensions, matrices, vectors and row indices as stated.",
+      "statement": "Swapping two matrix rows and the corresponding target entries preserves exactly the solution set.",
+      "dependencies": [
+        "matrix-xor"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-row-operations-audit.md",
+      "unresolved_bridge": "Construct and prove pivot selection, elimination, inverse validation, bit-cost, and native circuit semantics."
+    },
+    {
+      "id": "row-add-solutions",
+      "section": "2",
+      "target": "SectorSimulation.rowAdd_preserves_solutions",
+      "assumptions": "Finite Boolean matrix and vectors; row addition requires distinct indices.",
+      "quantifiers": "All finite dimensions, matrices, vectors and row indices as stated.",
+      "statement": "XORing a distinct source row into a destination row and applying the same target operation preserves exactly the solution set.",
+      "dependencies": [
+        "matrix-xor"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-row-operations-audit.md",
+      "unresolved_bridge": "Construct and prove pivot selection, elimination, inverse validation, bit-cost, and native circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

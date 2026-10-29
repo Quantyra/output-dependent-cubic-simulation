@@ -131,3 +131,21 @@ import SectorSimulation
 
 #check SectorSimulation.sourceOutputDerivativeExhaustive_correct
 #print axioms SectorSimulation.sourceOutputDerivativeExhaustive_correct
+
+#check SectorSimulation.rowSwap_equation
+#print axioms SectorSimulation.rowSwap_equation
+
+#check SectorSimulation.rowSwap_involutive
+#print axioms SectorSimulation.rowSwap_involutive
+
+#check SectorSimulation.rowSwap_preserves_solutions
+#print axioms SectorSimulation.rowSwap_preserves_solutions
+
+#check SectorSimulation.rowAdd_equation
+#print axioms SectorSimulation.rowAdd_equation
+
+#check SectorSimulation.vectorAddRow_involutive
+#print axioms SectorSimulation.vectorAddRow_involutive
+
+#check SectorSimulation.rowAdd_preserves_solutions
+#print axioms SectorSimulation.rowAdd_preserves_solutions
