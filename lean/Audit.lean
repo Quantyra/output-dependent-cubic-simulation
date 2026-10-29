@@ -251,3 +251,9 @@ import SectorSimulation
 
 #check SectorSimulation.gaussianSolveChecked_returns_of_program
 #print axioms SectorSimulation.gaussianSolveChecked_returns_of_program
+
+#check SectorSimulation.rowProgram_preserves_injective
+#print axioms SectorSimulation.rowProgram_preserves_injective
+
+#check SectorSimulation.successfulProgram_injective
+#print axioms SectorSimulation.successfulProgram_injective

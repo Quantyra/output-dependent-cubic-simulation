@@ -1441,6 +1441,45 @@
       ],
       "build_audit_receipt": "lean/evidence/pivot-solve-correct-audit.md",
       "unresolved_bridge": "Prove generator success for all invertible matrices and finite-encoding runtime; connect source decoding, native circuit semantics and paper theorems."
+    },
+    {
+      "id": "row-program-injective",
+      "section": "2",
+      "target": "SectorSimulation.rowProgram_preserves_injective",
+      "assumptions": "Finite binary matrix and the explicit hypotheses in the declaration.",
+      "quantifiers": "All finite dimensions, matrices, vectors and row programs as stated.",
+      "statement": "Any executed row program preserves injectivity of the source matrix evaluator.",
+      "dependencies": [
+        "pivot-program-identity",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-injectivity-audit.md",
+      "unresolved_bridge": "Prove the converse: every injective matrix admits all required pivots; prove finite-encoding cost and source/circuit semantics."
+    },
+    {
+      "id": "pivot-success-injective",
+      "section": "2",
+      "target": "SectorSimulation.successfulProgram_injective",
+      "assumptions": "Finite binary matrix and the explicit hypotheses in the declaration.",
+      "quantifiers": "All finite dimensions, matrices, vectors and row programs as stated.",
+      "statement": "If the actual full pivot generator returns a program, the original matrix evaluator is injective.",
+      "dependencies": [
+        "pivot-program-identity",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-injectivity-audit.md",
+      "unresolved_bridge": "Prove the converse: every injective matrix admits all required pivots; prove finite-encoding cost and source/circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

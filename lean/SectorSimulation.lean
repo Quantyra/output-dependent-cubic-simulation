@@ -41,3 +41,5 @@ import SectorSimulation.PriorColumnInvariant
 import SectorSimulation.PivotProgramCorrect
 
 import SectorSimulation.PivotSolveCorrect
+
+import SectorSimulation.PivotInjectivity

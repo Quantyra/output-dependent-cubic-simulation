@@ -99,6 +99,8 @@ EXPECTED = {
     'SectorSimulation.matrixApply_identity': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.successfulProgram_solves_all_targets': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.gaussianSolveChecked_returns_of_program': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.rowProgram_preserves_injective': {'propext', 'Quot.sound'},
+    'SectorSimulation.successfulProgram_injective': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
