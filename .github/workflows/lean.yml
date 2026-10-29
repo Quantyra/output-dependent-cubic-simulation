@@ -31,3 +31,7 @@ jobs:
       - name: Check finite source examples
         working-directory: lean
         run: lake env lean SourceExamples.lean
+
+      - name: Check pivot examples
+        working-directory: lean
+        run: lake env lean PivotExamples.lean

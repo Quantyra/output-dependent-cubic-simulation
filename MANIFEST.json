@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/lean.yml",
-      "bytes": 920,
-      "sha256": "4b9b0d0d170fa607002199e1faf30e19b36b932073443cd512c996e2c457de19"
+      "bytes": 1034,
+      "sha256": "4ebf51fd73b82d8ff5395f12c1fa1283977f4ae7a20c8d87054087483fbbabf0"
     },
     {
       "path": ".gitignore",
@@ -124,18 +124,23 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 6907,
-      "sha256": "fef09bebddb39783fdbb7efc9c0eb9649c280273222b6615bcfe21d6030d44ba"
+      "bytes": 7213,
+      "sha256": "61c640c51a2c658ca0577cb753202c0d12048be8868f86f0078901f673c29619"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 64992,
-      "sha256": "c906a448e2bebd82b25001b6f2b27e7d1ca5209c69aaf940f934c7884903b92e"
+      "bytes": 65847,
+      "sha256": "0b942ffa4c9a1c8ad7f366413417fe111a22a4c70ef6bffa0a57a41ff6d4d0d7"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
       "bytes": 2492,
       "sha256": "5c7164ea28adb8928b5ad277590d998031d287d0ac2aa051fb5ad0883e6aba79"
+    },
+    {
+      "path": "lean/PivotExamples.lean",
+      "bytes": 1059,
+      "sha256": "430e658e655930c94e5010bea7f70d74c94d8c731b1577ecdf152ae69fe04c4b"
     },
     {
       "path": "lean/SEMANTICS.md",
@@ -144,8 +149,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 786,
-      "sha256": "62f70a1f258485e6df55f10157884e43ff66dd223ca6b03a3beeb9bee866e79f"
+      "bytes": 829,
+      "sha256": "c9bd71d4992c5269cd571cfe276f8beec4f7176ed9f61834d7765541b26478d7"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -201,6 +206,11 @@
       "path": "lean/SectorSimulation/GaussianPivot.lean",
       "bytes": 1651,
       "sha256": "fa0f80437281936708dbeb28fe09232a1fccfa790780c31ce6cf73f07ea47325"
+    },
+    {
+      "path": "lean/SectorSimulation/GaussianPivotSize.lean",
+      "bytes": 1545,
+      "sha256": "954fe6bb00c405185655a5a31a854db71f4f7c9166a94292340671600ca15e10"
     },
     {
       "path": "lean/SectorSimulation/MatrixLinearity.lean",
@@ -349,8 +359,13 @@
     },
     {
       "path": "lean/evidence/pivot-search-audit.md",
-      "bytes": 959,
-      "sha256": "a7873b2b34e5c5f2d39cfeeea80112ee62cdd705162b4244fd2face9126bd46e"
+      "bytes": 981,
+      "sha256": "7aa2d0ecc7a55f6b56d71757eae879feeb7b3363b8d5241fcf279ee78856ecbf"
+    },
+    {
+      "path": "lean/evidence/pivot-size-examples-audit.md",
+      "bytes": 911,
+      "sha256": "507c24a9c2604a949e385ab1ade761f679a877a628eba35323a6b5e2ac3e0369"
     },
     {
       "path": "lean/evidence/quadratic-mask-translation-audit.md",
@@ -779,8 +794,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 5637,
-      "sha256": "709846bc43451d704639913e313b7811faf6bb2a1b4455a4314561be2b18c71c"
+      "bytes": 5859,
+      "sha256": "18fb4105b5d4a948ae258a419a4a6a297395e682e2edca849b19efd78d45ab2e"
     },
     {
       "path": "tools/check_metadata.py",

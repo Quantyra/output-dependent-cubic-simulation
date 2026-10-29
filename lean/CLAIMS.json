@@ -1228,6 +1228,25 @@
       ],
       "build_audit_receipt": "lean/evidence/pivot-search-audit.md",
       "unresolved_bridge": "The candidate pivot program is not yet proven to reduce invertible matrices or validated for operational cost, native source decoding or circuit semantics."
+    },
+    {
+      "id": "pivot-program-size",
+      "section": "2",
+      "target": "SectorSimulation.gaussianRowProgram_length",
+      "assumptions": "The candidate pivot program successfully returns an operation list.",
+      "quantifiers": "All finite dimensions, source matrices and returned operation lists.",
+      "statement": "A returned pivot program contains at most n(n+1) row operations.",
+      "dependencies": [
+        "pivot-search-sound",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-size-examples-audit.md",
+      "unresolved_bridge": "Prove reduction invariants, invertible-input completeness and execution time for finite encoded matrices; finite examples do not prove them."
     }
   ],
   "paper_source": "manuscript/main.tex",

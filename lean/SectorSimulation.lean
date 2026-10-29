@@ -25,3 +25,5 @@ import SectorSimulation.MatrixRowOperations
 import SectorSimulation.MatrixRowProgram
 
 import SectorSimulation.GaussianPivot
+
+import SectorSimulation.GaussianPivotSize

@@ -69,6 +69,9 @@ EXPECTED = {
     'SectorSimulation.applyRowProgram_preserves': {'propext', 'Quot.sound'},
     'SectorSimulation.findPivot_sound': {'propext'},
     'SectorSimulation.findPivot_none': {'propext', 'Quot.sound'},
+    'SectorSimulation.clearColumnOps_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.pivotPrograms_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.gaussianRowProgram_length': {'propext', 'Quot.sound'},
 }
 
 

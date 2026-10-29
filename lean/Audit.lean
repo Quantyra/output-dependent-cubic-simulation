@@ -161,3 +161,12 @@ import SectorSimulation
 
 #check SectorSimulation.findPivot_none
 #print axioms SectorSimulation.findPivot_none
+
+#check SectorSimulation.clearColumnOps_length
+#print axioms SectorSimulation.clearColumnOps_length
+
+#check SectorSimulation.pivotPrograms_length
+#print axioms SectorSimulation.pivotPrograms_length
+
+#check SectorSimulation.gaussianRowProgram_length
+#print axioms SectorSimulation.gaussianRowProgram_length
