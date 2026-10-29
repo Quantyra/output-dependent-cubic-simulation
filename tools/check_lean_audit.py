@@ -203,6 +203,11 @@ EXPECTED = {
     'SectorSimulation.dyadicNeg_congr': {'propext'},
     'SectorSimulation.dyadicSubtract_eq_add_neg': {'propext'},
     'SectorSimulation.dyadicSubtract_congr': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exact_add_representatives': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exact_mul_representatives': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exact_hadamard_scalar_normalization': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactAdd_comm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactMul_comm': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

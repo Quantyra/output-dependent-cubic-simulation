@@ -562,3 +562,18 @@ import SectorSimulation
 
 #check SectorSimulation.dyadicSubtract_congr
 #print axioms SectorSimulation.dyadicSubtract_congr
+
+#check SectorSimulation.exact_add_representatives
+#print axioms SectorSimulation.exact_add_representatives
+
+#check SectorSimulation.exact_mul_representatives
+#print axioms SectorSimulation.exact_mul_representatives
+
+#check SectorSimulation.exact_hadamard_scalar_normalization
+#print axioms SectorSimulation.exact_hadamard_scalar_normalization
+
+#check SectorSimulation.exactAdd_comm
+#print axioms SectorSimulation.exactAdd_comm
+
+#check SectorSimulation.exactMul_comm
+#print axioms SectorSimulation.exactMul_comm

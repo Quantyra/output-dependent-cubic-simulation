@@ -103,3 +103,5 @@ import SectorSimulation.DyadicEquivalence
 import SectorSimulation.DyadicMultiplication
 
 import SectorSimulation.DyadicAddition
+
+import SectorSimulation.DyadicQuotient

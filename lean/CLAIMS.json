@@ -2924,6 +2924,91 @@
       ],
       "build_audit_receipt": "lean/evidence/dyadic-addition-audit.md",
       "unresolved_bridge": "Construct quotient arithmetic, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-quotient-exact_add_representatives",
+      "section": "2",
+      "target": "SectorSimulation.exact_add_representatives",
+      "assumptions": "Quotient of the defined dyadic eighth-root representation by its proved equivalence.",
+      "quantifiers": "All quotient values or representatives where quantified; normalization is a concrete scalar identity.",
+      "statement": "Lifted quotient addition agrees with addition on representatives.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-quotient-audit.md",
+      "unresolved_bridge": "Prove remaining quotient algebra laws and complex embedding, normalized Hadamard and native circuit semantics, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "dyadic-quotient-exact_mul_representatives",
+      "section": "2",
+      "target": "SectorSimulation.exact_mul_representatives",
+      "assumptions": "Quotient of the defined dyadic eighth-root representation by its proved equivalence.",
+      "quantifiers": "All quotient values or representatives where quantified; normalization is a concrete scalar identity.",
+      "statement": "Lifted quotient multiplication agrees with multiplication on representatives.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-quotient-audit.md",
+      "unresolved_bridge": "Prove remaining quotient algebra laws and complex embedding, normalized Hadamard and native circuit semantics, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "dyadic-quotient-exact_hadamard_scalar_normalization",
+      "section": "2",
+      "target": "SectorSimulation.exact_hadamard_scalar_normalization",
+      "assumptions": "Quotient of the defined dyadic eighth-root representation by its proved equivalence.",
+      "quantifiers": "All quotient values or representatives where quantified; normalization is a concrete scalar identity.",
+      "statement": "Two copies of the squared exact Hadamard scale sum to the quotient one.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-quotient-audit.md",
+      "unresolved_bridge": "Prove remaining quotient algebra laws and complex embedding, normalized Hadamard and native circuit semantics, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "dyadic-quotient-exactAdd_comm",
+      "section": "2",
+      "target": "SectorSimulation.exactAdd_comm",
+      "assumptions": "Quotient of the defined dyadic eighth-root representation by its proved equivalence.",
+      "quantifiers": "All quotient values or representatives where quantified; normalization is a concrete scalar identity.",
+      "statement": "The lifted quotient addition is commutative.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-quotient-audit.md",
+      "unresolved_bridge": "Prove remaining quotient algebra laws and complex embedding, normalized Hadamard and native circuit semantics, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "dyadic-quotient-exactMul_comm",
+      "section": "2",
+      "target": "SectorSimulation.exactMul_comm",
+      "assumptions": "Quotient of the defined dyadic eighth-root representation by its proved equivalence.",
+      "quantifiers": "All quotient values or representatives where quantified; normalization is a concrete scalar identity.",
+      "statement": "The lifted quotient multiplication is commutative.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-quotient-audit.md",
+      "unresolved_bridge": "Prove remaining quotient algebra laws and complex embedding, normalized Hadamard and native circuit semantics, Python correspondence and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
