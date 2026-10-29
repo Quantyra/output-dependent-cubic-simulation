@@ -433,3 +433,12 @@ import SectorSimulation
 
 #check SectorSimulation.hadamard_Toffoli_hadamard_numerator
 #print axioms SectorSimulation.hadamard_Toffoli_hadamard_numerator
+
+#check SectorSimulation.toffoli_target_network_restores
+#print axioms SectorSimulation.toffoli_target_network_restores
+
+#check SectorSimulation.toffoli_control_network_restores
+#print axioms SectorSimulation.toffoli_control_network_restores
+
+#check SectorSimulation.toffoli_phase_polynomial
+#print axioms SectorSimulation.toffoli_phase_polynomial

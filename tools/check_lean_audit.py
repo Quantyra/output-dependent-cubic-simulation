@@ -160,6 +160,9 @@ EXPECTED = {
     'SectorSimulation.hadamardNumerator_squared': {'propext', 'Quot.sound'},
     'SectorSimulation.hadamard_CNOT_hadamard_numerator': {'propext', 'Quot.sound'},
     'SectorSimulation.hadamard_Toffoli_hadamard_numerator': {'propext', 'Quot.sound'},
+    'SectorSimulation.toffoli_target_network_restores': set(),
+    'SectorSimulation.toffoli_control_network_restores': set(),
+    'SectorSimulation.toffoli_phase_polynomial': set(),
 }
 
 
