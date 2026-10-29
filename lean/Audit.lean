@@ -918,3 +918,10 @@ import SectorSimulation
 #print axioms SectorSimulation.modeledSourceBody_congr
 #check SectorSimulation.exactNativeHeader_sourceBody
 #print axioms SectorSimulation.exactNativeHeader_sourceBody
+
+#check SectorSimulation.decodedValidatedHeader_prefix
+#print axioms SectorSimulation.decodedValidatedHeader_prefix
+#check SectorSimulation.decodedValidatedHeader_sourceBody
+#print axioms SectorSimulation.decodedValidatedHeader_sourceBody
+#check SectorSimulation.decodedValidatedHeader_replay_and_derivative
+#print axioms SectorSimulation.decodedValidatedHeader_replay_and_derivative

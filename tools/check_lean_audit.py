@@ -352,6 +352,9 @@ EXPECTED = {
     'SectorSimulation.exactNativeHeader_amplitudes': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.modeledSourceBody_congr': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.exactNativeHeader_sourceBody': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.decodedValidatedHeader_prefix': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.decodedValidatedHeader_sourceBody': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.decodedValidatedHeader_replay_and_derivative': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

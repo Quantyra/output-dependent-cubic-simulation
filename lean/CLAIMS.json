@@ -5341,6 +5341,57 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
       "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
+    },
+    {
+      "id": "validated-header-replay-decodedValidatedHeader_prefix",
+      "section": "2",
+      "target": "SectorSimulation.decodedValidatedHeader_prefix",
+      "assumptions": "Successful Lean numeric-byte JSON header validation; matching modeled compiled body and successful Gaussian program where applicable.",
+      "quantifiers": "All modeled gate lists, validated source descriptors, represented input states and output vectors.",
+      "statement": "A successfully validated decoded descriptor has a numeric-byte encoded header prefix.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/validated-header-replay-audit.md",
+      "unresolved_bridge": "Prove correspondence with the Python recognizer and compiler, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "validated-header-replay-decodedValidatedHeader_sourceBody",
+      "section": "2",
+      "target": "SectorSimulation.decodedValidatedHeader_sourceBody",
+      "assumptions": "Successful Lean numeric-byte JSON header validation; matching modeled compiled body and successful Gaussian program where applicable.",
+      "quantifiers": "All modeled gate lists, validated source descriptors, represented input states and output vectors.",
+      "statement": "A validated decoded header with a matching compiled body and Gaussian program replays to the modeled body amplitudes.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/validated-header-replay-audit.md",
+      "unresolved_bridge": "Prove correspondence with the Python recognizer and compiler, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "validated-header-replay-decodedValidatedHeader_replay_and_derivative",
+      "section": "2",
+      "target": "SectorSimulation.decodedValidatedHeader_replay_and_derivative",
+      "assumptions": "Successful Lean numeric-byte JSON header validation; matching modeled compiled body and successful Gaussian program where applicable.",
+      "quantifiers": "All modeled gate lists, validated source descriptors, represented input states and output vectors.",
+      "statement": "Under validated decoding and matching compiled body, native replay matches the modeled body and the output derivative is computed with the proved degree and size bounds.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/validated-header-replay-audit.md",
+      "unresolved_bridge": "Prove correspondence with the Python recognizer and compiler, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

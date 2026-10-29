@@ -170,3 +170,5 @@ import SectorSimulation.ExactHadamardProgram
 import SectorSimulation.ModeledFourier
 
 import SectorSimulation.ExactNativeHeader
+
+import SectorSimulation.ValidatedHeaderReplay
