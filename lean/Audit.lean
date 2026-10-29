@@ -1,4 +1,4 @@
-import SectorSimulation.BooleanSource
+import SectorSimulation
 
 #check SectorSimulation.booleanDerivative_shift_invariant
 #print axioms SectorSimulation.booleanDerivative_shift_invariant
@@ -12,3 +12,5 @@ import SectorSimulation.BooleanSource
 #print axioms SectorSimulation.evalPhase_duplicate_cancel
 #check SectorSimulation.secondPhaseDerivative_shift_invariant
 #print axioms SectorSimulation.secondPhaseDerivative_shift_invariant
+#check SectorSimulation.booleanDerivative_xor
+#print axioms SectorSimulation.booleanDerivative_xor

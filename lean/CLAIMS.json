@@ -410,6 +410,23 @@
       ],
       "build_audit_receipt": "lean/evidence/second-phase-shift-audit.md",
       "unresolved_bridge": "Derive j from the verified J inverse and output coordinate, prove the cubic-to-quadratic degree bound, then connect to the circuit and Walsh support."
+    },
+    {
+      "id": "boolean-derivative-additivity",
+      "section": "2",
+      "target": "SectorSimulation.booleanDerivative_xor",
+      "assumptions": "Two Boolean-valued functions on an arbitrary type, an arbitrary shift function and an input.",
+      "quantifiers": "All types, functions, shifts and inputs.",
+      "statement": "The Boolean derivative of the pointwise XOR of two functions equals the XOR of their Boolean derivatives.",
+      "dependencies": [
+        "shift-derivative-invariance"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/derivative-additivity-audit.md",
+      "unresolved_bridge": "Lift additivity to the represented ANF fold, construct the differentiated monomials and prove the cubic-to-quadratic degree bound."
     }
   ],
   "paper_source": "manuscript/main.tex",

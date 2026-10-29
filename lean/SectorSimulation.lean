@@ -1,3 +1,4 @@
 import SectorSimulation.Derivative
 import SectorSimulation.BinaryShift
 import SectorSimulation.BooleanSource
+import SectorSimulation.DerivativeLinear
