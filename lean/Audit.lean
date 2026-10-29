@@ -583,3 +583,9 @@ import SectorSimulation
 
 #check SectorSimulation.sharedHadamard_squared
 #print axioms SectorSimulation.sharedHadamard_squared
+
+#check SectorSimulation.sharedHCXH_numerator
+#print axioms SectorSimulation.sharedHCXH_numerator
+
+#check SectorSimulation.sharedHCXH_controlled_sign
+#print axioms SectorSimulation.sharedHCXH_controlled_sign

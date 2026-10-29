@@ -210,6 +210,8 @@ EXPECTED = {
     'SectorSimulation.exactMul_comm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedHadamard_numerator_squared': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedHadamard_squared': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHCXH_numerator': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHCXH_controlled_sign': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

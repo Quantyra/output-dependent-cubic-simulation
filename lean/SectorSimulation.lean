@@ -107,3 +107,5 @@ import SectorSimulation.DyadicAddition
 import SectorSimulation.DyadicQuotient
 
 import SectorSimulation.ExactHadamard
+
+import SectorSimulation.ExactControlledPhase

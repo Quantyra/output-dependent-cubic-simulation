@@ -3043,6 +3043,40 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-hadamard-audit.md",
       "unresolved_bridge": "Prove complex embedding, representation independence and general state coverage, native gate replay, full circuit and manuscript theorems."
+    },
+    {
+      "id": "exact-controlled-phase-sharedHCXH_numerator",
+      "section": "2",
+      "target": "SectorSimulation.sharedHCXH_numerator",
+      "assumptions": "Exact shared-denominator eighth-root state and distinct control and target wires.",
+      "quantifiers": "All finite dimensions, applicable wires, represented states and basis vectors.",
+      "statement": "The exact H-CX-H numerator equals four times the controlled-sign numerator.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-controlled-phase-audit.md",
+      "unresolved_bridge": "Prove complex embedding, representation independence, literal native gate replay, Python correspondence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "exact-controlled-phase-sharedHCXH_controlled_sign",
+      "section": "2",
+      "target": "SectorSimulation.sharedHCXH_controlled_sign",
+      "assumptions": "Exact shared-denominator eighth-root state and distinct control and target wires.",
+      "quantifiers": "All finite dimensions, applicable wires, represented states and basis vectors.",
+      "statement": "Normalized exact H-CX-H on distinct wires equals the controlled-sign amplitude at every basis vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-controlled-phase-audit.md",
+      "unresolved_bridge": "Prove complex embedding, representation independence, literal native gate replay, Python correspondence, full circuit and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
