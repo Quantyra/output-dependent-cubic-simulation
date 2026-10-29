@@ -6968,6 +6968,44 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
       "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-kernel-hadamardKernelStep_basis",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernelStep_basis",
+      "assumptions": "Lean exact-amplitude quotient, one-wire Hadamard kernel and explicit binary basis.",
+      "quantifiers": "All finite widths with a selected wire, input basis vectors, output vectors and exact amplitude functions.",
+      "statement": "A single Hadamard on an exact point-supported basis contribution has the stated two-point support, scale and one-bit Walsh sign.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-kernel.md",
+      "unresolved_bridge": "Derive multi-wire Walsh-character product and closed normalized sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-kernel-hadamardKernel_oneWire_sum",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_oneWire_sum",
+      "assumptions": "Lean exact-amplitude quotient, one-wire Hadamard kernel and explicit binary basis.",
+      "quantifiers": "All finite widths with a selected wire, input basis vectors, output vectors and exact amplitude functions.",
+      "statement": "A single Hadamard on any exact amplitude function is the finite sum of its one-wire basis Walsh contributions.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-kernel.md",
+      "unresolved_bridge": "Derive multi-wire Walsh-character product and closed normalized sum, complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

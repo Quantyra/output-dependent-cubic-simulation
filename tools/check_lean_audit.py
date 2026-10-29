@@ -441,6 +441,8 @@ EXPECTED = {
     'SectorSimulation.basisSum_present': {'Quot.sound', 'propext', 'Classical.choice'},
     'SectorSimulation.binaryBasis_expansion': {'Quot.sound', 'propext', 'Classical.choice'},
     'SectorSimulation.hadamardKernel_basisExpansion': {'Quot.sound', 'propext', 'Classical.choice'},
+    'SectorSimulation.hadamardKernelStep_basis': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_oneWire_sum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

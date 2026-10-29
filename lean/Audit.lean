@@ -1177,3 +1177,9 @@ import SectorSimulation
 
 #check SectorSimulation.hadamardKernel_basisExpansion
 #print axioms SectorSimulation.hadamardKernel_basisExpansion
+
+#check SectorSimulation.hadamardKernelStep_basis
+#print axioms SectorSimulation.hadamardKernelStep_basis
+
+#check SectorSimulation.hadamardKernel_oneWire_sum
+#print axioms SectorSimulation.hadamardKernel_oneWire_sum
