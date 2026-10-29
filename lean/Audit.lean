@@ -1009,3 +1009,9 @@ import SectorSimulation
 
 #check SectorSimulation.sortedNormalizeMasks_membership
 #print axioms SectorSimulation.sortedNormalizeMasks_membership
+
+#check SectorSimulation.maskParity_count
+#print axioms SectorSimulation.maskParity_count
+
+#check SectorSimulation.sortedNormalizeMasks_odd_count
+#print axioms SectorSimulation.sortedNormalizeMasks_odd_count

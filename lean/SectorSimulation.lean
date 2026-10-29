@@ -186,3 +186,5 @@ import SectorSimulation.PhaseNormalization
 import SectorSimulation.ToggleMaskNormalization
 
 import SectorSimulation.MaskParity
+
+import SectorSimulation.MaskCountParity

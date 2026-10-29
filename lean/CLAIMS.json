@@ -5921,6 +5921,43 @@
       ],
       "build_audit_receipt": "lean/evidence/mask-parity.md",
       "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text parsing, compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "mask-count-parity-maskParity_count",
+      "section": "2",
+      "target": "SectorSimulation.maskParity_count",
+      "assumptions": "Lean natural-mask toggle-and-sort model.",
+      "quantifiers": "Every natural mask and finite input list.",
+      "statement": "The XOR fold of equality tests is true exactly when the occurrence count is odd.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mask-count-parity.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "mask-count-parity-sortedNormalizeMasks_odd_count",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_odd_count",
+      "assumptions": "Lean natural-mask toggle-and-sort model.",
+      "quantifiers": "Every natural mask and finite input list.",
+      "statement": "A mask occurs in the sorted Lean normalizer output if and only if its input occurrence count is odd.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mask-count-parity.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text parsing, native compiler correspondence, circuit-to-sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
