@@ -276,6 +276,10 @@ EXPECTED = {
     'SectorSimulation.embedThree_toffoli': {'propext', 'Quot.sound'},
     'SectorSimulation.sliceThree_toffoli': {'propext', 'Quot.sound'},
     'SectorSimulation.threeWireToffoli_global_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.mappedNativeGate_correct': {'propext'},
+    'SectorSimulation.mappedNativeProgram_correct': {'propext'},
+    'SectorSimulation.threeWireToffoli_valid': {'propext', 'Quot.sound'},
+    'SectorSimulation.mappedNativeToffoli_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

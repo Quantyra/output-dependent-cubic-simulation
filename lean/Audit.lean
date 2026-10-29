@@ -751,3 +751,12 @@ import SectorSimulation
 #print axioms SectorSimulation.sliceThree_toffoli
 #check SectorSimulation.threeWireToffoli_global_correct
 #print axioms SectorSimulation.threeWireToffoli_global_correct
+
+#check SectorSimulation.mappedNativeGate_correct
+#print axioms SectorSimulation.mappedNativeGate_correct
+#check SectorSimulation.mappedNativeProgram_correct
+#print axioms SectorSimulation.mappedNativeProgram_correct
+#check SectorSimulation.threeWireToffoli_valid
+#print axioms SectorSimulation.threeWireToffoli_valid
+#check SectorSimulation.mappedNativeToffoli_correct
+#print axioms SectorSimulation.mappedNativeToffoli_correct

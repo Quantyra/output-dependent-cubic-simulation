@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 28806,
-      "sha256": "d489ac1c05e1942f3ced1493486e9cfeb36b79d08eba3f0366f49456ccddbf61"
+      "bytes": 29235,
+      "sha256": "e547198500bf3d34974e3cafe332a155f52cfa02bda0373a58eed4343c84ab98"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 223063,
-      "sha256": "96c0ee54782bf2eb820fcb43a5dd6791261fbeadcca0afc606b20e9b67dc30ab"
+      "bytes": 226939,
+      "sha256": "470561f4240e74133a152220ca2e41a63ee261d110a4f7fde70cef3b4839a028"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -159,8 +159,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 3250,
-      "sha256": "22dfb01ef9f14bc306be6f2222f59ad1402359e39dc7e1b5075dbbc5ded40b66"
+      "bytes": 3295,
+      "sha256": "195bba8147b88a1c29bbcacfb8e35a6a4663dacd4e6dd8dcc5a56928499dab8c"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -346,6 +346,11 @@
       "path": "lean/SectorSimulation/LinearGateSemantics.lean",
       "bytes": 3102,
       "sha256": "6cc2f62ffdeb769dadea7292e9da8f55da908540cb386386a7f2a9711d011254"
+    },
+    {
+      "path": "lean/SectorSimulation/MappedNativeToffoli.lean",
+      "bytes": 2748,
+      "sha256": "dadb2517f92f9bffd49de9e0a49ca4c4de1dc0b40747185ec417776da0d5c8a1"
     },
     {
       "path": "lean/SectorSimulation/MatrixLinearity.lean",
@@ -741,6 +746,11 @@
       "path": "lean/evidence/locked-environment.md",
       "bytes": 2670,
       "sha256": "4cd8920ddd484531df3dc39cdcaf4dd551817e7687c736ac38b23e7f764f7507"
+    },
+    {
+      "path": "lean/evidence/mapped-native-toffoli-audit.md",
+      "bytes": 897,
+      "sha256": "69ddb4c9e8aaf03e6187bf9becdc14b58c5de777cf1b303dfdb93ac562183ee2"
     },
     {
       "path": "lean/evidence/mask-semantics-audit.md",
@@ -1369,8 +1379,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 22385,
-      "sha256": "552e7a2ac57733a4c5128ff583f252b1ad054f3120e1a553c16c2cb8df2db7df"
+      "bytes": 22685,
+      "sha256": "b9250d40fe6fb21cc37c14eab0df44ecfcb10809abec02e8ab17672c20599838"
     },
     {
       "path": "tools/check_metadata.py",

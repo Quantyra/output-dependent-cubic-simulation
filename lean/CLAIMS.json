@@ -4124,6 +4124,69 @@
       ],
       "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
       "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "mapped-native-toffoli-mappedNativeGate_correct",
+      "section": "2",
+      "target": "SectorSimulation.mappedNativeGate_correct",
+      "assumptions": "The modeled exact native interpreter, valid typed gates, and injective selection of three wires where applicable.",
+      "quantifiers": "All finite dimensions, injective three-wire selections, represented states and output vectors; all valid finite typed gate programs where applicable.",
+      "statement": "A valid typed gate mapped to selected wires is accepted by the native interpreter and produces the typed gate result.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/mapped-native-toffoli-audit.md",
+      "unresolved_bridge": "Establish correspondence with Python compiler records, complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "mapped-native-toffoli-mappedNativeProgram_correct",
+      "section": "2",
+      "target": "SectorSimulation.mappedNativeProgram_correct",
+      "assumptions": "The modeled exact native interpreter, valid typed gates, and injective selection of three wires where applicable.",
+      "quantifiers": "All finite dimensions, injective three-wire selections, represented states and output vectors; all valid finite typed gate programs where applicable.",
+      "statement": "Native replay of any valid mapped typed program succeeds and equals typed program execution.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/mapped-native-toffoli-audit.md",
+      "unresolved_bridge": "Establish correspondence with Python compiler records, complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "mapped-native-toffoli-threeWireToffoli_valid",
+      "section": "2",
+      "target": "SectorSimulation.threeWireToffoli_valid",
+      "assumptions": "The modeled exact native interpreter, valid typed gates, and injective selection of three wires where applicable.",
+      "quantifiers": "All finite dimensions, injective three-wire selections, represented states and output vectors; all valid finite typed gate programs where applicable.",
+      "statement": "The typed Toffoli sequence satisfies the distinct-control-and-target validity condition.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mapped-native-toffoli-audit.md",
+      "unresolved_bridge": "Establish correspondence with Python compiler records, complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "mapped-native-toffoli-mappedNativeToffoli_correct",
+      "section": "2",
+      "target": "SectorSimulation.mappedNativeToffoli_correct",
+      "assumptions": "The modeled exact native interpreter, valid typed gates, and injective selection of three wires where applicable.",
+      "quantifiers": "All finite dimensions, injective three-wire selections, represented states and output vectors; all valid finite typed gate programs where applicable.",
+      "statement": "Native replay of the mapped Toffoli records on any distinct selected wires succeeds and has the modeled ideal output amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mapped-native-toffoli-audit.md",
+      "unresolved_bridge": "Establish correspondence with Python compiler records, complex embedding, full circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -139,3 +139,5 @@ import SectorSimulation.ToffoliAllVectors
 import SectorSimulation.ThreeWireSlice
 
 import SectorSimulation.ThreeWireProgram
+
+import SectorSimulation.MappedNativeToffoli
