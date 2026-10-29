@@ -3728,6 +3728,90 @@
       ],
       "build_audit_receipt": "lean/evidence/toffoli-replay-sum-audit.md",
       "unresolved_bridge": "Show the replay sum has the ideal Toffoli output amplitudes, then establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-ideal-sum-idealWeightedBasis_exponent",
+      "section": "2",
+      "target": "SectorSimulation.idealWeightedBasis_exponent",
+      "assumptions": "The defined exact shared-denominator three-wire state, literal native Toffoli records, and modeled ideal Toffoli action.",
+      "quantifiers": "All represented three-wire states and all three-bit output indices; basis indices where applicable.",
+      "statement": "Each ideal weighted basis output has the input state denominator exponent.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-three-bit-correct-audit.md",
+      "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, correspondence with Python records, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-ideal-sum-weightedBasisResult_correct",
+      "section": "2",
+      "target": "SectorSimulation.weightedBasisResult_correct",
+      "assumptions": "The defined exact shared-denominator three-wire state, literal native Toffoli records, and modeled ideal Toffoli action.",
+      "quantifiers": "All represented three-wire states and all three-bit output indices; basis indices where applicable.",
+      "statement": "Each weighted basis replay result has the ideal basis output amplitude at each indexed output.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-three-bit-correct-audit.md",
+      "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, correspondence with Python records, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-ideal-sum-toffoliReplaySum_amplitude",
+      "section": "2",
+      "target": "SectorSimulation.toffoliReplaySum_amplitude",
+      "assumptions": "The defined exact shared-denominator three-wire state, literal native Toffoli records, and modeled ideal Toffoli action.",
+      "quantifiers": "All represented three-wire states and all three-bit output indices; basis indices where applicable.",
+      "statement": "The replay sum has the same indexed output amplitudes as the ideal weighted basis output sum.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-three-bit-correct-audit.md",
+      "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, correspondence with Python records, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-ideal-sum-idealThreeBitSum_correct",
+      "section": "2",
+      "target": "SectorSimulation.idealThreeBitSum_correct",
+      "assumptions": "The defined exact shared-denominator three-wire state, literal native Toffoli records, and modeled ideal Toffoli action.",
+      "quantifiers": "All represented three-wire states and all three-bit output indices; basis indices where applicable.",
+      "statement": "The ideal weighted basis output sum has the same indexed output amplitudes as the modeled ideal three-wire Toffoli.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-three-bit-correct-audit.md",
+      "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, correspondence with Python records, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-ideal-sum-toffoli_threeBit_correct",
+      "section": "2",
+      "target": "SectorSimulation.toffoli_threeBit_correct",
+      "assumptions": "The defined exact shared-denominator three-wire state, literal native Toffoli records, and modeled ideal Toffoli action.",
+      "quantifiers": "All represented three-wire states and all three-bit output indices; basis indices where applicable.",
+      "statement": "For every represented three-wire state and indexed output, the literal Toffoli gate replay succeeds and has the ideal Toffoli output amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-three-bit-correct-audit.md",
+      "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, correspondence with Python records, full circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

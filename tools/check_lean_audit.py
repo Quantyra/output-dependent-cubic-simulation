@@ -252,6 +252,11 @@ EXPECTED = {
     'SectorSimulation.weightedBasisResult_exponent': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedAddSame_exponent': set(),
     'SectorSimulation.toffoli_threeBit_replay_sum': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.idealWeightedBasis_exponent': {'propext', 'Quot.sound'},
+    'SectorSimulation.weightedBasisResult_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.toffoliReplaySum_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.idealThreeBitSum_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.toffoli_threeBit_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
