@@ -134,6 +134,10 @@ EXPECTED = {
     'SectorSimulation.decodeValidatedHeader_valid': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.decodedHeader_has_encoded_prefix': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.decodedValidatedHeader_outputDerivative': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.threeCNOT_swap': {'propext', 'Quot.sound'},
+    'SectorSimulation.CNOT_involutive': {'propext', 'Quot.sound'},
+    'SectorSimulation.rowOperationCNOTs_correct': {'propext', 'Quot.sound'},
+    'SectorSimulation.rowProgramCNOTs_correct': {'propext', 'Quot.sound'},
 }
 
 

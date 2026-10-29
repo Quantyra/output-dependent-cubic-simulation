@@ -67,3 +67,5 @@ import SectorSimulation.NumericHeaderBytes
 import SectorSimulation.NumericHeaderSound
 
 import SectorSimulation.NativeJsonDescriptor
+
+import SectorSimulation.LinearGateSemantics

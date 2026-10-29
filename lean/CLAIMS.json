@@ -1846,6 +1846,70 @@
       ],
       "build_audit_receipt": "lean/evidence/decoded-source-derivative-audit.md",
       "unresolved_bridge": "Prove equivalence to Python parser and normalization, size guard, canonical gate-body replay, physical semantics and labeled paper theorems."
+    },
+    {
+      "id": "three-cnot-swap",
+      "section": "2",
+      "target": "SectorSimulation.threeCNOT_swap",
+      "assumptions": "Finite Boolean basis vectors and typed finite wire indices; swap and CNOT involution require distinct wires.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "Three modeled CNOTs with distinct wires swap the two basis bits.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-gate-basis-audit.md",
+      "unresolved_bridge": "Connect the reversed elimination program to matrix action, prove equivalence to Python emitted records, and establish quantum gate and full circuit semantics."
+    },
+    {
+      "id": "cnot-involutive",
+      "section": "2",
+      "target": "SectorSimulation.CNOT_involutive",
+      "assumptions": "Finite Boolean basis vectors and typed finite wire indices; swap and CNOT involution require distinct wires.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "A modeled distinct-wire CNOT is its own inverse on basis vectors.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-gate-basis-audit.md",
+      "unresolved_bridge": "Connect the reversed elimination program to matrix action, prove equivalence to Python emitted records, and establish quantum gate and full circuit semantics."
+    },
+    {
+      "id": "row-operation-cnot-correct",
+      "section": "2",
+      "target": "SectorSimulation.rowOperationCNOTs_correct",
+      "assumptions": "Finite Boolean basis vectors and typed finite wire indices; swap and CNOT involution require distinct wires.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "The modeled CNOT compilation of each row operation implements its vector action.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-gate-basis-audit.md",
+      "unresolved_bridge": "Connect the reversed elimination program to matrix action, prove equivalence to Python emitted records, and establish quantum gate and full circuit semantics."
+    },
+    {
+      "id": "row-program-cnot-correct",
+      "section": "2",
+      "target": "SectorSimulation.rowProgramCNOTs_correct",
+      "assumptions": "Finite Boolean basis vectors and typed finite wire indices; swap and CNOT involution require distinct wires.",
+      "quantifiers": "All represented dimensions, vectors and applicable operations.",
+      "statement": "The modeled CNOT compilation of every finite row-operation program implements its vector action.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/linear-gate-basis-audit.md",
+      "unresolved_bridge": "Connect the reversed elimination program to matrix action, prove equivalence to Python emitted records, and establish quantum gate and full circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

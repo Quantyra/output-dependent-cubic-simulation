@@ -355,3 +355,15 @@ import SectorSimulation
 #print axioms SectorSimulation.decodedHeader_has_encoded_prefix
 #check SectorSimulation.decodedValidatedHeader_outputDerivative
 #print axioms SectorSimulation.decodedValidatedHeader_outputDerivative
+
+#check SectorSimulation.threeCNOT_swap
+#print axioms SectorSimulation.threeCNOT_swap
+
+#check SectorSimulation.CNOT_involutive
+#print axioms SectorSimulation.CNOT_involutive
+
+#check SectorSimulation.rowOperationCNOTs_correct
+#print axioms SectorSimulation.rowOperationCNOTs_correct
+
+#check SectorSimulation.rowProgramCNOTs_correct
+#print axioms SectorSimulation.rowProgramCNOTs_correct
