@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 42271,
-      "sha256": "b7f9ee14309122eafec7587b6c9b6ae9da4e6081555f2834b2947088370e8d3d"
+      "bytes": 42397,
+      "sha256": "8ca70efc5b10b714fc889442efd4c10886ea12115335e528e5151de9728b8612"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 342787,
-      "sha256": "b99d3b8ece355842ca135304f32e99d4d58bb07ff5d117fa06670b4fdb8e7618"
+      "bytes": 343660,
+      "sha256": "02c8e74d5816cf66d06935728006bc4c06daf376ded08e6c9ffd7445695e5428"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -684,8 +684,8 @@
     },
     {
       "path": "lean/SectorSimulation/ValidatedRawNormalization.lean",
-      "bytes": 773,
-      "sha256": "7613f351cedf4857233dce83c31574856631544ed3de0d9bbc7e8bc5e267585d"
+      "bytes": 2276,
+      "sha256": "ddd4ae975e86f4706519171d40910ce0d456d71cf8be5939619bd39f382bcea2"
     },
     {
       "path": "lean/SectorSimulation/ZeroWirePhaseBoundary.lean",
@@ -1061,6 +1061,11 @@
       "path": "lean/evidence/native-xz-replay-audit.md",
       "bytes": 769,
       "sha256": "11040acb2aea11a8456848d4411ba2dbb0788c6f08c37c11bdd3a7842212980e"
+    },
+    {
+      "path": "lean/evidence/normalized-validator-preservation.md",
+      "bytes": 917,
+      "sha256": "48e52450da8480a57c03f83602f8450493848b1d6b048c5a4b5a4a88ef32fed9"
     },
     {
       "path": "lean/evidence/numeric-header-bytes-audit.md",
@@ -1674,8 +1679,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 33011,
-      "sha256": "103336c5edd6847a2a0c2c565ac6fd5d05a303104ceba0cc4e10890a0037281d"
+      "bytes": 33117,
+      "sha256": "7518dccd57a60ff2c5804765997d738a0747dcef3e32aea8beac90e4ca70d9ac"
     },
     {
       "path": "tools/check_metadata.py",

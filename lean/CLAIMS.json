@@ -6163,8 +6163,8 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/validated-raw-normalization.md",
-      "unresolved_bridge": "Prove full normalized validator acceptance, actual Python correspondence, JSON parsing, native compiler, circuit-to-sector identities and costs."
+      "build_audit_receipt": "lean/evidence/normalized-validator-preservation.md",
+      "unresolved_bridge": "Prove actual Python correspondence, JSON parsing, native compiler, circuit-to-sector identities and costs."
     },
     {
       "id": "validated-raw-normalization-normalizeAfterRawValidation_accepts",
@@ -6181,8 +6181,27 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/validated-raw-normalization.md",
-      "unresolved_bridge": "Prove full normalized validator acceptance, actual Python correspondence, JSON parsing, native compiler, circuit-to-sector identities and costs."
+      "build_audit_receipt": "lean/evidence/normalized-validator-preservation.md",
+      "unresolved_bridge": "Prove actual Python correspondence, JSON parsing, native compiler, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "validated-raw-normalization-normalizedRaw_validation_preserved",
+      "section": "2",
+      "target": "SectorSimulation.normalizedRaw_validation_preserved",
+      "assumptions": "Existing Lean raw descriptor validator succeeds before normalization.",
+      "quantifiers": "All raw two-phase descriptors and their validated dependent circuit outputs.",
+      "statement": "A raw descriptor accepted by the complete Lean validator remains accepted after raw phase normalization.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/normalized-validator-preservation.md",
+      "unresolved_bridge": "Prove actual Python correspondence, JSON parsing, native compiler, circuit-to-sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

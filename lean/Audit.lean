@@ -1051,3 +1051,6 @@ import SectorSimulation
 
 #check SectorSimulation.normalizeAfterRawValidation_accepts
 #print axioms SectorSimulation.normalizeAfterRawValidation_accepts
+
+#check SectorSimulation.normalizedRaw_validation_preserved
+#print axioms SectorSimulation.normalizedRaw_validation_preserved

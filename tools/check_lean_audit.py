@@ -399,6 +399,7 @@ EXPECTED = {
     'SectorSimulation.normalizedRaw_degreeChecks': {'Classical.choice', 'Quot.sound', 'propext'},
     'SectorSimulation.normalizeAfterRawValidation_rejects': {'propext', 'Quot.sound'},
     'SectorSimulation.normalizeAfterRawValidation_accepts': {'propext', 'Quot.sound'},
+    'SectorSimulation.normalizedRaw_validation_preserved': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
