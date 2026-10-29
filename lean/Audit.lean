@@ -89,3 +89,12 @@ import SectorSimulation
 
 #check SectorSimulation.pairMask_degree
 #print axioms SectorSimulation.pairMask_degree
+
+#check SectorSimulation.quadraticTermMask_degree
+#print axioms SectorSimulation.quadraticTermMask_degree
+
+#check SectorSimulation.quadraticTermsToANF_degree
+#print axioms SectorSimulation.quadraticTermsToANF_degree
+
+#check SectorSimulation.cubicPhaseDerivativeANF_correct
+#print axioms SectorSimulation.cubicPhaseDerivativeANF_correct

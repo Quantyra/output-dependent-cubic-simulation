@@ -9,3 +9,5 @@ import SectorSimulation.QuadraticTerms
 import SectorSimulation.CubicMaskDerivative
 import SectorSimulation.CubicPhaseDerivative
 import SectorSimulation.QuadraticMasks
+
+import SectorSimulation.CubicDerivativeANF

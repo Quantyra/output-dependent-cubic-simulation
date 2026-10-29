@@ -967,6 +967,69 @@
       ],
       "build_audit_receipt": "lean/evidence/pair-mask-degree-audit.md",
       "unresolved_bridge": "Bound all generated masks and compose with the cubic phase derivative construction; establish cost and circuit and sector semantics."
+    },
+    {
+      "id": "quadratic-mask-degree",
+      "section": "2",
+      "target": "SectorSimulation.quadraticTermMask_degree",
+      "assumptions": "Finite binary vectors, source phase represented by bit masks and, for the derivative theorem, phaseWithinDegree 3.",
+      "quantifiers": "All finite dimensions, inputs and shifts as stated in the declaration.",
+      "statement": "Each source mask generated from a quadratic term has degree at most two.",
+      "dependencies": [
+        "pair-mask-degree",
+        "quadratic-terms-mask-evaluation",
+        "cubic-phase-quadratic-terms"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-derivative-anf-audit.md",
+      "unresolved_bridge": "Prove resource bounds and connect the shift to native circuit decoding and the published circuit, Walsh and sector statements."
+    },
+    {
+      "id": "quadratic-anf-degree",
+      "section": "2",
+      "target": "SectorSimulation.quadraticTermsToANF_degree",
+      "assumptions": "Finite binary vectors, source phase represented by bit masks and, for the derivative theorem, phaseWithinDegree 3.",
+      "quantifiers": "All finite dimensions, inputs and shifts as stated in the declaration.",
+      "statement": "The source bit-mask ANF generated from any quadratic term list has degree at most two.",
+      "dependencies": [
+        "pair-mask-degree",
+        "quadratic-terms-mask-evaluation",
+        "cubic-phase-quadratic-terms"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-derivative-anf-audit.md",
+      "unresolved_bridge": "Prove resource bounds and connect the shift to native circuit decoding and the published circuit, Walsh and sector statements."
+    },
+    {
+      "id": "cubic-derivative-anf",
+      "section": "2",
+      "target": "SectorSimulation.cubicPhaseDerivativeANF_correct",
+      "assumptions": "Finite binary vectors, source phase represented by bit masks and, for the derivative theorem, phaseWithinDegree 3.",
+      "quantifiers": "All finite dimensions, inputs and shifts as stated in the declaration.",
+      "statement": "For every cubic source phase and binary shift, the computed bit-mask ANF has degree at most two and evaluates to the phase derivative on every input.",
+      "dependencies": [
+        "pair-mask-degree",
+        "quadratic-terms-mask-evaluation",
+        "cubic-phase-quadratic-terms"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-derivative-anf-audit.md",
+      "unresolved_bridge": "Prove resource bounds and connect the shift to native circuit decoding and the published circuit, Walsh and sector statements."
     }
   ],
   "paper_source": "manuscript/main.tex",
