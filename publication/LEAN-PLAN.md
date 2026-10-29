@@ -1,6 +1,6 @@
 # Lean certification after first publication
 
-Status: active target freeze after first publication, verified paper DOI and application of the DOI to citation surfaces. No manuscript theorem is certified yet. The initial preprint did not wait for formalization.
+Status: target freeze complete; source and sector formalization is in progress after first publication, verified paper DOI and application of the DOI to citation surfaces. No manuscript theorem is certified yet. The initial preprint did not wait for formalization. The current declaration inventory and audit receipts are in [CLAIMS.json](../lean/CLAIMS.json) and [lean/evidence](../lean/evidence); the original published target remains unchanged.
 
 The initial target is the exact published PDF and source. Preserve its hashes and map each stable LaTeX statement label to its mathematical statement, hypotheses, intended declaration and evidence. Confirm a Lean/mathlib toolchain at that time and commit its pins; no placeholder Lean project is represented as certification.
 

@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3169,
-      "sha256": "6bb9583278cc4bc5467c2440430d087d44f31de5ec47aacbce1cab30e3ba53bf"
+      "bytes": 3321,
+      "sha256": "c893f7d09b602e244c94466e9d65cad723475634a99f18ed5269cf6daf665320"
     },
     {
       "path": "REPRODUCING.md",
@@ -134,8 +134,8 @@
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
-      "bytes": 2492,
-      "sha256": "5c7164ea28adb8928b5ad277590d998031d287d0ac2aa051fb5ad0883e6aba79"
+      "bytes": 2851,
+      "sha256": "8fa910f71f3ac60a409ef79590c1955b2d87af3faee9326c861dc141c300ca22"
     },
     {
       "path": "lean/PivotExamples.lean",
@@ -619,8 +619,8 @@
     },
     {
       "path": "publication/LEAN-PLAN.md",
-      "bytes": 2676,
-      "sha256": "33214ca16d04e5f12dad8a77c93cee9c448b20f257fa545cbb1900ce2502115e"
+      "bytes": 2909,
+      "sha256": "fbeac9fc771a190290504ebd212ba4786cf498ea98cd3afe0d940d689576d0c7"
     },
     {
       "path": "publication/PUBLICATION-RECEIPT.md",
