@@ -21,6 +21,9 @@ jobs:
           use-github-cache: 'false'
           test: 'false'
           lint: 'false'
+      - name: Check out pinned Lean dependencies
+        working-directory: lean
+        run: lake update
       - name: Fetch complex proof dependencies
         run: python3 tools/prepare_mathlib_complex_cache.py
       - name: Build Lean project
