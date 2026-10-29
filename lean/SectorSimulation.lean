@@ -234,3 +234,5 @@ import SectorSimulation.ComplexSemantics
 import SectorSimulation.CanonicalWalsh
 
 import SectorSimulation.ExplicitCanonicalWalsh
+
+import SectorSimulation.CanonicalAssignmentCoverage

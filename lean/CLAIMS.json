@@ -8204,6 +8204,278 @@
       ],
       "build_audit_receipt": "lean/evidence/explicit-canonical-walsh.md",
       "unresolved_bridge": "Connect assignment lists to finite vectors and source ANF; construct canonical basis for arbitrary quadratics, prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-radicalAssignments_complete",
+      "section": "3",
+      "target": "SectorSimulation.radicalAssignments_complete",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Every Boolean list occurs in the radical assignment enumeration at its length.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-pairAssignments_complete",
+      "section": "3",
+      "target": "SectorSimulation.pairAssignments_complete",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Every Boolean-pair list occurs in the pair assignment enumeration at its length.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-radicalAssignments_length",
+      "section": "3",
+      "target": "SectorSimulation.radicalAssignments_length",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The radical enumeration contains 2^n entries.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-pairAssignments_length",
+      "section": "3",
+      "target": "SectorSimulation.pairAssignments_length",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The pair enumeration contains 4^n entries.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-radicalAssignments_mem_iff",
+      "section": "3",
+      "target": "SectorSimulation.radicalAssignments_mem_iff",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "A Boolean list occurs exactly when its length matches the radical dimension.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-pairAssignments_mem_iff",
+      "section": "3",
+      "target": "SectorSimulation.pairAssignments_mem_iff",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "A Boolean-pair list occurs exactly when its length matches the pair count.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-nodup_cons_map",
+      "section": "3",
+      "target": "SectorSimulation.nodup_cons_map",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Prepending a fixed item preserves and reflects list uniqueness.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-radicalAssignments_nodup",
+      "section": "3",
+      "target": "SectorSimulation.radicalAssignments_nodup",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The radical enumeration contains no duplicates.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-pairAssignments_nodup",
+      "section": "3",
+      "target": "SectorSimulation.pairAssignments_nodup",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The pair enumeration contains no duplicates.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-vectorAssignment_length",
+      "section": "3",
+      "target": "SectorSimulation.vectorAssignment_length",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The Boolean list extracted from a finite vector has its dimension.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-vectorAssignment_mem",
+      "section": "3",
+      "target": "SectorSimulation.vectorAssignment_mem",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Every finite binary vector yields an enumerated radical assignment.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-vectorAssignment_get",
+      "section": "3",
+      "target": "SectorSimulation.vectorAssignment_get",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Each extracted assignment entry is the corresponding vector coordinate.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-vectorAssignment_injective",
+      "section": "3",
+      "target": "SectorSimulation.vectorAssignment_injective",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The finite-vector to Boolean-list map is injective.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-vectorAssignment_of_assignmentVector",
+      "section": "3",
+      "target": "SectorSimulation.vectorAssignment_of_assignmentVector",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "A correctly sized Boolean list round-trips through its finite vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
+    },
+    {
+      "id": "canonical-assignment-coverage-radicalAssignment_has_unique_vector",
+      "section": "3",
+      "target": "SectorSimulation.radicalAssignment_has_unique_vector",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "Each enumerated radical assignment corresponds to exactly one finite binary vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-assignment-coverage.md",
+      "unresolved_bridge": "Relate pair assignment lists to finite vectors, connect phase evaluation to source ANF and construct general canonical basis; prove rank, support and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

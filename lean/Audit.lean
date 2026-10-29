@@ -1382,3 +1382,49 @@ import SectorSimulation
 
 #check SectorSimulation.explicitCanonicalSum_closed
 #print axioms SectorSimulation.explicitCanonicalSum_closed
+
+
+#check SectorSimulation.radicalAssignments_complete
+#print axioms SectorSimulation.radicalAssignments_complete
+
+#check SectorSimulation.pairAssignments_complete
+#print axioms SectorSimulation.pairAssignments_complete
+
+#check SectorSimulation.radicalAssignments_length
+#print axioms SectorSimulation.radicalAssignments_length
+
+#check SectorSimulation.pairAssignments_length
+#print axioms SectorSimulation.pairAssignments_length
+
+#check SectorSimulation.radicalAssignments_mem_iff
+#print axioms SectorSimulation.radicalAssignments_mem_iff
+
+#check SectorSimulation.pairAssignments_mem_iff
+#print axioms SectorSimulation.pairAssignments_mem_iff
+
+#check SectorSimulation.nodup_cons_map
+#print axioms SectorSimulation.nodup_cons_map
+
+#check SectorSimulation.radicalAssignments_nodup
+#print axioms SectorSimulation.radicalAssignments_nodup
+
+#check SectorSimulation.pairAssignments_nodup
+#print axioms SectorSimulation.pairAssignments_nodup
+
+#check SectorSimulation.vectorAssignment_length
+#print axioms SectorSimulation.vectorAssignment_length
+
+#check SectorSimulation.vectorAssignment_mem
+#print axioms SectorSimulation.vectorAssignment_mem
+
+#check SectorSimulation.vectorAssignment_get
+#print axioms SectorSimulation.vectorAssignment_get
+
+#check SectorSimulation.vectorAssignment_injective
+#print axioms SectorSimulation.vectorAssignment_injective
+
+#check SectorSimulation.vectorAssignment_of_assignmentVector
+#print axioms SectorSimulation.vectorAssignment_of_assignmentVector
+
+#check SectorSimulation.radicalAssignment_has_unique_vector
+#print axioms SectorSimulation.radicalAssignment_has_unique_vector

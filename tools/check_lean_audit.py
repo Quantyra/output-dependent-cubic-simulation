@@ -507,6 +507,21 @@ EXPECTED = {
     'SectorSimulation.explicitPairSum_eq': {'propext'},
     'SectorSimulation.explicitCanonicalSum_eq': {'propext', 'Quot.sound'},
     'SectorSimulation.explicitCanonicalSum_closed': {'propext', 'Quot.sound'},
+    'SectorSimulation.radicalAssignments_complete': {'propext', 'Quot.sound'},
+    'SectorSimulation.pairAssignments_complete': {'propext', 'Quot.sound'},
+    'SectorSimulation.radicalAssignments_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.pairAssignments_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.radicalAssignments_mem_iff': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.pairAssignments_mem_iff': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.nodup_cons_map': {'propext', 'Quot.sound'},
+    'SectorSimulation.radicalAssignments_nodup': {'propext', 'Quot.sound'},
+    'SectorSimulation.pairAssignments_nodup': {'propext', 'Quot.sound'},
+    'SectorSimulation.vectorAssignment_length': {'propext'},
+    'SectorSimulation.vectorAssignment_mem': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.vectorAssignment_get': {'propext'},
+    'SectorSimulation.vectorAssignment_injective': {'propext', 'Quot.sound'},
+    'SectorSimulation.vectorAssignment_of_assignmentVector': {'propext', 'Quot.sound'},
+    'SectorSimulation.radicalAssignment_has_unique_vector': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
