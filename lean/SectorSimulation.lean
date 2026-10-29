@@ -206,3 +206,5 @@ import SectorSimulation.ExactWalshAlgebra
 import SectorSimulation.ExactDistributivity
 
 import SectorSimulation.HadamardKernelLinearity
+
+import SectorSimulation.HadamardFiniteSums

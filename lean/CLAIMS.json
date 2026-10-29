@@ -6709,6 +6709,100 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-kernel-linearity.md",
       "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-finite-sums-exactAdd_zero",
+      "section": "2",
+      "target": "SectorSimulation.exactAdd_zero",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists, finite index lists and amplitude functions.",
+      "statement": "Adding exact zero on the right preserves an exact amplitude.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-finite-sums.md",
+      "unresolved_bridge": "Construct the basis decomposition and closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-finite-sums-exactNeg_zero",
+      "section": "2",
+      "target": "SectorSimulation.exactNeg_zero",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists, finite index lists and amplitude functions.",
+      "statement": "Negating exact zero yields exact zero.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-finite-sums.md",
+      "unresolved_bridge": "Construct the basis decomposition and closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-finite-sums-exactMul_zero",
+      "section": "2",
+      "target": "SectorSimulation.exactMul_zero",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists, finite index lists and amplitude functions.",
+      "statement": "Multiplying an exact amplitude by exact zero yields exact zero.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-finite-sums.md",
+      "unresolved_bridge": "Construct the basis decomposition and closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-finite-sums-hadamardKernel_zero",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_zero",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists, finite index lists and amplitude functions.",
+      "statement": "The iterated Hadamard kernel maps the zero function to zero.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-finite-sums.md",
+      "unresolved_bridge": "Construct the basis decomposition and closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-finite-sums-hadamardKernel_sum",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_sum",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel as applicable.",
+      "quantifiers": "All applicable exact amplitudes, finite widths, wire lists, finite index lists and amplitude functions.",
+      "statement": "The iterated Hadamard kernel distributes over any finite list of amplitude functions, including an empty list.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-finite-sums.md",
+      "unresolved_bridge": "Construct the basis decomposition and closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

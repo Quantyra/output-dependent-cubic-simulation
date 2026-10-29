@@ -1135,3 +1135,18 @@ import SectorSimulation
 
 #check SectorSimulation.exactMul_left_comm
 #print axioms SectorSimulation.exactMul_left_comm
+
+#check SectorSimulation.exactAdd_zero
+#print axioms SectorSimulation.exactAdd_zero
+
+#check SectorSimulation.exactNeg_zero
+#print axioms SectorSimulation.exactNeg_zero
+
+#check SectorSimulation.exactMul_zero
+#print axioms SectorSimulation.exactMul_zero
+
+#check SectorSimulation.hadamardKernel_zero
+#print axioms SectorSimulation.hadamardKernel_zero
+
+#check SectorSimulation.hadamardKernel_sum
+#print axioms SectorSimulation.hadamardKernel_sum

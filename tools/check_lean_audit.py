@@ -427,6 +427,11 @@ EXPECTED = {
     'SectorSimulation.hadamardKernelStep_scale': {'Classical.choice', 'propext', 'Quot.sound'},
     'SectorSimulation.hadamardKernel_scale': {'Classical.choice', 'propext', 'Quot.sound'},
     'SectorSimulation.exactMul_left_comm': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.exactAdd_zero': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.exactNeg_zero': {'Quot.sound', 'propext'},
+    'SectorSimulation.exactMul_zero': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.hadamardKernel_zero': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.hadamardKernel_sum': {'Classical.choice', 'Quot.sound', 'propext'},
 }
 
 
