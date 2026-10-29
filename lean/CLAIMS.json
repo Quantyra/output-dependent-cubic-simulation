@@ -4804,6 +4804,130 @@
       ],
       "build_audit_receipt": "lean/evidence/phase-block-compiler-audit.md",
       "unresolved_bridge": "Establish Python compiler correspondence, zero-wire constant handling, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-size-zero-phaseBlock_records_length",
+      "section": "2",
+      "target": "SectorSimulation.phaseBlock_records_length",
+      "assumptions": "The executable Lean phase compiler and modeled native interpreter; success is assumed for output-size bounds.",
+      "quantifiers": "All finite dimensions and applicable phase inputs; the negative-sign impossibility concerns a specified zero-wire unit state.",
+      "statement": "Each phase block has at most 17 native records.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
+      "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
+    },
+    {
+      "id": "phase-size-zero-phaseBlockRecords_length",
+      "section": "2",
+      "target": "SectorSimulation.phaseBlockRecords_length",
+      "assumptions": "The executable Lean phase compiler and modeled native interpreter; success is assumed for output-size bounds.",
+      "quantifiers": "All finite dimensions and applicable phase inputs; the negative-sign impossibility concerns a specified zero-wire unit state.",
+      "statement": "The native records for a block list have length at most 17 times the block count.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
+      "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
+    },
+    {
+      "id": "phase-size-zero-compilePhaseBlocks_length",
+      "section": "2",
+      "target": "SectorSimulation.compilePhaseBlocks_length",
+      "assumptions": "The executable Lean phase compiler and modeled native interpreter; success is assumed for output-size bounds.",
+      "quantifiers": "All finite dimensions and applicable phase inputs; the negative-sign impossibility concerns a specified zero-wire unit state.",
+      "statement": "A successfully compiled block list has one block per input monomial.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
+      "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
+    },
+    {
+      "id": "phase-size-zero-compilePhaseRecords_length",
+      "section": "2",
+      "target": "SectorSimulation.compilePhaseRecords_length",
+      "assumptions": "The executable Lean phase compiler and modeled native interpreter; success is assumed for output-size bounds.",
+      "quantifiers": "All finite dimensions and applicable phase inputs; the negative-sign impossibility concerns a specified zero-wire unit state.",
+      "statement": "A successfully compiled phase has at most 17 native records per input monomial.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
+      "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
+    },
+    {
+      "id": "phase-size-zero-applyExactNative_zero",
+      "section": "2",
+      "target": "SectorSimulation.applyExactNative_zero",
+      "assumptions": "The executable Lean phase compiler and modeled native interpreter; success is assumed for output-size bounds.",
+      "quantifiers": "All finite dimensions and applicable phase inputs; the negative-sign impossibility concerns a specified zero-wire unit state.",
+      "statement": "The modeled native interpreter rejects every gate on zero wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
+      "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
+    },
+    {
+      "id": "phase-size-zero-replayExactNative_zero_nonempty",
+      "section": "2",
+      "target": "SectorSimulation.replayExactNative_zero_nonempty",
+      "assumptions": "The executable Lean phase compiler and modeled native interpreter; success is assumed for output-size bounds.",
+      "quantifiers": "All finite dimensions and applicable phase inputs; the negative-sign impossibility concerns a specified zero-wire unit state.",
+      "statement": "Every nonempty native record list is rejected on zero wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
+      "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
+    },
+    {
+      "id": "phase-size-zero-zeroWireOne_not_negative",
+      "section": "2",
+      "target": "SectorSimulation.zeroWireOne_not_negative",
+      "assumptions": "The executable Lean phase compiler and modeled native interpreter; success is assumed for output-size bounds.",
+      "quantifiers": "All finite dimensions and applicable phase inputs; the negative-sign impossibility concerns a specified zero-wire unit state.",
+      "statement": "The unit zero-wire amplitude differs from its negative in the exact quotient.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
+      "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
+    },
+    {
+      "id": "phase-size-zero-noZeroWireNativeConstantSign",
+      "section": "2",
+      "target": "SectorSimulation.noZeroWireNativeConstantSign",
+      "assumptions": "The executable Lean phase compiler and modeled native interpreter; success is assumed for output-size bounds.",
+      "quantifiers": "All finite dimensions and applicable phase inputs; the negative-sign impossibility concerns a specified zero-wire unit state.",
+      "statement": "No native record list implements the exact negative constant sign on the unit zero-wire state.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
+      "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
     }
   ],
   "paper_source": "manuscript/main.tex",

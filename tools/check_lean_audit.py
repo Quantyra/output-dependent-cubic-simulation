@@ -318,6 +318,14 @@ EXPECTED = {
     'SectorSimulation.idealPhaseBlocks_phase': {'propext'},
     'SectorSimulation.idealPhaseBlocks_exponent': {'propext'},
     'SectorSimulation.compilePhaseRecords_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.phaseBlock_records_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.phaseBlockRecords_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.compilePhaseBlocks_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.compilePhaseRecords_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.applyExactNative_zero': {'propext'},
+    'SectorSimulation.replayExactNative_zero_nonempty': {'propext'},
+    'SectorSimulation.zeroWireOne_not_negative': {'propext'},
+    'SectorSimulation.noZeroWireNativeConstantSign': {'propext'},
 }
 
 

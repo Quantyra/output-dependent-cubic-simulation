@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 33381,
-      "sha256": "e161ba457df083c3b091225e2846e421674a9c2e1be25cab2d9dfd16cadd2d9a"
+      "bytes": 34246,
+      "sha256": "318335aabcbea182ef61bd65b02909fa0056bac45f21bc9a51267f5227743b02"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 264371,
-      "sha256": "5b9fe5468fe7d6d03eda95f29010c60ae70efa7766a3668362e93ce7b7ae03b0"
+      "bytes": 272013,
+      "sha256": "11859b463a527c95ec08f21e6da0efb9953dd8286858b98ddf526f06e8135dd8"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -164,8 +164,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 3646,
-      "sha256": "bbedd222148743b19834cab79e6d0cbe5f10e7d7afad3d99f6b6d7113b611579"
+      "bytes": 3735,
+      "sha256": "1e737e43317c9b328b2b32452df904dfd5d61b3d55d2e5fd09635551fe1038b1"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -468,6 +468,11 @@
       "sha256": "5b629fbb976b74b6ccf1bbc5fdb5a7b3de3f6c26a57917485d99637cffb15ead"
     },
     {
+      "path": "lean/SectorSimulation/PhaseCompilerSize.lean",
+      "bytes": 1967,
+      "sha256": "b8b642dce83d6cbdd34702c946f14e2fa66907db6dc2a854f016eb5564c44151"
+    },
+    {
       "path": "lean/SectorSimulation/PhaseGateAmplitude.lean",
       "bytes": 1826,
       "sha256": "0bca68b341552a4223a7d7c58567f7bb80c5fb7e0a0f719814b66b849cc8cfad"
@@ -591,6 +596,11 @@
       "path": "lean/SectorSimulation/ToffoliSuperposition.lean",
       "bytes": 2865,
       "sha256": "7fa8618d73c2f316e68787d5ede556bae69491e371fb63d75ff16726a1bed307"
+    },
+    {
+      "path": "lean/SectorSimulation/ZeroWirePhaseBoundary.lean",
+      "bytes": 1452,
+      "sha256": "8e705f08406272a0ccbe1875fe6295d23c9895ea951c22b8f35a4930c078cbcc"
     },
     {
       "path": "lean/SourceExamples.lean",
@@ -926,6 +936,11 @@
       "path": "lean/evidence/phase-gate-amplitude-audit.md",
       "bytes": 824,
       "sha256": "2a4fc6efe3fb29e540a3fddf1c745721c88d424a78f2f6bf4a2d2f4f0e614c7f"
+    },
+    {
+      "path": "lean/evidence/phase-size-zero-audit.md",
+      "bytes": 1100,
+      "sha256": "3ef7b05aca918b6378c040b6997672af0b6f7d6f35834ed396e8eb3cb33435d1"
     },
     {
       "path": "lean/evidence/pivot-complete-audit.md",
@@ -1469,8 +1484,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 25943,
-      "sha256": "c1712b204d5f78b81cb2108517ac9bd3bd2a14426740ce330127d17660027640"
+      "bytes": 26507,
+      "sha256": "7b02d91d76af24cddaf683d5ff79e4ab6885209324ed5591f543c8016bfde552"
     },
     {
       "path": "tools/check_metadata.py",

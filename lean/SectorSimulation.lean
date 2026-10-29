@@ -157,3 +157,6 @@ import SectorSimulation.CombinedPhaseNative
 import SectorSimulation.CubicMaskCoverage
 
 import SectorSimulation.PhaseBlockCompiler
+
+import SectorSimulation.PhaseCompilerSize
+import SectorSimulation.ZeroWirePhaseBoundary

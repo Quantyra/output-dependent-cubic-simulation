@@ -844,3 +844,20 @@ import SectorSimulation
 #print axioms SectorSimulation.idealPhaseBlocks_exponent
 #check SectorSimulation.compilePhaseRecords_correct
 #print axioms SectorSimulation.compilePhaseRecords_correct
+
+#check SectorSimulation.phaseBlock_records_length
+#print axioms SectorSimulation.phaseBlock_records_length
+#check SectorSimulation.phaseBlockRecords_length
+#print axioms SectorSimulation.phaseBlockRecords_length
+#check SectorSimulation.compilePhaseBlocks_length
+#print axioms SectorSimulation.compilePhaseBlocks_length
+#check SectorSimulation.compilePhaseRecords_length
+#print axioms SectorSimulation.compilePhaseRecords_length
+#check SectorSimulation.applyExactNative_zero
+#print axioms SectorSimulation.applyExactNative_zero
+#check SectorSimulation.replayExactNative_zero_nonempty
+#print axioms SectorSimulation.replayExactNative_zero_nonempty
+#check SectorSimulation.zeroWireOne_not_negative
+#print axioms SectorSimulation.zeroWireOne_not_negative
+#check SectorSimulation.noZeroWireNativeConstantSign
+#print axioms SectorSimulation.noZeroWireNativeConstantSign
