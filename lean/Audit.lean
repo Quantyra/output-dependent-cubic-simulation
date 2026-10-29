@@ -424,3 +424,9 @@ import SectorSimulation
 
 #check SectorSimulation.native_CNOT_step
 #print axioms SectorSimulation.native_CNOT_step
+
+#check SectorSimulation.hadamardNumerator_squared
+#print axioms SectorSimulation.hadamardNumerator_squared
+
+#check SectorSimulation.hadamard_CNOT_hadamard_numerator
+#print axioms SectorSimulation.hadamard_CNOT_hadamard_numerator

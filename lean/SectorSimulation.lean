@@ -79,3 +79,5 @@ import SectorSimulation.CNOTAmplitude
 import SectorSimulation.PhaseGateAmplitude
 
 import SectorSimulation.NativeXZReplay
+
+import SectorSimulation.HadamardInteger

@@ -2216,6 +2216,38 @@
       ],
       "build_audit_receipt": "lean/evidence/native-xz-replay-audit.md",
       "unresolved_bridge": "Connect modeled records to Python compiler execution, Hadamard and multiwire phase semantics, full circuit and manuscript theorem claims."
+    },
+    {
+      "id": "hadamard-integer-hadamardNumerator_squared",
+      "section": "2",
+      "target": "SectorSimulation.hadamardNumerator_squared",
+      "assumptions": "Unnormalized Hadamard numerator and CNOT actions on integer coefficient functions; distinct wires for controlled sign.",
+      "quantifiers": "All finite dimensions, applicable wires, coefficient functions and basis vectors.",
+      "statement": "The unnormalized integer Hadamard numerator squared equals twice the original coefficient.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-integer-audit.md",
+      "unresolved_bridge": "Establish normalized complex Hadamard and native gate replay, multiwire cubic phase, Python equivalence and full manuscript theorem claims."
+    },
+    {
+      "id": "hadamard-integer-hadamard_CNOT_hadamard_numerator",
+      "section": "2",
+      "target": "SectorSimulation.hadamard_CNOT_hadamard_numerator",
+      "assumptions": "Unnormalized Hadamard numerator and CNOT actions on integer coefficient functions; distinct wires for controlled sign.",
+      "quantifiers": "All finite dimensions, applicable wires, coefficient functions and basis vectors.",
+      "statement": "The unnormalized Hadamard-CNOT-Hadamard sequence equals twice the controlled-sign coefficient for distinct wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-integer-audit.md",
+      "unresolved_bridge": "Establish normalized complex Hadamard and native gate replay, multiwire cubic phase, Python equivalence and full manuscript theorem claims."
     }
   ],
   "paper_source": "manuscript/main.tex",

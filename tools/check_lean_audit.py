@@ -157,6 +157,8 @@ EXPECTED = {
     'SectorSimulation.native_XZXZ_constant_phase': {'propext', 'Quot.sound'},
     'SectorSimulation.native_Z_linear_phase': {'propext'},
     'SectorSimulation.native_CNOT_step': {'propext'},
+    'SectorSimulation.hadamardNumerator_squared': {'propext', 'Quot.sound'},
+    'SectorSimulation.hadamard_CNOT_hadamard_numerator': {'propext', 'Quot.sound'},
 }
 
 
