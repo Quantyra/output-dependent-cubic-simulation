@@ -9084,6 +9084,44 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-character-shift.md",
       "unresolved_bridge": "Connect the explicit character to standard finite-vector dot product; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-sum-canonicalPhase_shift",
+      "section": "3",
+      "target": "SectorSimulation.canonicalPhase_shift",
+      "assumptions": "Canonical phase and explicit character coefficient lists have the stated equal lengths.",
+      "quantifiers": "All finite canonical block dimensions, coefficient lists, constant bits and vectors, including zero dimensions.",
+      "statement": "An explicitly evaluated canonical linear character shifts the pair and radical phase coefficients by XOR.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-sum.md",
+      "unresolved_bridge": "Connect the explicit character to standard finite-vector dot product; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-sum-canonicalCharacterWalshSum_closed",
+      "section": "3",
+      "target": "SectorSimulation.canonicalCharacterWalshSum_closed",
+      "assumptions": "Canonical phase and explicit character coefficient lists have the stated equal lengths.",
+      "quantifiers": "All finite canonical block dimensions, coefficient lists, constant bits and vectors, including zero dimensions.",
+      "statement": "The finite-vector canonical phase sum with explicit linear character coefficients has the exact zero-or-signed-power-of-two value.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-sum.md",
+      "unresolved_bridge": "Connect the explicit character to standard finite-vector dot product; construct arbitrary-source canonicalization and prove affine support, rank and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

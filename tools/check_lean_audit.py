@@ -555,6 +555,8 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSum_canonicalized': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.radicalPhaseEval_shift': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.pairPhaseEval_shift': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalPhase_shift': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalCharacterWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

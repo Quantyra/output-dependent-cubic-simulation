@@ -248,3 +248,5 @@ import SectorSimulation.CanonicalSourceANF
 import SectorSimulation.SourceWalshReindex
 
 import SectorSimulation.CanonicalCharacterShift
+
+import SectorSimulation.CanonicalCharacterSum

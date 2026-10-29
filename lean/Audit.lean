@@ -1531,3 +1531,9 @@ import SectorSimulation
 
 #check SectorSimulation.pairPhaseEval_shift
 #print axioms SectorSimulation.pairPhaseEval_shift
+
+#check SectorSimulation.canonicalPhase_shift
+#print axioms SectorSimulation.canonicalPhase_shift
+
+#check SectorSimulation.canonicalCharacterWalshSum_closed
+#print axioms SectorSimulation.canonicalCharacterWalshSum_closed
