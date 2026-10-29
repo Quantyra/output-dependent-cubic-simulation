@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 12351,
-      "sha256": "549c414c797d48a3241a5fa241207cf444f11197306cf6e1cd4ed1b4337aefe6"
+      "bytes": 12711,
+      "sha256": "f1a0e5c341aef7bc01e8d3970c7022962d27d2736f1a81ae609fd947dd630478"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 86049,
-      "sha256": "4286bbc06bd01395160b5f539a4065f96bb44c4ae087dc8d1061950a4257df64"
+      "bytes": 86986,
+      "sha256": "fc21d192ad4e20c7dbc6c5ea170384ca2e8a0b288013e55cb6adc9589e6bfea3"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -149,8 +149,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 1476,
-      "sha256": "667a6c4cfc41e792a8dd7722dea50392b49c8bb38d4ce82d86bdefdc19de0fb9"
+      "bytes": 1519,
+      "sha256": "b2ea013a2123f047f1bac3372ea8dd1d01cadedb822471e3a4b979c55e8285dc"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -258,6 +258,11 @@
       "sha256": "ba79af783785f0523433feda65ba4fa0d1a062527337e3e5028b7ee9a4358243"
     },
     {
+      "path": "lean/SectorSimulation/NativeHeaderBytes.lean",
+      "bytes": 1978,
+      "sha256": "f4c9ec184eb9eeffde042e45c1e657c63c99ce00b23a262763df4f0b4804ec19"
+    },
+    {
       "path": "lean/SectorSimulation/NativeHeaderSound.lean",
       "bytes": 952,
       "sha256": "d3b3be8ae7ffd6bdcc4fabcbd0be2c84113c780434cb2ce4c9f5e376ea711933"
@@ -329,8 +334,8 @@
     },
     {
       "path": "lean/SourceExamples.lean",
-      "bytes": 1670,
-      "sha256": "c05a5264294e2b1c645a71eae4e1424ccef1e6f62a87c5e6fc2d125c9e8ae96d"
+      "bytes": 1970,
+      "sha256": "921108b96031cf5223ded6f88f181c079a9554bf47e46bf70aeab2d5e4e8d39c"
     },
     {
       "path": "lean/evidence/anf-derivative-audit.md",
@@ -451,6 +456,11 @@
       "path": "lean/evidence/native-header-bits-audit.md",
       "bytes": 892,
       "sha256": "4c44d39bedb08288a4ac51e003d49c7e77f0e4f005ecec871d3965326f070a0e"
+    },
+    {
+      "path": "lean/evidence/native-header-bytes-audit.md",
+      "bytes": 1010,
+      "sha256": "897ac545df215fce8aa90127dcb1267b070b8cb940372abcc050348b9dc21ee8"
     },
     {
       "path": "lean/evidence/native-header-sound-audit.md",
@@ -944,8 +954,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 9656,
-      "sha256": "58dbbb3a4decd9e33213cf0ab4bd0722e7aeaff52bc890ae620baa38d06d281a"
+      "bytes": 9897,
+      "sha256": "f571c86f83396a47e221b0d8b48865294f7515c8b1ad928bc2d91a98d7616005"
     },
     {
       "path": "tools/check_metadata.py",

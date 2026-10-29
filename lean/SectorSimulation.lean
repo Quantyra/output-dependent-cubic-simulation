@@ -57,3 +57,5 @@ import SectorSimulation.NativeHeaderBits
 import SectorSimulation.NativeHeaderSound
 
 import SectorSimulation.NativeGateHeader
+
+import SectorSimulation.NativeHeaderBytes

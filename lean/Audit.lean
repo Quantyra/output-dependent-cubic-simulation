@@ -308,3 +308,12 @@ import SectorSimulation
 
 #check SectorSimulation.decode_native_header_sound
 #print axioms SectorSimulation.decode_native_header_sound
+
+#check SectorSimulation.parse_header_bytes_roundtrip
+#print axioms SectorSimulation.parse_header_bytes_roundtrip
+
+#check SectorSimulation.native_byte_header_roundtrip
+#print axioms SectorSimulation.native_byte_header_roundtrip
+
+#check SectorSimulation.native_byte_header_rejects_incomplete
+#print axioms SectorSimulation.native_byte_header_rejects_incomplete

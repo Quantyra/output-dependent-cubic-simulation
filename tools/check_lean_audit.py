@@ -118,6 +118,9 @@ EXPECTED = {
     'SectorSimulation.decode_encode_native_header': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.native_header_length': {'propext'},
     'SectorSimulation.decode_native_header_sound': {'propext'},
+    'SectorSimulation.parse_header_bytes_roundtrip': {'propext'},
+    'SectorSimulation.native_byte_header_roundtrip': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.native_byte_header_rejects_incomplete': {'propext'},
 }
 
 

@@ -1674,6 +1674,25 @@
       ],
       "build_audit_receipt": "lean/evidence/native-gate-header-audit.md",
       "unresolved_bridge": "Verify byte alignment, ASCII/JSON serialization, descriptor decoding, canonical body replay and gate denotation."
+    },
+    {
+      "id": "native-byte-header-roundtrip",
+      "section": "2",
+      "target": "SectorSimulation.native_byte_header_roundtrip",
+      "assumptions": "Header bytes represented as eight ordered Boolean fields and native gate records as tag strings and wire lists.",
+      "quantifiers": "All finite byte-field lists and body gate lists.",
+      "statement": "Eight-bit header encoding followed by arbitrary gate records decodes to the original byte fields and body.",
+      "dependencies": [
+        "native-gate-header-roundtrip"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-header-bytes-audit.md",
+      "unresolved_bridge": "Prove numeric-byte and ASCII/JSON equivalence, accepted-input byte-parser soundness, canonical body replay and physical circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",
