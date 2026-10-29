@@ -462,6 +462,12 @@ EXPECTED = {
     'SectorSimulation.basisSelectedPath_components': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.hadamardKernel_allWire_basis_coefficient': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.hadamardKernel_allWire_coefficient_sum': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactNeg_involutive': {'propext', 'Quot.sound'},
+    'SectorSimulation.iterateHadamardScale_neg': {'propext', 'Quot.sound', 'Classical.choice'},
+    'SectorSimulation.walshWireParity_flip_outside': {'propext'},
+    'SectorSimulation.selectedPathCoefficient_walsh': {'propext', 'Quot.sound', 'Classical.choice'},
+    'SectorSimulation.hadamardKernel_allWire_walsh_sum': {'propext', 'Quot.sound', 'Classical.choice'},
+    'SectorSimulation.nativePythonFourier_walsh_sum': {'propext', 'Quot.sound', 'Classical.choice'},
 }
 
 

@@ -7362,6 +7362,117 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-path-endpoint.md",
       "unresolved_bridge": "Identify recursive coefficients with Walsh dot-product signs and normalization, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-walsh-coefficient-exactNeg_involutive",
+      "section": "2",
+      "target": "SectorSimulation.exactNeg_involutive",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Exact negation is involutive.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-walsh-coefficient.md",
+      "unresolved_bridge": "Embed exact amplitudes in standard complex numbers, connect CNOT action to manuscript pairing kernel, prove Python refinement, physical output and sector identities and costs."
+    },
+    {
+      "id": "hadamard-walsh-coefficient-iterateHadamardScale_neg",
+      "section": "2",
+      "target": "SectorSimulation.iterateHadamardScale_neg",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Repeated exact Hadamard scaling commutes with negation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-walsh-coefficient.md",
+      "unresolved_bridge": "Embed exact amplitudes in standard complex numbers, connect CNOT action to manuscript pairing kernel, prove Python refinement, physical output and sector identities and costs."
+    },
+    {
+      "id": "hadamard-walsh-coefficient-walshWireParity_flip_outside",
+      "section": "2",
+      "target": "SectorSimulation.walshWireParity_flip_outside",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Flipping a wire outside a wire list leaves its Walsh bit-parity unchanged.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-walsh-coefficient.md",
+      "unresolved_bridge": "Embed exact amplitudes in standard complex numbers, connect CNOT action to manuscript pairing kernel, prove Python refinement, physical output and sector identities and costs."
+    },
+    {
+      "id": "hadamard-walsh-coefficient-selectedPathCoefficient_walsh",
+      "section": "2",
+      "target": "SectorSimulation.selectedPathCoefficient_walsh",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "For distinct wires, the selected-path coefficient has the XOR dot-product sign and one exact Hadamard scale per wire.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-walsh-coefficient.md",
+      "unresolved_bridge": "Embed exact amplitudes in standard complex numbers, connect CNOT action to manuscript pairing kernel, prove Python refinement, physical output and sector identities and costs."
+    },
+    {
+      "id": "hadamard-walsh-coefficient-hadamardKernel_allWire_walsh_sum",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_allWire_walsh_sum",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "The all-wire exact Hadamard kernel equals the finite binary-basis Walsh-character sum with repeated exact Hadamard scaling.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-walsh-coefficient.md",
+      "unresolved_bridge": "Embed exact amplitudes in standard complex numbers, connect CNOT action to manuscript pairing kernel, prove Python refinement, physical output and sector identities and costs."
+    },
+    {
+      "id": "hadamard-walsh-coefficient-nativePythonFourier_walsh_sum",
+      "section": "2",
+      "target": "SectorSimulation.nativePythonFourier_walsh_sum",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "A successful modeled Gaussian program yields native Fourier replay equal to the exact Walsh sum over the CNOT-transformed input amplitudes.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-walsh-coefficient.md",
+      "unresolved_bridge": "Embed exact amplitudes in standard complex numbers, connect CNOT action to manuscript pairing kernel, prove Python refinement, physical output and sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

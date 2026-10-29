@@ -220,3 +220,5 @@ import SectorSimulation.HadamardBasisBranching
 import SectorSimulation.HadamardUniquePath
 
 import SectorSimulation.HadamardPathEndpoint
+
+import SectorSimulation.HadamardWalshCoefficient

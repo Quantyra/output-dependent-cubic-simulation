@@ -1240,3 +1240,21 @@ import SectorSimulation
 
 #check SectorSimulation.hadamardKernel_allWire_coefficient_sum
 #print axioms SectorSimulation.hadamardKernel_allWire_coefficient_sum
+
+#check SectorSimulation.exactNeg_involutive
+#print axioms SectorSimulation.exactNeg_involutive
+
+#check SectorSimulation.iterateHadamardScale_neg
+#print axioms SectorSimulation.iterateHadamardScale_neg
+
+#check SectorSimulation.walshWireParity_flip_outside
+#print axioms SectorSimulation.walshWireParity_flip_outside
+
+#check SectorSimulation.selectedPathCoefficient_walsh
+#print axioms SectorSimulation.selectedPathCoefficient_walsh
+
+#check SectorSimulation.hadamardKernel_allWire_walsh_sum
+#print axioms SectorSimulation.hadamardKernel_allWire_walsh_sum
+
+#check SectorSimulation.nativePythonFourier_walsh_sum
+#print axioms SectorSimulation.nativePythonFourier_walsh_sum
