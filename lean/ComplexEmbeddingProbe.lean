@@ -91,14 +91,16 @@ theorem exactComplex_mul (a b : ExactAmplitude) :
       exact dyadicInterpret_mul a b
 
 theorem exactComplex_one : exactComplex exactOne = 1 := by
-  simp [exactComplex, exactOne, dyadicInterpret, dyadicOne, cycloInterpret, cycloOne]
+  change dyadicInterpret dyadicOne = 1
+  simp [dyadicInterpret, dyadicOne, cycloInterpret, cycloOne]
 
 
 theorem exactComplex_hadamard :
     exactComplex exactHadamardScale = ((Real.sqrt 2 : ℝ) : ℂ) / 2 := by
+  change dyadicInterpret dyadicHadamardScale = _
   have hs : (Real.sqrt 2)^2 = (2 : ℝ) := Real.sq_sqrt (by norm_num)
   apply Complex.ext <;>
-    simp [exactComplex, exactHadamardScale, dyadicInterpret, dyadicHadamardScale,
+    simp [dyadicInterpret, dyadicHadamardScale,
       cycloInterpret, cycloSqrtTwo, standardOmega, Complex.mul_re, Complex.mul_im,
       pow_succ, pow_zero] <;> nlinarith
 
