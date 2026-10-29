@@ -1466,3 +1466,37 @@ import SectorSimulation
 
 #check SectorSimulation.canonicalSplit_unique
 #print axioms SectorSimulation.canonicalSplit_unique
+
+
+#check SectorSimulation.canonicalAssignment_join
+#print axioms SectorSimulation.canonicalAssignment_join
+
+#check SectorSimulation.canonicalAssignment_injective
+#print axioms SectorSimulation.canonicalAssignment_injective
+
+#check SectorSimulation.canonicalAssignment_surjective
+#print axioms SectorSimulation.canonicalAssignment_surjective
+
+#check SectorSimulation.canonicalPhaseOnVector_join
+#print axioms SectorSimulation.canonicalPhaseOnVector_join
+
+#check SectorSimulation.listCartesian_nodup
+#print axioms SectorSimulation.listCartesian_nodup
+
+#check SectorSimulation.canonicalAssignment_mem
+#print axioms SectorSimulation.canonicalAssignment_mem
+
+#check SectorSimulation.canonicalAssignment_perm
+#print axioms SectorSimulation.canonicalAssignment_perm
+
+#check SectorSimulation.integerSum_perm
+#print axioms SectorSimulation.integerSum_perm
+
+#check SectorSimulation.integerSum_cartesian
+#print axioms SectorSimulation.integerSum_cartesian
+
+#check SectorSimulation.canonicalVectorWalshSum_eq
+#print axioms SectorSimulation.canonicalVectorWalshSum_eq
+
+#check SectorSimulation.canonicalVectorWalshSum_closed
+#print axioms SectorSimulation.canonicalVectorWalshSum_closed

@@ -534,6 +534,17 @@ EXPECTED = {
     'SectorSimulation.canonicalJoin_split': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalJoin_injective': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalSplit_unique': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalAssignment_join': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalAssignment_injective': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalAssignment_surjective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalPhaseOnVector_join': {'propext', 'Quot.sound'},
+    'SectorSimulation.listCartesian_nodup': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalAssignment_mem': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalAssignment_perm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.integerSum_perm': {'propext'},
+    'SectorSimulation.integerSum_cartesian': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalVectorWalshSum_eq': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalVectorWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

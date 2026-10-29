@@ -8692,6 +8692,208 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-coordinate-layout.md",
       "unresolved_bridge": "Connect vector blocks to assignment sums and source ANF, construct a general quadratic basis, and prove rank, support and costs."
+    },
+    {
+      "id": "canonical-vector-walsh-canonicalAssignment_join",
+      "section": "3",
+      "target": "SectorSimulation.canonicalAssignment_join",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "The combined vector join maps to its radical and pair assignment lists.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-canonicalAssignment_injective",
+      "section": "3",
+      "target": "SectorSimulation.canonicalAssignment_injective",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "The combined vector is uniquely determined by its canonical assignment lists.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-canonicalAssignment_surjective",
+      "section": "3",
+      "target": "SectorSimulation.canonicalAssignment_surjective",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "Every generated pair of canonical assignment lists comes from a combined finite vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-canonicalPhaseOnVector_join",
+      "section": "3",
+      "target": "SectorSimulation.canonicalPhaseOnVector_join",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "Canonical phase evaluation on a joined vector uses its component assignments.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-listCartesian_nodup",
+      "section": "3",
+      "target": "SectorSimulation.listCartesian_nodup",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "The Cartesian enumeration of two duplicate-free lists is duplicate-free.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-canonicalAssignment_mem",
+      "section": "3",
+      "target": "SectorSimulation.canonicalAssignment_mem",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "Every combined finite vector maps to a generated canonical assignment.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-canonicalAssignment_perm",
+      "section": "3",
+      "target": "SectorSimulation.canonicalAssignment_perm",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "The exhaustive vector basis mapped to assignments is a permutation of the canonical Cartesian enumeration.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-integerSum_perm",
+      "section": "3",
+      "target": "SectorSimulation.integerSum_perm",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "Integer sums are invariant under permutation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-integerSum_cartesian",
+      "section": "3",
+      "target": "SectorSimulation.integerSum_cartesian",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "A finite Cartesian integer sum equals the corresponding nested sum.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-canonicalVectorWalshSum_eq",
+      "section": "3",
+      "target": "SectorSimulation.canonicalVectorWalshSum_eq",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "The finite-vector canonical phase sum equals the explicit assignment sum.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-vector-walsh-canonicalVectorWalshSum_closed",
+      "section": "3",
+      "target": "SectorSimulation.canonicalVectorWalshSum_closed",
+      "assumptions": "Canonical pair and radical phase coefficients, explicit finite-vector layout and generated assignment lists.",
+      "quantifiers": "All finite block dimensions, coefficient lists and constant bits, subject to length hypotheses where stated.",
+      "statement": "The canonical finite-vector phase sum vanishes for nonzero radical coefficient and otherwise equals the expected signed power of two.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
+      "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
