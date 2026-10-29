@@ -1207,3 +1207,18 @@ import SectorSimulation
 
 #check SectorSimulation.hadamardKernel_branchExpansion
 #print axioms SectorSimulation.hadamardKernel_branchExpansion
+
+#check SectorSimulation.basisBranchExpansion_untouched_zero
+#print axioms SectorSimulation.basisBranchExpansion_untouched_zero
+
+#check SectorSimulation.basisBranchExpansion_select
+#print axioms SectorSimulation.basisBranchExpansion_select
+
+#check SectorSimulation.basisBranchExpansion_uniquePath
+#print axioms SectorSimulation.basisBranchExpansion_uniquePath
+
+#check SectorSimulation.hadamardKernel_basis_uniquePath
+#print axioms SectorSimulation.hadamardKernel_basis_uniquePath
+
+#check SectorSimulation.hadamardKernel_uniquePath_sum
+#print axioms SectorSimulation.hadamardKernel_uniquePath_sum

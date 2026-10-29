@@ -7158,6 +7158,101 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-basis-branching.md",
       "unresolved_bridge": "Collapse the path expansion to the normalized Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-unique-path-basisBranchExpansion_untouched_zero",
+      "section": "2",
+      "target": "SectorSimulation.basisBranchExpansion_untouched_zero",
+      "assumptions": "Lean exact amplitudes and recursive Hadamard kernel; the unique-path results require a duplicate-free wire list.",
+      "quantifiers": "All finite widths, applicable wire lists, exact amplitudes and binary vectors.",
+      "statement": "The basis branch expansion vanishes when an untouched bit differs.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-unique-path.md",
+      "unresolved_bridge": "Identify accumulated selected-path signs and scales with the closed Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-unique-path-basisBranchExpansion_select",
+      "section": "2",
+      "target": "SectorSimulation.basisBranchExpansion_select",
+      "assumptions": "Lean exact amplitudes and recursive Hadamard kernel; the unique-path results require a duplicate-free wire list.",
+      "quantifiers": "All finite widths, applicable wire lists, exact amplitudes and binary vectors.",
+      "statement": "For a wire absent from the tail, the output bit selects the contributing branch of the basis expansion.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-unique-path.md",
+      "unresolved_bridge": "Identify accumulated selected-path signs and scales with the closed Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-unique-path-basisBranchExpansion_uniquePath",
+      "section": "2",
+      "target": "SectorSimulation.basisBranchExpansion_uniquePath",
+      "assumptions": "Lean exact amplitudes and recursive Hadamard kernel; the unique-path results require a duplicate-free wire list.",
+      "quantifiers": "All finite widths, applicable wire lists, exact amplitudes and binary vectors.",
+      "statement": "For duplicate-free wire lists, the complete basis branch expansion equals the deterministic selected path.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-unique-path.md",
+      "unresolved_bridge": "Identify accumulated selected-path signs and scales with the closed Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-unique-path-hadamardKernel_basis_uniquePath",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_basis_uniquePath",
+      "assumptions": "Lean exact amplitudes and recursive Hadamard kernel; the unique-path results require a duplicate-free wire list.",
+      "quantifiers": "All finite widths, applicable wire lists, exact amplitudes and binary vectors.",
+      "statement": "For duplicate-free wire lists, the exact Hadamard kernel on a basis input equals its selected path.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-unique-path.md",
+      "unresolved_bridge": "Identify accumulated selected-path signs and scales with the closed Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-unique-path-hadamardKernel_uniquePath_sum",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_uniquePath_sum",
+      "assumptions": "Lean exact amplitudes and recursive Hadamard kernel; the unique-path results require a duplicate-free wire list.",
+      "quantifiers": "All finite widths, applicable wire lists, exact amplitudes and binary vectors.",
+      "statement": "For duplicate-free wire lists, the exact Hadamard kernel on any input is the finite sum of selected basis paths.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-unique-path.md",
+      "unresolved_bridge": "Identify accumulated selected-path signs and scales with the closed Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

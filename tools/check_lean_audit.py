@@ -451,6 +451,11 @@ EXPECTED = {
     'SectorSimulation.hadamardKernel_basis_split': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.hadamardKernel_basis_branchExpansion': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.hadamardKernel_branchExpansion': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.basisBranchExpansion_untouched_zero': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.basisBranchExpansion_select': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.basisBranchExpansion_uniquePath': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_basis_uniquePath': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_uniquePath_sum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
