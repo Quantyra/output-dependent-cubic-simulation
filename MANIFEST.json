@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/lean.yml",
-      "bytes": 798,
-      "sha256": "5e3347442da66580eea48db2a5a60c705900b4470139c6fb0b62ed4499318ded"
+      "bytes": 920,
+      "sha256": "4b9b0d0d170fa607002199e1faf30e19b36b932073443cd512c996e2c457de19"
     },
     {
       "path": ".gitignore",
@@ -124,18 +124,18 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 382,
-      "sha256": "9a68829d1b3c10925ff10b1bba623d982ba0408fd75d594c7388f12fdc0ab00b"
+      "bytes": 580,
+      "sha256": "304f93a72c1fcd7fbf592154e3d59574f814eb9cb017ffee53a6bc26a7de5bb7"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 19556,
-      "sha256": "af017f28fbfc25c61437b403126824b9452698342e46aead4d4cbeb80d56d491"
+      "bytes": 21977,
+      "sha256": "14988556b198fc4dbb60b6610df6aac38e50c8417cf3e0ceba1802d3dab1070c"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
-      "bytes": 2456,
-      "sha256": "4fb05746db73a540448e231df04be5e981fa1284efb775c9a33ef748904bc549"
+      "bytes": 2492,
+      "sha256": "5c7164ea28adb8928b5ad277590d998031d287d0ac2aa051fb5ad0883e6aba79"
     },
     {
       "path": "lean/SEMANTICS.md",
@@ -144,8 +144,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 71,
-      "sha256": "916fdeb25659c94be75ba36ef02ebf1e9abe9075f5cd75e7b98a9214f848f868"
+      "bytes": 109,
+      "sha256": "71067cdc303486778c038bc96cce8f67509697387f4f5829eaf374ee25c8f001"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -153,14 +153,29 @@
       "sha256": "9eb7cee9f4274575bf0addaabb4c0ba52f1f4c1cf56c83d9ef72124a27e3208b"
     },
     {
+      "path": "lean/SectorSimulation/BooleanSource.lean",
+      "bytes": 2316,
+      "sha256": "32dd458e013a9e4d75bd5dd291851a9275f6bf5d16e5eb2cb671e4cee6b6671b"
+    },
+    {
       "path": "lean/SectorSimulation/Derivative.lean",
       "bytes": 791,
       "sha256": "4e31227d797ca77b5b196418ffc8566f7452b8b5fc317fea2dad93d5351b4d4c"
     },
     {
+      "path": "lean/SourceExamples.lean",
+      "bytes": 664,
+      "sha256": "7c7d04db9c8c5c69d6c9f30c1b1019b980f4dc10407ea6a4f0329340e72b7622"
+    },
+    {
       "path": "lean/evidence/binary-shift-audit.md",
       "bytes": 1619,
       "sha256": "a01e0a5cc7927886b9e30b67d1e109896fe4f53c8c9873771194088f3f092269"
+    },
+    {
+      "path": "lean/evidence/boolean-source-audit.md",
+      "bytes": 1795,
+      "sha256": "47fb8543ec5b52c2f3f2901d152f067985eda52db8f18fda94b76efe9c088564"
     },
     {
       "path": "lean/evidence/clean-core-replay.md",
@@ -174,8 +189,8 @@
     },
     {
       "path": "lean/evidence/locked-environment.md",
-      "bytes": 2388,
-      "sha256": "3da8f659ba2669e44c3e45774b966da3e41d60ff46595e00779ac29aad5725fa"
+      "bytes": 2670,
+      "sha256": "4cd8920ddd484531df3dc39cdcaf4dd551817e7687c736ac38b23e7f764f7507"
     },
     {
       "path": "lean/lake-manifest.json",
@@ -579,8 +594,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 1168,
-      "sha256": "668fabcdc149fb56aa76a5814ae1cbb41a83f5e965cccfccabe17bf4770e6ef8"
+      "bytes": 1279,
+      "sha256": "a6455444413fd023ad4435144ec174b0a973ded807262536e6113ae962c7c7de"
     },
     {
       "path": "tools/check_metadata.py",

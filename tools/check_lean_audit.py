@@ -7,6 +7,8 @@ EXPECTED = {
     'SectorSimulation.booleanDerivative_shift_invariant': set(),
     'SectorSimulation.binaryShift_involutive': {'Quot.sound'},
     'SectorSimulation.binaryDerivative_shift_invariant': {'Quot.sound'},
+    'SectorSimulation.evalPhase_empty': set(),
+    'SectorSimulation.evalPhase_duplicate_cancel': {'propext'},
 }
 
 

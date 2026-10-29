@@ -28,3 +28,6 @@ jobs:
           lake env lean Audit.lean | tee ../lean-audit.txt
           cd ..
           python3 tools/check_lean_audit.py lean-audit.txt
+      - name: Check finite source examples
+        working-directory: lean
+        run: lake env lean SourceExamples.lean

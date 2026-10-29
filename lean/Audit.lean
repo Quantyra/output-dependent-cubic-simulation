@@ -1,4 +1,4 @@
-import SectorSimulation.BinaryShift
+import SectorSimulation.BooleanSource
 
 #check SectorSimulation.booleanDerivative_shift_invariant
 #print axioms SectorSimulation.booleanDerivative_shift_invariant
@@ -6,3 +6,7 @@ import SectorSimulation.BinaryShift
 #print axioms SectorSimulation.binaryShift_involutive
 #check SectorSimulation.binaryDerivative_shift_invariant
 #print axioms SectorSimulation.binaryDerivative_shift_invariant
+#check SectorSimulation.evalPhase_empty
+#print axioms SectorSimulation.evalPhase_empty
+#check SectorSimulation.evalPhase_duplicate_cancel
+#print axioms SectorSimulation.evalPhase_duplicate_cancel

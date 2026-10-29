@@ -349,6 +349,49 @@
       ],
       "status": "planned",
       "unresolved_bridge": "Prove executable tape and bit-cost refinement; bounded variance alone does not provide sample access."
+    },
+    {
+      "id": "anf-empty",
+      "section": "1-2",
+      "target": "SectorSimulation.evalPhase_empty",
+      "assumptions": "Finite Boolean vector, bit-mask monomial and explicit list-of-masks ANF evaluation.",
+      "quantifiers": "All n, masks and input vectors as indicated by the elaborated declaration.",
+      "statement": "For every n and x, evaluation of an empty ANF is false.",
+      "dependencies": [
+        "boolean-anf-representation"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/boolean-source-audit.md",
+      "unresolved_bridge": "Relate this representation to actual descriptor decoding, source validation and native gate replay; no circuit or sector theorem is proved."
+    },
+    {
+      "id": "anf-duplicate-cancellation",
+      "section": "1-2",
+      "target": "SectorSimulation.evalPhase_duplicate_cancel",
+      "assumptions": "Finite Boolean vector, bit-mask monomial and explicit list-of-masks ANF evaluation.",
+      "quantifiers": "All n, masks and input vectors as indicated by the elaborated declaration.",
+      "statement": "For every n, monomial mask m and binary input x, evaluation of [m,m] is false.",
+      "dependencies": [
+        "boolean-anf-representation"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/boolean-source-audit.md",
+      "unresolved_bridge": "Relate this representation to actual descriptor decoding, source validation and native gate replay; no circuit or sector theorem is proved."
+    },
+    {
+      "id": "boolean-anf-representation",
+      "section": "1-2",
+      "target": "SectorSimulation.CircuitDescriptor",
+      "assumptions": "Binary vectors indexed by Fin n and phase polynomials represented as finite lists of bit masks.",
+      "quantifiers": "All n and well-typed finite masks, phase lists and binary matrices.",
+      "statement": "Explicit evaluators for square-free Boolean monomials, XOR phase sums, monomial degree, cubic bounds and binary matrix application; descriptor fields for the two phases, matrix, input and output.",
+      "dependencies": [],
+      "status": "statement translated",
+      "unresolved_bridge": "Prove parser/encoder equivalence, canonical body replay, matrix symmetry and invertibility checks, gate denotation and all complexity costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
