@@ -589,3 +589,9 @@ import SectorSimulation
 
 #check SectorSimulation.sharedHCXH_controlled_sign
 #print axioms SectorSimulation.sharedHCXH_controlled_sign
+
+#check SectorSimulation.sharedHToffoliH_numerator
+#print axioms SectorSimulation.sharedHToffoliH_numerator
+
+#check SectorSimulation.sharedHToffoliH_cubic_sign
+#print axioms SectorSimulation.sharedHToffoliH_cubic_sign

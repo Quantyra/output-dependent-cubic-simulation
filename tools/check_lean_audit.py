@@ -212,6 +212,8 @@ EXPECTED = {
     'SectorSimulation.sharedHadamard_squared': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedHCXH_numerator': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedHCXH_controlled_sign': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHToffoliH_numerator': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHToffoliH_cubic_sign': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

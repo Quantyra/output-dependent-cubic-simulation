@@ -3077,6 +3077,40 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-controlled-phase-audit.md",
       "unresolved_bridge": "Prove complex embedding, representation independence, literal native gate replay, Python correspondence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "exact-cubic-phase-sharedHToffoliH_numerator",
+      "section": "2",
+      "target": "SectorSimulation.sharedHToffoliH_numerator",
+      "assumptions": "Exact shared-denominator eighth-root state, ideal Toffoli, and each control distinct from target.",
+      "quantifiers": "All finite dimensions, applicable wires, represented states and basis vectors.",
+      "statement": "The exact H-Toffoli-H numerator equals four times the cubic controlled-sign numerator.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-cubic-phase-audit.md",
+      "unresolved_bridge": "Prove actual Toffoli decomposition, complex embedding, representation independence, native gate replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "exact-cubic-phase-sharedHToffoliH_cubic_sign",
+      "section": "2",
+      "target": "SectorSimulation.sharedHToffoliH_cubic_sign",
+      "assumptions": "Exact shared-denominator eighth-root state, ideal Toffoli, and each control distinct from target.",
+      "quantifiers": "All finite dimensions, applicable wires, represented states and basis vectors.",
+      "statement": "Normalized exact H-Toffoli-H equals the cubic-sign amplitude at every basis vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-cubic-phase-audit.md",
+      "unresolved_bridge": "Prove actual Toffoli decomposition, complex embedding, representation independence, native gate replay, Python correspondence and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
