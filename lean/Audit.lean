@@ -710,3 +710,8 @@ import SectorSimulation
 #print axioms SectorSimulation.idealThreeBitSum_correct
 #check SectorSimulation.toffoli_threeBit_correct
 #print axioms SectorSimulation.toffoli_threeBit_correct
+
+#check SectorSimulation.threeBitVector_surjective
+#print axioms SectorSimulation.threeBitVector_surjective
+#check SectorSimulation.toffoli_threeBit_all_amplitudes
+#print axioms SectorSimulation.toffoli_threeBit_all_amplitudes

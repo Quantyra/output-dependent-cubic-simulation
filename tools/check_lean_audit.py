@@ -257,6 +257,8 @@ EXPECTED = {
     'SectorSimulation.toffoliReplaySum_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.idealThreeBitSum_correct': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.toffoli_threeBit_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.threeBitVector_surjective': {'propext', 'Quot.sound'},
+    'SectorSimulation.toffoli_threeBit_all_amplitudes': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

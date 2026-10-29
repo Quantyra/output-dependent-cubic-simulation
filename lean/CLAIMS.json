@@ -3812,6 +3812,39 @@
       ],
       "build_audit_receipt": "lean/evidence/toffoli-three-bit-correct-audit.md",
       "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, correspondence with Python records, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-all-vectors-threeBitVector_surjective",
+      "section": "2",
+      "target": "SectorSimulation.threeBitVector_surjective",
+      "assumptions": "The defined exact shared-denominator three-wire state and literal native Toffoli records.",
+      "quantifiers": "All three-bit Boolean vectors and, for Toffoli, all represented three-wire states.",
+      "statement": "Every three-bit Boolean vector is represented by a numerical basis index.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-all-vectors-audit.md",
+      "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, Python record correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-all-vectors-toffoli_threeBit_all_amplitudes",
+      "section": "2",
+      "target": "SectorSimulation.toffoli_threeBit_all_amplitudes",
+      "assumptions": "The defined exact shared-denominator three-wire state and literal native Toffoli records.",
+      "quantifiers": "All three-bit Boolean vectors and, for Toffoli, all represented three-wire states.",
+      "statement": "For every represented three-wire state, a single successful literal Toffoli replay result agrees with the modeled ideal action at every Boolean output vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-all-vectors-audit.md",
+      "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, Python record correspondence, circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

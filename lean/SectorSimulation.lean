@@ -133,3 +133,5 @@ import SectorSimulation.ThreeBitDecomposition
 import SectorSimulation.ToffoliSuperposition
 
 import SectorSimulation.ToffoliIdealSum
+
+import SectorSimulation.ToffoliAllVectors
