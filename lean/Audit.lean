@@ -66,3 +66,5 @@ import SectorSimulation
 #print axioms SectorSimulation.evalCubicDerivativeTerms
 #check SectorSimulation.cubicMaskDerivativeTerms_correct
 #print axioms SectorSimulation.cubicMaskDerivativeTerms_correct
+#check SectorSimulation.cubicPhaseDerivativeTerms_correct
+#print axioms SectorSimulation.cubicPhaseDerivativeTerms_correct

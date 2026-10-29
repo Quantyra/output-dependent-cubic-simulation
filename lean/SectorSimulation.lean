@@ -7,3 +7,4 @@ import SectorSimulation.MonomialDifference
 import SectorSimulation.SupportShapes
 import SectorSimulation.QuadraticTerms
 import SectorSimulation.CubicMaskDerivative
+import SectorSimulation.CubicPhaseDerivative

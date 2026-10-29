@@ -37,6 +37,7 @@ EXPECTED = {
     'SectorSimulation.evalQuadraticDerivativeTerms': {'propext'},
     'SectorSimulation.evalCubicDerivativeTerms': {'propext'},
     'SectorSimulation.cubicMaskDerivativeTerms_correct': {'propext', 'Quot.sound'},
+    'SectorSimulation.cubicPhaseDerivativeTerms_correct': {'propext', 'Quot.sound'},
 }
 
 

@@ -849,6 +849,26 @@
       ],
       "build_audit_receipt": "lean/evidence/cubic-mask-terms-audit.md",
       "unresolved_bridge": "Translate quadratic terms to square-free source bit-mask ANFs with a proved degree bound, lift the construction over complete phase lists, and connect the shift to native circuit decoding."
+    },
+    {
+      "id": "cubic-phase-quadratic-terms",
+      "section": "2",
+      "target": "SectorSimulation.cubicPhaseDerivativeTerms_correct",
+      "assumptions": "Finite Boolean phase list p with phaseWithinDegree 3 p = true and a binary shift j; the quadratic term grammar has only constant, linear and two-coordinate product terms.",
+      "quantifiers": "All finite dimensions, represented cubic phase lists, shifts and binary inputs.",
+      "statement": "The algorithm traverses the actual phase list and returns a concrete quadratic term list that evaluates at every input to the Boolean derivative of the phase.",
+      "dependencies": [
+        "cubic-mask-quadratic-terms",
+        "anf-derivative-additivity",
+        "quadratic-term-evaluation"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-phase-terms-audit.md",
+      "unresolved_bridge": "Translate auxiliary terms into the paper's bit-mask ANF and prove the output mask degree/cost; recover the output shift from literal circuit decoding and prove Walsh/circuit/sector identities."
     }
   ],
   "paper_source": "manuscript/main.tex",
