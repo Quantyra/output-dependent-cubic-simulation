@@ -31,3 +31,5 @@ import SectorSimulation.GaussianPivotSize
 import SectorSimulation.GaussianSolveChecked
 
 import SectorSimulation.PivotStepInvariants
+
+import SectorSimulation.ClearProgramInvariant

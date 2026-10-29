@@ -79,6 +79,8 @@ EXPECTED = {
     'SectorSimulation.add_preserves_pivot_row': {'propext'},
     'SectorSimulation.clearColumnOps_contains': {'propext', 'Quot.sound'},
     'SectorSimulation.clearColumnOps_eligible': {'propext', 'Quot.sound'},
+    'SectorSimulation.addProgram_preserves_row': {'propext'},
+    'SectorSimulation.clearProgram_preserves_pivot': {'propext', 'Quot.sound'},
 }
 
 

@@ -1340,6 +1340,25 @@
       ],
       "build_audit_receipt": "lean/evidence/pivot-step-invariants-audit.md",
       "unresolved_bridge": "Lift these single-step facts across the clearing list and successive columns; prove invertible-input completeness and operational cost."
+    },
+    {
+      "id": "clear-program-pivot-preservation",
+      "section": "2",
+      "target": "SectorSimulation.clearProgram_preserves_pivot",
+      "assumptions": "The actual generated clearing program is executed by the row-program interpreter.",
+      "quantifiers": "All finite dimensions, source matrices, targets, pivot indices and columns.",
+      "statement": "Executing the entire generated clearing list preserves every entry of the pivot row.",
+      "dependencies": [
+        "pivot-clear-selection",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/clear-program-invariant-audit.md",
+      "unresolved_bridge": "Prove every non-pivot entry is cleared and lift invariants through all columns; prove completeness and finite-encoding cost."
     }
   ],
   "paper_source": "manuscript/main.tex",

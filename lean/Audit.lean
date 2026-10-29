@@ -191,3 +191,9 @@ import SectorSimulation
 
 #check SectorSimulation.clearColumnOps_eligible
 #print axioms SectorSimulation.clearColumnOps_eligible
+
+#check SectorSimulation.addProgram_preserves_row
+#print axioms SectorSimulation.addProgram_preserves_row
+
+#check SectorSimulation.clearProgram_preserves_pivot
+#print axioms SectorSimulation.clearProgram_preserves_pivot
