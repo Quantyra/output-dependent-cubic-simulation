@@ -373,6 +373,15 @@ EXPECTED = {
     'SectorSimulation.asciiSerializedValidDescriptor_has_recognizedBody': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.evalPhase_perm': {'propext'},
     'SectorSimulation.evalPhase_cancel_separated': {'propext', 'Quot.sound'},
+    'SectorSimulation.toggleMask_eval': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.normalizeMasks_fold_eval': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.normalizeMasks_eval': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.toggleMask_nodup': {'propext', 'Quot.sound'},
+    'SectorSimulation.normalizeMasks_fold_nodup': {'propext', 'Quot.sound'},
+    'SectorSimulation.normalizeMasks_nodup': {'propext', 'Quot.sound'},
+    'SectorSimulation.sortedNormalizeMasks_eval': {'Classical.choice', 'propext', 'Quot.sound'},
+    'SectorSimulation.sortedNormalizeMasks_nodup': {'propext', 'Quot.sound'},
+    'SectorSimulation.sortedNormalizeMasks_sorted': {'propext', 'Quot.sound'},
 }
 
 

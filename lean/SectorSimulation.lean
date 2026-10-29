@@ -182,3 +182,5 @@ import SectorSimulation.DescriptorJsonEncode
 import SectorSimulation.AsciiDescriptorEncode
 
 import SectorSimulation.PhaseNormalization
+
+import SectorSimulation.ToggleMaskNormalization

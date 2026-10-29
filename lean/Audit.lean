@@ -973,3 +973,30 @@ import SectorSimulation
 
 #check SectorSimulation.evalPhase_cancel_separated
 #print axioms SectorSimulation.evalPhase_cancel_separated
+
+#check SectorSimulation.toggleMask_eval
+#print axioms SectorSimulation.toggleMask_eval
+
+#check SectorSimulation.normalizeMasks_fold_eval
+#print axioms SectorSimulation.normalizeMasks_fold_eval
+
+#check SectorSimulation.normalizeMasks_eval
+#print axioms SectorSimulation.normalizeMasks_eval
+
+#check SectorSimulation.toggleMask_nodup
+#print axioms SectorSimulation.toggleMask_nodup
+
+#check SectorSimulation.normalizeMasks_fold_nodup
+#print axioms SectorSimulation.normalizeMasks_fold_nodup
+
+#check SectorSimulation.normalizeMasks_nodup
+#print axioms SectorSimulation.normalizeMasks_nodup
+
+#check SectorSimulation.sortedNormalizeMasks_eval
+#print axioms SectorSimulation.sortedNormalizeMasks_eval
+
+#check SectorSimulation.sortedNormalizeMasks_nodup
+#print axioms SectorSimulation.sortedNormalizeMasks_nodup
+
+#check SectorSimulation.sortedNormalizeMasks_sorted
+#print axioms SectorSimulation.sortedNormalizeMasks_sorted

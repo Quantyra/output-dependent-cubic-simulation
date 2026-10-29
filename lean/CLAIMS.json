@@ -5698,6 +5698,172 @@
       ],
       "build_audit_receipt": "lean/evidence/phase-normalization.md",
       "unresolved_bridge": "Prove Python toggle-set and sorting normalization, descriptor serialization and compiler correspondence, and the circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-toggleMask_eval",
+      "section": "2",
+      "target": "SectorSimulation.toggleMask_eval",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "One toggle changes the represented phase by XOR with the toggled monomial.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-normalizeMasks_fold_eval",
+      "section": "2",
+      "target": "SectorSimulation.normalizeMasks_fold_eval",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "The toggle fold evaluates to the XOR of the accumulator phase and the input phase.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-normalizeMasks_eval",
+      "section": "2",
+      "target": "SectorSimulation.normalizeMasks_eval",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "The toggle normalizer preserves phase evaluation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-toggleMask_nodup",
+      "section": "2",
+      "target": "SectorSimulation.toggleMask_nodup",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "A toggle preserves the accumulator no-duplicates invariant.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-normalizeMasks_fold_nodup",
+      "section": "2",
+      "target": "SectorSimulation.normalizeMasks_fold_nodup",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "The toggle fold preserves the accumulator no-duplicates invariant.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-normalizeMasks_nodup",
+      "section": "2",
+      "target": "SectorSimulation.normalizeMasks_nodup",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "The toggle normalizer returns a duplicate-free list.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-sortedNormalizeMasks_eval",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_eval",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "The sorted toggle normalizer preserves phase evaluation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-sortedNormalizeMasks_nodup",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_nodup",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "The sorted toggle normalizer returns a duplicate-free list.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "toggle-normalization-sortedNormalizeMasks_sorted",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_sorted",
+      "assumptions": "Finite natural-number masks, the Lean toggle-list and sort model, and finite Boolean vector semantics as applicable.",
+      "quantifiers": "All inputs of the exported Lean theorem.",
+      "statement": "The sorted toggle normalizer returns an ascending list.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toggle-normalization.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
