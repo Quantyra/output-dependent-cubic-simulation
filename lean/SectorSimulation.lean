@@ -246,3 +246,5 @@ import SectorSimulation.CanonicalVectorWalsh
 import SectorSimulation.CanonicalSourceANF
 
 import SectorSimulation.SourceWalshReindex
+
+import SectorSimulation.CanonicalCharacterShift

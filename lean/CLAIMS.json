@@ -9046,6 +9046,44 @@
       ],
       "build_audit_receipt": "lean/evidence/source-walsh-reindex.md",
       "unresolved_bridge": "Construct the canonical transformation and coefficient data for arbitrary source quadratics and prove affine support, polar rank, signs and elimination costs."
+    },
+    {
+      "id": "canonical-character-shift-radicalPhaseEval_shift",
+      "section": "3",
+      "target": "SectorSimulation.radicalPhaseEval_shift",
+      "assumptions": "The phase coefficient list and the character coefficient list have equal lengths.",
+      "quantifiers": "All finite coefficient and assignment lists and constant bits.",
+      "statement": "XORing an explicitly evaluated radical linear character into the radical phase shifts its coefficients by XOR.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-shift.md",
+      "unresolved_bridge": "Connect the explicit character to standard finite-vector dot product; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-shift-pairPhaseEval_shift",
+      "section": "3",
+      "target": "SectorSimulation.pairPhaseEval_shift",
+      "assumptions": "The phase coefficient list and the character coefficient list have equal lengths.",
+      "quantifiers": "All finite coefficient and assignment lists and constant bits.",
+      "statement": "XORing an explicitly evaluated pair linear character into the canonical pair phase shifts both coefficients by XOR.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-shift.md",
+      "unresolved_bridge": "Connect the explicit character to standard finite-vector dot product; construct arbitrary-source canonicalization and prove affine support, rank and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
