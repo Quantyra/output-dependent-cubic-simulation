@@ -48,4 +48,28 @@ theorem dyadicInterpret_congr (a b : DyadicCyclo) (h : dyadicEquivalent a b) :
 noncomputable def exactComplex : ExactAmplitude → ℂ :=
   Quotient.lift dyadicInterpret (fun _ _ h => dyadicInterpret_congr _ _ h)
 
+
+theorem cycloInterpret_add (z : ℂ) (a b : Cyclo8) :
+    cycloInterpret z (cycloAdd a b) = cycloInterpret z a + cycloInterpret z b := by
+  simp only [cycloInterpret, cycloAdd, Int.cast_add]
+  ring
+
+theorem dyadicInterpret_mul (a b : DyadicCyclo) :
+    dyadicInterpret (dyadicMultiply a b) = dyadicInterpret a * dyadicInterpret b := by
+  cases a with | mk an ae =>
+    cases b with | mk bn be =>
+      simp only [dyadicInterpret, dyadicMultiply, pow_add]
+      change cycloInterpret standardOmega (cycloMul an bn) / ((2 : ℂ)^ae * 2^be) = _
+      rw [cycloInterpret_mul standardOmega standardOmega_fourth]
+      exact div_mul_div_comm _ _ _ _
+
+theorem dyadicInterpret_add (a b : DyadicCyclo) :
+    dyadicInterpret (dyadicAdd a b) = dyadicInterpret a + dyadicInterpret b := by
+  cases a with | mk an ae =>
+    cases b with | mk bn be =>
+      simp only [dyadicInterpret, dyadicAdd, cycloInterpret_add, cycloInterpret_scale,
+        Int.cast_pow, Int.cast_ofNat, pow_add]
+      field_simp
+      ring
+
 end SectorSimulation
