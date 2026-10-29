@@ -1278,3 +1278,25 @@ import SectorSimulation
 
 #check SectorSimulation.nativePythonFourier_pairing_sum
 #print axioms SectorSimulation.nativePythonFourier_pairing_sum
+
+
+#check SectorSimulation.exactOne_mul
+#print axioms SectorSimulation.exactOne_mul
+
+#check SectorSimulation.iterateHadamardScale_factor
+#print axioms SectorSimulation.iterateHadamardScale_factor
+
+#check SectorSimulation.hadamardScale_double_square
+#print axioms SectorSimulation.hadamardScale_double_square
+
+#check SectorSimulation.iterateHadamardScale_double_square
+#print axioms SectorSimulation.iterateHadamardScale_double_square
+
+#check SectorSimulation.exactFoldr_mul
+#print axioms SectorSimulation.exactFoldr_mul
+
+#check SectorSimulation.exactSigned_mul
+#print axioms SectorSimulation.exactSigned_mul
+
+#check SectorSimulation.nativePythonFourier_normalized_sum
+#print axioms SectorSimulation.nativePythonFourier_normalized_sum

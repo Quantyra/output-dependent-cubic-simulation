@@ -474,6 +474,13 @@ EXPECTED = {
     'SectorSimulation.nativePythonFourier_matrix_sum': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.walshWireParity_comm': {'propext'},
     'SectorSimulation.nativePythonFourier_pairing_sum': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactOne_mul': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.iterateHadamardScale_factor': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardScale_double_square': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.iterateHadamardScale_double_square': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactFoldr_mul': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactSigned_mul': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.nativePythonFourier_normalized_sum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

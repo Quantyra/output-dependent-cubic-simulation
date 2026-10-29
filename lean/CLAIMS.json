@@ -7585,6 +7585,139 @@
       ],
       "build_audit_receipt": "lean/evidence/matrix-pairing.md",
       "unresolved_bridge": "Prove standard complex amplitude embedding and normalization, actual Python refinement, quadratic support, sector identities and resource bounds."
+    },
+    {
+      "id": "fourier-normalization-exactOne_mul",
+      "section": "2",
+      "target": "SectorSimulation.exactOne_mul",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Exact amplitude one is a multiplicative unit.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/fourier-normalization.md",
+      "unresolved_bridge": "Identify the exact scalar with positive standard real 2^(-n/2), prove complex and Python refinement, quadratic support, sector identities and costs."
+    },
+    {
+      "id": "fourier-normalization-iterateHadamardScale_factor",
+      "section": "2",
+      "target": "SectorSimulation.iterateHadamardScale_factor",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Repeated Hadamard scaling factors through a single scalar depending only on width.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/fourier-normalization.md",
+      "unresolved_bridge": "Identify the exact scalar with positive standard real 2^(-n/2), prove complex and Python refinement, quadratic support, sector identities and costs."
+    },
+    {
+      "id": "fourier-normalization-hadamardScale_double_square",
+      "section": "2",
+      "target": "SectorSimulation.hadamardScale_double_square",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Twice the application of two exact Hadamard scales returns the original amplitude.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/fourier-normalization.md",
+      "unresolved_bridge": "Identify the exact scalar with positive standard real 2^(-n/2), prove complex and Python refinement, quadratic support, sector identities and costs."
+    },
+    {
+      "id": "fourier-normalization-iterateHadamardScale_double_square",
+      "section": "2",
+      "target": "SectorSimulation.iterateHadamardScale_double_square",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Two additional Hadamard scales halve the result in the sense that doubling restores the previous result.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/fourier-normalization.md",
+      "unresolved_bridge": "Identify the exact scalar with positive standard real 2^(-n/2), prove complex and Python refinement, quadratic support, sector identities and costs."
+    },
+    {
+      "id": "fourier-normalization-exactFoldr_mul",
+      "section": "2",
+      "target": "SectorSimulation.exactFoldr_mul",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "An exact scalar factors through a finite exact-amplitude sum.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/fourier-normalization.md",
+      "unresolved_bridge": "Identify the exact scalar with positive standard real 2^(-n/2), prove complex and Python refinement, quadratic support, sector identities and costs."
+    },
+    {
+      "id": "fourier-normalization-exactSigned_mul",
+      "section": "2",
+      "target": "SectorSimulation.exactSigned_mul",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Exact scalar multiplication commutes with a Boolean-controlled sign.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/fourier-normalization.md",
+      "unresolved_bridge": "Identify the exact scalar with positive standard real 2^(-n/2), prove complex and Python refinement, quadratic support, sector identities and costs."
+    },
+    {
+      "id": "fourier-normalization-nativePythonFourier_normalized_sum",
+      "section": "2",
+      "target": "SectorSimulation.nativePythonFourier_normalized_sum",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Modeled Fourier replay is the input-indexed binary-pairing signed sum times one width-dependent exact scalar.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/fourier-normalization.md",
+      "unresolved_bridge": "Identify the exact scalar with positive standard real 2^(-n/2), prove complex and Python refinement, quadratic support, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
