@@ -4545,6 +4545,51 @@
       ],
       "build_audit_receipt": "lean/evidence/lower-phase-native-audit.md",
       "unresolved_bridge": "Connect lower-degree layer to ANF evaluation and cubic layer, establish full Python compiler and complex embedding correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "combined-phase-native-idealLowerPhaseLayer_phase",
+      "section": "2",
+      "target": "SectorSimulation.idealLowerPhaseLayer_phase",
+      "assumptions": "The modeled exact native interpreter and valid lower-degree terms and injective three-wire selections for cubic blocks. Constants require an available wire.",
+      "quantifiers": "All finite dimensions, represented states, finite valid term and wire lists, and output vectors.",
+      "statement": "The ideal lower-degree phase layer numerator is signed by its Boolean ANF evaluation.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/combined-phase-native-audit.md",
+      "unresolved_bridge": "Establish coverage and compilation of arbitrary source ANF descriptors, Python correspondence, complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "combined-phase-native-idealLowerPhaseLayer_exponent",
+      "section": "2",
+      "target": "SectorSimulation.idealLowerPhaseLayer_exponent",
+      "assumptions": "The modeled exact native interpreter and valid lower-degree terms and injective three-wire selections for cubic blocks. Constants require an available wire.",
+      "quantifiers": "All finite dimensions, represented states, finite valid term and wire lists, and output vectors.",
+      "statement": "The ideal lower-degree phase layer preserves its shared denominator exponent.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/combined-phase-native-audit.md",
+      "unresolved_bridge": "Establish coverage and compilation of arbitrary source ANF descriptors, Python correspondence, complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "combined-phase-native-combinedPhaseNative_correct",
+      "section": "2",
+      "target": "SectorSimulation.combinedPhaseNative_correct",
+      "assumptions": "The modeled exact native interpreter and valid lower-degree terms and injective three-wire selections for cubic blocks. Constants require an available wire.",
+      "quantifiers": "All finite dimensions, represented states, finite valid term and wire lists, and output vectors.",
+      "statement": "Native replay of the valid combined lower-degree and cubic phase blocks succeeds and yields amplitudes signed by their combined Boolean ANF.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/combined-phase-native-audit.md",
+      "unresolved_bridge": "Establish coverage and compilation of arbitrary source ANF descriptors, Python correspondence, complex embedding, full circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

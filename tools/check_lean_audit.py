@@ -302,6 +302,9 @@ EXPECTED = {
     'SectorSimulation.sharedMonomialSign_congr': {'propext', 'Quot.sound'},
     'SectorSimulation.nativeLowerPhaseLayer_correct_from_equivalent': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.nativeLowerPhaseLayer_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.idealLowerPhaseLayer_phase': {'propext'},
+    'SectorSimulation.idealLowerPhaseLayer_exponent': set(),
+    'SectorSimulation.combinedPhaseNative_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

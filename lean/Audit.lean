@@ -809,3 +809,10 @@ import SectorSimulation
 #print axioms SectorSimulation.nativeLowerPhaseLayer_correct_from_equivalent
 #check SectorSimulation.nativeLowerPhaseLayer_correct
 #print axioms SectorSimulation.nativeLowerPhaseLayer_correct
+
+#check SectorSimulation.idealLowerPhaseLayer_phase
+#print axioms SectorSimulation.idealLowerPhaseLayer_phase
+#check SectorSimulation.idealLowerPhaseLayer_exponent
+#print axioms SectorSimulation.idealLowerPhaseLayer_exponent
+#check SectorSimulation.combinedPhaseNative_correct
+#print axioms SectorSimulation.combinedPhaseNative_correct
