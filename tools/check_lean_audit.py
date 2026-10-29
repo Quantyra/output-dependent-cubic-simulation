@@ -108,6 +108,7 @@ EXPECTED = {
     'SectorSimulation.gaussianRowProgram_exists_of_injective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.gaussianSolveChecked_complete_of_injective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.gaussianRowProgram_success_iff_injective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceOutputDerivativePivot_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

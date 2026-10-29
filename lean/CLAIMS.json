@@ -1542,6 +1542,28 @@
       ],
       "build_audit_receipt": "lean/evidence/pivot-complete-audit.md",
       "unresolved_bridge": "Prove finite-encoding runtime and bridge injectivity and source validation to the native decoder and physical circuit semantics."
+    },
+    {
+      "id": "source-output-pivot-derivative",
+      "section": "2",
+      "target": "SectorSimulation.sourceOutputDerivativePivot_correct",
+      "assumptions": "Source descriptor phases have degree at most three and the pairing matrix evaluator is injective.",
+      "quantifiers": "All finite dimensions and descriptors satisfying the hypotheses.",
+      "statement": "The pivot-based source construction returns the unique nonzero shift solving Jj=e and a degree-at-most-two ANF of bounded length evaluating to the second-phase derivative.",
+      "dependencies": [
+        "pivot-solver-complete",
+        "gaussian-checked-sound",
+        "cubic-derivative-anf",
+        "cubic-derivative-output-size"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/source-output-pivot-audit.md",
+      "unresolved_bridge": "Prove finite-encoding cost and native source validation, decoding and circuit/Walsh/sector semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

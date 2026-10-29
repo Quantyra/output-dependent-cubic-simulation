@@ -278,3 +278,6 @@ import SectorSimulation
 
 #check SectorSimulation.gaussianRowProgram_success_iff_injective
 #print axioms SectorSimulation.gaussianRowProgram_success_iff_injective
+
+#check SectorSimulation.sourceOutputDerivativePivot_correct
+#print axioms SectorSimulation.sourceOutputDerivativePivot_correct
