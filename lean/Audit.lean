@@ -10,3 +10,5 @@ import SectorSimulation.BooleanSource
 #print axioms SectorSimulation.evalPhase_empty
 #check SectorSimulation.evalPhase_duplicate_cancel
 #print axioms SectorSimulation.evalPhase_duplicate_cancel
+#check SectorSimulation.secondPhaseDerivative_shift_invariant
+#print axioms SectorSimulation.secondPhaseDerivative_shift_invariant

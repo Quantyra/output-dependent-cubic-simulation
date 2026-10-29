@@ -54,4 +54,14 @@ theorem evalPhase_duplicate_cancel {n : Nat} (m : Monomial n) (x : BinaryVector 
     evalPhase [m, m] x = false := by
   cases h : evalMonomial m x <;> simp [evalPhase, h]
 
+/-- The output derivative before connecting `j` to the computed `J⁻¹ e`. -/
+def secondPhaseDerivative {n : Nat} (d : CircuitDescriptor n)
+    (j v : BinaryVector n) : Bool :=
+  booleanDerivative (evalPhase d.secondPhase) (binaryShift j) v
+
+theorem secondPhaseDerivative_shift_invariant {n : Nat} (d : CircuitDescriptor n)
+    (j v : BinaryVector n) :
+    secondPhaseDerivative d j (binaryShift j v) = secondPhaseDerivative d j v := by
+  exact binaryDerivative_shift_invariant (evalPhase d.secondPhase) j v
+
 end SectorSimulation

@@ -392,6 +392,24 @@
       "dependencies": [],
       "status": "statement translated",
       "unresolved_bridge": "Prove parser/encoder equivalence, canonical body replay, matrix symmetry and invertibility checks, gate denotation and all complexity costs."
+    },
+    {
+      "id": "source-second-phase-shift-invariance",
+      "section": "2",
+      "target": "SectorSimulation.secondPhaseDerivative_shift_invariant",
+      "assumptions": "A finite Boolean source descriptor with a second phase represented by a list of monomial masks, and arbitrary binary shift j.",
+      "quantifiers": "All dimensions n, descriptors d, binary shifts j and vectors v.",
+      "statement": "The evaluated second-phase Boolean derivative is unchanged after pointwise XOR translation by j.",
+      "dependencies": [
+        "boolean-anf-representation",
+        "binary-derivative-invariance"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/second-phase-shift-audit.md",
+      "unresolved_bridge": "Derive j from the verified J inverse and output coordinate, prove the cubic-to-quadratic degree bound, then connect to the circuit and Walsh support."
     }
   ],
   "paper_source": "manuscript/main.tex",
