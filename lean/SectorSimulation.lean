@@ -238,3 +238,5 @@ import SectorSimulation.ExplicitCanonicalWalsh
 import SectorSimulation.CanonicalAssignmentCoverage
 
 import SectorSimulation.CanonicalPairVectors
+
+import SectorSimulation.CanonicalCoordinateLayout

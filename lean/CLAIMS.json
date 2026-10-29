@@ -8584,6 +8584,114 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-pair-vectors.md",
       "unresolved_bridge": "Relate paired vectors to a single finite vector coordinate layout, connect phase evaluation to source ANF, and construct a general canonical basis with rank and cost proofs."
+    },
+    {
+      "id": "canonical-coordinate-layout-canonicalLeft_join",
+      "section": "3",
+      "target": "SectorSimulation.canonicalLeft_join",
+      "assumptions": "Finite Boolean vectors and the explicit three-block coordinate layout.",
+      "quantifiers": "All natural block dimensions and all corresponding finite vectors, including zero.",
+      "statement": "Joining canonical blocks and extracting the left block returns the original vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-coordinate-layout.md",
+      "unresolved_bridge": "Connect vector blocks to assignment sums and source ANF, construct a general quadratic basis, and prove rank, support and costs."
+    },
+    {
+      "id": "canonical-coordinate-layout-canonicalRight_join",
+      "section": "3",
+      "target": "SectorSimulation.canonicalRight_join",
+      "assumptions": "Finite Boolean vectors and the explicit three-block coordinate layout.",
+      "quantifiers": "All natural block dimensions and all corresponding finite vectors, including zero.",
+      "statement": "Joining canonical blocks and extracting the right block returns the original vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-coordinate-layout.md",
+      "unresolved_bridge": "Connect vector blocks to assignment sums and source ANF, construct a general quadratic basis, and prove rank, support and costs."
+    },
+    {
+      "id": "canonical-coordinate-layout-canonicalRadical_join",
+      "section": "3",
+      "target": "SectorSimulation.canonicalRadical_join",
+      "assumptions": "Finite Boolean vectors and the explicit three-block coordinate layout.",
+      "quantifiers": "All natural block dimensions and all corresponding finite vectors, including zero.",
+      "statement": "Joining canonical blocks and extracting the radical block returns the original vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-coordinate-layout.md",
+      "unresolved_bridge": "Connect vector blocks to assignment sums and source ANF, construct a general quadratic basis, and prove rank, support and costs."
+    },
+    {
+      "id": "canonical-coordinate-layout-canonicalJoin_split",
+      "section": "3",
+      "target": "SectorSimulation.canonicalJoin_split",
+      "assumptions": "Finite Boolean vectors and the explicit three-block coordinate layout.",
+      "quantifiers": "All natural block dimensions and all corresponding finite vectors, including zero.",
+      "statement": "Splitting and rejoining a finite binary vector returns the original vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-coordinate-layout.md",
+      "unresolved_bridge": "Connect vector blocks to assignment sums and source ANF, construct a general quadratic basis, and prove rank, support and costs."
+    },
+    {
+      "id": "canonical-coordinate-layout-canonicalJoin_injective",
+      "section": "3",
+      "target": "SectorSimulation.canonicalJoin_injective",
+      "assumptions": "Finite Boolean vectors and the explicit three-block coordinate layout.",
+      "quantifiers": "All natural block dimensions and all corresponding finite vectors, including zero.",
+      "statement": "The canonical block join uniquely determines its three input vectors.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-coordinate-layout.md",
+      "unresolved_bridge": "Connect vector blocks to assignment sums and source ANF, construct a general quadratic basis, and prove rank, support and costs."
+    },
+    {
+      "id": "canonical-coordinate-layout-canonicalSplit_unique",
+      "section": "3",
+      "target": "SectorSimulation.canonicalSplit_unique",
+      "assumptions": "Finite Boolean vectors and the explicit three-block coordinate layout.",
+      "quantifiers": "All natural block dimensions and all corresponding finite vectors, including zero.",
+      "statement": "Every combined finite vector has exactly one left, right and radical decomposition.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-coordinate-layout.md",
+      "unresolved_bridge": "Connect vector blocks to assignment sums and source ANF, construct a general quadratic basis, and prove rank, support and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

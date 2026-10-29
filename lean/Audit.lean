@@ -1447,3 +1447,22 @@ import SectorSimulation
 
 #check SectorSimulation.pairAssignment_has_unique_vectors
 #print axioms SectorSimulation.pairAssignment_has_unique_vectors
+
+
+#check SectorSimulation.canonicalLeft_join
+#print axioms SectorSimulation.canonicalLeft_join
+
+#check SectorSimulation.canonicalRight_join
+#print axioms SectorSimulation.canonicalRight_join
+
+#check SectorSimulation.canonicalRadical_join
+#print axioms SectorSimulation.canonicalRadical_join
+
+#check SectorSimulation.canonicalJoin_split
+#print axioms SectorSimulation.canonicalJoin_split
+
+#check SectorSimulation.canonicalJoin_injective
+#print axioms SectorSimulation.canonicalJoin_injective
+
+#check SectorSimulation.canonicalSplit_unique
+#print axioms SectorSimulation.canonicalSplit_unique

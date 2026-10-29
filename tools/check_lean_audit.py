@@ -528,6 +528,12 @@ EXPECTED = {
     'SectorSimulation.vectorPairAssignment_injective': {'propext', 'Quot.sound'},
     'SectorSimulation.vectorPairAssignment_roundtrip': {'propext', 'Quot.sound'},
     'SectorSimulation.pairAssignment_has_unique_vectors': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalLeft_join': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalRight_join': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalRadical_join': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalJoin_split': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalJoin_injective': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalSplit_unique': {'propext', 'Quot.sound'},
 }
 
 
