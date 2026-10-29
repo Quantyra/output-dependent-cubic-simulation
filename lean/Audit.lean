@@ -1519,3 +1519,9 @@ import SectorSimulation
 
 #check SectorSimulation.canonicalPhaseANF_walshSum
 #print axioms SectorSimulation.canonicalPhaseANF_walshSum
+
+#check SectorSimulation.sourceWalshSum_reindex
+#print axioms SectorSimulation.sourceWalshSum_reindex
+
+#check SectorSimulation.sourceWalshSum_canonicalized
+#print axioms SectorSimulation.sourceWalshSum_canonicalized
