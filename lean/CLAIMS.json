@@ -4462,6 +4462,89 @@
       ],
       "build_audit_receipt": "lean/evidence/cubic-layer-anf-audit.md",
       "unresolved_bridge": "Extend phase compilation to constant, linear and quadratic terms, establish full Python compiler correspondence, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-lower-phase-nativeConstantSign",
+      "section": "2",
+      "target": "SectorSimulation.nativeConstantSign",
+      "assumptions": "The modeled exact native interpreter; constant terms require an available wire and quadratic controls and targets must differ.",
+      "quantifiers": "All finite dimensions, represented states, valid lower-degree terms or finite term lists and output vectors.",
+      "statement": "The native X-Z-X-Z sequence applies a constant negative sign.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/lower-phase-native-audit.md",
+      "unresolved_bridge": "Connect lower-degree layer to ANF evaluation and cubic layer, establish full Python compiler and complex embedding correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-lower-phase-nativeLowerPhaseTerm_correct",
+      "section": "2",
+      "target": "SectorSimulation.nativeLowerPhaseTerm_correct",
+      "assumptions": "The modeled exact native interpreter; constant terms require an available wire and quadratic controls and targets must differ.",
+      "quantifiers": "All finite dimensions, represented states, valid lower-degree terms or finite term lists and output vectors.",
+      "statement": "Each valid constant, linear or distinct-wire quadratic native phase block agrees with its Boolean monomial sign.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/lower-phase-native-audit.md",
+      "unresolved_bridge": "Connect lower-degree layer to ANF evaluation and cubic layer, establish full Python compiler and complex embedding correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-lower-phase-sharedMonomialSign_congr",
+      "section": "2",
+      "target": "SectorSimulation.sharedMonomialSign_congr",
+      "assumptions": "The modeled exact native interpreter; constant terms require an available wire and quadratic controls and targets must differ.",
+      "quantifiers": "All finite dimensions, represented states, valid lower-degree terms or finite term lists and output vectors.",
+      "statement": "A modeled monomial sign preserves pointwise exact-amplitude equality.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/lower-phase-native-audit.md",
+      "unresolved_bridge": "Connect lower-degree layer to ANF evaluation and cubic layer, establish full Python compiler and complex embedding correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-lower-phase-nativeLowerPhaseLayer_correct_from_equivalent",
+      "section": "2",
+      "target": "SectorSimulation.nativeLowerPhaseLayer_correct_from_equivalent",
+      "assumptions": "The modeled exact native interpreter; constant terms require an available wire and quadratic controls and targets must differ.",
+      "quantifiers": "All finite dimensions, represented states, valid lower-degree terms or finite term lists and output vectors.",
+      "statement": "For amplitude-equivalent initial states, any finite valid lower-degree phase layer replays successfully and matches its modeled monomial-sign layer.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/lower-phase-native-audit.md",
+      "unresolved_bridge": "Connect lower-degree layer to ANF evaluation and cubic layer, establish full Python compiler and complex embedding correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-lower-phase-nativeLowerPhaseLayer_correct",
+      "section": "2",
+      "target": "SectorSimulation.nativeLowerPhaseLayer_correct",
+      "assumptions": "The modeled exact native interpreter; constant terms require an available wire and quadratic controls and targets must differ.",
+      "quantifiers": "All finite dimensions, represented states, valid lower-degree terms or finite term lists and output vectors.",
+      "statement": "Any finite valid lower-degree phase layer replays successfully and matches its modeled monomial-sign layer.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/lower-phase-native-audit.md",
+      "unresolved_bridge": "Connect lower-degree layer to ANF evaluation and cubic layer, establish full Python compiler and complex embedding correspondence, complete circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

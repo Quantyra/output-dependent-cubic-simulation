@@ -798,3 +798,14 @@ import SectorSimulation
 #print axioms SectorSimulation.idealCubicLayer_exponent
 #check SectorSimulation.nativeCubicLayer_anf
 #print axioms SectorSimulation.nativeCubicLayer_anf
+
+#check SectorSimulation.nativeConstantSign
+#print axioms SectorSimulation.nativeConstantSign
+#check SectorSimulation.nativeLowerPhaseTerm_correct
+#print axioms SectorSimulation.nativeLowerPhaseTerm_correct
+#check SectorSimulation.sharedMonomialSign_congr
+#print axioms SectorSimulation.sharedMonomialSign_congr
+#check SectorSimulation.nativeLowerPhaseLayer_correct_from_equivalent
+#print axioms SectorSimulation.nativeLowerPhaseLayer_correct_from_equivalent
+#check SectorSimulation.nativeLowerPhaseLayer_correct
+#print axioms SectorSimulation.nativeLowerPhaseLayer_correct

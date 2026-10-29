@@ -149,3 +149,5 @@ import SectorSimulation.MappedNativeCubic
 import SectorSimulation.CubicLayerReplay
 
 import SectorSimulation.CubicLayerANF
+
+import SectorSimulation.LowerPhaseNative

@@ -297,6 +297,11 @@ EXPECTED = {
     'SectorSimulation.idealCubicLayer_phase': {'propext', 'Quot.sound'},
     'SectorSimulation.idealCubicLayer_exponent': {'propext', 'Quot.sound'},
     'SectorSimulation.nativeCubicLayer_anf': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.nativeConstantSign': {'propext', 'Quot.sound'},
+    'SectorSimulation.nativeLowerPhaseTerm_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedMonomialSign_congr': {'propext', 'Quot.sound'},
+    'SectorSimulation.nativeLowerPhaseLayer_correct_from_equivalent': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.nativeLowerPhaseLayer_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
