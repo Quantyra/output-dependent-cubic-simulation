@@ -172,6 +172,13 @@ EXPECTED = {
     'SectorSimulation.hadamard_general_commutes_disjoint_CNOT': {'propext', 'Quot.sound'},
     'SectorSimulation.scaledHadamard_commutes_disjoint_CNOT': {'propext', 'Quot.sound'},
     'SectorSimulation.scaledHadamard_commutes_invariant_diagonal': {'propext', 'Quot.sound'},
+    'SectorSimulation.cyclo_mul_add': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cyclo_mul_sub': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cyclo_mul_comm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cyclo_omega_inverse': set(),
+    'SectorSimulation.cyclo_omega_fourth': set(),
+    'SectorSimulation.cyclo_sqrt_two_squared': set(),
+    'SectorSimulation.cyclo_hadamard_commutes_phase': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

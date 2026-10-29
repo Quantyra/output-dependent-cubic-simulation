@@ -91,3 +91,5 @@ import SectorSimulation.ToffoliRecordTrace
 import SectorSimulation.HadamardCommutation
 
 import SectorSimulation.HadamardGeneral
+
+import SectorSimulation.CyclotomicEight

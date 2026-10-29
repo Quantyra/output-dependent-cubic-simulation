@@ -2445,6 +2445,113 @@
       ],
       "build_audit_receipt": "lean/evidence/general-hadamard-commutation-audit.md",
       "unresolved_bridge": "Instantiate complex amplitudes and roots of unity, prove normalization and literal Toffoli replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "cyclo-eight-cyclo_mul_add",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_mul_add",
+      "assumptions": "Four-integer formal coefficients with z^4 = -1 and the defined arithmetic; flip-invariant multiplier for the commutation theorem.",
+      "quantifiers": "All represented coefficients or all applicable finite states and wires.",
+      "statement": "The exact four-integer eighth-root coefficient multiplication distributes over addition.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cyclotomic-eight-audit.md",
+      "unresolved_bridge": "Prove complex embedding, division by two, physical normalized gate semantics, literal decomposition replay and manuscript theorems."
+    },
+    {
+      "id": "cyclo-eight-cyclo_mul_sub",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_mul_sub",
+      "assumptions": "Four-integer formal coefficients with z^4 = -1 and the defined arithmetic; flip-invariant multiplier for the commutation theorem.",
+      "quantifiers": "All represented coefficients or all applicable finite states and wires.",
+      "statement": "The exact coefficient multiplication distributes over subtraction.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cyclotomic-eight-audit.md",
+      "unresolved_bridge": "Prove complex embedding, division by two, physical normalized gate semantics, literal decomposition replay and manuscript theorems."
+    },
+    {
+      "id": "cyclo-eight-cyclo_mul_comm",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_mul_comm",
+      "assumptions": "Four-integer formal coefficients with z^4 = -1 and the defined arithmetic; flip-invariant multiplier for the commutation theorem.",
+      "quantifiers": "All represented coefficients or all applicable finite states and wires.",
+      "statement": "The exact coefficient multiplication is commutative.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cyclotomic-eight-audit.md",
+      "unresolved_bridge": "Prove complex embedding, division by two, physical normalized gate semantics, literal decomposition replay and manuscript theorems."
+    },
+    {
+      "id": "cyclo-eight-cyclo_omega_inverse",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_omega_inverse",
+      "assumptions": "Four-integer formal coefficients with z^4 = -1 and the defined arithmetic; flip-invariant multiplier for the commutation theorem.",
+      "quantifiers": "All represented coefficients or all applicable finite states and wires.",
+      "statement": "The represented eighth root and its represented inverse multiply to one.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/cyclotomic-eight-audit.md",
+      "unresolved_bridge": "Prove complex embedding, division by two, physical normalized gate semantics, literal decomposition replay and manuscript theorems."
+    },
+    {
+      "id": "cyclo-eight-cyclo_omega_fourth",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_omega_fourth",
+      "assumptions": "Four-integer formal coefficients with z^4 = -1 and the defined arithmetic; flip-invariant multiplier for the commutation theorem.",
+      "quantifiers": "All represented coefficients or all applicable finite states and wires.",
+      "statement": "The fourth power of the represented eighth root is minus one.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/cyclotomic-eight-audit.md",
+      "unresolved_bridge": "Prove complex embedding, division by two, physical normalized gate semantics, literal decomposition replay and manuscript theorems."
+    },
+    {
+      "id": "cyclo-eight-cyclo_sqrt_two_squared",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_sqrt_two_squared",
+      "assumptions": "Four-integer formal coefficients with z^4 = -1 and the defined arithmetic; flip-invariant multiplier for the commutation theorem.",
+      "quantifiers": "All represented coefficients or all applicable finite states and wires.",
+      "statement": "The represented z minus z cubed has square two.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/cyclotomic-eight-audit.md",
+      "unresolved_bridge": "Prove complex embedding, division by two, physical normalized gate semantics, literal decomposition replay and manuscript theorems."
+    },
+    {
+      "id": "cyclo-eight-cyclo_hadamard_commutes_phase",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_hadamard_commutes_phase",
+      "assumptions": "Four-integer formal coefficients with z^4 = -1 and the defined arithmetic; flip-invariant multiplier for the commutation theorem.",
+      "quantifiers": "All represented coefficients or all applicable finite states and wires.",
+      "statement": "The modeled Hadamard numerator commutes with any flip-invariant diagonal multiplier over the exact coefficient representation.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cyclotomic-eight-audit.md",
+      "unresolved_bridge": "Prove complex embedding, division by two, physical normalized gate semantics, literal decomposition replay and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

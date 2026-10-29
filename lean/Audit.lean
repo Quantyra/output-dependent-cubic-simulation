@@ -469,3 +469,24 @@ import SectorSimulation
 
 #check SectorSimulation.scaledHadamard_commutes_invariant_diagonal
 #print axioms SectorSimulation.scaledHadamard_commutes_invariant_diagonal
+
+#check SectorSimulation.cyclo_mul_add
+#print axioms SectorSimulation.cyclo_mul_add
+
+#check SectorSimulation.cyclo_mul_sub
+#print axioms SectorSimulation.cyclo_mul_sub
+
+#check SectorSimulation.cyclo_mul_comm
+#print axioms SectorSimulation.cyclo_mul_comm
+
+#check SectorSimulation.cyclo_omega_inverse
+#print axioms SectorSimulation.cyclo_omega_inverse
+
+#check SectorSimulation.cyclo_omega_fourth
+#print axioms SectorSimulation.cyclo_omega_fourth
+
+#check SectorSimulation.cyclo_sqrt_two_squared
+#print axioms SectorSimulation.cyclo_sqrt_two_squared
+
+#check SectorSimulation.cyclo_hadamard_commutes_phase
+#print axioms SectorSimulation.cyclo_hadamard_commutes_phase
