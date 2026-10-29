@@ -83,3 +83,9 @@ import SectorSimulation
 
 #check SectorSimulation.evalQuadraticTerms_bitMasks
 #print axioms SectorSimulation.evalQuadraticTerms_bitMasks
+
+#check SectorSimulation.two_choices_length
+#print axioms SectorSimulation.two_choices_length
+
+#check SectorSimulation.pairMask_degree
+#print axioms SectorSimulation.pairMask_degree

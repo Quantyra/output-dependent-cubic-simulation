@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 4213,
-      "sha256": "fc3f7ad9cfbcd2f2a92e97019960f8607ee22730cad08d15410e05b7826d271a"
+      "bytes": 4395,
+      "sha256": "c4de6efbdb1a56e4310a4428b724252519cf33f9106b12a95713cff14c560dbf"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 51624,
-      "sha256": "4c3ba5e64e6bbc95985a86ee709d455ffd188ae0afbef59b700f2300f7840370"
+      "bytes": 52466,
+      "sha256": "1cc9457815d5843d10d12bbe7e32f586205f8d09f3f38de861848f7352969e3a"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -189,8 +189,8 @@
     },
     {
       "path": "lean/SectorSimulation/QuadraticMasks.lean",
-      "bytes": 2706,
-      "sha256": "b37d949a1552621c77a40981aee869884a1b2ca364d7a13744efe91e1ee4f4f8"
+      "bytes": 3571,
+      "sha256": "fd00f66649390f3f8ff4ecb86a9a3637156a722ee0006428d3aa30c9b8f17ec3"
     },
     {
       "path": "lean/SectorSimulation/QuadraticTerms.lean",
@@ -273,9 +273,14 @@
       "sha256": "c8f38269f8e5a879c9ce4947ebd9eea3d278c67ca0409d0559534727d790546e"
     },
     {
+      "path": "lean/evidence/pair-mask-degree-audit.md",
+      "bytes": 853,
+      "sha256": "c770e66b52cb9bd70c3b745cf177a52c545b9e9b8fdff89377aa34d72b190785"
+    },
+    {
       "path": "lean/evidence/quadratic-mask-translation-audit.md",
-      "bytes": 1002,
-      "sha256": "6ba103d329b39c2d0e120714ccddf0963fdb54d832c91b856ae2002fa5291795"
+      "bytes": 1024,
+      "sha256": "27632d1fe398f438afa05c622eaaa820563f4dfe805ec4a8dfebd9d4190e7495"
     },
     {
       "path": "lean/evidence/second-phase-shift-audit.md",
@@ -694,8 +699,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 3600,
-      "sha256": "f6e0cf761f031815366167d1da7729cc85f880ecb2c4388b3338cf30db8ae18e"
+      "bytes": 3777,
+      "sha256": "9029ec0c4c4279de139c553fbe25a563d8bfb39ee685ac13b6b9fa726e491321"
     },
     {
       "path": "tools/check_metadata.py",

@@ -948,6 +948,25 @@
       ],
       "build_audit_receipt": "lean/evidence/quadratic-mask-translation-audit.md",
       "unresolved_bridge": "Prove the degree bound on each generated mask, compose with the phase derivative construction, establish cost and native circuit/sector semantics."
+    },
+    {
+      "id": "pair-mask-degree",
+      "section": "2",
+      "target": "SectorSimulation.pairMask_degree",
+      "assumptions": "Finite binary-vector dimension and source bit-mask representation.",
+      "quantifiers": "All finite dimensions and pairs of indices, including repeated indices.",
+      "statement": "The source mask selecting either of two coordinates has degree at most two.",
+      "dependencies": [
+        "pair-mask-evaluation"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pair-mask-degree-audit.md",
+      "unresolved_bridge": "Bound all generated masks and compose with the cubic phase derivative construction; establish cost and circuit and sector semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

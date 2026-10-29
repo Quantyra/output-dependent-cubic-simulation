@@ -43,6 +43,8 @@ EXPECTED = {
     'SectorSimulation.evalMonomial_pairMask': {'propext', 'Quot.sound'},
     'SectorSimulation.evalQuadraticTerm_mask': {'propext', 'Quot.sound'},
     'SectorSimulation.evalQuadraticTerms_bitMasks': {'propext', 'Quot.sound'},
+    'SectorSimulation.two_choices_length': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.pairMask_degree': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

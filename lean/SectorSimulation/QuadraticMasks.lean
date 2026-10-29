@@ -1,4 +1,5 @@
 import SectorSimulation.CubicPhaseDerivative
+import Batteries.Data.List.Lemmas
 
 /-!
 Semantic translation of individual quadratic terms into source bit masks.
@@ -68,5 +69,32 @@ theorem evalQuadraticTerms_bitMasks {n : Nat} (terms : List (QuadraticTerm n))
     simp only [quadraticTermsToANF, List.map_cons, evalPhase_cons, evalQuadraticTerms]
     change evalPhase (List.map quadraticTermMask rest) x = evalQuadraticTerms rest x at ih
     rw [evalQuadraticTerm_mask, ih]
+
+
+theorem two_choices_length {α : Type} (xs : List α) (a b : α)
+    (hn : xs.Nodup) (hm : ∀ x ∈ xs, x = a ∨ x = b) : xs.length ≤ 2 := by
+  cases xs with
+  | nil => simp
+  | cons x xs =>
+    cases xs with
+    | nil => simp
+    | cons y ys =>
+      cases ys with
+      | nil => simp
+      | cons z zs =>
+        simp only [List.nodup_cons, List.mem_cons] at hn
+        have hx := hm x (by simp)
+        have hy := hm y (by simp)
+        have hz := hm z (by simp)
+        grind
+
+theorem pairMask_degree {n : Nat} (i k : Fin n) : monomialDegree (pairMask i k) ≤ 2 := by
+  rw [monomialDegree_eq_selectedLength]
+  apply two_choices_length _ i k
+  · exact List.Nodup.sublist List.filter_sublist (List.nodup_finRange n)
+  · intro x hx
+    have h := (List.mem_filter.mp hx).2
+    simpa [selectedVariables, pairMask] using h
+
 
 end SectorSimulation
