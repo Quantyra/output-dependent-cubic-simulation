@@ -71,4 +71,26 @@ theorem dyadicInterpret_add (a b : DyadicCyclo) :
         Int.cast_pow, Int.cast_ofNat, pow_add]
       field_simp <;> ring
 
+
+theorem exactComplex_add (a b : ExactAmplitude) :
+    exactComplex (exactAdd a b) = exactComplex a + exactComplex b := by
+  induction a using Quotient.ind with
+  | _ a =>
+    induction b using Quotient.ind with
+    | _ b =>
+      change dyadicInterpret (dyadicAdd a b) = dyadicInterpret a + dyadicInterpret b
+      exact dyadicInterpret_add a b
+
+theorem exactComplex_mul (a b : ExactAmplitude) :
+    exactComplex (exactMul a b) = exactComplex a * exactComplex b := by
+  induction a using Quotient.ind with
+  | _ a =>
+    induction b using Quotient.ind with
+    | _ b =>
+      change dyadicInterpret (dyadicMultiply a b) = dyadicInterpret a * dyadicInterpret b
+      exact dyadicInterpret_mul a b
+
+theorem exactComplex_one : exactComplex exactOne = 1 := by
+  simp [exactComplex, exactOne, dyadicInterpret, dyadicOne, cycloInterpret, cycloOne]
+
 end SectorSimulation
