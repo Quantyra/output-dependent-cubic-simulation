@@ -35,3 +35,5 @@ import SectorSimulation.PivotStepInvariants
 import SectorSimulation.ClearProgramInvariant
 
 import SectorSimulation.ClearColumnComplete
+
+import SectorSimulation.PriorColumnInvariant

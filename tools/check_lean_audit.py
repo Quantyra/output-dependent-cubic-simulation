@@ -83,6 +83,11 @@ EXPECTED = {
     'SectorSimulation.clearProgram_preserves_pivot': {'propext', 'Quot.sound'},
     'SectorSimulation.clearRows_target': {'propext', 'Quot.sound'},
     'SectorSimulation.clearProgram_clears_column': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.rowAdd_preserves_zero_source_column': {'propext'},
+    'SectorSimulation.addProgram_preserves_zero_source_column': {'propext', 'Quot.sound'},
+    'SectorSimulation.clearProgram_preserves_zero_source_column': {'propext', 'Quot.sound'},
+    'SectorSimulation.swap_preserves_unit_column': {'propext'},
+    'SectorSimulation.pivotStep_preserves_prior_unit': {'propext', 'Quot.sound'},
 }
 
 

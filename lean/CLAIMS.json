@@ -1380,6 +1380,25 @@
       ],
       "build_audit_receipt": "lean/evidence/clear-column-complete-audit.md",
       "unresolved_bridge": "Prove that later pivot steps preserve earlier cleared columns, invertible-input completeness and finite-encoding costs; native circuit and paper theorems remain open."
+    },
+    {
+      "id": "pivot-preserves-prior-column",
+      "section": "2",
+      "target": "SectorSimulation.pivotStep_preserves_prior_unit",
+      "assumptions": "An earlier column is a unit column, the next pivot is later, and the pivot search returns a row.",
+      "quantifiers": "All finite matrices, target vectors and valid earlier and later column indices.",
+      "statement": "The actual swap and generated clearing operations at a later pivot preserve every entry of the earlier unit column.",
+      "dependencies": [
+        "clear-program-column",
+        "pivot-search-sound"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/prior-column-invariant-audit.md",
+      "unresolved_bridge": "Induct over the full pivot sequence, prove pivot existence for invertible inputs, output correctness and operational costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

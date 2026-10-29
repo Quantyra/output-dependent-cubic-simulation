@@ -203,3 +203,18 @@ import SectorSimulation
 
 #check SectorSimulation.clearProgram_clears_column
 #print axioms SectorSimulation.clearProgram_clears_column
+
+#check SectorSimulation.rowAdd_preserves_zero_source_column
+#print axioms SectorSimulation.rowAdd_preserves_zero_source_column
+
+#check SectorSimulation.addProgram_preserves_zero_source_column
+#print axioms SectorSimulation.addProgram_preserves_zero_source_column
+
+#check SectorSimulation.clearProgram_preserves_zero_source_column
+#print axioms SectorSimulation.clearProgram_preserves_zero_source_column
+
+#check SectorSimulation.swap_preserves_unit_column
+#print axioms SectorSimulation.swap_preserves_unit_column
+
+#check SectorSimulation.pivotStep_preserves_prior_unit
+#print axioms SectorSimulation.pivotStep_preserves_prior_unit
