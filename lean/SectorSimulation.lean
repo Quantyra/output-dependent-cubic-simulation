@@ -27,3 +27,5 @@ import SectorSimulation.MatrixRowProgram
 import SectorSimulation.GaussianPivot
 
 import SectorSimulation.GaussianPivotSize
+
+import SectorSimulation.GaussianSolveChecked

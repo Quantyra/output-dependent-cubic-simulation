@@ -1247,6 +1247,25 @@
       ],
       "build_audit_receipt": "lean/evidence/pivot-size-examples-audit.md",
       "unresolved_bridge": "Prove reduction invariants, invertible-input completeness and execution time for finite encoded matrices; finite examples do not prove them."
+    },
+    {
+      "id": "gaussian-checked-sound",
+      "section": "2",
+      "target": "SectorSimulation.gaussianSolveChecked_sound",
+      "assumptions": "The concrete checked pivot solver returns a vector.",
+      "quantifiers": "All finite dimensions, source matrices, target vectors and returned vectors.",
+      "statement": "Every vector returned by the checked pivot solver satisfies the original source matrix equation.",
+      "dependencies": [
+        "pivot-search-sound",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gaussian-checked-solver-audit.md",
+      "unresolved_bridge": "Prove pivot reduction and return completeness for invertible matrices, finite-encoding runtime and the native circuit bridge."
     }
   ],
   "paper_source": "manuscript/main.tex",

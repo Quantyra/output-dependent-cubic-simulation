@@ -170,3 +170,6 @@ import SectorSimulation
 
 #check SectorSimulation.gaussianRowProgram_length
 #print axioms SectorSimulation.gaussianRowProgram_length
+
+#check SectorSimulation.gaussianSolveChecked_sound
+#print axioms SectorSimulation.gaussianSolveChecked_sound

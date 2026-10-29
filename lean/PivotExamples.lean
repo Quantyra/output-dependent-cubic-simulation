@@ -1,4 +1,4 @@
-import SectorSimulation.GaussianPivot
+import SectorSimulation.GaussianSolveChecked
 open SectorSimulation
 
 def reducedIsIdentity {n : Nat} (J : BinaryMatrix n) : Bool :=
@@ -21,3 +21,14 @@ def singular3 : BinaryMatrix 3 := fun i k => decide (i.val = 0 ∧ k.val = 0)
 #guard reducedIsIdentity swap3
 #guard reducedIsIdentity dense3
 #guard programRefuses singular3
+
+
+def solutionMatches {n : Nat} (J : BinaryMatrix n) (target : BinaryVector n) : Bool :=
+  match gaussianSolveChecked J target with
+  | none => false
+  | some x => vectorEqual (matrixApply J x) target
+
+#guard solutionMatches identity3 (fun i => decide (i.val = 1))
+#guard solutionMatches swap3 (fun i => decide (i.val = 0))
+#guard solutionMatches dense3 (fun i => decide (i.val = 2))
+#guard (gaussianSolveChecked singular3 (fun _ => true)).isNone

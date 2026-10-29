@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 7213,
-      "sha256": "61c640c51a2c658ca0577cb753202c0d12048be8868f86f0078901f673c29619"
+      "bytes": 7323,
+      "sha256": "f2fb06f38200b176a506e04f331a48809d76668fc7be9ff53123eca44524f293"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 65847,
-      "sha256": "0b942ffa4c9a1c8ad7f366413417fe111a22a4c70ef6bffa0a57a41ff6d4d0d7"
+      "bytes": 66720,
+      "sha256": "79d406aaeade09ffa87fc2aab5388855374216e585afca0f4e74870d0a8aa903"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -139,8 +139,8 @@
     },
     {
       "path": "lean/PivotExamples.lean",
-      "bytes": 1059,
-      "sha256": "430e658e655930c94e5010bea7f70d74c94d8c731b1577ecdf152ae69fe04c4b"
+      "bytes": 1513,
+      "sha256": "cc85a7a378a006a6800a405a2b9a11b6af9c773db2c31c820ed7d2bc1f35c614"
     },
     {
       "path": "lean/SEMANTICS.md",
@@ -149,8 +149,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 829,
-      "sha256": "c9bd71d4992c5269cd571cfe276f8beec4f7176ed9f61834d7765541b26478d7"
+      "bytes": 875,
+      "sha256": "d430249a7d84d2558c4fa0b205012688412995f39a7e99444444b46f4a4a3b1d"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -211,6 +211,11 @@
       "path": "lean/SectorSimulation/GaussianPivotSize.lean",
       "bytes": 1545,
       "sha256": "954fe6bb00c405185655a5a31a854db71f4f7c9166a94292340671600ca15e10"
+    },
+    {
+      "path": "lean/SectorSimulation/GaussianSolveChecked.lean",
+      "bytes": 878,
+      "sha256": "86fbef02fa55f23db819e19473770c3e276aa2184c69b6b1697c094ff30fe760"
     },
     {
       "path": "lean/SectorSimulation/MatrixLinearity.lean",
@@ -316,6 +321,11 @@
       "path": "lean/evidence/derivative-size-audit.md",
       "bytes": 793,
       "sha256": "dc9cdcfa84ae19769bba5118e7d8cdae6a21f00583647a0893e248ce2260ccbe"
+    },
+    {
+      "path": "lean/evidence/gaussian-checked-solver-audit.md",
+      "bytes": 940,
+      "sha256": "90e64b8afb80aa046f64befa9984149eb2319529ae1855e6b838ab1a1ba55ff3"
     },
     {
       "path": "lean/evidence/locked-environment.md",
@@ -794,8 +804,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 5859,
-      "sha256": "18fb4105b5d4a948ae258a419a4a6a297395e682e2edca849b19efd78d45ab2e"
+      "bytes": 5937,
+      "sha256": "28e59548341a3eb152a1c7362c376291cff1958d319931cbb6e68d479ae9f437"
     },
     {
       "path": "tools/check_metadata.py",
