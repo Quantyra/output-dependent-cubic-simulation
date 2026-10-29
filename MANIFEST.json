@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 4228,
-      "sha256": "930837a447af145cafe0047c1e9575a4295ec6fea70e547a51f45699fb22fce1"
+      "bytes": 4213,
+      "sha256": "fc3f7ad9cfbcd2f2a92e97019960f8607ee22730cad08d15410e05b7826d271a"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 52580,
-      "sha256": "49e6460b34936dc0fcc0f81f60759fff3cca56839de894b3e157e49e9271ca65"
+      "bytes": 51624,
+      "sha256": "4c3ba5e64e6bbc95985a86ee709d455ffd188ae0afbef59b700f2300f7840370"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -189,8 +189,8 @@
     },
     {
       "path": "lean/SectorSimulation/QuadraticMasks.lean",
-      "bytes": 2778,
-      "sha256": "027d6c5f255efa461e98d217b29de508404e7b692738808406a3d68655050164"
+      "bytes": 2706,
+      "sha256": "b37d949a1552621c77a40981aee869884a1b2ca364d7a13744efe91e1ee4f4f8"
     },
     {
       "path": "lean/SectorSimulation/QuadraticTerms.lean",
@@ -274,8 +274,8 @@
     },
     {
       "path": "lean/evidence/quadratic-mask-translation-audit.md",
-      "bytes": 1009,
-      "sha256": "5035f8d2479264f96af18d5f5214498f48045ce9ecf777f3d11941273324e2cb"
+      "bytes": 1002,
+      "sha256": "6ba103d329b39c2d0e120714ccddf0963fdb54d832c91b856ae2002fa5291795"
     },
     {
       "path": "lean/evidence/second-phase-shift-audit.md",
@@ -694,8 +694,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 3665,
-      "sha256": "441737f474a479c7af22bb7b2ab55f7dec4e930f97645f5a7251f24a02fc3288"
+      "bytes": 3600,
+      "sha256": "f6e0cf761f031815366167d1da7729cc85f880ecb2c4388b3338cf30db8ae18e"
     },
     {
       "path": "tools/check_metadata.py",
