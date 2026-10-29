@@ -6147,6 +6147,42 @@
       ],
       "build_audit_receipt": "lean/evidence/raw-descriptor-normalization.md",
       "unresolved_bridge": "Prove full raw-validator preservation and original-input rejection, Python implementation refinement, text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "validated-raw-normalization-normalizeAfterRawValidation_rejects",
+      "section": "2",
+      "target": "SectorSimulation.normalizeAfterRawValidation_rejects",
+      "assumptions": "Existing Lean raw descriptor validator and normalized raw descriptor.",
+      "quantifiers": "All raw descriptors and applicable validated outputs.",
+      "statement": "The validation-first wrapper rejects if the raw validator rejects.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/validated-raw-normalization.md",
+      "unresolved_bridge": "Prove full normalized validator acceptance, actual Python correspondence, JSON parsing, native compiler, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "validated-raw-normalization-normalizeAfterRawValidation_accepts",
+      "section": "2",
+      "target": "SectorSimulation.normalizeAfterRawValidation_accepts",
+      "assumptions": "Existing Lean raw descriptor validator and normalized raw descriptor.",
+      "quantifiers": "All raw descriptors and applicable validated outputs.",
+      "statement": "The validation-first wrapper returns the normalized raw descriptor if raw validation succeeds.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/validated-raw-normalization.md",
+      "unresolved_bridge": "Prove full normalized validator acceptance, actual Python correspondence, JSON parsing, native compiler, circuit-to-sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

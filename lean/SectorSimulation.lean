@@ -192,3 +192,5 @@ import SectorSimulation.MaskCountParity
 import SectorSimulation.CanonicalMaskNormalization
 
 import SectorSimulation.RawDescriptorNormalization
+
+import SectorSimulation.ValidatedRawNormalization

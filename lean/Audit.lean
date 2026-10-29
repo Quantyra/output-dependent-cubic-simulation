@@ -1045,3 +1045,9 @@ import SectorSimulation
 
 #check SectorSimulation.normalizedRaw_degreeChecks
 #print axioms SectorSimulation.normalizedRaw_degreeChecks
+
+#check SectorSimulation.normalizeAfterRawValidation_rejects
+#print axioms SectorSimulation.normalizeAfterRawValidation_rejects
+
+#check SectorSimulation.normalizeAfterRawValidation_accepts
+#print axioms SectorSimulation.normalizeAfterRawValidation_accepts
