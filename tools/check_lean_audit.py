@@ -38,6 +38,11 @@ EXPECTED = {
     'SectorSimulation.evalCubicDerivativeTerms': {'propext'},
     'SectorSimulation.cubicMaskDerivativeTerms_correct': {'propext', 'Quot.sound'},
     'SectorSimulation.cubicPhaseDerivativeTerms_correct': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalPhase_cons': {'propext'},
+    'SectorSimulation.evalMonomial_singletonMask': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalMonomial_pairMask': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalQuadraticTerm_mask': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalQuadraticTerms_bitMasks': {'propext', 'Quot.sound'},
 }
 
 

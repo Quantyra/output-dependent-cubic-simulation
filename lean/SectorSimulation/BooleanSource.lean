@@ -118,6 +118,11 @@ theorem evalPhase_append {n : Nat} (p q : PhaseANF n) (x : BinaryVector n) :
   rw [List.foldl_append]
   exact phaseFold_from q x (p.foldl (fun acc m => Bool.xor acc (evalMonomial m x)) false)
 
+/-- Evaluating a phase list starts with its first monomial, then the tail. -/
+theorem evalPhase_cons {n : Nat} (m : Monomial n) (p : PhaseANF n) (x : BinaryVector n) :
+    evalPhase (m :: p) x = Bool.xor (evalMonomial m x) (evalPhase p x) := by
+  simpa [evalPhase] using phaseFold_from p x (evalMonomial m x)
+
 /-- Differentiation distributes over the actual represented ANF concatenation. -/
 theorem phaseDerivative_append {n : Nat} (p q : PhaseANF n)
     (shift : BinaryVector n → BinaryVector n) (x : BinaryVector n) :

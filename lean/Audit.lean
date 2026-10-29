@@ -68,3 +68,18 @@ import SectorSimulation
 #print axioms SectorSimulation.cubicMaskDerivativeTerms_correct
 #check SectorSimulation.cubicPhaseDerivativeTerms_correct
 #print axioms SectorSimulation.cubicPhaseDerivativeTerms_correct
+
+#check SectorSimulation.evalPhase_cons
+#print axioms SectorSimulation.evalPhase_cons
+
+#check SectorSimulation.evalMonomial_singletonMask
+#print axioms SectorSimulation.evalMonomial_singletonMask
+
+#check SectorSimulation.evalMonomial_pairMask
+#print axioms SectorSimulation.evalMonomial_pairMask
+
+#check SectorSimulation.evalQuadraticTerm_mask
+#print axioms SectorSimulation.evalQuadraticTerm_mask
+
+#check SectorSimulation.evalQuadraticTerms_bitMasks
+#print axioms SectorSimulation.evalQuadraticTerms_bitMasks

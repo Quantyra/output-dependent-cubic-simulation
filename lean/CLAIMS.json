@@ -869,6 +869,85 @@
       ],
       "build_audit_receipt": "lean/evidence/cubic-phase-terms-audit.md",
       "unresolved_bridge": "Translate auxiliary terms into the paper's bit-mask ANF and prove the output mask degree/cost; recover the output shift from literal circuit decoding and prove Walsh/circuit/sector identities."
+    },
+    {
+      "id": "phase-cons",
+      "section": "2",
+      "target": "SectorSimulation.evalPhase_cons",
+      "assumptions": "Finite Boolean vectors and the explicit quadratic term and source bit-mask representations.",
+      "quantifiers": "All finite dimensions, terms and inputs as stated in the declaration.",
+      "statement": "Evaluation of a phase list is the XOR of its first monomial and its remaining phase.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/quadratic-mask-translation-audit.md",
+      "unresolved_bridge": "Prove the degree bound on each generated mask, compose with the phase derivative construction, establish cost and native circuit/sector semantics."
+    },
+    {
+      "id": "singleton-mask-evaluation",
+      "section": "2",
+      "target": "SectorSimulation.evalMonomial_singletonMask",
+      "assumptions": "Finite Boolean vectors and the explicit quadratic term and source bit-mask representations.",
+      "quantifiers": "All finite dimensions, terms and inputs as stated in the declaration.",
+      "statement": "A singleton source mask evaluates to its selected Boolean coordinate.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/quadratic-mask-translation-audit.md",
+      "unresolved_bridge": "Prove the degree bound on each generated mask, compose with the phase derivative construction, establish cost and native circuit/sector semantics."
+    },
+    {
+      "id": "pair-mask-evaluation",
+      "section": "2",
+      "target": "SectorSimulation.evalMonomial_pairMask",
+      "assumptions": "Finite Boolean vectors and the explicit quadratic term and source bit-mask representations.",
+      "quantifiers": "All finite dimensions, terms and inputs as stated in the declaration.",
+      "statement": "A two-coordinate source mask evaluates to the conjunction of its coordinates, including repeated coordinates.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/quadratic-mask-translation-audit.md",
+      "unresolved_bridge": "Prove the degree bound on each generated mask, compose with the phase derivative construction, establish cost and native circuit/sector semantics."
+    },
+    {
+      "id": "quadratic-term-mask-evaluation",
+      "section": "2",
+      "target": "SectorSimulation.evalQuadraticTerm_mask",
+      "assumptions": "Finite Boolean vectors and the explicit quadratic term and source bit-mask representations.",
+      "quantifiers": "All finite dimensions, terms and inputs as stated in the declaration.",
+      "statement": "The source mask constructed from a quadratic term preserves its evaluation.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/quadratic-mask-translation-audit.md",
+      "unresolved_bridge": "Prove the degree bound on each generated mask, compose with the phase derivative construction, establish cost and native circuit/sector semantics."
+    },
+    {
+      "id": "quadratic-terms-mask-evaluation",
+      "section": "2",
+      "target": "SectorSimulation.evalQuadraticTerms_bitMasks",
+      "assumptions": "Finite Boolean vectors and the explicit quadratic term and source bit-mask representations.",
+      "quantifiers": "All finite dimensions, terms and inputs as stated in the declaration.",
+      "statement": "Mapping the actual quadratic term list to source bit masks preserves evaluation of the entire list.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/quadratic-mask-translation-audit.md",
+      "unresolved_bridge": "Prove the degree bound on each generated mask, compose with the phase derivative construction, establish cost and native circuit/sector semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",
