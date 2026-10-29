@@ -1,0 +1,30 @@
+name: Lean helper checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      MATHLIB_NO_CACHE_ON_UPDATE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64
+        with:
+          lake-package-directory: lean
+          use-mathlib-cache: 'false'
+          use-github-cache: 'false'
+          test: 'false'
+          lint: 'false'
+      - name: Audit helper axioms
+        shell: bash
+        run: |
+          set -o pipefail
+          cd lean
+          lake env lean Audit.lean | tee ../lean-audit.txt
+          cd ..
+          python3 tools/check_lean_audit.py lean-audit.txt

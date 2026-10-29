@@ -13,6 +13,11 @@
       "sha256": "c79b1dd108d68ce9def9870316de534120b16c94db67875cc06dfc40db8c5f4f"
     },
     {
+      "path": ".github/workflows/lean.yml",
+      "bytes": 798,
+      "sha256": "5e3347442da66580eea48db2a5a60c705900b4470139c6fb0b62ed4499318ded"
+    },
+    {
       "path": ".gitignore",
       "bytes": 87,
       "sha256": "ff2d80f1e486af2426b05ced3c403624f147a53dd0b72e8a9e49819ffe6b35d6"
@@ -571,6 +576,11 @@
       "path": "tools/check_claims.py",
       "bytes": 1987,
       "sha256": "bbb889b603158a1523867c432cde149e59f058455eca3b0ad2779d0d8095c625"
+    },
+    {
+      "path": "tools/check_lean_audit.py",
+      "bytes": 1168,
+      "sha256": "668fabcdc149fb56aa76a5814ae1cbb41a83f5e965cccfccabe17bf4770e6ef8"
     },
     {
       "path": "tools/check_metadata.py",

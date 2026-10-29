@@ -1,0 +1,29 @@
+"""Check exact Lean helper axiom reports against the allowed baseline."""
+import re
+import sys
+from pathlib import Path
+
+EXPECTED = {
+    'SectorSimulation.booleanDerivative_shift_invariant': set(),
+    'SectorSimulation.binaryShift_involutive': {'Quot.sound'},
+    'SectorSimulation.binaryDerivative_shift_invariant': {'Quot.sound'},
+}
+
+
+def main():
+    if len(sys.argv) != 2:
+        raise SystemExit('usage: python tools/check_lean_audit.py AUDIT_OUTPUT')
+    output = Path(sys.argv[1]).read_text(encoding='utf-8')
+    reports = re.findall(r"'([^']+)' (?:does not depend on any axioms|depends on axioms: \[([^\]]*)\])", output)
+    assert len(reports) == len(EXPECTED), f'Unexpected number of reports: {reports}'
+    found = {}
+    for name, axioms in reports:
+        assert name not in found, f'Duplicate axiom report: {name}'
+        found[name] = {a.strip() for a in axioms.split(',') if a.strip()}
+    assert found == EXPECTED, f'Axiom baseline mismatch: {found}'
+    assert 'sorryAx' not in output, 'Unproved Lean axiom detected'
+    print('Lean helper axiom audit passed; this does not certify a manuscript theorem.')
+
+
+if __name__ == '__main__':
+    main()
