@@ -1150,3 +1150,30 @@ import SectorSimulation
 
 #check SectorSimulation.hadamardKernel_sum
 #print axioms SectorSimulation.hadamardKernel_sum
+
+#check SectorSimulation.uniqueList_mem
+#print axioms SectorSimulation.uniqueList_mem
+
+#check SectorSimulation.uniqueList_nodup
+#print axioms SectorSimulation.uniqueList_nodup
+
+#check SectorSimulation.binaryBasis_complete
+#print axioms SectorSimulation.binaryBasis_complete
+
+#check SectorSimulation.binaryBasis_nodup
+#print axioms SectorSimulation.binaryBasis_nodup
+
+#check SectorSimulation.exactZero_add
+#print axioms SectorSimulation.exactZero_add
+
+#check SectorSimulation.basisSum_absent
+#print axioms SectorSimulation.basisSum_absent
+
+#check SectorSimulation.basisSum_present
+#print axioms SectorSimulation.basisSum_present
+
+#check SectorSimulation.binaryBasis_expansion
+#print axioms SectorSimulation.binaryBasis_expansion
+
+#check SectorSimulation.hadamardKernel_basisExpansion
+#print axioms SectorSimulation.hadamardKernel_basisExpansion

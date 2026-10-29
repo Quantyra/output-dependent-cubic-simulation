@@ -208,3 +208,5 @@ import SectorSimulation.ExactDistributivity
 import SectorSimulation.HadamardKernelLinearity
 
 import SectorSimulation.HadamardFiniteSums
+
+import SectorSimulation.HadamardBasisExpansion

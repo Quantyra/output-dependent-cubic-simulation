@@ -6803,6 +6803,171 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-finite-sums.md",
       "unresolved_bridge": "Construct the basis decomposition and closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-uniqueList_mem",
+      "section": "2",
+      "target": "SectorSimulation.uniqueList_mem",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "The generic duplicate-removal list preserves membership.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-uniqueList_nodup",
+      "section": "2",
+      "target": "SectorSimulation.uniqueList_nodup",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "The generic duplicate-removal list contains no duplicates.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-binaryBasis_complete",
+      "section": "2",
+      "target": "SectorSimulation.binaryBasis_complete",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "The explicit deduplicated binary basis contains every binary vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-binaryBasis_nodup",
+      "section": "2",
+      "target": "SectorSimulation.binaryBasis_nodup",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "The explicit binary basis has no duplicates.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-exactZero_add",
+      "section": "2",
+      "target": "SectorSimulation.exactZero_add",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "Adding exact zero on the left preserves an exact amplitude.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-basisSum_absent",
+      "section": "2",
+      "target": "SectorSimulation.basisSum_absent",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "A point-supported basis sum is zero when the point is absent.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-basisSum_present",
+      "section": "2",
+      "target": "SectorSimulation.basisSum_present",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "A point-supported basis sum recovers the amplitude when its point occurs once.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-binaryBasis_expansion",
+      "section": "2",
+      "target": "SectorSimulation.binaryBasis_expansion",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "Every finite binary exact-amplitude function equals its point-supported basis expansion.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-expansion-hadamardKernel_basisExpansion",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_basisExpansion",
+      "assumptions": "Lean finite Boolean vectors, explicit exhaustive deduplicated basis and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable finite widths, finite lists, vectors, wire lists and exact amplitude functions.",
+      "statement": "The recursive Hadamard kernel equals the finite sum of its point-supported basis contributions.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-expansion.md",
+      "unresolved_bridge": "Derive individual Walsh-character basis outputs and the closed normalized Walsh sum, complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -432,6 +432,15 @@ EXPECTED = {
     'SectorSimulation.exactMul_zero': {'Classical.choice', 'Quot.sound', 'propext'},
     'SectorSimulation.hadamardKernel_zero': {'Classical.choice', 'Quot.sound', 'propext'},
     'SectorSimulation.hadamardKernel_sum': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.uniqueList_mem': {'propext'},
+    'SectorSimulation.uniqueList_nodup': {'propext'},
+    'SectorSimulation.binaryBasis_complete': {'propext', 'Quot.sound'},
+    'SectorSimulation.binaryBasis_nodup': {'propext', 'Quot.sound'},
+    'SectorSimulation.exactZero_add': {'Quot.sound', 'propext', 'Classical.choice'},
+    'SectorSimulation.basisSum_absent': {'Quot.sound', 'propext', 'Classical.choice'},
+    'SectorSimulation.basisSum_present': {'Quot.sound', 'propext', 'Classical.choice'},
+    'SectorSimulation.binaryBasis_expansion': {'Quot.sound', 'propext', 'Classical.choice'},
+    'SectorSimulation.hadamardKernel_basisExpansion': {'Quot.sound', 'propext', 'Classical.choice'},
 }
 
 
