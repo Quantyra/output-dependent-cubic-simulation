@@ -1,0 +1,7 @@
+# Standard complex interpretation of modeled Fourier replay
+
+Target: section 2 of https://doi.org/10.5281/zenodo.23754698. Source `lean/SectorSimulation/ComplexSemantics.lean` SHA-256 `8cbca8cf48877752c12b60f2866a68550d9854b980a992c6c8b03a8928d964f4`.
+
+The proof is derived from research-branch commit `adac8c7`, checked on clean [CI 40959491098](https://github.com/Quantyra/output-dependent-cubic-simulation/actions/runs/40959491098), with its 18 exact axiom reports checked in [CI 40959885662](https://github.com/Quantyra/output-dependent-cubic-simulation/actions/runs/40959885662). They depend only on `propext`, `Classical.choice`, and `Quot.sound`. A further literal-normalization theorem passed [CI 40960044942](https://github.com/Quantyra/output-dependent-cubic-simulation/actions/runs/40960044942). The quotient map is well-defined, preserves addition, multiplication, negation, zero and one, and identifies the modeled Hadamard factor with the positive real square-root expression. For successful Gaussian programs the modeled Python-ordered replay has the complex signed Fourier sum; Lean proves its scale equals the manuscript real power `2^(-n/2)`, including width zero.
+
+This is a complex interpretation, not yet a proof that the map is injective or that actual Python execution refines the modeled records. It does not derive the physical output, quadratic Walsh-support, sector, estimator or complexity claims. No labeled paper theorem is certified.

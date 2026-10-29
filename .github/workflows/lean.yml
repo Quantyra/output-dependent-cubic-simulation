@@ -16,10 +16,16 @@ jobs:
       - uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64
         with:
           lake-package-directory: lean
+          build: 'false'
           use-mathlib-cache: 'false'
           use-github-cache: 'false'
           test: 'false'
           lint: 'false'
+      - name: Fetch complex proof dependencies
+        run: python3 tools/prepare_mathlib_complex_cache.py
+      - name: Build Lean project
+        working-directory: lean
+        run: lake build
       - name: Audit helper axioms
         shell: bash
         run: |

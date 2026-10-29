@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/lean.yml",
-      "bytes": 1679,
-      "sha256": "1a1839a27ac0edb4106c5ef6680ff117a149c81f41bc1ad0c3e5283c6d9291dc"
+      "bytes": 1900,
+      "sha256": "63d0fa8295893b67182e20457b9c812649e32b5d94d55f7fbd0c70a4b90bae64"
     },
     {
       "path": ".gitignore",
@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 50934,
-      "sha256": "245c3af53c8d1bf2b9ee89d9037f853dd53870a074fe748458525e38d6c6d3fd"
+      "bytes": 52819,
+      "sha256": "b7f5d545d6d3502e116a638a4bb57f037da5ba69ad97557dd1a1677a7d847242"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 421747,
-      "sha256": "47592c82237ffd173e7f7e787798d8407c3b273944b1aa770f09d7878460d47d"
+      "bytes": 441350,
+      "sha256": "28e0ac3ff944683628a4541818c26e2baf0c1fca73813939792c38eae2923551"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 5305,
-      "sha256": "9b6d4b527ae02fb20930727ab91c42ab684452dfddecb74d17ed52d3677e8f58"
+      "bytes": 5347,
+      "sha256": "5e6f47527d2aacd47539dae27871ed60ea892f6e9852c6e7ad2ff7c516b124bf"
     },
     {
       "path": "lean/SectorSimulation/AsciiDescriptorEncode.lean",
@@ -216,6 +216,11 @@
       "path": "lean/SectorSimulation/CombinedPhaseNative.lean",
       "bytes": 2925,
       "sha256": "34844db2880bef4b331b1fbcab39213c19dc41fcf5d9e40f1464b3369fbd45ff"
+    },
+    {
+      "path": "lean/SectorSimulation/ComplexSemantics.lean",
+      "bytes": 8268,
+      "sha256": "8cbca8cf48877752c12b60f2866a68550d9854b980a992c6c8b03a8928d964f4"
     },
     {
       "path": "lean/SectorSimulation/CubicDerivativeANF.lean",
@@ -836,6 +841,11 @@
       "path": "lean/evidence/combined-phase-native-audit.md",
       "bytes": 1081,
       "sha256": "a0aac31e509efa8a9d047a2c280f060f992280f056ac40a2f4650c48ad869c5a"
+    },
+    {
+      "path": "lean/evidence/complex-semantics.md",
+      "bytes": 1465,
+      "sha256": "f5d81ff99d8678f45a31d3e1fb0e05f3fe88815ad80a5c13e90ffc930a8685a2"
     },
     {
       "path": "lean/evidence/constant-phase-anchor.md",
@@ -1849,8 +1859,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 40461,
-      "sha256": "36b7b11b0c020adab75f2460b1ed53cc9c65d4571625c81862cceaa147d0e7c4"
+      "bytes": 42220,
+      "sha256": "f2ba9ae3200f9598593c91740d24bba22d4eebb0e9fd3848f472b9389e29d19a"
     },
     {
       "path": "tools/check_metadata.py",
@@ -1876,6 +1886,11 @@
       "path": "tools/manifest.py",
       "bytes": 884,
       "sha256": "a4d908ff20d16d7fdb47aa0c611a2a7792cbf7fc2d8d5738792117ebc19472f4"
+    },
+    {
+      "path": "tools/prepare_mathlib_complex_cache.py",
+      "bytes": 905,
+      "sha256": "7fbd54ea1effad83fd01482f03dff427016acc2405232f3125cd76699f566c7a"
     },
     {
       "path": "tools/reproduce.py",

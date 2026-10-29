@@ -1300,3 +1300,61 @@ import SectorSimulation
 
 #check SectorSimulation.nativePythonFourier_normalized_sum
 #print axioms SectorSimulation.nativePythonFourier_normalized_sum
+
+
+#check SectorSimulation.standardOmega_fourth
+#print axioms SectorSimulation.standardOmega_fourth
+
+#check SectorSimulation.cycloInterpret_mul
+#print axioms SectorSimulation.cycloInterpret_mul
+
+#check SectorSimulation.cycloInterpret_scale
+#print axioms SectorSimulation.cycloInterpret_scale
+
+#check SectorSimulation.dyadicInterpret_congr
+#print axioms SectorSimulation.dyadicInterpret_congr
+
+#check SectorSimulation.cycloInterpret_add
+#print axioms SectorSimulation.cycloInterpret_add
+
+#check SectorSimulation.dyadicInterpret_mul
+#print axioms SectorSimulation.dyadicInterpret_mul
+
+#check SectorSimulation.dyadicInterpret_add
+#print axioms SectorSimulation.dyadicInterpret_add
+
+#check SectorSimulation.exactComplex_add
+#print axioms SectorSimulation.exactComplex_add
+
+#check SectorSimulation.exactComplex_mul
+#print axioms SectorSimulation.exactComplex_mul
+
+#check SectorSimulation.exactComplex_one
+#print axioms SectorSimulation.exactComplex_one
+
+#check SectorSimulation.exactComplex_hadamard
+#print axioms SectorSimulation.exactComplex_hadamard
+
+#check SectorSimulation.exactComplex_iterateHadamardScale
+#print axioms SectorSimulation.exactComplex_iterateHadamardScale
+
+#check SectorSimulation.exactComplex_zero
+#print axioms SectorSimulation.exactComplex_zero
+
+#check SectorSimulation.exactComplex_neg
+#print axioms SectorSimulation.exactComplex_neg
+
+#check SectorSimulation.exactComplex_signed
+#print axioms SectorSimulation.exactComplex_signed
+
+#check SectorSimulation.exactComplex_foldr
+#print axioms SectorSimulation.exactComplex_foldr
+
+#check SectorSimulation.nativePythonFourier_complex_sum
+#print axioms SectorSimulation.nativePythonFourier_complex_sum
+
+#check SectorSimulation.realFourierScale_rpow
+#print axioms SectorSimulation.realFourierScale_rpow
+
+#check SectorSimulation.nativePythonFourier_paper_kernel
+#print axioms SectorSimulation.nativePythonFourier_paper_kernel

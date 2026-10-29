@@ -7718,6 +7718,367 @@
       ],
       "build_audit_receipt": "lean/evidence/fourier-normalization.md",
       "unresolved_bridge": "Identify the exact scalar with positive standard real 2^(-n/2), prove complex and Python refinement, quadratic support, sector identities and costs."
+    },
+    {
+      "id": "complex-semantics-standardOmega_fourth",
+      "section": "2",
+      "target": "SectorSimulation.standardOmega_fourth",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "The selected standard complex eighth root has fourth power minus one.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-cycloInterpret_mul",
+      "section": "2",
+      "target": "SectorSimulation.cycloInterpret_mul",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Cyclotomic multiplication is preserved by evaluation at a complex fourth root of minus one.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-cycloInterpret_scale",
+      "section": "2",
+      "target": "SectorSimulation.cycloInterpret_scale",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Cyclotomic integer scaling is preserved by complex evaluation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-dyadicInterpret_congr",
+      "section": "2",
+      "target": "SectorSimulation.dyadicInterpret_congr",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Equivalent dyadic representations have the same standard complex value.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-cycloInterpret_add",
+      "section": "2",
+      "target": "SectorSimulation.cycloInterpret_add",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Cyclotomic addition is preserved by complex evaluation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-dyadicInterpret_mul",
+      "section": "2",
+      "target": "SectorSimulation.dyadicInterpret_mul",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Dyadic multiplication is preserved by complex interpretation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-dyadicInterpret_add",
+      "section": "2",
+      "target": "SectorSimulation.dyadicInterpret_add",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Dyadic addition is preserved by complex interpretation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_add",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_add",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Complex interpretation preserves exact quotient addition.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_mul",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_mul",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Complex interpretation preserves exact quotient multiplication.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_one",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_one",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Complex interpretation maps exact one to complex one.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_hadamard",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_hadamard",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Complex interpretation maps the exact Hadamard factor to the positive square-root expression.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_iterateHadamardScale",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_iterateHadamardScale",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Repeated exact Hadamard scaling maps to the corresponding complex power.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_zero",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_zero",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Complex interpretation maps exact zero to complex zero.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_neg",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_neg",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Complex interpretation preserves exact negation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_signed",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_signed",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Complex interpretation preserves a Boolean-controlled exact sign.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-exactComplex_foldr",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_foldr",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Complex interpretation preserves finite exact-amplitude sums.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-nativePythonFourier_complex_sum",
+      "section": "2",
+      "target": "SectorSimulation.nativePythonFourier_complex_sum",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Successful modeled native Fourier replay has the signed complex Fourier sum with the positive square-root normalization.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-realFourierScale_rpow",
+      "section": "2",
+      "target": "SectorSimulation.realFourierScale_rpow",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "The positive square-root normalization equals the manuscript real-power 2^(-n/2).",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
+    },
+    {
+      "id": "complex-semantics-nativePythonFourier_paper_kernel",
+      "section": "2",
+      "target": "SectorSimulation.nativePythonFourier_paper_kernel",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Successful modeled native Fourier replay has the standard complex Fourier sum with the manuscript real-power normalization and binary pairing sign.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/complex-semantics.md",
+      "unresolved_bridge": "Prove actual Python refinement and physical circuit/output semantics, quadratic Walsh support, sector identities, estimator and resource costs; prove injectivity if required."
     }
   ],
   "paper_source": "manuscript/main.tex",
