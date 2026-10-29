@@ -219,6 +219,11 @@ EXPECTED = {
     'SectorSimulation.exactNative_quadratic_phase': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.toffoliBasisReplayCheck_true': {'propext'},
     'SectorSimulation.toffoliBasisReplay_correct': {'propext', 'Quot.sound'},
+    'SectorSimulation.sharedHadamard_add': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedCNOT_add': set(),
+    'SectorSimulation.sharedX_add': set(),
+    'SectorSimulation.sharedZ_add': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedT_add': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

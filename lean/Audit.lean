@@ -610,3 +610,18 @@ import SectorSimulation
 
 #check SectorSimulation.toffoliBasisReplay_correct
 #print axioms SectorSimulation.toffoliBasisReplay_correct
+
+#check SectorSimulation.sharedHadamard_add
+#print axioms SectorSimulation.sharedHadamard_add
+
+#check SectorSimulation.sharedCNOT_add
+#print axioms SectorSimulation.sharedCNOT_add
+
+#check SectorSimulation.sharedX_add
+#print axioms SectorSimulation.sharedX_add
+
+#check SectorSimulation.sharedZ_add
+#print axioms SectorSimulation.sharedZ_add
+
+#check SectorSimulation.sharedT_add
+#print axioms SectorSimulation.sharedT_add

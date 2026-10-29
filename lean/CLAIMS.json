@@ -3191,6 +3191,83 @@
       ],
       "build_audit_receipt": "lean/evidence/toffoli-basis-replay-audit.md",
       "unresolved_bridge": "Prove general-state linearity and arbitrary-wire relabeling, complex embedding, Python list equivalence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "exact-gate-add-sharedHadamard_add",
+      "section": "2",
+      "target": "SectorSimulation.sharedHadamard_add",
+      "assumptions": "Exact shared-denominator states whose denominator exponents are equal; modeled native gate action.",
+      "quantifiers": "All finite dimensions, applicable wires and represented states.",
+      "statement": "The exact Hadamard action preserves addition of states with equal denominator exponents.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-gate-linearity-audit.md",
+      "unresolved_bridge": "Prove replay-wide linearity, arbitrary-state Toffoli action, wire relabeling, complex embedding, Python equivalence and manuscript theorems."
+    },
+    {
+      "id": "exact-gate-add-sharedCNOT_add",
+      "section": "2",
+      "target": "SectorSimulation.sharedCNOT_add",
+      "assumptions": "Exact shared-denominator states whose denominator exponents are equal; modeled native gate action.",
+      "quantifiers": "All finite dimensions, applicable wires and represented states.",
+      "statement": "The exact CNOT action preserves addition of states with equal denominator exponents.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/exact-gate-linearity-audit.md",
+      "unresolved_bridge": "Prove replay-wide linearity, arbitrary-state Toffoli action, wire relabeling, complex embedding, Python equivalence and manuscript theorems."
+    },
+    {
+      "id": "exact-gate-add-sharedX_add",
+      "section": "2",
+      "target": "SectorSimulation.sharedX_add",
+      "assumptions": "Exact shared-denominator states whose denominator exponents are equal; modeled native gate action.",
+      "quantifiers": "All finite dimensions, applicable wires and represented states.",
+      "statement": "The exact X action preserves addition of states with equal denominator exponents.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/exact-gate-linearity-audit.md",
+      "unresolved_bridge": "Prove replay-wide linearity, arbitrary-state Toffoli action, wire relabeling, complex embedding, Python equivalence and manuscript theorems."
+    },
+    {
+      "id": "exact-gate-add-sharedZ_add",
+      "section": "2",
+      "target": "SectorSimulation.sharedZ_add",
+      "assumptions": "Exact shared-denominator states whose denominator exponents are equal; modeled native gate action.",
+      "quantifiers": "All finite dimensions, applicable wires and represented states.",
+      "statement": "The exact Z action preserves addition of states with equal denominator exponents.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-gate-linearity-audit.md",
+      "unresolved_bridge": "Prove replay-wide linearity, arbitrary-state Toffoli action, wire relabeling, complex embedding, Python equivalence and manuscript theorems."
+    },
+    {
+      "id": "exact-gate-add-sharedT_add",
+      "section": "2",
+      "target": "SectorSimulation.sharedT_add",
+      "assumptions": "Exact shared-denominator states whose denominator exponents are equal; modeled native gate action.",
+      "quantifiers": "All finite dimensions, applicable wires and represented states.",
+      "statement": "The exact T and TDG actions preserve addition of states with equal denominator exponents.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-gate-linearity-audit.md",
+      "unresolved_bridge": "Prove replay-wide linearity, arbitrary-state Toffoli action, wire relabeling, complex embedding, Python equivalence and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
