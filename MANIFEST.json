@@ -133,6 +133,11 @@
       "sha256": "2f1a54962b77c4c7aebfad23a5fa984a150ee909ead631448f80c4d9a559cc97"
     },
     {
+      "path": "lean/SEMANTICS.md",
+      "bytes": 5753,
+      "sha256": "d8a95f133fa064f1b4d862776aad88eaa83124dffdebcc263fcd1ee814d225a6"
+    },
+    {
       "path": "lean/SectorSimulation.lean",
       "bytes": 35,
       "sha256": "6a352c5b0b8ccd8cd1e604abb255ca7e13695288d89f9eeaea3629670307a3fa"
