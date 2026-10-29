@@ -296,3 +296,6 @@ import SectorSimulation
 
 #check SectorSimulation.encoded_header_length
 #print axioms SectorSimulation.encoded_header_length
+
+#check SectorSimulation.decode_header_bits_sound
+#print axioms SectorSimulation.decode_header_bits_sound

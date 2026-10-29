@@ -53,3 +53,5 @@ import SectorSimulation.SourceOutputPivot
 import SectorSimulation.SourceValidation
 
 import SectorSimulation.NativeHeaderBits
+
+import SectorSimulation.NativeHeaderSound

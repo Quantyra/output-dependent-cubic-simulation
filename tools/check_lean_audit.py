@@ -114,6 +114,7 @@ EXPECTED = {
     'SectorSimulation.validatedSourceOutputDerivative': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.decode_encode_header_bits': {'propext'},
     'SectorSimulation.encoded_header_length': {'propext'},
+    'SectorSimulation.decode_header_bits_sound': {'propext'},
 }
 
 
