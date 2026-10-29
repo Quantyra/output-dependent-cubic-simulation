@@ -3319,6 +3319,168 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-replay-addition-audit.md",
       "unresolved_bridge": "Prove coefficient homogeneity, arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-cyclo_mul_assoc",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_mul_assoc",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "Cyclotomic coefficient multiplication is associative.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-cyclo_mul_neg_right",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_mul_neg_right",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "Cyclotomic multiplication distributes over negation of its right operand.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-cyclo_mul_central",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_mul_central",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "Cyclotomic factors can exchange order in a nested product.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-sharedHadamard_scale",
+      "section": "2",
+      "target": "SectorSimulation.sharedHadamard_scale",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "The modeled Hadamard action preserves coefficient scaling.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-sharedCNOT_scale",
+      "section": "2",
+      "target": "SectorSimulation.sharedCNOT_scale",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "The modeled CNOT action preserves coefficient scaling.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-sharedX_scale",
+      "section": "2",
+      "target": "SectorSimulation.sharedX_scale",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "The modeled X action preserves coefficient scaling.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-sharedZ_scale",
+      "section": "2",
+      "target": "SectorSimulation.sharedZ_scale",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "The modeled Z action preserves coefficient scaling.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-sharedT_scale",
+      "section": "2",
+      "target": "SectorSimulation.sharedT_scale",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "The modeled T and inverse T actions preserve coefficient scaling.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-applyExactNative_scale",
+      "section": "2",
+      "target": "SectorSimulation.applyExactNative_scale",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "The exact native gate interpreter preserves coefficient scaling, including rejection.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-scale-replayExactNative_scale",
+      "section": "2",
+      "target": "SectorSimulation.replayExactNative_scale",
+      "assumptions": "Four-integer cyclotomic coefficients and the defined shared-denominator exact native interpreter.",
+      "quantifiers": "All coefficient values and, where applicable, finite dimensions, native gates or finite lists and represented states.",
+      "statement": "Exact native replay of any finite gate list preserves coefficient scaling, including rejection.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-scale-audit.md",
+      "unresolved_bridge": "Prove arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

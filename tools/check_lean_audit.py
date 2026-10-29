@@ -227,6 +227,16 @@ EXPECTED = {
     'SectorSimulation.applyExactNative_exponent': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.applyExactNative_add': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.replayExactNative_add': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cyclo_mul_assoc': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cyclo_mul_neg_right': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cyclo_mul_central': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHadamard_scale': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedCNOT_scale': set(),
+    'SectorSimulation.sharedX_scale': set(),
+    'SectorSimulation.sharedZ_scale': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedT_scale': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.applyExactNative_scale': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.replayExactNative_scale': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

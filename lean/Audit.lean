@@ -634,3 +634,33 @@ import SectorSimulation
 
 #check SectorSimulation.replayExactNative_add
 #print axioms SectorSimulation.replayExactNative_add
+
+#check SectorSimulation.cyclo_mul_assoc
+#print axioms SectorSimulation.cyclo_mul_assoc
+
+#check SectorSimulation.cyclo_mul_neg_right
+#print axioms SectorSimulation.cyclo_mul_neg_right
+
+#check SectorSimulation.cyclo_mul_central
+#print axioms SectorSimulation.cyclo_mul_central
+
+#check SectorSimulation.sharedHadamard_scale
+#print axioms SectorSimulation.sharedHadamard_scale
+
+#check SectorSimulation.sharedCNOT_scale
+#print axioms SectorSimulation.sharedCNOT_scale
+
+#check SectorSimulation.sharedX_scale
+#print axioms SectorSimulation.sharedX_scale
+
+#check SectorSimulation.sharedZ_scale
+#print axioms SectorSimulation.sharedZ_scale
+
+#check SectorSimulation.sharedT_scale
+#print axioms SectorSimulation.sharedT_scale
+
+#check SectorSimulation.applyExactNative_scale
+#print axioms SectorSimulation.applyExactNative_scale
+
+#check SectorSimulation.replayExactNative_scale
+#print axioms SectorSimulation.replayExactNative_scale

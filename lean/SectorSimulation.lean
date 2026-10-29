@@ -119,3 +119,5 @@ import SectorSimulation.ToffoliBasisReplay
 import SectorSimulation.ExactGateLinearity
 
 import SectorSimulation.ExactReplayLinearity
+
+import SectorSimulation.CycloAssociativity
