@@ -30,4 +30,27 @@ theorem cubicMask_selected_shape {n : Nat} (m : Monomial n)
   apply list_length_le_three_shape
   simpa only [← monomialDegree_eq_selectedLength] using h
 
+/-- Evaluation of each extracted small support shape. -/
+theorem evalMonomial_selected_nil {n : Nat} (m : Monomial n) (x : BinaryVector n)
+    (h : selectedVariables m = []) : evalMonomial m x = true := by
+  rw [evalMonomial_selectedVariables, h]
+  rfl
+
+theorem evalMonomial_selected_one {n : Nat} (m : Monomial n) (x : BinaryVector n)
+    (i : Fin n) (h : selectedVariables m = [i]) : evalMonomial m x = x i := by
+  rw [evalMonomial_selectedVariables, h]
+  simp
+
+theorem evalMonomial_selected_two {n : Nat} (m : Monomial n) (x : BinaryVector n)
+    (i k : Fin n) (h : selectedVariables m = [i, k]) :
+    evalMonomial m x = (x i && x k) := by
+  rw [evalMonomial_selectedVariables, h]
+  simp
+
+theorem evalMonomial_selected_three {n : Nat} (m : Monomial n) (x : BinaryVector n)
+    (i k l : Fin n) (h : selectedVariables m = [i, k, l]) :
+    evalMonomial m x = (x i && x k && x l) := by
+  rw [evalMonomial_selectedVariables, h]
+  simp [Bool.and_assoc]
+
 end SectorSimulation

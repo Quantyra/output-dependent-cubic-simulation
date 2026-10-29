@@ -703,6 +703,82 @@
       ],
       "build_audit_receipt": "lean/evidence/support-shapes-audit.md",
       "unresolved_bridge": "Instantiate the coordinate difference identities on each extracted shape and construct the resulting quadratic bit-mask ANF, preserving multiplicities and lower terms."
+    },
+    {
+      "id": "mask-support-zero",
+      "section": "2",
+      "target": "SectorSimulation.evalMonomial_selected_nil",
+      "assumptions": "A finite bit-mask monomial whose selected-variable list equals the specified zero-, one-, two-, or three-index shape.",
+      "quantifiers": "All finite dimensions, masks, input vectors and indices of the stated shape.",
+      "statement": "If selectedVariables m is empty, evalMonomial m x is true.",
+      "dependencies": [
+        "mask-selected-product",
+        "cubic-mask-support-shape"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/support-evaluation-audit.md",
+      "unresolved_bridge": "Combine shape extraction, these evaluation identities and the coordinate derivative rules to construct and verify a degree-at-most-two output ANF."
+    },
+    {
+      "id": "mask-support-one",
+      "section": "2",
+      "target": "SectorSimulation.evalMonomial_selected_one",
+      "assumptions": "A finite bit-mask monomial whose selected-variable list equals the specified zero-, one-, two-, or three-index shape.",
+      "quantifiers": "All finite dimensions, masks, input vectors and indices of the stated shape.",
+      "statement": "If selectedVariables m is [i], evalMonomial m x = x i.",
+      "dependencies": [
+        "mask-selected-product",
+        "cubic-mask-support-shape"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/support-evaluation-audit.md",
+      "unresolved_bridge": "Combine shape extraction, these evaluation identities and the coordinate derivative rules to construct and verify a degree-at-most-two output ANF."
+    },
+    {
+      "id": "mask-support-two",
+      "section": "2",
+      "target": "SectorSimulation.evalMonomial_selected_two",
+      "assumptions": "A finite bit-mask monomial whose selected-variable list equals the specified zero-, one-, two-, or three-index shape.",
+      "quantifiers": "All finite dimensions, masks, input vectors and indices of the stated shape.",
+      "statement": "If selectedVariables m is [i,k], evalMonomial m x = x i AND x k.",
+      "dependencies": [
+        "mask-selected-product",
+        "cubic-mask-support-shape"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/support-evaluation-audit.md",
+      "unresolved_bridge": "Combine shape extraction, these evaluation identities and the coordinate derivative rules to construct and verify a degree-at-most-two output ANF."
+    },
+    {
+      "id": "mask-support-three",
+      "section": "2",
+      "target": "SectorSimulation.evalMonomial_selected_three",
+      "assumptions": "A finite bit-mask monomial whose selected-variable list equals the specified zero-, one-, two-, or three-index shape.",
+      "quantifiers": "All finite dimensions, masks, input vectors and indices of the stated shape.",
+      "statement": "If selectedVariables m is [i,k,l], evalMonomial m x = x i AND x k AND x l.",
+      "dependencies": [
+        "mask-selected-product",
+        "cubic-mask-support-shape"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/support-evaluation-audit.md",
+      "unresolved_bridge": "Combine shape extraction, these evaluation identities and the coordinate derivative rules to construct and verify a degree-at-most-two output ANF."
     }
   ],
   "paper_source": "manuscript/main.tex",

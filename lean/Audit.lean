@@ -46,3 +46,11 @@ import SectorSimulation
 #print axioms SectorSimulation.list_length_le_three_shape
 #check SectorSimulation.cubicMask_selected_shape
 #print axioms SectorSimulation.cubicMask_selected_shape
+#check SectorSimulation.evalMonomial_selected_nil
+#print axioms SectorSimulation.evalMonomial_selected_nil
+#check SectorSimulation.evalMonomial_selected_one
+#print axioms SectorSimulation.evalMonomial_selected_one
+#check SectorSimulation.evalMonomial_selected_two
+#print axioms SectorSimulation.evalMonomial_selected_two
+#check SectorSimulation.evalMonomial_selected_three
+#print axioms SectorSimulation.evalMonomial_selected_three

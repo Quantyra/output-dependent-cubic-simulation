@@ -27,6 +27,10 @@ EXPECTED = {
     'SectorSimulation.monomialDegree_eq_selectedLength': set(),
     'SectorSimulation.list_length_le_three_shape': {'propext'},
     'SectorSimulation.cubicMask_selected_shape': {'propext'},
+    'SectorSimulation.evalMonomial_selected_nil': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalMonomial_selected_one': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalMonomial_selected_two': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalMonomial_selected_three': {'propext', 'Quot.sound'},
 }
 
 
