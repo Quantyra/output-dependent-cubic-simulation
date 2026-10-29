@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/complex-embedding-probe.yml",
-      "bytes": 699,
-      "sha256": "c9b8a04749d6b64b4194bf6a6c987dd8d6689087f3b27bddbc9058bf57294cc7"
+      "bytes": 1365,
+      "sha256": "0f86ad7f0e32f782324084837ce8b6088c2cc130bd0557fe5563083ae860d2bc"
     },
     {
       "path": ".github/workflows/lean.yml",

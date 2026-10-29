@@ -15,10 +15,24 @@ jobs:
       - uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64
         with:
           lake-package-directory: lean
-          use-mathlib-cache: 'true'
+          use-mathlib-cache: 'false'
           use-github-cache: 'false'
           test: 'false'
           lint: 'false'
+      - name: Fetch only complex proof dependencies
+        working-directory: lean
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('.lake/packages/mathlib/Cache/Hashing.lean')
+          s = p.read_text(encoding='utf-8')
+          start = s.index('def roots : CacheM')
+          end = s.index('/-- Main API', start)
+          s = s[:start] + 'def roots : CacheM (Array (Prod Name FilePath)) := pure #[]\n\n' + s[end:]
+          p.write_text(s, encoding='utf-8')
+          PY
+          lake exe cache get Mathlib.Data.Complex.Basic Mathlib.Data.Real.Sqrt Mathlib.Analysis.SpecialFunctions.Pow.Real
       - name: Check exploratory complex embedding
         working-directory: lean
         run: lake env lean ComplexEmbeddingProbe.lean
