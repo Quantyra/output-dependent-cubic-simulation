@@ -1,6 +1,7 @@
 import SectorSimulation.FourierNormalization
 import Mathlib.Data.Complex.Basic
 import Mathlib.Data.Real.Sqrt
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
 
 namespace SectorSimulation
 
@@ -160,5 +161,18 @@ theorem nativePythonFourier_complex_sum {n : Nat} (J : BinaryMatrix n)
   congr 2
   funext y acc
   rw [exactComplex_signed]
+
+
+/-- The manuscript normalization agrees with the verified positive square-root factor. -/
+theorem realFourierScale_rpow (n : Nat) :
+    (Real.sqrt 2 / 2)^n = (2 : ℝ) ^ (-(n : ℝ) / 2) := by
+  have hs : (Real.sqrt 2)^2 = (2 : ℝ) := Real.sq_sqrt (by norm_num)
+  have hne : Real.sqrt 2 ≠ 0 := by positivity
+  have hbase : Real.sqrt 2 / 2 = (Real.sqrt 2)⁻¹ := by
+    field_simp
+    nlinarith [hs]
+  rw [hbase, inv_pow]
+  have he : -(n : ℝ) / 2 = -((1 / 2 : ℝ) * n) := by ring
+  rw [he, Real.rpow_neg (by norm_num), Real.rpow_mul_natCast (by norm_num), ← Real.sqrt_eq_rpow]
 
 end SectorSimulation
