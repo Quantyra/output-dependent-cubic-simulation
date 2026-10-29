@@ -967,3 +967,9 @@ import SectorSimulation
 
 #check SectorSimulation.asciiSerializedValidDescriptor_has_recognizedBody
 #print axioms SectorSimulation.asciiSerializedValidDescriptor_has_recognizedBody
+
+#check SectorSimulation.evalPhase_perm
+#print axioms SectorSimulation.evalPhase_perm
+
+#check SectorSimulation.evalPhase_cancel_separated
+#print axioms SectorSimulation.evalPhase_cancel_separated

@@ -5663,6 +5663,41 @@
       ],
       "build_audit_receipt": "lean/evidence/ascii-descriptor-encode.md",
       "unresolved_bridge": "Construct descriptor JSON text and verify parser round trip and Python correspondence; prove physical Fourier and complex semantics, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-normalization-evalPhase_perm",
+      "section": "2",
+      "target": "SectorSimulation.evalPhase_perm",
+      "assumptions": "Finite Boolean ANF source representation.",
+      "quantifiers": "All finite widths, phase lists, masks and input vectors in the exported theorem.",
+      "statement": "Permutation of an ANF phase list preserves its value at every input.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-normalization.md",
+      "unresolved_bridge": "Prove Python toggle-set and sorting normalization, descriptor serialization and compiler correspondence, and the circuit-to-sector identities and costs."
+    },
+    {
+      "id": "phase-normalization-evalPhase_cancel_separated",
+      "section": "2",
+      "target": "SectorSimulation.evalPhase_cancel_separated",
+      "assumptions": "Finite Boolean ANF source representation.",
+      "quantifiers": "All finite widths, phase lists, masks and input vectors in the exported theorem.",
+      "statement": "Two equal ANF monomials at arbitrary positions cancel without changing phase evaluation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-normalization.md",
+      "unresolved_bridge": "Prove Python toggle-set and sorting normalization, descriptor serialization and compiler correspondence, and the circuit-to-sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

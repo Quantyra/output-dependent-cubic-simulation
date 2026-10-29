@@ -180,3 +180,5 @@ import SectorSimulation.ModeledRecognizerCompleteness
 import SectorSimulation.DescriptorJsonEncode
 
 import SectorSimulation.AsciiDescriptorEncode
+
+import SectorSimulation.PhaseNormalization

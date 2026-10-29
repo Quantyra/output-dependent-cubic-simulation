@@ -371,6 +371,8 @@ EXPECTED = {
     'SectorSimulation.serializedValidDescriptor_has_recognizedBody': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.asciiBytes_decode': {'propext', 'Quot.sound'},
     'SectorSimulation.asciiSerializedValidDescriptor_has_recognizedBody': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.evalPhase_perm': {'propext'},
+    'SectorSimulation.evalPhase_cancel_separated': {'propext', 'Quot.sound'},
 }
 
 
