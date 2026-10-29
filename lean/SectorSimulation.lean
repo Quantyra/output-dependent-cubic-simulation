@@ -155,3 +155,5 @@ import SectorSimulation.LowerPhaseNative
 import SectorSimulation.CombinedPhaseNative
 
 import SectorSimulation.CubicMaskCoverage
+
+import SectorSimulation.PhaseBlockCompiler

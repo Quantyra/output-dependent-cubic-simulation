@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/lean.yml",
-      "bytes": 1293,
-      "sha256": "6416a6931dbbce9890954ff993ecac063a742e60046ab2c27276053b3bf5ae80"
+      "bytes": 1424,
+      "sha256": "9ba865b1b8dfc9c985d4d1c65f71b30b1d6832a4a4af0b8146ee9c157a987458"
     },
     {
       "path": ".gitignore",
@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 32599,
-      "sha256": "b19add8223b55aac143a4343ef7c709d49e87427e7b9789f71cfdfaaec2084d7"
+      "bytes": 33381,
+      "sha256": "e161ba457df083c3b091225e2846e421674a9c2e1be25cab2d9dfd16cadd2d9a"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 257372,
-      "sha256": "b7f20921c3bb0ae6da204dcc8cd074368eba3e0507b4d3ab9384f4409208a6a9"
+      "bytes": 264371,
+      "sha256": "5b9fe5468fe7d6d03eda95f29010c60ae70efa7766a3668362e93ce7b7ae03b0"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -148,6 +148,11 @@
       "sha256": "8fa910f71f3ac60a409ef79590c1955b2d87af3faee9326c861dc141c300ca22"
     },
     {
+      "path": "lean/PhaseCompilerExamples.lean",
+      "bytes": 514,
+      "sha256": "d271384d8025cb46243ad00bfd7d5b896ba30b8d0c6abc139cc488dccc7fd902"
+    },
+    {
       "path": "lean/PivotExamples.lean",
       "bytes": 1513,
       "sha256": "cc85a7a378a006a6800a405a2b9a11b6af9c773db2c31c820ed7d2bc1f35c614"
@@ -159,8 +164,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 3602,
-      "sha256": "d49037e55c5c55e41ea927337eea32b4648f29ac1002991ad574674c0536cca8"
+      "bytes": 3646,
+      "sha256": "bbedd222148743b19834cab79e6d0cbe5f10e7d7afad3d99f6b6d7113b611579"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -456,6 +461,11 @@
       "path": "lean/SectorSimulation/NumericHeaderSound.lean",
       "bytes": 1191,
       "sha256": "b4492ba17e2b648f7c3dfc4166da7347b0f5679368a9b2cad46f87bc328d08f3"
+    },
+    {
+      "path": "lean/SectorSimulation/PhaseBlockCompiler.lean",
+      "bytes": 7886,
+      "sha256": "5b629fbb976b74b6ccf1bbc5fdb5a7b3de3f6c26a57917485d99637cffb15ead"
     },
     {
       "path": "lean/SectorSimulation/PhaseGateAmplitude.lean",
@@ -906,6 +916,11 @@
       "path": "lean/evidence/pair-mask-degree-audit.md",
       "bytes": 853,
       "sha256": "c770e66b52cb9bd70c3b745cf177a52c545b9e9b8fdff89377aa34d72b190785"
+    },
+    {
+      "path": "lean/evidence/phase-block-compiler-audit.md",
+      "bytes": 1066,
+      "sha256": "44e2feb16ca01c305560f0a66321db8bb4ae4ee32589f1501b371cb56df9e082"
     },
     {
       "path": "lean/evidence/phase-gate-amplitude-audit.md",
@@ -1454,8 +1469,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 25316,
-      "sha256": "c2b30a58a40efece62b64d37b27ce39d7aaef8565f6136c9ffc1e277329bcf77"
+      "bytes": 25943,
+      "sha256": "c1712b204d5f78b81cb2108517ac9bd3bd2a14426740ce330127d17660027640"
     },
     {
       "path": "tools/check_metadata.py",

@@ -4689,6 +4689,121 @@
       ],
       "build_audit_receipt": "lean/evidence/cubic-mask-coverage-audit.md",
       "unresolved_bridge": "Construct and verify an executable source-to-record compiler and its Python correspondence; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-block-compiler-compilePhaseMask_correct",
+      "section": "2",
+      "target": "SectorSimulation.compilePhaseMask_correct",
+      "assumptions": "The modeled Boolean mask, native interpreter and available anchor wire; phase masks have degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded phase lists, represented states and output vectors as applicable.",
+      "statement": "The executable mask compiler succeeds on a degree-at-most-three mask and returns a valid semantically equivalent phase block.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-block-compiler-audit.md",
+      "unresolved_bridge": "Establish Python compiler correspondence, zero-wire constant handling, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-block-compiler-compilePhaseBlocks_correct",
+      "section": "2",
+      "target": "SectorSimulation.compilePhaseBlocks_correct",
+      "assumptions": "The modeled Boolean mask, native interpreter and available anchor wire; phase masks have degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded phase lists, represented states and output vectors as applicable.",
+      "statement": "The executable phase-list compiler succeeds on degree-at-most-three masks and returns valid blocks with the same ANF evaluation.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-block-compiler-audit.md",
+      "unresolved_bridge": "Establish Python compiler correspondence, zero-wire constant handling, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-block-compiler-phaseBlock_records_correct",
+      "section": "2",
+      "target": "SectorSimulation.phaseBlock_records_correct",
+      "assumptions": "The modeled Boolean mask, native interpreter and available anchor wire; phase masks have degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded phase lists, represented states and output vectors as applicable.",
+      "statement": "Each valid phase block maps to native records with the corresponding modeled monomial sign.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-block-compiler-audit.md",
+      "unresolved_bridge": "Establish Python compiler correspondence, zero-wire constant handling, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-block-compiler-phaseBlockRecords_correct_from_equivalent",
+      "section": "2",
+      "target": "SectorSimulation.phaseBlockRecords_correct_from_equivalent",
+      "assumptions": "The modeled Boolean mask, native interpreter and available anchor wire; phase masks have degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded phase lists, represented states and output vectors as applicable.",
+      "statement": "Replay of valid block records from equivalent states matches the ideal phase block execution.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-block-compiler-audit.md",
+      "unresolved_bridge": "Establish Python compiler correspondence, zero-wire constant handling, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-block-compiler-idealPhaseBlocks_phase",
+      "section": "2",
+      "target": "SectorSimulation.idealPhaseBlocks_phase",
+      "assumptions": "The modeled Boolean mask, native interpreter and available anchor wire; phase masks have degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded phase lists, represented states and output vectors as applicable.",
+      "statement": "The ideal phase-block numerator equals the input numerator signed by its ANF evaluation.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-block-compiler-audit.md",
+      "unresolved_bridge": "Establish Python compiler correspondence, zero-wire constant handling, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-block-compiler-idealPhaseBlocks_exponent",
+      "section": "2",
+      "target": "SectorSimulation.idealPhaseBlocks_exponent",
+      "assumptions": "The modeled Boolean mask, native interpreter and available anchor wire; phase masks have degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded phase lists, represented states and output vectors as applicable.",
+      "statement": "Ideal phase-block execution preserves the shared denominator exponent.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-block-compiler-audit.md",
+      "unresolved_bridge": "Establish Python compiler correspondence, zero-wire constant handling, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "phase-block-compiler-compilePhaseRecords_correct",
+      "section": "2",
+      "target": "SectorSimulation.compilePhaseRecords_correct",
+      "assumptions": "The modeled Boolean mask, native interpreter and available anchor wire; phase masks have degree at most three where applicable.",
+      "quantifiers": "All finite dimensions with an available wire, degree-bounded phase lists, represented states and output vectors as applicable.",
+      "statement": "The executable phase compiler returns native records that replay successfully and implement the source ANF sign at every exact output amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-block-compiler-audit.md",
+      "unresolved_bridge": "Establish Python compiler correspondence, zero-wire constant handling, complex embedding, complete circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

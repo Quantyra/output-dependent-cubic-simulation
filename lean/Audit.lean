@@ -829,3 +829,18 @@ import SectorSimulation
 #print axioms SectorSimulation.cubicPhase_supported_blocks
 #check SectorSimulation.cubicPhase_native_exists
 #print axioms SectorSimulation.cubicPhase_native_exists
+
+#check SectorSimulation.compilePhaseMask_correct
+#print axioms SectorSimulation.compilePhaseMask_correct
+#check SectorSimulation.compilePhaseBlocks_correct
+#print axioms SectorSimulation.compilePhaseBlocks_correct
+#check SectorSimulation.phaseBlock_records_correct
+#print axioms SectorSimulation.phaseBlock_records_correct
+#check SectorSimulation.phaseBlockRecords_correct_from_equivalent
+#print axioms SectorSimulation.phaseBlockRecords_correct_from_equivalent
+#check SectorSimulation.idealPhaseBlocks_phase
+#print axioms SectorSimulation.idealPhaseBlocks_phase
+#check SectorSimulation.idealPhaseBlocks_exponent
+#print axioms SectorSimulation.idealPhaseBlocks_exponent
+#check SectorSimulation.compilePhaseRecords_correct
+#print axioms SectorSimulation.compilePhaseRecords_correct

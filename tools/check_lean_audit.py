@@ -311,6 +311,13 @@ EXPECTED = {
     'SectorSimulation.cubicMask_supported_block': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.cubicPhase_supported_blocks': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.cubicPhase_native_exists': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.compilePhaseMask_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.compilePhaseBlocks_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.phaseBlock_records_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.phaseBlockRecords_correct_from_equivalent': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.idealPhaseBlocks_phase': {'propext'},
+    'SectorSimulation.idealPhaseBlocks_exponent': {'propext'},
+    'SectorSimulation.compilePhaseRecords_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

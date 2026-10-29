@@ -43,3 +43,7 @@ jobs:
       - name: Check exact native replay examples
         working-directory: lean
         run: lake env lean ExactNativeExamples.lean
+
+      - name: Check phase compiler examples
+        working-directory: lean
+        run: lake env lean PhaseCompilerExamples.lean
