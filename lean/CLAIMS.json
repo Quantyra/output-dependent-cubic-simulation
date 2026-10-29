@@ -4316,6 +4316,87 @@
       ],
       "build_audit_receipt": "lean/evidence/mapped-native-cubic-audit.md",
       "unresolved_bridge": "Establish complete Python compiler and complex embedding correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-replay-sharedNeg_amplitude",
+      "section": "2",
+      "target": "SectorSimulation.sharedNeg_amplitude",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires for each cubic block where applicable.",
+      "quantifiers": "All finite dimensions, represented states, output vectors and finite valid cubic-block lists.",
+      "statement": "Negation of a represented state corresponds to negation of its exact amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-replay-audit.md",
+      "unresolved_bridge": "Relate the ideal cubic-sign layer to the manuscript phase encoding and full Python compiler; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-replay-sharedCubicSign_amplitude_congr",
+      "section": "2",
+      "target": "SectorSimulation.sharedCubicSign_amplitude_congr",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires for each cubic block where applicable.",
+      "quantifiers": "All finite dimensions, represented states, output vectors and finite valid cubic-block lists.",
+      "statement": "The modeled cubic sign preserves pointwise exact-amplitude equality.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-replay-audit.md",
+      "unresolved_bridge": "Relate the ideal cubic-sign layer to the manuscript phase encoding and full Python compiler; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-replay-replayExactNative_append",
+      "section": "2",
+      "target": "SectorSimulation.replayExactNative_append",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires for each cubic block where applicable.",
+      "quantifiers": "All finite dimensions, represented states, output vectors and finite valid cubic-block lists.",
+      "statement": "Native replay of concatenated record lists equals sequential option-valued replay.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-replay-audit.md",
+      "unresolved_bridge": "Relate the ideal cubic-sign layer to the manuscript phase encoding and full Python compiler; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-replay-nativeCubicLayer_correct_from_equivalent",
+      "section": "2",
+      "target": "SectorSimulation.nativeCubicLayer_correct_from_equivalent",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires for each cubic block where applicable.",
+      "quantifiers": "All finite dimensions, represented states, output vectors and finite valid cubic-block lists.",
+      "statement": "For amplitude-equivalent initial states, a finite mapped cubic-block layer succeeds and matches the ideal cubic-sign layer.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-replay-audit.md",
+      "unresolved_bridge": "Relate the ideal cubic-sign layer to the manuscript phase encoding and full Python compiler; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-replay-nativeCubicLayer_correct",
+      "section": "2",
+      "target": "SectorSimulation.nativeCubicLayer_correct",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires for each cubic block where applicable.",
+      "quantifiers": "All finite dimensions, represented states, output vectors and finite valid cubic-block lists.",
+      "statement": "For any represented initial state, a finite mapped cubic-block layer succeeds and matches the ideal cubic-sign layer at every output vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-replay-audit.md",
+      "unresolved_bridge": "Relate the ideal cubic-sign layer to the manuscript phase encoding and full Python compiler; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

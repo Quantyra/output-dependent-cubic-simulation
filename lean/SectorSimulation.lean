@@ -145,3 +145,5 @@ import SectorSimulation.MappedNativeToffoli
 import SectorSimulation.HadamardAmplitudeCongruence
 
 import SectorSimulation.MappedNativeCubic
+
+import SectorSimulation.CubicLayerReplay

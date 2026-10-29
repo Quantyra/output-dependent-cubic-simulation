@@ -778,3 +778,14 @@ import SectorSimulation
 #print axioms SectorSimulation.threeWireCubicProgram_action
 #check SectorSimulation.mappedNativeCubic_correct
 #print axioms SectorSimulation.mappedNativeCubic_correct
+
+#check SectorSimulation.sharedNeg_amplitude
+#print axioms SectorSimulation.sharedNeg_amplitude
+#check SectorSimulation.sharedCubicSign_amplitude_congr
+#print axioms SectorSimulation.sharedCubicSign_amplitude_congr
+#check SectorSimulation.replayExactNative_append
+#print axioms SectorSimulation.replayExactNative_append
+#check SectorSimulation.nativeCubicLayer_correct_from_equivalent
+#print axioms SectorSimulation.nativeCubicLayer_correct_from_equivalent
+#check SectorSimulation.nativeCubicLayer_correct
+#print axioms SectorSimulation.nativeCubicLayer_correct

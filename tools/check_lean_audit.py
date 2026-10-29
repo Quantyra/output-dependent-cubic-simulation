@@ -288,6 +288,11 @@ EXPECTED = {
     'SectorSimulation.threeWireCubicProgram_valid': {'propext', 'Quot.sound'},
     'SectorSimulation.threeWireCubicProgram_action': {'propext'},
     'SectorSimulation.mappedNativeCubic_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedNeg_amplitude': {'propext', 'Quot.sound'},
+    'SectorSimulation.sharedCubicSign_amplitude_congr': {'propext', 'Quot.sound'},
+    'SectorSimulation.replayExactNative_append': {'propext'},
+    'SectorSimulation.nativeCubicLayer_correct_from_equivalent': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.nativeCubicLayer_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
