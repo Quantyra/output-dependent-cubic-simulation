@@ -20,3 +20,9 @@ import SectorSimulation
 #print axioms SectorSimulation.evalPhase_append
 #check SectorSimulation.phaseDerivative_append
 #print axioms SectorSimulation.phaseDerivative_append
+#check SectorSimulation.booleanDerivative_const
+#print axioms SectorSimulation.booleanDerivative_const
+#check SectorSimulation.booleanDerivative_and
+#print axioms SectorSimulation.booleanDerivative_and
+#check SectorSimulation.binaryVariable_derivative
+#print axioms SectorSimulation.binaryVariable_derivative

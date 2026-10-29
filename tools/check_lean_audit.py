@@ -14,6 +14,9 @@ EXPECTED = {
     'SectorSimulation.phaseFold_from': {'propext'},
     'SectorSimulation.evalPhase_append': {'propext', 'Quot.sound'},
     'SectorSimulation.phaseDerivative_append': {'propext', 'Quot.sound'},
+    'SectorSimulation.booleanDerivative_const': set(),
+    'SectorSimulation.booleanDerivative_and': {'propext'},
+    'SectorSimulation.binaryVariable_derivative': {'propext'},
 }
 
 

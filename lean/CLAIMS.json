@@ -483,6 +483,55 @@
       ],
       "build_audit_receipt": "lean/evidence/anf-derivative-audit.md",
       "unresolved_bridge": "Construct differentiated monomials and prove the cubic-to-quadratic degree bound; connect the representation and computed shift to literal native source and circuit semantics."
+    },
+    {
+      "id": "boolean-derivative-constant",
+      "section": "2",
+      "target": "SectorSimulation.booleanDerivative_const",
+      "assumptions": "Boolean-valued functions and the explicitly stated shift; the coordinate theorem uses pointwise binary XOR.",
+      "quantifiers": "All underlying types, functions, shifts and input points; all coordinate indices for the variable rule.",
+      "statement": "The derivative of any constant Boolean function is false.",
+      "dependencies": [
+        "shift-derivative-invariance"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/derivative-product-audit.md",
+      "unresolved_bridge": "Construct the derivative ANF for an arbitrary square-free monomial, prove its degree is strictly smaller when nonconstant, and lift it to phase lists and the actual native source."
+    },
+    {
+      "id": "boolean-derivative-product",
+      "section": "2",
+      "target": "SectorSimulation.booleanDerivative_and",
+      "assumptions": "Boolean-valued functions and the explicitly stated shift; the coordinate theorem uses pointwise binary XOR.",
+      "quantifiers": "All underlying types, functions, shifts and input points; all coordinate indices for the variable rule.",
+      "statement": "For Boolean functions f,g, D(f AND g) = (Df AND g) XOR (f AND Dg) XOR (Df AND Dg), retaining the finite-difference cross term.",
+      "dependencies": [
+        "shift-derivative-invariance"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/derivative-product-audit.md",
+      "unresolved_bridge": "Construct the derivative ANF for an arbitrary square-free monomial, prove its degree is strictly smaller when nonconstant, and lift it to phase lists and the actual native source."
+    },
+    {
+      "id": "binary-coordinate-derivative",
+      "section": "2",
+      "target": "SectorSimulation.binaryVariable_derivative",
+      "assumptions": "Boolean-valued functions and the explicitly stated shift; the coordinate theorem uses pointwise binary XOR.",
+      "quantifiers": "All underlying types, functions, shifts and input points; all coordinate indices for the variable rule.",
+      "statement": "The derivative of binary coordinate i under XOR translation by j is j_i.",
+      "dependencies": [
+        "shift-derivative-invariance"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/derivative-product-audit.md",
+      "unresolved_bridge": "Construct the derivative ANF for an arbitrary square-free monomial, prove its degree is strictly smaller when nonconstant, and lift it to phase lists and the actual native source."
     }
   ],
   "paper_source": "manuscript/main.tex",
