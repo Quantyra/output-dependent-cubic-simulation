@@ -667,6 +667,42 @@
       "axioms": [],
       "build_audit_receipt": "lean/evidence/mask-semantics-audit.md",
       "unresolved_bridge": "Use the selected list and its degree bound to construct lower-degree derivative masks; connect descriptor decoding and native circuit semantics."
+    },
+    {
+      "id": "list-length-three-shape",
+      "section": "2",
+      "target": "SectorSimulation.list_length_le_three_shape",
+      "assumptions": "A finite list and length bound, or a finite monomial mask with monomialDegree <= 3.",
+      "quantifiers": "All index types and finite lists for the list theorem; all finite dimensions and masks for the source theorem.",
+      "statement": "Every finite list with length at most three is empty or has exactly one, two, or three displayed elements.",
+      "dependencies": [
+        "mask-degree-selected-length",
+        "mask-selected-product"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/support-shapes-audit.md",
+      "unresolved_bridge": "Instantiate the coordinate difference identities on each extracted shape and construct the resulting quadratic bit-mask ANF, preserving multiplicities and lower terms."
+    },
+    {
+      "id": "cubic-mask-support-shape",
+      "section": "2",
+      "target": "SectorSimulation.cubicMask_selected_shape",
+      "assumptions": "A finite list and length bound, or a finite monomial mask with monomialDegree <= 3.",
+      "quantifiers": "All index types and finite lists for the list theorem; all finite dimensions and masks for the source theorem.",
+      "statement": "A bit-mask monomial of degree at most three has a selected-index list with zero, one, two, or three displayed indices.",
+      "dependencies": [
+        "mask-degree-selected-length",
+        "mask-selected-product"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/support-shapes-audit.md",
+      "unresolved_bridge": "Instantiate the coordinate difference identities on each extracted shape and construct the resulting quadratic bit-mask ANF, preserving multiplicities and lower terms."
     }
   ],
   "paper_source": "manuscript/main.tex",

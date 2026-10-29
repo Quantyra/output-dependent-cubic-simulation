@@ -4,3 +4,4 @@ import SectorSimulation.BooleanSource
 import SectorSimulation.DerivativeLinear
 import SectorSimulation.DerivativeProduct
 import SectorSimulation.MonomialDifference
+import SectorSimulation.SupportShapes

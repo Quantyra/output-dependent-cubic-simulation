@@ -42,3 +42,7 @@ import SectorSimulation
 #print axioms SectorSimulation.evalMonomial_selectedVariables
 #check SectorSimulation.monomialDegree_eq_selectedLength
 #print axioms SectorSimulation.monomialDegree_eq_selectedLength
+#check SectorSimulation.list_length_le_three_shape
+#print axioms SectorSimulation.list_length_le_three_shape
+#check SectorSimulation.cubicMask_selected_shape
+#print axioms SectorSimulation.cubicMask_selected_shape
