@@ -676,3 +676,10 @@ import SectorSimulation
 #print axioms SectorSimulation.sharedShiftScale_amplitude
 #check SectorSimulation.toffoliScaledShiftedBasis_correct
 #print axioms SectorSimulation.toffoliScaledShiftedBasis_correct
+
+#check SectorSimulation.sharedAddSame_amplitude
+#print axioms SectorSimulation.sharedAddSame_amplitude
+#check SectorSimulation.replayExactNative_equal_exponents
+#print axioms SectorSimulation.replayExactNative_equal_exponents
+#check SectorSimulation.replayExactNative_add_amplitude
+#print axioms SectorSimulation.replayExactNative_add_amplitude

@@ -242,6 +242,9 @@ EXPECTED = {
     'SectorSimulation.toffoliScaledShiftedBasis_replay': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedShiftScale_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.toffoliScaledShiftedBasis_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedAddSame_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.replayExactNative_equal_exponents': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.replayExactNative_add_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

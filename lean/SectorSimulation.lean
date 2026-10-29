@@ -125,3 +125,5 @@ import SectorSimulation.CycloAssociativity
 import SectorSimulation.ExactReplayShift
 
 import SectorSimulation.ToffoliScaledBasis
+
+import SectorSimulation.SharedAdditionAmplitude

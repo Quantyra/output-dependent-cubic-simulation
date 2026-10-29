@@ -3564,6 +3564,57 @@
       ],
       "build_audit_receipt": "lean/evidence/toffoli-scaled-basis-audit.md",
       "unresolved_bridge": "Prove arbitrary superposition and arbitrary-wire Toffoli correctness, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "shared-add-amplitude-sharedAddSame_amplitude",
+      "section": "2",
+      "target": "SectorSimulation.sharedAddSame_amplitude",
+      "assumptions": "The defined shared-denominator exact state and native interpreter; equal initial denominator exponents and successful replay where stated.",
+      "quantifiers": "All finite dimensions, finite native gate lists, represented states and output vectors.",
+      "statement": "The exact amplitude of the sum of states with equal denominator exponents equals the sum of their exact amplitudes.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/shared-add-amplitude-audit.md",
+      "unresolved_bridge": "Decompose arbitrary states into basis sums and prove arbitrary-state and arbitrary-wire Toffoli correctness, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "shared-add-amplitude-replayExactNative_equal_exponents",
+      "section": "2",
+      "target": "SectorSimulation.replayExactNative_equal_exponents",
+      "assumptions": "The defined shared-denominator exact state and native interpreter; equal initial denominator exponents and successful replay where stated.",
+      "quantifiers": "All finite dimensions, finite native gate lists, represented states and output vectors.",
+      "statement": "Successful replay of two states with equal denominator exponents produces states with equal denominator exponents.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/shared-add-amplitude-audit.md",
+      "unresolved_bridge": "Decompose arbitrary states into basis sums and prove arbitrary-state and arbitrary-wire Toffoli correctness, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "shared-add-amplitude-replayExactNative_add_amplitude",
+      "section": "2",
+      "target": "SectorSimulation.replayExactNative_add_amplitude",
+      "assumptions": "The defined shared-denominator exact state and native interpreter; equal initial denominator exponents and successful replay where stated.",
+      "quantifiers": "All finite dimensions, finite native gate lists, represented states and output vectors.",
+      "statement": "If replay succeeds separately on equal-denominator states, replay of their sum succeeds with the sum of their results and its exact amplitude is the sum of their exact amplitudes.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/shared-add-amplitude-audit.md",
+      "unresolved_bridge": "Decompose arbitrary states into basis sums and prove arbitrary-state and arbitrary-wire Toffoli correctness, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
