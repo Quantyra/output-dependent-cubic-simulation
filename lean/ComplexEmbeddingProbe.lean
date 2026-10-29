@@ -114,4 +114,47 @@ theorem exactComplex_iterateHadamardScale (k : Nat) (a : ExactAmplitude) :
     rw [ih, exactComplex_mul, exactComplex_hadamard, pow_succ]
     ring
 
+
+theorem exactComplex_zero : exactComplex exactZero = 0 := by
+  change dyadicInterpret ⟨⟨0,0,0,0⟩,0⟩ = 0
+  simp [dyadicInterpret, cycloInterpret]
+
+theorem exactComplex_neg (a : ExactAmplitude) : exactComplex (exactNeg a) = -exactComplex a := by
+  induction a using Quotient.ind with
+  | _ a =>
+    change dyadicInterpret (dyadicNeg a) = -dyadicInterpret a
+    cases a with | mk num exp =>
+      simp only [dyadicInterpret, dyadicNeg, cycloInterpret, cycloNeg, Int.cast_neg]
+      ring
+
+def complexSigned (b : Bool) (a : ℂ) : ℂ := if b then -a else a
+
+theorem exactComplex_signed (b : Bool) (a : ExactAmplitude) :
+    exactComplex (exactSigned b a) = complexSigned b (exactComplex a) := by
+  cases b <;> simp [exactSigned, complexSigned, exactComplex_neg]
+
+theorem exactComplex_foldr {α : Type} (xs : List α) (f : α → ExactAmplitude) :
+    exactComplex (xs.foldr (fun x acc => exactAdd (f x) acc) exactZero) =
+      xs.foldr (fun x acc => exactComplex (f x) + acc) 0 := by
+  induction xs with
+  | nil => exact exactComplex_zero
+  | cons x rest ih => simp only [List.foldr_cons, exactComplex_add, ih]
+
+theorem nativePythonFourier_complex_sum {n : Nat} (J : BinaryMatrix n)
+    (ops : List (RowOperation n)) (hp : gaussianRowProgram J = some ops)
+    (state : SharedDyadicState n) :
+    ∃ result, replayExactNative n (pythonFourierRecords ops) state = some result ∧
+      ∀ x, exactComplex (sharedAmplitude result x) =
+        ((((Real.sqrt 2 : ℝ) : ℂ) / 2)^n) *
+        ((binaryBasis n).foldr (fun y acc =>
+          complexSigned (matrixPairingParity J x y) (exactComplex (sharedAmplitude state y)) + acc) 0) := by
+  obtain ⟨result, hr, hf⟩ := nativePythonFourier_normalized_sum J ops hp state
+  refine ⟨result, hr, ?_⟩
+  intro x
+  rw [hf x, exactComplex_mul, exactComplex_iterateHadamardScale, exactComplex_one, mul_one,
+    exactComplex_foldr]
+  congr 2
+  funext y acc
+  rw [exactComplex_signed]
+
 end SectorSimulation
