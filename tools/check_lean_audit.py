@@ -564,6 +564,7 @@ EXPECTED = {
     'SectorSimulation.radicalLinearEval_map': {'propext'},
     'SectorSimulation.canonicalLinearCharacter_dot': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalDotWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_knownCanonical': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

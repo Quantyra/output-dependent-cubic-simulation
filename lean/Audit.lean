@@ -1558,3 +1558,6 @@ import SectorSimulation
 
 #check SectorSimulation.canonicalDotWalshSum_closed
 #print axioms SectorSimulation.canonicalDotWalshSum_closed
+
+#check SectorSimulation.sourceWalshSum_knownCanonical
+#print axioms SectorSimulation.sourceWalshSum_knownCanonical
