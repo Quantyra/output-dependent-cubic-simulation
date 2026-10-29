@@ -5958,6 +5958,63 @@
       ],
       "build_audit_receipt": "lean/evidence/mask-count-parity.md",
       "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "canonical-mask-normalization-sortedNormalizeMasks_unique",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_unique",
+      "assumptions": "Lean natural-mask toggle-and-sort model; uniqueness additionally assumes candidate ordering, duplicate freedom and odd-count membership.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "A sorted duplicate-free candidate containing exactly the odd-count masks equals the Lean normalizer output.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-mask-normalization.md",
+      "unresolved_bridge": "Prove actual Python candidate satisfies the hypotheses, descriptor text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "canonical-mask-normalization-sortedNormalizeMasks_perm",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_perm",
+      "assumptions": "Lean natural-mask toggle-and-sort model; uniqueness additionally assumes candidate ordering, duplicate freedom and odd-count membership.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "Permuting the input mask list does not change the Lean normalized output.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-mask-normalization.md",
+      "unresolved_bridge": "Prove actual Python candidate satisfies the hypotheses, descriptor text parsing, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "canonical-mask-normalization-sortedNormalizeMasks_idempotent",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_idempotent",
+      "assumptions": "Lean natural-mask toggle-and-sort model; uniqueness additionally assumes candidate ordering, duplicate freedom and odd-count membership.",
+      "quantifiers": "All inputs of the corresponding exported Lean theorem.",
+      "statement": "The Lean sorted normalizer is idempotent.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-mask-normalization.md",
+      "unresolved_bridge": "Prove actual Python candidate satisfies the hypotheses, descriptor text parsing, native compiler correspondence, circuit-to-sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

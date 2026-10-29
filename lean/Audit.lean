@@ -1015,3 +1015,12 @@ import SectorSimulation
 
 #check SectorSimulation.sortedNormalizeMasks_odd_count
 #print axioms SectorSimulation.sortedNormalizeMasks_odd_count
+
+#check SectorSimulation.sortedNormalizeMasks_unique
+#print axioms SectorSimulation.sortedNormalizeMasks_unique
+
+#check SectorSimulation.sortedNormalizeMasks_perm
+#print axioms SectorSimulation.sortedNormalizeMasks_perm
+
+#check SectorSimulation.sortedNormalizeMasks_idempotent
+#print axioms SectorSimulation.sortedNormalizeMasks_idempotent

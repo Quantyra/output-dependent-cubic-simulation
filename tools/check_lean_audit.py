@@ -387,6 +387,9 @@ EXPECTED = {
     'SectorSimulation.sortedNormalizeMasks_membership': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.maskParity_count': {'propext', 'Quot.sound'},
     'SectorSimulation.sortedNormalizeMasks_odd_count': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sortedNormalizeMasks_unique': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sortedNormalizeMasks_perm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sortedNormalizeMasks_idempotent': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
