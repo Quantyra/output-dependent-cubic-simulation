@@ -604,3 +604,9 @@ import SectorSimulation
 
 #check SectorSimulation.exactNative_quadratic_phase
 #print axioms SectorSimulation.exactNative_quadratic_phase
+
+#check SectorSimulation.toffoliBasisReplayCheck_true
+#print axioms SectorSimulation.toffoliBasisReplayCheck_true
+
+#check SectorSimulation.toffoliBasisReplay_correct
+#print axioms SectorSimulation.toffoliBasisReplay_correct

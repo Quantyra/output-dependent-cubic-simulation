@@ -3160,6 +3160,37 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-native-replay-audit.md",
       "unresolved_bridge": "Prove T/TDG and full Toffoli replay, complex embedding, representation independence, Python equivalence and manuscript theorems."
+    },
+    {
+      "id": "toffoli-basis-toffoliBasisReplayCheck_true",
+      "section": "2",
+      "target": "SectorSimulation.toffoliBasisReplayCheck_true",
+      "assumptions": "Fixed copied 15-record three-wire Toffoli decomposition, exact shared-denominator native interpreter and standard basis inputs.",
+      "quantifiers": "All eight three-qubit basis inputs and all eight basis outputs.",
+      "statement": "Kernel evaluation confirms the exact copied three-wire Toffoli record list matches all 64 basis matrix entries.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-basis-replay-audit.md",
+      "unresolved_bridge": "Prove general-state linearity and arbitrary-wire relabeling, complex embedding, Python list equivalence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "toffoli-basis-toffoliBasisReplay_correct",
+      "section": "2",
+      "target": "SectorSimulation.toffoliBasisReplay_correct",
+      "assumptions": "Fixed copied 15-record three-wire Toffoli decomposition, exact shared-denominator native interpreter and standard basis inputs.",
+      "quantifiers": "All eight three-qubit basis inputs and all eight basis outputs.",
+      "statement": "For every three-qubit basis input and output, exact replay of the complete copied Toffoli records yields the corresponding ideal Toffoli amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-basis-replay-audit.md",
+      "unresolved_bridge": "Prove general-state linearity and arbitrary-wire relabeling, complex embedding, Python list equivalence, full circuit and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -217,6 +217,8 @@ EXPECTED = {
     'SectorSimulation.exactNative_HH': {'propext', 'Quot.sound'},
     'SectorSimulation.exactNative_HCXH': {'propext', 'Quot.sound'},
     'SectorSimulation.exactNative_quadratic_phase': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.toffoliBasisReplayCheck_true': {'propext'},
+    'SectorSimulation.toffoliBasisReplay_correct': {'propext', 'Quot.sound'},
 }
 
 

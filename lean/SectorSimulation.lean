@@ -113,3 +113,5 @@ import SectorSimulation.ExactControlledPhase
 import SectorSimulation.ExactCubicPhase
 
 import SectorSimulation.ExactNativeReplay
+
+import SectorSimulation.ToffoliBasisReplay
