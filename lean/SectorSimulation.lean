@@ -224,3 +224,5 @@ import SectorSimulation.HadamardPathEndpoint
 import SectorSimulation.HadamardWalshCoefficient
 
 import SectorSimulation.HadamardMatrixSum
+
+import SectorSimulation.MatrixPairing

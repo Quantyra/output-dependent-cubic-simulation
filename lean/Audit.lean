@@ -1271,3 +1271,10 @@ import SectorSimulation
 
 #check SectorSimulation.nativePythonFourier_matrix_sum
 #print axioms SectorSimulation.nativePythonFourier_matrix_sum
+
+
+#check SectorSimulation.walshWireParity_comm
+#print axioms SectorSimulation.walshWireParity_comm
+
+#check SectorSimulation.nativePythonFourier_pairing_sum
+#print axioms SectorSimulation.nativePythonFourier_pairing_sum

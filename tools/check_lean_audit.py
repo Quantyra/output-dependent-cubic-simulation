@@ -472,6 +472,8 @@ EXPECTED = {
     'SectorSimulation.matrixApply_basis_perm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.exactFoldr_perm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.nativePythonFourier_matrix_sum': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.walshWireParity_comm': {'propext'},
+    'SectorSimulation.nativePythonFourier_pairing_sum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

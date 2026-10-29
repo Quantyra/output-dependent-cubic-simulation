@@ -7549,6 +7549,42 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-matrix-sum.md",
       "unresolved_bridge": "Identify matrix sign parity with the paper bilinear pairing; connect exact amplitudes and modeled records to standard complex semantics and actual Python; prove paper identities and costs."
+    },
+    {
+      "id": "matrix-pairing-walshWireParity_comm",
+      "section": "2",
+      "target": "SectorSimulation.walshWireParity_comm",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "The finite binary dot-product parity is symmetric.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-pairing.md",
+      "unresolved_bridge": "Prove standard complex amplitude embedding and normalization, actual Python refinement, quadratic support, sector identities and resource bounds."
+    },
+    {
+      "id": "matrix-pairing-nativePythonFourier_pairing_sum",
+      "section": "2",
+      "target": "SectorSimulation.nativePythonFourier_pairing_sum",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Modeled native Fourier replay has an exact input-indexed sum with the manuscript x^T J y sign parity.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-pairing.md",
+      "unresolved_bridge": "Prove standard complex amplitude embedding and normalization, actual Python refinement, quadratic support, sector identities and resource bounds."
     }
   ],
   "paper_source": "manuscript/main.tex",
