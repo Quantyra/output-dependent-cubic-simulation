@@ -123,3 +123,5 @@ import SectorSimulation.ExactReplayLinearity
 import SectorSimulation.CycloAssociativity
 
 import SectorSimulation.ExactReplayShift
+
+import SectorSimulation.ToffoliScaledBasis

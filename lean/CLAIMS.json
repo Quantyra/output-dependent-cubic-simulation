@@ -3530,6 +3530,40 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-replay-shift-audit.md",
       "unresolved_bridge": "Prove scaled shifted result equals the ideal output amplitude, arbitrary-state Toffoli action, wire relabeling, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-scaled-basis-sharedShiftScale_amplitude",
+      "section": "2",
+      "target": "SectorSimulation.sharedShiftScale_amplitude",
+      "assumptions": "The defined exact shared-denominator interpreter and dyadic cyclotomic quotient; the Toffoli result concerns the literal three-wire record list.",
+      "quantifiers": "All coefficients and nonnegative denominator shifts; all states for the amplitude identity and all three-bit basis input and output indices for Toffoli.",
+      "statement": "The exact amplitude of a coefficient-scaled, denominator-shifted state is the quotient product of the corresponding dyadic coefficient and the original amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-scaled-basis-audit.md",
+      "unresolved_bridge": "Prove arbitrary superposition and arbitrary-wire Toffoli correctness, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "toffoli-scaled-basis-toffoliScaledShiftedBasis_correct",
+      "section": "2",
+      "target": "SectorSimulation.toffoliScaledShiftedBasis_correct",
+      "assumptions": "The defined exact shared-denominator interpreter and dyadic cyclotomic quotient; the Toffoli result concerns the literal three-wire record list.",
+      "quantifiers": "All coefficients and nonnegative denominator shifts; all states for the amplitude identity and all three-bit basis input and output indices for Toffoli.",
+      "statement": "For every three-bit basis input, cyclotomic coefficient and natural denominator shift, literal Toffoli replay succeeds and every indexed output amplitude equals the corresponding amplitude of the ideal scaled, shifted basis output.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/toffoli-scaled-basis-audit.md",
+      "unresolved_bridge": "Prove arbitrary superposition and arbitrary-wire Toffoli correctness, complex embedding, Python correspondence, full circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

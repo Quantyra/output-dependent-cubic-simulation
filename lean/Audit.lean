@@ -671,3 +671,8 @@ import SectorSimulation
 #print axioms SectorSimulation.replayExactNative_shift
 #check SectorSimulation.toffoliScaledShiftedBasis_replay
 #print axioms SectorSimulation.toffoliScaledShiftedBasis_replay
+
+#check SectorSimulation.sharedShiftScale_amplitude
+#print axioms SectorSimulation.sharedShiftScale_amplitude
+#check SectorSimulation.toffoliScaledShiftedBasis_correct
+#print axioms SectorSimulation.toffoliScaledShiftedBasis_correct
