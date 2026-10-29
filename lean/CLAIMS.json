@@ -6202,6 +6202,63 @@
       ],
       "build_audit_receipt": "lean/evidence/normalized-validator-preservation.md",
       "unresolved_bridge": "Prove actual Python correspondence, JSON parsing, native compiler, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "normalized-modeled-recognizer-recognizeNormalizedModeledSource_sound",
+      "section": "2",
+      "target": "SectorSimulation.recognizeNormalizedModeledSource_sound",
+      "assumptions": "Lean header decoder, validation-first normalizer, modeled source compiler and exact native replay.",
+      "quantifiers": "All applicable gate records, descriptors, row programs and states.",
+      "statement": "Acceptance implies a decoded canonical raw descriptor and acceptance by the existing modeled recognizer.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/normalized-modeled-recognizer.md",
+      "unresolved_bridge": "Prove canonical JSON-byte equality, actual Python correspondence, normalized Fourier and complex semantics, physical output identity and costs."
+    },
+    {
+      "id": "normalized-modeled-recognizer-recognizeNormalizedModeledSource_complete",
+      "section": "2",
+      "target": "SectorSimulation.recognizeNormalizedModeledSource_complete",
+      "assumptions": "Lean header decoder, validation-first normalizer, modeled source compiler and exact native replay.",
+      "quantifiers": "All applicable gate records, descriptors, row programs and states.",
+      "statement": "An existing modeled recognition with a decoded raw descriptor unchanged by validation and normalization is accepted by the canonicality-gated recognizer.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/normalized-modeled-recognizer.md",
+      "unresolved_bridge": "Prove canonical JSON-byte equality, actual Python correspondence, normalized Fourier and complex semantics, physical output identity and costs."
+    },
+    {
+      "id": "normalized-modeled-recognizer-recognizeNormalizedModeledSource_replay",
+      "section": "2",
+      "target": "SectorSimulation.recognizeNormalizedModeledSource_replay",
+      "assumptions": "Lean header decoder, validation-first normalizer, modeled source compiler and exact native replay.",
+      "quantifiers": "All applicable gate records, descriptors, row programs and states.",
+      "statement": "Acceptance implies exact native replay of the modeled body and the previously proved output derivative bounds.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/normalized-modeled-recognizer.md",
+      "unresolved_bridge": "Prove canonical JSON-byte equality, actual Python correspondence, normalized Fourier and complex semantics, physical output identity and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

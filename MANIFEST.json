@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 42397,
-      "sha256": "8ca70efc5b10b714fc889442efd4c10886ea12115335e528e5151de9728b8612"
+      "bytes": 42807,
+      "sha256": "652d53ee68746a344bf929a9b7137e6cef63d3617d00d51443e0dcb82bfda5e5"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 343660,
-      "sha256": "02c8e74d5816cf66d06935728006bc4c06daf376ded08e6c9ffd7445695e5428"
+      "bytes": 346720,
+      "sha256": "3e6ca4048e06dbd7d795e5b4f67871fa970a41a0bda922a31dab8536bab4c970"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 4527,
-      "sha256": "61944d6770894a8905f2bad63b5c8179423f789305e3e7f49bff389bada84ea5"
+      "bytes": 4580,
+      "sha256": "63ada48df8a9836445c338e2e12fb0246f3da4ee117acc250686966160c2937d"
     },
     {
       "path": "lean/SectorSimulation/AsciiDescriptorEncode.lean",
@@ -511,6 +511,11 @@
       "path": "lean/SectorSimulation/NativeXZReplay.lean",
       "bytes": 2201,
       "sha256": "50569680f74a2d1341b1b893815e26c86665b203e730ebb9b39012f59b2ff992"
+    },
+    {
+      "path": "lean/SectorSimulation/NormalizedModeledRecognizer.lean",
+      "bytes": 2779,
+      "sha256": "dd25f92b72c5bd4d9693492abb94993547b77b7029429713e3837fe3a6d30b22"
     },
     {
       "path": "lean/SectorSimulation/NumericHeaderBytes.lean",
@@ -1061,6 +1066,11 @@
       "path": "lean/evidence/native-xz-replay-audit.md",
       "bytes": 769,
       "sha256": "11040acb2aea11a8456848d4411ba2dbb0788c6f08c37c11bdd3a7842212980e"
+    },
+    {
+      "path": "lean/evidence/normalized-modeled-recognizer.md",
+      "bytes": 1284,
+      "sha256": "d0d7a0a02c1bf283ceaf9b1b7d82d33d68f5d9cb7cfc71ee885c90d132fc2ebf"
     },
     {
       "path": "lean/evidence/normalized-validator-preservation.md",
@@ -1679,8 +1689,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 33117,
-      "sha256": "7518dccd57a60ff2c5804765997d738a0747dcef3e32aea8beac90e4ca70d9ac"
+      "bytes": 33451,
+      "sha256": "906c0089e0fcae11622852f083c640ef0c505154c84d29e5413cb7ed53f04afe"
     },
     {
       "path": "tools/check_metadata.py",
@@ -1694,8 +1704,8 @@
     },
     {
       "path": "tools/check_python_lean_bridge.py",
-      "bytes": 2143,
-      "sha256": "368aba779d796e247424a0e46cfdc2556a00b1e45adf573604d6dbce58fd56db"
+      "bytes": 3132,
+      "sha256": "b2cfd6b5c8042f86bf8299e78a7140721d3ca9fba89d873666a9a18c5d7dfb29"
     },
     {
       "path": "tools/check_toffoli_template.py",

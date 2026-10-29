@@ -1054,3 +1054,12 @@ import SectorSimulation
 
 #check SectorSimulation.normalizedRaw_validation_preserved
 #print axioms SectorSimulation.normalizedRaw_validation_preserved
+
+#check SectorSimulation.recognizeNormalizedModeledSource_sound
+#print axioms SectorSimulation.recognizeNormalizedModeledSource_sound
+
+#check SectorSimulation.recognizeNormalizedModeledSource_complete
+#print axioms SectorSimulation.recognizeNormalizedModeledSource_complete
+
+#check SectorSimulation.recognizeNormalizedModeledSource_replay
+#print axioms SectorSimulation.recognizeNormalizedModeledSource_replay

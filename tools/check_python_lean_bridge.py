@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 import cubic_centroid_descent as compiler
+import finite_field_acceptance as field
 
 CASES = [
     ["cubic-field-v1", 1, [1], [[], []], 0, 0],
@@ -30,7 +31,7 @@ def main():
         pass
     else:
         raise AssertionError("Python accepted duplicate out-of-range masks")
-    lines = ["import SectorSimulation.ModeledSourceRecognizer", "open SectorSimulation"]
+    lines = ["import SectorSimulation.NormalizedModeledRecognizer", "open SectorSimulation"]
     for index, desc in enumerate(CASES):
         result = compiler.compile_native(desc)
         assert compiler.recognize_native(result["qubits"], result["gates"], result["basis"], result["output"]) == result["descriptor"]
@@ -40,6 +41,24 @@ def main():
         )
         lines.append(f"def pythonCase{index} : List NativeGate := [{records}]")
         lines.append(f"#guard (recognizeModeledSource pythonCase{index}).isSome")
+        lines.append(f"#guard (recognizeNormalizedModeledSource pythonCase{index}).isSome")
+    # The body is canonical, but the original header retains canceling duplicates.
+    raw = ["cubic-field-v1", 2, [1, 2], [[1, 1], []], 0, 1]
+    normalized = compiler.compile_native(raw)
+    canonical_header = field.header(normalized["descriptor"])
+    noncanonical_gates = field.header(raw) + normalized["gates"][len(canonical_header):]
+    try:
+        compiler.recognize_native(2, noncanonical_gates, 0, 1)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Python accepted a noncanonical descriptor header")
+    records = ", ".join(
+        "\u27e8\"" + gate[0] + "\", [" + ", ".join(map(str, gate[1:])) + "]\u27e9"
+        for gate in noncanonical_gates
+    )
+    lines.append(f"def noncanonicalCase : List NativeGate := [{records}]")
+    lines.append("#guard (recognizeNormalizedModeledSource noncanonicalCase).isNone")
     with tempfile.TemporaryDirectory(prefix="python-lean-bridge-") as temp:
         probe = Path(temp) / "PythonBridgeProbe.lean"
         probe.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")

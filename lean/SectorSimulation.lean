@@ -194,3 +194,5 @@ import SectorSimulation.CanonicalMaskNormalization
 import SectorSimulation.RawDescriptorNormalization
 
 import SectorSimulation.ValidatedRawNormalization
+
+import SectorSimulation.NormalizedModeledRecognizer
