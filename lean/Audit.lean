@@ -1365,3 +1365,10 @@ import SectorSimulation
 
 #check SectorSimulation.canonicalWalshSum_closed
 #print axioms SectorSimulation.canonicalWalshSum_closed
+
+
+#check SectorSimulation.canonicalWalshSum_zero_iff
+#print axioms SectorSimulation.canonicalWalshSum_zero_iff
+
+#check SectorSimulation.canonicalWalshSum_naturalAbs
+#print axioms SectorSimulation.canonicalWalshSum_naturalAbs

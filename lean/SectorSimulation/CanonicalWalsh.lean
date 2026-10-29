@@ -45,4 +45,18 @@ theorem canonicalWalshSum_closed (pairs : List (Bool × Bool)) (radicals : List 
       simp [canonicalWalshSum, ih, hsig, hr, integerWalshSign, Int.pow_succ,
         Nat.succ_add] <;> omega
 
+theorem canonicalWalshSum_zero_iff (pairs : List (Bool × Bool)) (radicals : List Bool) (c : Bool) :
+    canonicalWalshSum pairs radicals c = 0 ↔ radicals.any id = true := by
+  have hp : (2 : Int)^(radicals.length + pairs.length) ≠ 0 := Int.pow_ne_zero (by decide)
+  rw [canonicalWalshSum_closed]
+  cases h : radicals.any id <;> cases hs : hyperbolicSignature pairs <;> cases c <;>
+    simp [h, hs, integerWalshSign, hp]
+
+theorem canonicalWalshSum_naturalAbs (pairs : List (Bool × Bool)) (radicals : List Bool) (c : Bool) :
+    (canonicalWalshSum pairs radicals c).natAbs =
+      if radicals.any id then 0 else 2^(radicals.length + pairs.length) := by
+  rw [canonicalWalshSum_closed]
+  cases h : radicals.any id <;> cases hs : hyperbolicSignature pairs <;> cases c <;>
+    simp [h, hs, integerWalshSign, Int.natAbs_mul, Int.natAbs_pow]
+
 end SectorSimulation

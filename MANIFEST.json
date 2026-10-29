@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 53034,
-      "sha256": "ca712f0173c51bcaeddbb13f22d6887b00afd77462d241622e3766a565f54ebd"
+      "bytes": 53259,
+      "sha256": "3212d906d870a5a16720f28ddf00f8accff0e70a692a53a7a2d96084da42d7b1"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 443312,
-      "sha256": "5e00112cf4e1a7f29a69827ffe9b4776042d0cd60533cfb12e927ba93a50b9d9"
+      "bytes": 445232,
+      "sha256": "263ec83892e4f55d48488a72cb679168dde908d5ab48a49cf474f70f141d659a"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -204,8 +204,8 @@
     },
     {
       "path": "lean/SectorSimulation/CanonicalWalsh.lean",
-      "bytes": 2206,
-      "sha256": "d1f058c2b8af78ac7295699990e2e08d9202bd25d376c067ec82858fff7aee37"
+      "bytes": 3048,
+      "sha256": "f8355d3a60b1e2d4a57d22da73c2df722e938b57f4efcf189e07bc1ecb1a227a"
     },
     {
       "path": "lean/SectorSimulation/ClearColumnComplete.lean",
@@ -824,8 +824,8 @@
     },
     {
       "path": "lean/evidence/canonical-walsh.md",
-      "bytes": 1013,
-      "sha256": "32b05e335cfa7574dc4b358d64ce582e3e02f469a70e2e12e633407b94e65ea2"
+      "bytes": 1154,
+      "sha256": "8538cbf6cef84d3b15cdde1c54a29677b5f42f60c131473a735031928dbcb3e2"
     },
     {
       "path": "lean/evidence/clean-core-replay.md",
@@ -1869,8 +1869,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 42373,
-      "sha256": "f1769317d9dcfa187215d1a13edc4e290a30d822b61de4961509ec7c8bed53c2"
+      "bytes": 42531,
+      "sha256": "7e1dacb6c6dd7c5e9a56fbcf42a9378f8142f9188290a971e55fb09ab5470d10"
     },
     {
       "path": "tools/check_metadata.py",

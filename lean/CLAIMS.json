@@ -8115,6 +8115,42 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-walsh.md",
       "unresolved_bridge": "Connect arbitrary quadratic ANF to a computed canonical basis, polar rank, affine support, sign coordinates and elimination costs."
+    },
+    {
+      "id": "canonical-walsh-canonicalWalshSum_zero_iff",
+      "section": "3",
+      "target": "SectorSimulation.canonicalWalshSum_zero_iff",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The canonical Walsh sum is zero if and only if some radical coefficient is nonzero.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-walsh.md",
+      "unresolved_bridge": "Connect arbitrary quadratic ANF to a computed canonical basis, polar rank, affine support, sign coordinates and elimination costs."
+    },
+    {
+      "id": "canonical-walsh-canonicalWalshSum_naturalAbs",
+      "section": "3",
+      "target": "SectorSimulation.canonicalWalshSum_naturalAbs",
+      "assumptions": "Canonical Boolean hyperbolic pair and radical coefficients; recursively enumerated exact integer signs.",
+      "quantifiers": "All finite lists of pair coefficients and radical coefficients, and either constant sign, including empty lists.",
+      "statement": "The canonical Walsh sum has zero absolute value off its canonical support and the exact power-of-two absolute value on support.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-walsh.md",
+      "unresolved_bridge": "Connect arbitrary quadratic ANF to a computed canonical basis, polar rank, affine support, sign coordinates and elimination costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
