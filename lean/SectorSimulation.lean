@@ -252,3 +252,5 @@ import SectorSimulation.CanonicalCharacterShift
 import SectorSimulation.CanonicalCharacterSum
 
 import SectorSimulation.CanonicalCharacterParity
+
+import SectorSimulation.CanonicalCharacterDot

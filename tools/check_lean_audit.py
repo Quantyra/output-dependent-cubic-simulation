@@ -562,6 +562,8 @@ EXPECTED = {
     'SectorSimulation.walshWireParity_map': {'propext'},
     'SectorSimulation.pairLinearEval_map': {'propext'},
     'SectorSimulation.radicalLinearEval_map': {'propext'},
+    'SectorSimulation.canonicalLinearCharacter_dot': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalDotWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

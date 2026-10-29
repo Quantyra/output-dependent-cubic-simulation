@@ -9208,6 +9208,43 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-character-parity.md",
       "unresolved_bridge": "Combine block parity identities into the complete dot-product identity; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-dot-canonicalLinearCharacter_dot",
+      "section": "3",
+      "target": "SectorSimulation.canonicalLinearCharacter_dot",
+      "assumptions": "The canonical phase coefficient lists have the stated block lengths where required.",
+      "quantifiers": "All finite canonical block dimensions, coefficients, constant bits, binary characters and vectors, including zero dimensions.",
+      "statement": "The canonical character extracted from any binary vector equals its standard binary dot-product parity.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-dot.md",
+      "unresolved_bridge": "Construct canonical coordinates for arbitrary source quadratics and establish general rank, support, signs and elimination costs."
+    },
+    {
+      "id": "canonical-character-dot-canonicalDotWalshSum_closed",
+      "section": "3",
+      "target": "SectorSimulation.canonicalDotWalshSum_closed",
+      "assumptions": "The canonical phase coefficient lists have the stated block lengths where required.",
+      "quantifiers": "All finite canonical block dimensions, coefficients, constant bits, binary characters and vectors, including zero dimensions.",
+      "statement": "The source ANF canonical-phase Walsh sum at any binary character has the exact zero-or-signed-power-of-two value.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-dot.md",
+      "unresolved_bridge": "Construct canonical coordinates for arbitrary source quadratics and establish general rank, support, signs and elimination costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

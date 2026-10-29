@@ -1552,3 +1552,9 @@ import SectorSimulation
 
 #check SectorSimulation.radicalLinearEval_map
 #print axioms SectorSimulation.radicalLinearEval_map
+
+#check SectorSimulation.canonicalLinearCharacter_dot
+#print axioms SectorSimulation.canonicalLinearCharacter_dot
+
+#check SectorSimulation.canonicalDotWalshSum_closed
+#print axioms SectorSimulation.canonicalDotWalshSum_closed
