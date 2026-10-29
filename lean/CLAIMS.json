@@ -1359,6 +1359,27 @@
       ],
       "build_audit_receipt": "lean/evidence/clear-program-invariant-audit.md",
       "unresolved_bridge": "Prove every non-pivot entry is cleared and lift invariants through all columns; prove completeness and finite-encoding cost."
+    },
+    {
+      "id": "clear-program-column",
+      "section": "2",
+      "target": "SectorSimulation.clearProgram_clears_column",
+      "assumptions": "The pivot diagonal entry is true and the target row differs from the pivot.",
+      "quantifiers": "All finite dimensions, source matrices, targets and distinct pivot/target indices.",
+      "statement": "The actual generated clearing program sets every non-pivot entry in the pivot column to false.",
+      "dependencies": [
+        "clear-program-pivot-preservation",
+        "pivot-clear-selection",
+        "pivot-clear-inclusion"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/clear-column-complete-audit.md",
+      "unresolved_bridge": "Prove that later pivot steps preserve earlier cleared columns, invertible-input completeness and finite-encoding costs; native circuit and paper theorems remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",

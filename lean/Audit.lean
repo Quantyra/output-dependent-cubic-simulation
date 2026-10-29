@@ -197,3 +197,9 @@ import SectorSimulation
 
 #check SectorSimulation.clearProgram_preserves_pivot
 #print axioms SectorSimulation.clearProgram_preserves_pivot
+
+#check SectorSimulation.clearRows_target
+#print axioms SectorSimulation.clearRows_target
+
+#check SectorSimulation.clearProgram_clears_column
+#print axioms SectorSimulation.clearProgram_clears_column
