@@ -1,0 +1,686 @@
+{
+  "date": "2026-10-28",
+  "source_repository": "https://github.com/Quantyra/quantyra-quantum-complexity",
+  "source_visibility": "private; all reproduction dependencies are included here",
+  "snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+  "baseline": "75694fa51add1c5293168349c4d29af9ef4030ea",
+  "integrated_evidence": "9dc9391292e31c8b6fafb5b53db47899974a858a",
+  "rights": "No source LICENSE file existed at snapshot. Daniel Fredriksen authorized this publication with Apache-2.0 for accompanying code and CC-BY-4.0 for the manuscript. No external source code was copied for the export.",
+  "files": [
+    {
+      "path": "src/affine_control_sampling.py",
+      "origin_path": "src/affine_control_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "189b1b3ba41338536cdb3105dd641cf20b6dfa86",
+      "origin_sha256": "11c986f32917099c3adeb2a80e529599ab24726001638a09cdce80a09c55455e",
+      "sha256": "11c986f32917099c3adeb2a80e529599ab24726001638a09cdce80a09c55455e",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/affine_map_transfer.py",
+      "origin_path": "src/affine_map_transfer.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "c9e60d77768431ea34090aa8bef65465834b095e",
+      "origin_sha256": "ac563a3a329170610d37cf105abf7e1fed66dcb426548f90f34f61ceb3998284",
+      "sha256": "ac563a3a329170610d37cf105abf7e1fed66dcb426548f90f34f61ceb3998284",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/asymmetric_chain_characters.py",
+      "origin_path": "src/asymmetric_chain_characters.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "6379b4017c00fe236bbfef7de8e7707ff06779ad",
+      "origin_sha256": "9180eb6d96041f7baa3543be9ee6bd3cd2d02178fb6d51b2a2cd81626f5d4128",
+      "sha256": "9180eb6d96041f7baa3543be9ee6bd3cd2d02178fb6d51b2a2cd81626f5d4128",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/bordered_rank_fourier.py",
+      "origin_path": "src/bordered_rank_fourier.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "b28033414770b955f2eebe7db9b3e291ebe1cc2f",
+      "origin_sha256": "c0e2320e3e458d740d0f3ffd06c9c3b867e1d01747960805b6a27e0e511bec12",
+      "sha256": "c0e2320e3e458d740d0f3ffd06c9c3b867e1d01747960805b6a27e0e511bec12",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_acceptance_estimator.py",
+      "origin_path": "src/check_acceptance_estimator.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "b12e44cf00660d0a0e9de3a26f2c4f420a4345eb",
+      "origin_sha256": "711b7b8f635f123e915ed145d07e2010cc29a571ae9cdfd90237a5b70a08ea1e",
+      "sha256": "711b7b8f635f123e915ed145d07e2010cc29a571ae9cdfd90237a5b70a08ea1e",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_affine_map_transfer.py",
+      "origin_path": "src/check_affine_map_transfer.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "c9e60d77768431ea34090aa8bef65465834b095e",
+      "origin_sha256": "086289f8555fd662646ae86d5094941eb17b25ab9f71e613afe95890a1dc0a90",
+      "sha256": "086289f8555fd662646ae86d5094941eb17b25ab9f71e613afe95890a1dc0a90",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_bordered_rank_fourier.py",
+      "origin_path": "src/check_bordered_rank_fourier.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "b28033414770b955f2eebe7db9b3e291ebe1cc2f",
+      "origin_sha256": "a51205051e29ebb8db20a5f2ba765c33036748bee324a6c975918d6ff580bf05",
+      "sha256": "a51205051e29ebb8db20a5f2ba765c33036748bee324a6c975918d6ff580bf05",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_corrupted_field_contractions.py",
+      "origin_path": "src/check_corrupted_field_contractions.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "d2ae8c6fc275423c2276ba82644b8993660ec684",
+      "origin_sha256": "edf126f39f46281e0b956e6f5204cd2c734c480eb227f5e02c7f67af33292dae",
+      "sha256": "edf126f39f46281e0b956e6f5204cd2c734c480eb227f5e02c7f67af33292dae",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_cubic_centroid_controls.py",
+      "origin_path": "src/check_cubic_centroid_controls.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "cc3d6ba6a0710fc4364cafea4ec544c063f25d15",
+      "origin_sha256": "7373da5513e286fdecbf16250a8a04086b59abffe1b973dd01eab784e71a74fe",
+      "sha256": "7373da5513e286fdecbf16250a8a04086b59abffe1b973dd01eab784e71a74fe",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_cubic_centroid_descent.py",
+      "origin_path": "src/check_cubic_centroid_descent.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "d83ba2cf256e65d72037ef955461c79b29f4bb38",
+      "origin_sha256": "02736b92ad695e08d3c4ec0c4e94013379ba049dbba88af9291d1ede22a64c47",
+      "sha256": "02736b92ad695e08d3c4ec0c4e94013379ba049dbba88af9291d1ede22a64c47",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_cubic_linear_factors.py",
+      "origin_path": "src/check_cubic_linear_factors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "b973a9dad7b3fb9d91b12248c7b47f80ddf879d4",
+      "origin_sha256": "e645226061ecfdb354cd023955562f1e5e3e2d10f7f3dbee0a91a79086db3c60",
+      "sha256": "e645226061ecfdb354cd023955562f1e5e3e2d10f7f3dbee0a91a79086db3c60",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_diagonal_control_sampling.py",
+      "origin_path": "src/check_diagonal_control_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "f7420d02be7056a2e165512eb7084064f3e1ddaa",
+      "origin_sha256": "2ef4eeb2e40a0de0de10684ad1654213022fd6fadfa8c96ccf2c037cb8e5125d",
+      "sha256": "2ef4eeb2e40a0de0de10684ad1654213022fd6fadfa8c96ccf2c037cb8e5125d",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_direct_acceptance_estimator.py",
+      "origin_path": "src/check_direct_acceptance_estimator.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "4ff89fece4c4355406852b3a8b2d7404feb856b2",
+      "origin_sha256": "9bac2c5685b133b759ab2ef0363d38541f166faa8f5607c768edac32a9e996d2",
+      "sha256": "9bac2c5685b133b759ab2ef0363d38541f166faa8f5607c768edac32a9e996d2",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_eth_acceptance_transfer.py",
+      "origin_path": "src/check_eth_acceptance_transfer.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "7ff76bcbce6846da27e2f5b598cead09712185c4",
+      "origin_sha256": "5fb80f5476076f7b9814e07ef9f15d076eb0d8123f0164d9d5f49fdfd58635ef",
+      "sha256": "5fb80f5476076f7b9814e07ef9f15d076eb0d8123f0164d9d5f49fdfd58635ef",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_field_defect_subspaces.py",
+      "origin_path": "src/check_field_defect_subspaces.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "bcb58d4fc95d05f311834cbf775c360f7b58ddd7",
+      "origin_sha256": "35b3d336078e7d1c8376ad0baf335756c1d73925f13d97e1267a25a22ffcdf9e",
+      "sha256": "35b3d336078e7d1c8376ad0baf335756c1d73925f13d97e1267a25a22ffcdf9e",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_frobenius_trace_degree.py",
+      "origin_path": "src/check_frobenius_trace_degree.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "4ba3df8ad6314f28b87157b1c960a4ad15e26c58",
+      "origin_sha256": "a65e7e3edeafc133b9c48b02b85ecc00b9536fdd2d33561af3d2801e1a6742d7",
+      "sha256": "a65e7e3edeafc133b9c48b02b85ecc00b9536fdd2d33561af3d2801e1a6742d7",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_gaussian_block_cuts.py",
+      "origin_path": "src/check_gaussian_block_cuts.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "df3b81556eb0879ec1111caa7ea341bff8005a98",
+      "origin_sha256": "dd68d841715db1f58b501c43c7949fa3c3a3e941003dac1d7abc657c2e43c68d",
+      "sha256": "dd68d841715db1f58b501c43c7949fa3c3a3e941003dac1d7abc657c2e43c68d",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_gaussian_boundary_factorization.py",
+      "origin_path": "src/check_gaussian_boundary_factorization.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "5795eb557f29e066c2d3ee6e80c6769ead34040d",
+      "origin_sha256": "4fb1f540dce72e47e0e4c1c8711e1efce66fa126843f1569d7c5bca8c610cd72",
+      "sha256": "4fb1f540dce72e47e0e4c1c8711e1efce66fa126843f1569d7c5bca8c610cd72",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_gaussian_interface_transfer.py",
+      "origin_path": "src/check_gaussian_interface_transfer.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "38878bb3a0e9c543a032baef4c6835fd872f9f2a",
+      "origin_sha256": "b9b9970d43f460f52d5aefdb1b3bba9a9d65ae0b92aabec29f93c25c00e82e61",
+      "sha256": "b9b9970d43f460f52d5aefdb1b3bba9a9d65ae0b92aabec29f93c25c00e82e61",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_gaussian_mass_sampling.py",
+      "origin_path": "src/check_gaussian_mass_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "69fb59cf1a23b0c1e83f18afb134747813b73a83",
+      "origin_sha256": "7a2527da2f074da7d52f56d34738d65ef69255f946dc2b48e549f90fb76f7568",
+      "sha256": "7a2527da2f074da7d52f56d34738d65ef69255f946dc2b48e549f90fb76f7568",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_gaussian_message_norms.py",
+      "origin_path": "src/check_gaussian_message_norms.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "a130ac2b48aef771f89958a1e92c698531ea7dfb",
+      "origin_sha256": "a51089569d1ec008d6b12f315abc8394c80039865d53c757b7960d918f65ef5c",
+      "sha256": "a51089569d1ec008d6b12f315abc8394c80039865d53c757b7960d918f65ef5c",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_gaussian_pair_envelopes.py",
+      "origin_path": "src/check_gaussian_pair_envelopes.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "6f91b5490a9d242de28ecd31501f81a5d106e278",
+      "origin_sha256": "db8e31ce0148157ac35ee07ed46d13c5b2305d08911b229be4f846730b28f8d5",
+      "sha256": "db8e31ce0148157ac35ee07ed46d13c5b2305d08911b229be4f846730b28f8d5",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_input_aware_estimator.py",
+      "origin_path": "src/check_input_aware_estimator.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "a0c74010e272266b92a0bc5392585b3df43f3e6e",
+      "origin_sha256": "48eb64d21ecf058f9aa35c96826d44e144f133559934765a9973b3d9fe9860de",
+      "sha256": "48eb64d21ecf058f9aa35c96826d44e144f133559934765a9973b3d9fe9860de",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_linear_chain_counts.py",
+      "origin_path": "src/check_linear_chain_counts.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "ec99ca7d78ec83816de6987f7856498a9ea7d54f",
+      "origin_sha256": "eca02b1c347e1212664aaa01f3a8fad3315a951cd9117c317375bedd9a8b6d6c",
+      "sha256": "eca02b1c347e1212664aaa01f3a8fad3315a951cd9117c317375bedd9a8b6d6c",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_output_displacement_sums.py",
+      "origin_path": "src/check_output_displacement_sums.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "abf5ec245fb511c536efbf46d412ca38d6f8e345",
+      "origin_sha256": "6353f7aeccdf9000789ad893e75eaad52ef47904f1f897695aa1d19b0c7797ac",
+      "sha256": "6353f7aeccdf9000789ad893e75eaad52ef47904f1f897695aa1d19b0c7797ac",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_phase_combination_anchors.py",
+      "origin_path": "src/check_phase_combination_anchors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "ab748821710c34cf4652175988004e71927f092b",
+      "origin_sha256": "e6b4743d1d9b8b005fd1150cd43ba3bfc11c892149850b4e4a73fa0833afd738",
+      "sha256": "e6b4743d1d9b8b005fd1150cd43ba3bfc11c892149850b4e4a73fa0833afd738",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_phase_defect_tensors.py",
+      "origin_path": "src/check_phase_defect_tensors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "dc726823e1d24d416c2b980fc0e72a1e6275b6c9",
+      "origin_sha256": "9aec59e52429126699a3f1efa093fb1e492e33f3044f603f1d77989457d94656",
+      "sha256": "9aec59e52429126699a3f1efa093fb1e492e33f3044f603f1d77989457d94656",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_quadratic_pushforward_recursion.py",
+      "origin_path": "src/check_quadratic_pushforward_recursion.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "f5b1f9d1ada4eacd4e117a3b4c0220225aafec16",
+      "origin_sha256": "9762d93e0f4d911adda3917c16aeaed17f35dfda8a638c67532d95d806b43851",
+      "sha256": "9762d93e0f4d911adda3917c16aeaed17f35dfda8a638c67532d95d806b43851",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_rank_one_field_correction.py",
+      "origin_path": "src/check_rank_one_field_correction.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "1592983ad23a0b493bbf10530650047841ec8e1c",
+      "origin_sha256": "cefc2771f9cab4aab221a0459196718cad136c3c80b4877d4e2dff578f3129e7",
+      "sha256": "cefc2771f9cab4aab221a0459196718cad136c3c80b4877d4e2dff578f3129e7",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_rank_orbit_fourier.py",
+      "origin_path": "src/check_rank_orbit_fourier.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "6c60a999b5069f192b51a60f281acb949193dc5b",
+      "origin_sha256": "3da6cd51b354f184bc30e26dc0aebc1a69cc185eb6db5174cdaf27fe60eb650d",
+      "sha256": "3da6cd51b354f184bc30e26dc0aebc1a69cc185eb6db5174cdaf27fe60eb650d",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_sector_cubic_sampling.py",
+      "origin_path": "src/check_sector_cubic_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "75694fa51add1c5293168349c4d29af9ef4030ea",
+      "origin_sha256": "a1279a47137c0c1ffcdb5aaf4a051892d32d1a52d7cf77c43c638b4a25c43cde",
+      "sha256": "a1279a47137c0c1ffcdb5aaf4a051892d32d1a52d7cf77c43c638b4a25c43cde",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_sector_norm_sampling.py",
+      "origin_path": "src/check_sector_norm_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "9dc9391292e31c8b6fafb5b53db47899974a858a",
+      "origin_sha256": "9361cd6a9002453315fd1a7e45eb2d3785c695875a540724ff6052e984bd6834",
+      "sha256": "9361cd6a9002453315fd1a7e45eb2d3785c695875a540724ff6052e984bd6834",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_shared_control_anchors.py",
+      "origin_path": "src/check_shared_control_anchors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "c5473475cdee77652681713bb02af80540ccbacf",
+      "origin_sha256": "bbec7d3f5031b1d91db604494993b1f7051449be3245365eda401e3447fd6d25",
+      "sha256": "bbec7d3f5031b1d91db604494993b1f7051449be3245365eda401e3447fd6d25",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/check_two_copy_control_anchors.py",
+      "origin_path": "src/check_two_copy_control_anchors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "8ab7a756ae4120d4088761f743ffcb7388a6f9b5",
+      "origin_sha256": "dc41199a33deb32b887c6bceaef7efc253dc99a3cb71a6fb08d44fd1350aad3a",
+      "sha256": "dc41199a33deb32b887c6bceaef7efc253dc99a3cb71a6fb08d44fd1350aad3a",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/corrupted_field_contractions.py",
+      "origin_path": "src/corrupted_field_contractions.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "d2ae8c6fc275423c2276ba82644b8993660ec684",
+      "origin_sha256": "260c7f66e9988d72f17cf4228cf7100609d5bc2c9a79fb2ebe07f4be5f154bb7",
+      "sha256": "260c7f66e9988d72f17cf4228cf7100609d5bc2c9a79fb2ebe07f4be5f154bb7",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/cubic_centroid_controls.py",
+      "origin_path": "src/cubic_centroid_controls.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "cc3d6ba6a0710fc4364cafea4ec544c063f25d15",
+      "origin_sha256": "bf71bb1af0e2a9a25f7bf6199cae3d9e089096e2e46b20ae26afcde4eb626882",
+      "sha256": "bf71bb1af0e2a9a25f7bf6199cae3d9e089096e2e46b20ae26afcde4eb626882",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/cubic_centroid_descent.py",
+      "origin_path": "src/cubic_centroid_descent.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "d83ba2cf256e65d72037ef955461c79b29f4bb38",
+      "origin_sha256": "e90e40cb0f3a4109c9763d963135f4dcc0ff7759dc0fbcc3f83b932dabc42710",
+      "sha256": "e90e40cb0f3a4109c9763d963135f4dcc0ff7759dc0fbcc3f83b932dabc42710",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/cubic_linear_factors.py",
+      "origin_path": "src/cubic_linear_factors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "b973a9dad7b3fb9d91b12248c7b47f80ddf879d4",
+      "origin_sha256": "fd1ee2e95b17608e6558a69d8e97bdd8dbcdceb31d6be32dec9c69015cc2b6e1",
+      "sha256": "fd1ee2e95b17608e6558a69d8e97bdd8dbcdceb31d6be32dec9c69015cc2b6e1",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/diagonal_control_sampling.py",
+      "origin_path": "src/diagonal_control_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "f7420d02be7056a2e165512eb7084064f3e1ddaa",
+      "origin_sha256": "95635411378b069799a95bae67434def02bc083f0a98214e9e7731178d8fb63a",
+      "sha256": "95635411378b069799a95bae67434def02bc083f0a98214e9e7731178d8fb63a",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/direct_acceptance_estimator.py",
+      "origin_path": "src/direct_acceptance_estimator.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "4ff89fece4c4355406852b3a8b2d7404feb856b2",
+      "origin_sha256": "5840bddf290d1649a988beacdf9b19f42fcf4ed87af024aca63b44bae05bac86",
+      "sha256": "5840bddf290d1649a988beacdf9b19f42fcf4ed87af024aca63b44bae05bac86",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/eth_acceptance_encoding.py",
+      "origin_path": "src/eth_acceptance_encoding.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "7ff76bcbce6846da27e2f5b598cead09712185c4",
+      "origin_sha256": "c040b527b4b58b4144463d599bd0d8ef5bb03e3d59120ccad33e3eea66116ba6",
+      "sha256": "c040b527b4b58b4144463d599bd0d8ef5bb03e3d59120ccad33e3eea66116ba6",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/field_defect_subspaces.py",
+      "origin_path": "src/field_defect_subspaces.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "bcb58d4fc95d05f311834cbf775c360f7b58ddd7",
+      "origin_sha256": "49c09712ceea55e680a8ed236236f0d44f98ef7e0f91ba749bfae99128dc99ad",
+      "sha256": "49c09712ceea55e680a8ed236236f0d44f98ef7e0f91ba749bfae99128dc99ad",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/finite_field_acceptance.py",
+      "origin_path": "src/finite_field_acceptance.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "9779672338b5d5e3d063ab1f693ba5a3c75da568",
+      "origin_sha256": "e2df1e92658da6ca5494c4fdc2b4322b397abb4cb786811350d6ff9c961bf625",
+      "sha256": "e2df1e92658da6ca5494c4fdc2b4322b397abb4cb786811350d6ff9c961bf625",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/finite_field_descent.py",
+      "origin_path": "src/finite_field_descent.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "9779672338b5d5e3d063ab1f693ba5a3c75da568",
+      "origin_sha256": "47b6bf18b6a4aca61190f486423aa4f117d3744f5fd99d1d1975d9d15bd72ecf",
+      "sha256": "47b6bf18b6a4aca61190f486423aa4f117d3744f5fd99d1d1975d9d15bd72ecf",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/frobenius_trace_degree.py",
+      "origin_path": "src/frobenius_trace_degree.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "4ba3df8ad6314f28b87157b1c960a4ad15e26c58",
+      "origin_sha256": "2eedaeb14a50d576028ded7c2ff6ef0bbed282e1a2d038f8ea7ccc88ca3cb76d",
+      "sha256": "2eedaeb14a50d576028ded7c2ff6ef0bbed282e1a2d038f8ea7ccc88ca3cb76d",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/gaussian_block_cuts.py",
+      "origin_path": "src/gaussian_block_cuts.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "df3b81556eb0879ec1111caa7ea341bff8005a98",
+      "origin_sha256": "549c5226fa8a5d2f7ba594bc3817006e30fc147afa03fcb7861265ef2dae0ed6",
+      "sha256": "549c5226fa8a5d2f7ba594bc3817006e30fc147afa03fcb7861265ef2dae0ed6",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/gaussian_boundary_factorization.py",
+      "origin_path": "src/gaussian_boundary_factorization.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "5795eb557f29e066c2d3ee6e80c6769ead34040d",
+      "origin_sha256": "391c91c8a7f3f06db4f1972eeb503dcc8065ff3b0c8a6d72c6b975da7831693a",
+      "sha256": "391c91c8a7f3f06db4f1972eeb503dcc8065ff3b0c8a6d72c6b975da7831693a",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/gaussian_interface_transfer.py",
+      "origin_path": "src/gaussian_interface_transfer.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "38878bb3a0e9c543a032baef4c6835fd872f9f2a",
+      "origin_sha256": "c59eb27185aff0afb96fd58d7c3b80c0221cbedf39f3a939dd6cdfe88a2a24ab",
+      "sha256": "c59eb27185aff0afb96fd58d7c3b80c0221cbedf39f3a939dd6cdfe88a2a24ab",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/gaussian_mass_sampling.py",
+      "origin_path": "src/gaussian_mass_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "69fb59cf1a23b0c1e83f18afb134747813b73a83",
+      "origin_sha256": "0879caa917e42c0b419d20b9c69efc0ff34fbd01a7628799a8ce6c8d26861ed1",
+      "sha256": "0879caa917e42c0b419d20b9c69efc0ff34fbd01a7628799a8ce6c8d26861ed1",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/gaussian_message_norms.py",
+      "origin_path": "src/gaussian_message_norms.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "a130ac2b48aef771f89958a1e92c698531ea7dfb",
+      "origin_sha256": "50bfd13b86329b473413d4434170b96ab20459bfd0156a0c97f9eea59cdef2a3",
+      "sha256": "50bfd13b86329b473413d4434170b96ab20459bfd0156a0c97f9eea59cdef2a3",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/gaussian_pair_envelopes.py",
+      "origin_path": "src/gaussian_pair_envelopes.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "6f91b5490a9d242de28ecd31501f81a5d106e278",
+      "origin_sha256": "12cde4f072ca1fed013f13278133e3c006ae127ac1d7de9e5b24d8e09dcfa695",
+      "sha256": "12cde4f072ca1fed013f13278133e3c006ae127ac1d7de9e5b24d8e09dcfa695",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/gaussian_relation_transfer.py",
+      "origin_path": "src/gaussian_relation_transfer.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "f58784250ad772b3c1fe7dccb7aaec70f8e4d6c6",
+      "origin_sha256": "1df2052dbcd0ebaced7fdffa4d624f93dd54d9476e6ec35907d81322e70e1433",
+      "sha256": "1df2052dbcd0ebaced7fdffa4d624f93dd54d9476e6ec35907d81322e70e1433",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/linear_chain_characters.py",
+      "origin_path": "src/linear_chain_characters.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "1a9f9bbb084e0340a7a7eae7f898a80964d9dbb5",
+      "origin_sha256": "d1ea35937e5509641fb1cbd92e1d4d6ee20242ed0ec3ccbeb65fbc68d16abf52",
+      "sha256": "d1ea35937e5509641fb1cbd92e1d4d6ee20242ed0ec3ccbeb65fbc68d16abf52",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/linear_chain_counts.py",
+      "origin_path": "src/linear_chain_counts.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "ec99ca7d78ec83816de6987f7856498a9ea7d54f",
+      "origin_sha256": "58053a81258292dae76ade785aae7e44398404815ee8c9c9d04f47eebe3637df",
+      "sha256": "58053a81258292dae76ade785aae7e44398404815ee8c9c9d04f47eebe3637df",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/magic_residual_counts.py",
+      "origin_path": "src/magic_residual_counts.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "1cd3fd341d6386971b6ded4747665ddd26ff5c8e",
+      "origin_sha256": "8e702c91008e83253503a2b38edb37400f52f59641d597784f29a73cf821f1bc",
+      "sha256": "8e702c91008e83253503a2b38edb37400f52f59641d597784f29a73cf821f1bc",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/one_sided_regular_cancellation.py",
+      "origin_path": "src/one_sided_regular_cancellation.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "8269e700281fef8b7047a45cf6fbecaf589c8232",
+      "origin_sha256": "8d2093ff85ee5bad11e0153f5e0db04bdb28f9360ba02832d00850a41e0e0444",
+      "sha256": "8d2093ff85ee5bad11e0153f5e0db04bdb28f9360ba02832d00850a41e0e0444",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/output_displacement_sums.py",
+      "origin_path": "src/output_displacement_sums.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "abf5ec245fb511c536efbf46d412ca38d6f8e345",
+      "origin_sha256": "07f89faf2fb05477ec9fcfc942b25d86cc3e836a74529aa9b125d006f2b1b460",
+      "sha256": "07f89faf2fb05477ec9fcfc942b25d86cc3e836a74529aa9b125d006f2b1b460",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/phase_combination_anchors.py",
+      "origin_path": "src/phase_combination_anchors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "ab748821710c34cf4652175988004e71927f092b",
+      "origin_sha256": "62154018677c3d2bedb8f9e062e81b940786f6c9e58245afe702a8ab92848dcf",
+      "sha256": "62154018677c3d2bedb8f9e062e81b940786f6c9e58245afe702a8ab92848dcf",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/phase_defect_tensors.py",
+      "origin_path": "src/phase_defect_tensors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "dc726823e1d24d416c2b980fc0e72a1e6275b6c9",
+      "origin_sha256": "612142347a4e44261a555d868a4e6aeeb3d2e74f326fd4564fb941a0a6fa061c",
+      "sha256": "612142347a4e44261a555d868a4e6aeeb3d2e74f326fd4564fb941a0a6fa061c",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/quadratic_pushforward_recursion.py",
+      "origin_path": "src/quadratic_pushforward_recursion.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "f5b1f9d1ada4eacd4e117a3b4c0220225aafec16",
+      "origin_sha256": "411afb4cc4f464ab72f99daa2ba81f10fa504bd1fc6559f888dddbf96e9434f5",
+      "sha256": "411afb4cc4f464ab72f99daa2ba81f10fa504bd1fc6559f888dddbf96e9434f5",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/quartic_pfaffian_moments.py",
+      "origin_path": "src/quartic_pfaffian_moments.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "14c2153e91d9008d7d960d3c4f1370594450a129",
+      "origin_sha256": "60c21146e2a460601221c2481dc66f4de514278f5b4160e6e146a9324aac2944",
+      "sha256": "60c21146e2a460601221c2481dc66f4de514278f5b4160e6e146a9324aac2944",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/rank_one_field_correction.py",
+      "origin_path": "src/rank_one_field_correction.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "1592983ad23a0b493bbf10530650047841ec8e1c",
+      "origin_sha256": "c75e9d9ada4ba0a353c49120810e7ae86703a1baf44d49550afd667bed0e3e8e",
+      "sha256": "c75e9d9ada4ba0a353c49120810e7ae86703a1baf44d49550afd667bed0e3e8e",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/rank_orbit_fourier.py",
+      "origin_path": "src/rank_orbit_fourier.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "6c60a999b5069f192b51a60f281acb949193dc5b",
+      "origin_sha256": "1bd4ddd0a574d1933d0b52824565611f7f0678bd56f6f3d6bc95fb5b12636228",
+      "sha256": "1bd4ddd0a574d1933d0b52824565611f7f0678bd56f6f3d6bc95fb5b12636228",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/sector_cubic_sampling.py",
+      "origin_path": "src/sector_cubic_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "75694fa51add1c5293168349c4d29af9ef4030ea",
+      "origin_sha256": "3a5f57d1ddcc8647f7765d2151273d693b35a07bfba45d70369c5696783d1c8b",
+      "sha256": "3a5f57d1ddcc8647f7765d2151273d693b35a07bfba45d70369c5696783d1c8b",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/sector_norm_sampling.py",
+      "origin_path": "src/sector_norm_sampling.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "2af4aa9c4e4f8e5f9a76e191122f846cadc73eb1",
+      "origin_sha256": "654f12973bc137a31c6f815d777189c03f100aa77a4864f418106b0e14172e27",
+      "sha256": "654f12973bc137a31c6f815d777189c03f100aa77a4864f418106b0e14172e27",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/shared_control_anchors.py",
+      "origin_path": "src/shared_control_anchors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "c5473475cdee77652681713bb02af80540ccbacf",
+      "origin_sha256": "a46d3fc8ed6c8d04916e3e2436549cee4b15af2fff2f0c67d04a7a155786d326",
+      "sha256": "a46d3fc8ed6c8d04916e3e2436549cee4b15af2fff2f0c67d04a7a155786d326",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "src/two_copy_control_anchors.py",
+      "origin_path": "src/two_copy_control_anchors.py",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "8ab7a756ae4120d4088761f743ffcb7388a6f9b5",
+      "origin_sha256": "bcee230c336afa3dd7dca767ec669effb5ccf504d1b55a4c17227db5c436d328",
+      "sha256": "bcee230c336afa3dd7dca767ec669effb5ccf504d1b55a4c17227db5c436d328",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "manuscript/main.tex",
+      "origin_path": "manuscripts/output-dependent-cubic-simulation/main.tex",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_sha256": "9e5a13a28136c507590531bbbc8ee2925f55337541fe75fd67b765a689356080",
+      "sha256": "9e5a13a28136c507590531bbbc8ee2925f55337541fe75fd67b765a689356080",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "manuscript/main.pdf",
+      "origin_path": "manuscripts/output-dependent-cubic-simulation/main.pdf",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
+      "sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "manuscript/authors.tex",
+      "origin_path": "manuscripts/output-dependent-cubic-simulation/authors.tex",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_sha256": "cec484e64b81f601358a11ef8350dae891362f3d287b509d817516adfa79c088",
+      "sha256": "cec484e64b81f601358a11ef8350dae891362f3d287b509d817516adfa79c088",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "manuscript/references.bib",
+      "origin_path": "manuscripts/output-dependent-cubic-simulation/references.bib",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_sha256": "ab27c7ce8689ba2b7dee92183fd087a0e2d9ff7353ec37e6c1c98f967480d480",
+      "sha256": "ab27c7ce8689ba2b7dee92183fd087a0e2d9ff7353ec37e6c1c98f967480d480",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "evidence/s174-sector-publication-theorem-comparison-2026-10-28.md",
+      "origin_path": "proofs/s174-sector-publication-theorem-comparison-2026-10-28.md",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "9dc9391292e31c8b6fafb5b53db47899974a858a",
+      "origin_sha256": "8b19b14200b1368c9feef736b1bfb214edf8c5764baffadeb8a34ef9987a1654",
+      "sha256": "8b19b14200b1368c9feef736b1bfb214edf8c5764baffadeb8a34ef9987a1654",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "evidence/s175-sector-norm-estimation-and-cost-2026-10-28.md",
+      "origin_path": "proofs/s175-sector-norm-estimation-and-cost-2026-10-28.md",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "2af4aa9c4e4f8e5f9a76e191122f846cadc73eb1",
+      "origin_sha256": "a0d36434641c2b9349ccd3c5cd49b6cf40803561e226eb606ac2df6b47bfb3a5",
+      "sha256": "31bc5a49b126a9e9060394a65d8d2723604af38ac87b13e0103d07d1dc34f490",
+      "transformation": "Public relative reference repaired; otherwise canonical Git bytes"
+    },
+    {
+      "path": "evidence/s176-sector-families-and-comparison-2026-10-28.md",
+      "origin_path": "proofs/s176-sector-families-and-comparison-2026-10-28.md",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "9dc9391292e31c8b6fafb5b53db47899974a858a",
+      "origin_sha256": "e757113e555c0d5356d74104eb85889b5ed3478df0143109884132f55309352a",
+      "sha256": "e757113e555c0d5356d74104eb85889b5ed3478df0143109884132f55309352a",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    },
+    {
+      "path": "artifacts/s175-sector-norm-checks.json",
+      "origin_path": "artifacts/s175-sector-norm-checks.json",
+      "origin_snapshot": "cb7d5ee22335655234b3f3ff282497386399b103",
+      "origin_last_change": "9dc9391292e31c8b6fafb5b53db47899974a858a",
+      "origin_sha256": "734ade77f15bd179bb52a008eaaadba3c3d4985cfe46bcac694d231b69a98aa7",
+      "sha256": "734ade77f15bd179bb52a008eaaadba3c3d4985cfe46bcac694d231b69a98aa7",
+      "transformation": "Canonical Git bytes; original history retained in research repository"
+    }
+  ]
+}

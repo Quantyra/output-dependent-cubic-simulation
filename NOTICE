@@ -1,0 +1,15 @@
+Output-dependent cubic simulation
+Copyright 2026 Daniel Fredriksen / Quantyra Inc.
+
+The code is authored within the Quantyra research workstream with AI
+assistance. The export preserves its originating paths and commits in
+PROVENANCE.json. No external implementation was copied for this export.
+
+The method uses established mathematical ingredients from the works
+cited in manuscript/references.bib, particularly the equatorial norm
+estimator of Bravyi et al. (2019), covering sets of Maslov et al. (2024),
+and independent spaces discussed by Blaser et al. (2026).
+
+The source archive includes manuscript material under CC-BY-4.0; the
+Apache-2.0 designation of the software archive does not replace that
+separate manuscript license. See LICENSE for the path-specific scope.

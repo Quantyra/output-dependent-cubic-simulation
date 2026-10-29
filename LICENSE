@@ -1,0 +1,14 @@
+This repository uses separate licenses for distinct materials:
+
+* Manuscript (PDF and LaTeX), bibliography, prose documentation, historical
+  evidence notes and check receipts: Creative Commons Attribution 4.0
+  International (CC-BY-4.0), in LICENSES/CC-BY-4.0.txt.
+* Python source in src/ and tools/, and build/check configuration:
+  Apache License, Version 2.0, in LICENSES/Apache-2.0.txt.
+
+Copyright 2026 Daniel Fredriksen / Quantyra Inc.
+
+These choices were confirmed by Daniel Fredriksen for this publication.
+Attribution to third-party research does not imply ownership of, or a
+license to redistribute, those authors' papers. Their papers are linked
+and cited; they are not bundled in this archive.

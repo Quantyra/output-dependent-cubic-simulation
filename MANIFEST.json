@@ -1,0 +1,506 @@
+{
+  "algorithm": "SHA-256",
+  "scope": "All staged/tracked distribution files except this inventory itself; text is LF.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 45,
+      "sha256": "8df22cc43d34bc5cf0e2ae4d1cd11a28ad8073b0e53f3ad51d1d693516d12b32"
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "bytes": 909,
+      "sha256": "50f201dda5f153879fa2dda46e5b1bd08b99231ed7c4b5f9be5fb82b97ec935a"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 87,
+      "sha256": "ff2d80f1e486af2426b05ced3c403624f147a53dd0b72e8a9e49819ffe6b35d6"
+    },
+    {
+      "path": ".zenodo.json",
+      "bytes": 1212,
+      "sha256": "7026ccbebd7738f8b57f34f781d9479b251e6e66890d41c3e98ab7dde45b2d3f"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1213,
+      "sha256": "81a97e6895cb2e193aac73f737167525be0fd53779cf79c5f40a21a36ba39611"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 834,
+      "sha256": "5dfc4ccfe69ad07bec56cf1a768b0b9467d74414c24fca88eb8f56e1f7a41aaf"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1247,
+      "sha256": "3972a2295d25dcf6971a1762feb24b35995e93043a7842ee9842cc56428b24af"
+    },
+    {
+      "path": "INTEGRITY.md",
+      "bytes": 2169,
+      "sha256": "2231ea4618a5ca359163cddd6031a83c8b97ef81f8654c1f08bc182b2b261f4e"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 706,
+      "sha256": "747e5ea633f9bbea5e9069dffcb1fb736351efc7cbd68f411beaab0f22a3c285"
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 774,
+      "sha256": "bcc1dfc819aac4f3b5006fbf874f3e02fc89ff762718867fff996d972b873d06"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 40856,
+      "sha256": "c0a94cf7b55e410f42a30fddbeb76ccf3887513ecd84c46169495c82b1679c8d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3092,
+      "sha256": "e07ba94e0de8466c7e3038458c2180b12dafc6f29a5120a5d7130d2926b290b5"
+    },
+    {
+      "path": "REPRODUCING.md",
+      "bytes": 2805,
+      "sha256": "817f8a21153336e868a3049a14136de2bdec3270936135f2f7830a4044cc075e"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 2742,
+      "sha256": "941ef1735e4c9b3eea831a12effd9e5527bc7c15b3a15584fc510cf1c65fdb19"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 2970,
+      "sha256": "e66343db7b0ec440173b1c6815321be63fe81c8c562c670a1957d0c21efbcd33"
+    },
+    {
+      "path": "artifacts/s175-sector-norm-checks.json",
+      "bytes": 19672,
+      "sha256": "734ade77f15bd179bb52a008eaaadba3c3d4985cfe46bcac694d231b69a98aa7"
+    },
+    {
+      "path": "evidence/s174-sector-publication-theorem-comparison-2026-10-28.md",
+      "bytes": 11288,
+      "sha256": "8b19b14200b1368c9feef736b1bfb214edf8c5764baffadeb8a34ef9987a1654"
+    },
+    {
+      "path": "evidence/s175-sector-norm-estimation-and-cost-2026-10-28.md",
+      "bytes": 11261,
+      "sha256": "31bc5a49b126a9e9060394a65d8d2723604af38ac87b13e0103d07d1dc34f490"
+    },
+    {
+      "path": "evidence/s176-sector-families-and-comparison-2026-10-28.md",
+      "bytes": 9921,
+      "sha256": "e757113e555c0d5356d74104eb85889b5ed3478df0143109884132f55309352a"
+    },
+    {
+      "path": "manuscript/authors.tex",
+      "bytes": 123,
+      "sha256": "cec484e64b81f601358a11ef8350dae891362f3d287b509d817516adfa79c088"
+    },
+    {
+      "path": "manuscript/main.pdf",
+      "bytes": 123753,
+      "sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d"
+    },
+    {
+      "path": "manuscript/main.tex",
+      "bytes": 34941,
+      "sha256": "9e5a13a28136c507590531bbbc8ee2925f55337541fe75fd67b765a689356080"
+    },
+    {
+      "path": "manuscript/references.bib",
+      "bytes": 1914,
+      "sha256": "ab27c7ce8689ba2b7dee92183fd087a0e2d9ff7353ec37e6c1c98f967480d480"
+    },
+    {
+      "path": "publication/LEAN-PLAN.md",
+      "bytes": 2664,
+      "sha256": "49ad33077a56ea97f17ca9f6c60426a4c38ec5d93e72bea09fd2ed1df71bdd5b"
+    },
+    {
+      "path": "publication/README.md",
+      "bytes": 2386,
+      "sha256": "b0926730dda11b8d40f867b016532dd2269fe29e19871d415f7bb74aa98ca875"
+    },
+    {
+      "path": "publication/RELEASE-NOTES-v0.1.0.md",
+      "bytes": 1410,
+      "sha256": "00880cc9687caa0f65e4ca16a6a4ad78e9ba99361d1922fdd8203d97dfb71fef"
+    },
+    {
+      "path": "publication/zenodo-paper.json",
+      "bytes": 1269,
+      "sha256": "4afd49c67d879aed1c756d664133d9feaf8267e0ce7e36905651ec2d7f51d7dc"
+    },
+    {
+      "path": "src/affine_control_sampling.py",
+      "bytes": 6235,
+      "sha256": "11c986f32917099c3adeb2a80e529599ab24726001638a09cdce80a09c55455e"
+    },
+    {
+      "path": "src/affine_map_transfer.py",
+      "bytes": 10018,
+      "sha256": "ac563a3a329170610d37cf105abf7e1fed66dcb426548f90f34f61ceb3998284"
+    },
+    {
+      "path": "src/asymmetric_chain_characters.py",
+      "bytes": 23100,
+      "sha256": "9180eb6d96041f7baa3543be9ee6bd3cd2d02178fb6d51b2a2cd81626f5d4128"
+    },
+    {
+      "path": "src/bordered_rank_fourier.py",
+      "bytes": 8133,
+      "sha256": "c0e2320e3e458d740d0f3ffd06c9c3b867e1d01747960805b6a27e0e511bec12"
+    },
+    {
+      "path": "src/check_acceptance_estimator.py",
+      "bytes": 14598,
+      "sha256": "711b7b8f635f123e915ed145d07e2010cc29a571ae9cdfd90237a5b70a08ea1e"
+    },
+    {
+      "path": "src/check_affine_map_transfer.py",
+      "bytes": 12348,
+      "sha256": "086289f8555fd662646ae86d5094941eb17b25ab9f71e613afe95890a1dc0a90"
+    },
+    {
+      "path": "src/check_bordered_rank_fourier.py",
+      "bytes": 11444,
+      "sha256": "a51205051e29ebb8db20a5f2ba765c33036748bee324a6c975918d6ff580bf05"
+    },
+    {
+      "path": "src/check_corrupted_field_contractions.py",
+      "bytes": 16964,
+      "sha256": "edf126f39f46281e0b956e6f5204cd2c734c480eb227f5e02c7f67af33292dae"
+    },
+    {
+      "path": "src/check_cubic_centroid_controls.py",
+      "bytes": 14652,
+      "sha256": "7373da5513e286fdecbf16250a8a04086b59abffe1b973dd01eab784e71a74fe"
+    },
+    {
+      "path": "src/check_cubic_centroid_descent.py",
+      "bytes": 12931,
+      "sha256": "02736b92ad695e08d3c4ec0c4e94013379ba049dbba88af9291d1ede22a64c47"
+    },
+    {
+      "path": "src/check_cubic_linear_factors.py",
+      "bytes": 16157,
+      "sha256": "e645226061ecfdb354cd023955562f1e5e3e2d10f7f3dbee0a91a79086db3c60"
+    },
+    {
+      "path": "src/check_diagonal_control_sampling.py",
+      "bytes": 15487,
+      "sha256": "2ef4eeb2e40a0de0de10684ad1654213022fd6fadfa8c96ccf2c037cb8e5125d"
+    },
+    {
+      "path": "src/check_direct_acceptance_estimator.py",
+      "bytes": 10267,
+      "sha256": "9bac2c5685b133b759ab2ef0363d38541f166faa8f5607c768edac32a9e996d2"
+    },
+    {
+      "path": "src/check_eth_acceptance_transfer.py",
+      "bytes": 13668,
+      "sha256": "5fb80f5476076f7b9814e07ef9f15d076eb0d8123f0164d9d5f49fdfd58635ef"
+    },
+    {
+      "path": "src/check_field_defect_subspaces.py",
+      "bytes": 17911,
+      "sha256": "35b3d336078e7d1c8376ad0baf335756c1d73925f13d97e1267a25a22ffcdf9e"
+    },
+    {
+      "path": "src/check_frobenius_trace_degree.py",
+      "bytes": 12622,
+      "sha256": "a65e7e3edeafc133b9c48b02b85ecc00b9536fdd2d33561af3d2801e1a6742d7"
+    },
+    {
+      "path": "src/check_gaussian_block_cuts.py",
+      "bytes": 18931,
+      "sha256": "dd68d841715db1f58b501c43c7949fa3c3a3e941003dac1d7abc657c2e43c68d"
+    },
+    {
+      "path": "src/check_gaussian_boundary_factorization.py",
+      "bytes": 14034,
+      "sha256": "4fb1f540dce72e47e0e4c1c8711e1efce66fa126843f1569d7c5bca8c610cd72"
+    },
+    {
+      "path": "src/check_gaussian_interface_transfer.py",
+      "bytes": 17673,
+      "sha256": "b9b9970d43f460f52d5aefdb1b3bba9a9d65ae0b92aabec29f93c25c00e82e61"
+    },
+    {
+      "path": "src/check_gaussian_mass_sampling.py",
+      "bytes": 18788,
+      "sha256": "7a2527da2f074da7d52f56d34738d65ef69255f946dc2b48e549f90fb76f7568"
+    },
+    {
+      "path": "src/check_gaussian_message_norms.py",
+      "bytes": 17866,
+      "sha256": "a51089569d1ec008d6b12f315abc8394c80039865d53c757b7960d918f65ef5c"
+    },
+    {
+      "path": "src/check_gaussian_pair_envelopes.py",
+      "bytes": 16703,
+      "sha256": "db8e31ce0148157ac35ee07ed46d13c5b2305d08911b229be4f846730b28f8d5"
+    },
+    {
+      "path": "src/check_input_aware_estimator.py",
+      "bytes": 15746,
+      "sha256": "48eb64d21ecf058f9aa35c96826d44e144f133559934765a9973b3d9fe9860de"
+    },
+    {
+      "path": "src/check_linear_chain_counts.py",
+      "bytes": 16418,
+      "sha256": "eca02b1c347e1212664aaa01f3a8fad3315a951cd9117c317375bedd9a8b6d6c"
+    },
+    {
+      "path": "src/check_output_displacement_sums.py",
+      "bytes": 14975,
+      "sha256": "6353f7aeccdf9000789ad893e75eaad52ef47904f1f897695aa1d19b0c7797ac"
+    },
+    {
+      "path": "src/check_phase_combination_anchors.py",
+      "bytes": 14440,
+      "sha256": "e6b4743d1d9b8b005fd1150cd43ba3bfc11c892149850b4e4a73fa0833afd738"
+    },
+    {
+      "path": "src/check_phase_defect_tensors.py",
+      "bytes": 16915,
+      "sha256": "9aec59e52429126699a3f1efa093fb1e492e33f3044f603f1d77989457d94656"
+    },
+    {
+      "path": "src/check_quadratic_pushforward_recursion.py",
+      "bytes": 12260,
+      "sha256": "9762d93e0f4d911adda3917c16aeaed17f35dfda8a638c67532d95d806b43851"
+    },
+    {
+      "path": "src/check_rank_one_field_correction.py",
+      "bytes": 13472,
+      "sha256": "cefc2771f9cab4aab221a0459196718cad136c3c80b4877d4e2dff578f3129e7"
+    },
+    {
+      "path": "src/check_rank_orbit_fourier.py",
+      "bytes": 9375,
+      "sha256": "3da6cd51b354f184bc30e26dc0aebc1a69cc185eb6db5174cdaf27fe60eb650d"
+    },
+    {
+      "path": "src/check_sector_cubic_sampling.py",
+      "bytes": 23984,
+      "sha256": "a1279a47137c0c1ffcdb5aaf4a051892d32d1a52d7cf77c43c638b4a25c43cde"
+    },
+    {
+      "path": "src/check_sector_norm_sampling.py",
+      "bytes": 12387,
+      "sha256": "9361cd6a9002453315fd1a7e45eb2d3785c695875a540724ff6052e984bd6834"
+    },
+    {
+      "path": "src/check_shared_control_anchors.py",
+      "bytes": 18481,
+      "sha256": "bbec7d3f5031b1d91db604494993b1f7051449be3245365eda401e3447fd6d25"
+    },
+    {
+      "path": "src/check_two_copy_control_anchors.py",
+      "bytes": 16542,
+      "sha256": "dc41199a33deb32b887c6bceaef7efc253dc99a3cb71a6fb08d44fd1350aad3a"
+    },
+    {
+      "path": "src/corrupted_field_contractions.py",
+      "bytes": 7768,
+      "sha256": "260c7f66e9988d72f17cf4228cf7100609d5bc2c9a79fb2ebe07f4be5f154bb7"
+    },
+    {
+      "path": "src/cubic_centroid_controls.py",
+      "bytes": 9676,
+      "sha256": "bf71bb1af0e2a9a25f7bf6199cae3d9e089096e2e46b20ae26afcde4eb626882"
+    },
+    {
+      "path": "src/cubic_centroid_descent.py",
+      "bytes": 15231,
+      "sha256": "e90e40cb0f3a4109c9763d963135f4dcc0ff7759dc0fbcc3f83b932dabc42710"
+    },
+    {
+      "path": "src/cubic_linear_factors.py",
+      "bytes": 5872,
+      "sha256": "fd1ee2e95b17608e6558a69d8e97bdd8dbcdceb31d6be32dec9c69015cc2b6e1"
+    },
+    {
+      "path": "src/diagonal_control_sampling.py",
+      "bytes": 6970,
+      "sha256": "95635411378b069799a95bae67434def02bc083f0a98214e9e7731178d8fb63a"
+    },
+    {
+      "path": "src/direct_acceptance_estimator.py",
+      "bytes": 12652,
+      "sha256": "5840bddf290d1649a988beacdf9b19f42fcf4ed87af024aca63b44bae05bac86"
+    },
+    {
+      "path": "src/eth_acceptance_encoding.py",
+      "bytes": 7334,
+      "sha256": "c040b527b4b58b4144463d599bd0d8ef5bb03e3d59120ccad33e3eea66116ba6"
+    },
+    {
+      "path": "src/field_defect_subspaces.py",
+      "bytes": 10362,
+      "sha256": "49c09712ceea55e680a8ed236236f0d44f98ef7e0f91ba749bfae99128dc99ad"
+    },
+    {
+      "path": "src/finite_field_acceptance.py",
+      "bytes": 13507,
+      "sha256": "e2df1e92658da6ca5494c4fdc2b4322b397abb4cb786811350d6ff9c961bf625"
+    },
+    {
+      "path": "src/finite_field_descent.py",
+      "bytes": 7654,
+      "sha256": "47b6bf18b6a4aca61190f486423aa4f117d3744f5fd99d1d1975d9d15bd72ecf"
+    },
+    {
+      "path": "src/frobenius_trace_degree.py",
+      "bytes": 8019,
+      "sha256": "2eedaeb14a50d576028ded7c2ff6ef0bbed282e1a2d038f8ea7ccc88ca3cb76d"
+    },
+    {
+      "path": "src/gaussian_block_cuts.py",
+      "bytes": 8414,
+      "sha256": "549c5226fa8a5d2f7ba594bc3817006e30fc147afa03fcb7861265ef2dae0ed6"
+    },
+    {
+      "path": "src/gaussian_boundary_factorization.py",
+      "bytes": 10771,
+      "sha256": "391c91c8a7f3f06db4f1972eeb503dcc8065ff3b0c8a6d72c6b975da7831693a"
+    },
+    {
+      "path": "src/gaussian_interface_transfer.py",
+      "bytes": 9604,
+      "sha256": "c59eb27185aff0afb96fd58d7c3b80c0221cbedf39f3a939dd6cdfe88a2a24ab"
+    },
+    {
+      "path": "src/gaussian_mass_sampling.py",
+      "bytes": 10914,
+      "sha256": "0879caa917e42c0b419d20b9c69efc0ff34fbd01a7628799a8ce6c8d26861ed1"
+    },
+    {
+      "path": "src/gaussian_message_norms.py",
+      "bytes": 7107,
+      "sha256": "50bfd13b86329b473413d4434170b96ab20459bfd0156a0c97f9eea59cdef2a3"
+    },
+    {
+      "path": "src/gaussian_pair_envelopes.py",
+      "bytes": 10035,
+      "sha256": "12cde4f072ca1fed013f13278133e3c006ae127ac1d7de9e5b24d8e09dcfa695"
+    },
+    {
+      "path": "src/gaussian_relation_transfer.py",
+      "bytes": 10513,
+      "sha256": "1df2052dbcd0ebaced7fdffa4d624f93dd54d9476e6ec35907d81322e70e1433"
+    },
+    {
+      "path": "src/linear_chain_characters.py",
+      "bytes": 17194,
+      "sha256": "d1ea35937e5509641fb1cbd92e1d4d6ee20242ed0ec3ccbeb65fbc68d16abf52"
+    },
+    {
+      "path": "src/linear_chain_counts.py",
+      "bytes": 16483,
+      "sha256": "58053a81258292dae76ade785aae7e44398404815ee8c9c9d04f47eebe3637df"
+    },
+    {
+      "path": "src/magic_residual_counts.py",
+      "bytes": 13008,
+      "sha256": "8e702c91008e83253503a2b38edb37400f52f59641d597784f29a73cf821f1bc"
+    },
+    {
+      "path": "src/one_sided_regular_cancellation.py",
+      "bytes": 6946,
+      "sha256": "8d2093ff85ee5bad11e0153f5e0db04bdb28f9360ba02832d00850a41e0e0444"
+    },
+    {
+      "path": "src/output_displacement_sums.py",
+      "bytes": 5781,
+      "sha256": "07f89faf2fb05477ec9fcfc942b25d86cc3e836a74529aa9b125d006f2b1b460"
+    },
+    {
+      "path": "src/phase_combination_anchors.py",
+      "bytes": 5682,
+      "sha256": "62154018677c3d2bedb8f9e062e81b940786f6c9e58245afe702a8ab92848dcf"
+    },
+    {
+      "path": "src/phase_defect_tensors.py",
+      "bytes": 13255,
+      "sha256": "612142347a4e44261a555d868a4e6aeeb3d2e74f326fd4564fb941a0a6fa061c"
+    },
+    {
+      "path": "src/quadratic_pushforward_recursion.py",
+      "bytes": 9789,
+      "sha256": "411afb4cc4f464ab72f99daa2ba81f10fa504bd1fc6559f888dddbf96e9434f5"
+    },
+    {
+      "path": "src/quartic_pfaffian_moments.py",
+      "bytes": 11574,
+      "sha256": "60c21146e2a460601221c2481dc66f4de514278f5b4160e6e146a9324aac2944"
+    },
+    {
+      "path": "src/rank_one_field_correction.py",
+      "bytes": 8221,
+      "sha256": "c75e9d9ada4ba0a353c49120810e7ae86703a1baf44d49550afd667bed0e3e8e"
+    },
+    {
+      "path": "src/rank_orbit_fourier.py",
+      "bytes": 7529,
+      "sha256": "1bd4ddd0a574d1933d0b52824565611f7f0678bd56f6f3d6bc95fb5b12636228"
+    },
+    {
+      "path": "src/sector_cubic_sampling.py",
+      "bytes": 11712,
+      "sha256": "3a5f57d1ddcc8647f7765d2151273d693b35a07bfba45d70369c5696783d1c8b"
+    },
+    {
+      "path": "src/sector_norm_sampling.py",
+      "bytes": 10805,
+      "sha256": "654f12973bc137a31c6f815d777189c03f100aa77a4864f418106b0e14172e27"
+    },
+    {
+      "path": "src/shared_control_anchors.py",
+      "bytes": 9420,
+      "sha256": "a46d3fc8ed6c8d04916e3e2436549cee4b15af2fff2f0c67d04a7a155786d326"
+    },
+    {
+      "path": "src/two_copy_control_anchors.py",
+      "bytes": 8045,
+      "sha256": "bcee230c336afa3dd7dca767ec669effb5ccf504d1b55a4c17227db5c436d328"
+    },
+    {
+      "path": "tools/check_metadata.py",
+      "bytes": 2239,
+      "sha256": "4d408b249593109631d70c853793aab9a6372d3aeed009bd84eb45ee46eca730"
+    },
+    {
+      "path": "tools/check_package.py",
+      "bytes": 2900,
+      "sha256": "cdbea10b50c07b5e361c2fa1432f64935e371cf88518befb9ccbc7980dd0f715"
+    },
+    {
+      "path": "tools/manifest.py",
+      "bytes": 884,
+      "sha256": "a4d908ff20d16d7fdb47aa0c611a2a7792cbf7fc2d8d5738792117ebc19472f4"
+    },
+    {
+      "path": "tools/reproduce.py",
+      "bytes": 1840,
+      "sha256": "bc57275fd5cdbb51324b834852da0c35ad78114d86ac9c26faa292ee2c6328ff"
+    }
+  ]
+}

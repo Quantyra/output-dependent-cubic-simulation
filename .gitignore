@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.aux
+*.log
+*.blg
+*.bbl
+*.out
+*.xdv
+build/
+.check-env/
+.verify/

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript in preferred-citation; this repository is its source and reproducibility companion. No DOI is available yet."
+type: software
+title: "Classical Simulation of Two-Layer Quantum Circuits via Output-Dependent Cubic Structure: source and reproducibility archive"
+version: 0.1.0
+authors:
+  - family-names: Fredriksen
+    given-names: Daniel
+    affiliation: Quantyra Inc.
+    orcid: https://orcid.org/0009-0002-9123-7435
+license: Apache-2.0
+repository-code: https://github.com/Quantyra/output-dependent-cubic-simulation
+url: https://github.com/Quantyra/output-dependent-cubic-simulation
+keywords:
+  - quantum circuit simulation
+  - cubic Boolean polynomials
+  - stabilizer norm estimation
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "Classical Simulation of Two-Layer Quantum Circuits via Output-Dependent Cubic Structure"
+  authors:
+    - family-names: Fredriksen
+      given-names: Daniel
+      affiliation: Quantyra Inc.
+      orcid: https://orcid.org/0009-0002-9123-7435
+  year: 2026
+  notes: "Informal preprint, version 0.1.0 candidate; first Zenodo publication pending."
+  url: https://github.com/Quantyra/output-dependent-cubic-simulation/blob/main/manuscript/main.pdf

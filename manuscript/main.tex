@@ -1,0 +1,605 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\poly}{\operatorname{poly}}
+\newcommand{\wtO}{\widetilde O}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\title{Classical Simulation of Two-Layer Quantum Circuits\\via Output-Dependent Cubic Structure}
+\input{authors.tex}
+\date{Version 0.1.0 candidate --- October 28, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a constructive method for estimating one output probability of a specified
+two-layer Boolean cubic-phase circuit. Differentiating the second phase at the measured
+output produces a quadratic Walsh support. Restricting the first cubic tensor to its
+displacement space yields a control parameter that can remain constant even when
+specified global-control certificates grow. We construct normalized matched sectors
+from the source and apply established stabilizer norm estimation to their coherent
+sum. For a verified restricted control codimension $k$, the readout uses
+$2^k\epsilon^{-2}\log(1/\delta)$ times a fixed polynomial, compared with $4^k$ for
+direct coherent branch pairs. General control discovery still requires a full-rank
+contraction-anchor promise and costs $2^{O(q^2)}$ at cap $q$; deterministic shortcuts
+have separate guarantees. We give exact arithmetic, random-bit and storage bounds,
+growing examples, explicit refusals, and a reproducible finite comparison that preserves
+the new method's unfavorable small-$k$ constants. This is a source-specific application
+and refinement of existing covering-set, independent-space and norm-estimation methods,
+not a new general simulation primitive or a universal quantum simulation result.
+\end{abstract}
+
+\section{Task, source interface and contribution}\label{sec:source}
+Let $V=\F^n$, let $J$ be a symmetric invertible binary matrix, and define
+\[
+ (F_J)_{x,y}=2^{-n/2}(-1)^{x^TJy},\qquad
+ D_f\ket{x}=(-1)^{f(x)}\ket{x}.
+\]
+Thus $F_J=F_J^*=F_J^{-1}$. The source describes
+\begin{equation}\label{eq:circuit}
+ \ket{\Psi}=F_JD_{f_1}F_JD_{f_0}F_J\ket{\beta},
+ \qquad p=\Pr[e^Tx=1\text{ on measuring }\Psi],
+\end{equation}
+where $f_0,f_1$ have Boolean degree at most three, $\beta$ is a specified basis input,
+and $e$ is a specified coordinate vector. All polynomials are reduced algebraic normal
+forms: $x_i^2=x_i$, coefficients lie in $\F$, and constant, linear and quadratic terms
+are retained. We estimate $p$ within $\epsilon=2^{-b}$ with failure at most $2^{-h}$,
+for integers $b,h\geq1$. This is one marginal probability, not full-distribution sampling.
+
+The executable native interface is deliberately literal. A descriptor contains
+$n,J,f_0,f_1,\beta,e$ as explicit binary masks. The native gate list begins with an
+identity header encoding the descriptor: each ASCII bit is a doubled $X$ or doubled
+$Z$ on wire zero, terminated by a doubled $H$. The body is the canonical expansion
+of~\eqref{eq:circuit}: reversible linear maps and Hadamards implement $F_J$;
+$Z$, controlled-$Z$ and the fixed Clifford+$T$ decomposition of controlled-controlled-$Z$
+implement the phase monomials. Constant signs use $XZXZ$. Recognition decodes the header,
+validates the descriptor, recompiles it, and compares every body record and boundary
+value. Hence the header supplies an encoding of the actual source, not an unchecked
+claim of equivalence or a structural certificate. An arbitrary equivalent gate list
+need not be recognized. The theorem also applies directly to the explicit descriptor
+interface with its actual encoding cost. Let $B$ be the bit length of the chosen literal
+source, including its header when present.
+
+The source contains neither a control space nor a stabilizer decomposition. Those are
+constructed and verified. The contribution is the resulting original-source theorem:
+output-dependent sector construction, a promised discovery procedure, and a joint norm
+readout with all access and arithmetic costs included. The conditional quadratic
+decompositions are instances of established covering and independent-space methods
+\cite{maslov2024,blaser2026}; the linear-length norm estimator is established
+\cite{bravyi2019}. Output-dependent marginal access is also prior art
+\cite{park2024,nest2011}. Section~\ref{sec:comparison} identifies the interfaces precisely.
+
+\section{Quadratic output reduction and normalized sectors}\label{sec:sectors}
+Put $j=J^{-1}e$ and $Q(v)=f_1(v)+f_1(v+j)$. The degree of $Q$ is at most two.
+For a quadratic $q$, write
+$B_q(u,v)=q(u+v)+q(u)+q(v)+q(0)$ for its alternating polar form and
+$W_q(l)=\sum_v(-1)^{q(v)+l^Tv}$ for its Walsh transform.
+
+\begin{lemma}[Quadratic Walsh elimination]\label{lem:walsh}
+If $B_q$ has rank $r$, then $r$ is even. The support of $W_q$ is an affine space
+$l_0+\im B_q$ of dimension $r$. Every nonzero normalized value $2^{-n}W_q(l)$ has
+magnitude $2^{-r/2}$, and its sign is a quadratic function of coordinates on this
+support. The support, its origin and this sign can be computed by binary elimination.
+\end{lemma}
+\begin{proof}
+Choose a basis in which the polar form is a sum of $r/2$ hyperbolic pairs and has a
+radical of dimension $n-r$. In those coordinates $q$ is a sum of pair products plus
+linear terms and a constant. Summing a radical coordinate is zero unless its linear
+coefficient is canceled by $l$, and otherwise contributes two. Each pair sum is
+$\sum_{u,v}(-1)^{uv+au+bv}=2(-1)^{ab}$. Multiplying gives the stated support,
+magnitude and quadratic sign, with no enumeration of support points. The same
+elimination computes an exact real quadratic Gauss sum in polynomial bit time.
+\end{proof}
+
+Apply Lemma~\ref{lem:walsh} to $Q$. Write its support as $J(d_0+S)$, where
+$S\subset V$ has even dimension $r$. Choose a basis matrix $D:\F^r\to S$ and a
+computed quadratic $w$ with
+\begin{equation}\label{eq:walsh}
+ 2^{-n}W_Q(J(d_0+Dz))=2^{-r/2}(-1)^{w(z)}.
+\end{equation}
+Let $C:V\to\F^c$, $c=n-r$, be a full-row-rank annihilator of $S$, let $R$ be a
+right inverse of $C$, put $\eta=Cd_0$, and solve $Ds=d_0+R\eta$. These are all
+computed affine coordinates, including the origin and its matching offset.
+
+The first phase state has amplitudes $2^{-n/2}(-1)^{f_0(x)+(J\beta)^Tx}$.
+Its mass on each coset $Cx=a$ is exactly $2^{-c}$. In coordinates on that coset define
+\begin{equation}\label{eq:psi}
+ \psi_a(y)=2^{-r/2}(-1)^{g_a(y)},\qquad
+ g_a(y)=f_0(Ra+Dy)+(J\beta)^T(Ra+Dy).
+\end{equation}
+Every $\psi_a$ is a unit vector.
+
+\begin{proposition}[Matched-sector identity]\label{prop:sector}
+The pulled-back output observable is the real Hermitian Clifford unitary
+\[
+ O=F_JD_{f_1}F_J Z_e F_JD_{f_1}F_J=F_JD_QF_JZ_e.
+\]
+It maps coset $a$ onto coset $a+\eta$. Its reduced kernel is
+\begin{equation}\label{eq:kernel}
+ O_a(t,y)=2^{-r/2}(-1)^{q_a(y,t)},\quad
+ q_a(y,t)=w(y+t+s)+e^T(Ra+Dy).
+\end{equation}
+The cross bilinear matrix of $q_a$ in $(y,t)$ is nonsingular. Moreover,
+\begin{equation}\label{eq:bounded}
+ X_a=\langle\psi_{a+\eta},O_a\psi_a\rangle\in[-1,1],\quad
+ X_a=X_{a+\eta},\quad \E_a X_a=1-2p.
+\end{equation}
+For $u_a=\psi_{a+\eta}+O_a\psi_a$, we have
+$\norm{u_a}^2=2+2X_a\in[0,4]$.
+\end{proposition}
+\begin{proof}
+$F_JZ_eF_J$ is translation by $j$. Commuting this translation through $D_{f_1}$
+gives $D_Q$, proving the second expression for $O$. Quadratic phase gates and binary
+Fourier maps are Clifford. The first expression proves Hermiticity and unitarity.
+The matrix entry between $x$ and $x'$ is
+$2^{-n}W_Q(J(x+x'))(-1)^{e^Tx}$. Its support condition is $x+x'\in d_0+S$.
+Substitute $x=Ra+Dy$, $x'=R(a+\eta)+Dt$ and use~\eqref{eq:walsh} to obtain
+\eqref{eq:kernel}. Since $Q(v+j)=Q(v)$, its Walsh support annihilates $j$;
+thus $e$ annihilates $S$ and $e^Td_0=0$. Each restricted map is a square unitary
+between full cosets. In a flat quadratic kernel, a singular cross matrix would give
+two proportional rows, contradicting unitarity. Realness and Cauchy--Schwarz bound
+$X_a$; Hermiticity gives its matching symmetry. Expanding the first phase state over
+orthogonal cosets of equal mass gives~\eqref{eq:bounded}. Expanding the norm of $u_a$
+proves the last assertion. All lower terms and input characters remain in these formulas.
+\end{proof}
+
+Equivalently, substitute $x=Ra+Dy$ and displacement $d_0+Dz$ in the full output
+polynomial. Its signed numerator $H_a$ has $2r$ free variables and
+$X_a=H_a/2^{3r/2}$. This smaller normalization matters: summing terms independently
+before retaining their interference would not provide the bounded statistic in
+\eqref{eq:bounded}. There is no unknown postselection probability to estimate.
+
+\section{Control certificates and paid discovery}\label{sec:discovery}
+The third difference of a Boolean cubic is an alternating trilinear form. Let $T$
+be this tensor for $f_0$ restricted to $S$ in the computed $D$ coordinates.
+A control certificate is a $k$-dimensional covector space $U\subset(\F^r)^*$ with
+$K=\ker U$ and $T(K,K,K)=0$. This is an independent-space condition in the terminology
+of~\cite{blaser2026}. It can be checked by tensor evaluation on a basis of $K$.
+Translation and addition of lower-degree terms do not change $T$.
+
+\begin{lemma}[Conditional quadratic branches]\label{lem:branches}
+A verified control certificate constructs a decomposition of each $\psi_a$ into
+$2^k$ normalized stabilizer states, each with coefficient $2^{-k/2}$. Fixing controls
+on both sides of $X_a$ yields $4^k$ exact real quadratic sums.
+\end{lemma}
+\begin{proof}
+Choose a right inverse of $U$ and a basis of $K$, yielding coordinates $(u,z)$ on
+$\F^r$. On each affine slice $u$ the cubic coefficient is $T|_{K^3}=0$, so the full
+phase, including its affine terms, is quadratic in $z$. A uniform quadratic phase on
+an affine subspace is a normalized stabilizer state. The slice has $2^{r-k}$ points,
+which gives coefficient $2^{-k/2}$ in~\eqref{eq:psi}. The kernel in
+\eqref{eq:kernel} is quadratic, so fixing both state controls leaves a quadratic
+form on $2r-2k$ variables. This is the established covering-set construction in a
+computed coordinate frame, not a minimum stabilizer-rank claim.
+\end{proof}
+
+We use the following explicit discovery scope, with integer search cap $q\geq0$.
+Zero tensor is accepted deterministically. A nonzero one-control factor is detected
+by solving $\ell\wedge T=0$ for a covector $\ell$: in a basis with $\ell=e_1^*$,
+this equation says every cubic includes that coordinate. Thus a nonempty solution
+space supplies a control, and an empty space is a valid cap-one refusal. At larger
+caps a basis of the quadratic exterior kernel is scanned for decomposable two-forms;
+every proposed image is verified. This is sound but incomplete: a decomposable
+linear combination need not be one of the returned basis vectors.
+
+\begin{theorem}[Capped anchor discovery]\label{thm:discovery}
+Suppose some certificate has dimension $k\leq q$ and some $v\in K$ has contraction
+$A(v)=T(v,\cdot,\cdot)$ of rank $2k$. After deterministic shortcuts and coordinate
+probes, inspect at most
+\begin{equation}\label{eq:discoverycost}
+ A_q=4^q(h+2)\quad\text{uniform probes},\qquad
+ C_q=4(q+1)2^{q^2}\quad\text{candidates per image}.
+\end{equation}
+Stream all covector subspaces of dimension at most $q$ in each nonzero contraction
+image of rank at most $2q$, verifying each. Discovery misses with probability at most
+$2^{-h-1}$. Every accepted certificate is sound, even without the promise. Every
+random tape obeys the caps; a miss outside the promise has no success guarantee.
+\end{theorem}
+\begin{proof}
+For $v\in K$, the contraction vanishes on $K\times K$. In coordinates complementary
+to $K$ its matrix has block form $\left(\begin{smallmatrix}B&M\\M^T&0\end{smallmatrix}\right)$.
+Rank $2k$ forces $M$ to have row rank $k$, and consequently the contraction image
+contains $U$. A principal Pfaffian witnessing rank $2k$ is a degree-$k$ polynomial
+in $v\in K$. It is nonzero at the promised anchor. Any nonzero Boolean polynomial
+of degree at most $k$ is nonzero on at least a $2^{-k}$ fraction of points: induct on
+the degree, using a nonzero highest-variable derivative and one nonzero value in
+each corresponding pair. A uniform ambient vector hits $K$ with probability $2^{-k}$.
+Thus each probe is useful with probability at least $4^{-k}\geq4^{-q}$.
+
+The number of $d$-subspaces in an $l$-space is a Gaussian binomial coefficient,
+at most $4\,2^{d(l-d)}$; indeed its product formula has denominator
+$\prod_{i=1}^d(1-2^{-i})>1/4$. For $l\leq2q$ and $0\leq d\leq q$,
+$d(l-d)\leq q^2$, proving the stated candidate cap. An image from a useful probe
+therefore exposes $U$ to the exhaustive verified search. Independent probe failure is
+at most $(1-4^{-q})^{A_q}\leq e^{-(h+2)}\leq2^{-h-1}$.
+Coordinate probes and sound shortcuts can only improve success. Rank above $2q$
+is skipped, not treated as impossibility. The final complete phase substitution
+checks the expected absence of free cubic terms as an additional consistency check.
+\end{proof}
+
+A user-imposed candidate limit that truncates this search removes its confidence
+guarantee. Small-control existence alone is insufficient for the anchor theorem.
+The algorithm returns explicit discovery or grammar refusals; it has no hidden
+unbounded fallback and makes no generic gate-equivalence recognition claim.
+
+\section{Joint sector and equatorial norm sampling}\label{sec:norm}
+By Lemma~\ref{lem:branches} and the Clifford property, $u_a$ has at most $2^{k+1}$
+constructed stabilizer terms. The established norm estimator of
+Bravyi et al.~\cite[Section 4.3]{bravyi2019} is therefore applicable with work linear
+in that length. We include its elementary moment argument to make our normalization
+and joint sampling contract explicit.
+
+Choose independent $d_j\in\mathbb Z_4$ uniformly and independent fair bits $a_{jl}$,
+and put
+\begin{equation}\label{eq:equatorial}
+ z_A(t)=\sum_j d_jt_j+2\sum_{j<l}a_{jl}t_jt_l\pmod4,\qquad
+ \phi_A(t)=2^{-r/2}i^{z_A(t)}.
+\end{equation}
+This requires exactly $d_r=2r+r(r-1)/2$ fair bits.
+
+\begin{lemma}[Equatorial moments; established norm primitive]\label{lem:moments}
+For any complex vector $u$ indexed by $\F^r$, set
+$Z=2^r|\langle\phi_A,u\rangle|^2$. Then
+\[
+ \E Z=\norm{u}^2,\qquad
+ \E Z^2=2\norm{u}^4-\sum_t|u(t)|^4,\qquad
+ \Var Z\leq\norm{u}^4.
+\]
+\end{lemma}
+\begin{proof}
+The independent diagonal phases kill every off-diagonal term of the first moment.
+For the fourth-order expansion, a surviving tuple $(x,z;y,w)$ must obey
+$x_j+z_j=y_j+w_j$ as integers at every coordinate: the difference lies in $[-2,2]$
+and must vanish modulo four. Where $x,z$ differ, $(y_j,w_j)$ is either their original
+order or its swap. If two differing coordinates have different swap choices, the
+associated independent edge phase contributes an odd sign and kills the term.
+All choices must therefore agree, leaving exactly the two pairings
+$(y,w)=(x,z)$ and $(z,x)$. Their overlap $x=z=y=w$ was counted twice and must be
+subtracted. This gives the second-moment identity, including $r=0$ and $u=0$.
+\end{proof}
+
+For $u=u_a$, exact access uses
+\begin{align}
+ A&=\sum_t i^{-z_A(t)}(-1)^{g_{a+\eta}(t)},\nonumber\\
+ B'&=\sum_{y,t}i^{-z_A(t)}(-1)^{g_a(y)+q_a(y,t)},\nonumber\\
+ Z_{a,A}&=\frac{|2^{r/2}A+B'|^2}{2^{2r}}.\label{eq:exactnorm}
+\end{align}
+Fixing $k$ controls evaluates $A$ with $2^k$ quadratic $\mathbb Z_4$ sums on $r-k$
+variables and $B'$ with $2^k$ such sums on $2r-k$ variables. There is no $4^k$ branch
+fallback in this readout. For a quadratic $\mathbb Z_4$ form with even cross
+coefficients, let $I$ index its odd linear coefficients and
+$L(x)=\sum_{j\in I}x_j\pmod2$. The identity
+\[
+ \sum_{j\in I}x_j\equiv L(x)+2\sum_{j<l\in I}x_jx_l\pmod4
+\]
+reduces the sum, up to a constant power of $i$, to
+$(G_0+G_1)/2+i(G_0-G_1)/2$, where $G_0,G_1$ are real quadratic sums differing by
+$L$. Affine substitution preserves this form. Thus each joint draw uses exactly
+$4\cdot2^k$ real Gaussian calls. Because $r$ is even,~\eqref{eq:exactnorm} has an
+integer numerator and dyadic denominator. No floating-point cancellation or separate
+accuracy budget for a norm oracle is needed.
+
+\begin{theorem}[One accuracy budget]\label{thm:estimator}
+Sample $a$ uniformly from matching-orbit representatives and $A$ independently as
+in~\eqref{eq:equatorial}, and set $Y=Z_{a,A}/2-1$. Then $\E Y=1-2p$ and
+$\Var Y\leq4$. With
+\begin{equation}\label{eq:schedule}
+ L=32\,4^b,\qquad K_g=2h+3,\qquad N=LK_g,
+\end{equation}
+take the median of $K_g$ independent group means of $L$ samples each. Convert it to
+a probability, project the final value to $[0,1]$, and round down at $b+2$ fractional
+bits. Conditional on sound discovery the returned value differs from $p$ by at most
+$3\epsilon/4$, except with probability less than $2^{-h-1}$. On the promise of
+Theorem~\ref{thm:discovery}, total discovery/readout failure is less than $2^{-h}$.
+\end{theorem}
+\begin{proof}
+The orbit symmetry in~\eqref{eq:bounded} permits representatives sampled with $c$
+bits if $\eta=0$, or $c-1$ bits otherwise (fix a coordinate where $\eta$ is one).
+Lemma~\ref{lem:moments} gives
+$\E[Y\mid a]=X_a$ and $\Var(Y\mid a)\leq(1+X_a)^2$.
+For $\mu=\E X_a$, total variance is bounded by
+\[
+ \E(1+X)^2+\Var X
+ =1+2\mu+2\E X^2-\mu^2\leq4-(1-\mu)^2\leq4.
+\]
+Chebyshev bounds a group's error probability at tolerance $\epsilon$ by $1/8$.
+For the median to fail, at least half the independent groups must fail, so a union
+bound over subsets gives $2^{K_g}(1/8)^{K_g/2}=2^{-K_g/2}<2^{-h-1}$.
+Probability conversion divides the error by two; projection cannot increase it;
+rounding adds at most $\epsilon/4$. A union bound adds discovery failure. The
+conditional argument is uniform over accepted frames, even those selected randomly
+by discovery. Zero norms cause no exception: then $Y=-1$ identically.
+\end{proof}
+
+Individual $Y$ values are not bounded by one. Applying bounded-variable Hoeffding to
+them or clipping individual samples would be invalid. Only the final probability
+is projected. The retained coherent evaluator instead samples the genuinely bounded
+$X_a$ with $2(h+2)4^b$ draws and uses $4^k$ Gaussian calls per draw.
+
+\section{Complete resource contract}\label{sec:cost}
+Let $m=n+r$, and use $A_q,C_q,N,K_g$ from~\eqref{eq:discoverycost} and
+\eqref{eq:schedule}. With elementary dense substitution and binary elimination,
+a conservative bound on every random tape, including refusals, is
+\begin{equation}\label{eq:time}
+\begin{split}
+ \text{bit time}=\wtO\big(& (B+m+q+2)^{12}
+ +(r+A_q)(1+C_q)(m+q+2)^{10}\\
+ &+N2^{k+2}(m+q+2)^{10}
+ +(N+K_g+1)(m+b+h+q+2)^4\big).
+\end{split}
+\end{equation}
+Here $k$ is the returned dimension; $k\leq q$ supplies an a priori bound before
+discovery. The source term pays decoding, native replay, tensor reconstruction,
+Walsh support, exterior kernels and all coordinate construction. A cubic has
+$O(m^3)$ coefficients and its explicit linear substitutions can be performed within
+$O(m^6)$ elementary binary operations; solving the exterior systems and verifying
+candidate kernels fits the displayed loose polynomial powers. Each probe uses
+binary matrix elimination; each candidate adds tensor and complete phase checks.
+The third term pays all affine restrictions, random graph construction and the
+real Gaussian calls for the two widths in~\eqref{eq:exactnorm}. These powers are
+upper bounds for a straightforward implementation, not fitted performance exponents.
+
+Integers in a quadratic sum and a norm numerator have $O(m)$ bits. Group accumulation
+adds $O(\log L)$ bits, and schedules have $O(b+\log(h+2)+q)$ bits. Keeping group
+totals while streaming probes, candidates and branches gives the conservative bounds
+\begin{align}
+ \text{space}&=\wtO\big((B+m+q+2)^8+(m+b+h+q+2)^4\big),\label{eq:space}\\
+ \text{fair bits}&\leq rA_q+N\big(c-\mathbf1_{\eta\ne0}+2r+r(r-1)/2\big).\label{eq:bits}
+\end{align}
+Deterministic shortcuts omit the anchor term. Candidate storage is polynomial because
+subspaces are enumerated and checked one at a time. Samples and Gaussian budgets
+are checked before any readout draw. Truncation yields a refusal, not a success claim.
+
+If the complete original displacement phase is already quadratic, a retained exact
+shortcut uses one real Gaussian sum, no sampling bits and polynomial cost in $b$.
+Otherwise sampled evaluation is polynomial in $1/\epsilon$, and exponential in $b$.
+On the anchor promise $q^2=O(\log(B+m+2))$ suffices for polynomial total inverse-error
+cost. Improving $4^k$ to $2^k$ in readout does not improve the $2^{O(q^2)}$ discovery
+term. Neither low restricted rank nor a favorable anchor is asserted for every cubic.
+
+\section{Growing families and scope limits}\label{sec:families}
+For even $t\geq2$, take coordinates $c_0,w_0,X\in\F^{t\times t},U,V\in\F^t$,
+so $n=t^2+2t+2$, and put
+\begin{align}
+ f_0&=c_0w_0+\sum_{i,j}X_{ij}U_iV_j,\nonumber\\
+ f_1&=c_0w_0+c_0\big(Q_{\det}(X)+U_0V_0\big),\nonumber\\
+ Q_{\det}(X)&=\sum_{i,j\text{ even}}
+ (X_{ij}X_{i+1,j+1}+X_{i,j+1}X_{i+1,j}).\label{eq:family}
+\end{align}
+Initially $J=I$, $\beta=0$, and the output is $c_0$.
+
+\begin{proposition}[Restricted versus specified global controls]\label{prop:family}
+For~\eqref{eq:family}, $S$ is the span of $X,U_0,V_0$, $r=t^2+2$, and $k=1$ is
+detected by the deterministic one-control test. Every global certificate
+$T(K_0,K_0,K_0)=0$ of codimension $g$ for the full first cubic satisfies
+$g\geq t-\sqrt t$. The output is
+\begin{equation}\label{eq:familyprob}
+ p=\frac14-2^{-t-1}+2^{-2t-1}<\frac14.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The derivative of $f_1$ is $w_0+Q_{\det}(X)+U_0V_0$. Its polar is nonsingular on
+the stated $S$ and zero on its complement, proving the support direction and rank.
+Restriction of the first cubic to $S$ leaves $X_{00}U_0V_0$, which has one control.
+For the global bound assume $g<t$ (otherwise it is immediate). Intersections of
+$K_0$ with the $U$ and $V$ coordinate spaces have dimensions at least $t-g$;
+its intersection with the matrix space has codimension at most $g$. Tensor vanishing
+forces $u^TXv=0$ on those intersections. Their tensor product has dimension at least
+$(t-g)^2$ and lies in the annihilator of $K_0\cap\F^{t\times t}$, of dimension at
+most $g$. Hence $(t-g)^2\leq g\leq t$ and $g\geq t-\sqrt t$.
+
+For the probability, Fourier summation over $X$ in the first phase forces the
+frequency matrix to equal $UV^T$ for some $U,V$. Thus every nonzero spectral
+amplitude has a rank-at-most-one frequency matrix, on which $Q_{\det}$ vanishes.
+The $c_0,w_0$ Fourier pair cancels the derivative's $w_0$ sign in the shifted
+spectral overlap. The remaining expectation is the squared Fourier-amplitude
+average of $(-1)^{l_{U,0}l_{V,0}}$. Expanding
+$(-1)^{ab}=(1+(-1)^a+(-1)^b-(-1)^{a+b})/2$ gives four characters.
+By Fourier orthogonality each character average equals the first phase state's
+autocorrelation under the corresponding physical translation. The zero translation
+contributes one. Translation of
+$U_0$ alone requires $V=0$ and contributes $2^{-t}$; translation of $V_0$ alone
+contributes $2^{-t}$. Translation of both requires $U_i=V_i=0$ for $i>0$ and
+$U_0+V_0=1$, contributing $2^{1-2t}$. On every surviving matrix the determinant
+blocks vanish. Thus $1-2p=(1+2^{1-t}-2^{1-2t})/2$, which is~\eqref{eq:familyprob}.
+\end{proof}
+
+Adding the output linear term to $f_1$ complements $p$ above $3/4$. Arbitrary lower
+terms in $f_0$ preserve both tensor certificates. Lower terms in $f_1$ change its
+derivative only by an affine term, preserving $S$ but possibly changing $d_0,\eta$.
+Basis inputs add linear characters. Invertible physical coordinate changes preserve
+the certificate conditions with the Fourier pairing transformed consistently.
+These variations remain covered even when~\eqref{eq:familyprob} no longer applies.
+One can also add first-phase cubics whose tensor vanishes on $S^3$, preserving small
+restricted $k$; the global lower bound is not asserted for every such extension.
+
+The global bound concerns this control certificate, not unrestricted stabilizer rank
+or all classical algorithms. In fact the unperturbed formula~\eqref{eq:familyprob}
+is cheaper than either sampler. Restricted controls can also grow: for independent
+variables $Y_{ij}$ and $d_i$, the cubic $\sum_{i<j}Y_{ij}d_id_j$ requires
+$\binom{t-k}{2}\leq k$ for any codimension-$k$ independent space. To see this,
+project that space onto $d$ (dimension at least $t-k$) and intersect it with $Y$
+(codimension at most $k$). Tensor vanishing places the exterior square of the
+projection in an annihilator of dimension at most $k$. Thus $k\geq t-\sqrt{2t}$
+is necessary. This delimits the certificate mechanism; it is not a hardness theorem.
+
+\section{Relation to prior simulation interfaces}\label{sec:comparison}
+Maslov et al.~\cite[Section II]{maslov2024} condition on covers of cubic variables
+to obtain quadratic sums. Lemma~\ref{lem:branches} is that construction after a
+computed affine change of coordinates. Bl\"aser et al.~\cite[Definition 1 and
+Theorem 41]{blaser2026} use the same independent-space condition and evaluate an
+amplitude with a supplied $(r-k)$-space in $O(2^kr^3)$ work. Their Theorem 67 has
+recovery work $O((r-k)r^3 2^k)$ and high probability over a random planted model
+when the planted dimension exceeds half the ambient dimension by a fixed fraction.
+Our slower anchor search gives a per-promised-input guarantee with a tunable
+failure budget. These are different quantifiers; we do not improve their planted
+recovery bound or claim discovery from small-control existence alone.
+
+Park et al.~\cite[Supplement, Section IV.3, Theorem 4]{park2024} give framed-Wigner
+marginal methods for Clifford circuits with specified product inputs and positive
+representation access. The first cubic phase state here need not be a product: the
+CCZ phase has a flattening minor $\left(\begin{smallmatrix}1&1\\1&-1\end{smallmatrix}\right)$
+across one qubit versus the other two. Moving that phase into the operation introduces
+a non-Clifford gate. This identifies a missing hypothesis for the literal reduction;
+it does not exclude other embeddings with explicitly paid access costs.
+
+The first phase state is computationally tractable in the sense of
+Van den Nest~\cite[Sections 4.1 and 4.3]{nest2011}: its amplitudes are evaluable and
+its squared magnitudes are uniform. However, $O$ has $2^r$ nonzero entries per row.
+The direct efficiently-computable-sparse-operator interface therefore does not yield
+a polynomial bound at large $r$. Changing basis transfers the obligation to amplitude
+and sampling access for the transformed state.
+
+There is an explicit baseline reduction to the normalized Pauli-average machinery
+of Zhang and Zhang~\cite[Section IV.1, Algorithm 1]{zhang2025}. Expand
+$D_Q=\sum_l\alpha_l Z_l$ with $\alpha_l=2^{-n}W_Q(l)$, conjugate by $F_J$, and
+multiply by $Z_e$. The support invariance proved above ensures the relevant Paulis
+commute with $Z_e$ and are Hermitian. There are $2^r$ coefficients of magnitude
+$2^{-r/2}$; their absolute sum is $2^{r/2}$. Estimating the normalized signed average
+to error $\epsilon/2^{r/2}$ gives a generic $2^r\epsilon^{-2}\log(1/\delta)$ sample
+bound. This is an upper bound for that reduction, not a lower bound for their framework.
+
+Finally, Bravyi et al.~\cite[Section 4.3]{bravyi2019} supply the norm primitive and
+linear decomposition-length cost. Our integration constructs the needed states and
+Clifford access and combines the sector and norm randomness without multiplying two
+inverse-error costs. We claim a constructive source-specific theorem, not priority
+for its ingredients, an exhaustive non-subsumption result, or best-known performance.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{p{0.39\linewidth}p{0.18\linewidth}p{0.32\linewidth}}
+\toprule
+Specified method & Readout factor & Access obligation\\\midrule
+Normalized Pauli expansion & $2^r$ & Quadratic Walsh support\\
+Global independent space plus norm sampling & $2^g$ & Find or supply global controls\\
+Coherent matched-sector pairs & $4^k$ & Restricted discovery\\
+Joint sector/norm sampling & $2^k$ & Same discovery, kernel construction\\
+Unperturbed family formula & polynomial & Recognize that special family\\
+\bottomrule
+\end{tabular}
+\caption{First four factors multiply $\epsilon^{-2}\log(1/\delta)$ and their actual
+source/arithmetic polynomials. Discovery is additional. The last method is exact.
+These bounds neither share a machine-level cost unit nor imply a wall-time ordering.}
+\label{tab:methods}
+\end{table}
+
+\section{Reproducible finite evidence}\label{sec:evidence}
+The companion code uses Python's standard library and exact integers and rational
+numbers. The check suite independently enumerates 216 $\mathbb Z_4$ sums and 12,240
+affine evaluations; constructs ten full small sector/operator/norm identities;
+checks 274 production norm values against dense vectors; and exhausts 32,962
+equatorial samples across ten exact conditional moment identities. It includes a
+zero-norm sector, nonzero offsets and inputs, hidden coordinates, and two- and
+three-control cases. Eight full native-source runs compare both readouts with
+independent exact Fourier-state evolution; small cases additionally replay literal
+gates. During the new readout the old $4^k$ branch routine is forbidden by the test.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Source & $n$ & $r$ & $k$ & $p$ & New calls & Pair calls\\\midrule
+Determinant, $t=2$ &10&6&1&$5/32$&7,168&128\\
+Hidden complement &10&6&1&$27/32$&7,168&128\\
+Mixed, nonzero input &10&6&1&$25/64$&7,168&128\\
+Rank four, nonzero input &5&4&1&$1/2$&28,672&512\\
+Matching offset &4&2&0&$3/4$&3,584&32\\
+Exact shortcut &3&0&0&$1/4$&1&1\\
+Two controls &10&8&2&$21/64$&14,336&512\\
+Three controls &11&10&3&$1/2$&28,672&2,048\\
+\bottomrule
+\end{tabular}
+\caption{Executed matched tasks at $h=2$, $b=1$ except the rank-four row at $b=2$.
+Counts are real quadratic-sum calls, not equal-cost machine operations. Exact
+references are shown; sampled answers and seeds are in the receipt.}
+\label{tab:runs}
+\end{table}
+
+For $h=2$ the new-to-pair Gaussian call ratio is $112/2^k$. Thus the executed
+$k=1,2,3$ cases favor the retained pair count by factors $56,28,14$. New widths
+$r-k,2r-k$ also differ from the pair width $2r-2k$. The arithmetic crossover of
+these call budgets at $k\geq7$ is not a measured speed crossover. The receipt
+separately records shared source/discovery, extra preparation and readout timings
+as single local observations, not a performance benchmark. New full norm runs reach
+11 qubits. Analytic family parameters $(n,r)=(26,18),(50,38),(82,66)$ are not claims
+of new norm runs at those sizes.
+
+Twenty-eight tests at $b=1,7,257,4096$ inspect exact schedules and verify refusal
+before drawing with a zero sample budget. They do not execute $4^b$ samples at high
+precision. Two further cases retain explicit discovery/grammar refusals. Finite
+seeded successes test the implementation; Theorems~\ref{thm:discovery} and
+\ref{thm:estimator}, not those successes, supply the probability bounds.
+
+\section{Publication status and formalization boundary}\label{sec:status}
+This candidate is an informal methods preprint. It has undergone internal mathematical
+and executable checks with AI assistance, not independent peer review. Lean
+certification has not started. The first manuscript publication and verification and
+application of its paper DOI precede any formalization work. The later target is a
+statement-by-statement correspondence for the Walsh and sector algebra, discovery,
+estimator and full cost contract, and family bounds. Certification must distinguish
+proved declarations from imported hypotheses and must not be inferred from a build
+or DOI alone. No Python implementation certification is presently claimed.
+
+The manuscript is licensed under Creative Commons Attribution 4.0 International;
+the accompanying code is licensed under Apache License 2.0. Authorship, affiliation,
+ORCID and these license choices were confirmed by the author for this package.
+
+The method excludes unrecognized gate words and sources without its admitted controls
+or discovery promise. Its certificate bounds are not classical simulation lower
+bounds. There is no hardware experiment, quantum-advantage claim or consequence
+resolving BPP versus BQP. More general Fourier-access constructions remain outside
+this frozen manuscript.
+
+\appendix
+\section{Evidence and reproduction map}\label{app:reproduce}
+The public package contains the following claim-to-artifact mapping. Stable LaTeX
+labels in the source, rather than page numbers, identify the intended later formal
+coverage. All supporting code required for these commands is included; private
+research links are provenance only.
+\begin{center}\small
+\begin{tabular}{p{0.40\linewidth}p{0.49\linewidth}}
+\toprule
+Claim & Artifact or check\\\midrule
+Lemmas~\ref{lem:walsh},\ref{lem:branches}; Proposition~\ref{prop:sector}
+& \texttt{src/sector\_cubic\_sampling.py} and source reduction dependencies\\
+Theorem~\ref{thm:discovery}
+& Verified contraction/exterior search in that module\\
+Lemma~\ref{lem:moments}; Theorem~\ref{thm:estimator}; exact norm arithmetic
+& \texttt{src/sector\_norm\_sampling.py}; independent exhaustive checker\\
+Section~\ref{sec:cost}, Table~\ref{tab:runs}
+& \texttt{artifacts/s175-sector-norm-checks.json} with descriptors and budgets\\
+Proposition~\ref{prop:family}; prior-work relations
+& Self-contained proofs here; exported comparison notes and bibliography\\
+\bottomrule
+\end{tabular}
+\end{center}
+From the companion repository root, run
+\begin{verbatim}
+python src/check_sector_norm_sampling.py
+\end{verbatim}
+This regenerates the finite receipt, including machine-dependent timings. Compare
+mathematical fields and canonical-LF source hashes, not timing bytes. To build this
+PDF, run Tectonic on \texttt{manuscript/main.tex}, or use a LaTeX/BibTeX toolchain.
+The package's \texttt{REPRODUCING.md} records the exact tested commands and environment;
+\texttt{PROVENANCE.json} records origin commits and hashes; \texttt{MANIFEST.json}
+records distributed artifact hashes. \texttt{SOURCES.md}, \texttt{REVIEW.md} and
+\texttt{INTEGRITY.md} disclose sources, checks, AI assistance and claim boundaries.
+The technical baseline is commit \texttt{75694fa51add1c5293168349c4d29af9ef4030ea};
+the integrated norm and comparison evidence is
+\texttt{9dc9391292e31c8b6fafb5b53db47899974a858a} in the research repository.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

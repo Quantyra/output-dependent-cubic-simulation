@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "title": "Classical Simulation of Two-Layer Quantum Circuits via Output-Dependent Cubic Structure",
+    "description": "Informal methods preprint giving an original-source construction for estimating one output probability of specified two-layer Boolean cubic-phase circuits. Output-dependent sector restriction and established equatorial norm estimation yield a 2^k readout factor with explicit discovery promises and complete finite-bit costs. Growing families and matched comparisons retain the larger small-k sampling constant and certificate-specific limits. Includes internal mathematical and executable checks, with AI assistance; not peer reviewed or Lean certified.",
+    "version": "0.1.0",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "creators": [{"name": "Fredriksen, Daniel", "affiliation": "Quantyra Inc.", "orcid": "0009-0002-9123-7435"}],
+    "access_right": "open",
+    "license": "CC-BY-4.0",
+    "language": "eng",
+    "keywords": ["quantum circuit simulation", "cubic Boolean polynomials", "stabilizer norm estimation"],
+    "related_identifiers": [{"identifier": "https://github.com/Quantyra/output-dependent-cubic-simulation", "relation": "isSupplementedBy", "resource_type": "software"}]
+  }
+}
