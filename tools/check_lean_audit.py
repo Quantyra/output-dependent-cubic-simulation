@@ -109,6 +109,9 @@ EXPECTED = {
     'SectorSimulation.gaussianSolveChecked_complete_of_injective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.gaussianRowProgram_success_iff_injective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceOutputDerivativePivot_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.matrixSymmetric_correct': {'propext', 'Quot.sound'},
+    'SectorSimulation.sourceDescriptorValid_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.validatedSourceOutputDerivative': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

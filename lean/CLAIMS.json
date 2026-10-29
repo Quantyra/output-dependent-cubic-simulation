@@ -1564,6 +1564,46 @@
       ],
       "build_audit_receipt": "lean/evidence/source-output-pivot-audit.md",
       "unresolved_bridge": "Prove finite-encoding cost and native source validation, decoding and circuit/Walsh/sector semantics."
+    },
+    {
+      "id": "source-descriptor-validation",
+      "section": "2",
+      "target": "SectorSimulation.sourceDescriptorValid_correct",
+      "assumptions": "Finite represented descriptor; the second theorem assumes the concrete validator accepts it.",
+      "quantifiers": "All finite dimensions and descriptors as stated.",
+      "statement": "The represented descriptor validator accepts exactly cubic phases with symmetric and injective pairing evaluator.",
+      "dependencies": [
+        "pivot-injective-equivalence",
+        "source-output-pivot-derivative"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/source-validation-audit.md",
+      "unresolved_bridge": "Verify finite-encoding runtime, byte decoding and native gate replay, circuit/Walsh/sector semantics and paper theorems."
+    },
+    {
+      "id": "validated-source-derivative",
+      "section": "2",
+      "target": "SectorSimulation.validatedSourceOutputDerivative",
+      "assumptions": "Finite represented descriptor; the second theorem assumes the concrete validator accepts it.",
+      "quantifiers": "All finite dimensions and descriptors as stated.",
+      "statement": "Every accepted represented descriptor yields the unique nonzero output shift and a bounded quadratic ANF for its second-phase derivative.",
+      "dependencies": [
+        "pivot-injective-equivalence",
+        "source-output-pivot-derivative"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/source-validation-audit.md",
+      "unresolved_bridge": "Verify finite-encoding runtime, byte decoding and native gate replay, circuit/Walsh/sector semantics and paper theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

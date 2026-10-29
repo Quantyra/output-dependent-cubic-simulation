@@ -281,3 +281,12 @@ import SectorSimulation
 
 #check SectorSimulation.sourceOutputDerivativePivot_correct
 #print axioms SectorSimulation.sourceOutputDerivativePivot_correct
+
+#check SectorSimulation.matrixSymmetric_correct
+#print axioms SectorSimulation.matrixSymmetric_correct
+
+#check SectorSimulation.sourceDescriptorValid_correct
+#print axioms SectorSimulation.sourceDescriptorValid_correct
+
+#check SectorSimulation.validatedSourceOutputDerivative
+#print axioms SectorSimulation.validatedSourceOutputDerivative

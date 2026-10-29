@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 11377,
-      "sha256": "fd6a949e2bf94b392f9422305d12ba24b543302e6a8af6ccfb93d916f4c3ff7d"
+      "bytes": 11717,
+      "sha256": "99890c516f4065a8fb7d47b717e7c239c78df031c3d2ddaaeb028a3335dce9d2"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 80739,
-      "sha256": "72611b6cc8045161024dee991559846cc3ec5fe15f5f6bc973166a2e4bef3582"
+      "bytes": 82658,
+      "sha256": "9a9d63f29e411e873947d344f4a4de1df1073c00b57822180c094dc5fbdee072"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -149,8 +149,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 1307,
-      "sha256": "7861143f89002ba124dbf9d31b99d204ee3f28a5ed7a26a24fc3390e8ec94b46"
+      "bytes": 1349,
+      "sha256": "7eb003b335f6befff9d5579eafb04debfc123f47b322655368e1fb32ccc0a06a"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -303,14 +303,19 @@
       "sha256": "5d56e18ef0f2e9d6d0f75f10caab5a67350c177d2022bed73eec30bff6c77383"
     },
     {
+      "path": "lean/SectorSimulation/SourceValidation.lean",
+      "bytes": 1923,
+      "sha256": "da1d935afee4e61b0ed8ea6380f687fe87e1926afbdbf7ed9af2b7b7eb639016"
+    },
+    {
       "path": "lean/SectorSimulation/SupportShapes.lean",
       "bytes": 2213,
       "sha256": "ed03fc89913d497557f7200740eecfc41034ae34402fb4e9fdebf3b9dff8326f"
     },
     {
       "path": "lean/SourceExamples.lean",
-      "bytes": 664,
-      "sha256": "7c7d04db9c8c5c69d6c9f30c1b1019b980f4dc10407ea6a4f0329340e72b7622"
+      "bytes": 1176,
+      "sha256": "3a9afe4e7589bbdba54603f11211809bbdf3b7dc87e9ce19abee4f60ebf88f93"
     },
     {
       "path": "lean/evidence/anf-derivative-audit.md",
@@ -491,6 +496,11 @@
       "path": "lean/evidence/source-output-pivot-audit.md",
       "bytes": 911,
       "sha256": "db5220c376cf7b765f251405ebd17ff43237cc30674e78dfac34b39ed1aa40b6"
+    },
+    {
+      "path": "lean/evidence/source-validation-audit.md",
+      "bytes": 949,
+      "sha256": "e5598fcc9361b93432bed6992b881d2315136191b1d817d4f132f0e9df6a3d5a"
     },
     {
       "path": "lean/evidence/support-evaluation-audit.md",
@@ -904,8 +914,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 8972,
-      "sha256": "e25b4c8ebbb468549ae24a0b32118ecae1a6b155074464e82bf6f51041176f0d"
+      "bytes": 9251,
+      "sha256": "9df2c1f89b8793150a82a4d6651f8838a32131da5e6341a2b92a4e39a2387f1a"
     },
     {
       "path": "tools/check_metadata.py",

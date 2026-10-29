@@ -1,4 +1,4 @@
-import SectorSimulation.BooleanSource
+import SectorSimulation.SourceValidation
 
 open SectorSimulation
 
@@ -17,3 +17,17 @@ example : evalPhase (n := 2) [fun i => i.val == 0] (fun _ => false) = false := b
 example : evalPhase (n := 2) [fun i => i.val == 0, fun i => i.val == 0]
     (fun i => i.val == 0) = false := by
   decide
+
+
+def validDescriptor : CircuitDescriptor 2 :=
+  ⟨(fun i k => decide (i = k)), [], [], (fun _ => false), 0⟩
+
+def singularDescriptor : CircuitDescriptor 2 :=
+  ⟨(fun _ _ => false), [], [], (fun _ => false), 0⟩
+
+def asymmetricDescriptor : CircuitDescriptor 2 :=
+  ⟨(fun i k => decide (i = k ∨ (i.val = 0 ∧ k.val = 1))), [], [], (fun _ => false), 0⟩
+
+#guard sourceDescriptorValid validDescriptor
+#guard !sourceDescriptorValid singularDescriptor
+#guard !sourceDescriptorValid asymmetricDescriptor
