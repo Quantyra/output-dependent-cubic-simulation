@@ -1,0 +1,24 @@
+name: Complex embedding research probe
+on:
+  push:
+    branches:
+      - proof/complex-embedding-probe-20261029
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64
+        with:
+          lake-package-directory: lean
+          use-mathlib-cache: 'true'
+          use-github-cache: 'false'
+          test: 'false'
+          lint: 'false'
+      - name: Check exploratory complex embedding
+        working-directory: lean
+        run: lake env lean ComplexEmbeddingProbe.lean

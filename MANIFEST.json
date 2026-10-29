@@ -13,6 +13,11 @@
       "sha256": "86f09d99d0ca2810e25064b81b18302c0cb217324c5eccdeff9a72a8ae055898"
     },
     {
+      "path": ".github/workflows/complex-embedding-probe.yml",
+      "bytes": 699,
+      "sha256": "c9b8a04749d6b64b4194bf6a6c987dd8d6689087f3b27bddbc9058bf57294cc7"
+    },
+    {
       "path": ".github/workflows/lean.yml",
       "bytes": 1679,
       "sha256": "1a1839a27ac0edb4106c5ef6680ff117a149c81f41bc1ad0c3e5283c6d9291dc"
@@ -131,6 +136,11 @@
       "path": "lean/CLAIMS.json",
       "bytes": 421747,
       "sha256": "47592c82237ffd173e7f7e787798d8407c3b273944b1aa770f09d7878460d47d"
+    },
+    {
+      "path": "lean/ComplexEmbeddingProbe.lean",
+      "bytes": 604,
+      "sha256": "d2bc117f5e3f19d53675133d104fbe9827b87711fcb0eac6803a18d3486f7548"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
