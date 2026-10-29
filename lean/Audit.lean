@@ -326,3 +326,15 @@ import SectorSimulation
 
 #check SectorSimulation.parsed_header_bits_length
 #print axioms SectorSimulation.parsed_header_bits_length
+
+#check SectorSimulation.headerByteValue_lt_256
+#print axioms SectorSimulation.headerByteValue_lt_256
+
+#check SectorSimulation.headerByte_numeric_roundtrip
+#print axioms SectorSimulation.headerByte_numeric_roundtrip
+
+#check SectorSimulation.numeric_headerByte_roundtrip
+#print axioms SectorSimulation.numeric_headerByte_roundtrip
+
+#check SectorSimulation.numeric_native_header_roundtrip
+#print axioms SectorSimulation.numeric_native_header_roundtrip

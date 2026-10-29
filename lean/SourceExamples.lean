@@ -1,4 +1,4 @@
-import SectorSimulation.NativeHeaderBytes
+import SectorSimulation.NumericHeaderBytes
 
 open SectorSimulation
 
@@ -46,3 +46,6 @@ def asymmetricDescriptor : CircuitDescriptor 2 :=
 def headerByteA : HeaderByte := ⟨false, true, false, false, false, false, false, true⟩
 #guard decodeNativeByteHeader (encodeNativeByteHeader [headerByteA] ++ [⟨"CX", [2, 1]⟩]) == some ([headerByteA], [⟨"CX", [2, 1]⟩])
 #guard (decodeNativeByteHeader (encodeNativeHeader [true])).isNone
+
+#guard headerByteValue headerByteA == 65
+#guard decodeNumericHeader (encodeNumericHeader [65, 255] ++ [⟨"CX", [2, 1]⟩]) == some ([65, 255], [⟨"CX", [2, 1]⟩])

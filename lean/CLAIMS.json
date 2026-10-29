@@ -1730,6 +1730,25 @@
       ],
       "build_audit_receipt": "lean/evidence/native-header-byte-sound-audit.md",
       "unresolved_bridge": "Prove numeric-byte and ASCII/JSON equivalence, descriptor decoding, canonical body replay and physical circuit semantics."
+    },
+    {
+      "id": "numeric-native-header-roundtrip",
+      "section": "2",
+      "target": "SectorSimulation.numeric_native_header_roundtrip",
+      "assumptions": "Numeric bytes are finite natural values below 256; header records use tag strings and wire lists.",
+      "quantifiers": "All finite numeric-byte lists and body gate lists.",
+      "statement": "Numeric bytes encoded most-significant-bit first into native header records decode back to the same bytes and unchanged body.",
+      "dependencies": [
+        "native-byte-header-roundtrip"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/numeric-header-bytes-audit.md",
+      "unresolved_bridge": "Prove numeric parser soundness, equivalence to Python byte and ASCII/JSON handling, descriptor decoding, native replay and gate semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

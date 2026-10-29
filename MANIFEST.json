@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 13031,
-      "sha256": "3786c2f3fa9105f60c1b58d162cb4f0cb40008c668d330219939bfe8f00c2a04"
+      "bytes": 13481,
+      "sha256": "b7e40485ae16dd6ee46be9867b47c21a5fde9c74cc8b0d7d30dcb08ea93df039"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 88769,
-      "sha256": "ec575fac857de17786fa80d67ea7096f6ecfeeaac70439fbc1978d31b0fd1f3e"
+      "bytes": 89720,
+      "sha256": "4b0a26d6377b2ddb6e2697706e59fbcc2d50b766fe823ff00d3b61d54ec431b1"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -149,8 +149,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 1567,
-      "sha256": "609581e24c5ba5ac2b317a456457f5600ceacc2e2ef56c91e3db7b8b5a1914d3"
+      "bytes": 1611,
+      "sha256": "91c490cb78a538df2c01de75b076d8299cff7ecf8f0100a893bda4d47368b368"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -273,6 +273,11 @@
       "sha256": "d3b3be8ae7ffd6bdcc4fabcbd0be2c84113c780434cb2ce4c9f5e376ea711933"
     },
     {
+      "path": "lean/SectorSimulation/NumericHeaderBytes.lean",
+      "bytes": 2226,
+      "sha256": "b5dc5778f111de6a3d2b2c2d9831962e9083332742d16eff98a7da5a51389e86"
+    },
+    {
       "path": "lean/SectorSimulation/PivotComplete.lean",
       "bytes": 3001,
       "sha256": "a75214cbdcc06a12a7cbd4cb9b758fbf5fea59d5758c019dfb772f0929340a4d"
@@ -339,8 +344,8 @@
     },
     {
       "path": "lean/SourceExamples.lean",
-      "bytes": 1970,
-      "sha256": "921108b96031cf5223ded6f88f181c079a9554bf47e46bf70aeab2d5e4e8d39c"
+      "bytes": 2138,
+      "sha256": "bf087aad1eb488a7342b977e2916b67e527b4686a1d893529b4ee425df855ba6"
     },
     {
       "path": "lean/evidence/anf-derivative-audit.md",
@@ -476,6 +481,11 @@
       "path": "lean/evidence/native-header-sound-audit.md",
       "bytes": 801,
       "sha256": "cb6aa6289519f1ff2473f4793f7a41e7e80840f43c57fc2cf6dbb5d3a24a397b"
+    },
+    {
+      "path": "lean/evidence/numeric-header-bytes-audit.md",
+      "bytes": 1025,
+      "sha256": "f4b3884be8738aadb22a86837c74b70fa4953828baef6b8cd8942d945a1e7853"
     },
     {
       "path": "lean/evidence/pair-mask-degree-audit.md",
@@ -964,8 +974,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 10098,
-      "sha256": "1b42ff139b677e8d4303a15ad325b30d8b30479c58231d29e31fc6b484687475"
+      "bytes": 10387,
+      "sha256": "b6d62e63b80cb590d35e2d6ac3e6f9b68cc801f1f6cc1977b6427166937c9751"
     },
     {
       "path": "tools/check_metadata.py",
