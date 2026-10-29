@@ -403,6 +403,9 @@ EXPECTED = {
     'SectorSimulation.recognizeNormalizedModeledSource_sound': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recognizeNormalizedModeledSource_complete': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recognizeNormalizedModeledSource_replay': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recognizeByteCanonical_sound': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recognizeByteCanonical_complete': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recognizeByteCanonical_replay': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

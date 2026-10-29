@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 42807,
-      "sha256": "652d53ee68746a344bf929a9b7137e6cef63d3617d00d51443e0dcb82bfda5e5"
+      "bytes": 43157,
+      "sha256": "4263f7990c27bacfa446988bae3129ad7b992baa56644b436b93d5c6eeb0f5c4"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 346720,
-      "sha256": "3e6ca4048e06dbd7d795e5b4f67871fa970a41a0bda922a31dab8536bab4c970"
+      "bytes": 349768,
+      "sha256": "e7abf43e15d5fba452b88dd840251ca137d8bea65537af6721b0263a643df71f"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 4580,
-      "sha256": "63ada48df8a9836445c338e2e12fb0246f3da4ee117acc250686966160c2937d"
+      "bytes": 4629,
+      "sha256": "c9ffc89b7cca158243b34aaef53cbe869e9419f852a12151a034e164455abcbb"
     },
     {
       "path": "lean/SectorSimulation/AsciiDescriptorEncode.lean",
@@ -186,6 +186,11 @@
       "path": "lean/SectorSimulation/BooleanSource.lean",
       "bytes": 6517,
       "sha256": "1a35dfadbdf05e8896514f1f7c3b0900d55645908280981b5445effb7a44aed8"
+    },
+    {
+      "path": "lean/SectorSimulation/ByteCanonicalRecognizer.lean",
+      "bytes": 3138,
+      "sha256": "9e575fd730639e1129792b8ad35235368b8e5389f3dcb12384a85703755bbce4"
     },
     {
       "path": "lean/SectorSimulation/CNOTAmplitude.lean",
@@ -721,6 +726,11 @@
       "path": "lean/evidence/boolean-source-audit.md",
       "bytes": 1836,
       "sha256": "c851776dbefe2ac1b03c634cf1d0e3959d9ca6ceb21d8eb1031e1e8a34987739"
+    },
+    {
+      "path": "lean/evidence/byte-canonical-recognizer.md",
+      "bytes": 1334,
+      "sha256": "9efd3101921014ef246650f5dcc4c2b898277990b9165caf979655a2e4ce8fb7"
     },
     {
       "path": "lean/evidence/canonical-mask-normalization.md",
@@ -1689,8 +1699,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 33451,
-      "sha256": "906c0089e0fcae11622852f083c640ef0c505154c84d29e5413cb7ed53f04afe"
+      "bytes": 33755,
+      "sha256": "e476afd58da7faeb14493e26e02ad46e305728ab7afa1528b57a58507df2ccba"
     },
     {
       "path": "tools/check_metadata.py",
@@ -1704,8 +1714,8 @@
     },
     {
       "path": "tools/check_python_lean_bridge.py",
-      "bytes": 3132,
-      "sha256": "b2cfd6b5c8042f86bf8299e78a7140721d3ca9fba89d873666a9a18c5d7dfb29"
+      "bytes": 4294,
+      "sha256": "b763b44a0ea65eea241c4a53ee8dd80f6bd4fc2890a3c494500592cc31c8f500"
     },
     {
       "path": "tools/check_toffoli_template.py",

@@ -6259,6 +6259,63 @@
       ],
       "build_audit_receipt": "lean/evidence/normalized-modeled-recognizer.md",
       "unresolved_bridge": "Prove canonical JSON-byte equality, actual Python correspondence, normalized Fourier and complex semantics, physical output identity and costs."
+    },
+    {
+      "id": "byte-canonical-recognizer-recognizeByteCanonical_sound",
+      "section": "2",
+      "target": "SectorSimulation.recognizeByteCanonical_sound",
+      "assumptions": "Lean header decoder, library JSON compact rendering, phase-canonical modeled source recognizer, and exact native replay.",
+      "quantifiers": "All applicable gate records, descriptors, row programs and states.",
+      "statement": "Acceptance implies decoded header bytes equal the Lean compact JSON rendering and the phase-canonical modeled recognizer accepts.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/byte-canonical-recognizer.md",
+      "unresolved_bridge": "Prove Lean/Python serializer equivalence and parser round trip, actual Python correspondence, physical Fourier and complex semantics, output identity and costs."
+    },
+    {
+      "id": "byte-canonical-recognizer-recognizeByteCanonical_complete",
+      "section": "2",
+      "target": "SectorSimulation.recognizeByteCanonical_complete",
+      "assumptions": "Lean header decoder, library JSON compact rendering, phase-canonical modeled source recognizer, and exact native replay.",
+      "quantifiers": "All applicable gate records, descriptors, row programs and states.",
+      "statement": "The byte-gated recognizer accepts when byte equality, decoding and phase-canonical modeled recognition all hold.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/byte-canonical-recognizer.md",
+      "unresolved_bridge": "Prove Lean/Python serializer equivalence and parser round trip, actual Python correspondence, physical Fourier and complex semantics, output identity and costs."
+    },
+    {
+      "id": "byte-canonical-recognizer-recognizeByteCanonical_replay",
+      "section": "2",
+      "target": "SectorSimulation.recognizeByteCanonical_replay",
+      "assumptions": "Lean header decoder, library JSON compact rendering, phase-canonical modeled source recognizer, and exact native replay.",
+      "quantifiers": "All applicable gate records, descriptors, row programs and states.",
+      "statement": "Acceptance implies the existing exact native replay and output derivative bounds.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/byte-canonical-recognizer.md",
+      "unresolved_bridge": "Prove Lean/Python serializer equivalence and parser round trip, actual Python correspondence, physical Fourier and complex semantics, output identity and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

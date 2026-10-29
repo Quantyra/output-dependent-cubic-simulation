@@ -196,3 +196,5 @@ import SectorSimulation.RawDescriptorNormalization
 import SectorSimulation.ValidatedRawNormalization
 
 import SectorSimulation.NormalizedModeledRecognizer
+
+import SectorSimulation.ByteCanonicalRecognizer

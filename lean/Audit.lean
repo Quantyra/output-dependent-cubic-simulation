@@ -1063,3 +1063,12 @@ import SectorSimulation
 
 #check SectorSimulation.recognizeNormalizedModeledSource_replay
 #print axioms SectorSimulation.recognizeNormalizedModeledSource_replay
+
+#check SectorSimulation.recognizeByteCanonical_sound
+#print axioms SectorSimulation.recognizeByteCanonical_sound
+
+#check SectorSimulation.recognizeByteCanonical_complete
+#print axioms SectorSimulation.recognizeByteCanonical_complete
+
+#check SectorSimulation.recognizeByteCanonical_replay
+#print axioms SectorSimulation.recognizeByteCanonical_replay
