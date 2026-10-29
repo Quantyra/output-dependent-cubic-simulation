@@ -1080,6 +1080,42 @@
       ],
       "build_audit_receipt": "lean/evidence/matrix-linearity-audit.md",
       "unresolved_bridge": "Establish matrix invertibility checks and inverse computation, output shift, native gate replay and circuit semantics."
+    },
+    {
+      "id": "matrix-exhaustive-sound",
+      "section": "2",
+      "target": "SectorSimulation.solveMatrixExhaustive_sound",
+      "assumptions": "Finite Boolean vectors and source matrix evaluator; completeness assumes a solution exists.",
+      "quantifiers": "All finite dimensions, matrices, target vectors and witnesses as stated.",
+      "statement": "Any vector returned by the explicit finite search satisfies the source matrix equation.",
+      "dependencies": [
+        "matrix-xor"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-exhaustive-solve-audit.md",
+      "unresolved_bridge": "This exhaustive search is exponential and is not the paper algorithm; verify polynomial elimination, invertibility validation, output shift and native circuit semantics."
+    },
+    {
+      "id": "matrix-exhaustive-complete",
+      "section": "2",
+      "target": "SectorSimulation.solveMatrixExhaustive_complete",
+      "assumptions": "Finite Boolean vectors and source matrix evaluator; completeness assumes a solution exists.",
+      "quantifiers": "All finite dimensions, matrices, target vectors and witnesses as stated.",
+      "statement": "If a source matrix equation has a solution, the explicit finite search returns a solution.",
+      "dependencies": [
+        "matrix-xor"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-exhaustive-solve-audit.md",
+      "unresolved_bridge": "This exhaustive search is exponential and is not the paper algorithm; verify polynomial elimination, invertibility validation, output shift and native circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

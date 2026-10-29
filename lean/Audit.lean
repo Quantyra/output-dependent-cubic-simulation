@@ -116,3 +116,15 @@ import SectorSimulation
 
 #check SectorSimulation.matrixApply_zero
 #print axioms SectorSimulation.matrixApply_zero
+
+#check SectorSimulation.allVectors_complete
+#print axioms SectorSimulation.allVectors_complete
+
+#check SectorSimulation.vectorEqual_correct
+#print axioms SectorSimulation.vectorEqual_correct
+
+#check SectorSimulation.solveMatrixExhaustive_sound
+#print axioms SectorSimulation.solveMatrixExhaustive_sound
+
+#check SectorSimulation.solveMatrixExhaustive_complete
+#print axioms SectorSimulation.solveMatrixExhaustive_complete

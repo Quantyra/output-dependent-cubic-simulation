@@ -54,6 +54,10 @@ EXPECTED = {
     'SectorSimulation.matrixFold_xor': {'propext'},
     'SectorSimulation.matrixApply_xor': {'propext', 'Quot.sound'},
     'SectorSimulation.matrixApply_zero': {'propext', 'Quot.sound'},
+    'SectorSimulation.allVectors_complete': {'propext', 'Quot.sound'},
+    'SectorSimulation.vectorEqual_correct': {'propext', 'Quot.sound'},
+    'SectorSimulation.solveMatrixExhaustive_sound': {'propext', 'Quot.sound'},
+    'SectorSimulation.solveMatrixExhaustive_complete': {'propext', 'Quot.sound'},
 }
 
 
