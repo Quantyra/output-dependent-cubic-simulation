@@ -284,6 +284,10 @@ EXPECTED = {
     'SectorSimulation.sharedHadamard_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedHadamard_amplitude_congr': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.mappedToffoli_cubic_sign': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.runThreeWireProgram_append': set(),
+    'SectorSimulation.threeWireCubicProgram_valid': {'propext', 'Quot.sound'},
+    'SectorSimulation.threeWireCubicProgram_action': {'propext'},
+    'SectorSimulation.mappedNativeCubic_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

@@ -769,3 +769,12 @@ import SectorSimulation
 #print axioms SectorSimulation.sharedHadamard_amplitude_congr
 #check SectorSimulation.mappedToffoli_cubic_sign
 #print axioms SectorSimulation.mappedToffoli_cubic_sign
+
+#check SectorSimulation.runThreeWireProgram_append
+#print axioms SectorSimulation.runThreeWireProgram_append
+#check SectorSimulation.threeWireCubicProgram_valid
+#print axioms SectorSimulation.threeWireCubicProgram_valid
+#check SectorSimulation.threeWireCubicProgram_action
+#print axioms SectorSimulation.threeWireCubicProgram_action
+#check SectorSimulation.mappedNativeCubic_correct
+#print axioms SectorSimulation.mappedNativeCubic_correct

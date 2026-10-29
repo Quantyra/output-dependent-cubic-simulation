@@ -143,3 +143,5 @@ import SectorSimulation.ThreeWireProgram
 import SectorSimulation.MappedNativeToffoli
 
 import SectorSimulation.HadamardAmplitudeCongruence
+
+import SectorSimulation.MappedNativeCubic

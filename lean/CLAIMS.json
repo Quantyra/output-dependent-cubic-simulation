@@ -4255,6 +4255,67 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-cubic-composition-audit.md",
       "unresolved_bridge": "Connect the complete composition to native record replay and Python compiler, complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "mapped-native-cubic-runThreeWireProgram_append",
+      "section": "2",
+      "target": "SectorSimulation.runThreeWireProgram_append",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires where applicable.",
+      "quantifiers": "All finite dimensions, represented states, injective selected wires and output vectors; all finite typed programs for concatenation.",
+      "statement": "Execution of concatenated typed gate programs equals sequential execution.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/mapped-native-cubic-audit.md",
+      "unresolved_bridge": "Establish complete Python compiler and complex embedding correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "mapped-native-cubic-threeWireCubicProgram_valid",
+      "section": "2",
+      "target": "SectorSimulation.threeWireCubicProgram_valid",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires where applicable.",
+      "quantifiers": "All finite dimensions, represented states, injective selected wires and output vectors; all finite typed programs for concatenation.",
+      "statement": "The typed cubic-sign program satisfies native gate validity.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mapped-native-cubic-audit.md",
+      "unresolved_bridge": "Establish complete Python compiler and complex embedding correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "mapped-native-cubic-threeWireCubicProgram_action",
+      "section": "2",
+      "target": "SectorSimulation.threeWireCubicProgram_action",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires where applicable.",
+      "quantifiers": "All finite dimensions, represented states, injective selected wires and output vectors; all finite typed programs for concatenation.",
+      "statement": "The typed cubic-sign program executes a Hadamard, Toffoli sequence and Hadamard on the selected target.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/mapped-native-cubic-audit.md",
+      "unresolved_bridge": "Establish complete Python compiler and complex embedding correspondence, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "mapped-native-cubic-mappedNativeCubic_correct",
+      "section": "2",
+      "target": "SectorSimulation.mappedNativeCubic_correct",
+      "assumptions": "The modeled exact native interpreter and injective selection of three wires where applicable.",
+      "quantifiers": "All finite dimensions, represented states, injective selected wires and output vectors; all finite typed programs for concatenation.",
+      "statement": "The mapped native cubic-sign program successfully replays and has ideal cubic-sign amplitudes at every output vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mapped-native-cubic-audit.md",
+      "unresolved_bridge": "Establish complete Python compiler and complex embedding correspondence, full circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
