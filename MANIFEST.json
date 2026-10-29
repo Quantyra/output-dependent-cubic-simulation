@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/checks.yml",
-      "bytes": 909,
-      "sha256": "50f201dda5f153879fa2dda46e5b1bd08b99231ed7c4b5f9be5fb82b97ec935a"
+      "bytes": 960,
+      "sha256": "c79b1dd108d68ce9def9870316de534120b16c94db67875cc06dfc40db8c5f4f"
     },
     {
       "path": ".gitignore",
@@ -129,8 +129,8 @@
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
-      "bytes": 2184,
-      "sha256": "08dd914c4241d1ccb0c6e589994970eeba1b201bea1b4537b13e7038c75b1201"
+      "bytes": 2383,
+      "sha256": "ff0b7f5e80b252a3b4bfe1a665df02ee817a01895f9bba3dbeabafa4f698a584"
     },
     {
       "path": "lean/SEMANTICS.md",
@@ -566,6 +566,11 @@
       "path": "src/two_copy_control_anchors.py",
       "bytes": 8045,
       "sha256": "bcee230c336afa3dd7dca767ec669effb5ccf504d1b55a4c17227db5c436d328"
+    },
+    {
+      "path": "tools/check_claims.py",
+      "bytes": 1987,
+      "sha256": "bbb889b603158a1523867c432cde149e59f058455eca3b0ad2779d0d8095c625"
     },
     {
       "path": "tools/check_metadata.py",

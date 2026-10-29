@@ -15,7 +15,9 @@ jobs:
         with:
           python-version: '3.13'
       - name: Verify frozen package
-        run: python tools/check_package.py
+        run: |
+          python tools/check_package.py
+          python tools/check_claims.py
       - name: Reproduce mathematical evidence in isolation
         run: python tools/reproduce.py
       - name: Validate metadata
