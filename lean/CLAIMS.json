@@ -3845,6 +3845,153 @@
       ],
       "build_audit_receipt": "lean/evidence/toffoli-all-vectors-audit.md",
       "unresolved_bridge": "Establish arbitrary-wire generalization, complex embedding, Python record correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-embedThree_at",
+      "section": "2",
+      "target": "SectorSimulation.embedThree_at",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "Embedding a three-bit vector recovers its coordinates at the selected distinct wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-embedThree_flip",
+      "section": "2",
+      "target": "SectorSimulation.embedThree_flip",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "Embedding commutes with flipping a selected wire.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-sliceThree_hadamard",
+      "section": "2",
+      "target": "SectorSimulation.sliceThree_hadamard",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "Three-wire slicing commutes with the modeled Hadamard at any selected wire.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-sliceThree_x",
+      "section": "2",
+      "target": "SectorSimulation.sliceThree_x",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "Three-wire slicing commutes with the modeled X gate at any selected wire.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-sliceThree_z",
+      "section": "2",
+      "target": "SectorSimulation.sliceThree_z",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "Three-wire slicing commutes with the modeled Z gate at any selected wire.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-sliceThree_t",
+      "section": "2",
+      "target": "SectorSimulation.sliceThree_t",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "Three-wire slicing commutes with the modeled T and inverse T gate at any selected wire.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-applyCNOT_as_flip",
+      "section": "2",
+      "target": "SectorSimulation.applyCNOT_as_flip",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "The modeled CNOT equals a target flip conditional on the control bit.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-embedThree_cnot",
+      "section": "2",
+      "target": "SectorSimulation.embedThree_cnot",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "Three-wire embedding commutes with the modeled CNOT on selected wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-slice-sliceThree_cnot",
+      "section": "2",
+      "target": "SectorSimulation.sliceThree_cnot",
+      "assumptions": "The defined exact shared-denominator states and, where applicable, an injective selection of three wires in a finite larger state.",
+      "quantifiers": "All finite dimensions, injective wire selections, base vectors, local bits, represented states and applicable gate parameters.",
+      "statement": "Three-wire slicing commutes with the modeled CNOT on selected wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
+      "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -715,3 +715,22 @@ import SectorSimulation
 #print axioms SectorSimulation.threeBitVector_surjective
 #check SectorSimulation.toffoli_threeBit_all_amplitudes
 #print axioms SectorSimulation.toffoli_threeBit_all_amplitudes
+
+#check SectorSimulation.embedThree_at
+#print axioms SectorSimulation.embedThree_at
+#check SectorSimulation.embedThree_flip
+#print axioms SectorSimulation.embedThree_flip
+#check SectorSimulation.sliceThree_hadamard
+#print axioms SectorSimulation.sliceThree_hadamard
+#check SectorSimulation.sliceThree_x
+#print axioms SectorSimulation.sliceThree_x
+#check SectorSimulation.sliceThree_z
+#print axioms SectorSimulation.sliceThree_z
+#check SectorSimulation.sliceThree_t
+#print axioms SectorSimulation.sliceThree_t
+#check SectorSimulation.applyCNOT_as_flip
+#print axioms SectorSimulation.applyCNOT_as_flip
+#check SectorSimulation.embedThree_cnot
+#print axioms SectorSimulation.embedThree_cnot
+#check SectorSimulation.sliceThree_cnot
+#print axioms SectorSimulation.sliceThree_cnot

@@ -259,6 +259,15 @@ EXPECTED = {
     'SectorSimulation.toffoli_threeBit_correct': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.threeBitVector_surjective': {'propext', 'Quot.sound'},
     'SectorSimulation.toffoli_threeBit_all_amplitudes': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.embedThree_at': {'propext', 'Quot.sound'},
+    'SectorSimulation.embedThree_flip': {'propext', 'Quot.sound'},
+    'SectorSimulation.sliceThree_hadamard': {'propext', 'Quot.sound'},
+    'SectorSimulation.sliceThree_x': {'propext', 'Quot.sound'},
+    'SectorSimulation.sliceThree_z': {'propext', 'Quot.sound'},
+    'SectorSimulation.sliceThree_t': {'propext', 'Quot.sound'},
+    'SectorSimulation.applyCNOT_as_flip': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.embedThree_cnot': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sliceThree_cnot': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

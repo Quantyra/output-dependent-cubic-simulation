@@ -135,3 +135,5 @@ import SectorSimulation.ToffoliSuperposition
 import SectorSimulation.ToffoliIdealSum
 
 import SectorSimulation.ToffoliAllVectors
+
+import SectorSimulation.ThreeWireSlice
