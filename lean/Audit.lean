@@ -1258,3 +1258,16 @@ import SectorSimulation
 
 #check SectorSimulation.nativePythonFourier_walsh_sum
 #print axioms SectorSimulation.nativePythonFourier_walsh_sum
+
+
+#check SectorSimulation.matrixApply_inverse_forward
+#print axioms SectorSimulation.matrixApply_inverse_forward
+
+#check SectorSimulation.matrixApply_basis_perm
+#print axioms SectorSimulation.matrixApply_basis_perm
+
+#check SectorSimulation.exactFoldr_perm
+#print axioms SectorSimulation.exactFoldr_perm
+
+#check SectorSimulation.nativePythonFourier_matrix_sum
+#print axioms SectorSimulation.nativePythonFourier_matrix_sum

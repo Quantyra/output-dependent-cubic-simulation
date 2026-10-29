@@ -222,3 +222,5 @@ import SectorSimulation.HadamardUniquePath
 import SectorSimulation.HadamardPathEndpoint
 
 import SectorSimulation.HadamardWalshCoefficient
+
+import SectorSimulation.HadamardMatrixSum

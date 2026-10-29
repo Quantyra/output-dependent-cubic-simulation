@@ -468,6 +468,10 @@ EXPECTED = {
     'SectorSimulation.selectedPathCoefficient_walsh': {'propext', 'Quot.sound', 'Classical.choice'},
     'SectorSimulation.hadamardKernel_allWire_walsh_sum': {'propext', 'Quot.sound', 'Classical.choice'},
     'SectorSimulation.nativePythonFourier_walsh_sum': {'propext', 'Quot.sound', 'Classical.choice'},
+    'SectorSimulation.matrixApply_inverse_forward': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.matrixApply_basis_perm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactFoldr_perm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.nativePythonFourier_matrix_sum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

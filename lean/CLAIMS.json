@@ -7473,6 +7473,82 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-walsh-coefficient.md",
       "unresolved_bridge": "Embed exact amplitudes in standard complex numbers, connect CNOT action to manuscript pairing kernel, prove Python refinement, physical output and sector identities and costs."
+    },
+    {
+      "id": "hadamard-matrix-sum-matrixApply_inverse_forward",
+      "section": "2",
+      "target": "SectorSimulation.matrixApply_inverse_forward",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Successful Gaussian elimination gives a forward CNOT inverse of the input matrix.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-matrix-sum.md",
+      "unresolved_bridge": "Identify matrix sign parity with the paper bilinear pairing; connect exact amplitudes and modeled records to standard complex semantics and actual Python; prove paper identities and costs."
+    },
+    {
+      "id": "hadamard-matrix-sum-matrixApply_basis_perm",
+      "section": "2",
+      "target": "SectorSimulation.matrixApply_basis_perm",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "A successfully eliminated binary matrix permutes the exhaustive binary basis.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-matrix-sum.md",
+      "unresolved_bridge": "Identify matrix sign parity with the paper bilinear pairing; connect exact amplitudes and modeled records to standard complex semantics and actual Python; prove paper identities and costs."
+    },
+    {
+      "id": "hadamard-matrix-sum-exactFoldr_perm",
+      "section": "2",
+      "target": "SectorSimulation.exactFoldr_perm",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Finite exact-amplitude sums are invariant under list permutation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-matrix-sum.md",
+      "unresolved_bridge": "Identify matrix sign parity with the paper bilinear pairing; connect exact amplitudes and modeled records to standard complex semantics and actual Python; prove paper identities and costs."
+    },
+    {
+      "id": "hadamard-matrix-sum-nativePythonFourier_matrix_sum",
+      "section": "2",
+      "target": "SectorSimulation.nativePythonFourier_matrix_sum",
+      "assumptions": "Lean finite binary vectors, exact cyclotomic amplitudes and modeled native replay; distinct-wire and successful Gaussian-program hypotheses where stated.",
+      "quantifiers": "All applicable finite widths, exact amplitudes, wire lists, vectors and programs, including width zero.",
+      "statement": "Modeled native Fourier replay equals an exact Walsh sum indexed by the original input basis, with the matrix applied inside the sign parity.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-matrix-sum.md",
+      "unresolved_bridge": "Identify matrix sign parity with the paper bilinear pairing; connect exact amplitudes and modeled records to standard complex semantics and actual Python; prove paper identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
