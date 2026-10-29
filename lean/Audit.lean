@@ -925,3 +925,8 @@ import SectorSimulation
 #print axioms SectorSimulation.decodedValidatedHeader_sourceBody
 #check SectorSimulation.decodedValidatedHeader_replay_and_derivative
 #print axioms SectorSimulation.decodedValidatedHeader_replay_and_derivative
+
+#check SectorSimulation.recognizeModeledSource_sound
+#print axioms SectorSimulation.recognizeModeledSource_sound
+#check SectorSimulation.recognizeModeledSource_replay
+#print axioms SectorSimulation.recognizeModeledSource_replay

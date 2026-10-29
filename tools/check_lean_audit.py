@@ -355,6 +355,8 @@ EXPECTED = {
     'SectorSimulation.decodedValidatedHeader_prefix': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.decodedValidatedHeader_sourceBody': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.decodedValidatedHeader_replay_and_derivative': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recognizeModeledSource_sound': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recognizeModeledSource_replay': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

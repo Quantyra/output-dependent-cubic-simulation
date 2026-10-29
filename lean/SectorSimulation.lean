@@ -172,3 +172,5 @@ import SectorSimulation.ModeledFourier
 import SectorSimulation.ExactNativeHeader
 
 import SectorSimulation.ValidatedHeaderReplay
+
+import SectorSimulation.ModeledSourceRecognizer

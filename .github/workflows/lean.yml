@@ -47,3 +47,7 @@ jobs:
       - name: Check phase compiler examples
         working-directory: lean
         run: lake env lean PhaseCompilerExamples.lean
+
+      - name: Check modeled recognizer examples
+        working-directory: lean
+        run: lake env lean ModeledRecognizerExamples.lean

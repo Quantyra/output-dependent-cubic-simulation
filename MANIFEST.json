@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/lean.yml",
-      "bytes": 1424,
-      "sha256": "9ba865b1b8dfc9c985d4d1c65f71b30b1d6832a4a4af0b8146ee9c157a987458"
+      "bytes": 1563,
+      "sha256": "430d55b7365259ae35483300e6e9891c264f521f9d89c3360f5e6efd8f5c48c0"
     },
     {
       "path": ".gitignore",
@@ -124,18 +124,23 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 37457,
-      "sha256": "7b623e90cb61050dd40908cb29023ed7888a19f21d844d3e7342d9f41bbcfcae"
+      "bytes": 37686,
+      "sha256": "28e5c9d190f7544a3ac6bfc5d69af8c78b247a588aa1172da0738345a5074a5c"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 300916,
-      "sha256": "f3ba30bf6a1152a8462bcedff239902bb8ac0843ac32357ebae31d36fb6b4830"
+      "bytes": 302983,
+      "sha256": "09b32f739569aa9eac2dd51410e8c2919a9b41ea40b15d2f30bb8a8b777cfbb5"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
       "bytes": 424,
       "sha256": "00a214109a88b2bc234a9891a6243eb06b8d0dfafd2d491e345625eec88ef4a5"
+    },
+    {
+      "path": "lean/ModeledRecognizerExamples.lean",
+      "bytes": 876,
+      "sha256": "ef6d3b41dd28f0c40937abd676966e7218622b1c39c5a3880036e25e3c465f2d"
     },
     {
       "path": "lean/NativeJsonExamples.lean",
@@ -164,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 4005,
-      "sha256": "f2248b7bbe8c2b799a3309481720601744e1c01c7c56fcc8e6060cc71d3413dd"
+      "bytes": 4054,
+      "sha256": "49d25505d04ecb9a1e29cdf3171fb13f3ed5b5cac7e425b799fb0af17e019616"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -426,6 +431,11 @@
       "path": "lean/SectorSimulation/ModeledFourier.lean",
       "bytes": 5216,
       "sha256": "a48a283be5dfef8aab3879ac2c8414ddf90e38ca3a288a4ab55566473e52415e"
+    },
+    {
+      "path": "lean/SectorSimulation/ModeledSourceRecognizer.lean",
+      "bytes": 2309,
+      "sha256": "f5e0edc06c68a9891dbe24683b4362bd5d807c470cc9caee5d7bd4285c7a41c6"
     },
     {
       "path": "lean/SectorSimulation/MonomialDifference.lean",
@@ -906,6 +916,11 @@
       "path": "lean/evidence/matrix-row-program-audit.md",
       "bytes": 744,
       "sha256": "cc787fbb9db2762a161d6cec3fa08dd4c42d847bbeed473b21d2dd9c2545866d"
+    },
+    {
+      "path": "lean/evidence/modeled-recognizer-audit.md",
+      "bytes": 1037,
+      "sha256": "a8dc6dda84e943a90896f7e66abda11743bf23aae2d7f3532b35198edbf4c544"
     },
     {
       "path": "lean/evidence/modeled-source-body-audit.md",
@@ -1544,8 +1559,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 28963,
-      "sha256": "aaeab84fb41e5fd585008c32a5a9f945e311b51f55e5dabffc75122545a0c69b"
+      "bytes": 29164,
+      "sha256": "762d788335bc64dfbf7f73118fd8677834a08458246662b56b699d8d0255520e"
     },
     {
       "path": "tools/check_metadata.py",

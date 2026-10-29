@@ -5392,6 +5392,40 @@
       ],
       "build_audit_receipt": "lean/evidence/validated-header-replay-audit.md",
       "unresolved_bridge": "Prove correspondence with the Python recognizer and compiler, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-recognizer-recognizeModeledSource_sound",
+      "section": "2",
+      "target": "SectorSimulation.recognizeModeledSource_sound",
+      "assumptions": "Acceptance by the defined Lean modeled recognizer and the exact shared-denominator native interpreter.",
+      "quantifiers": "All modeled native gate lists, recognized source descriptors, Gaussian programs, represented states and output vectors.",
+      "statement": "Acceptance by the executable modeled recognizer implies validated descriptor decoding, a successful Gaussian program, and exact equality of decoded body and compiler output.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-recognizer-audit.md",
+      "unresolved_bridge": "Prove Python recognizer/compiler correspondence, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
+    },
+    {
+      "id": "modeled-recognizer-recognizeModeledSource_replay",
+      "section": "2",
+      "target": "SectorSimulation.recognizeModeledSource_replay",
+      "assumptions": "Acceptance by the defined Lean modeled recognizer and the exact shared-denominator native interpreter.",
+      "quantifiers": "All modeled native gate lists, recognized source descriptors, Gaussian programs, represented states and output vectors.",
+      "statement": "An accepted modeled source replays to the modeled body amplitudes and has the previously proved output derivative with its bounds.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/modeled-recognizer-audit.md",
+      "unresolved_bridge": "Prove Python recognizer/compiler correspondence, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
