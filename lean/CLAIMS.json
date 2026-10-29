@@ -532,6 +532,38 @@
       ],
       "build_audit_receipt": "lean/evidence/derivative-product-audit.md",
       "unresolved_bridge": "Construct the derivative ANF for an arbitrary square-free monomial, prove its degree is strictly smaller when nonconstant, and lift it to phase lists and the actual native source."
+    },
+    {
+      "id": "quadratic-monomial-difference",
+      "section": "2",
+      "target": "SectorSimulation.quadratic_difference_expansion",
+      "assumptions": "Boolean variable values and Boolean translation-direction values; multiplication is conjunction and addition is XOR.",
+      "quantifiers": "All Boolean assignments to the stated variables and shift bits.",
+      "statement": "For Boolean a,b and direction bits ja,jb, (a b) XOR ((a XOR ja)(b XOR jb)) equals ja*b XOR a*jb XOR ja*jb.",
+      "dependencies": [
+        "boolean-derivative-product",
+        "binary-coordinate-derivative"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/monomial-difference-audit.md",
+      "unresolved_bridge": "Translate these pointwise identities into an algorithm producing square-free bit-mask ANFs, bound monomial degree for all masks, and lift to arbitrary cubic phase lists."
+    },
+    {
+      "id": "cubic-monomial-difference",
+      "section": "2",
+      "target": "SectorSimulation.cubic_difference_expansion",
+      "assumptions": "Boolean variable values and Boolean translation-direction values; multiplication is conjunction and addition is XOR.",
+      "quantifiers": "All Boolean assignments to the stated variables and shift bits.",
+      "statement": "For Boolean a,b,c and direction bits ja,jb,jc, the difference of a*b*c under translation expands into the seven displayed products, each containing at most two original-variable factors.",
+      "dependencies": [
+        "boolean-derivative-product",
+        "binary-coordinate-derivative"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/monomial-difference-audit.md",
+      "unresolved_bridge": "Translate these pointwise identities into an algorithm producing square-free bit-mask ANFs, bound monomial degree for all masks, and lift to arbitrary cubic phase lists."
     }
   ],
   "paper_source": "manuscript/main.tex",

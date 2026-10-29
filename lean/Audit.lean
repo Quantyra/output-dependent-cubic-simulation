@@ -26,3 +26,7 @@ import SectorSimulation
 #print axioms SectorSimulation.booleanDerivative_and
 #check SectorSimulation.binaryVariable_derivative
 #print axioms SectorSimulation.binaryVariable_derivative
+#check SectorSimulation.quadratic_difference_expansion
+#print axioms SectorSimulation.quadratic_difference_expansion
+#check SectorSimulation.cubic_difference_expansion
+#print axioms SectorSimulation.cubic_difference_expansion

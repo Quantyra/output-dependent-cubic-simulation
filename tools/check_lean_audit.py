@@ -17,6 +17,8 @@ EXPECTED = {
     'SectorSimulation.booleanDerivative_const': set(),
     'SectorSimulation.booleanDerivative_and': {'propext'},
     'SectorSimulation.binaryVariable_derivative': {'propext'},
+    'SectorSimulation.quadratic_difference_expansion': set(),
+    'SectorSimulation.cubic_difference_expansion': set(),
 }
 
 
