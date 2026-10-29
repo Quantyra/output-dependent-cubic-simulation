@@ -75,3 +75,5 @@ import SectorSimulation.LinearCircuitCorrect
 import SectorSimulation.NativeCNOTReplay
 
 import SectorSimulation.CNOTAmplitude
+
+import SectorSimulation.PhaseGateAmplitude

@@ -150,6 +150,10 @@ EXPECTED = {
     'SectorSimulation.runCNOTAmplitudes_apply': {'propext', 'Quot.sound'},
     'SectorSimulation.gaussianCNOTAmplitude_action': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.replay_gaussian_CNOT_amplitudes': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.flipWire_involutive': {'propext', 'Quot.sound'},
+    'SectorSimulation.X_amplitude_involutive': {'propext', 'Quot.sound'},
+    'SectorSimulation.Z_amplitude_involutive': {'propext', 'Quot.sound'},
+    'SectorSimulation.XZXZ_constant_phase': {'propext', 'Quot.sound'},
 }
 
 

@@ -403,3 +403,15 @@ import SectorSimulation
 
 #check SectorSimulation.replay_gaussian_CNOT_amplitudes
 #print axioms SectorSimulation.replay_gaussian_CNOT_amplitudes
+
+#check SectorSimulation.flipWire_involutive
+#print axioms SectorSimulation.flipWire_involutive
+
+#check SectorSimulation.X_amplitude_involutive
+#print axioms SectorSimulation.X_amplitude_involutive
+
+#check SectorSimulation.Z_amplitude_involutive
+#print axioms SectorSimulation.Z_amplitude_involutive
+
+#check SectorSimulation.XZXZ_constant_phase
+#print axioms SectorSimulation.XZXZ_constant_phase

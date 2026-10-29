@@ -2106,6 +2106,70 @@
       ],
       "build_audit_receipt": "lean/evidence/cnot-amplitude-audit.md",
       "unresolved_bridge": "Establish Python compiler correspondence, Hadamard and phase gate semantics, normalization, full circuit replay and paper theorems."
+    },
+    {
+      "id": "phase-gate-flipWire_involutive",
+      "section": "2",
+      "target": "SectorSimulation.flipWire_involutive",
+      "assumptions": "Lean modeled X and Z actions on arbitrary basis-indexed coefficients; involutive negation for Z involution.",
+      "quantifiers": "All finite dimensions, represented wire indices and coefficient states.",
+      "statement": "Flipping a represented basis wire twice restores the vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-gate-amplitude-audit.md",
+      "unresolved_bridge": "Connect native record replay and Python compilation, prove Hadamard and multiwire phase semantics, normalization and full manuscript theorems."
+    },
+    {
+      "id": "phase-gate-X_amplitude_involutive",
+      "section": "2",
+      "target": "SectorSimulation.X_amplitude_involutive",
+      "assumptions": "Lean modeled X and Z actions on arbitrary basis-indexed coefficients; involutive negation for Z involution.",
+      "quantifiers": "All finite dimensions, represented wire indices and coefficient states.",
+      "statement": "The modeled X amplitude action is involutive.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-gate-amplitude-audit.md",
+      "unresolved_bridge": "Connect native record replay and Python compilation, prove Hadamard and multiwire phase semantics, normalization and full manuscript theorems."
+    },
+    {
+      "id": "phase-gate-Z_amplitude_involutive",
+      "section": "2",
+      "target": "SectorSimulation.Z_amplitude_involutive",
+      "assumptions": "Lean modeled X and Z actions on arbitrary basis-indexed coefficients; involutive negation for Z involution.",
+      "quantifiers": "All finite dimensions, represented wire indices and coefficient states.",
+      "statement": "The modeled Z amplitude action is involutive when coefficient negation is involutive.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-gate-amplitude-audit.md",
+      "unresolved_bridge": "Connect native record replay and Python compilation, prove Hadamard and multiwire phase semantics, normalization and full manuscript theorems."
+    },
+    {
+      "id": "phase-gate-XZXZ_constant_phase",
+      "section": "2",
+      "target": "SectorSimulation.XZXZ_constant_phase",
+      "assumptions": "Lean modeled X and Z actions on arbitrary basis-indexed coefficients; involutive negation for Z involution.",
+      "quantifiers": "All finite dimensions, represented wire indices and coefficient states.",
+      "statement": "The modeled X Z X Z sequence negates every amplitude, preserving the compiler constant term global sign.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/phase-gate-amplitude-audit.md",
+      "unresolved_bridge": "Connect native record replay and Python compilation, prove Hadamard and multiwire phase semantics, normalization and full manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
