@@ -664,3 +664,10 @@ import SectorSimulation
 
 #check SectorSimulation.replayExactNative_scale
 #print axioms SectorSimulation.replayExactNative_scale
+
+#check SectorSimulation.applyExactNative_shift
+#print axioms SectorSimulation.applyExactNative_shift
+#check SectorSimulation.replayExactNative_shift
+#print axioms SectorSimulation.replayExactNative_shift
+#check SectorSimulation.toffoliScaledShiftedBasis_replay
+#print axioms SectorSimulation.toffoliScaledShiftedBasis_replay

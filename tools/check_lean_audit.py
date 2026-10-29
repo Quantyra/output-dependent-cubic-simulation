@@ -237,6 +237,9 @@ EXPECTED = {
     'SectorSimulation.sharedT_scale': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.applyExactNative_scale': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.replayExactNative_scale': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.applyExactNative_shift': {'propext', 'Quot.sound'},
+    'SectorSimulation.replayExactNative_shift': {'propext', 'Quot.sound'},
+    'SectorSimulation.toffoliScaledShiftedBasis_replay': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
