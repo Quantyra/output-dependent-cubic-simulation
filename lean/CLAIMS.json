@@ -1030,6 +1030,24 @@
       ],
       "build_audit_receipt": "lean/evidence/cubic-derivative-anf-audit.md",
       "unresolved_bridge": "Prove resource bounds and connect the shift to native circuit decoding and the published circuit, Walsh and sector statements."
+    },
+    {
+      "id": "cubic-derivative-output-size",
+      "section": "2",
+      "target": "SectorSimulation.cubicPhaseDerivativeANF_length",
+      "assumptions": "The concrete derivative constructor returns an output ANF.",
+      "quantifiers": "All finite dimensions, source phases, binary shifts and returned outputs.",
+      "statement": "The returned ANF contains at most seven masks per input mask.",
+      "dependencies": [
+        "cubic-derivative-anf"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/derivative-size-audit.md",
+      "unresolved_bridge": "Prove operational time, source encoding and bit-cost bounds; native circuit decoding and manuscript theorems remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",

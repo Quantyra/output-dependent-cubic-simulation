@@ -48,6 +48,9 @@ EXPECTED = {
     'SectorSimulation.quadraticTermMask_degree': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.quadraticTermsToANF_degree': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.cubicPhaseDerivativeANF_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cubicMaskDerivativeTerms_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.cubicPhaseDerivativeTerms_length': {'propext', 'Quot.sound'},
+    'SectorSimulation.cubicPhaseDerivativeANF_length': {'propext', 'Quot.sound'},
 }
 
 

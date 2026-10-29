@@ -11,3 +11,5 @@ import SectorSimulation.CubicPhaseDerivative
 import SectorSimulation.QuadraticMasks
 
 import SectorSimulation.CubicDerivativeANF
+
+import SectorSimulation.DerivativeSize

@@ -98,3 +98,12 @@ import SectorSimulation
 
 #check SectorSimulation.cubicPhaseDerivativeANF_correct
 #print axioms SectorSimulation.cubicPhaseDerivativeANF_correct
+
+#check SectorSimulation.cubicMaskDerivativeTerms_length
+#print axioms SectorSimulation.cubicMaskDerivativeTerms_length
+
+#check SectorSimulation.cubicPhaseDerivativeTerms_length
+#print axioms SectorSimulation.cubicPhaseDerivativeTerms_length
+
+#check SectorSimulation.cubicPhaseDerivativeANF_length
+#print axioms SectorSimulation.cubicPhaseDerivativeANF_length
