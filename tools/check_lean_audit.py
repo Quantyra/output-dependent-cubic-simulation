@@ -191,6 +191,11 @@ EXPECTED = {
     'SectorSimulation.cycloScale_comm': {'propext'},
     'SectorSimulation.cycloScale_injective': {'propext'},
     'SectorSimulation.dyadicEquivalent_trans': {'propext'},
+    'SectorSimulation.cycloScale_mul_left': {'propext'},
+    'SectorSimulation.dyadicMultiply_congr_left': {'propext'},
+    'SectorSimulation.dyadicMultiply_comm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.dyadicMultiply_congr_right': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.dyadicMultiply_congr': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

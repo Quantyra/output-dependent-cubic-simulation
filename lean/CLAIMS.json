@@ -2730,6 +2730,87 @@
       ],
       "build_audit_receipt": "lean/evidence/dyadic-equivalence-audit.md",
       "unresolved_bridge": "Prove arithmetic compatibility, complex embedding, normalized gate behavior, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-multiply-cycloScale_mul_left",
+      "section": "2",
+      "target": "SectorSimulation.cycloScale_mul_left",
+      "assumptions": "The represented eighth-root coefficients, dyadic multiplication and cross-multiplication equivalence.",
+      "quantifiers": "All represented coefficients and dyadic operands.",
+      "statement": "Integer scaling commutes with multiplication of represented eighth-root coefficients.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-multiplication-audit.md",
+      "unresolved_bridge": "Establish additive compatibility, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-multiply-dyadicMultiply_congr_left",
+      "section": "2",
+      "target": "SectorSimulation.dyadicMultiply_congr_left",
+      "assumptions": "The represented eighth-root coefficients, dyadic multiplication and cross-multiplication equivalence.",
+      "quantifiers": "All represented coefficients and dyadic operands.",
+      "statement": "Dyadic multiplication respects equivalent representations of its first factor.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-multiplication-audit.md",
+      "unresolved_bridge": "Establish additive compatibility, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-multiply-dyadicMultiply_comm",
+      "section": "2",
+      "target": "SectorSimulation.dyadicMultiply_comm",
+      "assumptions": "The represented eighth-root coefficients, dyadic multiplication and cross-multiplication equivalence.",
+      "quantifiers": "All represented coefficients and dyadic operands.",
+      "statement": "The represented dyadic multiplication is commutative.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-multiplication-audit.md",
+      "unresolved_bridge": "Establish additive compatibility, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-multiply-dyadicMultiply_congr_right",
+      "section": "2",
+      "target": "SectorSimulation.dyadicMultiply_congr_right",
+      "assumptions": "The represented eighth-root coefficients, dyadic multiplication and cross-multiplication equivalence.",
+      "quantifiers": "All represented coefficients and dyadic operands.",
+      "statement": "Dyadic multiplication respects equivalent representations of its second factor.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-multiplication-audit.md",
+      "unresolved_bridge": "Establish additive compatibility, complex embedding, normalized gate semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-multiply-dyadicMultiply_congr",
+      "section": "2",
+      "target": "SectorSimulation.dyadicMultiply_congr",
+      "assumptions": "The represented eighth-root coefficients, dyadic multiplication and cross-multiplication equivalence.",
+      "quantifiers": "All represented coefficients and dyadic operands.",
+      "statement": "Dyadic multiplication respects equivalent representations of both factors.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-multiplication-audit.md",
+      "unresolved_bridge": "Establish additive compatibility, complex embedding, normalized gate semantics, native replay and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

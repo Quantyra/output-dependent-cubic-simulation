@@ -526,3 +526,18 @@ import SectorSimulation
 
 #check SectorSimulation.dyadicEquivalent_trans
 #print axioms SectorSimulation.dyadicEquivalent_trans
+
+#check SectorSimulation.cycloScale_mul_left
+#print axioms SectorSimulation.cycloScale_mul_left
+
+#check SectorSimulation.dyadicMultiply_congr_left
+#print axioms SectorSimulation.dyadicMultiply_congr_left
+
+#check SectorSimulation.dyadicMultiply_comm
+#print axioms SectorSimulation.dyadicMultiply_comm
+
+#check SectorSimulation.dyadicMultiply_congr_right
+#print axioms SectorSimulation.dyadicMultiply_congr_right
+
+#check SectorSimulation.dyadicMultiply_congr
+#print axioms SectorSimulation.dyadicMultiply_congr

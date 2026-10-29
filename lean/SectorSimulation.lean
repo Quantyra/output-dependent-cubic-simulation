@@ -99,3 +99,5 @@ import SectorSimulation.CycloTCommutation
 import SectorSimulation.DyadicCyclo
 
 import SectorSimulation.DyadicEquivalence
+
+import SectorSimulation.DyadicMultiplication
