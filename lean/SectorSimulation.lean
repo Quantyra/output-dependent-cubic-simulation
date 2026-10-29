@@ -17,3 +17,5 @@ import SectorSimulation.DerivativeSize
 import SectorSimulation.MatrixLinearity
 
 import SectorSimulation.ExhaustiveMatrixSolve
+
+import SectorSimulation.SourceOutputDerivative

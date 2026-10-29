@@ -128,3 +128,6 @@ import SectorSimulation
 
 #check SectorSimulation.solveMatrixExhaustive_complete
 #print axioms SectorSimulation.solveMatrixExhaustive_complete
+
+#check SectorSimulation.sourceOutputDerivativeExhaustive_correct
+#print axioms SectorSimulation.sourceOutputDerivativeExhaustive_correct

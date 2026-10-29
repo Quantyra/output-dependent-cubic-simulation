@@ -58,6 +58,7 @@ EXPECTED = {
     'SectorSimulation.vectorEqual_correct': {'propext', 'Quot.sound'},
     'SectorSimulation.solveMatrixExhaustive_sound': {'propext', 'Quot.sound'},
     'SectorSimulation.solveMatrixExhaustive_complete': {'propext', 'Quot.sound'},
+    'SectorSimulation.sourceOutputDerivativeExhaustive_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

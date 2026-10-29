@@ -1116,6 +1116,28 @@
       ],
       "build_audit_receipt": "lean/evidence/matrix-exhaustive-solve-audit.md",
       "unresolved_bridge": "This exhaustive search is exponential and is not the paper algorithm; verify polynomial elimination, invertibility validation, output shift and native circuit semantics."
+    },
+    {
+      "id": "source-output-derivative-reference",
+      "section": "2",
+      "target": "SectorSimulation.sourceOutputDerivativeExhaustive_correct",
+      "assumptions": "Source descriptor has cubic phases and its matrix evaluator is surjective; exhaustive matrix search is used.",
+      "quantifiers": "All finite dimensions and descriptors satisfying the stated hypotheses.",
+      "statement": "The concrete reference construction returns an output-index shift solving Jj=e and a quadratic bit-mask ANF of bounded length evaluating to the actual second-phase derivative.",
+      "dependencies": [
+        "matrix-exhaustive-complete",
+        "matrix-exhaustive-sound",
+        "cubic-derivative-anf",
+        "cubic-derivative-output-size"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/source-output-derivative-audit.md",
+      "unresolved_bridge": "Surjectivity is assumed rather than decoded or checked; the exhaustive solver is exponential. Verify efficient elimination, native circuit replay, physical output, Walsh and sector results."
     }
   ],
   "paper_source": "manuscript/main.tex",
