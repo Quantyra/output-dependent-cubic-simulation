@@ -280,6 +280,10 @@ EXPECTED = {
     'SectorSimulation.mappedNativeProgram_correct': {'propext'},
     'SectorSimulation.threeWireToffoli_valid': {'propext', 'Quot.sound'},
     'SectorSimulation.mappedNativeToffoli_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedSubSame_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHadamard_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHadamard_amplitude_congr': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.mappedToffoli_cubic_sign': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

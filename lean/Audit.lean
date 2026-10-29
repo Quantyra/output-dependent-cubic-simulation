@@ -760,3 +760,12 @@ import SectorSimulation
 #print axioms SectorSimulation.threeWireToffoli_valid
 #check SectorSimulation.mappedNativeToffoli_correct
 #print axioms SectorSimulation.mappedNativeToffoli_correct
+
+#check SectorSimulation.sharedSubSame_amplitude
+#print axioms SectorSimulation.sharedSubSame_amplitude
+#check SectorSimulation.sharedHadamard_amplitude
+#print axioms SectorSimulation.sharedHadamard_amplitude
+#check SectorSimulation.sharedHadamard_amplitude_congr
+#print axioms SectorSimulation.sharedHadamard_amplitude_congr
+#check SectorSimulation.mappedToffoli_cubic_sign
+#print axioms SectorSimulation.mappedToffoli_cubic_sign
