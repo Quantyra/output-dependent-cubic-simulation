@@ -18,6 +18,7 @@ jobs:
         run: |
           python tools/check_package.py
           python tools/check_claims.py
+          python tools/check_toffoli_template.py
       - name: Reproduce mathematical evidence in isolation
         run: python tools/reproduce.py
       - name: Validate metadata

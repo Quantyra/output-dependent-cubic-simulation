@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/checks.yml",
-      "bytes": 960,
-      "sha256": "c79b1dd108d68ce9def9870316de534120b16c94db67875cc06dfc40db8c5f4f"
+      "bytes": 1009,
+      "sha256": "86f09d99d0ca2810e25064b81b18302c0cb217324c5eccdeff9a72a8ae055898"
     },
     {
       "path": ".github/workflows/lean.yml",
@@ -888,6 +888,11 @@
       "sha256": "fdbd1259dfd08deaeafdcc0fdafc5ce4e27bc032e2dfdfffcec121270c97286a"
     },
     {
+      "path": "lean/evidence/python-toffoli-template-check.md",
+      "bytes": 822,
+      "sha256": "e77c33c3c774c6a76a0f7811f10eb1224434abab192200cf251387cf7bf89520"
+    },
+    {
       "path": "lean/evidence/quadratic-mask-translation-audit.md",
       "bytes": 1024,
       "sha256": "27632d1fe398f438afa05c622eaaa820563f4dfe805ec4a8dfebd9d4190e7495"
@@ -1391,6 +1396,11 @@
       "path": "tools/check_package.py",
       "bytes": 2808,
       "sha256": "f67d41dd9b13aac567a61bbcc5e379f2e5570d9a3e652cabb548f9cc1b534e07"
+    },
+    {
+      "path": "tools/check_toffoli_template.py",
+      "bytes": 2815,
+      "sha256": "92b6e91c2e9542180a16c8d602e22c9ef80527aa2e78fd987423f162cb696599"
     },
     {
       "path": "tools/manifest.py",
