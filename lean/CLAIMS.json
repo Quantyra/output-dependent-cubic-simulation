@@ -2552,6 +2552,72 @@
       ],
       "build_audit_receipt": "lean/evidence/cyclotomic-eight-audit.md",
       "unresolved_bridge": "Prove complex embedding, division by two, physical normalized gate semantics, literal decomposition replay and manuscript theorems."
+    },
+    {
+      "id": "cyclo-t-cycloTPhase_flip_invariant",
+      "section": "2",
+      "target": "SectorSimulation.cycloTPhase_flip_invariant",
+      "assumptions": "Four-integer eighth-root coefficient model and distinct phase and Hadamard wires where stated.",
+      "quantifiers": "All represented finite states, applicable wires and T/TDG choices.",
+      "statement": "A disjoint modeled T or TDG multiplier is invariant under flipping the Hadamard wire.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/cyclo-t-commutation-audit.md",
+      "unresolved_bridge": "Establish division by two, complex embedding, normalized native Toffoli replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "cyclo-t-cycloT_commutes_hadamard",
+      "section": "2",
+      "target": "SectorSimulation.cycloT_commutes_hadamard",
+      "assumptions": "Four-integer eighth-root coefficient model and distinct phase and Hadamard wires where stated.",
+      "quantifiers": "All represented finite states, applicable wires and T/TDG choices.",
+      "statement": "A modeled T or TDG multiplier commutes with the disjoint unnormalized Hadamard numerator.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cyclo-t-commutation-audit.md",
+      "unresolved_bridge": "Establish division by two, complex embedding, normalized native Toffoli replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "cyclo-t-cyclo_sqrt_two_central",
+      "section": "2",
+      "target": "SectorSimulation.cyclo_sqrt_two_central",
+      "assumptions": "Four-integer eighth-root coefficient model and distinct phase and Hadamard wires where stated.",
+      "quantifiers": "All represented finite states, applicable wires and T/TDG choices.",
+      "statement": "The represented square-root-of-two numerator is central across coefficient multiplication.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cyclo-t-commutation-audit.md",
+      "unresolved_bridge": "Establish division by two, complex embedding, normalized native Toffoli replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "cyclo-t-cycloT_commutes_scaled_hadamard",
+      "section": "2",
+      "target": "SectorSimulation.cycloT_commutes_scaled_hadamard",
+      "assumptions": "Four-integer eighth-root coefficient model and distinct phase and Hadamard wires where stated.",
+      "quantifiers": "All represented finite states, applicable wires and T/TDG choices.",
+      "statement": "A modeled T or TDG multiplier commutes with the disjoint Hadamard numerator scaled by the represented square root of two.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cyclo-t-commutation-audit.md",
+      "unresolved_bridge": "Establish division by two, complex embedding, normalized native Toffoli replay, Python correspondence and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

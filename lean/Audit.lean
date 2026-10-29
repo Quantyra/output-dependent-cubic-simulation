@@ -490,3 +490,15 @@ import SectorSimulation
 
 #check SectorSimulation.cyclo_hadamard_commutes_phase
 #print axioms SectorSimulation.cyclo_hadamard_commutes_phase
+
+#check SectorSimulation.cycloTPhase_flip_invariant
+#print axioms SectorSimulation.cycloTPhase_flip_invariant
+
+#check SectorSimulation.cycloT_commutes_hadamard
+#print axioms SectorSimulation.cycloT_commutes_hadamard
+
+#check SectorSimulation.cyclo_sqrt_two_central
+#print axioms SectorSimulation.cyclo_sqrt_two_central
+
+#check SectorSimulation.cycloT_commutes_scaled_hadamard
+#print axioms SectorSimulation.cycloT_commutes_scaled_hadamard

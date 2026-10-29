@@ -179,6 +179,10 @@ EXPECTED = {
     'SectorSimulation.cyclo_omega_fourth': set(),
     'SectorSimulation.cyclo_sqrt_two_squared': set(),
     'SectorSimulation.cyclo_hadamard_commutes_phase': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cycloTPhase_flip_invariant': {'propext'},
+    'SectorSimulation.cycloT_commutes_hadamard': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cyclo_sqrt_two_central': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cycloT_commutes_scaled_hadamard': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 19090,
-      "sha256": "a9a4d9ce59abe13fa2f27e9e13e26944535585899dfb8f81b274ff7e40dbdf4d"
+      "bytes": 19528,
+      "sha256": "943df49a7917981bab113380039ca536fb24b3adf0da06e15eceb7fa4262fcf5"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 133906,
-      "sha256": "c26356b645861e9d430ea00161dec6ece6610fe5c60721c08d366554194190a8"
+      "bytes": 137351,
+      "sha256": "eb46686ea6c61a5ed68280a97bcd9f945d0820eb11aa0a1d9315088bc8b9e37f"
     },
     {
       "path": "lean/NativeJsonExamples.lean",
@@ -154,8 +154,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 2260,
-      "sha256": "3c126f1bc1f91148f1fa2be7285b2c6559e1b71995864c647fabebd9b4036433"
+      "bytes": 2303,
+      "sha256": "3042857ecab9d176974ecc874c40870508805c3688a8488cb24714a3006281cf"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -201,6 +201,11 @@
       "path": "lean/SectorSimulation/CubicPhaseInteger.lean",
       "bytes": 1321,
       "sha256": "4a9757b0d0193a498a8fa4597f2f79bcdcf79dd72d83e7dbd1c57690743b6f2b"
+    },
+    {
+      "path": "lean/SectorSimulation/CycloTCommutation.lean",
+      "bytes": 2113,
+      "sha256": "c1b55344ee4d449e93942d4d02a580cb090c14fd5e17d23e9af3ce553df16340"
     },
     {
       "path": "lean/SectorSimulation/CyclotomicEight.lean",
@@ -486,6 +491,11 @@
       "path": "lean/evidence/cubic-phase-terms-audit.md",
       "bytes": 1882,
       "sha256": "ebf30e39684f9c44ecc9804c89c98d07774149d4edfb2a463bf95b1738b67f11"
+    },
+    {
+      "path": "lean/evidence/cyclo-t-commutation-audit.md",
+      "bytes": 796,
+      "sha256": "751c7fca945bba62cd9b33f4d2569954187752cd48b8b6d5e688ad2de203d8fc"
     },
     {
       "path": "lean/evidence/cyclotomic-eight-audit.md",
@@ -1134,8 +1144,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 14455,
-      "sha256": "9bdd14c1bcd3b1797dab418dd199d0837767ead3ba4d5c98cf9f2137076aaabb"
+      "bytes": 14812,
+      "sha256": "96bf0d418ec7cd874084d47ad38ae6e9ff9eb47e9739865c9a2c262457a5f39a"
     },
     {
       "path": "tools/check_metadata.py",
