@@ -443,6 +443,10 @@ EXPECTED = {
     'SectorSimulation.hadamardKernel_basisExpansion': {'Quot.sound', 'propext', 'Classical.choice'},
     'SectorSimulation.hadamardKernelStep_basis': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.hadamardKernel_oneWire_sum': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernelStep_zeroFiber': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_preserves_bitZero': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_basis_support': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_basis_nonzero_agrees': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

@@ -7006,6 +7006,82 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-basis-kernel.md",
       "unresolved_bridge": "Derive multi-wire Walsh-character product and closed normalized sum, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-support-hadamardKernelStep_zeroFiber",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernelStep_zeroFiber",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel; stated zero and untouched-wire conditions.",
+      "quantifiers": "All finite widths, wire lists including repeated wires, exact amplitude functions and applicable vectors.",
+      "statement": "A one-wire kernel step is zero if its two input amplitudes are zero.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-support.md",
+      "unresolved_bridge": "Prove multi-wire Walsh signs and normalization, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-support-hadamardKernel_preserves_bitZero",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_preserves_bitZero",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel; stated zero and untouched-wire conditions.",
+      "quantifiers": "All finite widths, wire lists including repeated wires, exact amplitude functions and applicable vectors.",
+      "statement": "Any wire-list kernel preserves a zero condition on a bit outside that list.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-support.md",
+      "unresolved_bridge": "Prove multi-wire Walsh signs and normalization, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-support-hadamardKernel_basis_support",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_basis_support",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel; stated zero and untouched-wire conditions.",
+      "quantifiers": "All finite widths, wire lists including repeated wires, exact amplitude functions and applicable vectors.",
+      "statement": "A basis contribution vanishes when an untouched output bit differs from the input.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-support.md",
+      "unresolved_bridge": "Prove multi-wire Walsh signs and normalization, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-support-hadamardKernel_basis_nonzero_agrees",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_basis_nonzero_agrees",
+      "assumptions": "Lean exact-amplitude quotient and recursive Hadamard kernel; stated zero and untouched-wire conditions.",
+      "quantifiers": "All finite widths, wire lists including repeated wires, exact amplitude functions and applicable vectors.",
+      "statement": "Every nonzero basis contribution agrees with its input on all untouched bits.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-support.md",
+      "unresolved_bridge": "Prove multi-wire Walsh signs and normalization, complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

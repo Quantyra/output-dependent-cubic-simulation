@@ -1183,3 +1183,15 @@ import SectorSimulation
 
 #check SectorSimulation.hadamardKernel_oneWire_sum
 #print axioms SectorSimulation.hadamardKernel_oneWire_sum
+
+#check SectorSimulation.hadamardKernelStep_zeroFiber
+#print axioms SectorSimulation.hadamardKernelStep_zeroFiber
+
+#check SectorSimulation.hadamardKernel_preserves_bitZero
+#print axioms SectorSimulation.hadamardKernel_preserves_bitZero
+
+#check SectorSimulation.hadamardKernel_basis_support
+#print axioms SectorSimulation.hadamardKernel_basis_support
+
+#check SectorSimulation.hadamardKernel_basis_nonzero_agrees
+#print axioms SectorSimulation.hadamardKernel_basis_nonzero_agrees
