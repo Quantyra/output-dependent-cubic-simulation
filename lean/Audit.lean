@@ -1358,3 +1358,10 @@ import SectorSimulation
 
 #check SectorSimulation.nativePythonFourier_paper_kernel
 #print axioms SectorSimulation.nativePythonFourier_paper_kernel
+
+
+#check SectorSimulation.hyperbolicWalshSum_closed
+#print axioms SectorSimulation.hyperbolicWalshSum_closed
+
+#check SectorSimulation.canonicalWalshSum_closed
+#print axioms SectorSimulation.canonicalWalshSum_closed

@@ -500,6 +500,8 @@ EXPECTED = {
     'SectorSimulation.nativePythonFourier_complex_sum': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.realFourierScale_rpow': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.nativePythonFourier_paper_kernel': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hyperbolicWalshSum_closed': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalWalshSum_closed': {'propext', 'Quot.sound'},
 }
 
 

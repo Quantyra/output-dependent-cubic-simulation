@@ -230,3 +230,5 @@ import SectorSimulation.MatrixPairing
 import SectorSimulation.FourierNormalization
 
 import SectorSimulation.ComplexSemantics
+
+import SectorSimulation.CanonicalWalsh
