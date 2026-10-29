@@ -6390,6 +6390,80 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-kernel.md",
       "unresolved_bridge": "Prove the recursive kernel equals the closed normalized Walsh sum, embed exact amplitudes into complex semantics, connect Python source and derive sector identities and costs."
+    },
+    {
+      "id": "exact-walsh-algebra-dyadicAdd_assoc",
+      "section": "2",
+      "target": "SectorSimulation.dyadicAdd_assoc",
+      "assumptions": "Lean exact cyclotomic shared-denominator amplitude representation and quotient.",
+      "quantifiers": "All dyadic coefficients or exact amplitudes in the exported theorem.",
+      "statement": "Dyadic coefficient addition is associative at the representation level.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-walsh-algebra.md",
+      "unresolved_bridge": "Prove distributivity, closed normalized Walsh-sum semantics, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "exact-walsh-algebra-exactAdd_assoc",
+      "section": "2",
+      "target": "SectorSimulation.exactAdd_assoc",
+      "assumptions": "Lean exact cyclotomic shared-denominator amplitude representation and quotient.",
+      "quantifiers": "All dyadic coefficients or exact amplitudes in the exported theorem.",
+      "statement": "Exact-amplitude addition is associative.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-walsh-algebra.md",
+      "unresolved_bridge": "Prove distributivity, closed normalized Walsh-sum semantics, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "exact-walsh-algebra-exactSub_eq_add_neg",
+      "section": "2",
+      "target": "SectorSimulation.exactSub_eq_add_neg",
+      "assumptions": "Lean exact cyclotomic shared-denominator amplitude representation and quotient.",
+      "quantifiers": "All dyadic coefficients or exact amplitudes in the exported theorem.",
+      "statement": "Exact-amplitude subtraction equals addition of the exact negation.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-walsh-algebra.md",
+      "unresolved_bridge": "Prove distributivity, closed normalized Walsh-sum semantics, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "exact-walsh-algebra-exactMul_assoc",
+      "section": "2",
+      "target": "SectorSimulation.exactMul_assoc",
+      "assumptions": "Lean exact cyclotomic shared-denominator amplitude representation and quotient.",
+      "quantifiers": "All dyadic coefficients or exact amplitudes in the exported theorem.",
+      "statement": "Exact-amplitude multiplication is associative.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-walsh-algebra.md",
+      "unresolved_bridge": "Prove distributivity, closed normalized Walsh-sum semantics, complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

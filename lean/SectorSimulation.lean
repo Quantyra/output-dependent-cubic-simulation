@@ -200,3 +200,5 @@ import SectorSimulation.NormalizedModeledRecognizer
 import SectorSimulation.ByteCanonicalRecognizer
 
 import SectorSimulation.HadamardKernel
+
+import SectorSimulation.ExactWalshAlgebra

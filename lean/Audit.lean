@@ -1084,3 +1084,15 @@ import SectorSimulation
 
 #check SectorSimulation.hadamardKernel_nativePythonFourier
 #print axioms SectorSimulation.hadamardKernel_nativePythonFourier
+
+#check SectorSimulation.dyadicAdd_assoc
+#print axioms SectorSimulation.dyadicAdd_assoc
+
+#check SectorSimulation.exactAdd_assoc
+#print axioms SectorSimulation.exactAdd_assoc
+
+#check SectorSimulation.exactSub_eq_add_neg
+#print axioms SectorSimulation.exactSub_eq_add_neg
+
+#check SectorSimulation.exactMul_assoc
+#print axioms SectorSimulation.exactMul_assoc

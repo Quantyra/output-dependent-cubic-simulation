@@ -410,6 +410,10 @@ EXPECTED = {
     'SectorSimulation.hadamardKernel_run': {'Classical.choice', 'Quot.sound', 'propext'},
     'SectorSimulation.hadamardKernel_pythonFourier': {'Classical.choice', 'Quot.sound', 'propext'},
     'SectorSimulation.hadamardKernel_nativePythonFourier': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.dyadicAdd_assoc': {'propext'},
+    'SectorSimulation.exactAdd_assoc': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactSub_eq_add_neg': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactMul_assoc': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
