@@ -2381,6 +2381,70 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-commutation-audit.md",
       "unresolved_bridge": "Prove complex T/TDG commutation, normalized amplitudes, literal decomposition replay and Python correspondence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "general-hadamard-hadamard_commutes_invariant_diagonal",
+      "section": "2",
+      "target": "SectorSimulation.hadamard_commutes_invariant_diagonal",
+      "assumptions": "Arbitrary coefficient operations; distributivity, scalar commutation, flip invariance and disjointness where explicitly stated.",
+      "quantifiers": "All finite dimensions, applicable coefficient types, wires, states and factors.",
+      "statement": "A generalized Hadamard numerator commutes with a flip-invariant diagonal multiplier under explicit distributivity laws.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/general-hadamard-commutation-audit.md",
+      "unresolved_bridge": "Instantiate complex amplitudes and roots of unity, prove normalization and literal Toffoli replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "general-hadamard-hadamard_general_commutes_disjoint_CNOT",
+      "section": "2",
+      "target": "SectorSimulation.hadamard_general_commutes_disjoint_CNOT",
+      "assumptions": "Arbitrary coefficient operations; distributivity, scalar commutation, flip invariance and disjointness where explicitly stated.",
+      "quantifiers": "All finite dimensions, applicable coefficient types, wires, states and factors.",
+      "statement": "A generalized Hadamard numerator commutes with a CNOT on disjoint wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/general-hadamard-commutation-audit.md",
+      "unresolved_bridge": "Instantiate complex amplitudes and roots of unity, prove normalization and literal Toffoli replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "general-hadamard-scaledHadamard_commutes_disjoint_CNOT",
+      "section": "2",
+      "target": "SectorSimulation.scaledHadamard_commutes_disjoint_CNOT",
+      "assumptions": "Arbitrary coefficient operations; distributivity, scalar commutation, flip invariance and disjointness where explicitly stated.",
+      "quantifiers": "All finite dimensions, applicable coefficient types, wires, states and factors.",
+      "statement": "A scaled generalized Hadamard commutes with a CNOT on disjoint wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/general-hadamard-commutation-audit.md",
+      "unresolved_bridge": "Instantiate complex amplitudes and roots of unity, prove normalization and literal Toffoli replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "general-hadamard-scaledHadamard_commutes_invariant_diagonal",
+      "section": "2",
+      "target": "SectorSimulation.scaledHadamard_commutes_invariant_diagonal",
+      "assumptions": "Arbitrary coefficient operations; distributivity, scalar commutation, flip invariance and disjointness where explicitly stated.",
+      "quantifiers": "All finite dimensions, applicable coefficient types, wires, states and factors.",
+      "statement": "A scaled generalized Hadamard commutes with a flip-invariant diagonal multiplier under explicit distributivity and scalar commutation laws.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/general-hadamard-commutation-audit.md",
+      "unresolved_bridge": "Instantiate complex amplitudes and roots of unity, prove normalization and literal Toffoli replay, Python correspondence and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

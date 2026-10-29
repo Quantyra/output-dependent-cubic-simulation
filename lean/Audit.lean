@@ -457,3 +457,15 @@ import SectorSimulation
 
 #check SectorSimulation.hadamard_commutes_disjoint_CNOT
 #print axioms SectorSimulation.hadamard_commutes_disjoint_CNOT
+
+#check SectorSimulation.hadamard_commutes_invariant_diagonal
+#print axioms SectorSimulation.hadamard_commutes_invariant_diagonal
+
+#check SectorSimulation.hadamard_general_commutes_disjoint_CNOT
+#print axioms SectorSimulation.hadamard_general_commutes_disjoint_CNOT
+
+#check SectorSimulation.scaledHadamard_commutes_disjoint_CNOT
+#print axioms SectorSimulation.scaledHadamard_commutes_disjoint_CNOT
+
+#check SectorSimulation.scaledHadamard_commutes_invariant_diagonal
+#print axioms SectorSimulation.scaledHadamard_commutes_invariant_diagonal

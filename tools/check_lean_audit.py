@@ -168,6 +168,10 @@ EXPECTED = {
     'SectorSimulation.hadamard_commutes_invariant_sign': {'propext', 'Quot.sound'},
     'SectorSimulation.cnot_flip_commute': {'propext', 'Quot.sound'},
     'SectorSimulation.hadamard_commutes_disjoint_CNOT': {'propext', 'Quot.sound'},
+    'SectorSimulation.hadamard_commutes_invariant_diagonal': {'propext', 'Quot.sound'},
+    'SectorSimulation.hadamard_general_commutes_disjoint_CNOT': {'propext', 'Quot.sound'},
+    'SectorSimulation.scaledHadamard_commutes_disjoint_CNOT': {'propext', 'Quot.sound'},
+    'SectorSimulation.scaledHadamard_commutes_invariant_diagonal': {'propext', 'Quot.sound'},
 }
 
 
