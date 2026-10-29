@@ -447,6 +447,10 @@ EXPECTED = {
     'SectorSimulation.hadamardKernel_preserves_bitZero': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.hadamardKernel_basis_support': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.hadamardKernel_basis_nonzero_agrees': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernelStep_basis_split': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_basis_split': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_basis_branchExpansion': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.hadamardKernel_branchExpansion': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

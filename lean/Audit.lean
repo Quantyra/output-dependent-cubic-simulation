@@ -1195,3 +1195,15 @@ import SectorSimulation
 
 #check SectorSimulation.hadamardKernel_basis_nonzero_agrees
 #print axioms SectorSimulation.hadamardKernel_basis_nonzero_agrees
+
+#check SectorSimulation.hadamardKernelStep_basis_split
+#print axioms SectorSimulation.hadamardKernelStep_basis_split
+
+#check SectorSimulation.hadamardKernel_basis_split
+#print axioms SectorSimulation.hadamardKernel_basis_split
+
+#check SectorSimulation.hadamardKernel_basis_branchExpansion
+#print axioms SectorSimulation.hadamardKernel_basis_branchExpansion
+
+#check SectorSimulation.hadamardKernel_branchExpansion
+#print axioms SectorSimulation.hadamardKernel_branchExpansion

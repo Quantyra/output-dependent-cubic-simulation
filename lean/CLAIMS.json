@@ -7082,6 +7082,82 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-basis-support.md",
       "unresolved_bridge": "Prove multi-wire Walsh signs and normalization, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-branching-hadamardKernelStep_basis_split",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernelStep_basis_split",
+      "assumptions": "Lean exact amplitudes, recursive Hadamard kernel and explicit exhaustive binary basis as applicable.",
+      "quantifiers": "All finite widths, wire lists including repeated and empty lists, basis vectors and amplitude functions.",
+      "statement": "A one-wire Hadamard basis input splits into two point-supported exact branches with the stated signs and scales.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-branching.md",
+      "unresolved_bridge": "Collapse the path expansion to the normalized Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-branching-hadamardKernel_basis_split",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_basis_split",
+      "assumptions": "Lean exact amplitudes, recursive Hadamard kernel and explicit exhaustive binary basis as applicable.",
+      "quantifiers": "All finite widths, wire lists including repeated and empty lists, basis vectors and amplitude functions.",
+      "statement": "An arbitrary tail of Hadamards distributes over the two one-wire basis branches.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-branching.md",
+      "unresolved_bridge": "Collapse the path expansion to the normalized Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-branching-hadamardKernel_basis_branchExpansion",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_basis_branchExpansion",
+      "assumptions": "Lean exact amplitudes, recursive Hadamard kernel and explicit exhaustive binary basis as applicable.",
+      "quantifiers": "All finite widths, wire lists including repeated and empty lists, basis vectors and amplitude functions.",
+      "statement": "The exact kernel on a point-supported input equals its recursively defined binary branch expansion.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-branching.md",
+      "unresolved_bridge": "Collapse the path expansion to the normalized Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "hadamard-basis-branching-hadamardKernel_branchExpansion",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_branchExpansion",
+      "assumptions": "Lean exact amplitudes, recursive Hadamard kernel and explicit exhaustive binary basis as applicable.",
+      "quantifiers": "All finite widths, wire lists including repeated and empty lists, basis vectors and amplitude functions.",
+      "statement": "The exact kernel on an arbitrary input equals the finite sum of recursively expanded basis branches.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-basis-branching.md",
+      "unresolved_bridge": "Collapse the path expansion to the normalized Walsh character, prove complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

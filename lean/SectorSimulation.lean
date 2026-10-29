@@ -214,3 +214,5 @@ import SectorSimulation.HadamardBasisExpansion
 import SectorSimulation.HadamardBasisKernel
 
 import SectorSimulation.HadamardBasisSupport
+
+import SectorSimulation.HadamardBasisBranching
