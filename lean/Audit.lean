@@ -1537,3 +1537,18 @@ import SectorSimulation
 
 #check SectorSimulation.canonicalCharacterWalshSum_closed
 #print axioms SectorSimulation.canonicalCharacterWalshSum_closed
+
+#check SectorSimulation.finRange_split
+#print axioms SectorSimulation.finRange_split
+
+#check SectorSimulation.walshWireParity_append
+#print axioms SectorSimulation.walshWireParity_append
+
+#check SectorSimulation.walshWireParity_map
+#print axioms SectorSimulation.walshWireParity_map
+
+#check SectorSimulation.pairLinearEval_map
+#print axioms SectorSimulation.pairLinearEval_map
+
+#check SectorSimulation.radicalLinearEval_map
+#print axioms SectorSimulation.radicalLinearEval_map

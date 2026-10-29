@@ -557,6 +557,11 @@ EXPECTED = {
     'SectorSimulation.pairPhaseEval_shift': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.canonicalPhase_shift': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.canonicalCharacterWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.finRange_split': {'propext', 'Quot.sound'},
+    'SectorSimulation.walshWireParity_append': {'propext'},
+    'SectorSimulation.walshWireParity_map': {'propext'},
+    'SectorSimulation.pairLinearEval_map': {'propext'},
+    'SectorSimulation.radicalLinearEval_map': {'propext'},
 }
 
 

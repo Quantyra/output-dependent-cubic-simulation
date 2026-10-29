@@ -9122,6 +9122,92 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-character-sum.md",
       "unresolved_bridge": "Connect the explicit character to standard finite-vector dot product; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-parity-finRange_split",
+      "section": "3",
+      "target": "SectorSimulation.finRange_split",
+      "assumptions": "Finite vectors and wire lists, with the stated typed dimensions.",
+      "quantifiers": "All finite dimensions, lists, maps and Boolean vectors, including empty cases.",
+      "statement": "A finite coordinate range splits into its consecutive left and right blocks.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-parity.md",
+      "unresolved_bridge": "Combine block parity identities into the complete dot-product identity; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-parity-walshWireParity_append",
+      "section": "3",
+      "target": "SectorSimulation.walshWireParity_append",
+      "assumptions": "Finite vectors and wire lists, with the stated typed dimensions.",
+      "quantifiers": "All finite dimensions, lists, maps and Boolean vectors, including empty cases.",
+      "statement": "Walsh parity over appended wire lists is the XOR of their parities.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-parity.md",
+      "unresolved_bridge": "Combine block parity identities into the complete dot-product identity; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-parity-walshWireParity_map",
+      "section": "3",
+      "target": "SectorSimulation.walshWireParity_map",
+      "assumptions": "Finite vectors and wire lists, with the stated typed dimensions.",
+      "quantifiers": "All finite dimensions, lists, maps and Boolean vectors, including empty cases.",
+      "statement": "Walsh parity over mapped wires equals parity with the corresponding composed vectors.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-parity.md",
+      "unresolved_bridge": "Combine block parity identities into the complete dot-product identity; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-parity-pairLinearEval_map",
+      "section": "3",
+      "target": "SectorSimulation.pairLinearEval_map",
+      "assumptions": "Finite vectors and wire lists, with the stated typed dimensions.",
+      "quantifiers": "All finite dimensions, lists, maps and Boolean vectors, including empty cases.",
+      "statement": "The pair-list character equals the XOR of the two coordinate-wise Walsh parities.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-parity.md",
+      "unresolved_bridge": "Combine block parity identities into the complete dot-product identity; construct arbitrary-source canonicalization and prove affine support, rank and costs."
+    },
+    {
+      "id": "canonical-character-parity-radicalLinearEval_map",
+      "section": "3",
+      "target": "SectorSimulation.radicalLinearEval_map",
+      "assumptions": "Finite vectors and wire lists, with the stated typed dimensions.",
+      "quantifiers": "All finite dimensions, lists, maps and Boolean vectors, including empty cases.",
+      "statement": "The radical-list character equals its coordinate-wise Walsh parity.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-character-parity.md",
+      "unresolved_bridge": "Combine block parity identities into the complete dot-product identity; construct arbitrary-source canonicalization and prove affine support, rank and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
