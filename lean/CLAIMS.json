@@ -1500,6 +1500,48 @@
       ],
       "build_audit_receipt": "lean/evidence/pivot-exists-audit.md",
       "unresolved_bridge": "Induct over the full consecutive pivot sequence to establish generator success, then prove finite-encoding costs and native circuit semantics."
+    },
+    {
+      "id": "pivot-injective-equivalence",
+      "section": "2",
+      "target": "SectorSimulation.gaussianRowProgram_success_iff_injective",
+      "assumptions": "Finite Boolean matrix; the solver completeness theorem assumes injectivity of its evaluator.",
+      "quantifiers": "All finite dimensions, source matrices and targets as stated.",
+      "statement": "The actual full pivot generator succeeds exactly when the matrix evaluator is injective.",
+      "dependencies": [
+        "injective-pivot-exists",
+        "row-program-injective",
+        "pivot-solver-conditional-completeness"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-complete-audit.md",
+      "unresolved_bridge": "Prove finite-encoding runtime and bridge injectivity and source validation to the native decoder and physical circuit semantics."
+    },
+    {
+      "id": "pivot-solver-complete",
+      "section": "2",
+      "target": "SectorSimulation.gaussianSolveChecked_complete_of_injective",
+      "assumptions": "Finite Boolean matrix; the solver completeness theorem assumes injectivity of its evaluator.",
+      "quantifiers": "All finite dimensions, source matrices and targets as stated.",
+      "statement": "For every injective source matrix and target, the checked pivot solver returns a solution.",
+      "dependencies": [
+        "injective-pivot-exists",
+        "row-program-injective",
+        "pivot-solver-conditional-completeness"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-complete-audit.md",
+      "unresolved_bridge": "Prove finite-encoding runtime and bridge injectivity and source validation to the native decoder and physical circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

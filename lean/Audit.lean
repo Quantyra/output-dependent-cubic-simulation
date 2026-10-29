@@ -266,3 +266,15 @@ import SectorSimulation
 
 #check SectorSimulation.pivot_exists_of_injective
 #print axioms SectorSimulation.pivot_exists_of_injective
+
+#check SectorSimulation.pivotSuffix_exists
+#print axioms SectorSimulation.pivotSuffix_exists
+
+#check SectorSimulation.gaussianRowProgram_exists_of_injective
+#print axioms SectorSimulation.gaussianRowProgram_exists_of_injective
+
+#check SectorSimulation.gaussianSolveChecked_complete_of_injective
+#print axioms SectorSimulation.gaussianSolveChecked_complete_of_injective
+
+#check SectorSimulation.gaussianRowProgram_success_iff_injective
+#print axioms SectorSimulation.gaussianRowProgram_success_iff_injective

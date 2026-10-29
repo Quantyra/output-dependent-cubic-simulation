@@ -45,3 +45,5 @@ import SectorSimulation.PivotSolveCorrect
 import SectorSimulation.PivotInjectivity
 
 import SectorSimulation.PivotExists
+
+import SectorSimulation.PivotComplete
