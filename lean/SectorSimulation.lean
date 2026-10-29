@@ -97,3 +97,5 @@ import SectorSimulation.CyclotomicEight
 import SectorSimulation.CycloTCommutation
 
 import SectorSimulation.DyadicCyclo
+
+import SectorSimulation.DyadicEquivalence

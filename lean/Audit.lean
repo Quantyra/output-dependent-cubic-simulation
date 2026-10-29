@@ -514,3 +514,15 @@ import SectorSimulation
 
 #check SectorSimulation.dyadicHadamardScale_squared
 #print axioms SectorSimulation.dyadicHadamardScale_squared
+
+#check SectorSimulation.cycloScale_mul
+#print axioms SectorSimulation.cycloScale_mul
+
+#check SectorSimulation.cycloScale_comm
+#print axioms SectorSimulation.cycloScale_comm
+
+#check SectorSimulation.cycloScale_injective
+#print axioms SectorSimulation.cycloScale_injective
+
+#check SectorSimulation.dyadicEquivalent_trans
+#print axioms SectorSimulation.dyadicEquivalent_trans

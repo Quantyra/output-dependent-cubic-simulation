@@ -187,6 +187,10 @@ EXPECTED = {
     'SectorSimulation.dyadicEquivalent_symm': set(),
     'SectorSimulation.dyadicHadamardScale_normalizes': set(),
     'SectorSimulation.dyadicHadamardScale_squared': set(),
+    'SectorSimulation.cycloScale_mul': {'propext'},
+    'SectorSimulation.cycloScale_comm': {'propext'},
+    'SectorSimulation.cycloScale_injective': {'propext'},
+    'SectorSimulation.dyadicEquivalent_trans': {'propext'},
 }
 
 

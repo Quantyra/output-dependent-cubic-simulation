@@ -2670,6 +2670,66 @@
       "axioms": [],
       "build_audit_receipt": "lean/evidence/dyadic-hadamard-scale-audit.md",
       "unresolved_bridge": "Prove equivalence relation and arithmetic compatibility, complex embedding, normalized circuit semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-equivalence-cycloScale_mul",
+      "section": "2",
+      "target": "SectorSimulation.cycloScale_mul",
+      "assumptions": "Four-integer eighth-root coefficients; nonzero integer scale for injectivity and power-of-two denominators for dyadic equivalence.",
+      "quantifiers": "All represented coefficients and applicable scalars or dyadic values.",
+      "statement": "Successive integer scales compose by integer multiplication.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-equivalence-audit.md",
+      "unresolved_bridge": "Prove arithmetic compatibility, complex embedding, normalized gate behavior, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-equivalence-cycloScale_comm",
+      "section": "2",
+      "target": "SectorSimulation.cycloScale_comm",
+      "assumptions": "Four-integer eighth-root coefficients; nonzero integer scale for injectivity and power-of-two denominators for dyadic equivalence.",
+      "quantifiers": "All represented coefficients and applicable scalars or dyadic values.",
+      "statement": "Integer scales commute on represented coefficients.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-equivalence-audit.md",
+      "unresolved_bridge": "Prove arithmetic compatibility, complex embedding, normalized gate behavior, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-equivalence-cycloScale_injective",
+      "section": "2",
+      "target": "SectorSimulation.cycloScale_injective",
+      "assumptions": "Four-integer eighth-root coefficients; nonzero integer scale for injectivity and power-of-two denominators for dyadic equivalence.",
+      "quantifiers": "All represented coefficients and applicable scalars or dyadic values.",
+      "statement": "Scaling represented coefficients by a nonzero integer is injective.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-equivalence-audit.md",
+      "unresolved_bridge": "Prove arithmetic compatibility, complex embedding, normalized gate behavior, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-equivalence-dyadicEquivalent_trans",
+      "section": "2",
+      "target": "SectorSimulation.dyadicEquivalent_trans",
+      "assumptions": "Four-integer eighth-root coefficients; nonzero integer scale for injectivity and power-of-two denominators for dyadic equivalence.",
+      "quantifiers": "All represented coefficients and applicable scalars or dyadic values.",
+      "statement": "The modeled dyadic cross-multiplication relation is transitive.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/dyadic-equivalence-audit.md",
+      "unresolved_bridge": "Prove arithmetic compatibility, complex embedding, normalized gate behavior, native replay and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
