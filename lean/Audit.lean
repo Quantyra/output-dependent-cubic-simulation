@@ -1500,3 +1500,22 @@ import SectorSimulation
 
 #check SectorSimulation.canonicalVectorWalshSum_closed
 #print axioms SectorSimulation.canonicalVectorWalshSum_closed
+
+
+#check SectorSimulation.canonicalPairTerms_correct
+#print axioms SectorSimulation.canonicalPairTerms_correct
+
+#check SectorSimulation.canonicalRadicalTerms_correct
+#print axioms SectorSimulation.canonicalRadicalTerms_correct
+
+#check SectorSimulation.canonicalPhaseTerms_correct
+#print axioms SectorSimulation.canonicalPhaseTerms_correct
+
+#check SectorSimulation.canonicalPhaseANF_correct
+#print axioms SectorSimulation.canonicalPhaseANF_correct
+
+#check SectorSimulation.canonicalPhaseANF_degree
+#print axioms SectorSimulation.canonicalPhaseANF_degree
+
+#check SectorSimulation.canonicalPhaseANF_walshSum
+#print axioms SectorSimulation.canonicalPhaseANF_walshSum

@@ -545,6 +545,12 @@ EXPECTED = {
     'SectorSimulation.integerSum_cartesian': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalVectorWalshSum_eq': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.canonicalVectorWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalPairTerms_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalRadicalTerms_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalPhaseTerms_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalPhaseANF_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalPhaseANF_degree': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalPhaseANF_walshSum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

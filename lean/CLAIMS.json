@@ -8894,6 +8894,120 @@
       ],
       "build_audit_receipt": "lean/evidence/canonical-vector-walsh.md",
       "unresolved_bridge": "Connect the defined canonical phase to source ANF and construct a general canonical basis; prove rank, affine support and elimination costs."
+    },
+    {
+      "id": "canonical-source-anf-canonicalPairTerms_correct",
+      "section": "3",
+      "target": "SectorSimulation.canonicalPairTerms_correct",
+      "assumptions": "Constructed canonical pair/radical coefficients and coordinate wires, with matching lengths where stated.",
+      "quantifiers": "All finite block dimensions, canonical coefficients, vectors and constant bits, including zero dimensions.",
+      "statement": "The canonical pair phase equals evaluation of constructed quadratic and linear terms.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-source-anf.md",
+      "unresolved_bridge": "Construct canonical coordinates for arbitrary source quadratics and prove general-character affine support, polar rank, signs and elimination costs."
+    },
+    {
+      "id": "canonical-source-anf-canonicalRadicalTerms_correct",
+      "section": "3",
+      "target": "SectorSimulation.canonicalRadicalTerms_correct",
+      "assumptions": "Constructed canonical pair/radical coefficients and coordinate wires, with matching lengths where stated.",
+      "quantifiers": "All finite block dimensions, canonical coefficients, vectors and constant bits, including zero dimensions.",
+      "statement": "The canonical radical phase equals evaluation of constructed linear terms.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-source-anf.md",
+      "unresolved_bridge": "Construct canonical coordinates for arbitrary source quadratics and prove general-character affine support, polar rank, signs and elimination costs."
+    },
+    {
+      "id": "canonical-source-anf-canonicalPhaseTerms_correct",
+      "section": "3",
+      "target": "SectorSimulation.canonicalPhaseTerms_correct",
+      "assumptions": "Constructed canonical pair/radical coefficients and coordinate wires, with matching lengths where stated.",
+      "quantifiers": "All finite block dimensions, canonical coefficients, vectors and constant bits, including zero dimensions.",
+      "statement": "The canonical vector phase equals evaluation of its constructed quadratic term list.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-source-anf.md",
+      "unresolved_bridge": "Construct canonical coordinates for arbitrary source quadratics and prove general-character affine support, polar rank, signs and elimination costs."
+    },
+    {
+      "id": "canonical-source-anf-canonicalPhaseANF_correct",
+      "section": "3",
+      "target": "SectorSimulation.canonicalPhaseANF_correct",
+      "assumptions": "Constructed canonical pair/radical coefficients and coordinate wires, with matching lengths where stated.",
+      "quantifiers": "All finite block dimensions, canonical coefficients, vectors and constant bits, including zero dimensions.",
+      "statement": "The source bit-mask ANF constructed from canonical coefficients evaluates to the canonical vector phase.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-source-anf.md",
+      "unresolved_bridge": "Construct canonical coordinates for arbitrary source quadratics and prove general-character affine support, polar rank, signs and elimination costs."
+    },
+    {
+      "id": "canonical-source-anf-canonicalPhaseANF_degree",
+      "section": "3",
+      "target": "SectorSimulation.canonicalPhaseANF_degree",
+      "assumptions": "Constructed canonical pair/radical coefficients and coordinate wires, with matching lengths where stated.",
+      "quantifiers": "All finite block dimensions, canonical coefficients, vectors and constant bits, including zero dimensions.",
+      "statement": "The constructed canonical source ANF has degree at most two.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-source-anf.md",
+      "unresolved_bridge": "Construct canonical coordinates for arbitrary source quadratics and prove general-character affine support, polar rank, signs and elimination costs."
+    },
+    {
+      "id": "canonical-source-anf-canonicalPhaseANF_walshSum",
+      "section": "3",
+      "target": "SectorSimulation.canonicalPhaseANF_walshSum",
+      "assumptions": "Constructed canonical pair/radical coefficients and coordinate wires, with matching lengths where stated.",
+      "quantifiers": "All finite block dimensions, canonical coefficients, vectors and constant bits, including zero dimensions.",
+      "statement": "The zero-character Walsh sum of the constructed canonical source ANF has the expected signed power-of-two or zero value.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/canonical-source-anf.md",
+      "unresolved_bridge": "Construct canonical coordinates for arbitrary source quadratics and prove general-character affine support, polar rank, signs and elimination costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

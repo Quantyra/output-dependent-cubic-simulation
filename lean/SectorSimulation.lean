@@ -242,3 +242,5 @@ import SectorSimulation.CanonicalPairVectors
 import SectorSimulation.CanonicalCoordinateLayout
 
 import SectorSimulation.CanonicalVectorWalsh
+
+import SectorSimulation.CanonicalSourceANF
