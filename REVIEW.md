@@ -1,6 +1,6 @@
 # Internal review of the 0.1.0 candidate
 
-Review type: internal mathematical and executable checking, performed with Codex assistance. Independent review and Lean certification have not occurred. Author metadata and licenses were confirmed by Daniel Fredriksen. Exact build/package/reproduction evidence is recorded in `artifacts/package-verification.json` when the candidate checks complete.
+Review type: internal mathematical and executable checking, performed with Codex assistance. Independent review and Lean certification have not occurred. Author metadata and licenses were confirmed by Daniel Fredriksen. Exact build/package/reproduction evidence is recorded in `artifacts/package-verification.json` for the completed candidate checks.
 
 | Claim or risk | Review and evidence |
 |---|---|
@@ -14,7 +14,7 @@ Review type: internal mathematical and executable checking, performed with Codex
 | Prior work and contribution | Six primary frameworks compared, established ingredients credited and literal access gaps distinguished from impossibility |
 | Unfavorable evidence | Table 2 preserves all eight matched runs; new small-k call counts are worse, and simple-family formula wins |
 | Public reproducibility | Export includes the complete import closure, exact descriptors, baseline receipt and origin/hash manifest |
-| PDF | Ten-page Tectonic draft inspected as rendered pages; author/license update receives the final layout check |
+| PDF | Ten-page Tectonic PDF inspected; final author/license pages pass. Clean-checkout build has identical text and rendered pixels; binary PDF metadata differs. |
 
 The draft review strengthened the probability proof by making its four Fourier-character/autocorrelation constraints explicit and stated the native header limitation in the main text. The package's technical checks do not claim human peer review or formal certification.
 

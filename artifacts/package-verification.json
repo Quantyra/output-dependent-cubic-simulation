@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "preparation_date": "2026-10-28",
+  "tested_payload_commit": "5938c62a54ce26c576804a1feef38c831cdfafd9",
+  "scope": "Clean-checkout manuscript/source/evidence payload. Subsequent preparation changes are review/verification records and inventory only. The planning handoff pins the final pushed commit.",
+  "python": "3.13.7",
+  "pdf_build": {
+    "status": "pass",
+    "checkout_commit": "5938c62a54ce26c576804a1feef38c831cdfafd9",
+    "distributed_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
+    "rebuilt_pdf_sha256": "189488f50f6cc4a901c6dc3ac6a7ce04ec7285122cbdb0f63fa556981fbb6e0a",
+    "text_and_render_identical_all_pages": true,
+    "pages": 10,
+    "build_exit_code": 0,
+    "engine": "Tectonic 0.17.0",
+    "warnings": "Three underfull appendix table paragraphs; no overfull boxes. Harmless Fontconfig default-config diagnostic; all glyphs rendered."
+  },
+  "pdf_layout": {
+    "pages": 10,
+    "all_page_bounds_pass": true,
+    "no_unresolved_references_or_replacement_glyphs": true,
+    "visual_review": "Rendered contact sheet plus full equation/cost/bibliography pages and final author/license pages inspected by Codex; no clipping or overlaps found."
+  },
+  "mathematical_reproduction": {
+    "status": "pass",
+    "comparison": "All fields except *_seconds and raw sha256 match; canonical-LF hashes match.",
+    "counts": {
+      "independent_z4_gaussian_sums": 216,
+      "independent_z4_affine_values": 12240,
+      "independent_dense_sector_operator_and_norm": 10,
+      "production_norm_against_independent_dense_vectors": 274,
+      "exhaustive_equatorial_moment_points": 32962,
+      "exact_conditional_moment_identities": 10,
+      "exact_zero_norm_sector": 1,
+      "complete_original_native_outputs": 8,
+      "matched_original_reader_outputs": 8,
+      "precision_schedule_and_predraw_refusals": 28,
+      "explicit_discovery_or_grammar_refusals": 2
+    },
+    "command": "python tools/reproduce.py",
+    "clean_checkout": true
+  },
+  "metadata": {
+    "status": "pass",
+    "cff_schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+    "cff_schema_id": "https://citation-file-format.github.io/1.2.0/schema.json",
+    "zenodo_check": "Documented field types/roles and author/title/license/version consistency; not an ingestion test.",
+    "no_doi_or_release_date_fabricated": true
+  },
+  "local_markdown_links": "pass",
+  "provenance_files": 75,
+  "source_modules": 67,
+  "whitespace_note": "Initial import retains blank lines at EOF in five origin Python files and the official CC license text to preserve their bytes. No whitespace changes to imported research code were made.",
+  "publication_boundary": "No release, DOI, Zenodo ingestion or Lean build is claimed."
+}

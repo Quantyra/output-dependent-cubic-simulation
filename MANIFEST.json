@@ -74,18 +74,23 @@
     },
     {
       "path": "REPRODUCING.md",
-      "bytes": 2805,
-      "sha256": "817f8a21153336e868a3049a14136de2bdec3270936135f2f7830a4044cc075e"
+      "bytes": 2846,
+      "sha256": "c61daacc81603e15aaff9f9485a56c703a6d40247b78ab094552776627831a6c"
     },
     {
       "path": "REVIEW.md",
-      "bytes": 2742,
-      "sha256": "941ef1735e4c9b3eea831a12effd9e5527bc7c15b3a15584fc510cf1c65fdb19"
+      "bytes": 2791,
+      "sha256": "a4aac4b46088deeeffee8b0184330bddb41c37b3d0551db8e7d9e47c6eeccdf7"
     },
     {
       "path": "SOURCES.md",
       "bytes": 2970,
       "sha256": "e66343db7b0ec440173b1c6815321be63fe81c8c562c670a1957d0c21efbcd33"
+    },
+    {
+      "path": "artifacts/package-verification.json",
+      "bytes": 2788,
+      "sha256": "287d488eb29024251d28a795a6c53f79c35a3a26a0537e1824c8b5ba21237634"
     },
     {
       "path": "artifacts/s175-sector-norm-checks.json",

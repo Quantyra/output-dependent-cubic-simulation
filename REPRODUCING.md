@@ -21,4 +21,4 @@ Tectonic resolves the standard TeX packages on first use; subsequent cached buil
 
 Metadata checks additionally use PyYAML and jsonschema, with the official CFF 1.2.0 schema. The verification receipt records the schema URL/hash and actual result; no schema is needed to execute the mathematical checks. PDF text/layout inspection used PyMuPDF 1.28.2 and rendered-page review. Source/provenance and distribution manifests use canonical Git LF bytes for text files, preventing platform newline conversions from being mistaken for source changes.
 
-The check workflow runs package validation, mathematical reproduction and metadata validation on commits/PRs. It has no release, Zenodo or deployment step. PDF build success and visual inspection are recorded for the frozen candidate; no cloud or physical quantum experiment is involved.
+The check workflow runs package validation, mathematical reproduction and metadata validation on commits/PRs. It has no release, Zenodo or deployment step. PDF build success and visual inspection are recorded for the frozen candidate in `artifacts/package-verification.json`; no cloud or physical quantum experiment is involved.
