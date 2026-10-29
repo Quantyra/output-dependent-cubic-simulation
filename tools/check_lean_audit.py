@@ -143,6 +143,10 @@ EXPECTED = {
     'SectorSimulation.runCNOTs_reverse_cancels': {'propext', 'Quot.sound'},
     'SectorSimulation.gaussianCNOTs_forward_inverse': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.gaussianCNOTs_reversed_implements_matrix': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.decode_encode_CNOTRecord': {'propext'},
+    'SectorSimulation.decode_encode_CNOTProgram': {'propext', 'Quot.sound'},
+    'SectorSimulation.replay_encoded_CNOTProgram': {'propext', 'Quot.sound'},
+    'SectorSimulation.replay_reversed_gaussian_CNOTs': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

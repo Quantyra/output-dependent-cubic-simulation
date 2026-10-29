@@ -382,3 +382,15 @@ import SectorSimulation
 
 #check SectorSimulation.gaussianCNOTs_reversed_implements_matrix
 #print axioms SectorSimulation.gaussianCNOTs_reversed_implements_matrix
+
+#check SectorSimulation.decode_encode_CNOTRecord
+#print axioms SectorSimulation.decode_encode_CNOTRecord
+
+#check SectorSimulation.decode_encode_CNOTProgram
+#print axioms SectorSimulation.decode_encode_CNOTProgram
+
+#check SectorSimulation.replay_encoded_CNOTProgram
+#print axioms SectorSimulation.replay_encoded_CNOTProgram
+
+#check SectorSimulation.replay_reversed_gaussian_CNOTs
+#print axioms SectorSimulation.replay_reversed_gaussian_CNOTs

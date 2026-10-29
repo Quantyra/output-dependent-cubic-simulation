@@ -71,3 +71,5 @@ import SectorSimulation.NativeJsonDescriptor
 import SectorSimulation.LinearGateSemantics
 
 import SectorSimulation.LinearCircuitCorrect
+
+import SectorSimulation.NativeCNOTReplay

@@ -1992,6 +1992,70 @@
       ],
       "build_audit_receipt": "lean/evidence/linear-circuit-matrix-audit.md",
       "unresolved_bridge": "Prove correspondence to Python emitted gate records and quantum gate semantics, then full circuit replay and manuscript theorem claims."
+    },
+    {
+      "id": "native-cnot-decode_encode_CNOTRecord",
+      "section": "2",
+      "target": "SectorSimulation.decode_encode_CNOTRecord",
+      "assumptions": "Lean native gate records and finite Boolean basis states; distinct wires and successful modeled elimination where stated.",
+      "quantifiers": "All represented dimensions and applicable records and vectors.",
+      "statement": "Encoding and then decoding any typed CNOT record recovers it.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/native-cnot-replay-audit.md",
+      "unresolved_bridge": "Prove equality with Python-produced gate sequences, quantum amplitude semantics, full circuit replay and manuscript theorems."
+    },
+    {
+      "id": "native-cnot-decode_encode_CNOTProgram",
+      "section": "2",
+      "target": "SectorSimulation.decode_encode_CNOTProgram",
+      "assumptions": "Lean native gate records and finite Boolean basis states; distinct wires and successful modeled elimination where stated.",
+      "quantifiers": "All represented dimensions and applicable records and vectors.",
+      "statement": "Encoding and then decoding any typed CNOT program recovers it.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-cnot-replay-audit.md",
+      "unresolved_bridge": "Prove equality with Python-produced gate sequences, quantum amplitude semantics, full circuit replay and manuscript theorems."
+    },
+    {
+      "id": "native-cnot-replay_encoded_CNOTProgram",
+      "section": "2",
+      "target": "SectorSimulation.replay_encoded_CNOTProgram",
+      "assumptions": "Lean native gate records and finite Boolean basis states; distinct wires and successful modeled elimination where stated.",
+      "quantifiers": "All represented dimensions and applicable records and vectors.",
+      "statement": "Native-record replay agrees with typed CNOT execution for any distinct-wire program.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-cnot-replay-audit.md",
+      "unresolved_bridge": "Prove equality with Python-produced gate sequences, quantum amplitude semantics, full circuit replay and manuscript theorems."
+    },
+    {
+      "id": "native-cnot-replay_reversed_gaussian_CNOTs",
+      "section": "2",
+      "target": "SectorSimulation.replay_reversed_gaussian_CNOTs",
+      "assumptions": "Lean native gate records and finite Boolean basis states; distinct wires and successful modeled elimination where stated.",
+      "quantifiers": "All represented dimensions and applicable records and vectors.",
+      "statement": "Native-record replay of the reversed modeled Gaussian CNOT program applies the source matrix on every basis vector when elimination succeeds.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-cnot-replay-audit.md",
+      "unresolved_bridge": "Prove equality with Python-produced gate sequences, quantum amplitude semantics, full circuit replay and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
