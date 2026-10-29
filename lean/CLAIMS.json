@@ -3111,6 +3111,55 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-cubic-phase-audit.md",
       "unresolved_bridge": "Prove actual Toffoli decomposition, complex embedding, representation independence, native gate replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "exact-native-exactNative_HH",
+      "section": "2",
+      "target": "SectorSimulation.exactNative_HH",
+      "assumptions": "Exact shared-denominator eighth-root states and modeled literal native records; distinct CNOT wires where stated.",
+      "quantifiers": "All finite dimensions, valid wires, represented states and basis vectors where stated.",
+      "statement": "Literal HH records replay as two exact modeled Hadamard steps.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-replay-audit.md",
+      "unresolved_bridge": "Prove T/TDG and full Toffoli replay, complex embedding, representation independence, Python equivalence and manuscript theorems."
+    },
+    {
+      "id": "exact-native-exactNative_HCXH",
+      "section": "2",
+      "target": "SectorSimulation.exactNative_HCXH",
+      "assumptions": "Exact shared-denominator eighth-root states and modeled literal native records; distinct CNOT wires where stated.",
+      "quantifiers": "All finite dimensions, valid wires, represented states and basis vectors where stated.",
+      "statement": "Literal H-CX-H records replay as the corresponding exact modeled gate actions.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-replay-audit.md",
+      "unresolved_bridge": "Prove T/TDG and full Toffoli replay, complex embedding, representation independence, Python equivalence and manuscript theorems."
+    },
+    {
+      "id": "exact-native-exactNative_quadratic_phase",
+      "section": "2",
+      "target": "SectorSimulation.exactNative_quadratic_phase",
+      "assumptions": "Exact shared-denominator eighth-root states and modeled literal native records; distinct CNOT wires where stated.",
+      "quantifiers": "All finite dimensions, valid wires, represented states and basis vectors where stated.",
+      "statement": "Literal H-CX-H record replay yields the controlled-sign quotient amplitude for distinct wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-replay-audit.md",
+      "unresolved_bridge": "Prove T/TDG and full Toffoli replay, complex embedding, representation independence, Python equivalence and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

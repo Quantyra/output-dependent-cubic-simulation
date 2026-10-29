@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/lean.yml",
-      "bytes": 1159,
-      "sha256": "d6127e508f9df3d321c186dd78cca49a01cf9ff5f0813c5ea8b6dc36f1ce882e"
+      "bytes": 1293,
+      "sha256": "6416a6931dbbce9890954ff993ecac063a742e60046ab2c27276053b3bf5ae80"
     },
     {
       "path": ".gitignore",
@@ -124,13 +124,18 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 22668,
-      "sha256": "dc7082e196eee8889cb66084f436cc433bc042e9ad40bbe21a5261d4ce9c2c88"
+      "bytes": 22956,
+      "sha256": "3d6dc234335532c46b0e749b401fa7b62f3200238e0ebaf29e9e20c4803323fb"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 163032,
-      "sha256": "74ccab4432bef5d5bacb1770c5b20fffef29f49b0f97c05dee1e3078053a0628"
+      "bytes": 165640,
+      "sha256": "f645be3d1cc3868966b55580287d81e3d8f0db50cd6e2e9e8047be5dad71aa24"
+    },
+    {
+      "path": "lean/ExactNativeExamples.lean",
+      "bytes": 424,
+      "sha256": "00a214109a88b2bc234a9891a6243eb06b8d0dfafd2d491e345625eec88ef4a5"
     },
     {
       "path": "lean/NativeJsonExamples.lean",
@@ -154,8 +159,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 2635,
-      "sha256": "ad0cba36a7fcfee1c8c445783d43ec35a19e88b1112b72904fa1d0fb03fc115f"
+      "bytes": 2678,
+      "sha256": "8277f09da6751ab6f28a059e310906c9b4d918fb18c0a94525a5c9ea4938038d"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -271,6 +276,11 @@
       "path": "lean/SectorSimulation/ExactHadamard.lean",
       "bytes": 2254,
       "sha256": "a196cfdcba2a370a5a82c7dac2dd270963e1821c224317aa44579c4029492fe4"
+    },
+    {
+      "path": "lean/SectorSimulation/ExactNativeReplay.lean",
+      "bytes": 3216,
+      "sha256": "e72dac36c42093a921ed085d58c71259ce8b8d0b67a7faf7f29e6e088b38f11b"
     },
     {
       "path": "lean/SectorSimulation/ExhaustiveMatrixSolve.lean",
@@ -606,6 +616,11 @@
       "path": "lean/evidence/exact-hadamard-audit.md",
       "bytes": 990,
       "sha256": "57c31901facff3d2f7dc23a778db9337647635e6619598e115cb84781b038d49"
+    },
+    {
+      "path": "lean/evidence/exact-native-replay-audit.md",
+      "bytes": 895,
+      "sha256": "bba2dcbbddb8679efe1ecb074f840f91e26884d7b5867c7022bcdcd69867ca97"
     },
     {
       "path": "lean/evidence/gaussian-checked-solver-audit.md",
@@ -1224,8 +1239,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 17249,
-      "sha256": "5b8266bf1266111c656092604b9a46aadf4355d9d3965773b4272d2d53122bb4"
+      "bytes": 17482,
+      "sha256": "185d817671c5660f5cfba10f8655826602d00a13716fdc745e829e5e4f96b3c6"
     },
     {
       "path": "tools/check_metadata.py",

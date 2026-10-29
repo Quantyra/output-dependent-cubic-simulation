@@ -39,3 +39,7 @@ jobs:
       - name: Check native JSON examples
         working-directory: lean
         run: lake env lean NativeJsonExamples.lean
+
+      - name: Check exact native replay examples
+        working-directory: lean
+        run: lake env lean ExactNativeExamples.lean

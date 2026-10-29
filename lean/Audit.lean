@@ -595,3 +595,12 @@ import SectorSimulation
 
 #check SectorSimulation.sharedHToffoliH_cubic_sign
 #print axioms SectorSimulation.sharedHToffoliH_cubic_sign
+
+#check SectorSimulation.exactNative_HH
+#print axioms SectorSimulation.exactNative_HH
+
+#check SectorSimulation.exactNative_HCXH
+#print axioms SectorSimulation.exactNative_HCXH
+
+#check SectorSimulation.exactNative_quadratic_phase
+#print axioms SectorSimulation.exactNative_quadratic_phase

@@ -214,6 +214,9 @@ EXPECTED = {
     'SectorSimulation.sharedHCXH_controlled_sign': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedHToffoliH_numerator': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedHToffoliH_cubic_sign': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactNative_HH': {'propext', 'Quot.sound'},
+    'SectorSimulation.exactNative_HCXH': {'propext', 'Quot.sound'},
+    'SectorSimulation.exactNative_quadratic_phase': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
