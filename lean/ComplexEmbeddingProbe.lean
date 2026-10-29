@@ -28,4 +28,24 @@ theorem cycloInterpret_mul (z : ℂ) (hz : z^4 = -1) (a b : Cyclo8) :
   rw [hz6, hz5, hz]
   ring
 
+
+theorem cycloInterpret_scale (z : ℂ) (k : Int) (a : Cyclo8) :
+    cycloInterpret z (cycloScale k a) = (k : ℂ) * cycloInterpret z a := by
+  simp only [cycloInterpret, cycloScale, Int.cast_mul]
+  ring
+
+noncomputable def dyadicInterpret (a : DyadicCyclo) : ℂ :=
+  cycloInterpret standardOmega a.numerator / (2 : ℂ) ^ a.exponent
+
+theorem dyadicInterpret_congr (a b : DyadicCyclo) (h : dyadicEquivalent a b) :
+    dyadicInterpret a = dyadicInterpret b := by
+  have h' := congrArg (cycloInterpret standardOmega) h
+  simp only [cycloInterpret_scale, Int.cast_pow, Int.cast_ofNat] at h'
+  unfold dyadicInterpret
+  apply (div_eq_div_iff (pow_ne_zero _ (by norm_num)) (pow_ne_zero _ (by norm_num))).2
+  simpa only [mul_comm] using h'
+
+noncomputable def exactComplex : ExactAmplitude → ℂ :=
+  Quotient.lift dyadicInterpret (fun _ _ h => dyadicInterpret_congr _ _ h)
+
 end SectorSimulation

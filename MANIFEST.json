@@ -139,8 +139,8 @@
     },
     {
       "path": "lean/ComplexEmbeddingProbe.lean",
-      "bytes": 1074,
-      "sha256": "d2e6196fc119be136dbaf819b3a24482ba92320d7318e97b7e91d79aec6edd40"
+      "bytes": 1943,
+      "sha256": "9140e3c176c7821121b5e7a92a524a4e9f736effd39f0d3588f013c16083aee4"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
