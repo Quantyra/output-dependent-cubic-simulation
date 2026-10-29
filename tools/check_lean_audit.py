@@ -183,6 +183,10 @@ EXPECTED = {
     'SectorSimulation.cycloT_commutes_hadamard': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.cyclo_sqrt_two_central': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.cycloT_commutes_scaled_hadamard': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.dyadicEquivalent_refl': set(),
+    'SectorSimulation.dyadicEquivalent_symm': set(),
+    'SectorSimulation.dyadicHadamardScale_normalizes': set(),
+    'SectorSimulation.dyadicHadamardScale_squared': set(),
 }
 
 

@@ -502,3 +502,15 @@ import SectorSimulation
 
 #check SectorSimulation.cycloT_commutes_scaled_hadamard
 #print axioms SectorSimulation.cycloT_commutes_scaled_hadamard
+
+#check SectorSimulation.dyadicEquivalent_refl
+#print axioms SectorSimulation.dyadicEquivalent_refl
+
+#check SectorSimulation.dyadicEquivalent_symm
+#print axioms SectorSimulation.dyadicEquivalent_symm
+
+#check SectorSimulation.dyadicHadamardScale_normalizes
+#print axioms SectorSimulation.dyadicHadamardScale_normalizes
+
+#check SectorSimulation.dyadicHadamardScale_squared
+#print axioms SectorSimulation.dyadicHadamardScale_squared

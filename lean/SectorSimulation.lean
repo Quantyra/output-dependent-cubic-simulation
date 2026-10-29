@@ -95,3 +95,5 @@ import SectorSimulation.HadamardGeneral
 import SectorSimulation.CyclotomicEight
 
 import SectorSimulation.CycloTCommutation
+
+import SectorSimulation.DyadicCyclo

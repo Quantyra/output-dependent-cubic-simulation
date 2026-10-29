@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 19528,
-      "sha256": "943df49a7917981bab113380039ca536fb24b3adf0da06e15eceb7fa4262fcf5"
+      "bytes": 19958,
+      "sha256": "bc1891e6373d74daf43837756a5ab2f282578eb4f7dc9ac794b37ef2a38370ca"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 137351,
-      "sha256": "eb46686ea6c61a5ed68280a97bcd9f945d0820eb11aa0a1d9315088bc8b9e37f"
+      "bytes": 140662,
+      "sha256": "a9c5e4f708217be0a146bd3cac3b76d0c99afc922abfb4e72442b880723e6177"
     },
     {
       "path": "lean/NativeJsonExamples.lean",
@@ -154,8 +154,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 2303,
-      "sha256": "3042857ecab9d176974ecc874c40870508805c3688a8488cb24714a3006281cf"
+      "bytes": 2340,
+      "sha256": "1db1e58b1e14275717ca2bb50913b56f0a7b2d78d0f1e2e4e31862fba09adb5f"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -231,6 +231,11 @@
       "path": "lean/SectorSimulation/DerivativeSize.lean",
       "bytes": 2176,
       "sha256": "c736a208ce660ead3dc6e3e80da0fa9cc23cb2adfabea41e68075ce44b11edbe"
+    },
+    {
+      "path": "lean/SectorSimulation/DyadicCyclo.lean",
+      "bytes": 1522,
+      "sha256": "d6fc9dd65d0951d27a2d7ec45e23cc44015197c73a8c0c7c75700eba205a0d1c"
     },
     {
       "path": "lean/SectorSimulation/ExhaustiveMatrixSolve.lean",
@@ -526,6 +531,11 @@
       "path": "lean/evidence/derivative-size-audit.md",
       "bytes": 793,
       "sha256": "dc9cdcfa84ae19769bba5118e7d8cdae6a21f00583647a0893e248ce2260ccbe"
+    },
+    {
+      "path": "lean/evidence/dyadic-hadamard-scale-audit.md",
+      "bytes": 864,
+      "sha256": "a70bde99b581fbf5055b4cc2c1382704c0947015d073679104bc8a3cc83d40c4"
     },
     {
       "path": "lean/evidence/gaussian-checked-solver-audit.md",
@@ -1144,8 +1154,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 14812,
-      "sha256": "96bf0d418ec7cd874084d47ad38ae6e9ff9eb47e9739865c9a2c262457a5f39a"
+      "bytes": 15039,
+      "sha256": "d70e97234e8a469720c21d57c92bf05732c8b85c107173b1314c411144a37106"
     },
     {
       "path": "tools/check_metadata.py",

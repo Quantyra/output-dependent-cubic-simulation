@@ -2618,6 +2618,58 @@
       ],
       "build_audit_receipt": "lean/evidence/cyclo-t-commutation-audit.md",
       "unresolved_bridge": "Establish division by two, complex embedding, normalized native Toffoli replay, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "dyadic-cyclo-dyadicEquivalent_refl",
+      "section": "2",
+      "target": "SectorSimulation.dyadicEquivalent_refl",
+      "assumptions": "Four-integer eighth-root coefficients with powers of two in denominators and the defined cross-multiplication relation.",
+      "quantifiers": "All modeled dyadic values where quantified; scalar identities are concrete.",
+      "statement": "The modeled dyadic cross-multiplication relation is reflexive.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/dyadic-hadamard-scale-audit.md",
+      "unresolved_bridge": "Prove equivalence relation and arithmetic compatibility, complex embedding, normalized circuit semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-cyclo-dyadicEquivalent_symm",
+      "section": "2",
+      "target": "SectorSimulation.dyadicEquivalent_symm",
+      "assumptions": "Four-integer eighth-root coefficients with powers of two in denominators and the defined cross-multiplication relation.",
+      "quantifiers": "All modeled dyadic values where quantified; scalar identities are concrete.",
+      "statement": "The modeled dyadic cross-multiplication relation is symmetric.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/dyadic-hadamard-scale-audit.md",
+      "unresolved_bridge": "Prove equivalence relation and arithmetic compatibility, complex embedding, normalized circuit semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-cyclo-dyadicHadamardScale_normalizes",
+      "section": "2",
+      "target": "SectorSimulation.dyadicHadamardScale_normalizes",
+      "assumptions": "Four-integer eighth-root coefficients with powers of two in denominators and the defined cross-multiplication relation.",
+      "quantifiers": "All modeled dyadic values where quantified; scalar identities are concrete.",
+      "statement": "Twice the square of the modeled dyadic Hadamard scale is equivalent to one.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/dyadic-hadamard-scale-audit.md",
+      "unresolved_bridge": "Prove equivalence relation and arithmetic compatibility, complex embedding, normalized circuit semantics, native replay and manuscript theorems."
+    },
+    {
+      "id": "dyadic-cyclo-dyadicHadamardScale_squared",
+      "section": "2",
+      "target": "SectorSimulation.dyadicHadamardScale_squared",
+      "assumptions": "Four-integer eighth-root coefficients with powers of two in denominators and the defined cross-multiplication relation.",
+      "quantifiers": "All modeled dyadic values where quantified; scalar identities are concrete.",
+      "statement": "The square of the modeled dyadic Hadamard scale is equivalent to one half.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/dyadic-hadamard-scale-audit.md",
+      "unresolved_bridge": "Prove equivalence relation and arithmetic compatibility, complex embedding, normalized circuit semantics, native replay and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
