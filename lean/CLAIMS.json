@@ -1749,6 +1749,26 @@
       ],
       "build_audit_receipt": "lean/evidence/numeric-header-bytes-audit.md",
       "unresolved_bridge": "Prove numeric parser soundness, equivalence to Python byte and ASCII/JSON handling, descriptor decoding, native replay and gate semantics."
+    },
+    {
+      "id": "numeric-native-header-iff",
+      "section": "2",
+      "target": "SectorSimulation.numeric_native_header_iff",
+      "assumptions": "Numeric bytes are finite values below 256; gate records use tag strings and wire lists.",
+      "quantifiers": "All finite gate-record inputs, byte lists and bodies.",
+      "statement": "The numeric header parser returns exactly a given byte list and body if and only if the input is the canonical encoding followed by that body.",
+      "dependencies": [
+        "numeric-native-header-roundtrip",
+        "native-byte-header-sound"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/numeric-header-sound-audit.md",
+      "unresolved_bridge": "Prove Python byte/ASCII/JSON equivalence, descriptor decoding, canonical body replay and physical gate semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

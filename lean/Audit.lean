@@ -338,3 +338,9 @@ import SectorSimulation
 
 #check SectorSimulation.numeric_native_header_roundtrip
 #print axioms SectorSimulation.numeric_native_header_roundtrip
+
+#check SectorSimulation.numeric_native_header_sound
+#print axioms SectorSimulation.numeric_native_header_sound
+
+#check SectorSimulation.numeric_native_header_iff
+#print axioms SectorSimulation.numeric_native_header_iff

@@ -63,3 +63,5 @@ import SectorSimulation.NativeHeaderBytes
 import SectorSimulation.NativeHeaderBytesSound
 
 import SectorSimulation.NumericHeaderBytes
+
+import SectorSimulation.NumericHeaderSound
