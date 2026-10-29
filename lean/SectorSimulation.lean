@@ -256,3 +256,5 @@ import SectorSimulation.CanonicalCharacterParity
 import SectorSimulation.CanonicalCharacterDot
 
 import SectorSimulation.SourceCanonicalCharacter
+
+import SectorSimulation.BinaryTransposeCharacter

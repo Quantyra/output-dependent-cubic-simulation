@@ -565,6 +565,9 @@ EXPECTED = {
     'SectorSimulation.canonicalLinearCharacter_dot': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalDotWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_knownCanonical': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.booleanListSum_swap': {'propext', 'Quot.sound'},
+    'SectorSimulation.xorFoldl_as_sum': set(),
+    'SectorSimulation.binaryTranspose_character': {'propext', 'Quot.sound'},
 }
 
 

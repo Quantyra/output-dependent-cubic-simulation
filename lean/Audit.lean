@@ -1561,3 +1561,12 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_knownCanonical
 #print axioms SectorSimulation.sourceWalshSum_knownCanonical
+
+#check SectorSimulation.booleanListSum_swap
+#print axioms SectorSimulation.booleanListSum_swap
+
+#check SectorSimulation.xorFoldl_as_sum
+#print axioms SectorSimulation.xorFoldl_as_sum
+
+#check SectorSimulation.binaryTranspose_character
+#print axioms SectorSimulation.binaryTranspose_character

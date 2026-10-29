@@ -9264,6 +9264,57 @@
       ],
       "build_audit_receipt": "lean/evidence/source-canonical-character.md",
       "unresolved_bridge": "Construct the transformed character and canonical basis for arbitrary source quadratics and establish rank, general support and elimination costs."
+    },
+    {
+      "id": "binary-transpose-character-booleanListSum_swap",
+      "section": "3",
+      "target": "SectorSimulation.booleanListSum_swap",
+      "assumptions": "Finite lists, Boolean functions, or a finite binary matrix and vectors as stated.",
+      "quantifiers": "All finite dimensions, matrices, lists, maps and vectors, including zero dimension.",
+      "statement": "Finite Boolean XOR sums may be interchanged.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/binary-transpose-character.md",
+      "unresolved_bridge": "Connect this identity to the conditional source Walsh formula; construct arbitrary-source canonical coordinates and establish rank, support and costs."
+    },
+    {
+      "id": "binary-transpose-character-xorFoldl_as_sum",
+      "section": "3",
+      "target": "SectorSimulation.xorFoldl_as_sum",
+      "assumptions": "Finite lists, Boolean functions, or a finite binary matrix and vectors as stated.",
+      "quantifiers": "All finite dimensions, matrices, lists, maps and vectors, including zero dimension.",
+      "statement": "The accumulator-based Boolean XOR fold equals the initial bit XOR the corresponding Boolean sum.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/binary-transpose-character.md",
+      "unresolved_bridge": "Connect this identity to the conditional source Walsh formula; construct arbitrary-source canonical coordinates and establish rank, support and costs."
+    },
+    {
+      "id": "binary-transpose-character-binaryTranspose_character",
+      "section": "3",
+      "target": "SectorSimulation.binaryTranspose_character",
+      "assumptions": "Finite lists, Boolean functions, or a finite binary matrix and vectors as stated.",
+      "quantifiers": "All finite dimensions, matrices, lists, maps and vectors, including zero dimension.",
+      "statement": "The binary character of a matrix-transformed vector equals the character obtained by applying the transpose matrix to its coefficient vector.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/binary-transpose-character.md",
+      "unresolved_bridge": "Connect this identity to the conditional source Walsh formula; construct arbitrary-source canonical coordinates and establish rank, support and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
