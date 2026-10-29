@@ -406,6 +406,10 @@ EXPECTED = {
     'SectorSimulation.recognizeByteCanonical_sound': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recognizeByteCanonical_complete': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recognizeByteCanonical_replay': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.runSharedHadamards_exponent': {'propext'},
+    'SectorSimulation.hadamardKernel_run': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.hadamardKernel_pythonFourier': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.hadamardKernel_nativePythonFourier': {'Classical.choice', 'Quot.sound', 'propext'},
 }
 
 

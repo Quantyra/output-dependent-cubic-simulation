@@ -198,3 +198,5 @@ import SectorSimulation.ValidatedRawNormalization
 import SectorSimulation.NormalizedModeledRecognizer
 
 import SectorSimulation.ByteCanonicalRecognizer
+
+import SectorSimulation.HadamardKernel

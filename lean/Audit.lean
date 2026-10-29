@@ -1072,3 +1072,15 @@ import SectorSimulation
 
 #check SectorSimulation.recognizeByteCanonical_replay
 #print axioms SectorSimulation.recognizeByteCanonical_replay
+
+#check SectorSimulation.runSharedHadamards_exponent
+#print axioms SectorSimulation.runSharedHadamards_exponent
+
+#check SectorSimulation.hadamardKernel_run
+#print axioms SectorSimulation.hadamardKernel_run
+
+#check SectorSimulation.hadamardKernel_pythonFourier
+#print axioms SectorSimulation.hadamardKernel_pythonFourier
+
+#check SectorSimulation.hadamardKernel_nativePythonFourier
+#print axioms SectorSimulation.hadamardKernel_nativePythonFourier

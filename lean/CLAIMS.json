@@ -6316,6 +6316,80 @@
       ],
       "build_audit_receipt": "lean/evidence/byte-canonical-recognizer.md",
       "unresolved_bridge": "Prove Lean/Python serializer equivalence and parser round trip, actual Python correspondence, physical Fourier and complex semantics, output identity and costs."
+    },
+    {
+      "id": "hadamard-kernel-runSharedHadamards_exponent",
+      "section": "2",
+      "target": "SectorSimulation.runSharedHadamards_exponent",
+      "assumptions": "Lean exact cyclotomic shared-denominator amplitudes, native gate semantics and, where stated, a successful Gaussian row program.",
+      "quantifiers": "All applicable widths, wire lists, states, vectors and programs.",
+      "statement": "Each replayed Hadamard increases the shared-denominator exponent by one.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel.md",
+      "unresolved_bridge": "Prove the recursive kernel equals the closed normalized Walsh sum, embed exact amplitudes into complex semantics, connect Python source and derive sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-hadamardKernel_run",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_run",
+      "assumptions": "Lean exact cyclotomic shared-denominator amplitudes, native gate semantics and, where stated, a successful Gaussian row program.",
+      "quantifiers": "All applicable widths, wire lists, states, vectors and programs.",
+      "statement": "The iterated exact two-branch Hadamard kernel equals all corresponding replayed amplitudes.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel.md",
+      "unresolved_bridge": "Prove the recursive kernel equals the closed normalized Walsh sum, embed exact amplitudes into complex semantics, connect Python source and derive sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-hadamardKernel_pythonFourier",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_pythonFourier",
+      "assumptions": "Lean exact cyclotomic shared-denominator amplitudes, native gate semantics and, where stated, a successful Gaussian row program.",
+      "quantifiers": "All applicable widths, wire lists, states, vectors and programs.",
+      "statement": "The modeled Python-ordered Fourier block equals the iterated Hadamard kernel on the CNOT-transformed amplitude function.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel.md",
+      "unresolved_bridge": "Prove the recursive kernel equals the closed normalized Walsh sum, embed exact amplitudes into complex semantics, connect Python source and derive sector identities and costs."
+    },
+    {
+      "id": "hadamard-kernel-hadamardKernel_nativePythonFourier",
+      "section": "2",
+      "target": "SectorSimulation.hadamardKernel_nativePythonFourier",
+      "assumptions": "Lean exact cyclotomic shared-denominator amplitudes, native gate semantics and, where stated, a successful Gaussian row program.",
+      "quantifiers": "All applicable widths, wire lists, states, vectors and programs.",
+      "statement": "A successful Gaussian program yields native Python-ordered records whose exact replay agrees with the iterated Hadamard kernel.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-kernel.md",
+      "unresolved_bridge": "Prove the recursive kernel equals the closed normalized Walsh sum, embed exact amplitudes into complex semantics, connect Python source and derive sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
