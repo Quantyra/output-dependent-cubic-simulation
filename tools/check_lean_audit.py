@@ -346,6 +346,12 @@ EXPECTED = {
     'SectorSimulation.exactNativeFourier_program': {'propext', 'Quot.sound'},
     'SectorSimulation.sharedPhaseSign_congr': {'propext', 'Quot.sound'},
     'SectorSimulation.compileModeledSourceBody_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedX_squared': {'propext', 'Quot.sound'},
+    'SectorSimulation.sharedZ_squared': {'propext', 'Quot.sound'},
+    'SectorSimulation.exactNativeHeader_identity': {'propext', 'Quot.sound'},
+    'SectorSimulation.exactNativeHeader_amplitudes': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.modeledSourceBody_congr': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactNativeHeader_sourceBody': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

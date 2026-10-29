@@ -905,3 +905,16 @@ import SectorSimulation
 #print axioms SectorSimulation.sharedPhaseSign_congr
 #check SectorSimulation.compileModeledSourceBody_correct
 #print axioms SectorSimulation.compileModeledSourceBody_correct
+
+#check SectorSimulation.sharedX_squared
+#print axioms SectorSimulation.sharedX_squared
+#check SectorSimulation.sharedZ_squared
+#print axioms SectorSimulation.sharedZ_squared
+#check SectorSimulation.exactNativeHeader_identity
+#print axioms SectorSimulation.exactNativeHeader_identity
+#check SectorSimulation.exactNativeHeader_amplitudes
+#print axioms SectorSimulation.exactNativeHeader_amplitudes
+#check SectorSimulation.modeledSourceBody_congr
+#print axioms SectorSimulation.modeledSourceBody_congr
+#check SectorSimulation.exactNativeHeader_sourceBody
+#print axioms SectorSimulation.exactNativeHeader_sourceBody

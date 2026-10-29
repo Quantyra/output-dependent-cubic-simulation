@@ -168,3 +168,5 @@ import SectorSimulation.ExactGaussianCNOTReplay
 import SectorSimulation.ExactHadamardProgram
 
 import SectorSimulation.ModeledFourier
+
+import SectorSimulation.ExactNativeHeader

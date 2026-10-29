@@ -5242,6 +5242,105 @@
       ],
       "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
       "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
+    },
+    {
+      "id": "exact-native-header-sharedX_squared",
+      "section": "2",
+      "target": "SectorSimulation.sharedX_squared",
+      "assumptions": "The exact shared-denominator native interpreter, valid wire zero and, for the source-body theorem, degree-checked phases and successful Gaussian row program.",
+      "quantifiers": "All finite dimensions with wire zero, bit-list headers, represented input states and output vectors; applicable source descriptors.",
+      "statement": "Two modeled X gates restore the represented state.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
+    },
+    {
+      "id": "exact-native-header-sharedZ_squared",
+      "section": "2",
+      "target": "SectorSimulation.sharedZ_squared",
+      "assumptions": "The exact shared-denominator native interpreter, valid wire zero and, for the source-body theorem, degree-checked phases and successful Gaussian row program.",
+      "quantifiers": "All finite dimensions with wire zero, bit-list headers, represented input states and output vectors; applicable source descriptors.",
+      "statement": "Two modeled Z gates restore the represented state.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
+    },
+    {
+      "id": "exact-native-header-exactNativeHeader_identity",
+      "section": "2",
+      "target": "SectorSimulation.exactNativeHeader_identity",
+      "assumptions": "The exact shared-denominator native interpreter, valid wire zero and, for the source-body theorem, degree-checked phases and successful Gaussian row program.",
+      "quantifiers": "All finite dimensions with wire zero, bit-list headers, represented input states and output vectors; applicable source descriptors.",
+      "statement": "Native replay of the encoded bit-list header equals two modeled Hadamards on wire zero.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
+    },
+    {
+      "id": "exact-native-header-exactNativeHeader_amplitudes",
+      "section": "2",
+      "target": "SectorSimulation.exactNativeHeader_amplitudes",
+      "assumptions": "The exact shared-denominator native interpreter, valid wire zero and, for the source-body theorem, degree-checked phases and successful Gaussian row program.",
+      "quantifiers": "All finite dimensions with wire zero, bit-list headers, represented input states and output vectors; applicable source descriptors.",
+      "statement": "Native replay of the encoded bit-list header preserves all exact amplitudes.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
+    },
+    {
+      "id": "exact-native-header-modeledSourceBody_congr",
+      "section": "2",
+      "target": "SectorSimulation.modeledSourceBody_congr",
+      "assumptions": "The exact shared-denominator native interpreter, valid wire zero and, for the source-body theorem, degree-checked phases and successful Gaussian row program.",
+      "quantifiers": "All finite dimensions with wire zero, bit-list headers, represented input states and output vectors; applicable source descriptors.",
+      "statement": "The modeled source body preserves pointwise exact-amplitude equivalence.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
+    },
+    {
+      "id": "exact-native-header-exactNativeHeader_sourceBody",
+      "section": "2",
+      "target": "SectorSimulation.exactNativeHeader_sourceBody",
+      "assumptions": "The exact shared-denominator native interpreter, valid wire zero and, for the source-body theorem, degree-checked phases and successful Gaussian row program.",
+      "quantifiers": "All finite dimensions with wire zero, bit-list headers, represented input states and output vectors; applicable source descriptors.",
+      "statement": "The encoded bit-list header followed by the compiled modeled source body replays to the same exact amplitudes as the modeled body.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
