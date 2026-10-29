@@ -134,8 +134,8 @@
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
-      "bytes": 2383,
-      "sha256": "ff0b7f5e80b252a3b4bfe1a665df02ee817a01895f9bba3dbeabafa4f698a584"
+      "bytes": 2456,
+      "sha256": "4fb05746db73a540448e231df04be5e981fa1284efb775c9a33ef748904bc549"
     },
     {
       "path": "lean/SEMANTICS.md",
@@ -174,8 +174,8 @@
     },
     {
       "path": "lean/evidence/locked-environment.md",
-      "bytes": 2023,
-      "sha256": "bb2ae638f086295f33d6fe8f28f3aa1d3f978a875cc80e9a00dbcff905b6d9c0"
+      "bytes": 2388,
+      "sha256": "3da8f659ba2669e44c3e45774b966da3e41d60ff46595e00779ac29aad5725fa"
     },
     {
       "path": "lean/lake-manifest.json",
