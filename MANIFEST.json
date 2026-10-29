@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 13931,
-      "sha256": "fe97470394d059372a7207a18755b6a5c4dda9a042a662919a0dd4cb921db1de"
+      "bytes": 14188,
+      "sha256": "ed8b35a86ef5d449775f88bf8d06f86fad57be06b326823e934277eb9dea3470"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 92609,
-      "sha256": "a16af7318c444575a8cb520cd4a72b4a8247ac1bd96eb91dd59feec275796409"
+      "bytes": 94642,
+      "sha256": "8c72af7c6b55ebb881e2bfcf72e8c42402fa719d2284ee51015dd7fe277ef625"
     },
     {
       "path": "lean/NativeJsonExamples.lean",
@@ -279,8 +279,8 @@
     },
     {
       "path": "lean/SectorSimulation/NativeJsonDescriptor.lean",
-      "bytes": 3708,
-      "sha256": "7297cb6c2a2d5e7bf06707c10f8a047cfc0be7c046b48205be0da22b0df2fdb9"
+      "bytes": 5254,
+      "sha256": "d5fcad2476fed30cc06347e84bf3ec803ddcb428bdca9fc5c271ff2a8aee8ab5"
     },
     {
       "path": "lean/SectorSimulation/NumericHeaderBytes.lean",
@@ -411,6 +411,11 @@
       "path": "lean/evidence/cubic-phase-terms-audit.md",
       "bytes": 1882,
       "sha256": "ebf30e39684f9c44ecc9804c89c98d07774149d4edfb2a463bf95b1738b67f11"
+    },
+    {
+      "path": "lean/evidence/decoded-source-derivative-audit.md",
+      "bytes": 915,
+      "sha256": "0b40e0dfa88893dfb6dbf971f2dbec86ff3d5d656beb6cf731e986a837fe2c49"
     },
     {
       "path": "lean/evidence/derivative-additivity-audit.md",
@@ -999,8 +1004,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 10764,
-      "sha256": "398a55e17c8d093d707cdfb117a57c079acf87fbd924c4c22789db3a3746a446"
+      "bytes": 10979,
+      "sha256": "727fba391298944d58048b643cb9cb49fbc1a4cbb5eeffe85006b5eed7c9a2ff"
     },
     {
       "path": "tools/check_metadata.py",

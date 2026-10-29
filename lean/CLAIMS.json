@@ -1808,6 +1808,44 @@
       ],
       "build_audit_receipt": "lean/evidence/native-json-descriptor-audit.md",
       "unresolved_bridge": "Establish Python parser and normalization equivalence, size guard, canonical gate-body replay, physical semantics and manuscript theorem claims."
+    },
+    {
+      "id": "decoded-header-encoded-prefix",
+      "section": "2",
+      "target": "SectorSimulation.decodedHeader_has_encoded_prefix",
+      "assumptions": "Lean modeled numeric header, ASCII and JSON pipeline; derivative statement additionally assumes successful descriptor validation.",
+      "quantifiers": "All modeled gate lists and any returned descriptor and body.",
+      "statement": "Any successful modeled descriptor header decoding identifies an encoded numeric header prefix followed by the returned body.",
+      "dependencies": [
+        "numeric-native-header-iff"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/decoded-source-derivative-audit.md",
+      "unresolved_bridge": "Prove equivalence to Python parser and normalization, size guard, canonical gate-body replay, physical semantics and labeled paper theorems."
+    },
+    {
+      "id": "decoded-source-output-derivative",
+      "section": "2",
+      "target": "SectorSimulation.decodedValidatedHeader_outputDerivative",
+      "assumptions": "Lean modeled numeric header, ASCII and JSON pipeline; derivative statement additionally assumes successful descriptor validation.",
+      "quantifiers": "All modeled gate lists and any returned descriptor and body.",
+      "statement": "A modeled validated header yields a unique nonzero output direction and an equivalent quadratic second-phase derivative with a sevenfold term bound.",
+      "dependencies": [
+        "decoded-two-phase-validation-sound"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/decoded-source-derivative-audit.md",
+      "unresolved_bridge": "Prove equivalence to Python parser and normalization, size guard, canonical gate-body replay, physical semantics and labeled paper theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

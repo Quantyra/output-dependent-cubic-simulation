@@ -99,4 +99,36 @@ theorem decodeValidatedHeader_valid (gates : List NativeGate) (n : Nat)
         exact rawDescriptorToValidated_valid raw m candidate hv
 
 
+theorem decodedHeader_has_encoded_prefix (gates : List NativeGate)
+    (raw : RawTwoPhaseDescriptor) (body : List NativeGate)
+    (h : decodeHeaderDescriptor gates = some (raw, body)) :
+    Exists fun bytes => gates = encodeNumericHeader bytes ++ body := by
+  unfold decodeHeaderDescriptor at h
+  cases hb : decodeNumericHeader gates with
+  | none => simp [hb] at h
+  | some pair =>
+    rcases pair with ⟨bytes, suffix⟩
+    cases ha : decodeAscii bytes with
+    | none => simp [hb, ha] at h
+    | some text =>
+      cases hj : (Lean.Json.parse text).toOption with
+      | none => simp [hb, ha, hj] at h
+      | some json =>
+        cases hd : extractTwoPhaseDescriptor json with
+        | none => simp [hb, ha, hj, hd] at h
+        | some desc =>
+          simp [hb, ha, hj, hd] at h
+          rcases h with ⟨_, rfl⟩
+          exact ⟨bytes, (numeric_native_header_iff gates bytes suffix).mp hb⟩
+
+theorem decodedValidatedHeader_outputDerivative (gates : List NativeGate) (n : Nat)
+    (d : CircuitDescriptor n) (body : List NativeGate)
+    (h : decodeValidatedHeader gates = some (⟨n, d⟩, body)) :
+    ∃ j q, sourceOutputDerivativePivot d = some (j, q) ∧
+      matrixApply d.pairing j = outputUnit d ∧ j ≠ zeroVector ∧
+      (∀ z, matrixApply d.pairing z = outputUnit d → z = j) ∧
+      phaseWithinDegree 2 q = true ∧ q.length ≤ 7 * d.secondPhase.length ∧
+      ∀ x, evalPhase q x = secondPhaseDerivative d j x := by
+  exact validatedSourceOutputDerivative d (decodeValidatedHeader_valid gates n d body h)
+
 end SectorSimulation

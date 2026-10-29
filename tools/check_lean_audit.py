@@ -132,6 +132,8 @@ EXPECTED = {
     'SectorSimulation.numeric_native_header_iff': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.rawDescriptorToValidated_valid': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.decodeValidatedHeader_valid': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.decodedHeader_has_encoded_prefix': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.decodedValidatedHeader_outputDerivative': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

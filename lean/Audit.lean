@@ -350,3 +350,8 @@ import SectorSimulation
 
 #check SectorSimulation.decodeValidatedHeader_valid
 #print axioms SectorSimulation.decodeValidatedHeader_valid
+
+#check SectorSimulation.decodedHeader_has_encoded_prefix
+#print axioms SectorSimulation.decodedHeader_has_encoded_prefix
+#check SectorSimulation.decodedValidatedHeader_outputDerivative
+#print axioms SectorSimulation.decodedValidatedHeader_outputDerivative
