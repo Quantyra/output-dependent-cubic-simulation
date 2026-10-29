@@ -77,3 +77,5 @@ import SectorSimulation.NativeCNOTReplay
 import SectorSimulation.CNOTAmplitude
 
 import SectorSimulation.PhaseGateAmplitude
+
+import SectorSimulation.NativeXZReplay

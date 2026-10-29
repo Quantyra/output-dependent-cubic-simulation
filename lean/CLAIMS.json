@@ -2170,6 +2170,52 @@
       ],
       "build_audit_receipt": "lean/evidence/phase-gate-amplitude-audit.md",
       "unresolved_bridge": "Connect native record replay and Python compilation, prove Hadamard and multiwire phase semantics, normalization and full manuscript theorems."
+    },
+    {
+      "id": "native-xz-native_XZXZ_constant_phase",
+      "section": "2",
+      "target": "SectorSimulation.native_XZXZ_constant_phase",
+      "assumptions": "Lean native gate records and modeled X, Z and distinct-wire CX action on basis-indexed coefficients.",
+      "quantifiers": "All finite dimensions, applicable wires and coefficient states.",
+      "statement": "Literal X Z X Z native records replay as global amplitude negation.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-xz-replay-audit.md",
+      "unresolved_bridge": "Connect modeled records to Python compiler execution, Hadamard and multiwire phase semantics, full circuit and manuscript theorem claims."
+    },
+    {
+      "id": "native-xz-native_Z_linear_phase",
+      "section": "2",
+      "target": "SectorSimulation.native_Z_linear_phase",
+      "assumptions": "Lean native gate records and modeled X, Z and distinct-wire CX action on basis-indexed coefficients.",
+      "quantifiers": "All finite dimensions, applicable wires and coefficient states.",
+      "statement": "A literal native Z record replays as the single-wire Boolean phase.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/native-xz-replay-audit.md",
+      "unresolved_bridge": "Connect modeled records to Python compiler execution, Hadamard and multiwire phase semantics, full circuit and manuscript theorem claims."
+    },
+    {
+      "id": "native-xz-native_CNOT_step",
+      "section": "2",
+      "target": "SectorSimulation.native_CNOT_step",
+      "assumptions": "Lean native gate records and modeled X, Z and distinct-wire CX action on basis-indexed coefficients.",
+      "quantifiers": "All finite dimensions, applicable wires and coefficient states.",
+      "statement": "A distinct-wire literal native CX record replays as the modeled CNOT amplitude action.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/native-xz-replay-audit.md",
+      "unresolved_bridge": "Connect modeled records to Python compiler execution, Hadamard and multiwire phase semantics, full circuit and manuscript theorem claims."
     }
   ],
   "paper_source": "manuscript/main.tex",

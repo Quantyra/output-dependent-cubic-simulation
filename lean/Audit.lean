@@ -415,3 +415,12 @@ import SectorSimulation
 
 #check SectorSimulation.XZXZ_constant_phase
 #print axioms SectorSimulation.XZXZ_constant_phase
+
+#check SectorSimulation.native_XZXZ_constant_phase
+#print axioms SectorSimulation.native_XZXZ_constant_phase
+
+#check SectorSimulation.native_Z_linear_phase
+#print axioms SectorSimulation.native_Z_linear_phase
+
+#check SectorSimulation.native_CNOT_step
+#print axioms SectorSimulation.native_CNOT_step

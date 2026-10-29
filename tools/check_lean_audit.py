@@ -154,6 +154,9 @@ EXPECTED = {
     'SectorSimulation.X_amplitude_involutive': {'propext', 'Quot.sound'},
     'SectorSimulation.Z_amplitude_involutive': {'propext', 'Quot.sound'},
     'SectorSimulation.XZXZ_constant_phase': {'propext', 'Quot.sound'},
+    'SectorSimulation.native_XZXZ_constant_phase': {'propext', 'Quot.sound'},
+    'SectorSimulation.native_Z_linear_phase': {'propext'},
+    'SectorSimulation.native_CNOT_step': {'propext'},
 }
 
 
