@@ -165,6 +165,9 @@ EXPECTED = {
     'SectorSimulation.toffoli_phase_polynomial': set(),
     'SectorSimulation.toffoli_literal_phase_trace': {'propext'},
     'SectorSimulation.toffoli_literal_phase_trace_mod8': {'propext'},
+    'SectorSimulation.hadamard_commutes_invariant_sign': {'propext', 'Quot.sound'},
+    'SectorSimulation.cnot_flip_commute': {'propext', 'Quot.sound'},
+    'SectorSimulation.hadamard_commutes_disjoint_CNOT': {'propext', 'Quot.sound'},
 }
 
 

@@ -2333,6 +2333,54 @@
       ],
       "build_audit_receipt": "lean/evidence/toffoli-record-trace-audit.md",
       "unresolved_bridge": "Prove H commutation and normalized complex semantics, general wire relabeling, Python list equivalence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "hadamard-commutation-hadamard_commutes_invariant_sign",
+      "section": "2",
+      "target": "SectorSimulation.hadamard_commutes_invariant_sign",
+      "assumptions": "Unnormalized Hadamard on integer coefficient functions; disjoint wires or flip-invariant sign as explicitly stated.",
+      "quantifiers": "All finite dimensions, applicable wires, predicates, vectors and coefficient functions.",
+      "statement": "An unnormalized Hadamard commutes with any Boolean sign invariant under flipping its target wire.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-commutation-audit.md",
+      "unresolved_bridge": "Prove complex T/TDG commutation, normalized amplitudes, literal decomposition replay and Python correspondence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "hadamard-commutation-cnot_flip_commute",
+      "section": "2",
+      "target": "SectorSimulation.cnot_flip_commute",
+      "assumptions": "Unnormalized Hadamard on integer coefficient functions; disjoint wires or flip-invariant sign as explicitly stated.",
+      "quantifiers": "All finite dimensions, applicable wires, predicates, vectors and coefficient functions.",
+      "statement": "A CNOT basis action commutes with flipping a wire distinct from control and target.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-commutation-audit.md",
+      "unresolved_bridge": "Prove complex T/TDG commutation, normalized amplitudes, literal decomposition replay and Python correspondence, full circuit and manuscript theorems."
+    },
+    {
+      "id": "hadamard-commutation-hadamard_commutes_disjoint_CNOT",
+      "section": "2",
+      "target": "SectorSimulation.hadamard_commutes_disjoint_CNOT",
+      "assumptions": "Unnormalized Hadamard on integer coefficient functions; disjoint wires or flip-invariant sign as explicitly stated.",
+      "quantifiers": "All finite dimensions, applicable wires, predicates, vectors and coefficient functions.",
+      "statement": "An unnormalized Hadamard commutes with a CNOT whose wires are disjoint from its target.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/hadamard-commutation-audit.md",
+      "unresolved_bridge": "Prove complex T/TDG commutation, normalized amplitudes, literal decomposition replay and Python correspondence, full circuit and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

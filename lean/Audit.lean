@@ -448,3 +448,12 @@ import SectorSimulation
 
 #check SectorSimulation.toffoli_literal_phase_trace_mod8
 #print axioms SectorSimulation.toffoli_literal_phase_trace_mod8
+
+#check SectorSimulation.hadamard_commutes_invariant_sign
+#print axioms SectorSimulation.hadamard_commutes_invariant_sign
+
+#check SectorSimulation.cnot_flip_commute
+#print axioms SectorSimulation.cnot_flip_commute
+
+#check SectorSimulation.hadamard_commutes_disjoint_CNOT
+#print axioms SectorSimulation.hadamard_commutes_disjoint_CNOT
