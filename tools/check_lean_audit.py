@@ -382,6 +382,9 @@ EXPECTED = {
     'SectorSimulation.sortedNormalizeMasks_eval': {'Classical.choice', 'propext', 'Quot.sound'},
     'SectorSimulation.sortedNormalizeMasks_nodup': {'propext', 'Quot.sound'},
     'SectorSimulation.sortedNormalizeMasks_sorted': {'propext', 'Quot.sound'},
+    'SectorSimulation.toggleMask_membership': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.normalizeMasks_fold_membership': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sortedNormalizeMasks_membership': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

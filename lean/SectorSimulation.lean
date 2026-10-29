@@ -184,3 +184,5 @@ import SectorSimulation.AsciiDescriptorEncode
 import SectorSimulation.PhaseNormalization
 
 import SectorSimulation.ToggleMaskNormalization
+
+import SectorSimulation.MaskParity

@@ -5864,6 +5864,63 @@
       ],
       "build_audit_receipt": "lean/evidence/toggle-normalization.md",
       "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text serialization, native compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "mask-parity-toggleMask_membership",
+      "section": "2",
+      "target": "SectorSimulation.toggleMask_membership",
+      "assumptions": "Lean list-based natural-mask toggle model; duplicate-free initial accumulator where applicable.",
+      "quantifiers": "All natural masks, lists and applicable accumulators.",
+      "statement": "Toggling one mask XORs its equality bit with membership of any queried mask.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mask-parity.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text parsing, compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "mask-parity-normalizeMasks_fold_membership",
+      "section": "2",
+      "target": "SectorSimulation.normalizeMasks_fold_membership",
+      "assumptions": "Lean list-based natural-mask toggle model; duplicate-free initial accumulator where applicable.",
+      "quantifiers": "All natural masks, lists and applicable accumulators.",
+      "statement": "A toggle fold over a duplicate-free accumulator XORs each queried membership bit with input occurrence parity.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mask-parity.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text parsing, compiler correspondence, circuit-to-sector identities and costs."
+    },
+    {
+      "id": "mask-parity-sortedNormalizeMasks_membership",
+      "section": "2",
+      "target": "SectorSimulation.sortedNormalizeMasks_membership",
+      "assumptions": "Lean list-based natural-mask toggle model; duplicate-free initial accumulator where applicable.",
+      "quantifiers": "All natural masks, lists and applicable accumulators.",
+      "statement": "A mask belongs to the sorted Lean normalizer output exactly when the XOR fold of its input equality tests is true.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mask-parity.md",
+      "unresolved_bridge": "Prove Python implementation refinement and output equality, descriptor text parsing, compiler correspondence, circuit-to-sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",

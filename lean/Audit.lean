@@ -1000,3 +1000,12 @@ import SectorSimulation
 
 #check SectorSimulation.sortedNormalizeMasks_sorted
 #print axioms SectorSimulation.sortedNormalizeMasks_sorted
+
+#check SectorSimulation.toggleMask_membership
+#print axioms SectorSimulation.toggleMask_membership
+
+#check SectorSimulation.normalizeMasks_fold_membership
+#print axioms SectorSimulation.normalizeMasks_fold_membership
+
+#check SectorSimulation.sortedNormalizeMasks_membership
+#print axioms SectorSimulation.sortedNormalizeMasks_membership
