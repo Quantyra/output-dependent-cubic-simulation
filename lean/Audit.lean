@@ -394,3 +394,12 @@ import SectorSimulation
 
 #check SectorSimulation.replay_reversed_gaussian_CNOTs
 #print axioms SectorSimulation.replay_reversed_gaussian_CNOTs
+
+#check SectorSimulation.runCNOTAmplitudes_apply
+#print axioms SectorSimulation.runCNOTAmplitudes_apply
+
+#check SectorSimulation.gaussianCNOTAmplitude_action
+#print axioms SectorSimulation.gaussianCNOTAmplitude_action
+
+#check SectorSimulation.replay_gaussian_CNOT_amplitudes
+#print axioms SectorSimulation.replay_gaussian_CNOT_amplitudes

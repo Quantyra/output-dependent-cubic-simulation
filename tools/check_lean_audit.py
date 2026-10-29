@@ -147,6 +147,9 @@ EXPECTED = {
     'SectorSimulation.decode_encode_CNOTProgram': {'propext', 'Quot.sound'},
     'SectorSimulation.replay_encoded_CNOTProgram': {'propext', 'Quot.sound'},
     'SectorSimulation.replay_reversed_gaussian_CNOTs': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.runCNOTAmplitudes_apply': {'propext', 'Quot.sound'},
+    'SectorSimulation.gaussianCNOTAmplitude_action': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.replay_gaussian_CNOT_amplitudes': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
