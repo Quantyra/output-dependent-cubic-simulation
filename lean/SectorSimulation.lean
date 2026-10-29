@@ -127,3 +127,5 @@ import SectorSimulation.ExactReplayShift
 import SectorSimulation.ToffoliScaledBasis
 
 import SectorSimulation.SharedAdditionAmplitude
+
+import SectorSimulation.ThreeBitDecomposition

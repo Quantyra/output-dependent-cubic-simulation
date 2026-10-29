@@ -245,6 +245,7 @@ EXPECTED = {
     'SectorSimulation.sharedAddSame_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.replayExactNative_equal_exponents': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.replayExactNative_add_amplitude': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.threeBitDecomposition_correct': {'propext', 'Quot.sound'},
 }
 
 

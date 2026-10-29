@@ -3615,6 +3615,22 @@
       ],
       "build_audit_receipt": "lean/evidence/shared-add-amplitude-audit.md",
       "unresolved_bridge": "Decompose arbitrary states into basis sums and prove arbitrary-state and arbitrary-wire Toffoli correctness, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-bit-decomposition-correct",
+      "section": "2",
+      "target": "SectorSimulation.threeBitDecomposition_correct",
+      "assumptions": "The defined shared-denominator exact three-wire state and weighted computational basis states.",
+      "quantifiers": "Every represented three-wire state, with arbitrary cyclotomic coefficients and natural shared denominator exponent.",
+      "statement": "The explicit sum of the eight appropriately weighted basis states reconstructs the original shared-denominator state.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/three-bit-decomposition-audit.md",
+      "unresolved_bridge": "Combine basis decomposition with replay and exact amplitude addition to prove arbitrary-state Toffoli action; establish arbitrary wires, complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

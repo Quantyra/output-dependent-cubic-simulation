@@ -683,3 +683,6 @@ import SectorSimulation
 #print axioms SectorSimulation.replayExactNative_equal_exponents
 #check SectorSimulation.replayExactNative_add_amplitude
 #print axioms SectorSimulation.replayExactNative_add_amplitude
+
+#check SectorSimulation.threeBitDecomposition_correct
+#print axioms SectorSimulation.threeBitDecomposition_correct
