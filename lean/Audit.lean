@@ -879,3 +879,16 @@ import SectorSimulation
 #print axioms SectorSimulation.exactNativeCNOTProgram
 #check SectorSimulation.exactNativeGaussianCNOTs
 #print axioms SectorSimulation.exactNativeGaussianCNOTs
+
+#check SectorSimulation.exactNativeHadamardProgram
+#print axioms SectorSimulation.exactNativeHadamardProgram
+#check SectorSimulation.runSharedHadamards_congr
+#print axioms SectorSimulation.runSharedHadamards_congr
+#check SectorSimulation.runSharedHadamards_append
+#print axioms SectorSimulation.runSharedHadamards_append
+#check SectorSimulation.runSharedHadamards_reverse_cancel
+#print axioms SectorSimulation.runSharedHadamards_reverse_cancel
+#check SectorSimulation.exactNativeHadamard_reverse_cancel
+#print axioms SectorSimulation.exactNativeHadamard_reverse_cancel
+#check SectorSimulation.exactNativeFourier_decomposition
+#print axioms SectorSimulation.exactNativeFourier_decomposition

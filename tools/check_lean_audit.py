@@ -334,6 +334,12 @@ EXPECTED = {
     'SectorSimulation.runSharedCNOTs_exponent': set(),
     'SectorSimulation.exactNativeCNOTProgram': {'propext'},
     'SectorSimulation.exactNativeGaussianCNOTs': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactNativeHadamardProgram': {'propext'},
+    'SectorSimulation.runSharedHadamards_congr': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.runSharedHadamards_append': set(),
+    'SectorSimulation.runSharedHadamards_reverse_cancel': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactNativeHadamard_reverse_cancel': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactNativeFourier_decomposition': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

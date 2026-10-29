@@ -5048,6 +5048,102 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-gaussian-cnot-audit.md",
       "unresolved_bridge": "Compose the linear circuit with Hadamard layers and source phases, establish Python and complex-number correspondence, full runtime, costs and manuscript theorems."
+    },
+    {
+      "id": "native-hadamard-program-exactNativeHadamardProgram",
+      "section": "2",
+      "target": "SectorSimulation.exactNativeHadamardProgram",
+      "assumptions": "The exact shared-denominator native interpreter; a successful Gaussian row program for the final decomposition.",
+      "quantifiers": "All finite dimensions, finite Hadamard sequences, represented states, output vectors and applicable matrices.",
+      "statement": "A finite native Hadamard record program replays as the modeled shared-state Hadamard sequence.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/native-hadamard-program-audit.md",
+      "unresolved_bridge": "Prove the all-wire Hadamard sequence equals the normalized Fourier kernel, establish complex embedding, Python correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-hadamard-program-runSharedHadamards_congr",
+      "section": "2",
+      "target": "SectorSimulation.runSharedHadamards_congr",
+      "assumptions": "The exact shared-denominator native interpreter; a successful Gaussian row program for the final decomposition.",
+      "quantifiers": "All finite dimensions, finite Hadamard sequences, represented states, output vectors and applicable matrices.",
+      "statement": "A finite Hadamard sequence preserves pointwise exact-amplitude equality.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-hadamard-program-audit.md",
+      "unresolved_bridge": "Prove the all-wire Hadamard sequence equals the normalized Fourier kernel, establish complex embedding, Python correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-hadamard-program-runSharedHadamards_append",
+      "section": "2",
+      "target": "SectorSimulation.runSharedHadamards_append",
+      "assumptions": "The exact shared-denominator native interpreter; a successful Gaussian row program for the final decomposition.",
+      "quantifiers": "All finite dimensions, finite Hadamard sequences, represented states, output vectors and applicable matrices.",
+      "statement": "A concatenated Hadamard sequence equals sequential execution.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/native-hadamard-program-audit.md",
+      "unresolved_bridge": "Prove the all-wire Hadamard sequence equals the normalized Fourier kernel, establish complex embedding, Python correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-hadamard-program-runSharedHadamards_reverse_cancel",
+      "section": "2",
+      "target": "SectorSimulation.runSharedHadamards_reverse_cancel",
+      "assumptions": "The exact shared-denominator native interpreter; a successful Gaussian row program for the final decomposition.",
+      "quantifiers": "All finite dimensions, finite Hadamard sequences, represented states, output vectors and applicable matrices.",
+      "statement": "A Hadamard sequence followed by its reverse preserves every exact amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-hadamard-program-audit.md",
+      "unresolved_bridge": "Prove the all-wire Hadamard sequence equals the normalized Fourier kernel, establish complex embedding, Python correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-hadamard-program-exactNativeHadamard_reverse_cancel",
+      "section": "2",
+      "target": "SectorSimulation.exactNativeHadamard_reverse_cancel",
+      "assumptions": "The exact shared-denominator native interpreter; a successful Gaussian row program for the final decomposition.",
+      "quantifiers": "All finite dimensions, finite Hadamard sequences, represented states, output vectors and applicable matrices.",
+      "statement": "Native replay of a Hadamard sequence followed by its reverse succeeds and preserves every exact amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-hadamard-program-audit.md",
+      "unresolved_bridge": "Prove the all-wire Hadamard sequence equals the normalized Fourier kernel, establish complex embedding, Python correspondence, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "native-hadamard-program-exactNativeFourier_decomposition",
+      "section": "2",
+      "target": "SectorSimulation.exactNativeFourier_decomposition",
+      "assumptions": "The exact shared-denominator native interpreter; a successful Gaussian row program for the final decomposition.",
+      "quantifiers": "All finite dimensions, finite Hadamard sequences, represented states, output vectors and applicable matrices.",
+      "statement": "All-wire Hadamards followed by the Gaussian native CNOT sequence replay successfully and transport the Hadamard output amplitudes by the source binary matrix.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-hadamard-program-audit.md",
+      "unresolved_bridge": "Prove the all-wire Hadamard sequence equals the normalized Fourier kernel, establish complex embedding, Python correspondence, complete circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 35112,
-      "sha256": "db5da6bf55f249c2d1cdbfc39caee79ef9253e0816450db7ba6ac63fbb5e5525"
+      "bytes": 35803,
+      "sha256": "4eb3d9758fee6dfa630a58524ce29b01b2eca4fe33d3749ce4614617b654e59d"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 279574,
-      "sha256": "34c95babb7c2404790fb23dd2534340a2629eb559a654eedbe59a72f1dfa4ab6"
+      "bytes": 285548,
+      "sha256": "56ec083a96848fef245d771e69d7adf43152250249685411b14954270173a240"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -164,8 +164,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 3829,
-      "sha256": "b71491167f0d312be6a6097ed7dcf458b057734721fb9a3ce672c91ef9be222c"
+      "bytes": 3875,
+      "sha256": "f511c41a8f68a6df01d4a26545ba0fef827649579b80a8750dc3fd606fc4af47"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -316,6 +316,11 @@
       "path": "lean/SectorSimulation/ExactHadamard.lean",
       "bytes": 2254,
       "sha256": "a196cfdcba2a370a5a82c7dac2dd270963e1821c224317aa44579c4029492fe4"
+    },
+    {
+      "path": "lean/SectorSimulation/ExactHadamardProgram.lean",
+      "bytes": 3725,
+      "sha256": "4cd56cc235c2a953c07ef0f4655533126b63a4b58a75235e589b1e2af8e716ee"
     },
     {
       "path": "lean/SectorSimulation/ExactNativeReplay.lean",
@@ -896,6 +901,11 @@
       "path": "lean/evidence/native-gate-header-audit.md",
       "bytes": 918,
       "sha256": "b9a1319e5d9af0518d12445ea44a7005f15f79738c8f892da729a164c9b00864"
+    },
+    {
+      "path": "lean/evidence/native-hadamard-program-audit.md",
+      "bytes": 971,
+      "sha256": "2ed1c26afbf6f93651979032432a552affba05fc65fce5e0547cbd650c9964d8"
     },
     {
       "path": "lean/evidence/native-header-bits-audit.md",
@@ -1504,8 +1514,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 27093,
-      "sha256": "22785698ddd68319bbc72830d809539d424cf9a52f121dd5b7914c6aa7107de4"
+      "bytes": 27625,
+      "sha256": "e56831a0ed97fe450c8b1d9b5b9e3d3d28cc7b39eb84ad2e1dfd5435b69c5c65"
     },
     {
       "path": "tools/check_metadata.py",

@@ -164,3 +164,5 @@ import SectorSimulation.ZeroWirePhaseBoundary
 import SectorSimulation.SourcePhaseCompiler
 
 import SectorSimulation.ExactGaussianCNOTReplay
+
+import SectorSimulation.ExactHadamardProgram
