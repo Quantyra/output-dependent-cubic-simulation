@@ -21,6 +21,43 @@ The empty mask evaluates to `true`, representing the constant monomial. -/
 def evalMonomial {n : Nat} (m : Monomial n) (x : BinaryVector n) : Bool :=
   (List.finRange n).all fun i => !(m i) || x i
 
+/-- A bit-mask monomial is true exactly when all selected variables are true. -/
+theorem evalMonomial_eq_true_iff {n : Nat} (m : Monomial n) (x : BinaryVector n) :
+    evalMonomial m x = true ↔ ∀ i, m i = true → x i = true := by
+  simp only [evalMonomial, List.all_eq_true]
+  constructor
+  · intro h i hi
+    have selected := h i (List.mem_finRange i)
+    simpa [hi] using selected
+  · intro h i _
+    cases hi : m i with
+    | false => simp
+    | true => simp [h i hi]
+
+/-- The empty monomial mask is the multiplicative constant one. -/
+theorem evalMonomial_emptyMask {n : Nat} (x : BinaryVector n) :
+    evalMonomial (fun _ => false) x = true := by
+  apply (evalMonomial_eq_true_iff (fun _ => false) x).2
+  intro i impossible
+  cases impossible
+
+/-- Selected indices in canonical finite-vector order. -/
+def selectedVariables {n : Nat} (m : Monomial n) : List (Fin n) :=
+  (List.finRange n).filter fun i => m i
+
+/-- Bit-mask evaluation agrees with the product over its selected indices. -/
+theorem evalMonomial_selectedVariables {n : Nat} (m : Monomial n) (x : BinaryVector n) :
+    evalMonomial m x = (selectedVariables m).all x := by
+  apply Bool.eq_iff_iff.mpr
+  change (evalMonomial m x = true ↔ (selectedVariables m).all x = true)
+  rw [evalMonomial_eq_true_iff, List.all_eq_true]
+  constructor
+  · intro h i hi
+    have selected : m i = true := (List.mem_filter.mp hi).2
+    exact h i selected
+  · intro h i hi
+    exact h i (List.mem_filter.mpr ⟨List.mem_finRange i, hi⟩)
+
 /-- A list of monomial masks denotes their sum over the two-element field.
 Repeated masks cancel by XOR; lower and constant terms are retained. -/
 def evalPhase {n : Nat} (p : PhaseANF n) (x : BinaryVector n) : Bool :=
@@ -28,6 +65,11 @@ def evalPhase {n : Nat} (p : PhaseANF n) (x : BinaryVector n) : Bool :=
 
 def monomialDegree {n : Nat} (m : Monomial n) : Nat :=
   ((List.finRange n).filter fun i => m i).length
+
+/-- The mask degree is exactly the length of its selected-index list. -/
+theorem monomialDegree_eq_selectedLength {n : Nat} (m : Monomial n) :
+    monomialDegree m = (selectedVariables m).length := by
+  rfl
 
 def phaseWithinDegree {n : Nat} (bound : Nat) (p : PhaseANF n) : Bool :=
   p.all fun m => monomialDegree m ≤ bound

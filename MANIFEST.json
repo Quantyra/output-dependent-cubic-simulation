@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 1824,
-      "sha256": "40b3db75b2a3752fcfb356710ad20cbd551a99102540bc2be33f5ef96a3d3fcd"
+      "bytes": 2268,
+      "sha256": "add1b6b08835abc60484527836a60cb1df49cd936cb574e5117a071a26470f17"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 33584,
-      "sha256": "239ee2f8589e74bd3c91768fb2060e3786251390e82d5b510899e6d7c94f5c3a"
+      "bytes": 36895,
+      "sha256": "5163610ee6ebc583f1c3227e0cd13926633582de03cfd299424be6bd47e76262"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -154,8 +154,8 @@
     },
     {
       "path": "lean/SectorSimulation/BooleanSource.lean",
-      "bytes": 4501,
-      "sha256": "8343bb46249fdeba26a7e853c2ff4afc335e5dd6936970599fe2b73162e44b11"
+      "bytes": 6207,
+      "sha256": "bc7e9ab5b3b2d465e2846fb3ceaf5b2894508ac35dfdc23e0cb0d5ae2e382e06"
     },
     {
       "path": "lean/SectorSimulation/Derivative.lean",
@@ -184,8 +184,8 @@
     },
     {
       "path": "lean/evidence/anf-derivative-audit.md",
-      "bytes": 2039,
-      "sha256": "e21ddd0c54f939c7c45a318405b259b32ccfe30aaf783e6e920b1fdbea26dc8a"
+      "bytes": 2080,
+      "sha256": "56251b119db01a8363c2ff743c61500d76b7be424c3059901b1e41ed23325b18"
     },
     {
       "path": "lean/evidence/binary-shift-audit.md",
@@ -226,6 +226,11 @@
       "path": "lean/evidence/locked-environment.md",
       "bytes": 2670,
       "sha256": "4cd8920ddd484531df3dc39cdcaf4dd551817e7687c736ac38b23e7f764f7507"
+    },
+    {
+      "path": "lean/evidence/mask-semantics-audit.md",
+      "bytes": 1601,
+      "sha256": "aba6395c884b9a43c653a2750a1d055affed7dbd9f2038c920268e2fabe48e31"
     },
     {
       "path": "lean/evidence/monomial-difference-audit.md",
@@ -639,8 +644,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 2023,
-      "sha256": "5c0b11629b7b645d1b50451ab0f4f11cc6ff421e1a66c8703534857dbe0577ac"
+      "bytes": 2319,
+      "sha256": "5f7bc1f1f447a050319f2dfb006a265c90d2cad57420ce30e3c936c0258c9b04"
     },
     {
       "path": "tools/check_metadata.py",

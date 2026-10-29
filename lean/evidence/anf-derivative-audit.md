@@ -1,6 +1,6 @@
 # ANF fold and derivative distribution
 
-Target bridge: Boolean phase representation and derivative in sections 1?2 of https://doi.org/10.5281/zenodo.23754698. Source `lean/SectorSimulation/BooleanSource.lean` SHA-256 `8343bb46249fdeba26a7e853c2ff4afc335e5dd6936970599fe2b73162e44b11`.
+Target bridge: Boolean phase representation and derivative in sections 1?2 of https://doi.org/10.5281/zenodo.23754698. Audited historical source at commit `a7251db`, `lean/SectorSimulation/BooleanSource.lean`, SHA-256 `8343bb46249fdeba26a7e853c2ff4afc335e5dd6936970599fe2b73162e44b11`.
 
 The locked Lean 4.30.0 project built successfully (seven jobs). `lake env lean Audit.lean` and `tools/check_lean_audit.py` passed. The elaborated statements and transitive axiom reports are:
 

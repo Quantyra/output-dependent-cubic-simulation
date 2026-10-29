@@ -598,6 +598,75 @@
       "axioms": [],
       "build_audit_receipt": "lean/evidence/coordinate-monomial-audit.md",
       "unresolved_bridge": "Connect explicit coordinate products to arbitrary bit-mask monomial evaluation and construct a quadratic ANF with a proved degree bound."
+    },
+    {
+      "id": "mask-monomial-characterization",
+      "section": "1-2",
+      "target": "SectorSimulation.evalMonomial_eq_true_iff",
+      "assumptions": "Finite n, Boolean monomial mask and binary input as required by the declaration.",
+      "quantifiers": "All finite dimensions, masks and input vectors.",
+      "statement": "A bit-mask monomial is true exactly when every selected variable is true.",
+      "dependencies": [
+        "boolean-anf-representation"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mask-semantics-audit.md",
+      "unresolved_bridge": "Use the selected list and its degree bound to construct lower-degree derivative masks; connect descriptor decoding and native circuit semantics."
+    },
+    {
+      "id": "empty-mask-constant",
+      "section": "1-2",
+      "target": "SectorSimulation.evalMonomial_emptyMask",
+      "assumptions": "Finite n, Boolean monomial mask and binary input as required by the declaration.",
+      "quantifiers": "All finite dimensions, masks and input vectors.",
+      "statement": "The empty bit mask evaluates to true for every binary input.",
+      "dependencies": [
+        "boolean-anf-representation"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mask-semantics-audit.md",
+      "unresolved_bridge": "Use the selected list and its degree bound to construct lower-degree derivative masks; connect descriptor decoding and native circuit semantics."
+    },
+    {
+      "id": "mask-selected-product",
+      "section": "1-2",
+      "target": "SectorSimulation.evalMonomial_selectedVariables",
+      "assumptions": "Finite n, Boolean monomial mask and binary input as required by the declaration.",
+      "quantifiers": "All finite dimensions, masks and input vectors.",
+      "statement": "The bit-mask monomial evaluator equals the conjunction over its finite selected-index list.",
+      "dependencies": [
+        "boolean-anf-representation"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/mask-semantics-audit.md",
+      "unresolved_bridge": "Use the selected list and its degree bound to construct lower-degree derivative masks; connect descriptor decoding and native circuit semantics."
+    },
+    {
+      "id": "mask-degree-selected-length",
+      "section": "1-2",
+      "target": "SectorSimulation.monomialDegree_eq_selectedLength",
+      "assumptions": "Finite n, Boolean monomial mask and binary input as required by the declaration.",
+      "quantifiers": "All finite dimensions, masks and input vectors.",
+      "statement": "The monomial degree equals the length of the selected-index list.",
+      "dependencies": [
+        "boolean-anf-representation"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/mask-semantics-audit.md",
+      "unresolved_bridge": "Use the selected list and its degree bound to construct lower-degree derivative masks; connect descriptor decoding and native circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -34,3 +34,11 @@ import SectorSimulation
 #print axioms SectorSimulation.quadraticVariable_derivative
 #check SectorSimulation.cubicVariable_derivative
 #print axioms SectorSimulation.cubicVariable_derivative
+#check SectorSimulation.evalMonomial_eq_true_iff
+#print axioms SectorSimulation.evalMonomial_eq_true_iff
+#check SectorSimulation.evalMonomial_emptyMask
+#print axioms SectorSimulation.evalMonomial_emptyMask
+#check SectorSimulation.evalMonomial_selectedVariables
+#print axioms SectorSimulation.evalMonomial_selectedVariables
+#check SectorSimulation.monomialDegree_eq_selectedLength
+#print axioms SectorSimulation.monomialDegree_eq_selectedLength

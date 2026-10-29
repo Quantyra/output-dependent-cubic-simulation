@@ -21,6 +21,10 @@ EXPECTED = {
     'SectorSimulation.cubic_difference_expansion': set(),
     'SectorSimulation.quadraticVariable_derivative': set(),
     'SectorSimulation.cubicVariable_derivative': set(),
+    'SectorSimulation.evalMonomial_eq_true_iff': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalMonomial_emptyMask': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalMonomial_selectedVariables': {'propext', 'Quot.sound'},
+    'SectorSimulation.monomialDegree_eq_selectedLength': set(),
 }
 
 
