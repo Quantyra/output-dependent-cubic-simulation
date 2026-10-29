@@ -175,6 +175,26 @@ theorem realFourierScale_rpow (n : Nat) :
   have he : -(n : ℝ) / 2 = -((1 / 2 : ℝ) * n) := by ring
   rw [he, Real.rpow_neg (by norm_num), Real.rpow_mul_natCast (by norm_num), ← Real.sqrt_eq_rpow]
 
+
+/-- Modeled replay has the published complex Fourier normalization and sign. -/
+theorem nativePythonFourier_paper_kernel {n : Nat} (J : BinaryMatrix n)
+    (ops : List (RowOperation n)) (hp : gaussianRowProgram J = some ops)
+    (state : SharedDyadicState n) :
+    ∃ result, replayExactNative n (pythonFourierRecords ops) state = some result ∧
+      ∀ x, exactComplex (sharedAmplitude result x) =
+        (((2 : ℝ) ^ (-(n : ℝ) / 2) : ℝ) : ℂ) *
+        ((binaryBasis n).foldr (fun y acc =>
+          complexSigned (matrixPairingParity J x y) (exactComplex (sharedAmplitude state y)) + acc) 0) := by
+  obtain ⟨result, hr, hf⟩ := nativePythonFourier_complex_sum J ops hp state
+  refine ⟨result, hr, ?_⟩
+  intro x
+  have hs : ((((Real.sqrt 2 : ℝ) : ℂ) / 2)^n) =
+      (((2 : ℝ) ^ (-(n : ℝ) / 2) : ℝ) : ℂ) := by
+    rw [← realFourierScale_rpow]
+    push_cast
+    rfl
+  simpa only [hs] using hf x
+
 end SectorSimulation
 
 
@@ -213,3 +233,5 @@ end SectorSimulation
 #print axioms SectorSimulation.nativePythonFourier_complex_sum
 
 #print axioms SectorSimulation.realFourierScale_rpow
+
+#print axioms SectorSimulation.nativePythonFourier_paper_kernel
