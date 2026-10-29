@@ -1266,6 +1266,80 @@
       ],
       "build_audit_receipt": "lean/evidence/gaussian-checked-solver-audit.md",
       "unresolved_bridge": "Prove pivot reduction and return completeness for invertible matrices, finite-encoding runtime and the native circuit bridge."
+    },
+    {
+      "id": "pivot-entry",
+      "section": "2",
+      "target": "SectorSimulation.swap_pivot_entry",
+      "assumptions": "Finite source matrix and pivot/row hypotheses stated in the declaration.",
+      "quantifiers": "All dimensions, matrices and row/column indices as stated.",
+      "statement": "Swapping a row with a set pivot entry moves it to the diagonal.",
+      "dependencies": [
+        "pivot-search-sound",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-step-invariants-audit.md",
+      "unresolved_bridge": "Lift these single-step facts across the clearing list and successive columns; prove invertible-input completeness and operational cost."
+    },
+    {
+      "id": "pivot-clear-single",
+      "section": "2",
+      "target": "SectorSimulation.add_clears_column",
+      "assumptions": "Finite source matrix and pivot/row hypotheses stated in the declaration.",
+      "quantifiers": "All dimensions, matrices and row/column indices as stated.",
+      "statement": "XORing a set pivot row into a set target row clears the target pivot-column entry.",
+      "dependencies": [
+        "pivot-search-sound",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-step-invariants-audit.md",
+      "unresolved_bridge": "Lift these single-step facts across the clearing list and successive columns; prove invertible-input completeness and operational cost."
+    },
+    {
+      "id": "pivot-clear-selection",
+      "section": "2",
+      "target": "SectorSimulation.clearColumnOps_eligible",
+      "assumptions": "Finite source matrix and pivot/row hypotheses stated in the declaration.",
+      "quantifiers": "All dimensions, matrices and row/column indices as stated.",
+      "statement": "Every generated clearing operation targets a distinct row whose pivot-column entry is set.",
+      "dependencies": [
+        "pivot-search-sound",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-step-invariants-audit.md",
+      "unresolved_bridge": "Lift these single-step facts across the clearing list and successive columns; prove invertible-input completeness and operational cost."
+    },
+    {
+      "id": "pivot-clear-inclusion",
+      "section": "2",
+      "target": "SectorSimulation.clearColumnOps_contains",
+      "assumptions": "Finite source matrix and pivot/row hypotheses stated in the declaration.",
+      "quantifiers": "All dimensions, matrices and row/column indices as stated.",
+      "statement": "Every distinct row with a set pivot-column entry has its clearing operation included.",
+      "dependencies": [
+        "pivot-search-sound",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-step-invariants-audit.md",
+      "unresolved_bridge": "Lift these single-step facts across the clearing list and successive columns; prove invertible-input completeness and operational cost."
     }
   ],
   "paper_source": "manuscript/main.tex",

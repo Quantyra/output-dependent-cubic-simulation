@@ -73,6 +73,12 @@ EXPECTED = {
     'SectorSimulation.pivotPrograms_length': {'propext', 'Quot.sound'},
     'SectorSimulation.gaussianRowProgram_length': {'propext', 'Quot.sound'},
     'SectorSimulation.gaussianSolveChecked_sound': {'propext', 'Quot.sound'},
+    'SectorSimulation.swap_pivot_entry': {'propext'},
+    'SectorSimulation.add_clears_column': {'propext'},
+    'SectorSimulation.add_other_row_unchanged': {'propext'},
+    'SectorSimulation.add_preserves_pivot_row': {'propext'},
+    'SectorSimulation.clearColumnOps_contains': {'propext', 'Quot.sound'},
+    'SectorSimulation.clearColumnOps_eligible': {'propext', 'Quot.sound'},
 }
 
 

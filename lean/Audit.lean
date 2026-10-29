@@ -173,3 +173,21 @@ import SectorSimulation
 
 #check SectorSimulation.gaussianSolveChecked_sound
 #print axioms SectorSimulation.gaussianSolveChecked_sound
+
+#check SectorSimulation.swap_pivot_entry
+#print axioms SectorSimulation.swap_pivot_entry
+
+#check SectorSimulation.add_clears_column
+#print axioms SectorSimulation.add_clears_column
+
+#check SectorSimulation.add_other_row_unchanged
+#print axioms SectorSimulation.add_other_row_unchanged
+
+#check SectorSimulation.add_preserves_pivot_row
+#print axioms SectorSimulation.add_preserves_pivot_row
+
+#check SectorSimulation.clearColumnOps_contains
+#print axioms SectorSimulation.clearColumnOps_contains
+
+#check SectorSimulation.clearColumnOps_eligible
+#print axioms SectorSimulation.clearColumnOps_eligible
