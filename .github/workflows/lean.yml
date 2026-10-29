@@ -51,3 +51,6 @@ jobs:
       - name: Check modeled recognizer examples
         working-directory: lean
         run: lake env lean ModeledRecognizerExamples.lean
+
+      - name: Check Python-generated native source examples
+        run: python3 tools/check_python_lean_bridge.py

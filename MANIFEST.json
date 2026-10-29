@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/lean.yml",
-      "bytes": 1563,
-      "sha256": "430d55b7365259ae35483300e6e9891c264f521f9d89c3360f5e6efd8f5c48c0"
+      "bytes": 1679,
+      "sha256": "1a1839a27ac0edb4106c5ef6680ff117a149c81f41bc1ad0c3e5283c6d9291dc"
     },
     {
       "path": ".gitignore",
@@ -129,8 +129,8 @@
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 309700,
-      "sha256": "fdcadfdd115f5537cda4fd4649a7fe00ec3cadbcf7a7f15a5f0b3a98d6100d7a"
+      "bytes": 309549,
+      "sha256": "f24083c1066407f243cafbe97f37f512e5034c533e4f29f9a3056799009f0117"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -429,8 +429,8 @@
     },
     {
       "path": "lean/SectorSimulation/ModeledFourier.lean",
-      "bytes": 5381,
-      "sha256": "f86428ff1264e2b1cfe9bc172af43ec58c58685e50898c02869ced49a25a632c"
+      "bytes": 5604,
+      "sha256": "60674b1ea7acc27e7d166f6e7e0fd77df1509c0ba0bcc06214a04c49484188b1"
     },
     {
       "path": "lean/SectorSimulation/ModeledRecognizerCompleteness.lean",
@@ -1068,6 +1068,11 @@
       "sha256": "fdbd1259dfd08deaeafdcc0fdafc5ce4e27bc032e2dfdfffcec121270c97286a"
     },
     {
+      "path": "lean/evidence/python-ordered-fourier.md",
+      "bytes": 1829,
+      "sha256": "26f4a6933f38e328dcdfdc552bf45943a14d6cf824f1c38cbc825adb2b428dc0"
+    },
+    {
       "path": "lean/evidence/python-toffoli-template-check.md",
       "bytes": 822,
       "sha256": "e77c33c3c774c6a76a0f7811f10eb1224434abab192200cf251387cf7bf89520"
@@ -1586,6 +1591,11 @@
       "path": "tools/check_package.py",
       "bytes": 2808,
       "sha256": "f67d41dd9b13aac567a61bbcc5e379f2e5570d9a3e652cabb548f9cc1b534e07"
+    },
+    {
+      "path": "tools/check_python_lean_bridge.py",
+      "bytes": 1821,
+      "sha256": "246a253c0cdc462a258f369afa5191534007a82fbdd45e9abf63a8694c210211"
     },
     {
       "path": "tools/check_toffoli_template.py",

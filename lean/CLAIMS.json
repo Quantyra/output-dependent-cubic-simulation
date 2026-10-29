@@ -5158,7 +5158,7 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
     },
     {
@@ -5174,7 +5174,7 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
     },
     {
@@ -5191,7 +5191,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
     },
     {
@@ -5207,7 +5207,7 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
     },
     {
@@ -5223,7 +5223,7 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
     },
     {
@@ -5240,7 +5240,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-source-body-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Identify all-wire Hadamards with the normalized Fourier kernel and complex semantics, connect Python and header/basis input, establish runtime, full cost and manuscript theorems."
     },
     {
@@ -5256,7 +5256,7 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
     },
     {
@@ -5272,7 +5272,7 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
     },
     {
@@ -5288,7 +5288,7 @@
         "propext",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
     },
     {
@@ -5305,7 +5305,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
     },
     {
@@ -5322,7 +5322,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
     },
     {
@@ -5339,7 +5339,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/exact-native-header-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Tie header bits to the actual descriptor byte encoding and Python implementation; prove normalized Fourier and complex semantics, basis preparation, full costs and manuscript theorems."
     },
     {
@@ -5356,7 +5356,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/validated-header-replay-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Prove correspondence with the Python recognizer and compiler, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5373,7 +5373,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/validated-header-replay-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Prove correspondence with the Python recognizer and compiler, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5390,7 +5390,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/validated-header-replay-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Prove correspondence with the Python recognizer and compiler, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5407,7 +5407,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-recognizer-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Prove Python recognizer/compiler correspondence, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5424,7 +5424,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-recognizer-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Prove Python recognizer/compiler correspondence, normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5441,7 +5441,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5458,7 +5458,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5475,7 +5475,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5492,7 +5492,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5509,7 +5509,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     },
     {
@@ -5526,7 +5526,7 @@
         "Classical.choice",
         "Quot.sound"
       ],
-      "build_audit_receipt": "lean/evidence/modeled-recognizer-completeness-audit.md",
+      "build_audit_receipt": "lean/evidence/python-ordered-fourier.md",
       "unresolved_bridge": "Construct and verify the descriptor serializer and Python recognizer/compiler correspondence; prove normalized Fourier and complex semantics, basis preparation, runtime, full costs and manuscript theorems."
     }
   ],

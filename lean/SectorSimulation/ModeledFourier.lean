@@ -2,7 +2,7 @@ import SectorSimulation.ExactHadamardProgram
 namespace SectorSimulation
 
 def modeledFourier {n : Nat} (ops : List (RowOperation n)) (state : SharedDyadicState n) : SharedDyadicState n :=
-  runSharedCNOTs (rowProgramCNOTs ops).reverse (runSharedHadamards (List.finRange n) state)
+  runSharedHadamards (List.finRange n) (runSharedCNOTs (rowProgramCNOTs ops).reverse state)
 
 theorem sharedCNOTs_amplitude {n : Nat} (gates : List (CNOTRecord n))
     (state : SharedDyadicState n) (x : BinaryVector n) :
@@ -17,16 +17,19 @@ theorem sharedCNOTs_amplitude_congr {n : Nat} (gates : List (CNOTRecord n))
 theorem modeledFourier_amplitude_congr {n : Nat} (ops : List (RowOperation n))
     (a b : SharedDyadicState n) (h : ∀ x, sharedAmplitude a x = sharedAmplitude b x) (x : BinaryVector n) :
     sharedAmplitude (modeledFourier ops a) x = sharedAmplitude (modeledFourier ops b) x := by
-  apply sharedCNOTs_amplitude_congr
-  exact runSharedHadamards_congr (List.finRange n) a b h
+  apply runSharedHadamards_congr
+  exact sharedCNOTs_amplitude_congr (rowProgramCNOTs ops).reverse a b h
+
+def pythonFourierRecords {n : Nat} (ops : List (RowOperation n)) : List NativeGate :=
+  encodeCNOTProgram (rowProgramCNOTs ops).reverse ++ nativeHadamardRecords (List.finRange n)
 
 theorem exactNativeFourier_program {n : Nat} (J : BinaryMatrix n) (ops : List (RowOperation n))
     (hprog : gaussianRowProgram J = some ops) (state : SharedDyadicState n) :
-    replayExactNative n (nativeFourierRecords ops) state = some (modeledFourier ops state) := by
+    replayExactNative n (pythonFourierRecords ops) state = some (modeledFourier ops state) := by
   have hv : validCNOTs (rowProgramCNOTs ops).reverse := by
     intro g hg; exact rowProgramCNOTs_valid ops g (by simpa using hg)
-  simp only [nativeFourierRecords, replayExactNative_append, exactNativeHadamardProgram]
-  exact exactNativeCNOTProgram _ hv _
+  simp only [pythonFourierRecords, replayExactNative_append, exactNativeCNOTProgram _ hv _,
+    exactNativeHadamardProgram, Option.bind_some, modeledFourier]
 
 def sharedPhaseSign {n : Nat} (phase : PhaseANF n) (state : SharedDyadicState n) : SharedDyadicState n :=
   ⟨fun x => if evalPhase phase x then cycloNeg (state.numerator x) else state.numerator x, state.exponent⟩
@@ -49,7 +52,7 @@ def sourcePhaseAnchor {n : Nat} (d : CircuitDescriptor n) : Fin n :=
 def compileModeledSourceBody {n : Nat} (d : CircuitDescriptor n) (ops : List (RowOperation n)) : Option (List NativeGate) := do
   let first ← compilePhaseRecords (sourcePhaseAnchor d) d.firstPhase
   let second ← compilePhaseRecords (sourcePhaseAnchor d) d.secondPhase
-  some (nativeFourierRecords ops ++ first ++ nativeFourierRecords ops ++ second ++ nativeFourierRecords ops)
+  some (pythonFourierRecords ops ++ first ++ pythonFourierRecords ops ++ second ++ pythonFourierRecords ops)
 
 theorem compileModeledSourceBody_correct {n : Nat} (d : CircuitDescriptor n) (ops : List (RowOperation n))
     (hprog : gaussianRowProgram d.pairing = some ops) (cubic : phasesAreCubic d = true)
@@ -73,7 +76,7 @@ theorem compileModeledSourceBody_correct {n : Nat} (d : CircuitDescriptor n) (op
     have hh : sharedAmplitude p1 x = sharedAmplitude (sharedPhaseSign d.secondPhase f1) x := by
       simpa [sharedAmplitude, sharedPhaseSign] using ha1 x
     exact hh.trans (sharedPhaseSign_congr d.secondPhase f1 _ e1 x)
-  refine ⟨nativeFourierRecords ops ++ r0 ++ nativeFourierRecords ops ++ r1 ++ nativeFourierRecords ops,
+  refine ⟨pythonFourierRecords ops ++ r0 ++ pythonFourierRecords ops ++ r1 ++ pythonFourierRecords ops,
     modeledFourier ops p1, ?_, ?_, ?_⟩
   · simp [compileModeledSourceBody, hc0, hc1]
   · dsimp [f0] at hr0
