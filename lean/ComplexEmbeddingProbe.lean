@@ -93,4 +93,23 @@ theorem exactComplex_mul (a b : ExactAmplitude) :
 theorem exactComplex_one : exactComplex exactOne = 1 := by
   simp [exactComplex, exactOne, dyadicInterpret, dyadicOne, cycloInterpret, cycloOne]
 
+
+theorem exactComplex_hadamard :
+    exactComplex exactHadamardScale = ((Real.sqrt 2 : ℝ) : ℂ) / 2 := by
+  have hs : (Real.sqrt 2)^2 = (2 : ℝ) := Real.sq_sqrt (by norm_num)
+  apply Complex.ext <;>
+    simp [exactComplex, exactHadamardScale, dyadicInterpret, dyadicHadamardScale,
+      cycloInterpret, cycloSqrtTwo, standardOmega, Complex.mul_re, Complex.mul_im,
+      pow_succ, pow_zero] <;> nlinarith
+
+theorem exactComplex_iterateHadamardScale (k : Nat) (a : ExactAmplitude) :
+    exactComplex (iterateHadamardScale k a) =
+      ((((Real.sqrt 2 : ℝ) : ℂ) / 2)^k) * exactComplex a := by
+  induction k generalizing a with
+  | zero => simp [iterateHadamardScale]
+  | succ k ih =>
+    simp only [iterateHadamardScale]
+    rw [ih, exactComplex_mul, exactComplex_hadamard, pow_succ]
+    ring
+
 end SectorSimulation
