@@ -1,4 +1,8 @@
-import SectorSimulation.Derivative
+import SectorSimulation.BinaryShift
 
 #check SectorSimulation.booleanDerivative_shift_invariant
 #print axioms SectorSimulation.booleanDerivative_shift_invariant
+#check SectorSimulation.binaryShift_involutive
+#print axioms SectorSimulation.binaryShift_involutive
+#check SectorSimulation.binaryDerivative_shift_invariant
+#print axioms SectorSimulation.binaryDerivative_shift_invariant

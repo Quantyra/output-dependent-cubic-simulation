@@ -119,13 +119,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 159,
-      "sha256": "22d55e02947ac8016c090cc9e1df061268e0addd26ba508cb04b939a1a9ff844"
+      "bytes": 382,
+      "sha256": "9a68829d1b3c10925ff10b1bba623d982ba0408fd75d594c7388f12fdc0ab00b"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 11000,
-      "sha256": "3aebefc24292808fd11568036265c2ddc3f1352a08cb6b529e396f39aa0db18c"
+      "bytes": 11896,
+      "sha256": "c729f89c10e6380a50c7d6c868acf81cab997a831fe31851c0bc52c1fadbf5ab"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -139,13 +139,23 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 35,
-      "sha256": "6a352c5b0b8ccd8cd1e604abb255ca7e13695288d89f9eeaea3629670307a3fa"
+      "bytes": 71,
+      "sha256": "916fdeb25659c94be75ba36ef02ebf1e9abe9075f5cd75e7b98a9214f848f868"
+    },
+    {
+      "path": "lean/SectorSimulation/BinaryShift.lean",
+      "bytes": 818,
+      "sha256": "9eb7cee9f4274575bf0addaabb4c0ba52f1f4c1cf56c83d9ef72124a27e3208b"
     },
     {
       "path": "lean/SectorSimulation/Derivative.lean",
       "bytes": 791,
       "sha256": "4e31227d797ca77b5b196418ffc8566f7452b8b5fc317fea2dad93d5351b4d4c"
+    },
+    {
+      "path": "lean/evidence/binary-shift-audit.md",
+      "bytes": 1619,
+      "sha256": "a01e0a5cc7927886b9e30b67d1e109896fe4f53c8c9873771194088f3f092269"
     },
     {
       "path": "lean/evidence/derivative-core-audit.md",

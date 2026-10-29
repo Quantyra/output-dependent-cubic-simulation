@@ -242,6 +242,24 @@
       ],
       "status": "planned",
       "unresolved_bridge": "formalize the explicit upper-bound reduction without a lower-bound claim"
+    },
+    {
+      "id": "binary-derivative-invariance",
+      "section": "2",
+      "target": "SectorSimulation.binaryDerivative_shift_invariant",
+      "assumptions": "Any index type, Boolean-vector function and binary shift",
+      "quantifiers": "All index types, functions, shifts and input vectors, including empty types",
+      "statement": "The Boolean derivative is invariant under pointwise XOR by the same vector.",
+      "dependencies": [
+        "shift-derivative-invariance",
+        "SectorSimulation.binaryShift_involutive"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/binary-shift-audit.md",
+      "unresolved_bridge": "instantiate the index type as Fin n and connect Boolean phases and shift j=J^-1 e to the literal circuit semantics; the full sector proposition remains open"
     }
   ]
 }
