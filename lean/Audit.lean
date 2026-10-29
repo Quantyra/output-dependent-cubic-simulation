@@ -155,3 +155,9 @@ import SectorSimulation
 
 #check SectorSimulation.applyRowProgram_preserves
 #print axioms SectorSimulation.applyRowProgram_preserves
+
+#check SectorSimulation.findPivot_sound
+#print axioms SectorSimulation.findPivot_sound
+
+#check SectorSimulation.findPivot_none
+#print axioms SectorSimulation.findPivot_none

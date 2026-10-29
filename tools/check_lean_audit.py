@@ -67,6 +67,8 @@ EXPECTED = {
     'SectorSimulation.rowAdd_preserves_solutions': {'propext', 'Quot.sound'},
     'SectorSimulation.applyRowOperation_preserves': {'propext', 'Quot.sound'},
     'SectorSimulation.applyRowProgram_preserves': {'propext', 'Quot.sound'},
+    'SectorSimulation.findPivot_sound': {'propext'},
+    'SectorSimulation.findPivot_none': {'propext', 'Quot.sound'},
 }
 
 

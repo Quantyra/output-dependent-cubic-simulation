@@ -1193,6 +1193,41 @@
       ],
       "build_audit_receipt": "lean/evidence/matrix-row-program-audit.md",
       "unresolved_bridge": "Construct pivot selection and elimination, prove completeness and operational cost, and connect to native circuit semantics."
+    },
+    {
+      "id": "pivot-search-sound",
+      "section": "2",
+      "target": "SectorSimulation.findPivot_sound",
+      "assumptions": "Finite Boolean source matrix and column index.",
+      "quantifiers": "All dimensions, matrices, columns and rows as stated.",
+      "statement": "Every returned pivot is at or below the current column and has a set matrix entry.",
+      "dependencies": [
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-search-audit.md",
+      "unresolved_bridge": "The candidate pivot program is not yet proven to reduce invertible matrices or validated for operational cost, native source decoding or circuit semantics."
+    },
+    {
+      "id": "pivot-search-none",
+      "section": "2",
+      "target": "SectorSimulation.findPivot_none",
+      "assumptions": "Finite Boolean source matrix and column index.",
+      "quantifiers": "All dimensions, matrices, columns and rows as stated.",
+      "statement": "When pivot search fails, no eligible row has a set entry in the column.",
+      "dependencies": [
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-search-audit.md",
+      "unresolved_bridge": "The candidate pivot program is not yet proven to reduce invertible matrices or validated for operational cost, native source decoding or circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",
