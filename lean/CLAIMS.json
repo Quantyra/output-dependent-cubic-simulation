@@ -4928,6 +4928,68 @@
       ],
       "build_audit_receipt": "lean/evidence/phase-size-zero-audit.md",
       "unresolved_bridge": "Establish full compiler runtime and Python correspondence, decide a zero-wire observable/global-phase treatment, complex embedding, complete circuit behavior, manuscript cost and theorem claims."
+    },
+    {
+      "id": "source-phase-compiler-circuitDescriptor_has_wire",
+      "section": "2",
+      "target": "SectorSimulation.circuitDescriptor_has_wire",
+      "assumptions": "The defined circuit descriptor has a Fin-indexed measured output; both source phases pass the degree-three check where applicable.",
+      "quantifiers": "All modeled finite-dimensional source descriptors and represented initial states as applicable.",
+      "statement": "Every modeled circuit descriptor has at least one wire because it has a measured output.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/source-phase-compiler-audit.md",
+      "unresolved_bridge": "Establish Python source/compiler correspondence, complex embedding, complete circuit behavior including intervening operations, runtime and manuscript theorems."
+    },
+    {
+      "id": "source-phase-compiler-noZeroWireCircuitDescriptor",
+      "section": "2",
+      "target": "SectorSimulation.noZeroWireCircuitDescriptor",
+      "assumptions": "The defined circuit descriptor has a Fin-indexed measured output; both source phases pass the degree-three check where applicable.",
+      "quantifiers": "All modeled finite-dimensional source descriptors and represented initial states as applicable.",
+      "statement": "There is no modeled zero-wire circuit descriptor.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/source-phase-compiler-audit.md",
+      "unresolved_bridge": "Establish Python source/compiler correspondence, complex embedding, complete circuit behavior including intervening operations, runtime and manuscript theorems."
+    },
+    {
+      "id": "source-phase-compiler-phaseWithinDegree_sound",
+      "section": "2",
+      "target": "SectorSimulation.phaseWithinDegree_sound",
+      "assumptions": "The defined circuit descriptor has a Fin-indexed measured output; both source phases pass the degree-three check where applicable.",
+      "quantifiers": "All modeled finite-dimensional source descriptors and represented initial states as applicable.",
+      "statement": "A successful phase degree check implies every source monomial has the stated degree bound.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/source-phase-compiler-audit.md",
+      "unresolved_bridge": "Establish Python source/compiler correspondence, complex embedding, complete circuit behavior including intervening operations, runtime and manuscript theorems."
+    },
+    {
+      "id": "source-phase-compiler-circuitDescriptor_phase_compilation",
+      "section": "2",
+      "target": "SectorSimulation.circuitDescriptor_phase_compilation",
+      "assumptions": "The defined circuit descriptor has a Fin-indexed measured output; both source phases pass the degree-three check where applicable.",
+      "quantifiers": "All modeled finite-dimensional source descriptors and represented initial states as applicable.",
+      "statement": "Both phases of a cubic source descriptor compile to correct replayable native records, with at most 17 records per source monomial for each phase.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/source-phase-compiler-audit.md",
+      "unresolved_bridge": "Establish Python source/compiler correspondence, complex embedding, complete circuit behavior including intervening operations, runtime and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

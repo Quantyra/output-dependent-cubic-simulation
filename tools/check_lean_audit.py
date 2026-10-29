@@ -326,6 +326,10 @@ EXPECTED = {
     'SectorSimulation.replayExactNative_zero_nonempty': {'propext'},
     'SectorSimulation.zeroWireOne_not_negative': {'propext'},
     'SectorSimulation.noZeroWireNativeConstantSign': {'propext'},
+    'SectorSimulation.circuitDescriptor_has_wire': {'propext', 'Quot.sound'},
+    'SectorSimulation.noZeroWireCircuitDescriptor': set(),
+    'SectorSimulation.phaseWithinDegree_sound': {'propext', 'Quot.sound'},
+    'SectorSimulation.circuitDescriptor_phase_compilation': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

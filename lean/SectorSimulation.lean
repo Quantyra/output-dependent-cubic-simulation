@@ -160,3 +160,5 @@ import SectorSimulation.PhaseBlockCompiler
 
 import SectorSimulation.PhaseCompilerSize
 import SectorSimulation.ZeroWirePhaseBoundary
+
+import SectorSimulation.SourcePhaseCompiler

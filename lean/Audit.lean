@@ -861,3 +861,12 @@ import SectorSimulation
 #print axioms SectorSimulation.zeroWireOne_not_negative
 #check SectorSimulation.noZeroWireNativeConstantSign
 #print axioms SectorSimulation.noZeroWireNativeConstantSign
+
+#check SectorSimulation.circuitDescriptor_has_wire
+#print axioms SectorSimulation.circuitDescriptor_has_wire
+#check SectorSimulation.noZeroWireCircuitDescriptor
+#print axioms SectorSimulation.noZeroWireCircuitDescriptor
+#check SectorSimulation.phaseWithinDegree_sound
+#print axioms SectorSimulation.phaseWithinDegree_sound
+#check SectorSimulation.circuitDescriptor_phase_compilation
+#print axioms SectorSimulation.circuitDescriptor_phase_compilation
