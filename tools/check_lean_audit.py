@@ -159,6 +159,7 @@ EXPECTED = {
     'SectorSimulation.native_CNOT_step': {'propext'},
     'SectorSimulation.hadamardNumerator_squared': {'propext', 'Quot.sound'},
     'SectorSimulation.hadamard_CNOT_hadamard_numerator': {'propext', 'Quot.sound'},
+    'SectorSimulation.hadamard_Toffoli_hadamard_numerator': {'propext', 'Quot.sound'},
 }
 
 

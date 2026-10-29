@@ -2248,6 +2248,22 @@
       ],
       "build_audit_receipt": "lean/evidence/hadamard-integer-audit.md",
       "unresolved_bridge": "Establish normalized complex Hadamard and native gate replay, multiwire cubic phase, Python equivalence and full manuscript theorem claims."
+    },
+    {
+      "id": "hadamard-toffoli-cubic-numerator",
+      "section": "2",
+      "target": "SectorSimulation.hadamard_Toffoli_hadamard_numerator",
+      "assumptions": "Unnormalized Hadamard numerator and ideal Toffoli basis permutation on integer coefficient functions; each control differs from target.",
+      "quantifiers": "All finite dimensions, applicable wires, coefficient functions and basis vectors.",
+      "statement": "The unnormalized Hadamard-Toffoli-Hadamard sequence equals twice the cubic controlled-sign coefficient.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-phase-integer-audit.md",
+      "unresolved_bridge": "Establish actual decomposed Toffoli, normalized complex Hadamard and native gate replay, Python equivalence and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

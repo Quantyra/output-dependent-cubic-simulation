@@ -430,3 +430,6 @@ import SectorSimulation
 
 #check SectorSimulation.hadamard_CNOT_hadamard_numerator
 #print axioms SectorSimulation.hadamard_CNOT_hadamard_numerator
+
+#check SectorSimulation.hadamard_Toffoli_hadamard_numerator
+#print axioms SectorSimulation.hadamard_Toffoli_hadamard_numerator
