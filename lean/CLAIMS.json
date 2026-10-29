@@ -168,8 +168,11 @@
       "quantifiers": "all types, functions, involutions and inputs",
       "statement": "the Boolean derivative is invariant under the shift",
       "dependencies": [],
-      "status": "statement translated",
-      "unresolved_bridge": "kernel/build and axiom receipt; instantiate in binary vector circuit semantics"
+      "status": "proved and kernel checked",
+      "unresolved_bridge": "instantiate the helper in binary-vector circuit semantics; the full matched-sector proposition is not proved",
+      "source_commit": "44323c77db4cb9a976bd18f06068ab5dd9863643",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/derivative-core-audit.md"
     },
     {
       "id": "quadratic-gauss-evaluation",

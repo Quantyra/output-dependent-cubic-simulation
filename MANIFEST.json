@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 10807,
-      "sha256": "2f084219ec5f068cb0ba3afea75b6b57e8de90e0ee362578cc00a8f5f655d8fb"
+      "bytes": 11000,
+      "sha256": "3aebefc24292808fd11568036265c2ddc3f1352a08cb6b529e396f39aa0db18c"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
-      "bytes": 1878,
-      "sha256": "2f1a54962b77c4c7aebfad23a5fa984a150ee909ead631448f80c4d9a559cc97"
+      "bytes": 1974,
+      "sha256": "6c6abc70649baa519ae423ff662a487c748e27632052a398c526a82ac45191f9"
     },
     {
       "path": "lean/SEMANTICS.md",
@@ -146,6 +146,11 @@
       "path": "lean/SectorSimulation/Derivative.lean",
       "bytes": 791,
       "sha256": "4e31227d797ca77b5b196418ffc8566f7452b8b5fc317fea2dad93d5351b4d4c"
+    },
+    {
+      "path": "lean/evidence/derivative-core-audit.md",
+      "bytes": 1809,
+      "sha256": "ed1e16665a1c7cb76b84549b70a99375e00d8fde65fa896b4ef8f35ed8d68195"
     },
     {
       "path": "lean/lake-manifest.json",
