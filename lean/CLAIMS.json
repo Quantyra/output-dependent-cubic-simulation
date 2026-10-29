@@ -1769,6 +1769,45 @@
       ],
       "build_audit_receipt": "lean/evidence/numeric-header-sound-audit.md",
       "unresolved_bridge": "Prove Python byte/ASCII/JSON equivalence, descriptor decoding, canonical body replay and physical gate semantics."
+    },
+    {
+      "id": "raw-two-phase-validation-sound",
+      "section": "2",
+      "target": "SectorSimulation.rawDescriptorToValidated_valid",
+      "assumptions": "Lean numeric gate records and Lean JSON parsing; two-phase descriptor with natural-number fields.",
+      "quantifiers": "All modeled inputs and any returned descriptor.",
+      "statement": "Every descriptor returned by the modeled raw two-phase conversion satisfies sourceDescriptorValid.",
+      "dependencies": [
+        "source-descriptor-valid-correct"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-json-descriptor-audit.md",
+      "unresolved_bridge": "Establish Python parser and normalization equivalence, size guard, canonical gate-body replay, physical semantics and manuscript theorem claims."
+    },
+    {
+      "id": "decoded-two-phase-validation-sound",
+      "section": "2",
+      "target": "SectorSimulation.decodeValidatedHeader_valid",
+      "assumptions": "Lean numeric gate records and Lean JSON parsing; two-phase descriptor with natural-number fields.",
+      "quantifiers": "All modeled inputs and any returned descriptor.",
+      "statement": "Every descriptor returned by the modeled numeric-header, ASCII and Lean JSON decoding pipeline satisfies sourceDescriptorValid.",
+      "dependencies": [
+        "raw-two-phase-validation-sound",
+        "numeric-native-header-iff"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-json-descriptor-audit.md",
+      "unresolved_bridge": "Establish Python parser and normalization equivalence, size guard, canonical gate-body replay, physical semantics and manuscript theorem claims."
     }
   ],
   "paper_source": "manuscript/main.tex",

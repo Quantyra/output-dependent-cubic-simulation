@@ -35,3 +35,7 @@ jobs:
       - name: Check pivot examples
         working-directory: lean
         run: lake env lean PivotExamples.lean
+
+      - name: Check native JSON examples
+        working-directory: lean
+        run: lake env lean NativeJsonExamples.lean

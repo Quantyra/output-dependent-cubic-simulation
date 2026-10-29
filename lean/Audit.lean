@@ -344,3 +344,9 @@ import SectorSimulation
 
 #check SectorSimulation.numeric_native_header_iff
 #print axioms SectorSimulation.numeric_native_header_iff
+
+#check SectorSimulation.rawDescriptorToValidated_valid
+#print axioms SectorSimulation.rawDescriptorToValidated_valid
+
+#check SectorSimulation.decodeValidatedHeader_valid
+#print axioms SectorSimulation.decodeValidatedHeader_valid
