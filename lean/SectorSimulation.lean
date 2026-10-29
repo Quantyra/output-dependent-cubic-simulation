@@ -105,3 +105,5 @@ import SectorSimulation.DyadicMultiplication
 import SectorSimulation.DyadicAddition
 
 import SectorSimulation.DyadicQuotient
+
+import SectorSimulation.ExactHadamard

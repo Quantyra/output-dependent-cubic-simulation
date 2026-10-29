@@ -577,3 +577,9 @@ import SectorSimulation
 
 #check SectorSimulation.exactMul_comm
 #print axioms SectorSimulation.exactMul_comm
+
+#check SectorSimulation.sharedHadamard_numerator_squared
+#print axioms SectorSimulation.sharedHadamard_numerator_squared
+
+#check SectorSimulation.sharedHadamard_squared
+#print axioms SectorSimulation.sharedHadamard_squared

@@ -208,6 +208,8 @@ EXPECTED = {
     'SectorSimulation.exact_hadamard_scalar_normalization': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.exactAdd_comm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.exactMul_comm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHadamard_numerator_squared': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sharedHadamard_squared': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

@@ -3009,6 +3009,40 @@
       ],
       "build_audit_receipt": "lean/evidence/dyadic-quotient-audit.md",
       "unresolved_bridge": "Prove remaining quotient algebra laws and complex embedding, normalized Hadamard and native circuit semantics, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "shared-hadamard-sharedHadamard_numerator_squared",
+      "section": "2",
+      "target": "SectorSimulation.sharedHadamard_numerator_squared",
+      "assumptions": "Exact eighth-root integer numerator states with a shared power-of-two denominator and the defined Hadamard action.",
+      "quantifiers": "All finite dimensions, wires, represented shared-denominator states and basis vectors.",
+      "statement": "Two modeled normalized shared-denominator Hadamards multiply each numerator by four.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-hadamard-audit.md",
+      "unresolved_bridge": "Prove complex embedding, representation independence and general state coverage, native gate replay, full circuit and manuscript theorems."
+    },
+    {
+      "id": "shared-hadamard-sharedHadamard_squared",
+      "section": "2",
+      "target": "SectorSimulation.sharedHadamard_squared",
+      "assumptions": "Exact eighth-root integer numerator states with a shared power-of-two denominator and the defined Hadamard action.",
+      "quantifiers": "All finite dimensions, wires, represented shared-denominator states and basis vectors.",
+      "statement": "Two modeled normalized shared-denominator Hadamards restore every quotient-valued amplitude.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-hadamard-audit.md",
+      "unresolved_bridge": "Prove complex embedding, representation independence and general state coverage, native gate replay, full circuit and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
