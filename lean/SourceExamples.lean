@@ -1,4 +1,4 @@
-import SectorSimulation.SourceValidation
+import SectorSimulation.NativeHeaderBits
 
 open SectorSimulation
 
@@ -31,3 +31,8 @@ def asymmetricDescriptor : CircuitDescriptor 2 :=
 #guard sourceDescriptorValid validDescriptor
 #guard !sourceDescriptorValid singularDescriptor
 #guard !sourceDescriptorValid asymmetricDescriptor
+
+
+#guard decodeHeaderBits [.x0, .x0, .z0, .z0, .h0, .h0, .other] == some ([false, true], [.other])
+#guard (decodeHeaderBits [.x0, .z0, .h0, .h0]).isNone
+#guard (decodeHeaderBits [.x0, .x0]).isNone

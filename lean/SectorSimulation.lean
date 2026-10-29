@@ -51,3 +51,5 @@ import SectorSimulation.PivotComplete
 import SectorSimulation.SourceOutputPivot
 
 import SectorSimulation.SourceValidation
+
+import SectorSimulation.NativeHeaderBits

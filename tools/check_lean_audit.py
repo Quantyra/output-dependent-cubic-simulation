@@ -112,6 +112,8 @@ EXPECTED = {
     'SectorSimulation.matrixSymmetric_correct': {'propext', 'Quot.sound'},
     'SectorSimulation.sourceDescriptorValid_correct': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.validatedSourceOutputDerivative': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.decode_encode_header_bits': {'propext'},
+    'SectorSimulation.encoded_header_length': {'propext'},
 }
 
 

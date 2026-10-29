@@ -1604,6 +1604,21 @@
       ],
       "build_audit_receipt": "lean/evidence/source-validation-audit.md",
       "unresolved_bridge": "Verify finite-encoding runtime, byte decoding and native gate replay, circuit/Walsh/sector semantics and paper theorems."
+    },
+    {
+      "id": "header-bit-roundtrip",
+      "section": "2",
+      "target": "SectorSimulation.decode_encode_header_bits",
+      "assumptions": "Abstract wire-zero X, Z and H header-record tags, with an arbitrary subsequent body.",
+      "quantifiers": "All finite bit lists and body-tag lists.",
+      "statement": "The bit-level header parser recovers every encoded bit list and leaves the following body unchanged.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/native-header-bits-audit.md",
+      "unresolved_bridge": "Connect abstract tags to complete native gate records, ASCII/JSON byte encoding, descriptor validation, canonical body replay and physical circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

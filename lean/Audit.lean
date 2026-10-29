@@ -290,3 +290,9 @@ import SectorSimulation
 
 #check SectorSimulation.validatedSourceOutputDerivative
 #print axioms SectorSimulation.validatedSourceOutputDerivative
+
+#check SectorSimulation.decode_encode_header_bits
+#print axioms SectorSimulation.decode_encode_header_bits
+
+#check SectorSimulation.encoded_header_length
+#print axioms SectorSimulation.encoded_header_length
