@@ -414,6 +414,11 @@ EXPECTED = {
     'SectorSimulation.exactAdd_assoc': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.exactSub_eq_add_neg': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.exactMul_assoc': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.cycloScale_add': {'propext'},
+    'SectorSimulation.cycloMul_scale_right': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.dyadicMultiply_add_equiv': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.exactMul_add': {'Classical.choice', 'Quot.sound', 'propext'},
+    'SectorSimulation.exactAdd_mul': {'Classical.choice', 'Quot.sound', 'propext'},
 }
 
 

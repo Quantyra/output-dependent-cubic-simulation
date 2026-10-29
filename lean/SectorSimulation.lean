@@ -202,3 +202,5 @@ import SectorSimulation.ByteCanonicalRecognizer
 import SectorSimulation.HadamardKernel
 
 import SectorSimulation.ExactWalshAlgebra
+
+import SectorSimulation.ExactDistributivity

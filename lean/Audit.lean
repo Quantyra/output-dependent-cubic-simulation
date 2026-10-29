@@ -1096,3 +1096,18 @@ import SectorSimulation
 
 #check SectorSimulation.exactMul_assoc
 #print axioms SectorSimulation.exactMul_assoc
+
+#check SectorSimulation.cycloScale_add
+#print axioms SectorSimulation.cycloScale_add
+
+#check SectorSimulation.cycloMul_scale_right
+#print axioms SectorSimulation.cycloMul_scale_right
+
+#check SectorSimulation.dyadicMultiply_add_equiv
+#print axioms SectorSimulation.dyadicMultiply_add_equiv
+
+#check SectorSimulation.exactMul_add
+#print axioms SectorSimulation.exactMul_add
+
+#check SectorSimulation.exactAdd_mul
+#print axioms SectorSimulation.exactAdd_mul

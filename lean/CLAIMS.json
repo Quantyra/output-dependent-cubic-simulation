@@ -6464,6 +6464,99 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-walsh-algebra.md",
       "unresolved_bridge": "Prove distributivity, closed normalized Walsh-sum semantics, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "exact-distributivity-cycloScale_add",
+      "section": "2",
+      "target": "SectorSimulation.cycloScale_add",
+      "assumptions": "Lean cyclotomic coefficients, dyadic equivalence and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable coefficients and exact amplitudes.",
+      "statement": "Cyclotomic scaling distributes over cyclotomic addition.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-distributivity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "exact-distributivity-cycloMul_scale_right",
+      "section": "2",
+      "target": "SectorSimulation.cycloMul_scale_right",
+      "assumptions": "Lean cyclotomic coefficients, dyadic equivalence and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable coefficients and exact amplitudes.",
+      "statement": "Cyclotomic multiplication commutes with scaling of its right argument.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-distributivity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "exact-distributivity-dyadicMultiply_add_equiv",
+      "section": "2",
+      "target": "SectorSimulation.dyadicMultiply_add_equiv",
+      "assumptions": "Lean cyclotomic coefficients, dyadic equivalence and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable coefficients and exact amplitudes.",
+      "statement": "Dyadic multiplication distributes over dyadic addition up to denominator equivalence.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-distributivity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "exact-distributivity-exactMul_add",
+      "section": "2",
+      "target": "SectorSimulation.exactMul_add",
+      "assumptions": "Lean cyclotomic coefficients, dyadic equivalence and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable coefficients and exact amplitudes.",
+      "statement": "Exact-amplitude multiplication distributes over addition on the left.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-distributivity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
+    },
+    {
+      "id": "exact-distributivity-exactAdd_mul",
+      "section": "2",
+      "target": "SectorSimulation.exactAdd_mul",
+      "assumptions": "Lean cyclotomic coefficients, dyadic equivalence and exact-amplitude quotient as applicable.",
+      "quantifiers": "All applicable coefficients and exact amplitudes.",
+      "statement": "Exact-amplitude multiplication distributes over addition on the right.",
+      "dependencies": [
+        "boolean-polynomial-semantics"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-distributivity.md",
+      "unresolved_bridge": "Derive the closed normalized Walsh-sum formula, complex embedding, Python correspondence, sector identities and costs."
     }
   ],
   "paper_source": "manuscript/main.tex",
