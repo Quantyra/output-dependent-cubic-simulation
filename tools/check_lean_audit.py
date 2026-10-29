@@ -551,6 +551,8 @@ EXPECTED = {
     'SectorSimulation.canonicalPhaseANF_correct': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.canonicalPhaseANF_degree': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.canonicalPhaseANF_walshSum': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_reindex': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_canonicalized': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

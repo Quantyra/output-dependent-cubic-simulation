@@ -1939,8 +1939,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 46378,
-      "sha256": "861560d16de3850f457cc581d9fc237f9561c7bbfbbbaf11749de12ba502ee32"
+      "bytes": 46572,
+      "sha256": "3c8230f18d98bc6d30ffec574971d4b47e81d74780c978317eab98bce5ba310b"
     },
     {
       "path": "tools/check_metadata.py",
