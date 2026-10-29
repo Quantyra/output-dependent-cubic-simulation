@@ -1399,6 +1399,27 @@
       ],
       "build_audit_receipt": "lean/evidence/prior-column-invariant-audit.md",
       "unresolved_bridge": "Induct over the full pivot sequence, prove pivot existence for invertible inputs, output correctness and operational costs."
+    },
+    {
+      "id": "pivot-program-identity",
+      "section": "2",
+      "target": "SectorSimulation.gaussianRowProgram_reduces_to_identity",
+      "assumptions": "The actual full pivot generator returns an operation list.",
+      "quantifiers": "All finite dimensions, binary matrices and successfully returned programs.",
+      "statement": "Executing a successfully returned full pivot program reduces its input matrix to the identity matrix.",
+      "dependencies": [
+        "clear-program-column",
+        "pivot-preserves-prior-column",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-program-correct-audit.md",
+      "unresolved_bridge": "Prove successful pivot generation for invertible matrices, derive complete solving and operational cost on finite encodings; native circuit and manuscript theorem certifications remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",

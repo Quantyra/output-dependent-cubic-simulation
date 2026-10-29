@@ -218,3 +218,21 @@ import SectorSimulation
 
 #check SectorSimulation.pivotStep_preserves_prior_unit
 #print axioms SectorSimulation.pivotStep_preserves_prior_unit
+
+#check SectorSimulation.rowProgram_matrix_independent
+#print axioms SectorSimulation.rowProgram_matrix_independent
+
+#check SectorSimulation.rowProgram_append
+#print axioms SectorSimulation.rowProgram_append
+
+#check SectorSimulation.pivotPrograms_preserves_prior_unit
+#print axioms SectorSimulation.pivotPrograms_preserves_prior_unit
+
+#check SectorSimulation.pivotStep_sets_unit
+#print axioms SectorSimulation.pivotStep_sets_unit
+
+#check SectorSimulation.pivotPrograms_processed_unit
+#print axioms SectorSimulation.pivotPrograms_processed_unit
+
+#check SectorSimulation.gaussianRowProgram_reduces_to_identity
+#print axioms SectorSimulation.gaussianRowProgram_reduces_to_identity

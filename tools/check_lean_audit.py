@@ -88,6 +88,12 @@ EXPECTED = {
     'SectorSimulation.clearProgram_preserves_zero_source_column': {'propext', 'Quot.sound'},
     'SectorSimulation.swap_preserves_unit_column': {'propext'},
     'SectorSimulation.pivotStep_preserves_prior_unit': {'propext', 'Quot.sound'},
+    'SectorSimulation.rowProgram_matrix_independent': {'propext'},
+    'SectorSimulation.rowProgram_append': {'propext', 'Quot.sound'},
+    'SectorSimulation.pivotPrograms_preserves_prior_unit': {'propext', 'Quot.sound'},
+    'SectorSimulation.pivotStep_sets_unit': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.pivotPrograms_processed_unit': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.gaussianRowProgram_reduces_to_identity': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

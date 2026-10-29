@@ -37,3 +37,5 @@ import SectorSimulation.ClearProgramInvariant
 import SectorSimulation.ClearColumnComplete
 
 import SectorSimulation.PriorColumnInvariant
+
+import SectorSimulation.PivotProgramCorrect
