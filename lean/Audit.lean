@@ -149,3 +149,9 @@ import SectorSimulation
 
 #check SectorSimulation.rowAdd_preserves_solutions
 #print axioms SectorSimulation.rowAdd_preserves_solutions
+
+#check SectorSimulation.applyRowOperation_preserves
+#print axioms SectorSimulation.applyRowOperation_preserves
+
+#check SectorSimulation.applyRowProgram_preserves
+#print axioms SectorSimulation.applyRowProgram_preserves

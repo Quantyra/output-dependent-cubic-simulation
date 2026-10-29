@@ -21,3 +21,5 @@ import SectorSimulation.ExhaustiveMatrixSolve
 import SectorSimulation.SourceOutputDerivative
 
 import SectorSimulation.MatrixRowOperations
+
+import SectorSimulation.MatrixRowProgram

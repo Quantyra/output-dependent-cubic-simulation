@@ -65,6 +65,8 @@ EXPECTED = {
     'SectorSimulation.rowAdd_equation': {'propext', 'Quot.sound'},
     'SectorSimulation.vectorAddRow_involutive': {'propext', 'Quot.sound'},
     'SectorSimulation.rowAdd_preserves_solutions': {'propext', 'Quot.sound'},
+    'SectorSimulation.applyRowOperation_preserves': {'propext', 'Quot.sound'},
+    'SectorSimulation.applyRowProgram_preserves': {'propext', 'Quot.sound'},
 }
 
 

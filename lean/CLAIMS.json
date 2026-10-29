@@ -1174,6 +1174,25 @@
       ],
       "build_audit_receipt": "lean/evidence/matrix-row-operations-audit.md",
       "unresolved_bridge": "Construct and prove pivot selection, elimination, inverse validation, bit-cost, and native circuit semantics."
+    },
+    {
+      "id": "row-program-solutions",
+      "section": "2",
+      "target": "SectorSimulation.applyRowProgram_preserves",
+      "assumptions": "The executable row program consists of swaps and row additions; addition to the same row is defined as a no-op.",
+      "quantifiers": "All finite dimensions, operation lists, matrices and vectors.",
+      "statement": "Executing any finite row-operation program on a matrix and target preserves exactly the original equation solution set.",
+      "dependencies": [
+        "row-swap-solutions",
+        "row-add-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/matrix-row-program-audit.md",
+      "unresolved_bridge": "Construct pivot selection and elimination, prove completeness and operational cost, and connect to native circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",
