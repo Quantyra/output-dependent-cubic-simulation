@@ -1636,6 +1636,44 @@
       ],
       "build_audit_receipt": "lean/evidence/native-header-sound-audit.md",
       "unresolved_bridge": "Connect abstract tags to full gate records, byte and JSON decoding, descriptor validation, canonical body replay and physical semantics."
+    },
+    {
+      "id": "native-gate-header-roundtrip",
+      "section": "2",
+      "target": "SectorSimulation.decode_encode_native_header",
+      "assumptions": "Native gate records represented by a tag string and finite wire list.",
+      "quantifiers": "All finite bit lists, gate-record lists and bodies as stated.",
+      "statement": "The full gate-record parser recovers encoded header bits and leaves every following gate record intact.",
+      "dependencies": [
+        "header-bit-roundtrip",
+        "header-bit-parser-sound"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-gate-header-audit.md",
+      "unresolved_bridge": "Verify byte alignment, ASCII/JSON serialization, descriptor decoding, canonical body replay and gate denotation."
+    },
+    {
+      "id": "native-gate-header-sound",
+      "section": "2",
+      "target": "SectorSimulation.decode_native_header_sound",
+      "assumptions": "Native gate records represented by a tag string and finite wire list.",
+      "quantifiers": "All finite bit lists, gate-record lists and bodies as stated.",
+      "statement": "Every accepted gate-record header has exactly the canonical X/Z bit pairs, H terminator and returned body.",
+      "dependencies": [
+        "header-bit-roundtrip",
+        "header-bit-parser-sound"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/native-gate-header-audit.md",
+      "unresolved_bridge": "Verify byte alignment, ASCII/JSON serialization, descriptor decoding, canonical body replay and gate denotation."
     }
   ],
   "paper_source": "manuscript/main.tex",

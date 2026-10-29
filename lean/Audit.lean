@@ -299,3 +299,12 @@ import SectorSimulation
 
 #check SectorSimulation.decode_header_bits_sound
 #print axioms SectorSimulation.decode_header_bits_sound
+
+#check SectorSimulation.decode_encode_native_header
+#print axioms SectorSimulation.decode_encode_native_header
+
+#check SectorSimulation.native_header_length
+#print axioms SectorSimulation.native_header_length
+
+#check SectorSimulation.decode_native_header_sound
+#print axioms SectorSimulation.decode_native_header_sound

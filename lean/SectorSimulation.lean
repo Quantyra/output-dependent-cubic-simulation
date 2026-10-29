@@ -55,3 +55,5 @@ import SectorSimulation.SourceValidation
 import SectorSimulation.NativeHeaderBits
 
 import SectorSimulation.NativeHeaderSound
+
+import SectorSimulation.NativeGateHeader

@@ -1,4 +1,4 @@
-import SectorSimulation.NativeHeaderBits
+import SectorSimulation.NativeGateHeader
 
 open SectorSimulation
 
@@ -36,3 +36,8 @@ def asymmetricDescriptor : CircuitDescriptor 2 :=
 #guard decodeHeaderBits [.x0, .x0, .z0, .z0, .h0, .h0, .other] == some ([false, true], [.other])
 #guard (decodeHeaderBits [.x0, .z0, .h0, .h0]).isNone
 #guard (decodeHeaderBits [.x0, .x0]).isNone
+
+
+#guard decodeNativeHeader (encodeNativeHeader [false, true] ++ [⟨"CX", [2, 1]⟩]) == some ([false, true], [⟨"CX", [2, 1]⟩])
+#guard (decodeNativeHeader [⟨"X", [1]⟩, ⟨"X", [1]⟩, nativeH0, nativeH0]).isNone
+#guard (decodeNativeHeader [nativeX0, nativeZ0, nativeH0, nativeH0]).isNone
