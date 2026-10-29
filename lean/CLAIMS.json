@@ -1693,6 +1693,43 @@
       ],
       "build_audit_receipt": "lean/evidence/native-header-bytes-audit.md",
       "unresolved_bridge": "Prove numeric-byte and ASCII/JSON equivalence, accepted-input byte-parser soundness, canonical body replay and physical circuit semantics."
+    },
+    {
+      "id": "native-byte-header-sound",
+      "section": "2",
+      "target": "SectorSimulation.native_byte_header_sound",
+      "assumptions": "The actual byte-field or composed native gate header parser accepts.",
+      "quantifiers": "All finite input bit and gate lists and returned byte fields and bodies.",
+      "statement": "Every accepted gate-record byte header equals the canonical encoding of its returned byte fields followed by the returned body.",
+      "dependencies": [
+        "native-byte-header-roundtrip",
+        "native-gate-header-sound"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/native-header-byte-sound-audit.md",
+      "unresolved_bridge": "Prove numeric-byte and ASCII/JSON equivalence, descriptor decoding, canonical body replay and physical circuit semantics."
+    },
+    {
+      "id": "header-byte-alignment",
+      "section": "2",
+      "target": "SectorSimulation.parsed_header_bits_length",
+      "assumptions": "The actual byte-field or composed native gate header parser accepts.",
+      "quantifiers": "All finite input bit and gate lists and returned byte fields and bodies.",
+      "statement": "Every bit list accepted as byte fields has exactly eight bits per returned byte.",
+      "dependencies": [
+        "native-byte-header-roundtrip",
+        "native-gate-header-sound"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/native-header-byte-sound-audit.md",
+      "unresolved_bridge": "Prove numeric-byte and ASCII/JSON equivalence, descriptor decoding, canonical body replay and physical circuit semantics."
     }
   ],
   "paper_source": "manuscript/main.tex",

@@ -121,6 +121,9 @@ EXPECTED = {
     'SectorSimulation.parse_header_bytes_roundtrip': {'propext'},
     'SectorSimulation.native_byte_header_roundtrip': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.native_byte_header_rejects_incomplete': {'propext'},
+    'SectorSimulation.parse_header_bytes_sound': {'propext'},
+    'SectorSimulation.native_byte_header_sound': {'propext'},
+    'SectorSimulation.parsed_header_bits_length': {'propext', 'Quot.sound'},
 }
 
 

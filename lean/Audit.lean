@@ -317,3 +317,12 @@ import SectorSimulation
 
 #check SectorSimulation.native_byte_header_rejects_incomplete
 #print axioms SectorSimulation.native_byte_header_rejects_incomplete
+
+#check SectorSimulation.parse_header_bytes_sound
+#print axioms SectorSimulation.parse_header_bytes_sound
+
+#check SectorSimulation.native_byte_header_sound
+#print axioms SectorSimulation.native_byte_header_sound
+
+#check SectorSimulation.parsed_header_bits_length
+#print axioms SectorSimulation.parsed_header_bits_length
