@@ -236,3 +236,18 @@ import SectorSimulation
 
 #check SectorSimulation.gaussianRowProgram_reduces_to_identity
 #print axioms SectorSimulation.gaussianRowProgram_reduces_to_identity
+
+#check SectorSimulation.identityFold_absent
+#print axioms SectorSimulation.identityFold_absent
+
+#check SectorSimulation.identityFold_present
+#print axioms SectorSimulation.identityFold_present
+
+#check SectorSimulation.matrixApply_identity
+#print axioms SectorSimulation.matrixApply_identity
+
+#check SectorSimulation.successfulProgram_solves_all_targets
+#print axioms SectorSimulation.successfulProgram_solves_all_targets
+
+#check SectorSimulation.gaussianSolveChecked_returns_of_program
+#print axioms SectorSimulation.gaussianSolveChecked_returns_of_program

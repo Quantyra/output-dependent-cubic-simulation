@@ -94,6 +94,11 @@ EXPECTED = {
     'SectorSimulation.pivotStep_sets_unit': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.pivotPrograms_processed_unit': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.gaussianRowProgram_reduces_to_identity': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.identityFold_absent': {'propext'},
+    'SectorSimulation.identityFold_present': {'propext'},
+    'SectorSimulation.matrixApply_identity': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.successfulProgram_solves_all_targets': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.gaussianSolveChecked_returns_of_program': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

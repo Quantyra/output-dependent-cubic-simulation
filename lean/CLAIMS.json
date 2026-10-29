@@ -1420,6 +1420,27 @@
       ],
       "build_audit_receipt": "lean/evidence/pivot-program-correct-audit.md",
       "unresolved_bridge": "Prove successful pivot generation for invertible matrices, derive complete solving and operational cost on finite encodings; native circuit and manuscript theorem certifications remain open."
+    },
+    {
+      "id": "pivot-solver-conditional-completeness",
+      "section": "2",
+      "target": "SectorSimulation.gaussianSolveChecked_returns_of_program",
+      "assumptions": "The actual full pivot generator returns a row program.",
+      "quantifiers": "All finite dimensions, matrices, returned programs and target vectors.",
+      "statement": "For every target, the checked solver returns the transformed target whenever the full pivot generator succeeds.",
+      "dependencies": [
+        "pivot-program-identity",
+        "gaussian-checked-sound",
+        "row-program-solutions"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/pivot-solve-correct-audit.md",
+      "unresolved_bridge": "Prove generator success for all invertible matrices and finite-encoding runtime; connect source decoding, native circuit semantics and paper theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
