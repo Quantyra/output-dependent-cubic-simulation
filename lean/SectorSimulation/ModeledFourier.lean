@@ -43,9 +43,12 @@ def modeledSourceBody {n : Nat} (d : CircuitDescriptor n) (ops : List (RowOperat
   modeledFourier ops (sharedPhaseSign d.secondPhase
     (modeledFourier ops (sharedPhaseSign d.firstPhase (modeledFourier ops state))))
 
+def sourcePhaseAnchor {n : Nat} (d : CircuitDescriptor n) : Fin n :=
+  ⟨0, Nat.zero_lt_of_lt d.output.isLt⟩
+
 def compileModeledSourceBody {n : Nat} (d : CircuitDescriptor n) (ops : List (RowOperation n)) : Option (List NativeGate) := do
-  let first ← compilePhaseRecords d.output d.firstPhase
-  let second ← compilePhaseRecords d.output d.secondPhase
+  let first ← compilePhaseRecords (sourcePhaseAnchor d) d.firstPhase
+  let second ← compilePhaseRecords (sourcePhaseAnchor d) d.secondPhase
   some (nativeFourierRecords ops ++ first ++ nativeFourierRecords ops ++ second ++ nativeFourierRecords ops)
 
 theorem compileModeledSourceBody_correct {n : Nat} (d : CircuitDescriptor n) (ops : List (RowOperation n))
@@ -57,9 +60,9 @@ theorem compileModeledSourceBody_correct {n : Nat} (d : CircuitDescriptor n) (op
   have hd1 := phaseWithinDegree_sound d.firstPhase (Bool.and_eq_true_iff.mp cubic).1
   have hd2 := phaseWithinDegree_sound d.secondPhase (Bool.and_eq_true_iff.mp cubic).2
   let f0 := modeledFourier ops state
-  obtain ⟨r0, p0, hc0, hr0, ha0⟩ := compilePhaseRecords_correct d.output d.firstPhase hd1 f0
+  obtain ⟨r0, p0, hc0, hr0, ha0⟩ := compilePhaseRecords_correct (sourcePhaseAnchor d) d.firstPhase hd1 f0
   let f1 := modeledFourier ops p0
-  obtain ⟨r1, p1, hc1, hr1, ha1⟩ := compilePhaseRecords_correct d.output d.secondPhase hd2 f1
+  obtain ⟨r1, p1, hc1, hr1, ha1⟩ := compilePhaseRecords_correct (sourcePhaseAnchor d) d.secondPhase hd2 f1
   have e0 : ∀ x, sharedAmplitude p0 x = sharedAmplitude (sharedPhaseSign d.firstPhase f0) x := by
     intro x; simpa [sharedAmplitude, sharedPhaseSign] using ha0 x
   have e1 : ∀ x, sharedAmplitude f1 x = sharedAmplitude (modeledFourier ops (sharedPhaseSign d.firstPhase f0)) x :=

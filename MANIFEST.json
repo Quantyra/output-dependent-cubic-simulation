@@ -139,8 +139,8 @@
     },
     {
       "path": "lean/ModeledRecognizerExamples.lean",
-      "bytes": 876,
-      "sha256": "ef6d3b41dd28f0c40937abd676966e7218622b1c39c5a3880036e25e3c465f2d"
+      "bytes": 1264,
+      "sha256": "3c75f9de750a81f5f0d9e57147e5b7a7ba6a3b42564ab959e27e02a2b712e54e"
     },
     {
       "path": "lean/NativeJsonExamples.lean",
@@ -429,8 +429,8 @@
     },
     {
       "path": "lean/SectorSimulation/ModeledFourier.lean",
-      "bytes": 5216,
-      "sha256": "a48a283be5dfef8aab3879ac2c8414ddf90e38ca3a288a4ab55566473e52415e"
+      "bytes": 5381,
+      "sha256": "f86428ff1264e2b1cfe9bc172af43ec58c58685e50898c02869ced49a25a632c"
     },
     {
       "path": "lean/SectorSimulation/ModeledRecognizerCompleteness.lean",
@@ -691,6 +691,11 @@
       "path": "lean/evidence/combined-phase-native-audit.md",
       "bytes": 1081,
       "sha256": "a0aac31e509efa8a9d047a2c280f060f992280f056ac40a2f4650c48ad869c5a"
+    },
+    {
+      "path": "lean/evidence/constant-phase-anchor.md",
+      "bytes": 1048,
+      "sha256": "c5f210240db67c76128322c80f60bbf43beb6270ada00b63e5b703dd09aaf06f"
     },
     {
       "path": "lean/evidence/coordinate-monomial-audit.md",

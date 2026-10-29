@@ -15,3 +15,13 @@ def exampleRecognizedGates : List NativeGate :=
 #guard (recognizeModeledSource exampleRecognizedGates).isSome
 #guard (recognizeModeledSource (exampleRecognizedGates ++ [⟨"X", [0]⟩])).isNone
 #guard (recognizeModeledSource (encodeNumericHeader [255])).isNone
+
+-- A constant phase must use wire zero even when the output is wire one.
+def constantAnchorExample : Bool :=
+  match rawDescriptorToValidated ⟨2, [1, 2], [0], [], 0, 1⟩ with
+  | none => false
+  | some ⟨_, d⟩ =>
+    compilePhaseRecords (sourcePhaseAnchor d) d.firstPhase ==
+      some [⟨"X", [0]⟩, ⟨"Z", [0]⟩, ⟨"X", [0]⟩, ⟨"Z", [0]⟩]
+
+#guard constantAnchorExample
