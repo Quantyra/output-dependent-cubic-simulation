@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 2914,
-      "sha256": "7e572ed623008d7340ffecf4502bbf9f70bd80cdabe1846253ae2330ca423e1e"
+      "bytes": 3580,
+      "sha256": "f73d71cf6310bde1ebe14988155d21df61a9640e1659db610836352f22340504"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 42533,
-      "sha256": "02d018a5e6dd9aac118996e3da73d6dc45fc5793791f526a06e305c21113216f"
+      "bytes": 46220,
+      "sha256": "2e29acb0c40733cb5388c706e5b0ab8eae0d4e5eec0df55d57b4018ddd59235e"
     },
     {
       "path": "lean/PUBLISHED-TARGET.md",
@@ -144,8 +144,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 273,
-      "sha256": "c3514cd50f50e411b4ae08c1051a6de65ece9d576b75ca886056ca65e233d6f8"
+      "bytes": 356,
+      "sha256": "07b9b3c73a252d53a2fc6751b14daa035573651f10d3e44b11f43a204d905022"
     },
     {
       "path": "lean/SectorSimulation/BinaryShift.lean",
@@ -156,6 +156,11 @@
       "path": "lean/SectorSimulation/BooleanSource.lean",
       "bytes": 6207,
       "sha256": "bc7e9ab5b3b2d465e2846fb3ceaf5b2894508ac35dfdc23e0cb0d5ae2e382e06"
+    },
+    {
+      "path": "lean/SectorSimulation/CubicMaskDerivative.lean",
+      "bytes": 2431,
+      "sha256": "d6fecdae9449d2766f700c3bc0005fcadf3070e8c7280c4129851c4ca9aa1a22"
     },
     {
       "path": "lean/SectorSimulation/Derivative.lean",
@@ -176,6 +181,11 @@
       "path": "lean/SectorSimulation/MonomialDifference.lean",
       "bytes": 2306,
       "sha256": "a31d7ebf86d0f3806d9da3e33b97b20e91cf560806591ac7c8043a51eeef4bc9"
+    },
+    {
+      "path": "lean/SectorSimulation/QuadraticTerms.lean",
+      "bytes": 4104,
+      "sha256": "cd044e966c1e80491485a492b74a1e627aacd668b5c3a9bfd779af9973460708"
     },
     {
       "path": "lean/SectorSimulation/SupportShapes.lean",
@@ -211,6 +221,11 @@
       "path": "lean/evidence/coordinate-monomial-audit.md",
       "bytes": 1385,
       "sha256": "6146c7b3a9df35b40f76c3046815810ed4cc586657f90666f6ba662210861dc4"
+    },
+    {
+      "path": "lean/evidence/cubic-mask-terms-audit.md",
+      "bytes": 2010,
+      "sha256": "f52f78ff86343aeeb518dbd4cf7e7058e1ebaf8b46daf6544cb9ac7f613ae502"
     },
     {
       "path": "lean/evidence/derivative-additivity-audit.md",
@@ -659,8 +674,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 2755,
-      "sha256": "8662f5e1d2f42a18a963f013de04dd01d91cce21a56fe48b6eadd22a1a80e030"
+      "bytes": 3159,
+      "sha256": "22215cfe74236ab2b077d4b16b654c71dbccbc39fc45f0fa56f9b2d5c82a8aa0"
     },
     {
       "path": "tools/check_metadata.py",

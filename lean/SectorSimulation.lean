@@ -5,3 +5,5 @@ import SectorSimulation.DerivativeLinear
 import SectorSimulation.DerivativeProduct
 import SectorSimulation.MonomialDifference
 import SectorSimulation.SupportShapes
+import SectorSimulation.QuadraticTerms
+import SectorSimulation.CubicMaskDerivative

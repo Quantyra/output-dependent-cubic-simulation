@@ -31,6 +31,12 @@ EXPECTED = {
     'SectorSimulation.evalMonomial_selected_one': {'propext', 'Quot.sound'},
     'SectorSimulation.evalMonomial_selected_two': {'propext', 'Quot.sound'},
     'SectorSimulation.evalMonomial_selected_three': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalQuadraticTerms_append': {'propext'},
+    'SectorSimulation.evalConditionalQuadraticTerm': {'propext'},
+    'SectorSimulation.evalLinearDerivativeTerms': {'propext'},
+    'SectorSimulation.evalQuadraticDerivativeTerms': {'propext'},
+    'SectorSimulation.evalCubicDerivativeTerms': {'propext'},
+    'SectorSimulation.cubicMaskDerivativeTerms_correct': {'propext', 'Quot.sound'},
 }
 
 

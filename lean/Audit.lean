@@ -54,3 +54,15 @@ import SectorSimulation
 #print axioms SectorSimulation.evalMonomial_selected_two
 #check SectorSimulation.evalMonomial_selected_three
 #print axioms SectorSimulation.evalMonomial_selected_three
+#check SectorSimulation.evalQuadraticTerms_append
+#print axioms SectorSimulation.evalQuadraticTerms_append
+#check SectorSimulation.evalConditionalQuadraticTerm
+#print axioms SectorSimulation.evalConditionalQuadraticTerm
+#check SectorSimulation.evalLinearDerivativeTerms
+#print axioms SectorSimulation.evalLinearDerivativeTerms
+#check SectorSimulation.evalQuadraticDerivativeTerms
+#print axioms SectorSimulation.evalQuadraticDerivativeTerms
+#check SectorSimulation.evalCubicDerivativeTerms
+#print axioms SectorSimulation.evalCubicDerivativeTerms
+#check SectorSimulation.cubicMaskDerivativeTerms_correct
+#print axioms SectorSimulation.cubicMaskDerivativeTerms_correct
