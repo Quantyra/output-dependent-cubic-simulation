@@ -268,6 +268,14 @@ EXPECTED = {
     'SectorSimulation.applyCNOT_as_flip': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.embedThree_cnot': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sliceThree_cnot': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sliceThree_gate': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sliceThree_program': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.threeWireToffoli_native': {'propext', 'Quot.sound'},
+    'SectorSimulation.threeWireToffoli_slice': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.embedThree_recover': {'propext', 'Quot.sound'},
+    'SectorSimulation.embedThree_toffoli': {'propext', 'Quot.sound'},
+    'SectorSimulation.sliceThree_toffoli': {'propext', 'Quot.sound'},
+    'SectorSimulation.threeWireToffoli_global_correct': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

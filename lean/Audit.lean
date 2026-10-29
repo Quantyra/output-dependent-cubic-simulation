@@ -734,3 +734,20 @@ import SectorSimulation
 #print axioms SectorSimulation.embedThree_cnot
 #check SectorSimulation.sliceThree_cnot
 #print axioms SectorSimulation.sliceThree_cnot
+
+#check SectorSimulation.sliceThree_gate
+#print axioms SectorSimulation.sliceThree_gate
+#check SectorSimulation.sliceThree_program
+#print axioms SectorSimulation.sliceThree_program
+#check SectorSimulation.threeWireToffoli_native
+#print axioms SectorSimulation.threeWireToffoli_native
+#check SectorSimulation.threeWireToffoli_slice
+#print axioms SectorSimulation.threeWireToffoli_slice
+#check SectorSimulation.embedThree_recover
+#print axioms SectorSimulation.embedThree_recover
+#check SectorSimulation.embedThree_toffoli
+#print axioms SectorSimulation.embedThree_toffoli
+#check SectorSimulation.sliceThree_toffoli
+#print axioms SectorSimulation.sliceThree_toffoli
+#check SectorSimulation.threeWireToffoli_global_correct
+#print axioms SectorSimulation.threeWireToffoli_global_correct

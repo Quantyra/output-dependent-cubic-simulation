@@ -3992,6 +3992,138 @@
       ],
       "build_audit_receipt": "lean/evidence/three-wire-slice-audit.md",
       "unresolved_bridge": "Lift gate slice identities to native record replay and prove arbitrary-wire Toffoli correctness; establish complex embedding, Python correspondence, circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-program-sliceThree_gate",
+      "section": "2",
+      "target": "SectorSimulation.sliceThree_gate",
+      "assumptions": "The exact shared-denominator gate model and an injective selection of three wires where applicable; typed Toffoli program and modeled ideal action.",
+      "quantifiers": "All finite dimensions, represented states, output vectors, injective three-wire selections and applicable finite typed gate programs.",
+      "statement": "A selected-wire slice commutes with each typed three-wire gate.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
+      "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-program-sliceThree_program",
+      "section": "2",
+      "target": "SectorSimulation.sliceThree_program",
+      "assumptions": "The exact shared-denominator gate model and an injective selection of three wires where applicable; typed Toffoli program and modeled ideal action.",
+      "quantifiers": "All finite dimensions, represented states, output vectors, injective three-wire selections and applicable finite typed gate programs.",
+      "statement": "A selected-wire slice commutes with any finite typed three-wire gate program.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
+      "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-program-threeWireToffoli_native",
+      "section": "2",
+      "target": "SectorSimulation.threeWireToffoli_native",
+      "assumptions": "The exact shared-denominator gate model and an injective selection of three wires where applicable; typed Toffoli program and modeled ideal action.",
+      "quantifiers": "All finite dimensions, represented states, output vectors, injective three-wire selections and applicable finite typed gate programs.",
+      "statement": "The typed three-wire Toffoli sequence equals literal native-record replay on three wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
+      "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-program-threeWireToffoli_slice",
+      "section": "2",
+      "target": "SectorSimulation.threeWireToffoli_slice",
+      "assumptions": "The exact shared-denominator gate model and an injective selection of three wires where applicable; typed Toffoli program and modeled ideal action.",
+      "quantifiers": "All finite dimensions, represented states, output vectors, injective three-wire selections and applicable finite typed gate programs.",
+      "statement": "The slice of the selected-wire typed Toffoli execution equals literal three-wire native replay of the input slice.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
+      "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-program-embedThree_recover",
+      "section": "2",
+      "target": "SectorSimulation.embedThree_recover",
+      "assumptions": "The exact shared-denominator gate model and an injective selection of three wires where applicable; typed Toffoli program and modeled ideal action.",
+      "quantifiers": "All finite dimensions, represented states, output vectors, injective three-wire selections and applicable finite typed gate programs.",
+      "statement": "Embedding the selected bits of a vector into itself recovers the vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
+      "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-program-embedThree_toffoli",
+      "section": "2",
+      "target": "SectorSimulation.embedThree_toffoli",
+      "assumptions": "The exact shared-denominator gate model and an injective selection of three wires where applicable; typed Toffoli program and modeled ideal action.",
+      "quantifiers": "All finite dimensions, represented states, output vectors, injective three-wire selections and applicable finite typed gate programs.",
+      "statement": "Embedding commutes with ideal Toffoli on selected wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
+      "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-program-sliceThree_toffoli",
+      "section": "2",
+      "target": "SectorSimulation.sliceThree_toffoli",
+      "assumptions": "The exact shared-denominator gate model and an injective selection of three wires where applicable; typed Toffoli program and modeled ideal action.",
+      "quantifiers": "All finite dimensions, represented states, output vectors, injective three-wire selections and applicable finite typed gate programs.",
+      "statement": "Three-wire slicing commutes with ideal Toffoli on selected wires.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
+      "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "three-wire-program-threeWireToffoli_global_correct",
+      "section": "2",
+      "target": "SectorSimulation.threeWireToffoli_global_correct",
+      "assumptions": "The exact shared-denominator gate model and an injective selection of three wires where applicable; typed Toffoli program and modeled ideal action.",
+      "quantifiers": "All finite dimensions, represented states, output vectors, injective three-wire selections and applicable finite typed gate programs.",
+      "statement": "The typed Toffoli sequence on any three distinct selected wires has the ideal Toffoli amplitude at every larger-state output vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/selected-wire-toffoli-audit.md",
+      "unresolved_bridge": "Connect typed selected-wire execution to native-record replay in larger dimensions and Python compiler records; establish complex embedding, full circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

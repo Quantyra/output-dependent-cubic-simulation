@@ -137,3 +137,5 @@ import SectorSimulation.ToffoliIdealSum
 import SectorSimulation.ToffoliAllVectors
 
 import SectorSimulation.ThreeWireSlice
+
+import SectorSimulation.ThreeWireProgram
