@@ -99,6 +99,10 @@ theorem exactComplex_hadamard :
     exactComplex exactHadamardScale = ((Real.sqrt 2 : ℝ) : ℂ) / 2 := by
   change dyadicInterpret dyadicHadamardScale = _
   have hs : (Real.sqrt 2)^2 = (2 : ℝ) := Real.sq_sqrt (by norm_num)
+  have hc : (Real.sqrt 2)^3 = 2 * Real.sqrt 2 := by
+    calc
+      (Real.sqrt 2)^3 = (Real.sqrt 2)^2 * Real.sqrt 2 := by ring
+      _ = 2 * Real.sqrt 2 := by rw [hs]
   apply Complex.ext <;>
     simp [dyadicInterpret, dyadicHadamardScale,
       cycloInterpret, cycloSqrtTwo, standardOmega, Complex.mul_re, Complex.mul_im,
