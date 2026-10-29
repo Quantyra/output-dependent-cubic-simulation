@@ -147,3 +147,5 @@ import SectorSimulation.HadamardAmplitudeCongruence
 import SectorSimulation.MappedNativeCubic
 
 import SectorSimulation.CubicLayerReplay
+
+import SectorSimulation.CubicLayerANF

@@ -4397,6 +4397,71 @@
       ],
       "build_audit_receipt": "lean/evidence/cubic-layer-replay-audit.md",
       "unresolved_bridge": "Relate the ideal cubic-sign layer to the manuscript phase encoding and full Python compiler; establish complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-anf-tripleMask_eval",
+      "section": "2",
+      "target": "SectorSimulation.tripleMask_eval",
+      "assumptions": "The modeled exact native interpreter and an injective selection of three wires per compiled block where applicable.",
+      "quantifiers": "All finite dimensions, finite selected-wire lists, represented states and output vectors.",
+      "statement": "A triple wire mask evaluates to the conjunction of its selected bits.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-anf-audit.md",
+      "unresolved_bridge": "Extend phase compilation to constant, linear and quadratic terms, establish full Python compiler correspondence, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-anf-idealCubicLayer_phase",
+      "section": "2",
+      "target": "SectorSimulation.idealCubicLayer_phase",
+      "assumptions": "The modeled exact native interpreter and an injective selection of three wires per compiled block where applicable.",
+      "quantifiers": "All finite dimensions, finite selected-wire lists, represented states and output vectors.",
+      "statement": "The ideal cubic-sign layer numerator equals the input numerator signed by the Boolean ANF of its selected triples.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-anf-audit.md",
+      "unresolved_bridge": "Extend phase compilation to constant, linear and quadratic terms, establish full Python compiler correspondence, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-anf-idealCubicLayer_exponent",
+      "section": "2",
+      "target": "SectorSimulation.idealCubicLayer_exponent",
+      "assumptions": "The modeled exact native interpreter and an injective selection of three wires per compiled block where applicable.",
+      "quantifiers": "All finite dimensions, finite selected-wire lists, represented states and output vectors.",
+      "statement": "The ideal cubic-sign layer preserves the shared denominator exponent.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-anf-audit.md",
+      "unresolved_bridge": "Extend phase compilation to constant, linear and quadratic terms, establish full Python compiler correspondence, complex embedding, complete circuit behavior, costs and manuscript theorems."
+    },
+    {
+      "id": "cubic-layer-anf-nativeCubicLayer_anf",
+      "section": "2",
+      "target": "SectorSimulation.nativeCubicLayer_anf",
+      "assumptions": "The modeled exact native interpreter and an injective selection of three wires per compiled block where applicable.",
+      "quantifiers": "All finite dimensions, finite selected-wire lists, represented states and output vectors.",
+      "statement": "Native replay of any valid mapped cubic layer succeeds and yields amplitudes signed by the corresponding Boolean ANF.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/cubic-layer-anf-audit.md",
+      "unresolved_bridge": "Extend phase compilation to constant, linear and quadratic terms, establish full Python compiler correspondence, complex embedding, complete circuit behavior, costs and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",

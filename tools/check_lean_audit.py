@@ -293,6 +293,10 @@ EXPECTED = {
     'SectorSimulation.replayExactNative_append': {'propext'},
     'SectorSimulation.nativeCubicLayer_correct_from_equivalent': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.nativeCubicLayer_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.tripleMask_eval': {'propext', 'Quot.sound'},
+    'SectorSimulation.idealCubicLayer_phase': {'propext', 'Quot.sound'},
+    'SectorSimulation.idealCubicLayer_exponent': {'propext', 'Quot.sound'},
+    'SectorSimulation.nativeCubicLayer_anf': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

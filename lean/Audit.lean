@@ -789,3 +789,12 @@ import SectorSimulation
 #print axioms SectorSimulation.nativeCubicLayer_correct_from_equivalent
 #check SectorSimulation.nativeCubicLayer_correct
 #print axioms SectorSimulation.nativeCubicLayer_correct
+
+#check SectorSimulation.tripleMask_eval
+#print axioms SectorSimulation.tripleMask_eval
+#check SectorSimulation.idealCubicLayer_phase
+#print axioms SectorSimulation.idealCubicLayer_phase
+#check SectorSimulation.idealCubicLayer_exponent
+#print axioms SectorSimulation.idealCubicLayer_exponent
+#check SectorSimulation.nativeCubicLayer_anf
+#print axioms SectorSimulation.nativeCubicLayer_anf
