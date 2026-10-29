@@ -224,6 +224,9 @@ EXPECTED = {
     'SectorSimulation.sharedX_add': set(),
     'SectorSimulation.sharedZ_add': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sharedT_add': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.applyExactNative_exponent': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.applyExactNative_add': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.replayExactNative_add': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

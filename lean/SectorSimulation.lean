@@ -117,3 +117,5 @@ import SectorSimulation.ExactNativeReplay
 import SectorSimulation.ToffoliBasisReplay
 
 import SectorSimulation.ExactGateLinearity
+
+import SectorSimulation.ExactReplayLinearity

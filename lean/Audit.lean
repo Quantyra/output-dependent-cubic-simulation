@@ -625,3 +625,12 @@ import SectorSimulation
 
 #check SectorSimulation.sharedT_add
 #print axioms SectorSimulation.sharedT_add
+
+#check SectorSimulation.applyExactNative_exponent
+#print axioms SectorSimulation.applyExactNative_exponent
+
+#check SectorSimulation.applyExactNative_add
+#print axioms SectorSimulation.applyExactNative_add
+
+#check SectorSimulation.replayExactNative_add
+#print axioms SectorSimulation.replayExactNative_add

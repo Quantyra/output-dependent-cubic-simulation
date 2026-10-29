@@ -3268,6 +3268,57 @@
       ],
       "build_audit_receipt": "lean/evidence/exact-gate-linearity-audit.md",
       "unresolved_bridge": "Prove replay-wide linearity, arbitrary-state Toffoli action, wire relabeling, complex embedding, Python equivalence and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-add-applyExactNative_exponent",
+      "section": "2",
+      "target": "SectorSimulation.applyExactNative_exponent",
+      "assumptions": "The defined exact shared-denominator native interpreter; equal denominator exponents for addition.",
+      "quantifiers": "All finite dimensions, native gate records or lists and represented states.",
+      "statement": "An accepted native gate changes the denominator exponent by one exactly for an H record.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-addition-audit.md",
+      "unresolved_bridge": "Prove coefficient homogeneity, arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-add-applyExactNative_add",
+      "section": "2",
+      "target": "SectorSimulation.applyExactNative_add",
+      "assumptions": "The defined exact shared-denominator native interpreter; equal denominator exponents for addition.",
+      "quantifiers": "All finite dimensions, native gate records or lists and represented states.",
+      "statement": "The native gate interpreter preserves equal-denominator state addition, including rejection.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-addition-audit.md",
+      "unresolved_bridge": "Prove coefficient homogeneity, arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence and manuscript theorems."
+    },
+    {
+      "id": "exact-replay-add-replayExactNative_add",
+      "section": "2",
+      "target": "SectorSimulation.replayExactNative_add",
+      "assumptions": "The defined exact shared-denominator native interpreter; equal denominator exponents for addition.",
+      "quantifiers": "All finite dimensions, native gate records or lists and represented states.",
+      "statement": "The native interpreter preserves equal-denominator state addition over any finite gate list, including rejection.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/exact-replay-addition-audit.md",
+      "unresolved_bridge": "Prove coefficient homogeneity, arbitrary-state Toffoli action, arbitrary wire relabeling, complex embedding, Python correspondence and manuscript theorems."
     }
   ],
   "paper_source": "manuscript/main.tex",
