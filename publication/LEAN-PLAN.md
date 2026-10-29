@@ -1,6 +1,6 @@
 # Lean certification after first publication
 
-Status: planned, not started. Start only after a published first manuscript, a verified paper DOI and application of that DOI to citation surfaces. The informal preprint does not wait for formalization.
+Status: active target freeze after first publication, verified paper DOI and application of the DOI to citation surfaces. No manuscript theorem is certified yet. The initial preprint did not wait for formalization.
 
 The initial target is the exact published PDF and source. Preserve its hashes and map each stable LaTeX statement label to its mathematical statement, hypotheses, intended declaration and evidence. Confirm a Lean/mathlib toolchain at that time and commit its pins; no placeholder Lean project is represented as certification.
 

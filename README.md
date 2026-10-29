@@ -4,7 +4,7 @@
 
 [Read the manuscript PDF](manuscript/main.pdf) Â· [LaTeX source](manuscript/main.tex) Â· [Reproduce the checks](REPRODUCING.md) Â· [Review and limitations](REVIEW.md)
 
-Version **0.1.0**, published as an informal methods preprint with internal mathematical and executable checks. Paper version DOI: [10.5281/zenodo.23754698](https://doi.org/10.5281/zenodo.23754698); paper concept DOI: [10.5281/zenodo.23754697](https://doi.org/10.5281/zenodo.23754697). Lean certification has not started.
+Version **0.1.0**, published as an informal methods preprint with internal mathematical and executable checks. Paper version DOI: [10.5281/zenodo.23754698](https://doi.org/10.5281/zenodo.23754698); paper concept DOI: [10.5281/zenodo.23754697](https://doi.org/10.5281/zenodo.23754697). Lean target preparation has begun; no manuscript theorem is certified yet.
 
 The paper constructs an estimator for one output probability of a specified two-layer Boolean cubic-phase circuit. An output-derived displacement space can have a small restricted cubic control count even when specified global controls grow. Using established stabilizer norm estimation reduces the readout factor from `4^k` to `2^k`, with all source, discovery, arithmetic, random-bit and precision costs included.
 

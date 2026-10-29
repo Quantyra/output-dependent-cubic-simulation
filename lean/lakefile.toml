@@ -1,0 +1,6 @@
+name = "sector_simulation"
+version = "0.1.0"
+defaultTargets = ["SectorSimulation"]
+
+[[lean_lib]]
+name = "SectorSimulation"

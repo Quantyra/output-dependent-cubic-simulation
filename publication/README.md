@@ -1,6 +1,6 @@
 # First publication and DOI sequence
 
-The prepared target is `Quantyra/output-dependent-cubic-simulation`, version `0.1.0`. Dan will enable this actual repository in Zenodo; no release is triggered during repository preparation.
+The target `Quantyra/output-dependent-cubic-simulation` has been published as version `0.1.0` after Dan enabled the repository in Zenodo. The [publication receipt](PUBLICATION-RECEIPT.md) records the paper DOI, companion DOI, tag and checked hashes. The sequence below records how the gate was satisfied.
 
 1. Verify the exact pushed candidate, public PDF/source, metadata, author/license choices, hash inventory and reproduction receipt. Record the scientific release decision for that commit.
 2. Dan enables the repository in [Zenodo's GitHub settings](https://zenodo.org/account/settings/github/). Confirm the connection before creating a release.

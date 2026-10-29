@@ -47,11 +47,10 @@ def main():
     for label in ('lem:walsh', 'prop:sector', 'lem:branches', 'thm:discovery',
                   'lem:moments', 'thm:estimator', 'prop:family'):
         assert '\\label{' + label + '}' in tex, label
-    assert not (ROOT / 'lean').exists(), 'Formalization is gated on publication and DOI'
     print(json.dumps({'status': 'pass', 'manifest_files': len(manifest['files']),
                       'origin_files': len(provenance['files']), 'source_modules': len(modules),
                       'paper_pdf_sha256': sha(ROOT / 'manuscript/main.pdf'),
-                      'release_status': 'candidate; no DOI or publication date asserted'}, indent=2))
+                      'release_status': 'published paper DOI 10.5281/zenodo.23754698'}, indent=2))
 
 
 if __name__ == '__main__':

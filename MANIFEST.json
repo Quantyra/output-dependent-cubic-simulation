@@ -39,8 +39,8 @@
     },
     {
       "path": "INTEGRITY.md",
-      "bytes": 2169,
-      "sha256": "2231ea4618a5ca359163cddd6031a83c8b97ef81f8654c1f08bc182b2b261f4e"
+      "bytes": 2228,
+      "sha256": "6a0afb635d6f80918e6b1fbf5dbfcc7176acbf34981d836a63e2babcc557d0b6"
     },
     {
       "path": "LICENSE",
@@ -69,8 +69,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3130,
-      "sha256": "4ac89b39347244078ea57b055920f4e8571d800ac1d2dea1bb4fbc68884464bf"
+      "bytes": 3169,
+      "sha256": "6bb9583278cc4bc5467c2440430d087d44f31de5ec47aacbce1cab30e3ba53bf"
     },
     {
       "path": "REPRODUCING.md",
@@ -113,6 +113,51 @@
       "sha256": "e757113e555c0d5356d74104eb85889b5ed3478df0143109884132f55309352a"
     },
     {
+      "path": "lean/.gitignore",
+      "bytes": 7,
+      "sha256": "fde850d24186b6e99c8c0debd641fb3ab85198b109eb66f71a1fea02bd6ea1b3"
+    },
+    {
+      "path": "lean/Audit.lean",
+      "bytes": 159,
+      "sha256": "22d55e02947ac8016c090cc9e1df061268e0addd26ba508cb04b939a1a9ff844"
+    },
+    {
+      "path": "lean/CLAIMS.json",
+      "bytes": 10807,
+      "sha256": "2f084219ec5f068cb0ba3afea75b6b57e8de90e0ee362578cc00a8f5f655d8fb"
+    },
+    {
+      "path": "lean/PUBLISHED-TARGET.md",
+      "bytes": 1878,
+      "sha256": "2f1a54962b77c4c7aebfad23a5fa984a150ee909ead631448f80c4d9a559cc97"
+    },
+    {
+      "path": "lean/SectorSimulation.lean",
+      "bytes": 35,
+      "sha256": "6a352c5b0b8ccd8cd1e604abb255ca7e13695288d89f9eeaea3629670307a3fa"
+    },
+    {
+      "path": "lean/SectorSimulation/Derivative.lean",
+      "bytes": 791,
+      "sha256": "4e31227d797ca77b5b196418ffc8566f7452b8b5fc317fea2dad93d5351b4d4c"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "bytes": 149,
+      "sha256": "9f10a2f011e14586d02c0a07649737f32d13d34a7f1ef073edd05b082fc972ff"
+    },
+    {
+      "path": "lean/lakefile.toml",
+      "bytes": 123,
+      "sha256": "2c0ee058f849a90054123ad43660e02ed420049315dc3df9762f8033bbaa5c7e"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "bytes": 25,
+      "sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+    },
+    {
       "path": "manuscript/authors.tex",
       "bytes": 123,
       "sha256": "cec484e64b81f601358a11ef8350dae891362f3d287b509d817516adfa79c088"
@@ -134,8 +179,8 @@
     },
     {
       "path": "publication/LEAN-PLAN.md",
-      "bytes": 2664,
-      "sha256": "49ad33077a56ea97f17ca9f6c60426a4c38ec5d93e72bea09fd2ed1df71bdd5b"
+      "bytes": 2676,
+      "sha256": "33214ca16d04e5f12dad8a77c93cee9c448b20f257fa545cbb1900ce2502115e"
     },
     {
       "path": "publication/PUBLICATION-RECEIPT.md",
@@ -144,8 +189,8 @@
     },
     {
       "path": "publication/README.md",
-      "bytes": 2386,
-      "sha256": "b0926730dda11b8d40f867b016532dd2269fe29e19871d415f7bb74aa98ca875"
+      "bytes": 2500,
+      "sha256": "706dfeb7187e7f4de34cf5f5edb4b868c2f55b5f9b537be19cc5e34d7176783a"
     },
     {
       "path": "publication/RELEASE-NOTES-v0.1.0.md",
@@ -499,8 +544,8 @@
     },
     {
       "path": "tools/check_package.py",
-      "bytes": 2900,
-      "sha256": "cdbea10b50c07b5e361c2fa1432f64935e371cf88518befb9ccbc7980dd0f715"
+      "bytes": 2808,
+      "sha256": "f67d41dd9b13aac567a61bbcc5e379f2e5570d9a3e652cabb548f9cc1b534e07"
     },
     {
       "path": "tools/manifest.py",

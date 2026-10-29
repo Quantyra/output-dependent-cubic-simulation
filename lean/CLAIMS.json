@@ -1,0 +1,244 @@
+{
+  "paper_version_doi": "10.5281/zenodo.23754698",
+  "paper_commit": "6250927ef656b03242dc7b25848bc743d8078629",
+  "status_vocabulary": [
+    "planned",
+    "statement translated",
+    "proved and kernel checked",
+    "conditional on named imports",
+    "outside formal scope"
+  ],
+  "claims": [
+    {
+      "id": "lem:walsh",
+      "section": "2",
+      "target": "SectorSimulation.Walsh.quadraticWalshElimination",
+      "assumptions": "finite binary space; Boolean quadratic with alternating polar rank r",
+      "quantifiers": "all dimensions and quadratics, including zero rank",
+      "statement": "r even; affine Walsh support of dimension r; magnitude and quadratic sign, computable by binary elimination",
+      "dependencies": [
+        "boolean-polynomial-semantics",
+        "binary-linear-algebra",
+        "gaussian-elimination-cost"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "formal algorithm and bit cost, not just an abstract support theorem"
+    },
+    {
+      "id": "prop:sector",
+      "section": "2",
+      "target": "SectorSimulation.Sectors.matchedSectorIdentity",
+      "assumptions": "literal two-phase source, symmetric invertible J, basis input, measured output, derived Q/support/coordinates",
+      "quantifiers": "all admitted sources, affine origins, inputs, offsets and r=0",
+      "statement": "real Hermitian Clifford observable; normalized matched sector kernel; bounded symmetric overlaps average to 1-2p",
+      "dependencies": [
+        "lem:walsh",
+        "source-semantics",
+        "shift-derivative-invariance",
+        "finite-dimensional-operators"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "connect formal circuit and all normalizations to literal gate replay"
+    },
+    {
+      "id": "lem:branches",
+      "section": "3",
+      "target": "SectorSimulation.Controls.conditionalQuadraticBranches",
+      "assumptions": "verified restricted tensor certificate T(K,K,K)=0, codimension k",
+      "quantifiers": "all sectors and verified control frames",
+      "statement": "construct 2^k normalized stabilizer branches per sector and 4^k coherent quadratic pair sums",
+      "dependencies": [
+        "prop:sector",
+        "boolean-polynomial-semantics",
+        "stabilizer-semantics"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "construct actual branches and coefficients, not a supplied decomposition"
+    },
+    {
+      "id": "thm:discovery",
+      "section": "3",
+      "target": "SectorSimulation.Discovery.cappedAnchorDiscovery",
+      "assumptions": "k<=q control certificate and a rank-2k contraction anchor, or separately stated deterministic shortcuts",
+      "quantifiers": "every promised input and bounded random tape",
+      "statement": "verified discovery; failure <=2^(-h-1); probe/candidate caps and sound refusals",
+      "dependencies": [
+        "lem:branches",
+        "alternating-contractions",
+        "pfaffian-density",
+        "finite-random-tapes",
+        "candidate-enumeration"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "algorithm semantics, shortcut completeness boundaries and explicit bit-cost model"
+    },
+    {
+      "id": "lem:moments",
+      "section": "4",
+      "target": "SectorSimulation.Norm.equatorialMoments",
+      "assumptions": "finite complex vector; independent uniform Z4 diagonal phases and fair graph bits",
+      "quantifiers": "all even or odd widths and all vectors, including zero",
+      "statement": "exact first and second norm-estimator moments and variance bound",
+      "dependencies": [
+        "finite-probability",
+        "complex-inner-product",
+        "phase-character-orthogonality"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "connect explicit ensemble and exact Gaussian arithmetic to source-constructed u"
+    },
+    {
+      "id": "thm:estimator",
+      "section": "4",
+      "target": "SectorSimulation.Estimator.jointAccuracy",
+      "assumptions": "sound discovered frame and uniform orbit/equatorial sampling; b,h>=1",
+      "quantifiers": "all accepted frames and all admitted source inputs",
+      "statement": "unbiased joint estimator, variance <=4, median schedule and <=3epsilon/4 error with stated failure allocation",
+      "dependencies": [
+        "prop:sector",
+        "thm:discovery",
+        "lem:moments",
+        "finite-probability",
+        "rounding"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "independence, finite tape sampling and final-only clipping"
+    },
+    {
+      "id": "resource-contract",
+      "section": "5",
+      "target": "SectorSimulation.Cost.completeResourceBound",
+      "assumptions": "specified dense algorithms, cap q, literal source length B, b,h>=1",
+      "quantifiers": "all tapes, including refusals; success conditional on stated promises",
+      "statement": "paper's conservative time, space, randomness, arithmetic and exact shortcut bounds",
+      "dependencies": [
+        "thm:discovery",
+        "thm:estimator",
+        "operational-bit-cost-semantics"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "define and verify executable cost accounting for all listed phases"
+    },
+    {
+      "id": "prop:family",
+      "section": "6",
+      "target": "SectorSimulation.Families.determinantFamily",
+      "assumptions": "even t>=2 and explicitly specified source family",
+      "quantifiers": "all such t and separately qualified variations",
+      "statement": "r=t^2+2, k=1, specified global certificate g>=t-sqrt(t), exact probability and complement",
+      "dependencies": [
+        "prop:sector",
+        "lem:branches",
+        "tensor-dimension",
+        "four-character-count"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "provide actual source witnesses and prove all assumptions and exact counts"
+    },
+    {
+      "id": "restricted-control-obstruction",
+      "section": "6",
+      "target": "SectorSimulation.Families.restrictedControlObstruction",
+      "assumptions": "specified cubic sum with independent Y and d variables; codimension k independent space",
+      "quantifiers": "all dimension parameters and certificate spaces",
+      "statement": "choose(t-k,2)<=k and the stated lower-bound consequence",
+      "dependencies": [
+        "tensor-dimension",
+        "exterior-square"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "formal finite-dimensional projection and annihilator dimensions"
+    },
+    {
+      "id": "prior-work-and-empirics",
+      "section": "7-8",
+      "target": null,
+      "assumptions": "bibliographic and observed finite evidence",
+      "quantifiers": "not mathematical certification claims",
+      "statement": "prior-work comparison, finite checks and observed timings",
+      "dependencies": [],
+      "status": "outside formal scope",
+      "unresolved_bridge": "retain evidence and honest wording; Lean does not certify novelty or performance"
+    },
+    {
+      "id": "shift-derivative-invariance",
+      "section": "2",
+      "target": "SectorSimulation.booleanDerivative_shift_invariant",
+      "assumptions": "Boolean-valued function and involutive shift",
+      "quantifiers": "all types, functions, involutions and inputs",
+      "statement": "the Boolean derivative is invariant under the shift",
+      "dependencies": [],
+      "status": "statement translated",
+      "unresolved_bridge": "kernel/build and axiom receipt; instantiate in binary vector circuit semantics"
+    },
+    {
+      "id": "quadratic-gauss-evaluation",
+      "section": "2,4",
+      "target": "SectorSimulation.Pending.QuadraticGaussEvaluation",
+      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
+      "quantifiers": "All inputs satisfying the published hypotheses.",
+      "statement": "Exact real quadratic Gaussian evaluation and Z4-to-two-real-sum conversion, including affine pullbacks.",
+      "dependencies": [
+        "lem:walsh",
+        "boolean-polynomial-semantics"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "formal reduction, exact arithmetic and polynomial bit cost"
+    },
+    {
+      "id": "orbit-representatives",
+      "section": "2,4",
+      "target": "SectorSimulation.Pending.OrbitRepresentatives",
+      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
+      "quantifiers": "All inputs satisfying the published hypotheses.",
+      "statement": "Uniform matching-orbit representatives use c bits when eta=0 and c-1 otherwise and preserve the average.",
+      "dependencies": [
+        "prop:sector",
+        "finite-probability"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "edge cases eta=0, c=0 and actual fair-bit sampler"
+    },
+    {
+      "id": "global-parameter-corollary",
+      "section": "5",
+      "target": "SectorSimulation.Pending.GlobalParameterCorollary",
+      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
+      "quantifiers": "All inputs satisfying the published hypotheses.",
+      "statement": "Under q squared logarithmic in the literal input size, total promised cost is polynomial in input size and inverse error.",
+      "dependencies": [
+        "resource-contract"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "formal asymptotic encoding and quantifiers, not precision-bit polynomiality"
+    },
+    {
+      "id": "family-variations",
+      "section": "6",
+      "target": "SectorSimulation.Pending.FamilyVariations",
+      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
+      "quantifiers": "All inputs satisfying the published hypotheses.",
+      "statement": "The stated lower-term, input and invertible-coordinate variations retain the indicated structural certificates, with qualifications for cubic extensions.",
+      "dependencies": [
+        "prop:family",
+        "source-semantics"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "distinguish preservation of restricted and global bounds"
+    },
+    {
+      "id": "comparison-reductions",
+      "section": "7",
+      "target": "SectorSimulation.Pending.ComparisonReductions",
+      "assumptions": "As specified in the cited paper section; exact formal quantifiers remain to be translated.",
+      "quantifiers": "All inputs satisfying the published hypotheses.",
+      "statement": "Walsh coefficient absolute mass and resulting normalized-Pauli sampling upper bound.",
+      "dependencies": [
+        "lem:walsh",
+        "finite-probability"
+      ],
+      "status": "planned",
+      "unresolved_bridge": "formalize the explicit upper-bound reduction without a lower-bound claim"
+    }
+  ]
+}

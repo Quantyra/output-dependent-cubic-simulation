@@ -8,6 +8,6 @@ The source construction and integration are the contribution. Conditional Gaussi
 
 The receipt preserves unfavorable small-control comparisons. Its times are local observations, and its seeded successes do not prove concentration. Symbolic family bounds concern specified certificates, not all classical simulators. No quantum advantage, hardware readiness, universal simulation, or BPP/BQP equality or separation is claimed.
 
-Lean certification has not started. A later version must identify the exact declarations, statement bridges, assumptions, kernel/build checks, uncovered statements and relation to the published paper. No verified Python implementation is claimed. Corrections must preserve the archived first version and explain changed claims in a successor version.
+Lean target preparation has started after publication; no manuscript theorem is certified yet. A later version must identify the exact declarations, statement bridges, assumptions, kernel/build checks, uncovered statements and relation to the published paper. No verified Python implementation is claimed. Corrections must preserve the archived first version and explain changed claims in a successor version.
 
 The first publication must expose a directly downloadable paper PDF. A GitHub source ZIP, reserved DOI, draft deposit or successful metadata check does not satisfy that requirement. Version DOI and concept DOI must remain distinct. Publication records are populated from verified responses, never invented identifiers.
