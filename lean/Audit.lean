@@ -1597,3 +1597,8 @@ import SectorSimulation
 #print axioms SectorSimulation.clearPairColumn_target
 #check SectorSimulation.clearPairColumn_other
 #print axioms SectorSimulation.clearPairColumn_other
+
+#check SectorSimulation.pairColumnOps_apply
+#print axioms SectorSimulation.pairColumnOps_apply
+#check SectorSimulation.pairColumnOps_reverse
+#print axioms SectorSimulation.pairColumnOps_reverse

@@ -578,6 +578,8 @@ EXPECTED = {
     'SectorSimulation.runColumnAdds_reverse_cancels': {'propext', 'Quot.sound'},
     'SectorSimulation.clearPairColumn_target': {'propext', 'Quot.sound'},
     'SectorSimulation.clearPairColumn_other': {'propext', 'Quot.sound'},
+    'SectorSimulation.pairColumnOps_apply': {'propext'},
+    'SectorSimulation.pairColumnOps_reverse': {'propext', 'Quot.sound'},
 }
 
 
