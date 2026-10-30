@@ -269,3 +269,4 @@ import SectorSimulation.PairColumnBridge
 import SectorSimulation.PairColumnProgram
 import SectorSimulation.PairColumnList
 import SectorSimulation.PairColumnInvariant
+import SectorSimulation.PairColumnsOrthogonal
