@@ -1667,3 +1667,8 @@ import SectorSimulation
 
 #check SectorSimulation.sourceQuadratic_normal_certificate
 #print axioms SectorSimulation.sourceQuadratic_normal_certificate
+
+#check SectorSimulation.polarEliminate_preserves_injective
+#print axioms SectorSimulation.polarEliminate_preserves_injective
+#check SectorSimulation.polarEliminate_gaussian_program
+#print axioms SectorSimulation.polarEliminate_gaussian_program

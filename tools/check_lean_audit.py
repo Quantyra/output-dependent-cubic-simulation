@@ -604,6 +604,8 @@ EXPECTED = {
     'SectorSimulation.polarEliminate_normal_certificate': {'propext', 'Quot.sound'},
     'SectorSimulation.polarEliminate_program_length_le': {'propext', 'Quot.sound'},
     'SectorSimulation.sourceQuadratic_normal_certificate': {'propext', 'Quot.sound'},
+    'SectorSimulation.polarEliminate_preserves_injective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.polarEliminate_gaussian_program': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
