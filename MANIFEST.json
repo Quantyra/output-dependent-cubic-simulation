@@ -1213,9 +1213,19 @@
       "sha256": "90e64b8afb80aa046f64befa9984149eb2319529ae1855e6b838ab1a1ba55ff3"
     },
     {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPriorProbe-v1.lean",
+      "bytes": 2512,
+      "sha256": "98e9e5257c007b8993112b9a7e79b8c7d1c0d171ec49dd3e74db85fa2283cf95"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPriorProbe-v2.lean",
+      "bytes": 2281,
+      "sha256": "f21a4d667cab00dc82f34ffd9bc6ed3fd31adc626efe854abebabceadc873e63"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/README.md",
-      "bytes": 14773,
-      "sha256": "856bb90467f703aeaffa3b5dacaad4ee875dd919df88802ef70b822fc3ee8fbd"
+      "bytes": 15353,
+      "sha256": "55468f3fc6037b57cfe633b68f7438cd17d0d5fe85f3d4de2e2cef92ce6bdeb1"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/baseline-timeout-evidence.tar",
