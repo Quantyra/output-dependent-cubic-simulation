@@ -262,3 +262,5 @@ import SectorSimulation.BinaryTransposeCharacter
 import SectorSimulation.SourceTransposeCanonical
 import SectorSimulation.WalshPolarSquare
 import SectorSimulation.QuadraticSourcePolar
+import SectorSimulation.PolarPairClearing
+import SectorSimulation.ColumnAction

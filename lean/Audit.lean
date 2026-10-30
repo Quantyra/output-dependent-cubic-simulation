@@ -1582,3 +1582,10 @@ import SectorSimulation
 
 #check SectorSimulation.sourceQuadratic_hasPolar
 #print axioms SectorSimulation.sourceQuadratic_hasPolar
+
+#check SectorSimulation.clearPolarPair_orthogonal
+#print axioms SectorSimulation.clearPolarPair_orthogonal
+#check SectorSimulation.clearPolarPair_idempotent
+#print axioms SectorSimulation.clearPolarPair_idempotent
+#check SectorSimulation.columnAdd_action
+#print axioms SectorSimulation.columnAdd_action

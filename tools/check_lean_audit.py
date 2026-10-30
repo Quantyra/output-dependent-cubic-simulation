@@ -572,6 +572,9 @@ EXPECTED = {
     'SectorSimulation.walshWireParity_shift': set(),
     'SectorSimulation.walshSquare_polar_expansion': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceQuadratic_hasPolar': {'propext', 'Quot.sound'},
+    'SectorSimulation.clearPolarPair_orthogonal': {'propext'},
+    'SectorSimulation.clearPolarPair_idempotent': {'propext', 'Quot.sound'},
+    'SectorSimulation.columnAdd_action': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
