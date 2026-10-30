@@ -1,0 +1,94 @@
+{
+  "scope": "Partial warning observations from an incomplete GCP build; not a complete warning baseline.",
+  "source_commit": "52f4b4aa6e97cc076c6de7623ac5c5efbefbb69d",
+  "source_archive_sha256": "3df95c49cef60aba3af06c94c6b73b3298ae8d943b572dfdcdda9e76ad78f9e2",
+  "headers_sha256": "c91573b6e84717f1d1f37fc37256f301daf35033cf253cfeca9787af561b572e",
+  "header_count": 70,
+  "sources": [
+    {
+      "path": "lean/SectorSimulation/CombinedPhaseNative.lean",
+      "sha256": "34844db2880bef4b331b1fbcab39213c19dc41fcf5d9e40f1464b3369fbd45ff",
+      "warning_count": 4
+    },
+    {
+      "path": "lean/SectorSimulation/CubicLayerANF.lean",
+      "sha256": "a5ea92523d273781d888d278787ec92523c1c2c7d5c600d8a5cc0ee123902e0b",
+      "warning_count": 2
+    },
+    {
+      "path": "lean/SectorSimulation/ExactGaussianCNOTReplay.lean",
+      "sha256": "be7a937c3e6eae29dfaafa17cc2b31dcd4d0775e4443168d6ae98518b01d83ed",
+      "warning_count": 2
+    },
+    {
+      "path": "lean/SectorSimulation/ExactNativeHeader.lean",
+      "sha256": "349a011cd8cd39da63bb96fd5cd65ec0df3c7ab8c95e5cdd304ed3094aa70554",
+      "warning_count": 1
+    },
+    {
+      "path": "lean/SectorSimulation/ExactReplayShift.lean",
+      "sha256": "0c2593e54a876a4f3829e05b5875cce016b93502ce0249d7b11dc8c775775049",
+      "warning_count": 6
+    },
+    {
+      "path": "lean/SectorSimulation/ExactWalshAlgebra.lean",
+      "sha256": "93461a1a574a5a87a52f6df04165faaf7b62d59c2aeba908419ea145a8a17fdf",
+      "warning_count": 2
+    },
+    {
+      "path": "lean/SectorSimulation/HadamardBasisBranching.lean",
+      "sha256": "497389c50dea598ce23a24230c87a6b323fcc59836d828b3d4a1636fa626409c",
+      "warning_count": 6
+    },
+    {
+      "path": "lean/SectorSimulation/HadamardBasisKernel.lean",
+      "sha256": "36c5993b0d4b0c8c335183552eed3cf44452fc6a3ce8872dcc1780cc600b3cb8",
+      "warning_count": 6
+    },
+    {
+      "path": "lean/SectorSimulation/HadamardKernel.lean",
+      "sha256": "3054232d373221d4eb4f60e943c940a7fb445eea3b9a0ab3fd3313118c82b719",
+      "warning_count": 1
+    },
+    {
+      "path": "lean/SectorSimulation/HadamardKernelLinearity.lean",
+      "sha256": "c3be4b70feb67dc3c16e531986792b113cf608a7e14b3b1259c726246f393615",
+      "warning_count": 1
+    },
+    {
+      "path": "lean/SectorSimulation/HadamardWalshCoefficient.lean",
+      "sha256": "61efa01998f62497750f38aa3429ccad2d0136cb9e64b16506cb02dc0e9d267a",
+      "warning_count": 1
+    },
+    {
+      "path": "lean/SectorSimulation/LowerPhaseNative.lean",
+      "sha256": "aa7fed4c95fd7774ca85952f4e12ff4d092d7ac1a32dd990df0ac4a99aedda30",
+      "warning_count": 2
+    },
+    {
+      "path": "lean/SectorSimulation/MappedNativeCubic.lean",
+      "sha256": "e0a7eeeef8f3ebc4ea69151ad95c5c64e5891dd0ec4853299b269b11c9b93803",
+      "warning_count": 1
+    },
+    {
+      "path": "lean/SectorSimulation/ModeledFourier.lean",
+      "sha256": "60674b1ea7acc27e7d166f6e7e0fd77df1509c0ba0bcc06214a04c49484188b1",
+      "warning_count": 1
+    },
+    {
+      "path": "lean/SectorSimulation/PhaseBlockCompiler.lean",
+      "sha256": "5b629fbb976b74b6ccf1bbc5fdb5a7b3de3f6c26a57917485d99637cffb15ead",
+      "warning_count": 2
+    },
+    {
+      "path": "lean/SectorSimulation/ThreeBitDecomposition.lean",
+      "sha256": "d5cabf175a19b1392382556bae96c99d616a8189bf490bd0ef2d26636857e140",
+      "warning_count": 24
+    },
+    {
+      "path": "lean/SectorSimulation/ThreeWireSlice.lean",
+      "sha256": "28953951192ee3e3c08d108be1f5e4f7c4c70959bef9d0120dee6db1093cc6a0",
+      "warning_count": 8
+    }
+  ]
+}

@@ -1164,8 +1164,8 @@
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/README.md",
-      "bytes": 1807,
-      "sha256": "1ef77e1a3ad00bce84345735b0e506a1e7aba8c970be2293d6b34f7d9c195162"
+      "bytes": 2011,
+      "sha256": "aca96bafc9777fd6bdfbe8cd4836eb78f672e10a72b31d497628ca9d45de4a60"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/baseline-timeout-evidence.tar",
@@ -1176,6 +1176,11 @@
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/partial-warning-headers.txt",
       "bytes": 6142,
       "sha256": "c91573b6e84717f1d1f37fc37256f301daf35033cf253cfeca9787af561b572e"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/partial-warning-sources.json",
+      "bytes": 3543,
+      "sha256": "f1e9b14afba126f0cdbfa43d58b71e831698e5b0c55be8714a6485e9c16f83f4"
     },
     {
       "path": "lean/evidence/general-hadamard-commutation-audit.md",
