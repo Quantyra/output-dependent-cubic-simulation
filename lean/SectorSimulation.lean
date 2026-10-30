@@ -285,3 +285,4 @@ import SectorSimulation.PolarNormalCertificate
 import SectorSimulation.PolarCost
 import SectorSimulation.SourcePolarCertificate
 import SectorSimulation.PolarBasis
+import SectorSimulation.SourcePolarWalsh

@@ -1672,3 +1672,6 @@ import SectorSimulation
 #print axioms SectorSimulation.polarEliminate_preserves_injective
 #check SectorSimulation.polarEliminate_gaussian_program
 #print axioms SectorSimulation.polarEliminate_gaussian_program
+
+#check SectorSimulation.sourceWalshSum_polar_reindex
+#print axioms SectorSimulation.sourceWalshSum_polar_reindex
