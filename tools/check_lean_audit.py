@@ -582,6 +582,7 @@ EXPECTED = {
     'SectorSimulation.pairColumnOps_reverse': {'propext', 'Quot.sound'},
     'SectorSimulation.clearPairColumns_program': {'propext', 'Quot.sound'},
     'SectorSimulation.clearPairColumns_reverse': {'propext', 'Quot.sound'},
+    'SectorSimulation.clearPairColumns_other': {'propext', 'Quot.sound'},
 }
 
 
