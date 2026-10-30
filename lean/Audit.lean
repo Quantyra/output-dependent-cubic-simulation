@@ -1616,3 +1616,10 @@ import SectorSimulation
 
 #check SectorSimulation.clearPairColumns_preserves_prior
 #print axioms SectorSimulation.clearPairColumns_preserves_prior
+
+#check SectorSimulation.findPolarPair_sound
+#print axioms SectorSimulation.findPolarPair_sound
+#check SectorSimulation.findPolarPair_none
+#print axioms SectorSimulation.findPolarPair_none
+#check SectorSimulation.findPolarPair_distinct
+#print axioms SectorSimulation.findPolarPair_distinct

@@ -585,6 +585,9 @@ EXPECTED = {
     'SectorSimulation.clearPairColumns_other': {'propext', 'Quot.sound'},
     'SectorSimulation.clearPairColumns_orthogonal': {'propext', 'Quot.sound'},
     'SectorSimulation.clearPairColumns_preserves_prior': {'propext', 'Quot.sound'},
+    'SectorSimulation.findPolarPair_sound': {'propext'},
+    'SectorSimulation.findPolarPair_none': {'propext', 'Quot.sound'},
+    'SectorSimulation.findPolarPair_distinct': {'propext'},
 }
 
 
