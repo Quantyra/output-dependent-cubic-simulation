@@ -1613,3 +1613,6 @@ import SectorSimulation
 
 #check SectorSimulation.clearPairColumns_orthogonal
 #print axioms SectorSimulation.clearPairColumns_orthogonal
+
+#check SectorSimulation.clearPairColumns_preserves_prior
+#print axioms SectorSimulation.clearPairColumns_preserves_prior
