@@ -607,6 +607,7 @@ EXPECTED = {
     'SectorSimulation.polarEliminate_preserves_injective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.polarEliminate_gaussian_program': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_polar_reindex': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.samePolar_normalizedDifference_add': {'propext'},
 }
 
 

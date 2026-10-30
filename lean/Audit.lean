@@ -1675,3 +1675,6 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_polar_reindex
 #print axioms SectorSimulation.sourceWalshSum_polar_reindex
+
+#check SectorSimulation.samePolar_normalizedDifference_add
+#print axioms SectorSimulation.samePolar_normalizedDifference_add
