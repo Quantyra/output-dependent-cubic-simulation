@@ -124,8 +124,8 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 61718,
-      "sha256": "e9b678c0ba647b714b63a1b8015553b9e539a7d7f85ec1b5a549fb437e4c7bc5"
+      "bytes": 61840,
+      "sha256": "83a810bd6f14b56f702aba58f3c44d7180b1d505ee646c76dea2b64c3e14a703"
     },
     {
       "path": "lean/CLAIMS.json",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 6477,
-      "sha256": "15a62c8eaa9886b5aa9ec649a6b1cfe24dc34d51efff7d756e3261b7005cb483"
+      "bytes": 6518,
+      "sha256": "c67c155ad3e2f39aa0e2c6b8b8310b53d3a49ea9974061f41c5baa67cb5a5f58"
     },
     {
       "path": "lean/SectorSimulation/AsciiDescriptorEncode.lean",
@@ -708,6 +708,11 @@
       "sha256": "98c7c138ff274df25b4b04ebf49c087e6eaacb6745db4ea1ea44d0e6b1c80b55"
     },
     {
+      "path": "lean/SectorSimulation/PairColumnsPrior.lean",
+      "bytes": 2217,
+      "sha256": "6cff174b79e16b8633206f4e8b00ea748eeffea4f9c88205bca011f243a00a52"
+    },
+    {
       "path": "lean/SectorSimulation/PhaseBlockCompiler.lean",
       "bytes": 7886,
       "sha256": "5b629fbb976b74b6ccf1bbc5fdb5a7b3de3f6c26a57917485d99637cffb15ead"
@@ -1224,8 +1229,8 @@
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/README.md",
-      "bytes": 15353,
-      "sha256": "55468f3fc6037b57cfe633b68f7438cd17d0d5fe85f3d4de2e2cef92ce6bdeb1"
+      "bytes": 16554,
+      "sha256": "0050ff57752563ba1e1b3db2c6a3a30f5eb50ce6d21de0f4f5aae024d2b93cda"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/baseline-timeout-evidence.tar",
@@ -1246,6 +1251,11 @@
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-1c4e0c1-01-evidence.tar",
       "bytes": 296960,
       "sha256": "10c6d584a2312ed5b1a9e1386d91b222c57ce3fe58bcce11927a48d8b9b675bc"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-41c4621-01-evidence.tar",
+      "bytes": 296960,
+      "sha256": "730829a64a2f825e2412eeb58db21b58740d522b1ebcdc766b7864fc43920177"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-7eea6ef-01-evidence.tar",
@@ -1321,6 +1331,11 @@
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/pair-columns-orthogonal-evidence.tar",
       "bytes": 20480,
       "sha256": "55901f4cb3fc11b796c3d75857874127dd0766e96ae7e3d279437a7b3519507e"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/pair-prior-probes-evidence.tar",
+      "bytes": 20480,
+      "sha256": "81deb076213fd3cc8ee4f66da8eed687dfc86a4692860cb4399ce57d71e1cf3c"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/partial-warning-headers.txt",
@@ -2189,8 +2204,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 48952,
-      "sha256": "797f30fa03c78b8f925477d617c6cb6e1df043d7c6bfdb1ae5eb8350009ac7c5"
+      "bytes": 49036,
+      "sha256": "337cf04d720159a5328f666ff39d765328adfbcc61c7b727dddf7fbe06d98d94"
     },
     {
       "path": "tools/check_metadata.py",
