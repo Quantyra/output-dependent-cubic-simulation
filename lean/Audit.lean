@@ -1693,3 +1693,6 @@ import SectorSimulation
 #print axioms SectorSimulation.recordedPairPhase_degree
 #check SectorSimulation.recordedPairPhase_polar
 #print axioms SectorSimulation.recordedPairPhase_polar
+
+#check SectorSimulation.bilinear_equal_of_unit_pairs
+#print axioms SectorSimulation.bilinear_equal_of_unit_pairs
