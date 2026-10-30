@@ -282,3 +282,4 @@ import SectorSimulation.PolarAllCross
 import SectorSimulation.PolarDisjoint
 import SectorSimulation.PolarResidualPair
 import SectorSimulation.PolarNormalCertificate
+import SectorSimulation.PolarCost

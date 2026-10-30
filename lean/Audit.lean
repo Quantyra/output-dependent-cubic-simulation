@@ -1661,3 +1661,6 @@ import SectorSimulation
 
 #check SectorSimulation.polarEliminate_normal_certificate
 #print axioms SectorSimulation.polarEliminate_normal_certificate
+
+#check SectorSimulation.polarEliminate_program_length_le
+#print axioms SectorSimulation.polarEliminate_program_length_le
