@@ -1634,3 +1634,10 @@ import SectorSimulation
 
 #check SectorSimulation.polarEliminate_residual_zero
 #print axioms SectorSimulation.polarEliminate_residual_zero
+
+#check SectorSimulation.polarEliminate_other
+#print axioms SectorSimulation.polarEliminate_other
+#check SectorSimulation.polarEliminate_first_pair
+#print axioms SectorSimulation.polarEliminate_first_pair
+#check SectorSimulation.polarEliminate_all_pairs
+#print axioms SectorSimulation.polarEliminate_all_pairs

@@ -275,3 +275,4 @@ import SectorSimulation.PolarPivot
 import SectorSimulation.PolarEliminate
 import SectorSimulation.PolarFuel
 import SectorSimulation.PolarResidual
+import SectorSimulation.PolarSelected
