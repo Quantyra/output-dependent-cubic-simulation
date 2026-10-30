@@ -1658,3 +1658,6 @@ import SectorSimulation
 
 #check SectorSimulation.polarEliminate_residual_pair_orthogonal
 #print axioms SectorSimulation.polarEliminate_residual_pair_orthogonal
+
+#check SectorSimulation.polarEliminate_normal_certificate
+#print axioms SectorSimulation.polarEliminate_normal_certificate
