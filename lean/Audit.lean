@@ -1715,3 +1715,8 @@ import SectorSimulation
 #print axioms SectorSimulation.sourcePolar_units_are_columns
 #check SectorSimulation.sourcePolar_recorded_pair_units
 #print axioms SectorSimulation.sourcePolar_recorded_pair_units
+
+#check SectorSimulation.unpairedIndices_absent
+#print axioms SectorSimulation.unpairedIndices_absent
+#check SectorSimulation.sourcePolar_residual_units
+#print axioms SectorSimulation.sourcePolar_residual_units
