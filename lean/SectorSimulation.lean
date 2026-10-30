@@ -287,3 +287,4 @@ import SectorSimulation.SourcePolarCertificate
 import SectorSimulation.PolarBasis
 import SectorSimulation.SourcePolarWalsh
 import SectorSimulation.SamePolarAffine
+import SectorSimulation.AffineCoordinates

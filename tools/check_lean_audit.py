@@ -608,6 +608,8 @@ EXPECTED = {
     'SectorSimulation.polarEliminate_gaussian_program': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_polar_reindex': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.samePolar_normalizedDifference_add': {'propext'},
+    'SectorSimulation.additive_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.samePolar_affine_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

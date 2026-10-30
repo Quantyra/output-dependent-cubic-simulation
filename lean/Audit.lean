@@ -1678,3 +1678,8 @@ import SectorSimulation
 
 #check SectorSimulation.samePolar_normalizedDifference_add
 #print axioms SectorSimulation.samePolar_normalizedDifference_add
+
+#check SectorSimulation.additive_coordinates
+#print axioms SectorSimulation.additive_coordinates
+#check SectorSimulation.samePolar_affine_coordinates
+#print axioms SectorSimulation.samePolar_affine_coordinates
