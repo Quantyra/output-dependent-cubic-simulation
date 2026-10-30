@@ -588,6 +588,8 @@ EXPECTED = {
     'SectorSimulation.findPolarPair_sound': {'propext'},
     'SectorSimulation.findPolarPair_none': {'propext', 'Quot.sound'},
     'SectorSimulation.findPolarPair_distinct': {'propext'},
+    'SectorSimulation.polarEliminate_program': {'propext', 'Quot.sound'},
+    'SectorSimulation.polarEliminate_reverse': {'propext', 'Quot.sound'},
 }
 
 

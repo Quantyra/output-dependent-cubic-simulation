@@ -1623,3 +1623,8 @@ import SectorSimulation
 #print axioms SectorSimulation.findPolarPair_none
 #check SectorSimulation.findPolarPair_distinct
 #print axioms SectorSimulation.findPolarPair_distinct
+
+#check SectorSimulation.polarEliminate_program
+#print axioms SectorSimulation.polarEliminate_program
+#check SectorSimulation.polarEliminate_reverse
+#print axioms SectorSimulation.polarEliminate_reverse

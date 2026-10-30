@@ -272,3 +272,4 @@ import SectorSimulation.PairColumnInvariant
 import SectorSimulation.PairColumnsOrthogonal
 import SectorSimulation.PairColumnsPrior
 import SectorSimulation.PolarPivot
+import SectorSimulation.PolarEliminate
