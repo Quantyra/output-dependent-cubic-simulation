@@ -618,6 +618,8 @@ EXPECTED = {
     'SectorSimulation.recordedPairPolar_unit_absent': {'propext'},
     'SectorSimulation.recordedPairPolar_head_unit': {'propext'},
     'SectorSimulation.recordedPairPolar_member_unit': {'propext'},
+    'SectorSimulation.recordedPairPolar_unit_unrelated': {'propext', 'Quot.sound'},
+    'SectorSimulation.recordedPairPolar_unit_diagonal': {'propext'},
 }
 
 

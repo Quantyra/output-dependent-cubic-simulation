@@ -1703,3 +1703,8 @@ import SectorSimulation
 #print axioms SectorSimulation.recordedPairPolar_head_unit
 #check SectorSimulation.recordedPairPolar_member_unit
 #print axioms SectorSimulation.recordedPairPolar_member_unit
+
+#check SectorSimulation.recordedPairPolar_unit_unrelated
+#print axioms SectorSimulation.recordedPairPolar_unit_unrelated
+#check SectorSimulation.recordedPairPolar_unit_diagonal
+#print axioms SectorSimulation.recordedPairPolar_unit_diagonal

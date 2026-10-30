@@ -292,3 +292,4 @@ import SectorSimulation.SourcePolarChange
 import SectorSimulation.RecordedPairPhase
 import SectorSimulation.PolarUnitExt
 import SectorSimulation.PairUnit
+import SectorSimulation.PairCross
