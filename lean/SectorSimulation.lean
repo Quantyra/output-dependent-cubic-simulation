@@ -260,3 +260,4 @@ import SectorSimulation.SourceCanonicalCharacter
 import SectorSimulation.BinaryTransposeCharacter
 
 import SectorSimulation.SourceTransposeCanonical
+import SectorSimulation.WalshPolarSquare
