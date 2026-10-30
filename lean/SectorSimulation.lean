@@ -279,3 +279,4 @@ import SectorSimulation.PolarSelected
 import SectorSimulation.PolarCross
 import SectorSimulation.PolarFirstCross
 import SectorSimulation.PolarAllCross
+import SectorSimulation.PolarDisjoint
