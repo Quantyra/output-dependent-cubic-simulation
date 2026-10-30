@@ -124,8 +124,8 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 63115,
-      "sha256": "aae23042d84ec6a2318f6b4f529124007feb3b0d4ce5cc6cf5e291b199481a42"
+      "bytes": 63976,
+      "sha256": "4a67736f23378528e7310e444e5adc9670b7649074d402fd239b0a6a4ad33ea5"
     },
     {
       "path": "lean/CLAIMS.json",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 6777,
-      "sha256": "bcfef51b024169359958322a04642180d7bcfabe71599272a74d741084a5e2f9"
+      "bytes": 7023,
+      "sha256": "1e186ac7f18e7f6d720b652496aaa661cad2c83823388e9db02961ef1e065312"
     },
     {
       "path": "lean/SectorSimulation/AsciiDescriptorEncode.lean",
@@ -763,9 +763,24 @@
       "sha256": "1ae8b823e2c595e1b6cb593634ec1e6b9d1d747e9ce3e06e60e8eead7d4cf205"
     },
     {
+      "path": "lean/SectorSimulation/PolarAllCross.lean",
+      "bytes": 3175,
+      "sha256": "4a49702aa91d7a89428ba1bc264129c0ba1832bd73b0a7efb25e178eece4c00f"
+    },
+    {
+      "path": "lean/SectorSimulation/PolarCost.lean",
+      "bytes": 2004,
+      "sha256": "7d1e3aaebbdb31e40e249cc502dd33fc85d9a5731b39cc94da2507f897df9e00"
+    },
+    {
       "path": "lean/SectorSimulation/PolarCross.lean",
       "bytes": 2286,
       "sha256": "90b0562aab07ac41a40620b2b2794bf481955ea772cc926c399f5ae5831ef23a"
+    },
+    {
+      "path": "lean/SectorSimulation/PolarDisjoint.lean",
+      "bytes": 1708,
+      "sha256": "63ceae2c840e3bf27093f23ccc515649f88f66ebf6964249fafaa4d14176aae9"
     },
     {
       "path": "lean/SectorSimulation/PolarEliminate.lean",
@@ -783,6 +798,11 @@
       "sha256": "9a834bcd7c2a24b7adcc28508c78a18a6986f4b83d307a4f1b9164fb152e61c8"
     },
     {
+      "path": "lean/SectorSimulation/PolarNormalCertificate.lean",
+      "bytes": 1892,
+      "sha256": "75752d75c145ae28ee328730c467f9f8efb09b4379c7a3aa5b1c66b3b0c17981"
+    },
+    {
       "path": "lean/SectorSimulation/PolarPairClearing.lean",
       "bytes": 2749,
       "sha256": "1d6dfc5ff4de4dcf668828df5099912f679fe0fb36496776fc5a3b6c247c6f63"
@@ -796,6 +816,11 @@
       "path": "lean/SectorSimulation/PolarResidual.lean",
       "bytes": 1935,
       "sha256": "a4e6daee600d1f3f77f521108cab6650519d0f0ee20716964ac3bb9b15506747"
+    },
+    {
+      "path": "lean/SectorSimulation/PolarResidualPair.lean",
+      "bytes": 1984,
+      "sha256": "b405e3ac2497a2854c0cb1eeb541806f2df31837880943e0c16724f233a8e0a7"
     },
     {
       "path": "lean/SectorSimulation/PolarSelected.lean",
@@ -851,6 +876,11 @@
       "path": "lean/SectorSimulation/SourcePhaseCompiler.lean",
       "bytes": 2178,
       "sha256": "05763de8692aa90963159b467ae1bcfc95d6589093aee80f83daf978e9223ba7"
+    },
+    {
+      "path": "lean/SectorSimulation/SourcePolarCertificate.lean",
+      "bytes": 2123,
+      "sha256": "d4d5ffc126a87a70c579aa09115e320ec4f6d0e497e640a6e9f1868a9bfeb4da"
     },
     {
       "path": "lean/SectorSimulation/SourceTransposeCanonical.lean",
@@ -1288,6 +1318,11 @@
       "sha256": "55cf58e9a5707a359e5aed2dd8072f9d0f2ddf760f7a54e7f745ab734f4333fa"
     },
     {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarDisjointProbe.lean",
+      "bytes": 1769,
+      "sha256": "64aae47d9ce4e120771c1a5cb76c9fc0ed73166b85b4e266466abf5daffa7bc7"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarEliminateProbe-v3.lean",
       "bytes": 2154,
       "sha256": "ff5e3f7f479da58e6704ded6d29352588bf4e5bf938a2565b70ae4f3d0a7a4a8"
@@ -1303,6 +1338,11 @@
       "sha256": "53544f73ae9c3e3cd25c32a45994bbcd08a2aa9e11a0d1a68fb986079db0d628"
     },
     {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarResidualPairProbe.lean",
+      "bytes": 2055,
+      "sha256": "ae052904f1d1dd205856b8e9d6463c2020dd0426ada7bb6441f91a30123765dd"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarResidualProbe-v3.lean",
       "bytes": 1995,
       "sha256": "e59a375a9c0976ddc03d9c17e33894896d1fcd3c7d4ae04c39decaa38cd19b7f"
@@ -1314,8 +1354,8 @@
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/README.md",
-      "bytes": 25878,
-      "sha256": "5ff0ae9ecf02113ef3f6a8b73161a1e8339e44cfa31a9892a25c3114b93c044a"
+      "bytes": 33431,
+      "sha256": "a414d2e451eada57d30fe0f3ef9408105e516f564093dc98e24ad8c8fbb6c144"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/baseline-timeout-evidence.tar",
@@ -1333,6 +1373,11 @@
       "sha256": "d59987bd63c3f46fd601bf751016a5d75098b263da968b1432fd87eed227ebaf"
     },
     {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/dedicated-builder-2a560be-evidence.tar",
+      "bytes": 358400,
+      "sha256": "ec32c995c01ea9d326cc807f4c0557bcc6e50ecf6380e424730a87730c871f8f"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-18971b1-01-evidence.tar",
       "bytes": 307200,
       "sha256": "30a3d9f6e09cfd182d154c3b03e6bff2937e3030b9316ba5a1b091cd62160bd9"
@@ -1348,6 +1393,11 @@
       "sha256": "10c6d584a2312ed5b1a9e1386d91b222c57ce3fe58bcce11927a48d8b9b675bc"
     },
     {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-300c213-01-evidence.tar",
+      "bytes": 317440,
+      "sha256": "11d61695cbc5d3075ec3f70dbd86b1b8e4401d9e423278f4012c6adfece9a3c7"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-348a9e2-01-evidence.tar",
       "bytes": 307200,
       "sha256": "459f082b7c6c1ee0980045d9715aa2636e480787aea92618218c23ad8bed8154"
@@ -1356,6 +1406,21 @@
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-41c4621-01-evidence.tar",
       "bytes": 296960,
       "sha256": "730829a64a2f825e2412eeb58db21b58740d522b1ebcdc766b7864fc43920177"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-47372ea-01-evidence.tar",
+      "bytes": 307200,
+      "sha256": "6c5c539de9ee4e68201b321445764802057ac5ebc6c3709af00c63575831e5c8"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-4a5b3b5-01-evidence.tar",
+      "bytes": 307200,
+      "sha256": "b51bad46f6e56fc68b8c1a725f256783ebd8cfdff5deb581b79e5eb325a97ec2"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-55be24a-01-evidence.tar",
+      "bytes": 307200,
+      "sha256": "c400e866ebdfd15e06848f007b801503da73036a3296344c1f41970a93c61dd0"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-6f75cfe-01-evidence.tar",
@@ -1381,6 +1446,11 @@
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-9c4f298-01-evidence.tar",
       "bytes": 296960,
       "sha256": "55687aec74cc48b7302088a7881cd95cc0df262143e77811a82cb493d936c2bd"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-b9703bf-01-evidence.tar",
+      "bytes": 317440,
+      "sha256": "f61fe6e12225c33daee5774d9d1fcf24bdbd48b6cbc7babfeba925697706d3b2"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-ba0e144-01-evidence.tar",
@@ -1411,6 +1481,11 @@
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-f2bd73c-01-evidence.tar",
       "bytes": 296960,
       "sha256": "930e04f7921fb188838460e848358d9fd5dc471a00fde03d321654098aa295d8"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-fb36b35-01-evidence.tar",
+      "bytes": 307200,
+      "sha256": "f45f929bfd57c693e37de28331c8eee5582e5b7064c0164631533775303de9fe"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/integrated-fc2405b-01-evidence.tar",
@@ -1473,9 +1548,24 @@
       "sha256": "f1e9b14afba126f0cdbfa43d58b71e831698e5b0c55be8714a6485e9c16f83f4"
     },
     {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-cost-probes.tar",
+      "bytes": 30720,
+      "sha256": "f8e05529927593573b4ce4a423031b22b49647e76d18da2887b8608756332041"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-cost-v6-evidence.tar",
+      "bytes": 10240,
+      "sha256": "b46b37c293718d5abfb380f88595e1d9107875ba35920e34c157bed6945b1fb1"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-cross-probes-evidence.tar",
       "bytes": 20480,
       "sha256": "5b628710be68b1c380a24d5a2ce273f799c86e3a65ebec2b2859a7aa29b4811d"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-disjoint-probe-evidence.tar",
+      "bytes": 10240,
+      "sha256": "05f7cab2aca1788785d2ed5119e5db59ebd408e38019ddae769e5f8755f9ce4e"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-eliminate-probes-evidence.tar",
@@ -1491,6 +1581,16 @@
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-fuel-probes-evidence.tar",
       "bytes": 51200,
       "sha256": "7e3b03020af4d23a9450c92d809d81bed71247c91c576fadd26895057496576c"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-normal-certificate-probes.tar",
+      "bytes": 30720,
+      "sha256": "548ae5c51e57c52e0f24cfd4d0751413604b68aab5655e51bcbbaa8e42d620f5"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-residual-pair-evidence.tar",
+      "bytes": 10240,
+      "sha256": "a69cb8d94641a9a0e9d1a979a404ef350013284341f2b3b7ec5fd8f645fdf259"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/polar-residual-probes-evidence.tar",
@@ -1511,6 +1611,11 @@
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/retry-timeout-01-evidence.tar",
       "bytes": 307200,
       "sha256": "f33f235ebfd79558f337b93c8ee65a4f50db5fc452e5a5dd3e52a4490ba2f101"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/source-polar-certificate-probes.tar",
+      "bytes": 40960,
+      "sha256": "c1e288403db382cca502b8581d1b0d50d5af91346975cecd96ed0653f6d3cb33"
     },
     {
       "path": "lean/evidence/general-hadamard-commutation-audit.md",
@@ -2359,8 +2464,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 49924,
-      "sha256": "469ee8c694807237506a7c24ca10f9d0cedd377286021b611632e2e2944a9580"
+      "bytes": 50516,
+      "sha256": "22777788ade0694ca2e9c7432a772fb5a18db5db0db2754a7649fc48309b2d4a"
     },
     {
       "path": "tools/check_metadata.py",
