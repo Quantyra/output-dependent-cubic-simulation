@@ -1683,3 +1683,8 @@ import SectorSimulation
 #print axioms SectorSimulation.additive_coordinates
 #check SectorSimulation.samePolar_affine_coordinates
 #print axioms SectorSimulation.samePolar_affine_coordinates
+
+#check SectorSimulation.sourcePolar_matrixChange
+#print axioms SectorSimulation.sourcePolar_matrixChange
+#check SectorSimulation.sourceMatrix_equalPolar_affine
+#print axioms SectorSimulation.sourceMatrix_equalPolar_affine

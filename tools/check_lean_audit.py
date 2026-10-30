@@ -610,6 +610,8 @@ EXPECTED = {
     'SectorSimulation.samePolar_normalizedDifference_add': {'propext'},
     'SectorSimulation.additive_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.samePolar_affine_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_matrixChange': {'propext', 'Quot.sound'},
+    'SectorSimulation.sourceMatrix_equalPolar_affine': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
