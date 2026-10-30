@@ -1688,3 +1688,8 @@ import SectorSimulation
 #print axioms SectorSimulation.sourcePolar_matrixChange
 #check SectorSimulation.sourceMatrix_equalPolar_affine
 #print axioms SectorSimulation.sourceMatrix_equalPolar_affine
+
+#check SectorSimulation.recordedPairPhase_degree
+#print axioms SectorSimulation.recordedPairPhase_degree
+#check SectorSimulation.recordedPairPhase_polar
+#print axioms SectorSimulation.recordedPairPhase_polar
