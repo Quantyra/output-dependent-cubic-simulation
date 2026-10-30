@@ -597,6 +597,8 @@ EXPECTED = {
     'SectorSimulation.polarEliminate_all_pairs': {'propext', 'Quot.sound'},
     'SectorSimulation.polarEliminate_preserves_orthogonal': {'propext', 'Quot.sound'},
     'SectorSimulation.polarEliminate_first_orthogonal': {'propext', 'Quot.sound'},
+    'SectorSimulation.polarEliminate_pair_members': {'propext', 'Quot.sound'},
+    'SectorSimulation.polarEliminate_pairwise_orthogonal': {'propext', 'Quot.sound'},
 }
 
 

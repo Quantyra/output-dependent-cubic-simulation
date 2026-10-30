@@ -1647,3 +1647,8 @@ import SectorSimulation
 
 #check SectorSimulation.polarEliminate_first_orthogonal
 #print axioms SectorSimulation.polarEliminate_first_orthogonal
+
+#check SectorSimulation.polarEliminate_pair_members
+#print axioms SectorSimulation.polarEliminate_pair_members
+#check SectorSimulation.polarEliminate_pairwise_orthogonal
+#print axioms SectorSimulation.polarEliminate_pairwise_orthogonal
