@@ -1579,3 +1579,6 @@ import SectorSimulation
 
 #check SectorSimulation.walshSquare_polar_expansion
 #print axioms SectorSimulation.walshSquare_polar_expansion
+
+#check SectorSimulation.sourceQuadratic_hasPolar
+#print axioms SectorSimulation.sourceQuadratic_hasPolar

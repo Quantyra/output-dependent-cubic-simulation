@@ -571,6 +571,7 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSum_transposedCanonical': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.walshWireParity_shift': set(),
     'SectorSimulation.walshSquare_polar_expansion': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceQuadratic_hasPolar': {'propext', 'Quot.sound'},
 }
 
 
