@@ -1218,6 +1218,16 @@
       "sha256": "90e64b8afb80aa046f64befa9984149eb2319529ae1855e6b838ab1a1ba55ff3"
     },
     {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPivotProbe-v2.lean",
+      "bytes": 1801,
+      "sha256": "6b95f44f961f349de3c67e5af14beab4aa9816e9014f80269b40e5fedf54579f"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPivotProbe.lean",
+      "bytes": 1789,
+      "sha256": "c4c79f4e91bae07cb5c8749f9aa4d3e9171fa651632aa12040cd44a9ab634b2a"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPriorProbe-v1.lean",
       "bytes": 2512,
       "sha256": "98e9e5257c007b8993112b9a7e79b8c7d1c0d171ec49dd3e74db85fa2283cf95"
@@ -1229,8 +1239,8 @@
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/README.md",
-      "bytes": 16554,
-      "sha256": "0050ff57752563ba1e1b3db2c6a3a30f5eb50ce6d21de0f4f5aae024d2b93cda"
+      "bytes": 17757,
+      "sha256": "d8572c8b74d3f218f563d889085601f89d9138dd36691666181c0e4f6e421d14"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/baseline-timeout-evidence.tar",
