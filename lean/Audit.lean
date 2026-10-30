@@ -1631,3 +1631,6 @@ import SectorSimulation
 
 #check SectorSimulation.polarEliminate_fuel_stable
 #print axioms SectorSimulation.polarEliminate_fuel_stable
+
+#check SectorSimulation.polarEliminate_residual_zero
+#print axioms SectorSimulation.polarEliminate_residual_zero

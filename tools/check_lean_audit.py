@@ -591,6 +591,7 @@ EXPECTED = {
     'SectorSimulation.polarEliminate_program': {'propext', 'Quot.sound'},
     'SectorSimulation.polarEliminate_reverse': {'propext', 'Quot.sound'},
     'SectorSimulation.polarEliminate_fuel_stable': {'propext', 'Quot.sound'},
+    'SectorSimulation.polarEliminate_residual_zero': {'propext', 'Quot.sound'},
 }
 
 

@@ -274,3 +274,4 @@ import SectorSimulation.PairColumnsPrior
 import SectorSimulation.PolarPivot
 import SectorSimulation.PolarEliminate
 import SectorSimulation.PolarFuel
+import SectorSimulation.PolarResidual
