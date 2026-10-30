@@ -1602,3 +1602,8 @@ import SectorSimulation
 #print axioms SectorSimulation.pairColumnOps_apply
 #check SectorSimulation.pairColumnOps_reverse
 #print axioms SectorSimulation.pairColumnOps_reverse
+
+#check SectorSimulation.clearPairColumns_program
+#print axioms SectorSimulation.clearPairColumns_program
+#check SectorSimulation.clearPairColumns_reverse
+#print axioms SectorSimulation.clearPairColumns_reverse
