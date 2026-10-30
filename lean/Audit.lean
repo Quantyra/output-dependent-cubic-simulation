@@ -1573,3 +1573,9 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_transposedCanonical
 #print axioms SectorSimulation.sourceWalshSum_transposedCanonical
+
+#check SectorSimulation.walshWireParity_shift
+#print axioms SectorSimulation.walshWireParity_shift
+
+#check SectorSimulation.walshSquare_polar_expansion
+#print axioms SectorSimulation.walshSquare_polar_expansion

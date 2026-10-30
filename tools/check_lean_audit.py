@@ -569,6 +569,8 @@ EXPECTED = {
     'SectorSimulation.xorFoldl_as_sum': set(),
     'SectorSimulation.binaryTranspose_character': {'propext', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_transposedCanonical': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.walshWireParity_shift': set(),
+    'SectorSimulation.walshSquare_polar_expansion': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
