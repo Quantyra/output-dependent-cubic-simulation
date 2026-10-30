@@ -1641,3 +1641,6 @@ import SectorSimulation
 #print axioms SectorSimulation.polarEliminate_first_pair
 #check SectorSimulation.polarEliminate_all_pairs
 #print axioms SectorSimulation.polarEliminate_all_pairs
+
+#check SectorSimulation.polarEliminate_preserves_orthogonal
+#print axioms SectorSimulation.polarEliminate_preserves_orthogonal
