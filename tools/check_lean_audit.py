@@ -590,6 +590,7 @@ EXPECTED = {
     'SectorSimulation.findPolarPair_distinct': {'propext'},
     'SectorSimulation.polarEliminate_program': {'propext', 'Quot.sound'},
     'SectorSimulation.polarEliminate_reverse': {'propext', 'Quot.sound'},
+    'SectorSimulation.polarEliminate_fuel_stable': {'propext', 'Quot.sound'},
 }
 
 

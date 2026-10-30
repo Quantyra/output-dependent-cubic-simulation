@@ -1628,3 +1628,6 @@ import SectorSimulation
 #print axioms SectorSimulation.polarEliminate_program
 #check SectorSimulation.polarEliminate_reverse
 #print axioms SectorSimulation.polarEliminate_reverse
+
+#check SectorSimulation.polarEliminate_fuel_stable
+#print axioms SectorSimulation.polarEliminate_fuel_stable
