@@ -1708,3 +1708,10 @@ import SectorSimulation
 #print axioms SectorSimulation.recordedPairPolar_unit_unrelated
 #check SectorSimulation.recordedPairPolar_unit_diagonal
 #print axioms SectorSimulation.recordedPairPolar_unit_diagonal
+
+#check SectorSimulation.matrixApply_coordinateUnit
+#print axioms SectorSimulation.matrixApply_coordinateUnit
+#check SectorSimulation.sourcePolar_units_are_columns
+#print axioms SectorSimulation.sourcePolar_units_are_columns
+#check SectorSimulation.sourcePolar_recorded_pair_units
+#print axioms SectorSimulation.sourcePolar_recorded_pair_units

@@ -620,6 +620,9 @@ EXPECTED = {
     'SectorSimulation.recordedPairPolar_member_unit': {'propext'},
     'SectorSimulation.recordedPairPolar_unit_unrelated': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedPairPolar_unit_diagonal': {'propext'},
+    'SectorSimulation.matrixApply_coordinateUnit': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_units_are_columns': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_recorded_pair_units': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
