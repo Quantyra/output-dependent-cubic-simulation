@@ -1720,3 +1720,6 @@ import SectorSimulation
 #print axioms SectorSimulation.unpairedIndices_absent
 #check SectorSimulation.sourcePolar_residual_units
 #print axioms SectorSimulation.sourcePolar_residual_units
+
+#check SectorSimulation.sourcePolar_residual_pair_units
+#print axioms SectorSimulation.sourcePolar_residual_pair_units

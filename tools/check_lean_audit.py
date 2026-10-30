@@ -625,6 +625,7 @@ EXPECTED = {
     'SectorSimulation.sourcePolar_recorded_pair_units': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.unpairedIndices_absent': {'propext', 'Quot.sound'},
     'SectorSimulation.sourcePolar_residual_units': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_residual_pair_units': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
