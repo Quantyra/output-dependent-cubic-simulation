@@ -1589,3 +1589,6 @@ import SectorSimulation
 #print axioms SectorSimulation.clearPolarPair_idempotent
 #check SectorSimulation.columnAdd_action
 #print axioms SectorSimulation.columnAdd_action
+
+#check SectorSimulation.runColumnAdds_reverse_cancels
+#print axioms SectorSimulation.runColumnAdds_reverse_cancels

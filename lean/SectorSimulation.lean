@@ -264,3 +264,4 @@ import SectorSimulation.WalshPolarSquare
 import SectorSimulation.QuadraticSourcePolar
 import SectorSimulation.PolarPairClearing
 import SectorSimulation.ColumnAction
+import SectorSimulation.ColumnProgram
