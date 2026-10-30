@@ -615,6 +615,9 @@ EXPECTED = {
     'SectorSimulation.recordedPairPhase_degree': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recordedPairPhase_polar': {'propext', 'Quot.sound'},
     'SectorSimulation.bilinear_equal_of_unit_pairs': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recordedPairPolar_unit_absent': {'propext'},
+    'SectorSimulation.recordedPairPolar_head_unit': {'propext'},
+    'SectorSimulation.recordedPairPolar_member_unit': {'propext'},
 }
 
 

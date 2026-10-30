@@ -1696,3 +1696,10 @@ import SectorSimulation
 
 #check SectorSimulation.bilinear_equal_of_unit_pairs
 #print axioms SectorSimulation.bilinear_equal_of_unit_pairs
+
+#check SectorSimulation.recordedPairPolar_unit_absent
+#print axioms SectorSimulation.recordedPairPolar_unit_absent
+#check SectorSimulation.recordedPairPolar_head_unit
+#print axioms SectorSimulation.recordedPairPolar_head_unit
+#check SectorSimulation.recordedPairPolar_member_unit
+#print axioms SectorSimulation.recordedPairPolar_member_unit
