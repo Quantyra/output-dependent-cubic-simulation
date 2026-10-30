@@ -576,6 +576,8 @@ EXPECTED = {
     'SectorSimulation.clearPolarPair_idempotent': {'propext', 'Quot.sound'},
     'SectorSimulation.columnAdd_action': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.runColumnAdds_reverse_cancels': {'propext', 'Quot.sound'},
+    'SectorSimulation.clearPairColumn_target': {'propext', 'Quot.sound'},
+    'SectorSimulation.clearPairColumn_other': {'propext', 'Quot.sound'},
 }
 
 
