@@ -649,6 +649,8 @@ EXPECTED = {
     'SectorSimulation.recordedCoordinateAt_pair_first': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedCoordinateAt_pair_second': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedCoordinateAt_unpaired': {'propext', 'Quot.sound'},
+    'SectorSimulation.coordinateReindex_basis_perm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.coordinateReindex_sum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

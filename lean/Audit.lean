@@ -1781,3 +1781,8 @@ import SectorSimulation
 
 #check SectorSimulation.recordedCoordinateAt_unpaired
 #print axioms SectorSimulation.recordedCoordinateAt_unpaired
+
+#check SectorSimulation.coordinateReindex_basis_perm
+#print axioms SectorSimulation.coordinateReindex_basis_perm
+#check SectorSimulation.coordinateReindex_sum
+#print axioms SectorSimulation.coordinateReindex_sum
