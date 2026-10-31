@@ -1,0 +1,9 @@
+# Dedicated GCP Lean replay: `ab93a2d`
+
+Source commit: [`ab93a2d4338c79e0eab4c99f2b9f5d5b8fda1163`](https://github.com/Quantyra/output-dependent-cubic-simulation/commit/ab93a2d4338c79e0eab4c99f2b9f5d5b8fda1163).
+
+The exact Git source archive was replayed on `quantyra-sector-lean-builder-02`, project `quantyra-lean-cert-20260915`, zone `us-central1-a`, using Lean 4.30.0 (`d024af099ca4bf2c86f649261ebf59565dc8c622`) and pinned Mathlib manifest. The full Lean build completed 2,175 jobs; integrated `Audit.lean` and `tools/check_lean_audit.py` passed. The new `sourceWalshSum_recorded_interleaved_cast_naturalAbs` declaration depends on `propext`, `Classical.choice`, and `Quot.sound`.
+
+The uncompressed exact source Git archive SHA-256 is `4207cc2af3a577cd51f37a0f161682519e01d760607d606e6c8eb0868a9a10d`; the committed `source.tar.gz` is that archive gzip-compressed. The pinned `lake-manifest.json` SHA-256 is `ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642`. Raw build output, the full elaborated audit, checker result, toolchain version, and source archive are included. Component hashes are in `SHA256SUMS`; the evidence tar hash is in its adjacent `.sha256` file.
+
+The corollary gives the exact natural absolute value of the source Walsh sum: it vanishes off the canonical radical-character support and otherwise has magnitude `2^(m + pairs.length)`. This is a quadratic Walsh helper. It does not establish the full affine-support/rank statement of `lem:walsh`, the sector overlap bound `|X_a| <= 1`, normalized sector identity, algorithm costs, or any labeled manuscript theorem. No paper claim is certified.

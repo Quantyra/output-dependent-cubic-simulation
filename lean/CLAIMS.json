@@ -9431,7 +9431,7 @@
       "status": "proved and kernel checked",
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/source-walsh-interleaved.md",
-      "unresolved_bridge": "Evaluate the interleaved quadratic Walsh sum in closed form, prove the required normalization and boundedness, establish costs, and connect the result to labeled manuscript statements."
+      "unresolved_bridge": "The cast-composed closed evaluation is recorded under sourceWalshSum_recorded_interleaved_cast_closed; normalization, boundedness, source costs, and labeled theorem bridges remain open."
     },
     {
       "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_closed",
@@ -9445,6 +9445,19 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-492153b-20261031/README.md",
       "unresolved_bridge": "This helper does not prove the normalized-sector identity, boundedness, source costs, or any labeled manuscript theorem; all seven published theorem claims remain open."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_naturalAbs",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_recorded_interleaved_cast_naturalAbs",
+      "assumptions": "The source phase has degree at most two and polar-elimination fuel is at least the source dimension.",
+      "quantifiers": "All finite dimensions, source phase ANFs, binary characters, and sufficient fuel bounds.",
+      "statement": "The exact natural absolute value of the complete source integer Walsh sum is zero off the induced radical-character support and otherwise equals 2^(residual dimension + recorded pair count).",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_closed"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-ab93a2d-20261031/README.md",
+      "unresolved_bridge": "This exact magnitude helper does not prove the full affine-support/rank statement of lem:walsh, matched-sector boundedness, normalized sector identity, costs, or any labeled manuscript theorem."
     }
   ],
   "paper_source": "manuscript/main.tex",
