@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6996,
-      "sha256": "1064b8d62f087a3105629e060106ad6511bbb0c687747db927ce34515e694549"
+      "bytes": 7270,
+      "sha256": "eb54a6650264782d80ba5af164450f07fc2a5930309c54b6b36635ab1431027f"
     },
     {
       "path": "REPRODUCING.md",
@@ -1468,6 +1468,16 @@
       "sha256": "90e64b8afb80aa046f64befa9984149eb2319529ae1855e6b838ab1a1ba55ff3"
     },
     {
+      "path": "lean/evidence/gcp/sector-420ac47-20261031/sector-420ac47-evidence.tar",
+      "bytes": 1218560,
+      "sha256": "8c4914a58df31fe8645bc3fd2de0bb74ee7b81ecf276cb460bb1b70c3af17880"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-420ac47-20261031/sector-420ac47-evidence.tar.sha256",
+      "bytes": 94,
+      "sha256": "be8a9783287bee93bd703fdb851811014516c1a46b5317855c1bccbf80805b35"
+    },
+    {
       "path": "lean/evidence/gcp/sector-4dc88e3-20261031/sector-4dc88e3-evidence.tar",
       "bytes": 1198080,
       "sha256": "7d6a25346bfd614d28f652edc9c0c69cbf032469e021bb0836e1c82691e4e962"
@@ -2669,8 +2679,8 @@
     },
     {
       "path": "publication/LEAN-PLAN.md",
-      "bytes": 8206,
-      "sha256": "09da1fdfd49873fa30d41071ea668243067a0a5b0bd449fc1d96ae969e563956"
+      "bytes": 8451,
+      "sha256": "a517a339dad49480d2ab8afc01baeb831c39c9848820390237e04bce985eb7ec"
     },
     {
       "path": "publication/PUBLICATION-RECEIPT.md",
