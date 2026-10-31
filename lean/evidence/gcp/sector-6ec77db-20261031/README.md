@@ -1,0 +1,9 @@
+# Dedicated GCP Lean replay: `6ec77db`
+
+Source commit: [`6ec77db699f1a76046abef37e50d959d1ed827f4`](https://github.com/Quantyra/output-dependent-cubic-simulation/commit/6ec77db699f1a76046abef37e50d959d1ed827f4).
+
+A Git archive of the complete Lean project and `tools/check_lean_audit.py` was replayed on the dedicated VM `quantyra-sector-lean-builder-02`, project `quantyra-lean-cert-20260915`, zone `us-central1-a`, using Lean 4.30.0 (`d024af099ca4bf2c86f649261ebf59565dc8c622`) and the pinned Lake manifest. The archive omits only `lean/evidence/**` to avoid duplicating earlier binary evidence bundles. The raw archive SHA-256 is `d37c4baa74c6d59ab850371f499fedec98a0d1846eaaa542da60b8954636899d`; `source.tar.gz` is its compressed copy. Pinned `lake-manifest.json` SHA-256: `ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642`.
+
+The full build passed (2,175 jobs), as did integrated `Audit.lean` and `tools/check_lean_audit.py`. `sourceWalshSum_recorded_interleaved_cast_naturalAbs_of_witness` proves that the exact natural absolute-value formula is independent of the chosen valid dimension witnesses. `sourceWalshSum_recorded_interleaved_cast_zero_iff_of_witness` characterizes zero by whether the induced radical-character coefficient list contains `true`. Both audited declarations use `propext`, `Classical.choice`, and `Quot.sound`. Raw logs, checker output, toolchain version, manifest hash and source archive are included; component hashes are in `SHA256SUMS`, and the evidence tar hash is recorded in its adjacent `.sha256` file.
+
+The zero criterion is expressed in polar-elimination-generated coordinates. It does not yet prove the paper's affine-image/rank characterization, normalized sector identity, matched-sector bound, circuit interpretation, costs or any of the seven labeled manuscript claims. No paper claim is certified.

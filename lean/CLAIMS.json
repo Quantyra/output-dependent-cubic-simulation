@@ -9471,6 +9471,32 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-3920eca-20261031/README.md",
       "unresolved_bridge": "This source Walsh bound does not prove the matched-sector overlap bound, full quadratic support/rank algorithm, normalized sector identity, source costs, or any labeled manuscript theorem."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_naturalAbs_of_witness",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_recorded_interleaved_cast_naturalAbs_of_witness",
+      "assumptions": "The source phase has degree at most two, polar-elimination fuel is sufficient, and the supplied dimension witnesses satisfy the recorded-coordinate dimension equations.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phase ANFs, binary characters, sufficient fuel bounds, and valid dimension witnesses.",
+      "statement": "The exact natural absolute value formula for the complete source Walsh sum is independent of the choice of valid recorded-coordinate dimension witnesses.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_naturalAbs"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-6ec77db-20261031/README.md",
+      "unresolved_bridge": "Witness independence does not establish the paper's affine-image/rank support characterization, normalized sector identity, matched-sector bound, source costs, or any labeled paper theorem."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_zero_iff_of_witness",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_recorded_interleaved_cast_zero_iff_of_witness",
+      "assumptions": "The source phase has degree at most two, polar-elimination fuel is sufficient, and the supplied dimension witnesses satisfy the recorded-coordinate dimension equations.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phase ANFs, binary characters, sufficient fuel bounds, and valid dimension witnesses.",
+      "statement": "The complete source Walsh sum is zero exactly when the induced radical-character coefficient list in the supplied recorded coordinates contains true.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_naturalAbs_of_witness"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-6ec77db-20261031/README.md",
+      "unresolved_bridge": "This generated-coordinate support criterion is not yet the paper's affine-image/rank characterization; normalized sector identity, matched-sector bound, source costs and all labeled theorem bridges remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",
