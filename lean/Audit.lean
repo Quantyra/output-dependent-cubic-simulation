@@ -1896,6 +1896,8 @@ import SectorSimulation
 #print axioms SectorSimulation.recordedResidualLinearPart_vectorXor
 #check SectorSimulation.recordedResidualLinearPart_zeroVector
 #print axioms SectorSimulation.recordedResidualLinearPart_zeroVector
+#check SectorSimulation.recordedResidualLinearPart_surjective
+#print axioms SectorSimulation.recordedResidualLinearPart_surjective
 #check SectorSimulation.vectorXor_eq_zero_iff
 #print axioms SectorSimulation.vectorXor_eq_zero_iff
 #check SectorSimulation.recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset

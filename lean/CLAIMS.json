@@ -9640,6 +9640,19 @@
       "axioms": ["propext", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-6ca49ab-20261031/README.md",
       "unresolved_bridge": "Its kernel still needs to be identified with the image of the source quadratic polar form."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedResidualLinearPart_surjective",
+      "section": "3",
+      "target": "SectorSimulation.recordedResidualLinearPart_surjective",
+      "assumptions": "The recorded coordinate map is bijective and the binary matrix action is surjective.",
+      "quantifiers": "All finite source, pair and residual dimensions, bijective coordinate maps, dimension equalities, surjective binary matrices and residual vectors.",
+      "statement": "When its square matrix action is surjective, the residual linear-character projection is surjective onto the full residual coordinate space.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-8d8ff88-20261031/README.md",
+      "unresolved_bridge": "The source-specific transpose matrix still needs a surjectivity proof to instantiate this result; polar-image identification and the resulting rank remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",

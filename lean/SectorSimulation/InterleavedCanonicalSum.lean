@@ -621,6 +621,30 @@ theorem recordedResidualLinearPart_zeroVector {n k m : Nat}
   simp [recordedResidualLinearPart, canonicalRadical, coordinateReindex,
     binaryVectorCast, zeroVector, matrixApply_zero]
 
+theorem recordedResidualLinearPart_surjective {n k m : Nat}
+    (f : Fin n → Fin n) (hf : Function.Bijective f)
+    (h : n = (k + k) + m) (T : BinaryMatrix n)
+    (hT : Function.Surjective (matrixApply T)) :
+    Function.Surjective (recordedResidualLinearPart f h T) := by
+  cases h
+  intro w
+  let canonical : BinaryVector ((k + k) + m) := canonicalJoin zeroVector zeroVector w
+  let interleaved := interleavedVectorOfCanonical canonical
+  let finv := coordinateInverse f hf.2
+  let preimage := coordinateReindex finv interleaved
+  obtain ⟨x, hx⟩ := hT preimage
+  refine ⟨x, ?_⟩
+  have hreindex : coordinateReindex f (coordinateReindex finv interleaved) = interleaved := by
+    funext i
+    change interleaved (finv (f i)) = interleaved i
+    exact congrArg interleaved (coordinateInverse_left f hf.1 hf.2 i)
+  change canonicalRadical (@coordinateReindex ((k + k) + m)
+    (@interleavedIndexFromCanonical k m) (coordinateReindex f (matrixApply T x))) = w
+  rw [hx, hreindex]
+  rw [← canonicalBlockOfInterleaved_coordinateReindex]
+  rw [canonicalBlockOfInterleaved_rightInverse]
+  exact canonicalRadical_join zeroVector zeroVector w
+
 theorem vectorXor_eq_zero_iff {m : Nat} (x y : BinaryVector m) :
     vectorXor x y = zeroVector ↔ x = y := by
   constructor
