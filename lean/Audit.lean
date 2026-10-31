@@ -1948,3 +1948,21 @@ import SectorSimulation
 #print axioms SectorSimulation.polarEliminate_surjective
 #check SectorSimulation.sourcePolarVector_mem_residualKernel
 #print axioms SectorSimulation.sourcePolarVector_mem_residualKernel
+#check SectorSimulation.bool_recordedPair_xor
+#print axioms SectorSimulation.bool_recordedPair_xor
+#check SectorSimulation.recordedPairPolar_right_zero
+#print axioms SectorSimulation.recordedPairPolar_right_zero
+#check SectorSimulation.recordedPairPolar_right_xor
+#print axioms SectorSimulation.recordedPairPolar_right_xor
+#check SectorSimulation.recordedPairPolar_right_representation
+#print axioms SectorSimulation.recordedPairPolar_right_representation
+#check SectorSimulation.recordedPairPolar_right_member_first
+#print axioms SectorSimulation.recordedPairPolar_right_member_first
+#check SectorSimulation.recordedPairPolar_right_member_second
+#print axioms SectorSimulation.recordedPairPolar_right_member_second
+#check SectorSimulation.pairPartnerVector_absent
+#print axioms SectorSimulation.pairPartnerVector_absent
+#check SectorSimulation.pairPartnerVector_first
+#print axioms SectorSimulation.pairPartnerVector_first
+#check SectorSimulation.pairPartnerVector_second
+#print axioms SectorSimulation.pairPartnerVector_second

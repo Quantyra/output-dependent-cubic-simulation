@@ -1155,4 +1155,167 @@ theorem sourcePolarVector_mem_residualKernel {n : Nat}
     recordedPairPhase_polar]
   exact recordedPairPolar_right_unit_absent _ w _
     (unpairedIndices_absent (List.finRange n) _ _ humem)
+
+/-- Boolean identity behind additivity of the pair form in its second argument. -/
+theorem bool_recordedPair_xor (a b v1 v2 w1 w2 tv tw : Bool) :
+    Bool.xor (Bool.xor (a && Bool.xor w2 v2) (b && Bool.xor w1 v1)) (Bool.xor tv tw)
+      = Bool.xor (Bool.xor (Bool.xor (a && v2) (b && v1)) tv)
+          (Bool.xor (Bool.xor (a && w2) (b && w1)) tw) := by
+  cases a <;> cases b <;> cases v1 <;> cases v2 <;> cases w1 <;> cases w2 <;>
+    cases tv <;> cases tw <;> rfl
+
+theorem recordedPairPolar_right_zero {n : Nat} (pairs : List (Fin n × Fin n))
+    (u : BinaryVector n) :
+    recordedPairPolar pairs u (fun _ => false) = false := by
+  induction pairs with
+  | nil => rfl
+  | cons p ps ih => simp [recordedPairPolar, ih]
+
+/-- The pair form is additive in its second argument. -/
+theorem recordedPairPolar_right_xor {n : Nat} (pairs : List (Fin n × Fin n))
+    (u v w : BinaryVector n) :
+    recordedPairPolar pairs u (binaryShift v w)
+      = Bool.xor (recordedPairPolar pairs u v) (recordedPairPolar pairs u w) := by
+  induction pairs with
+  | nil => rfl
+  | cons p ps ih =>
+    simp only [recordedPairPolar, ih, binaryShift]
+    exact bool_recordedPair_xor (u p.1) (u p.2) (v p.1) (v p.2) (w p.1) (w p.2)
+      (recordedPairPolar ps u v) (recordedPairPolar ps u w)
+
+/-- The pair form in its second argument is represented by its coordinate vector. -/
+theorem recordedPairPolar_right_representation {n : Nat} (pairs : List (Fin n × Fin n))
+    (u v : BinaryVector n) :
+    recordedPairPolar pairs u v
+      = walshWireParity (List.finRange n)
+          (fun i => recordedPairPolar pairs u (coordinateUnit i)) v :=
+  additive_coordinates (fun z => recordedPairPolar pairs u z)
+    (fun a b => recordedPairPolar_right_xor pairs u a b)
+    (recordedPairPolar_right_zero pairs u) v
+
+/-- At the first endpoint of a recorded pair the form reads the partner coordinate. -/
+theorem recordedPairPolar_right_member_first {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : pairs.Pairwise pairDisjoint) (hne : ∀ p ∈ pairs, p.1 ≠ p.2)
+    (u : BinaryVector n) (p : Fin n × Fin n) (hp : p ∈ pairs) :
+    recordedPairPolar pairs u (coordinateUnit p.1) = u p.2 := by
+  induction pairs with
+  | nil => simp at hp
+  | cons q qs ih =>
+    have hcons := List.pairwise_cons.mp hd
+    have htail : ∀ r ∈ qs, r.1 ≠ r.2 := by
+      intro r hr
+      exact hne r (by simp [hr])
+    simp only [List.mem_cons] at hp
+    rcases hp with he | hm
+    · subst q
+      have hz : recordedPairPolar qs u (coordinateUnit p.1) = false := by
+        apply recordedPairPolar_right_unit_absent
+        intro r hr
+        have hdd := hcons.1 r hr
+        exact ⟨Ne.symm hdd.1, Ne.symm hdd.2.2.1⟩
+      simp [recordedPairPolar, coordinateUnit, Ne.symm (hne p (by simp)), hz]
+    · have hdis := hcons.1 p hm
+      have hrec := ih hcons.2 htail hm
+      simp [recordedPairPolar, coordinateUnit, Ne.symm hdis.1, Ne.symm hdis.2.1, hrec]
+
+/-- At the second endpoint of a recorded pair the form reads the partner coordinate. -/
+theorem recordedPairPolar_right_member_second {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : pairs.Pairwise pairDisjoint) (hne : ∀ p ∈ pairs, p.1 ≠ p.2)
+    (u : BinaryVector n) (p : Fin n × Fin n) (hp : p ∈ pairs) :
+    recordedPairPolar pairs u (coordinateUnit p.2) = u p.1 := by
+  induction pairs with
+  | nil => simp at hp
+  | cons q qs ih =>
+    have hcons := List.pairwise_cons.mp hd
+    have htail : ∀ r ∈ qs, r.1 ≠ r.2 := by
+      intro r hr
+      exact hne r (by simp [hr])
+    simp only [List.mem_cons] at hp
+    rcases hp with he | hm
+    · subst q
+      have hz : recordedPairPolar qs u (coordinateUnit p.2) = false := by
+        apply recordedPairPolar_right_unit_absent
+        intro r hr
+        have hdd := hcons.1 r hr
+        exact ⟨Ne.symm hdd.2.1, Ne.symm hdd.2.2.2⟩
+      simp [recordedPairPolar, coordinateUnit, hne p (by simp), hz]
+    · have hdis := hcons.1 p hm
+      have hrec := ih hcons.2 htail hm
+      simp [recordedPairPolar, coordinateUnit, Ne.symm hdis.2.2.1, Ne.symm hdis.2.2.2, hrec]
+
+/-- The partner vector of a residual coordinate vector: each pair endpoint receives the
+value the vector assigns to its partner. -/
+def pairPartnerVector {n : Nat} (pairs : List (Fin n × Fin n))
+    (c : BinaryVector n) : BinaryVector n :=
+  fun j => (pairs.map (fun p =>
+    Bool.xor (decide (j = p.1) && c p.2) (decide (j = p.2) && c p.1))).foldr Bool.xor false
+
+theorem pairPartnerVector_absent {n : Nat} (pairs : List (Fin n × Fin n))
+    (c : BinaryVector n) (j : Fin n) (h : ∀ p ∈ pairs, j ≠ p.1 ∧ j ≠ p.2) :
+    pairPartnerVector pairs c j = false := by
+  unfold pairPartnerVector
+  induction pairs with
+  | nil => rfl
+  | cons q qs ih =>
+    have hq := h q (by simp)
+    have htail : ∀ r ∈ qs, j ≠ r.1 ∧ j ≠ r.2 := by
+      intro r hr
+      exact h r (by simp [hr])
+    simp [hq.1, hq.2, ih htail]
+
+theorem pairPartnerVector_first {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : pairs.Pairwise pairDisjoint) (hne : ∀ p ∈ pairs, p.1 ≠ p.2)
+    (c : BinaryVector n) (p : Fin n × Fin n) (hp : p ∈ pairs) :
+    pairPartnerVector pairs c p.1 = c p.2 := by
+  induction pairs with
+  | nil => simp at hp
+  | cons q qs ih =>
+    have hcons := List.pairwise_cons.mp hd
+    have htail : ∀ r ∈ qs, r.1 ≠ r.2 := by
+      intro r hr
+      exact hne r (by simp [hr])
+    simp only [List.mem_cons] at hp
+    rcases hp with he | hm
+    · subst q
+      have hz : pairPartnerVector qs c p.1 = false := by
+        apply pairPartnerVector_absent
+        intro r hr
+        have hdd := hcons.1 r hr
+        exact ⟨Ne.symm hdd.1, Ne.symm hdd.2.2.1⟩
+      have hz' := hz
+      unfold pairPartnerVector at hz' ⊢
+      simp [hne p (by simp), hz']
+    · have hdis := hcons.1 p hm
+      have hrec := ih hcons.2 htail hm
+      have hrec' := hrec
+      unfold pairPartnerVector at hrec' ⊢
+      simp [hdis.1, hdis.2.1, hrec']
+
+theorem pairPartnerVector_second {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : pairs.Pairwise pairDisjoint) (hne : ∀ p ∈ pairs, p.1 ≠ p.2)
+    (c : BinaryVector n) (p : Fin n × Fin n) (hp : p ∈ pairs) :
+    pairPartnerVector pairs c p.2 = c p.1 := by
+  induction pairs with
+  | nil => simp at hp
+  | cons q qs ih =>
+    have hcons := List.pairwise_cons.mp hd
+    have htail : ∀ r ∈ qs, r.1 ≠ r.2 := by
+      intro r hr
+      exact hne r (by simp [hr])
+    simp only [List.mem_cons] at hp
+    rcases hp with he | hm
+    · subst q
+      have hz : pairPartnerVector qs c p.2 = false := by
+        apply pairPartnerVector_absent
+        intro r hr
+        have hdd := hcons.1 r hr
+        exact ⟨Ne.symm hdd.2.1, Ne.symm hdd.2.2.2⟩
+      have hz' := hz
+      unfold pairPartnerVector at hz' ⊢
+      simp [Ne.symm (hne p (by simp)), hz']
+    · have hdis := hcons.1 p hm
+      have hrec := ih hcons.2 htail hm
+      have hrec' := hrec
+      unfold pairPartnerVector at hrec' ⊢
+      simp [hdis.2.2.1, hdis.2.2.2, hrec']
 end SectorSimulation
