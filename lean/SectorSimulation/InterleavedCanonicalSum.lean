@@ -5,6 +5,8 @@ import Mathlib.Tactic.SplitIfs
 import SectorSimulation.ColumnAction
 import SectorSimulation.HadamardMatrixSum
 import SectorSimulation.PolarBasis
+import SectorSimulation.PolarDisjoint
+import SectorSimulation.QuadraticSourcePolar
 import Mathlib.Logic.Equiv.Basic
 
 namespace SectorSimulation
@@ -870,4 +872,80 @@ theorem recordedResidualLinearPart_surjective_for_polarEliminate {n k m : Nat}
       (transposeBinaryMatrix (polarEliminate B fuel indices identityMatrix).1)) := by
   exact recordedResidualLinearPart_surjective f hf h _
     (polarEliminate_transpose_surjective B fuel indices)
+
+/-- The recorded coordinate map of the actual source construction is bijective:
+polar elimination records distinct, pairwise disjoint endpoint pairs, so the
+recorded coordinate order is a permutation of the index list. -/
+theorem sourceRecordedCoordinateAt_bijective {n : Nat}
+    (p : PhaseANF n) (fuel : Nat) (hdegree : phaseWithinDegree 2 p = true)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n) :
+    Function.Bijective (recordedCoordinateAt
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen) := by
+  obtain ⟨ts, _, _, hpolar, halt, _, _⟩ := sourceQuadratic_hasPolar p hdegree
+  have hl : ∀ x, phasePolar p x x = false := by
+    intro x
+    rw [hpolar]
+    exact halt x
+  have hd := polarEliminate_distinct_pairs (phasePolar p) fuel (List.finRange n) identityMatrix hl
+  have hb := recordedCoordinateAt_bijective
+    (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hd.1 hd.2
+  exact ⟨hb.1, hb.2⟩
+
+/-- Surjectivity of the residual linear-character projection for the actual source
+construction, with no assumed coordinate bijectivity or matrix hypothesis. -/
+theorem sourceRecordedResidualLinearPart_surjective {n : Nat}
+    (p : PhaseANF n) (fuel : Nat) (hdegree : phaseWithinDegree 2 p = true)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m)) :
+    Function.Surjective (recordedResidualLinearPart
+      (recordedCoordinateAt
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+      hsize
+      (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)) := by
+  exact recordedResidualLinearPart_surjective_for_polarEliminate _
+    (sourceRecordedCoordinateAt_bijective p fuel hdegree hlen) hsize
+    (phasePolar p) fuel (List.finRange n)
+
+/-- The exact source Walsh support is nonempty: for every degree-at-most-two source
+phase there is a wire character whose exact source Walsh sum is nonzero. -/
+theorem sourceWalshSum_support_nonempty {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel) :
+    ∃ l : BinaryVector n, sourceWalshSum p l ≠ 0 := by
+  obtain ⟨ts, _, _, hpolar, halt, _, _⟩ := sourceQuadratic_hasPolar p hdegree
+  have hl : ∀ x, phasePolar p x x = false := by
+    intro x
+    rw [hpolar]
+    exact halt x
+  have hd := polarEliminate_distinct_pairs (phasePolar p) fuel (List.finRange n) identityMatrix hl
+  have hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n := by
+    simpa using (recordedCoordinateOrder_perm
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2
+      hd.1 hd.2).length_eq
+  obtain ⟨m, hdim⟩ := recordedCoordinateOrder_dimension
+    (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen
+  have hsize : n =
+      (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m) := by
+    omega
+  have hsurj := sourceRecordedResidualLinearPart_surjective p fuel hdegree hlen m hsize
+  obtain ⟨l, hsolution⟩ := hsurj (recordedResidualOffset
+    (recordedCoordinateAt
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+    hsize
+    (fun i => normalizedDifference
+      (fun y => evalPhase p (matrixApply
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1 y))
+      (fun y => evalPhase (recordedPairPhase
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2) y)
+      (coordinateUnit i)))
+  refine ⟨l, ?_⟩
+  exact (sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation
+    p l fuel hdegree hbound hlen m hsize).mpr hsolution
 end SectorSimulation
