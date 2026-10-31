@@ -671,6 +671,7 @@ EXPECTED = {
     'SectorSimulation.canonicalBlockOfInterleaved_surjective': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalBlockOfInterleaved_basis_perm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.canonicalBlockOfInterleaved_integerSum': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recordedPairPhase_interleaved': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

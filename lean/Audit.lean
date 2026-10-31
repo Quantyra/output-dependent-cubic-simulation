@@ -1835,3 +1835,6 @@ import SectorSimulation
 #print axioms SectorSimulation.canonicalBlockOfInterleaved_basis_perm
 #check SectorSimulation.canonicalBlockOfInterleaved_integerSum
 #print axioms SectorSimulation.canonicalBlockOfInterleaved_integerSum
+
+#check SectorSimulation.recordedPairPhase_interleaved
+#print axioms SectorSimulation.recordedPairPhase_interleaved
