@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5795,
-      "sha256": "85b00355c3ab54a3eb2550b968152a613f9b662fb137abe0938a823be8caeeef"
+      "bytes": 5794,
+      "sha256": "90448f0219bdf7054cd8c7f3b8318de60238505da0bd103a5abeec0f87196945"
     },
     {
       "path": "REPRODUCING.md",
@@ -124,8 +124,8 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 73324,
-      "sha256": "8e7ad040657bd41d151f4f3427ec7f7552c4b3fe89459b63d15d5c07382bb345"
+      "bytes": 73298,
+      "sha256": "a2412fbba94092fbf5a3b391f764210c8281c09694c678660acfe42ec4285479"
     },
     {
       "path": "lean/CLAIMS.json",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 8630,
-      "sha256": "026202004fb14fd27c7764295f57ae4cff56f2ebfb480230802f30d226362109"
+      "bytes": 8604,
+      "sha256": "635e359a0659ccc931f9ad731241dcb3eb9450c569afbf1df1e4eaad1d7bcddd"
     },
     {
       "path": "lean/SectorSimulation/AffineCoordinates.lean",
@@ -824,8 +824,8 @@
     },
     {
       "path": "lean/SectorSimulation/PolarCost.lean",
-      "bytes": 2005,
-      "sha256": "8008fc284517330e2ec54969603bb636135e55b6b640ee7d66f792fe7caea720"
+      "bytes": 2004,
+      "sha256": "7d1e3aaebbdb31e40e249cc502dd33fc85d9a5731b39cc94da2507f897df9e00"
     },
     {
       "path": "lean/SectorSimulation/PolarCross.lean",
@@ -854,8 +854,8 @@
     },
     {
       "path": "lean/SectorSimulation/PolarNormalCertificate.lean",
-      "bytes": 1893,
-      "sha256": "3d3e17ccb0410c5c7c7ab07036331a0105474c5f103ccb483eb58597472da070"
+      "bytes": 1892,
+      "sha256": "75752d75c145ae28ee328730c467f9f8efb09b4379c7a3aa5b1c66b3b0c17981"
     },
     {
       "path": "lean/SectorSimulation/PolarPairClearing.lean",
@@ -1019,8 +1019,8 @@
     },
     {
       "path": "lean/SectorSimulation/SourcePolarAll.lean",
-      "bytes": 7206,
-      "sha256": "2c2fdb5da61360db485868f5ff3912228311b85a625dff7ec1f08604b59a046c"
+      "bytes": 7205,
+      "sha256": "36f491b35393aa48872a0116673c0b243b57501a190af0b32b7cee6eaa258125"
     },
     {
       "path": "lean/SectorSimulation/SourcePolarCertificate.lean",
@@ -1469,78 +1469,78 @@
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPivotProbe-v2.lean",
-      "bytes": 1802,
-      "sha256": "3781734e7131fcdfcf087bac7cd7c19c65e512cb716b769c14f0aad86a2beb9d"
+      "bytes": 1801,
+      "sha256": "6b95f44f961f349de3c67e5af14beab4aa9816e9014f80269b40e5fedf54579f"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPivotProbe.lean",
-      "bytes": 1790,
-      "sha256": "0be5ea800ffbd189a31603b8779bc4dca2060c42640d3d56f9a7c9e323b25533"
+      "bytes": 1789,
+      "sha256": "c4c79f4e91bae07cb5c8749f9aa4d3e9171fa651632aa12040cd44a9ab634b2a"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPriorProbe-v1.lean",
-      "bytes": 2513,
-      "sha256": "7665fc3ad9c285aeb1613eb7df8e1428f7f3c62b68d4eb1702eaeb35ba18e3b3"
+      "bytes": 2512,
+      "sha256": "98e9e5257c007b8993112b9a7e79b8c7d1c0d171ec49dd3e74db85fa2283cf95"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPriorProbe-v2.lean",
-      "bytes": 2282,
-      "sha256": "f681d5d47ace7f407b58731aae131b1a9161f9b8f73b98dd58ccdbde48a657d5"
+      "bytes": 2281,
+      "sha256": "f21a4d667cab00dc82f34ffd9bc6ed3fd31adc626efe854abebabceadc873e63"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarAllCrossProbe-v1.lean",
-      "bytes": 3220,
-      "sha256": "252e6ff9962e34b941e8c8b26b9c67309be7948e02f1b954f6e411ce44cfa331"
+      "bytes": 3219,
+      "sha256": "b8f94b15da4f812e07634f0367f19246ea8015fb6e5e9f0db0eddf386d51837a"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarAllCrossProbe-v2.lean",
-      "bytes": 3301,
-      "sha256": "4272867a4052668d465206cfa926e922eac70eba3dfdff79cd33593153756795"
+      "bytes": 3300,
+      "sha256": "92702a3f4211f11df2b1ad0bef4acc8ccd0d3ce6a71d697d7cf2fb9875eee279"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarCrossProbe-v3.lean",
-      "bytes": 2354,
-      "sha256": "847af5649a2616d53f9fe0bc7bbe6c8468698df9582e6a34fcb907145d92cf1e"
+      "bytes": 2353,
+      "sha256": "55cf58e9a5707a359e5aed2dd8072f9d0f2ddf760f7a54e7f745ab734f4333fa"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarDisjointProbe.lean",
-      "bytes": 1770,
-      "sha256": "ff19dc896f2fc1cde1b7296b920d5e96c6b0c6748e7036b60c1e4b1603e71d19"
+      "bytes": 1769,
+      "sha256": "64aae47d9ce4e120771c1a5cb76c9fc0ed73166b85b4e266466abf5daffa7bc7"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarEliminateProbe-v3.lean",
-      "bytes": 2155,
-      "sha256": "dea8262070f441f63167ca58e2c5d2bcad2d586ffb7d8c912b126424bcc57648"
+      "bytes": 2154,
+      "sha256": "ff5e3f7f479da58e6704ded6d29352588bf4e5bf938a2565b70ae4f3d0a7a4a8"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarFirstCrossProbe.lean",
-      "bytes": 2656,
-      "sha256": "61849f5a6227e809568fecc4be77c44daad28683b1e7bf30e570ce740ccdb37f"
+      "bytes": 2655,
+      "sha256": "6e2fbd0572dbc193a502e3a578f84cfb42961ec2e167de938214872cb59f2acd"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarFuelProbe-v4.lean",
-      "bytes": 1266,
-      "sha256": "2745a7a0b27fb7485c76c9c51fe25cbe0e673458c24a6e833dd2ce9bb3ecd426"
+      "bytes": 1265,
+      "sha256": "53544f73ae9c3e3cd25c32a45994bbcd08a2aa9e11a0d1a68fb986079db0d628"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarResidualPairProbe.lean",
-      "bytes": 2056,
-      "sha256": "f0f5a5d417d199e2fb7a46f27e13ccb0809689e04a50ec492c78afed0dd94afe"
+      "bytes": 2055,
+      "sha256": "ae052904f1d1dd205856b8e9d6463c2020dd0426ada7bb6441f91a30123765dd"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarResidualProbe-v3.lean",
-      "bytes": 1996,
-      "sha256": "4ad7537ac17040ebeb670e52477d2aabccad015f803e5939812da80e7dfc44c5"
+      "bytes": 1995,
+      "sha256": "e59a375a9c0976ddc03d9c17e33894896d1fcd3c7d4ae04c39decaa38cd19b7f"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PolarSelectedProbe-v2.lean",
-      "bytes": 3212,
-      "sha256": "1af67c91e78d3677804a92e462c7322f2eeb536194c6df1290271ccc29f81c89"
+      "bytes": 3211,
+      "sha256": "316ee3af6438107fed68e81dd19cb01124c2baf0e16292bf79da1f717008ad01"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/README.md",
-      "bytes": 69766,
-      "sha256": "9446491f4a9d8d0d09054ec5cc1f99982c2aed27c16626ed95c13e77f23c3f32"
+      "bytes": 69651,
+      "sha256": "bffb6811500df8ae732d2b4d50516153e79833ad2c3f84a4718c39c8dad25695"
     },
     {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/additive-coordinates-probes.tar",
@@ -2164,8 +2164,8 @@
     },
     {
       "path": "lean/evidence/gcp/sector-f4094e5-20261030/sector-f4094e5-evidence.tar.sha256",
-      "bytes": 95,
-      "sha256": "2d797495128eb66bb0e446598851aafd76d74c4ccff933ef67d8ba4ddaf57c8b"
+      "bytes": 94,
+      "sha256": "eb8adbd5c71a5fa1044b0c3e2d1a1de51e9528fe7e29c1ea8678267d0aac7180"
     },
     {
       "path": "lean/evidence/general-hadamard-commutation-audit.md",
@@ -2659,8 +2659,8 @@
     },
     {
       "path": "publication/LEAN-PLAN.md",
-      "bytes": 7028,
-      "sha256": "4065c5b36e2a97e01c3f49d8824bc37092c86004b3ff1f1bd168d22edb0d40cf"
+      "bytes": 7027,
+      "sha256": "b81ca82aafc8b7dd93739876a8bb18d4edd087c15678931e0036c3877884976e"
     },
     {
       "path": "publication/PUBLICATION-RECEIPT.md",
