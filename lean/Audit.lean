@@ -1735,3 +1735,10 @@ import SectorSimulation
 #print axioms SectorSimulation.disjoint_pairs_unrelated_first
 #check SectorSimulation.sourcePolar_cross_first_units
 #print axioms SectorSimulation.sourcePolar_cross_first_units
+
+#check SectorSimulation.sourcePolar_cross_first_second_units
+#print axioms SectorSimulation.sourcePolar_cross_first_second_units
+#check SectorSimulation.sourcePolar_cross_second_first_units
+#print axioms SectorSimulation.sourcePolar_cross_second_first_units
+#check SectorSimulation.sourcePolar_cross_second_second_units
+#print axioms SectorSimulation.sourcePolar_cross_second_second_units

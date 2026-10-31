@@ -631,6 +631,9 @@ EXPECTED = {
     'SectorSimulation.pairOrthogonal_symmetric': set(),
     'SectorSimulation.disjoint_pairs_unrelated_first': {'propext'},
     'SectorSimulation.sourcePolar_cross_first_units': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_cross_first_second_units': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_cross_second_first_units': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_cross_second_second_units': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
