@@ -948,4 +948,92 @@ theorem sourceWalshSum_support_nonempty {n : Nat}
   refine ⟨l, ?_⟩
   exact (sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation
     p l fuel hdegree hbound hlen m hsize).mpr hsolution
+
+/-- The source coordinate index carrying the `i`-th residual coordinate. -/
+def recordedRadicalIndex {n k m : Nat} (f : Fin n → Fin n) (h : n = (k + k) + m)
+    (i : Fin m) : Fin n :=
+  f (Fin.cast h.symm (@interleavedIndexFromCanonical k m (Fin.natAdd (k + k) i)))
+
+/-- Each residual coordinate is one source coordinate of the transformed character. -/
+theorem recordedResidualLinearPart_apply_radicalIndex {n k m : Nat} (f : Fin n → Fin n)
+    (h : n = (k + k) + m) (T : BinaryMatrix n) (l : BinaryVector n) (i : Fin m) :
+    recordedResidualLinearPart f h T l i =
+      matrixApply T l (recordedRadicalIndex f h i) := rfl
+
+/-- On the radical block the interleaved layout permutation is the identity, so the
+residual indices are the recorded coordinates in positions `k + k` onward. -/
+theorem recordedRadicalIndex_eq_cast_natAdd {n k m : Nat} (f : Fin n → Fin n)
+    (h : n = (k + k) + m) (i : Fin m) :
+    recordedRadicalIndex f h i = f (Fin.cast h.symm (Fin.natAdd (k + k) i)) := by
+  unfold recordedRadicalIndex
+  apply congrArg f
+  apply congrArg (Fin.cast h.symm)
+  unfold interleavedIndexFromCanonical
+  have hleft : ¬ ((Fin.natAdd (k + k) i : Fin ((k + k) + m)).val < k) := by
+    simp only [Fin.natAdd]
+    omega
+  have hright : ¬ ((Fin.natAdd (k + k) i : Fin ((k + k) + m)).val < k + k) := by
+    simp only [Fin.natAdd]
+    omega
+  rw [dif_neg hleft, dif_neg hright]
+
+/-- The kernel of the residual projection is cut out by `m` explicit source
+coordinate equations on the transformed character. -/
+theorem recordedResidualLinearPart_eq_zero_iff_radicalCoordinates {n k m : Nat}
+    (f : Fin n → Fin n) (h : n = (k + k) + m) (T : BinaryMatrix n) (l : BinaryVector n) :
+    recordedResidualLinearPart f h T l = zeroVector ↔
+      ∀ i : Fin m, matrixApply T l (recordedRadicalIndex f h i) = false := by
+  constructor
+  · intro hz i
+    have hi := congrFun hz i
+    rw [recordedResidualLinearPart_apply_radicalIndex] at hi
+    simpa [zeroVector] using hi
+  · intro hi
+    funext i
+    rw [recordedResidualLinearPart_apply_radicalIndex]
+    simpa [zeroVector] using hi i
+
+/-- Two characters have the same residual image exactly when their difference lies in
+the kernel. This is the coset law of the residual projection. -/
+theorem recordedResidualLinearPart_eq_iff_vectorXor_kernel {n k m : Nat}
+    (f : Fin n → Fin n) (h : n = (k + k) + m) (T : BinaryMatrix n)
+    (x y : BinaryVector n) :
+    recordedResidualLinearPart f h T x = recordedResidualLinearPart f h T y ↔
+      recordedResidualLinearPart f h T (vectorXor x y) = zeroVector := by
+  rw [recordedResidualLinearPart_vectorXor]
+  exact (vectorXor_eq_zero_iff (recordedResidualLinearPart f h T x)
+    (recordedResidualLinearPart f h T y)).symm
+
+/-- The exact source Walsh support is a coset of the residual kernel: once one wire
+character has nonzero source Walsh sum, another does exactly when their difference
+lies in the kernel of the residual projection. -/
+theorem sourceWalshSum_support_coset {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (l l' : BinaryVector n) (hne : sourceWalshSum p l ≠ 0) :
+    sourceWalshSum p l' ≠ 0 ↔
+      recordedResidualLinearPart
+        (recordedCoordinateAt
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+        hsize
+        (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)
+        (vectorXor l l') = zeroVector := by
+  have hiff := sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation
+    p l fuel hdegree hbound hlen m hsize
+  have hiff' := sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation
+    p l' fuel hdegree hbound hlen m hsize
+  have hl := hiff.mp hne
+  constructor
+  · intro hne'
+    exact (recordedResidualLinearPart_eq_iff_vectorXor_kernel _ hsize _ l l').mp
+      (hl.trans (hiff'.mp hne').symm)
+  · intro hker
+    have heq := (recordedResidualLinearPart_eq_iff_vectorXor_kernel _ hsize _ l l').mpr hker
+    exact hiff'.mpr (heq.symm.trans hl)
 end SectorSimulation
