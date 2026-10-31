@@ -689,6 +689,7 @@ EXPECTED = {
     'SectorSimulation.recordedCoordinateOrder_dimension': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedCoordinateOrder_dimension_exists': {'propext', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_closed': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_naturalAbs': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.walshWireParity_coordinateReindex_both': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 

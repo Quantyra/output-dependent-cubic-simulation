@@ -306,6 +306,10 @@ theorem radicalPhaseEval_replicate_false {m : Nat} (xs : List Bool) (c : Bool) :
             (Bool.xor c (false && x)) = c
           simpa using ih xs (Bool.xor c (false && x))
 
+theorem integerWalshSign_naturalAbs (b : Bool) :
+    (integerWalshSign b).natAbs = 1 := by
+  cases b <;> rfl
+
 /-- Evaluate the source Walsh sum after transporting its recorded coordinates into the
 canonical interleaved dimension. This is still a helper result, not a paper theorem. -/
 theorem sourceWalshSum_recorded_interleaved_cast_closed {n : Nat}
@@ -395,6 +399,36 @@ theorem sourceWalshSum_recorded_interleaved_cast_closed {n : Nat}
   simpa [q, c, f, r, a, t] using
     (interleavedWireCharacterWalshSum_closed (k := pairs.length) (m := m)
       (List.replicate pairs.length (false, false)) (List.replicate m false) c q hp hb)
+
+/-- The recorded closed form also determines the exact natural absolute value. -/
+theorem sourceWalshSum_recorded_interleaved_cast_naturalAbs {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel) :
+    let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+    let pairs := out.2.2
+    ∃ hlen : (recordedCoordinateOrder pairs).length = n,
+      ∃ m, ∃ hsize : n = (pairs.length + pairs.length) + m,
+        let f := recordedCoordinateAt pairs hlen
+        let r := fun x => evalPhase (recordedPairPhase pairs) x
+        let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+        let a := fun i => normalizedDifference
+          (fun y => evalPhase p (matrixApply out.1 y)) r (coordinateUnit i)
+        let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+        let q := binaryVectorCast hsize (coordinateReindex f t)
+        let canonical := coordinateReindex
+          (@interleavedIndexFromCanonical pairs.length m) q
+        let ds := vectorAssignment (canonicalRadical canonical)
+        Int.natAbs (sourceWalshSum p l) =
+          if (radicalCoefficientsXor (List.replicate m false) ds).any id then 0
+          else 2 ^ (m + pairs.length) := by
+  obtain ⟨hlen, m, hsize, hclosed⟩ :=
+    sourceWalshSum_recorded_interleaved_cast_closed p l fuel hdegree hbound
+  refine ⟨hlen, m, hsize, ?_⟩
+  dsimp only
+  rw [hclosed]
+  split_ifs
+  · simp
+  · simp [Int.natAbs_mul, integerWalshSign_naturalAbs]
 
 /-- Reindexing both arguments of the Walsh dot product by a permutation preserves it. -/
 theorem walshWireParity_coordinateReindex_both {n : Nat}
