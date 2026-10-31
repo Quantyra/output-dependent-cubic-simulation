@@ -307,3 +307,4 @@ import SectorSimulation.RecordedCoordinateOrder
 import SectorSimulation.RecordedCoordinateMap
 import SectorSimulation.PairEndpointIndex
 import SectorSimulation.RecordedMapEndpoints
+import SectorSimulation.RecordedMapUnpaired
