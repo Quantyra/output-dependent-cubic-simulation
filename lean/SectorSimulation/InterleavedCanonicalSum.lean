@@ -142,6 +142,78 @@ theorem interleavedCanonicalCharacterWalshSum_closed {k m : Nat}
   rw [interleavedCanonicalCharacterWalshSum_eq, canonicalCharacterWalshSum_closed
     ps qs bs ds c hp hq hb hd]
 
+/-- The generated interleaved phase paired with an arbitrary wire character. -/
+def interleavedWireCharacterWalshSum {k m : Nat}
+    (ps : List (Bool × Bool)) (bs : List Bool) (c : Bool)
+    (l : BinaryVector ((k + k) + m)) : Int :=
+  ((binaryBasis ((k + k) + m)).map (fun y => integerWalshSign
+    (Bool.xor
+      (pairPhaseEval ps
+        (vectorPairAssignment
+          (fun i : Fin k => y ⟨2 * i.val, by have hi := i.isLt; omega⟩)
+          (fun i : Fin k => y ⟨2 * i.val + 1, by have hi := i.isLt; omega⟩))
+        (radicalPhaseEval bs
+          (vectorAssignment (fun i : Fin m => y ⟨2 * k + i.val, by have hi := i.isLt; omega⟩)) c))
+      (walshWireParity (List.finRange ((k + k) + m)) l y)))).sum
+
+/-- Any interleaved wire character becomes canonical pair/radical coefficients after layout reindexing. -/
+theorem interleavedWireCharacterWalshSum_eq {k m : Nat}
+    (ps : List (Bool × Bool)) (bs : List Bool) (c : Bool)
+    (l : BinaryVector ((k + k) + m)) :
+    interleavedWireCharacterWalshSum (k := k) (m := m) ps bs c l =
+      interleavedCanonicalCharacterWalshSum (k := k) (m := m) ps
+        (vectorPairAssignment
+          (canonicalLeft (coordinateReindex (@interleavedIndexFromCanonical k m) l))
+          (canonicalRight (coordinateReindex (@interleavedIndexFromCanonical k m) l)))
+        bs
+        (vectorAssignment (canonicalRadical (coordinateReindex (@interleavedIndexFromCanonical k m) l))) c := by
+  let g := @interleavedIndexFromCanonical k m
+  let f := @canonicalIndexFromInterleaved k m
+  let canonical := coordinateReindex g l
+  have hfg : ∀ i, f (g i) = i := canonicalIndexFromInterleaved_leftInverse
+  have hgf : ∀ i, g (f i) = i := interleavedIndexFromCanonical_leftInverse
+  have hcharacter (y : BinaryVector ((k + k) + m)) :
+      canonicalLinearCharacter
+          (vectorPairAssignment (canonicalLeft canonical) (canonicalRight canonical))
+          (vectorAssignment (canonicalRadical canonical)) (canonicalBlockOfInterleaved y) =
+        walshWireParity (List.finRange ((k + k) + m)) l y := by
+    rw [canonicalLinearCharacter_dot canonical (canonicalBlockOfInterleaved y)]
+    rw [canonicalBlockOfInterleaved_coordinateReindex]
+    rw [walshWireParity_coordinateReindex f g hfg hgf canonical y]
+    have hcanonical : coordinateReindex f canonical = l := by
+      funext i
+      change l (g (f i)) = l i
+      rw [hgf i]
+    rw [hcanonical]
+  unfold interleavedWireCharacterWalshSum interleavedCanonicalCharacterWalshSum
+  apply congrArg List.sum
+  apply List.map_congr_left
+  intro y hy
+  apply congrArg integerWalshSign
+  rw [hcharacter y]
+
+/-- Closed form for the generated interleaved phase with any wire character. -/
+theorem interleavedWireCharacterWalshSum_closed {k m : Nat}
+    (ps : List (Bool × Bool)) (bs : List Bool) (c : Bool)
+    (l : BinaryVector ((k + k) + m)) (hp : ps.length = k) (hb : bs.length = m) :
+    let canonical := coordinateReindex (@interleavedIndexFromCanonical k m) l
+    let qs := vectorPairAssignment (canonicalLeft canonical) (canonicalRight canonical)
+    let ds := vectorAssignment (canonicalRadical canonical)
+    interleavedWireCharacterWalshSum (k := k) (m := m) ps bs c l =
+      if (radicalCoefficientsXor bs ds).any id then 0
+      else (2 : Int)^(m+k) * integerWalshSign
+        (Bool.xor c (hyperbolicSignature (pairCoefficientsXor ps qs))) := by
+  let canonical := coordinateReindex (@interleavedIndexFromCanonical k m) l
+  let qs := vectorPairAssignment (canonicalLeft canonical) (canonicalRight canonical)
+  let ds := vectorAssignment (canonicalRadical canonical)
+  change interleavedWireCharacterWalshSum (k := k) (m := m) ps bs c l =
+    if (radicalCoefficientsXor bs ds).any id then 0
+    else (2 : Int)^(m+k) * integerWalshSign
+      (Bool.xor c (hyperbolicSignature (pairCoefficientsXor ps qs)))
+  rw [interleavedWireCharacterWalshSum_eq]
+  exact interleavedCanonicalCharacterWalshSum_closed ps qs bs ds c hp
+    (vectorPairAssignment_length _ _) hb (vectorAssignment_length _)
+
 /-- Reindexing both arguments of the Walsh dot product by a permutation preserves it. -/
 theorem walshWireParity_coordinateReindex_both {n : Nat}
     (f g : Fin n → Fin n) (hfg : ∀ i, f (g i) = i) (hgf : ∀ i, g (f i) = i)

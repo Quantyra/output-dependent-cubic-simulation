@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6589,
-      "sha256": "533596fa6f5587dcc96c7c3f6421b6400a83c8f118af98903ca4c0c077ac3769"
+      "bytes": 6996,
+      "sha256": "1064b8d62f087a3105629e060106ad6511bbb0c687747db927ce34515e694549"
     },
     {
       "path": "REPRODUCING.md",
@@ -124,8 +124,8 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 73594,
-      "sha256": "9691d46923f3382a9b8e2216162433952b814e08b0496e03aaa0159a2bd46cf0"
+      "bytes": 73856,
+      "sha256": "940e6f67cb3649a7afe9b012cfa8b74b7e1da8913d4327193981cf18d970145d"
     },
     {
       "path": "lean/CLAIMS.json",
@@ -574,8 +574,8 @@
     },
     {
       "path": "lean/SectorSimulation/InterleavedCanonicalSum.lean",
-      "bytes": 8059,
-      "sha256": "7139a0e443f92ce7ecb2ac25f221abcd43b6421494f452aafef35a268c9d7461"
+      "bytes": 12049,
+      "sha256": "a3a422a08bee7119176438f5d05e436fb9b72dd3c23b6e093fa276f4efcf60d6"
     },
     {
       "path": "lean/SectorSimulation/InterleavedCharacter.lean",
@@ -2669,8 +2669,8 @@
     },
     {
       "path": "publication/LEAN-PLAN.md",
-      "bytes": 7768,
-      "sha256": "b96d19d741989cb05f38c85d24bb430589816c8253886af0ee32a7f3e3045d19"
+      "bytes": 8206,
+      "sha256": "09da1fdfd49873fa30d41071ea668243067a0a5b0bd449fc1d96ae969e563956"
     },
     {
       "path": "publication/PUBLICATION-RECEIPT.md",
@@ -3034,8 +3034,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 57839,
-      "sha256": "46067f8bf5230a4077b11fc300890d80146460d7a75f37c03cd761f39d03c020"
+      "bytes": 58057,
+      "sha256": "6a03dd1d9ecf89fed7b3fa6a3ddc932b6fbd4a7054419e06042df5d394f8a446"
     },
     {
       "path": "tools/check_metadata.py",
