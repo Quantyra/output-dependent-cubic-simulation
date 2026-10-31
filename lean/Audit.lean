@@ -1749,3 +1749,6 @@ import SectorSimulation
 #print axioms SectorSimulation.sourcePolar_all_units
 #check SectorSimulation.sourcePolar_all_vectors
 #print axioms SectorSimulation.sourcePolar_all_vectors
+
+#check SectorSimulation.sourcePolar_recorded_affine
+#print axioms SectorSimulation.sourcePolar_recorded_affine

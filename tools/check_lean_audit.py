@@ -637,6 +637,7 @@ EXPECTED = {
     'SectorSimulation.assemble_coordinate_cases': set(),
     'SectorSimulation.sourcePolar_all_units': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourcePolar_all_vectors': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_recorded_affine': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
