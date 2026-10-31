@@ -1,0 +1,748 @@
+⚠ [75/330] Replayed SectorSimulation.ExactReplayShift
+warning: SectorSimulation/ExactReplayShift.lean:12:127: This simp argument is unused:
+  Nat.add_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp_all [sharedShift, sharedHadamard, sharedX, sharedZ, sharedT, sharedCNOT,
+  ̲  ̲ ̲ ̲Nat.add_assoc, N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ExactReplayShift.lean:13:36: This simp argument is unused:
+  sharedShift
+
+Hint: Omit it from the simp argument list.
+  simp_all [sharedS̵h̵i̵f̵t̵,̵ ̵s̵h̵a̵r̵e̵d̵CNOT]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ExactReplayShift.lean:13:49: This simp argument is unused:
+  sharedCNOT
+
+Hint: Omit it from the simp argument list.
+  simp_all [sharedShift,̵ ̵s̵h̵a̵r̵e̵d̵C̵N̵O̵T̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ExactReplayShift.lean:14:36: This simp argument is unused:
+  sharedShift
+
+Hint: Omit it from the simp argument list.
+  simp_all [sharedS̵h̵i̵f̵t̵,̵ ̵s̵h̵a̵r̵e̵d̵CNOT]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ExactReplayShift.lean:14:49: This simp argument is unused:
+  sharedCNOT
+
+Hint: Omit it from the simp argument list.
+  simp_all [sharedShift,̵ ̵s̵h̵a̵r̵e̵d̵C̵N̵O̵T̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ExactReplayShift.lean:15:49: This simp argument is unused:
+  sharedCNOT
+
+Hint: Omit it from the simp argument list.
+  simp_all [sharedShift,̵ ̵s̵h̵a̵r̵e̵d̵C̵N̵O̵T̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [78/330] Replayed SectorSimulation.ThreeBitDecomposition
+warning: SectorSimulation/ThreeBitDecomposition.lean:30:43: This simp argument is unused:
+  threeBitVector
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [t̵h̵r̵e̵e̵B̵i̵t̵V̵e̵c̵t̵o̵r̵,̵ ̵List.finRange, Nat.testBit, cycloMul, cycloAdd, cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:30:59: This simp argument is unused:
+  List.finRange
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵,̵ ̵Nat.testBit, cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:30:74: This simp argument is unused:
+  Nat.testBit
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, List.finRange, N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵,̵ ̵cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:38:43: This simp argument is unused:
+  threeBitVector
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [t̵h̵r̵e̵e̵B̵i̵t̵V̵e̵c̵t̵o̵r̵,̵ ̵List.finRange, Nat.testBit, cycloMul, cycloAdd, cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:38:59: This simp argument is unused:
+  List.finRange
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵,̵ ̵Nat.testBit, cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:38:74: This simp argument is unused:
+  Nat.testBit
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, List.finRange, N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵,̵ ̵cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:46:43: This simp argument is unused:
+  threeBitVector
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [t̵h̵r̵e̵e̵B̵i̵t̵V̵e̵c̵t̵o̵r̵,̵ ̵List.finRange, Nat.testBit, cycloMul, cycloAdd, cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:46:59: This simp argument is unused:
+  List.finRange
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵,̵ ̵Nat.testBit, cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:46:74: This simp argument is unused:
+  Nat.testBit
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, List.finRange, N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵,̵ ̵cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:54:43: This simp argument is unused:
+  threeBitVector
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [t̵h̵r̵e̵e̵B̵i̵t̵V̵e̵c̵t̵o̵r̵,̵ ̵List.finRange, Nat.testBit, cycloMul, cycloAdd, cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:54:59: This simp argument is unused:
+  List.finRange
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵,̵ ̵Nat.testBit, cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:54:74: This simp argument is unused:
+  Nat.testBit
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, List.finRange, N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵,̵ ̵cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:62:43: This simp argument is unused:
+  threeBitVector
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [t̵h̵r̵e̵e̵B̵i̵t̵V̵e̵c̵t̵o̵r̵,̵ ̵List.finRange, Nat.testBit, cycloMul, cycloAdd, cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:62:59: This simp argument is unused:
+  List.finRange
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵,̵ ̵Nat.testBit, cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:62:74: This simp argument is unused:
+  Nat.testBit
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, List.finRange, N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵,̵ ̵cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:70:43: This simp argument is unused:
+  threeBitVector
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [t̵h̵r̵e̵e̵B̵i̵t̵V̵e̵c̵t̵o̵r̵,̵ ̵List.finRange, Nat.testBit, cycloMul, cycloAdd, cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:70:59: This simp argument is unused:
+  List.finRange
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵,̵ ̵Nat.testBit, cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:70:74: This simp argument is unused:
+  Nat.testBit
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, List.finRange, N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵,̵ ̵cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:78:43: This simp argument is unused:
+  threeBitVector
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [t̵h̵r̵e̵e̵B̵i̵t̵V̵e̵c̵t̵o̵r̵,̵ ̵List.finRange, Nat.testBit, cycloMul, cycloAdd, cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:78:59: This simp argument is unused:
+  List.finRange
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵,̵ ̵Nat.testBit, cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:78:74: This simp argument is unused:
+  Nat.testBit
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, List.finRange, N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵,̵ ̵cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:86:43: This simp argument is unused:
+  threeBitVector
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [t̵h̵r̵e̵e̵B̵i̵t̵V̵e̵c̵t̵o̵r̵,̵ ̵List.finRange, Nat.testBit, cycloMul, cycloAdd, cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:86:59: This simp argument is unused:
+  List.finRange
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵,̵ ̵Nat.testBit, cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeBitDecomposition.lean:86:74: This simp argument is unused:
+  Nat.testBit
+
+Hint: Omit it from the simp argument list.
+  simp (config := { decide := true }) [threeBitVector, List.finRange, N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵,̵ ̵cycloMul, cycloAdd,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲cycloOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [82/330] Replayed SectorSimulation.ThreeWireSlice
+warning: SectorSimulation/ThreeWireSlice.lean:33:74: This simp argument is unused:
+  h01
+
+Hint: Omit it from the simp argument list.
+  simp [embedThree, flipWire, h01̵,̵ ̵h̵0̵2, h12, Ne.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeWireSlice.lean:33:79: This simp argument is unused:
+  h02
+
+Hint: Omit it from the simp argument list.
+  simp [embedThree, flipWire, h01, h0̵2̵,̵ ̵h̵12, Ne.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeWireSlice.lean:33:84: This simp argument is unused:
+  h12
+
+Hint: Omit it from the simp argument list.
+  simp [embedThree, flipWire, h01, h02, h̵1̵2̵,̵ ̵Ne.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeWireSlice.lean:34:76: This simp argument is unused:
+  h01
+
+Hint: Omit it from the simp argument list.
+  simp_all [h01̵,̵ ̵h̵0̵2, h12, Ne.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeWireSlice.lean:34:81: This simp argument is unused:
+  h02
+
+Hint: Omit it from the simp argument list.
+  simp_all [h01, h0̵2̵,̵ ̵h̵12, Ne.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeWireSlice.lean:34:86: This simp argument is unused:
+  h12
+
+Hint: Omit it from the simp argument list.
+  simp_all [h01, h02, h̵1̵2̵,̵ ̵Ne.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeWireSlice.lean:63:38: This simp argument is unused:
+  flipWire
+
+Hint: Omit it from the simp argument list.
+  simp only [applyCNOT, vectorAddRow,̵ ̵f̵l̵i̵p̵W̵i̵r̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ThreeWireSlice.lean:64:33: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [86/330] Replayed SectorSimulation.MappedNativeCubic
+warning: SectorSimulation/MappedNativeCubic.lean:16:68: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [threeWireCubicProgram, List.mem_cons, List.mem_append, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [88/330] Replayed SectorSimulation.CubicLayerANF
+warning: SectorSimulation/CubicLayerANF.lean:37:12: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h,̵ ̵h̵t, cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CubicLayerANF.lean:37:15: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp [h, h̵t̵,̵ ̵cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [89/330] Replayed SectorSimulation.LowerPhaseNative
+warning: SectorSimulation/LowerPhaseNative.lean:33:30: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [h̵x̵,̵ ̵cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/LowerPhaseNative.lean:33:34: This simp argument is unused:
+  cycloNeg
+
+Hint: Omit it from the simp argument list.
+  simp [hx,̵ ̵c̵y̵c̵l̵o̵N̵e̵g̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [90/330] Replayed SectorSimulation.CombinedPhaseNative
+warning: SectorSimulation/CombinedPhaseNative.lean:15:70: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h,̵ ̵h̵t, cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CombinedPhaseNative.lean:15:73: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp [h, h̵t̵,̵ ̵cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CombinedPhaseNative.lean:48:61: This simp argument is unused:
+  hl
+
+Hint: Omit it from the simp argument list.
+  simp [hl̵,̵ ̵h̵c, cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CombinedPhaseNative.lean:48:65: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp [hl, h̵c̵,̵ ̵cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [92/330] Replayed SectorSimulation.PhaseBlockCompiler
+warning: SectorSimulation/PhaseBlockCompiler.lean:121:71: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h,̵ ̵h̵t, cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/PhaseBlockCompiler.lean:121:74: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp [h, h̵t̵,̵ ̵cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [96/330] Replayed SectorSimulation.ExactGaussianCNOTReplay
+warning: SectorSimulation/ExactGaussianCNOTReplay.lean:31:26: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  simp only [encodeCNOTProgram, List.map_cons, replayExactNative, encodeCNOTRecord,
+  ̲  ̲ ̲ ̲ ̲ ̲applyExactNative,
+  ̵  ̵ ̵ ̵ ̵ ̵g.1.isLt, g.2.isLt, h̵v̵,̵ ̵dif_pos, if_false, runSharedCNOTs, List.foldl_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ExactGaussianCNOTReplay.lean:31:39: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [encodeCNOTProgram, List.map_cons, replayExactNative, encodeCNOTRecord,
+  ̲  ̲ ̲ ̲ ̲ ̲applyExactNative,
+  ̵  ̵ ̵ ̵ ̵ ̵g.1.isLt, g.2.isLt, hv, dif_pos, i̵f̵_̵f̵a̵l̵s̵e̵,̵ ̵runSharedCNOTs, List.foldl_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [98/330] Replayed SectorSimulation.ModeledFourier
+warning: SectorSimulation/ModeledFourier.lean:27:5: unused variable `hprog`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [99/330] Replayed SectorSimulation.ExactNativeHeader
+warning: SectorSimulation/ExactNativeHeader.lean:14:32: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [h̵x̵,̵ ̵cycloNeg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [114/330] Replayed SectorSimulation.HadamardKernel
+warning: SectorSimulation/HadamardKernel.lean:24:50: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [runSharedHadamards, ih, sharedHadamard, Nat.add_a̵s̵s̵o̵c,̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵c̵omm, Nat.add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [115/330] Replayed SectorSimulation.ExactWalshAlgebra
+warning: SectorSimulation/ExactWalshAlgebra.lean:10:52: This simp argument is unused:
+  DyadicCyclo.mk.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [dyadicAdd, cycloAdd, cycloScale, D̵y̵a̵d̵i̵c̵C̵y̵c̵l̵o̵.̵m̵k̵.̵i̵n̵j̵E̵q̵,̵ ̵Cyclo8.mk.injEq, Int.pow_add, Int.mul_add,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲Int.add_mul, Int.mul_assoc, Int.mul_comm, Int.mul_left_comm, Nat.add_assoc, Int.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ExactWalshAlgebra.lean:10:74: This simp argument is unused:
+  Cyclo8.mk.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [dyadicAdd, cycloAdd, cycloScale, DyadicCyclo.mk.injEq, C̵y̵c̵l̵o̵8̵.̵m̵k̵.̵i̵n̵j̵E̵q̵,̵Int.pow_add, Int.mul_add,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲Int.add_mul, Int.mul_assoc, Int.mul_comm, Int.mul_left_comm, Nat.add_assoc, Int.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [117/330] Replayed SectorSimulation.HadamardKernelLinearity
+warning: SectorSimulation/HadamardKernelLinearity.lean:70:6: This simp argument is unused:
+  exactMul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [hadamardKernelStep, hx, exactSub_eq_add_neg, exactMul_add, exactMul_neg,
+        exactMul_a̵s̵s̵o̵c̵,̵ ̵e̵x̵a̵c̵t̵M̵u̵l_̵l̵eft_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [120/330] Replayed SectorSimulation.HadamardBasisKernel
+warning: SectorSimulation/HadamardBasisKernel.lean:26:29: This simp argument is unused:
+  exactNeg_zero
+
+Hint: Omit it from the simp argument list.
+  simp [hadamardKernelStep, oneWireBasisKernel, basisTerm, hx, h1,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵exactSub_eq_add_neg,
+  ̲ e̵x̵a̵c̵t̵N̵e̵g̵_̵z̵e̵r̵o̵,̵  ̲ ̲ ̲ ̲ ̲ ̲exactAdd_zero, exactZero_add, exactMul_zero, exactMul_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisKernel.lean:26:74: This simp argument is unused:
+  exactMul_zero
+
+Hint: Omit it from the simp argument list.
+  simp [hadamardKernelStep, oneWireBasisKernel, basisTerm, hx, h1, exactSub_eq_add_neg,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲exactNeg_zero, exactAdd_zero, exactZero_add, e̵x̵a̵c̵t̵M̵u̵l̵_̵z̵e̵r̵o̵,̵ ̵exactMul_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisKernel.lean:34:76: This simp argument is unused:
+  exactMul_zero
+
+Hint: Omit it from the simp argument list.
+  simp [hadamardKernelStep, oneWireBasisKernel, basisTerm, hx, h0, h1, hb,
+            exactSub_eq_add_neg, exactNeg_zero, exactAdd_zero, exactZero_add, exactMul_z̵e̵r̵o̵,̵ ̵e̵x̵a̵c̵t̵M̵u̵l̵_̵neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisKernel.lean:34:91: This simp argument is unused:
+  exactMul_neg
+
+Hint: Omit it from the simp argument list.
+  simp [hadamardKernelStep, oneWireBasisKernel, basisTerm, hx, h0, h1, hb,
+            exactSub_eq_add_neg, exactNeg_zero, exactAdd_zero, exactZero_add, exactMul_zero,̵ ̵e̵x̵a̵c̵t̵M̵u̵l̵_̵n̵e̵g̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisKernel.lean:37:61: This simp argument is unused:
+  exactZero_add
+
+Hint: Omit it from the simp argument list.
+  simp [hadamardKernelStep, oneWireBasisKernel, basisTerm, hx, h0, h1, exactSub_eq_add_neg,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲exactNeg_zero, exactAdd_zero, e̵x̵a̵c̵t̵Z̵e̵r̵o̵_̵a̵d̵d̵,̵ ̵exactMul_zero, exactMul_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisKernel.lean:37:91: This simp argument is unused:
+  exactMul_neg
+
+Hint: Omit it from the simp argument list.
+  simp [hadamardKernelStep, oneWireBasisKernel, basisTerm, hx, h0, h1, exactSub_eq_add_neg,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲exactNeg_zero, exactAdd_zero, exactZero_add, e̵x̵a̵c̵t̵M̵u̵l̵_̵z̵e̵r̵o̵,̵ ̵e̵x̵a̵c̵t̵M̵u̵l̵_̵n̵e̵g̵]̵e̲x̲a̲c̲t̲M̲u̲l̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [122/330] Replayed SectorSimulation.HadamardBasisBranching
+warning: SectorSimulation/HadamardBasisBranching.lean:25:65: This simp argument is unused:
+  basisFlipCoefficient
+
+Hint: Omit it from the simp argument list.
+  simp [oneWireBasisKernel, basisTerm, basisSameCoefficient, b̵a̵s̵i̵s̵F̵l̵i̵p̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵,̵hb, hne, Ne.symm hne,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲exactAdd_zero, exactZero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisBranching.lean:26:45: This simp argument is unused:
+  exactZero_add
+
+Hint: Omit it from the simp argument list.
+  simp [oneWireBasisKernel, basisTerm, basisSameCoefficient, basisFlipCoefficient, hb, hne,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲Ne.symm hne, e̵x̵a̵c̵t̵A̵d̵d̵_̵z̵e̵r̵o̵,̵ ̵e̵x̵a̵c̵t̵Z̵e̵r̵o̵_̵a̵d̵d̵]̵e̲x̲a̲c̲t̲A̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisBranching.lean:32:45: This simp argument is unused:
+  basisSameCoefficient
+
+Hint: Omit it from the simp argument list.
+  simp [oneWireBasisKernel, basisTerm, b̵a̵s̵i̵s̵S̵a̵m̵e̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵,̵ ̵basisFlipCoefficient, hb, hne, hflip, hw,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲exactAdd_zero, exactZero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisBranching.lean:33:30: This simp argument is unused:
+  exactAdd_zero
+
+Hint: Omit it from the simp argument list.
+  simp [oneWireBasisKernel, basisTerm, basisSameCoefficient, basisFlipCoefficient, hb, hne,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲hflip, hw, e̵x̵a̵c̵t̵A̵d̵d̵_̵z̵e̵r̵o̵,̵ ̵exactZero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisBranching.lean:39:43: This simp argument is unused:
+  basisSameCoefficient
+
+Hint: Omit it from the simp argument list.
+  simp [oneWireBasisKernel, basisTerm, b̵a̵s̵i̵s̵S̵a̵m̵e̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵,̵ ̵basisFlipCoefficient, h0, h1, h2, exactAdd_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/HadamardBasisBranching.lean:39:65: This simp argument is unused:
+  basisFlipCoefficient
+
+Hint: Omit it from the simp argument list.
+  simp [oneWireBasisKernel, basisTerm, basisSameCoefficient, b̵a̵s̵i̵s̵F̵l̵i̵p̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵h0, h1, h2, exactAdd_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [125/330] Replayed SectorSimulation.HadamardWalshCoefficient
+warning: SectorSimulation/HadamardWalshCoefficient.lean:54:56: This simp argument is unused:
+  hpar
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵p̵a̵r̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2097/2175] Replayed SectorSimulation.ComplexSemantics
+warning: SectorSimulation/ComplexSemantics.lean:16:97: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: SectorSimulation/ComplexSemantics.lean:65:21: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: SectorSimulation/ComplexSemantics.lean:65:21: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: SectorSimulation/ComplexSemantics.lean:73:21: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: SectorSimulation/ComplexSemantics.lean:73:21: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2098/2175] Replayed SectorSimulation.CanonicalWalsh
+warning: SectorSimulation/CanonicalWalsh.lean:53:10: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h,̵ ̵h̵s, integerWalshSign, hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CanonicalWalsh.lean:53:13: This simp argument is unused:
+  hs
+
+Hint: Omit it from the simp argument list.
+  simp [h, h̵s̵,̵ ̵integerWalshSign, hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CanonicalWalsh.lean:60:10: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h,̵ ̵h̵s, integerWalshSign, Int.natAbs_mul, Int.natAbs_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CanonicalWalsh.lean:60:13: This simp argument is unused:
+  hs
+
+Hint: Omit it from the simp argument list.
+  simp [h, h̵s̵,̵ ̵integerWalshSign, Int.natAbs_mul, Int.natAbs_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CanonicalWalsh.lean:60:35: This simp argument is unused:
+  Int.natAbs_mul
+
+Hint: Omit it from the simp argument list.
+  simp [h, hs, integerWalshSign, Int.natAbs_m̵u̵l̵,̵ ̵I̵n̵t̵.̵n̵a̵t̵A̵b̵s̵_̵pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2099/2175] Replayed SectorSimulation.ExplicitCanonicalWalsh
+warning: SectorSimulation/ExplicitCanonicalWalsh.lean:25:32: This simp argument is unused:
+  List.length_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [explicitPairSum, L̵i̵s̵t̵.̵l̵e̵n̵g̵t̵h̵_̵c̵o̵n̵s̵,̵ ̵pairAssignments, List.map_append,
+  ̵  ̵ ̵ ̵ ̵ ̵List.sum_append, List.map_map,
+  ̲  ̲ ̲ ̲ ̲ ̲Function.comp_def, pairPhaseEval, hyperbolicWalshSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2100/2175] Replayed SectorSimulation.CanonicalAssignmentCoverage
+warning: SectorSimulation/CanonicalAssignmentCoverage.lean:95:25: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2101/2175] Replayed SectorSimulation.CanonicalPairVectors
+warning: SectorSimulation/CanonicalPairVectors.lean:32:27: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: SectorSimulation/CanonicalPairVectors.lean:33:27: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2103/2175] Replayed SectorSimulation.CanonicalVectorWalsh
+warning: SectorSimulation/CanonicalVectorWalsh.lean:106:25: This simp argument is unused:
+  Int.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵I̵n̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵ ̵I̵n̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵[̲I̲n̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ Int.add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CanonicalVectorWalsh.lean:106:40: This simp argument is unused:
+  Int.add_comm
+
+Hint: Omit it from the simp argument list.
+  simp [Int.add_assoc, Int.add_c̵o̵m̵m̵,̵ ̵I̵n̵t̵.̵a̵d̵d̵_̵left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2106/2175] Replayed SectorSimulation.CanonicalCharacterShift
+warning: SectorSimulation/CanonicalCharacterShift.lean:70:20: This simp argument is unused:
+  Bool.xor_assoc
+
+Hint: Omit it from the simp argument list.
+  simp_all ̵[̵B̵o̵o̵l̵.̵x̵o̵r̵_̵a̵s̵s̵o̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/CanonicalCharacterShift.lean:95:37: This simp argument is unused:
+  Bool.xor_assoc
+
+Hint: Omit it from the simp argument list.
+  simp_all [hyperbolicPhase,̵ ̵B̵o̵o̵l̵.̵x̵o̵r̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2108/2175] Replayed SectorSimulation.CanonicalCharacterParity
+warning: SectorSimulation/CanonicalCharacterParity.lean:19:49: This simp argument is unused:
+  Bool.xor_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [walshWireParity, ih,̵ ̵B̵o̵o̵l̵.̵x̵o̵r̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2116/2175] Replayed SectorSimulation.ColumnAction
+warning: SectorSimulation/ColumnAction.lean:36:28: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [columnAdd, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵decide_true, Bool.true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ColumnAction.lean:44:31: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [vectorAddRow, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵decide_true, Bool.true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/ColumnAction.lean:50:8: This simp argument is unused:
+  Bool.and_comm
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵B̵o̵o̵l̵.̵a̵n̵d̵_̵c̵o̵m̵m̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2117/2175] Replayed SectorSimulation.ColumnProgram
+warning: SectorSimulation/ColumnProgram.lean:12:26: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [columnAdd, if_p̵o̵s̵ ̵r̵f̵l̵,̵ ̵i̵f̵_̵neg (Ne.symm h)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2135/2175] Replayed SectorSimulation.PolarCost
+warning: SectorSimulation/PolarCost.lean:38:17: This simp argument is unused:
+  Nat.succ_eq_add_one
+
+Hint: Omit it from the simp argument list.
+  simp only [̵N̵a̵t̵.̵s̵u̵c̵c̵_̵e̵q̵_̵a̵d̵d̵_̵o̵n̵e̵,̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵m̵u̵l̵,̵[̲N̲a̲t̲.̲a̲d̲d̲_̲m̲u̲l̲,̲ Nat.mul_add] at *
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2140/2175] Replayed SectorSimulation.AffineCoordinates
+warning: SectorSimulation/AffineCoordinates.lean:26:86: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [maskedCoordinates, coordinateUnit, binaryShift, hji,̵ ̵h̵x̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2156/2175] Replayed SectorSimulation.RecordedCoordinateOrder
+warning: SectorSimulation/RecordedCoordinateOrder.lean:55:12: This simp argument is unused:
+  recordedCoordinateOrder
+
+Hint: Omit it from the simp argument list.
+  simp [r̵e̵c̵o̵r̵d̵e̵d̵C̵o̵o̵r̵d̵i̵n̵a̵t̵e̵O̵r̵d̵e̵r̵,̵ ̵unpairedIndices]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2157/2175] Replayed SectorSimulation.RecordedCoordinateMap
+warning: SectorSimulation/RecordedCoordinateMap.lean:6:49: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2173/2175] Replayed SectorSimulation.InterleavedCanonicalSum
+warning: SectorSimulation/InterleavedCanonicalSum.lean:35:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:46:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:51:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:440:12: unused variable `c`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:473:8: unused variable `c`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:507:8: unused variable `c`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:538:37: This simp argument is unused:
+  hsupport
+
+Hint: Omit it from the simp argument list.
+  simp [h̵s̵u̵p̵p̵o̵r̵t̵,̵ ̵Nat.ne_of_gt hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:538:47: This simp argument is unused:
+  Nat.ne_of_gt hp
+
+Hint: Omit it from the simp argument list.
+  simp [hsupport,̵ ̵N̵a̵t̵.̵n̵e̵_̵o̵f̵_̵g̵t̵ ̵h̵p̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:553:8: unused variable `c`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SectorSimulation/InterleavedCanonicalSum.lean:589:8: unused variable `c`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (2175 jobs).

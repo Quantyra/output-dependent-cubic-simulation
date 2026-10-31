@@ -9560,7 +9560,7 @@
       "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate"],
       "status": "proved and kernel checked",
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
-      "build_audit_receipt": "lean/evidence/gcp/sector-9aaec54-20261031/README.md",
+      "build_audit_receipt": "lean/evidence/gcp/sector-901b1ff-20261031/README.md",
       "unresolved_bridge": "The simultaneous coordinate equations are not yet identified with the paper's affine image of the quadratic polar form or its rank."
     }
   ],
