@@ -314,3 +314,4 @@ import SectorSimulation.SourceReindexComplete
 import SectorSimulation.CoordinateInverse
 import SectorSimulation.SourceInverseReindex
 import SectorSimulation.SourceInverseLayout
+import SectorSimulation.SourceInverseEndpoints

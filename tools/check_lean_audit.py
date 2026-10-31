@@ -657,6 +657,7 @@ EXPECTED = {
     'SectorSimulation.coordinateReindex_inverse_at': {'propext', 'Classical.choice'},
     'SectorSimulation.sourceWalshSum_recorded_inverse_reindex': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_inverse_layout': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_inverse_layout_endpoints': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

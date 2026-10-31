@@ -1803,3 +1803,6 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_inverse_layout
 #print axioms SectorSimulation.sourceWalshSum_inverse_layout
+
+#check SectorSimulation.sourceWalshSum_inverse_layout_endpoints
+#print axioms SectorSimulation.sourceWalshSum_inverse_layout_endpoints
