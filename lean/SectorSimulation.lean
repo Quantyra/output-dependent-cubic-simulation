@@ -303,3 +303,4 @@ import SectorSimulation.SourcePolarAll
 import SectorSimulation.SourceRecordedAffine
 import SectorSimulation.SourceWalshRecorded
 import SectorSimulation.SourceWalshCharacter
+import SectorSimulation.RecordedCoordinateOrder

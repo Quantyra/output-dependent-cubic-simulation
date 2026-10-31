@@ -1758,3 +1758,8 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_recorded_character
 #print axioms SectorSimulation.sourceWalshSum_recorded_character
+
+#check SectorSimulation.pairEndpoints_nodup
+#print axioms SectorSimulation.pairEndpoints_nodup
+#check SectorSimulation.recordedCoordinateOrder_perm
+#print axioms SectorSimulation.recordedCoordinateOrder_perm
