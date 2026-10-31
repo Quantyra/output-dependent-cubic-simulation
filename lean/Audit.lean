@@ -1838,3 +1838,16 @@ import SectorSimulation
 
 #check SectorSimulation.recordedPairPhase_interleaved
 #print axioms SectorSimulation.recordedPairPhase_interleaved
+
+#check SectorSimulation.booleanListSum_perm
+#print axioms SectorSimulation.booleanListSum_perm
+#check SectorSimulation.booleanListSum_map
+#print axioms SectorSimulation.booleanListSum_map
+#check SectorSimulation.coordinateMap_finRange_perm
+#print axioms SectorSimulation.coordinateMap_finRange_perm
+#check SectorSimulation.walshWireParity_coordinateReindex
+#print axioms SectorSimulation.walshWireParity_coordinateReindex
+#check SectorSimulation.recordedPairInterleavedWalshSum
+#print axioms SectorSimulation.recordedPairInterleavedWalshSum
+#check SectorSimulation.sourceWalshSum_recorded_interleaved
+#print axioms SectorSimulation.sourceWalshSum_recorded_interleaved

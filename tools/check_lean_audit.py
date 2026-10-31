@@ -672,6 +672,12 @@ EXPECTED = {
     'SectorSimulation.canonicalBlockOfInterleaved_basis_perm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.canonicalBlockOfInterleaved_integerSum': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recordedPairPhase_interleaved': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.booleanListSum_perm': set(),
+    'SectorSimulation.booleanListSum_map': set(),
+    'SectorSimulation.coordinateMap_finRange_perm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.walshWireParity_coordinateReindex': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recordedPairInterleavedWalshSum': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_recorded_interleaved': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

@@ -319,3 +319,4 @@ import SectorSimulation.RecordedPhaseEval
 import SectorSimulation.RecordedAssignment
 import SectorSimulation.CanonicalInterleavedLayout
 import SectorSimulation.RecordedInterleavedPhase
+import SectorSimulation.InterleavedCharacter
