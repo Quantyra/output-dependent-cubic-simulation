@@ -2,6 +2,7 @@ import SectorSimulation.InterleavedCharacter
 import SectorSimulation.CanonicalCharacterDot
 import SectorSimulation.CanonicalInterleavedLayout
 import Mathlib.Tactic.SplitIfs
+import Mathlib.Logic.Equiv.Basic
 
 namespace SectorSimulation
 
@@ -229,6 +230,171 @@ theorem recordedCoordinateOrder_dimension_exists {n : Nat}
     ∃ k m, pairs.length = k ∧ n = k + k + m := by
   obtain ⟨m, hdim⟩ := recordedCoordinateOrder_dimension pairs hlen
   exact ⟨pairs.length, m, rfl, by omega⟩
+
+/-- Transport a binary vector across an equality of coordinate dimensions. -/
+def binaryVectorCast {n d : Nat} (h : n = d) (x : BinaryVector n) : BinaryVector d :=
+  fun i => x (Fin.cast h.symm i)
+
+theorem binaryVectorCast_refl {n : Nat} (x : BinaryVector n) :
+    binaryVectorCast rfl x = x := by
+  funext i
+  change x (Fin.cast rfl i) = x i
+  apply congrArg x
+  apply Fin.ext
+  rfl
+
+def binaryVectorCastEquiv {n d : Nat} (h : n = d) : Equiv (BinaryVector n) (BinaryVector d) where
+  toFun := binaryVectorCast h
+  invFun := binaryVectorCast h.symm
+  left_inv := by
+    intro x
+    cases h
+    rw [binaryVectorCast_refl, binaryVectorCast_refl]
+  right_inv := by
+    intro x
+    cases h
+    rw [binaryVectorCast_refl, binaryVectorCast_refl]
+
+theorem binaryVectorCast_basis_perm {n d : Nat} (h : n = d) :
+    ((binaryBasis n).map (binaryVectorCast h)).Perm (binaryBasis d) := by
+  have hinj : Function.Injective (binaryVectorCast h) := (binaryVectorCastEquiv h).injective
+  have hnodup : ((binaryBasis n).map (binaryVectorCast h)).Nodup :=
+    List.Pairwise.map _ (fun _ _ e he => e (hinj he)) (binaryBasis_nodup n)
+  apply List.perm_iff_count.mpr
+  intro y
+  rw [hnodup.count, (binaryBasis_nodup d).count]
+  have hmem : y ∈ (binaryBasis n).map (binaryVectorCast h) := by
+    obtain ⟨x, hx⟩ := (binaryVectorCastEquiv h).surjective y
+    exact List.mem_map.mpr ⟨x, binaryBasis_complete x, hx⟩
+  simp [hmem, binaryBasis_complete]
+
+theorem integerSum_binaryVectorCast {n d : Nat} (h : n = d)
+    (g : BinaryVector d → Int) :
+    ((binaryBasis n).map (fun x => g (binaryVectorCast h x))).sum =
+      ((binaryBasis d).map g).sum := by
+  simpa [List.map_map, Function.comp_def] using
+    (integerSum_perm _ _ (binaryVectorCast_basis_perm h) g)
+
+theorem walshWireParity_binaryVectorCast {n d : Nat} (h : n = d)
+    (u v : BinaryVector n) :
+    walshWireParity (List.finRange n) u v =
+      walshWireParity (List.finRange d) (binaryVectorCast h u) (binaryVectorCast h v) := by
+  cases h
+  rfl
+
+theorem interleavedPairAssignment_binaryVectorCast {n d k : Nat} (h : n = d)
+    (hn : 2 * k ≤ n) (hd : 2 * k ≤ d) (y : BinaryVector n) :
+    vectorPairAssignment
+      (fun j : Fin k => y ⟨2 * j.val, by have hj := j.isLt; omega⟩)
+      (fun j : Fin k => y ⟨2 * j.val + 1, by have hj := j.isLt; omega⟩) =
+    vectorPairAssignment
+      (fun j : Fin k => binaryVectorCast h y ⟨2 * j.val, by have hj := j.isLt; omega⟩)
+      (fun j : Fin k => binaryVectorCast h y ⟨2 * j.val + 1, by have hj := j.isLt; omega⟩) := by
+  cases h
+  rfl
+
+theorem radicalPhaseEval_replicate_false {m : Nat} (xs : List Bool) (c : Bool) :
+    radicalPhaseEval (List.replicate m false) xs c = c := by
+  induction m generalizing xs c with
+  | zero => rfl
+  | succ m ih =>
+      rw [List.replicate_succ]
+      cases xs with
+      | nil => rfl
+      | cons x xs =>
+          change radicalPhaseEval (List.replicate m false) xs
+            (Bool.xor c (false && x)) = c
+          simpa using ih xs (Bool.xor c (false && x))
+
+/-- Evaluate the source Walsh sum after transporting its recorded coordinates into the
+canonical interleaved dimension. This is still a helper result, not a paper theorem. -/
+theorem sourceWalshSum_recorded_interleaved_cast_closed {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel) :
+    let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+    let pairs := out.2.2
+    ∃ hlen : (recordedCoordinateOrder pairs).length = n,
+      ∃ m, ∃ hsize : n = (pairs.length + pairs.length) + m,
+        let f := recordedCoordinateAt pairs hlen
+        let r := fun x => evalPhase (recordedPairPhase pairs) x
+        let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+        let a := fun i => normalizedDifference
+          (fun y => evalPhase p (matrixApply out.1 y)) r (coordinateUnit i)
+        let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+        let q := binaryVectorCast hsize (coordinateReindex f t)
+        let canonical := coordinateReindex
+          (@interleavedIndexFromCanonical pairs.length m) q
+        let qs := vectorPairAssignment (canonicalLeft canonical) (canonicalRight canonical)
+        let ds := vectorAssignment (canonicalRadical canonical)
+        sourceWalshSum p l =
+          if (radicalCoefficientsXor (List.replicate m false) ds).any id then 0
+          else (2 : Int)^(m + pairs.length) * integerWalshSign
+            (Bool.xor c (hyperbolicSignature
+              (pairCoefficientsXor (List.replicate pairs.length (false, false)) qs))) := by
+  let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+  let pairs := out.2.2
+  dsimp only [out, pairs]
+  obtain ⟨hlen, hsum⟩ := sourceWalshSum_recorded_interleaved p l fuel hdegree hbound
+  obtain ⟨m, hdim⟩ := recordedCoordinateOrder_dimension pairs hlen
+  have hsize : n = (pairs.length + pairs.length) + m := by omega
+  refine ⟨hlen, m, hsize, ?_⟩
+  let f := recordedCoordinateAt pairs hlen
+  let r := fun x => evalPhase (recordedPairPhase pairs) x
+  let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+  let a := fun i => normalizedDifference (fun y => evalPhase p (matrixApply out.1 y)) r (coordinateUnit i)
+  let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+  let q := binaryVectorCast hsize (coordinateReindex f t)
+  let d := (pairs.length + pairs.length) + m
+  let sourceSummand := fun y : BinaryVector n => integerWalshSign
+    (Bool.xor
+      (pairPhaseEval (List.replicate pairs.length (false, false))
+        (vectorPairAssignment
+          (fun j : Fin pairs.length => y ⟨2 * j.val, by have hj := j.isLt; omega⟩)
+          (fun j : Fin pairs.length => y ⟨2 * j.val + 1, by have hj := j.isLt; omega⟩)) c)
+      (walshWireParity (List.finRange n) (coordinateReindex f t) y))
+  let genericSummand := fun y : BinaryVector d => integerWalshSign
+    (Bool.xor
+      (pairPhaseEval (List.replicate pairs.length (false, false))
+        (vectorPairAssignment
+          (fun j : Fin pairs.length => y ⟨2 * j.val, by have hj := j.isLt; omega⟩)
+          (fun j : Fin pairs.length => y ⟨2 * j.val + 1, by have hj := j.isLt; omega⟩))
+        (radicalPhaseEval (List.replicate m false)
+          (vectorAssignment (fun i : Fin m => y ⟨2 * pairs.length + i.val,
+            by have hi := i.isLt; omega⟩)) c))
+      (walshWireParity (List.finRange d) q y))
+  have hsum' : sourceWalshSum p l = ((binaryBasis n).map sourceSummand).sum := by
+    simpa [sourceSummand, f, r, c, a, t] using hsum
+  have hleft : 2 * pairs.length ≤ n := by omega
+  have hright : 2 * pairs.length ≤ d := by omega
+  have hpoint (y : BinaryVector n) :
+      sourceSummand y = genericSummand (binaryVectorCast hsize y) := by
+    dsimp [sourceSummand, genericSummand]
+    apply congrArg integerWalshSign
+    rw [interleavedPairAssignment_binaryVectorCast hsize hleft hright y]
+    rw [radicalPhaseEval_replicate_false]
+    simpa [d, q] using
+      (walshWireParity_binaryVectorCast hsize (coordinateReindex f t) y)
+  have hwire : sourceWalshSum p l =
+      interleavedWireCharacterWalshSum (k := pairs.length) (m := m)
+        (List.replicate pairs.length (false, false)) (List.replicate m false) c q := by
+    calc
+      sourceWalshSum p l = ((binaryBasis n).map sourceSummand).sum := hsum'
+      _ = ((binaryBasis n).map (fun y => genericSummand (binaryVectorCast hsize y))).sum := by
+        apply congrArg List.sum
+        apply List.map_congr_left
+        intro y hy
+        exact hpoint y
+      _ = ((binaryBasis d).map genericSummand).sum :=
+        integerSum_binaryVectorCast hsize genericSummand
+      _ = interleavedWireCharacterWalshSum (k := pairs.length) (m := m)
+          (List.replicate pairs.length (false, false)) (List.replicate m false) c q := by
+        rfl
+  rw [hwire]
+  have hp : (List.replicate pairs.length (false, false)).length = pairs.length := by simp
+  have hb : (List.replicate m false).length = m := by simp
+  simpa [q, c, f, r, a, t] using
+    (interleavedWireCharacterWalshSum_closed (k := pairs.length) (m := m)
+      (List.replicate pairs.length (false, false)) (List.replicate m false) c q hp hb)
 
 /-- Reindexing both arguments of the Walsh dot product by a permutation preserves it. -/
 theorem walshWireParity_coordinateReindex_both {n : Nat}
