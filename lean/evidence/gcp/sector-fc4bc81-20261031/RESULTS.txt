@@ -1,0 +1,6 @@
+Manuscript source commit: fc4bc81b9b5aca158d9bf78dc1a4f65cd838e5d3
+Lean 4.30.0; Mathlib pinned by lean/lake-manifest.json
+Dedicated GCP VM: quantyra-sector-lean-builder-02 (quantyra-lean-cert-20260915/us-central1-a)
+Build: lake build; 2,175 jobs; success
+Audit: Audit.lean; check_lean_audit.py; success; no sorryAx
+Exact build input source archive SHA-256 (uncompressed tar): 232022a54e2e71ecf5490fbc5e162ecafed2522b865a022268a2cb32457a53eb

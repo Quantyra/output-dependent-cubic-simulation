@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8058,
-      "sha256": "34e1c470220bb9ec7dbc0d94c16001a74e8d271c4f8f08f7107416db7684ec61"
+      "bytes": 8785,
+      "sha256": "86461ee1e8c7ab220cb8b80934ec5a82680cb535390e1bb81e596c9b5c52ef83"
     },
     {
       "path": "REPRODUCING.md",
@@ -2203,6 +2203,46 @@
       "sha256": "eb8adbd5c71a5fa1044b0c3e2d1a1de51e9528fe7e29c1ea8678267d0aac7180"
     },
     {
+      "path": "lean/evidence/gcp/sector-fc4bc81-20261031/README.md",
+      "bytes": 1061,
+      "sha256": "230270a1430fd0111701dd9765193c67b6c60a6cea4f5fe761b252700f820b30"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-fc4bc81-20261031/RESULTS.txt",
+      "bytes": 441,
+      "sha256": "1c1ed0b0ba445f94b9b6a22839db2ab34b039c4da879b13f29340f2ff1b18c03"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-fc4bc81-20261031/SHA256SUMS",
+      "bytes": 315,
+      "sha256": "5114a955805d4f650e7aad11a059642f030c3015300ef7b75126cc2e9a4a5d86"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-fc4bc81-20261031/audit.txt",
+      "bytes": 320821,
+      "sha256": "2a653e825f4b4d429b594e437c824d09c43a6fb0bdd980134d4e975f0e95db64"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-fc4bc81-20261031/checker-result.txt",
+      "bytes": 76,
+      "sha256": "4e25cf165e718de3d67cca6c5f099fed94f149d11181685a42abb0b34a6d83cb"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-fc4bc81-20261031/sector-fc4bc81-evidence.tar",
+      "bytes": 3659264,
+      "sha256": "99d7426eb819c6385eb358e734aa0bb26ca711310edf900f9be1a447ab48de0a"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-fc4bc81-20261031/sector-fc4bc81-evidence.tar.sha256",
+      "bytes": 93,
+      "sha256": "de211a14e29f13fe94d0ab233f0b5eabfe891a56a3590c38cb9ac725f636b9e7"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-fc4bc81-20261031/source.tar.gz",
+      "bytes": 3286779,
+      "sha256": "82b7918bef146a89b955dd8b5aad75f07a93bad2994fa03ca829e7426fea1ec5"
+    },
+    {
       "path": "lean/evidence/general-hadamard-commutation-audit.md",
       "bytes": 856,
       "sha256": "b30cd2e712ebe4d0b1d5e8155eb15ad79100343e3499c1727c35bab2adb808dc"
@@ -2694,8 +2734,8 @@
     },
     {
       "path": "publication/LEAN-PLAN.md",
-      "bytes": 9298,
-      "sha256": "25f66cfc04b8d9fad4888d2920fc8921a569038159e349b60e09cd06293c0f31"
+      "bytes": 10072,
+      "sha256": "5dd76d5b3b34f67d7231a0a9df083729d724328724254ac4ba2b8e3a79608073"
     },
     {
       "path": "publication/PUBLICATION-RECEIPT.md",
