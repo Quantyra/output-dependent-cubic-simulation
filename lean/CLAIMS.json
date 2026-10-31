@@ -9573,7 +9573,7 @@
       "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero", "source-walsh-interleaved-recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset"],
       "status": "proved and kernel checked",
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
-      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "build_audit_receipt": "lean/evidence/gcp/sector-d52fcb7-20261031/README.md",
       "unresolved_bridge": "The kernel of the residual-character map is not yet identified with the image of the quadratic polar form, and the rank formula remains open."
     },
     {
@@ -9586,7 +9586,7 @@
       "dependencies": [],
       "status": "proved and kernel checked",
       "axioms": ["propext", "Quot.sound"],
-      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "build_audit_receipt": "lean/evidence/gcp/sector-d52fcb7-20261031/README.md",
       "unresolved_bridge": "The kernel and rank of this residual projection have not yet been related to the source quadratic polar form."
     },
     {
@@ -9599,7 +9599,7 @@
       "dependencies": [],
       "status": "proved and kernel checked",
       "axioms": ["propext", "Quot.sound"],
-      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "build_audit_receipt": "lean/evidence/gcp/sector-d52fcb7-20261031/README.md",
       "unresolved_bridge": "This is an algebraic helper; it does not establish the source polar-form image or rank."
     },
     {
@@ -9612,7 +9612,7 @@
       "dependencies": ["source-walsh-interleaved-recordedResidualCoordinates_eq_offset_xor_linearPart", "source-walsh-interleaved-vectorXor_eq_zero_iff"],
       "status": "proved and kernel checked",
       "axioms": ["propext", "Quot.sound"],
-      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "build_audit_receipt": "lean/evidence/gcp/sector-d52fcb7-20261031/README.md",
       "unresolved_bridge": "The kernel of the residual projection and its rank have not been identified with the source quadratic polar form."
     }
   ],
