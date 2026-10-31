@@ -1797,3 +1797,6 @@ import SectorSimulation
 #print axioms SectorSimulation.coordinateInverse_bijective
 #check SectorSimulation.coordinateReindex_inverse_at
 #print axioms SectorSimulation.coordinateReindex_inverse_at
+
+#check SectorSimulation.sourceWalshSum_recorded_inverse_reindex
+#print axioms SectorSimulation.sourceWalshSum_recorded_inverse_reindex
