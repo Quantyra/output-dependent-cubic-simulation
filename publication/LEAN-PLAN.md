@@ -2,6 +2,8 @@
 
 Status: target freeze complete; source and sector formalization is in progress after first publication, verified paper DOI and application of the DOI to citation surfaces. No manuscript theorem is certified yet. The initial preprint did not wait for formalization. The current declaration inventory and audit receipts are in [CLAIMS.json](../lean/CLAIMS.json) and [lean/evidence](../lean/evidence); the original published target remains unchanged.
 
+At source commit [`a335d89`](https://github.com/Quantyra/output-dependent-cubic-simulation/commit/a335d89), Lean proves that an interleaved vector's even/odd coordinate views and trailing radical view give the corresponding canonical left, right, and radical blocks, including assignment and phase identities. The dedicated Google Cloud build (2172 jobs), full Lean audit, exact axiom checker, and published-label inventory checker pass; the five helper theorems use `propext` and `Quot.sound`. Hash-verified evidence is in [`integrated-a335d89-02-evidence.tar`](../lean/evidence/gcp/sector-52f4b4a-20261030/integrated-a335d89-02-evidence.tar). This does not prove that the interleaved map is bijective or evaluate the source Walsh sum, so no published theorem is certified.
+
 The initial target is the exact published PDF and source. Preserve its hashes and map each stable LaTeX statement label to its mathematical statement, hypotheses, intended declaration and evidence. Confirm a Lean/mathlib toolchain at that time and commit its pins; no placeholder Lean project is represented as certification.
 
 | Dependency stage | Target | Acceptance evidence |
