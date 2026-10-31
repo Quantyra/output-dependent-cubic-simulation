@@ -816,16 +816,19 @@ theorem matrixApply_transpose_injective_of_surjective {n : Nat} (J : BinaryMatri
     Function.Injective (matrixApply (transposeBinaryMatrix J)) := by
   intro x y hxy
   funext i
-  have hxunit : walshWireParity (List.finRange n) x (coordinateUnit i) = x i := by
+  have hunit : ∀ v : BinaryVector n,
+      walshWireParity (List.finRange n) v (coordinateUnit i) = v i := by
+    intro v
     rw [walshWireParity_as_sum]
-    simp only [coordinateUnit, Bool.and_comm]
-    rw [booleanListSum_singleton _ i (fun j => x j) (List.nodup_finRange n)]
+    have hfun : (fun j => v j && coordinateUnit i j)
+        = (fun j => decide (j = i) && v j) := by
+      funext j
+      simp only [coordinateUnit]
+      exact Bool.and_comm (v j) (decide (j = i))
+    rw [hfun, booleanListSum_singleton _ i v (List.nodup_finRange n)]
     simp
-  have hyunit : walshWireParity (List.finRange n) y (coordinateUnit i) = y i := by
-    rw [walshWireParity_as_sum]
-    simp only [coordinateUnit, Bool.and_comm]
-    rw [booleanListSum_singleton _ i (fun j => y j) (List.nodup_finRange n)]
-    simp
+  have hxunit : walshWireParity (List.finRange n) x (coordinateUnit i) = x i := hunit x
+  have hyunit : walshWireParity (List.finRange n) y (coordinateUnit i) = y i := hunit y
   obtain ⟨z, hz⟩ := hJ (coordinateUnit i)
   have hp : walshWireParity (List.finRange n) x (coordinateUnit i) =
       walshWireParity (List.finRange n) y (coordinateUnit i) := by
