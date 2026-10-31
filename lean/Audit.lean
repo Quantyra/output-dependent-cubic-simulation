@@ -1755,3 +1755,6 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_recorded_affine
 #print axioms SectorSimulation.sourceWalshSum_recorded_affine
+
+#check SectorSimulation.sourceWalshSum_recorded_character
+#print axioms SectorSimulation.sourceWalshSum_recorded_character
