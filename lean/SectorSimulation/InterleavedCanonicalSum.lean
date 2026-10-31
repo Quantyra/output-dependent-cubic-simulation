@@ -430,6 +430,86 @@ theorem sourceWalshSum_recorded_interleaved_cast_naturalAbs {n : Nat}
   · simp
   · simp [Int.natAbs_mul, integerWalshSign_naturalAbs]
 
+/-- The magnitude formula is independent of which valid dimension witnesses are chosen. -/
+theorem sourceWalshSum_recorded_interleaved_cast_naturalAbs_of_witness {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m)) :
+    let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+    let pairs := out.2.2
+    let f := recordedCoordinateAt pairs hlen
+    let r := fun x => evalPhase (recordedPairPhase pairs) x
+    let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+    let a := fun i => normalizedDifference
+      (fun y => evalPhase p (matrixApply out.1 y)) r (coordinateUnit i)
+    let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+    let q := binaryVectorCast hsize (coordinateReindex f t)
+    let canonical := coordinateReindex
+      (@interleavedIndexFromCanonical pairs.length m) q
+    let ds := vectorAssignment (canonicalRadical canonical)
+    Int.natAbs (sourceWalshSum p l) =
+      if (radicalCoefficientsXor (List.replicate m false) ds).any id then 0
+      else 2 ^ (m + pairs.length) := by
+  obtain ⟨hlen', m', hsize', hformula⟩ :=
+    sourceWalshSum_recorded_interleaved_cast_naturalAbs p l fuel hdegree hbound
+  have hm : m' = m := by omega
+  subst m'
+  have hproof : hlen' = hlen := Subsingleton.elim _ _
+  rw [hproof] at hformula
+  have hsizeproof : hsize' = hsize := Subsingleton.elim _ _
+  rw [hsizeproof] at hformula
+  simpa only using hformula
+
+/-- The polar-elimination coordinates give an exact support test for the source Walsh sum. -/
+theorem sourceWalshSum_recorded_interleaved_cast_zero_iff_of_witness {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m)) :
+    let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+    let pairs := out.2.2
+    let f := recordedCoordinateAt pairs hlen
+    let r := fun x => evalPhase (recordedPairPhase pairs) x
+    let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+    let a := fun i => normalizedDifference
+      (fun y => evalPhase p (matrixApply out.1 y)) r (coordinateUnit i)
+    let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+    let q := binaryVectorCast hsize (coordinateReindex f t)
+    let canonical := coordinateReindex
+      (@interleavedIndexFromCanonical pairs.length m) q
+    let ds := vectorAssignment (canonicalRadical canonical)
+    (sourceWalshSum p l = 0) ↔
+      (radicalCoefficientsXor (List.replicate m false) ds).any id = true := by
+  let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+  let pairs := out.2.2
+  let f := recordedCoordinateAt pairs hlen
+  let r := fun x => evalPhase (recordedPairPhase pairs) x
+  let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+  let a := fun i => normalizedDifference
+    (fun y => evalPhase p (matrixApply out.1 y)) r (coordinateUnit i)
+  let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+  let q := binaryVectorCast hsize (coordinateReindex f t)
+  let canonical := coordinateReindex (@interleavedIndexFromCanonical pairs.length m) q
+  let ds := vectorAssignment (canonicalRadical canonical)
+  let support := (radicalCoefficientsXor (List.replicate m false) ds).any id
+  change (sourceWalshSum p l = 0) ↔ support = true
+  have habs : Int.natAbs (sourceWalshSum p l) =
+      if support then 0 else 2 ^ (m + pairs.length) := by
+    simpa [out, pairs, f, r, c, a, t, q, canonical, ds, support] using
+      (sourceWalshSum_recorded_interleaved_cast_naturalAbs_of_witness
+        p l fuel hdegree hbound hlen m hsize)
+  have hzero : sourceWalshSum p l = 0 ↔ Int.natAbs (sourceWalshSum p l) = 0 := by simp
+  rw [hzero, habs]
+  have hp : 0 < 2 ^ (m + pairs.length) := Nat.pow_pos (by decide)
+  cases hsupport : support <;> simp [hsupport, Nat.ne_of_gt hp]
+
 /-- The exact quadratic Walsh formula is bounded by the size of its input space. -/
 theorem sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow {n : Nat}
     (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
