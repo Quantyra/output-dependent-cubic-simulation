@@ -124,8 +124,8 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 73856,
-      "sha256": "940e6f67cb3649a7afe9b012cfa8b74b7e1da8913d4327193981cf18d970145d"
+      "bytes": 74116,
+      "sha256": "3a0c2ffb48f1285ae280cb242ce89c22044b9b362fb4d9c87e791cf57f48c006"
     },
     {
       "path": "lean/CLAIMS.json",
@@ -574,8 +574,8 @@
     },
     {
       "path": "lean/SectorSimulation/InterleavedCanonicalSum.lean",
-      "bytes": 12049,
-      "sha256": "a3a422a08bee7119176438f5d05e436fb9b72dd3c23b6e093fa276f4efcf60d6"
+      "bytes": 12829,
+      "sha256": "41dbae77ba85c024d2e7dcb576fc82e846420b3eae395e7f8d0bef90d5ec39e5"
     },
     {
       "path": "lean/SectorSimulation/InterleavedCharacter.lean",
@@ -3044,8 +3044,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 58057,
-      "sha256": "6a03dd1d9ecf89fed7b3fa6a3ddc932b6fbd4a7054419e06042df5d394f8a446"
+      "bytes": 58234,
+      "sha256": "6c427fbc34894f0d2b5b428edeb9111a3e5fe68e47ac1bfec368696a01789b86"
     },
     {
       "path": "tools/check_metadata.py",

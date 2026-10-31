@@ -214,6 +214,22 @@ theorem interleavedWireCharacterWalshSum_closed {k m : Nat}
   exact interleavedCanonicalCharacterWalshSum_closed ps qs bs ds c hp
     (vectorPairAssignment_length _ _) hb (vectorAssignment_length _)
 
+/-- A recorded coordinate order consists of two entries per pair followed by its residual coordinates. -/
+theorem recordedCoordinateOrder_dimension {n : Nat}
+    (pairs : List (Fin n × Fin n)) (hlen : (recordedCoordinateOrder pairs).length = n) :
+    ∃ m, pairs.length + pairs.length + m = n := by
+  refine ⟨(unpairedIndices (List.finRange n) pairs).length, ?_⟩
+  have h := hlen
+  unfold recordedCoordinateOrder at h
+  rw [List.length_append, pairEndpoints_length] at h
+  omega
+
+theorem recordedCoordinateOrder_dimension_exists {n : Nat}
+    (pairs : List (Fin n × Fin n)) (hlen : (recordedCoordinateOrder pairs).length = n) :
+    ∃ k m, n = k + k + m := by
+  obtain ⟨m, hdim⟩ := recordedCoordinateOrder_dimension pairs hlen
+  exact ⟨pairs.length, m, by omega⟩
+
 /-- Reindexing both arguments of the Walsh dot product by a permutation preserves it. -/
 theorem walshWireParity_coordinateReindex_both {n : Nat}
     (f g : Fin n → Fin n) (hfg : ∀ i, f (g i) = i) (hgf : ∀ i, g (f i) = i)

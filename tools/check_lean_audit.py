@@ -686,6 +686,8 @@ EXPECTED = {
     'SectorSimulation.interleavedCanonicalCharacterWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.interleavedWireCharacterWalshSum_eq': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.interleavedWireCharacterWalshSum_closed': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recordedCoordinateOrder_dimension': {'propext', 'Quot.sound'},
+    'SectorSimulation.recordedCoordinateOrder_dimension_exists': {'propext', 'Quot.sound'},
     'SectorSimulation.walshWireParity_coordinateReindex_both': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
