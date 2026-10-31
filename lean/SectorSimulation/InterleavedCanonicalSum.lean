@@ -805,6 +805,16 @@ theorem walshWireParity_coordinateReindex_both {n : Nat}
   rw [hu]
 
 
+theorem matrixApply_identity {n : Nat} (x : BinaryVector n) :
+    matrixApply (identityMatrix : BinaryMatrix n) x = x := by
+  funext i
+  simp only [matrixApply, xorFoldl_as_sum, Bool.false_xor, identityMatrix]
+  have hcomm : (fun j : Fin n => decide (i = j) && x j) =
+      (fun j => decide (j = i) && x j) := by
+    funext j
+    simp [eq_comm]
+  rw [hcomm, booleanListSum_singleton _ i _ (List.nodup_finRange n)]
+  simp
 theorem matrixApply_surjective_of_injective {n : Nat} (J : BinaryMatrix n)
     (hJ : Function.Injective (matrixApply J)) : Function.Surjective (matrixApply J) := by
   obtain ⟨ops, hops⟩ := gaussianRowProgram_exists_of_injective J hJ

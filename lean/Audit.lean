@@ -1918,3 +1918,5 @@ import SectorSimulation
 #print axioms SectorSimulation.polarEliminate_transpose_surjective
 #check SectorSimulation.recordedResidualLinearPart_surjective_for_polarEliminate
 #print axioms SectorSimulation.recordedResidualLinearPart_surjective_for_polarEliminate
+#check SectorSimulation.matrixApply_identity
+#print axioms SectorSimulation.matrixApply_identity
