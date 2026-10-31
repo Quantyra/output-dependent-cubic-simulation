@@ -9562,6 +9562,58 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-901b1ff-20261031/README.md",
       "unresolved_bridge": "The simultaneous coordinate equations are not yet identified with the paper's affine image of the quadratic polar form or its rank."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation",
+      "assumptions": "The source phase has degree at most two, polar-elimination fuel is sufficient, and the recorded-coordinate dimension witnesses are valid.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, binary characters, sufficient fuel bounds and valid dimension witnesses.",
+      "statement": "Source Walsh support is the fiber of the linear residual-character map at the fixed residual offset; the residual character decomposes as a linear part XOR that offset.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero", "source-walsh-interleaved-recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "unresolved_bridge": "The kernel of the residual-character map is not yet identified with the image of the quadratic polar form, and the rank formula remains open."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedResidualCoordinates_eq_offset_xor_linearPart",
+      "section": "3",
+      "target": "SectorSimulation.recordedResidualCoordinates_eq_offset_xor_linearPart",
+      "assumptions": "None.",
+      "quantifiers": "All finite source, pair and residual dimensions, coordinate maps, affine offsets, binary matrices and characters.",
+      "statement": "The generated residual character is the XOR of a fixed offset and a linear image of the wire character.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "unresolved_bridge": "The kernel and rank of this residual projection have not yet been related to the source quadratic polar form."
+    },
+    {
+      "id": "source-walsh-interleaved-vectorXor_eq_zero_iff",
+      "section": "3",
+      "target": "SectorSimulation.vectorXor_eq_zero_iff",
+      "assumptions": "None.",
+      "quantifiers": "All finite binary vector dimensions and vectors.",
+      "statement": "The XOR of two binary vectors is zero exactly when the vectors are equal.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "unresolved_bridge": "This is an algebraic helper; it does not establish the source polar-form image or rank."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset",
+      "section": "3",
+      "target": "SectorSimulation.recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset",
+      "assumptions": "None.",
+      "quantifiers": "All finite source, pair and residual dimensions, coordinate maps, affine offsets, binary matrices and characters.",
+      "statement": "The residual coordinate vector vanishes exactly when its linear part equals the fixed offset.",
+      "dependencies": ["source-walsh-interleaved-recordedResidualCoordinates_eq_offset_xor_linearPart", "source-walsh-interleaved-vectorXor_eq_zero_iff"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "unresolved_bridge": "The kernel of the residual projection and its rank have not been identified with the source quadratic polar form."
     }
   ],
   "paper_source": "manuscript/main.tex",

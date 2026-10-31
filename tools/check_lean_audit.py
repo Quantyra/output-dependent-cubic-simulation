@@ -697,6 +697,10 @@ EXPECTED = {
     'SectorSimulation.radicalCoefficientsXor_replicate_false_any': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recordedResidualCoordinates_eq_offset_xor_linearPart': {'propext', 'Quot.sound'},
+    'SectorSimulation.vectorXor_eq_zero_iff': {'propext', 'Quot.sound'},
+    'SectorSimulation.recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset': {'propext', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.walshWireParity_coordinateReindex_both': {'propext', 'Classical.choice', 'Quot.sound'},
 }
