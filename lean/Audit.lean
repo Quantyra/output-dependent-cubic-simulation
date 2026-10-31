@@ -1806,3 +1806,6 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_inverse_layout_endpoints
 #print axioms SectorSimulation.sourceWalshSum_inverse_layout_endpoints
+
+#check SectorSimulation.recordedPairPhase_pairEval
+#print axioms SectorSimulation.recordedPairPhase_pairEval
