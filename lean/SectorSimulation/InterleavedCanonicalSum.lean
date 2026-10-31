@@ -226,9 +226,9 @@ theorem recordedCoordinateOrder_dimension {n : Nat}
 
 theorem recordedCoordinateOrder_dimension_exists {n : Nat}
     (pairs : List (Fin n × Fin n)) (hlen : (recordedCoordinateOrder pairs).length = n) :
-    ∃ k m, n = k + k + m := by
+    ∃ k m, pairs.length = k ∧ n = k + k + m := by
   obtain ⟨m, hdim⟩ := recordedCoordinateOrder_dimension pairs hlen
-  exact ⟨pairs.length, m, by omega⟩
+  exact ⟨pairs.length, m, rfl, by omega⟩
 
 /-- Reindexing both arguments of the Walsh dot product by a permutation preserves it. -/
 theorem walshWireParity_coordinateReindex_both {n : Nat}
