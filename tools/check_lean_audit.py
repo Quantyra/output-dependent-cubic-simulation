@@ -701,7 +701,6 @@ EXPECTED = {
     'SectorSimulation.recordedResidualLinearPart_vectorXor': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedResidualLinearPart_zeroVector': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedResidualLinearPart_surjective': {'propext', 'Classical.choice', 'Quot.sound'},
-    'SectorSimulation.matrixApply_identity': {'propext', 'Quot.sound'},
     'SectorSimulation.matrixApply_surjective_of_injective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.matrixApply_transpose_injective_of_surjective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.matrixApply_transpose_surjective_of_injective': {'propext', 'Classical.choice', 'Quot.sound'},

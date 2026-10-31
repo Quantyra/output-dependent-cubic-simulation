@@ -805,16 +805,6 @@ theorem walshWireParity_coordinateReindex_both {n : Nat}
   rw [hu]
 
 
-theorem matrixApply_identity {n : Nat} (x : BinaryVector n) :
-    matrixApply (identityMatrix : BinaryMatrix n) x = x := by
-  funext i
-  simp only [matrixApply, xorFoldl_as_sum, Bool.false_xor, identityMatrix]
-  have hcomm : (fun j : Fin n => decide (i = j) && x j) =
-      (fun j => decide (j = i) && x j) := by
-    funext j
-    simp [eq_comm]
-  rw [hcomm, booleanListSum_singleton _ i _ (List.nodup_finRange n)]
-  simp
 theorem matrixApply_surjective_of_injective {n : Nat} (J : BinaryMatrix n)
     (hJ : Function.Injective (matrixApply J)) : Function.Surjective (matrixApply J) := by
   obtain ⟨ops, hops⟩ := gaussianRowProgram_exists_of_injective J hJ
@@ -828,12 +818,12 @@ theorem matrixApply_transpose_injective_of_surjective {n : Nat} (J : BinaryMatri
   funext i
   have hxunit : walshWireParity (List.finRange n) x (coordinateUnit i) = x i := by
     rw [walshWireParity_as_sum]
-    change booleanListSum (List.finRange n) (fun j => decide (j = i) && x j) = x i
+    simp only [coordinateUnit, Bool.and_comm]
     rw [booleanListSum_singleton _ i (fun j => x j) (List.nodup_finRange n)]
     simp
   have hyunit : walshWireParity (List.finRange n) y (coordinateUnit i) = y i := by
     rw [walshWireParity_as_sum]
-    change booleanListSum (List.finRange n) (fun j => decide (j = i) && y j) = y i
+    simp only [coordinateUnit, Bool.and_comm]
     rw [booleanListSum_singleton _ i (fun j => y j) (List.nodup_finRange n)]
     simp
   obtain ⟨z, hz⟩ := hJ (coordinateUnit i)
@@ -866,7 +856,7 @@ theorem polarEliminate_transpose_surjective {n : Nat}
   intro x y hxy
   have hid : Function.Injective (matrixApply (identityMatrix : BinaryMatrix n)) := by
     intro a b hab
-    simpa [matrixApply, identityMatrix] using hab
+    simpa [matrixApply_identity] using hab
   exact polarEliminate_preserves_injective B fuel indices (identityMatrix : BinaryMatrix n) hid hxy
 
 theorem recordedResidualLinearPart_surjective_for_polarEliminate {n k m : Nat}
