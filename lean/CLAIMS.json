@@ -9718,6 +9718,45 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-1f1bf47-20261031/README.md",
       "unresolved_bridge": "The coordinate map is still assumed bijective rather than derived from the canonical layout, and the kernel, rank, support origin, normalized sector identity, boundedness and costs remain open."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceRecordedCoordinateAt_bijective",
+      "section": "3",
+      "target": "SectorSimulation.sourceRecordedCoordinateAt_bijective",
+      "assumptions": "The source phase has degree at most two; the recorded coordinate order has full length.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases and elimination fuel values.",
+      "statement": "The recorded coordinate map of the actual source construction is bijective, because polar elimination records distinct and pairwise disjoint endpoint pairs and the recorded coordinate order is therefore a permutation of the index list.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-f163981-20261031/README.md",
+      "unresolved_bridge": "Bijectivity of the coordinate relabeling says nothing about the quadratic polar image, rank, normalization or costs."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceRecordedResidualLinearPart_surjective",
+      "section": "3",
+      "target": "SectorSimulation.sourceRecordedResidualLinearPart_surjective",
+      "assumptions": "The source phase has degree at most two; a recorded dimension witness is supplied.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, elimination fuel values, recorded dimension witnesses and residual vectors.",
+      "statement": "For the actual source construction the residual linear-character projection is surjective onto the full residual coordinate space, with no assumed coordinate bijectivity and no assumed matrix property.",
+      "dependencies": ["source-walsh-interleaved-sourceRecordedCoordinateAt_bijective", "source-walsh-interleaved-recordedResidualLinearPart_surjective_for_polarEliminate"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-f163981-20261031/README.md",
+      "unresolved_bridge": "Surjectivity fixes the image but not the kernel; identification with the source quadratic polar image and the resulting rank remain open."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_support_nonempty",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_support_nonempty",
+      "assumptions": "The source phase has degree at most two and the elimination fuel is at least the dimension.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases and sufficient elimination fuel values.",
+      "statement": "The exact source Walsh support is nonempty: some wire character has nonzero exact source Walsh sum. The statement carries no coordinate, matrix or dimension hypothesis.",
+      "dependencies": ["source-walsh-interleaved-sourceRecordedResidualLinearPart_surjective"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-f163981-20261031/README.md",
+      "unresolved_bridge": "Nonemptiness is not a rank or support-size result; the support fiber dimension, normalized sector identity, boundedness, costs and all labeled paper theorems remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",
