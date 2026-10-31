@@ -665,6 +665,12 @@ EXPECTED = {
     'SectorSimulation.canonicalBlockOfInterleaved_radical': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalBlockOfInterleaved_assignment': {'propext', 'Quot.sound'},
     'SectorSimulation.canonicalBlockOfInterleaved_phase': {'propext', 'Quot.sound'},
+    'SectorSimulation.interleavedVectorOfCanonical_leftInverse': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_rightInverse': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_injective': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_surjective': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_basis_perm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_integerSum': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
