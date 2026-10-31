@@ -1966,3 +1966,13 @@ import SectorSimulation
 #print axioms SectorSimulation.pairPartnerVector_first
 #check SectorSimulation.pairPartnerVector_second
 #print axioms SectorSimulation.pairPartnerVector_second
+#check SectorSimulation.radicalIndex_covers_unpaired
+#print axioms SectorSimulation.radicalIndex_covers_unpaired
+#check SectorSimulation.pairPolar_partner_coordinates
+#print axioms SectorSimulation.pairPolar_partner_coordinates
+#check SectorSimulation.residualKernel_sub_sourcePolarImage
+#print axioms SectorSimulation.residualKernel_sub_sourcePolarImage
+#check SectorSimulation.residualKernel_eq_sourcePolarImage
+#print axioms SectorSimulation.residualKernel_eq_sourcePolarImage
+#check SectorSimulation.sourceWalshSum_support_polar_coset
+#print axioms SectorSimulation.sourceWalshSum_support_polar_coset

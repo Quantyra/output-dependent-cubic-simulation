@@ -1318,4 +1318,142 @@ theorem pairPartnerVector_second {n : Nat} (pairs : List (Fin n × Fin n))
       have hrec' := hrec
       unfold pairPartnerVector at hrec' ⊢
       simp [hdis.2.2.1, hdis.2.2.2, hrec']
+
+/-- Every unpaired index is a radical index, so the residual coordinate equations
+constrain the transformed character at every unpaired coordinate. -/
+theorem radicalIndex_covers_unpaired {n m : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hsize : n = (pairs.length + pairs.length) + m)
+    (j : Fin n) (hj : j ∈ unpairedIndices (List.finRange n) pairs) :
+    ∃ i : Fin m, recordedRadicalIndex (recordedCoordinateAt pairs hlen) hsize i = j := by
+  have horder : (recordedCoordinateOrder pairs).length
+      = 2 * pairs.length + (unpairedIndices (List.finRange n) pairs).length := by
+    unfold recordedCoordinateOrder
+    rw [List.length_append, pairEndpoints_length]
+  have hlenu : (unpairedIndices (List.finRange n) pairs).length = m := by omega
+  obtain ⟨k, hklt, hkeq⟩ := List.mem_iff_getElem.mp hj
+  refine ⟨⟨k, by omega⟩, ?_⟩
+  rw [recordedRadicalIndex_eq_cast_natAdd]
+  have hunp := recordedCoordinateAt_unpaired pairs hlen k (by omega)
+  have hfin : (Fin.cast hsize.symm
+      (Fin.natAdd (pairs.length + pairs.length) (⟨k, by omega⟩ : Fin m)))
+      = (⟨2 * pairs.length + k, by omega⟩ : Fin n) := by
+    apply Fin.ext
+    show (pairs.length + pairs.length) + k = 2 * pairs.length + k
+    omega
+  rw [hfin, hunp, hkeq]
+
+/-- The coordinate vector of the pair form at the partner vector recovers the target
+residual coordinate vector, provided the target vanishes on the unpaired block. -/
+theorem pairPolar_partner_coordinates {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : pairs.Pairwise pairDisjoint) (hne : ∀ p ∈ pairs, p.1 ≠ p.2)
+    (c : BinaryVector n)
+    (hzero : ∀ j ∈ unpairedIndices (List.finRange n) pairs, c j = false) :
+    (fun j => recordedPairPolar pairs (pairPartnerVector pairs c) (coordinateUnit j)) = c := by
+  funext j
+  by_cases hex : ∃ q ∈ pairs, j = q.1 ∨ j = q.2
+  · obtain ⟨q, hq, hcase⟩ := hex
+    rcases hcase with h1 | h2
+    · subst j
+      rw [recordedPairPolar_right_member_first pairs hd hne _ q hq]
+      exact pairPartnerVector_second pairs hd hne c q hq
+    · subst j
+      rw [recordedPairPolar_right_member_second pairs hd hne _ q hq]
+      exact pairPartnerVector_first pairs hd hne c q hq
+  · have hju : j ∈ unpairedIndices (List.finRange n) pairs := by
+      simp [unpairedIndices]
+      intro a b hab
+      exact ⟨fun he => hex ⟨(a, b), hab, Or.inl he⟩,
+        fun he => hex ⟨(a, b), hab, Or.inr he⟩⟩
+    rw [recordedPairPolar_right_unit_absent pairs _ j
+      (unpairedIndices_absent (List.finRange n) pairs j hju), hzero j hju]
+
+/-- Converse of the kernel inclusion: every character annihilated by the residual
+projection is a source polar vector. -/
+theorem residualKernel_sub_sourcePolarImage {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (l : BinaryVector n)
+    (hker : recordedResidualLinearPart
+      (recordedCoordinateAt
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+      hsize
+      (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l = zeroVector) :
+    ∃ x, sourcePolarVector p x = l := by
+  obtain ⟨ts, _, _, hpolar, halt, _, _⟩ := sourceQuadratic_hasPolar p hdegree
+  have hl0 : ∀ z, phasePolar p z z = false := by
+    intro z
+    rw [hpolar]
+    exact halt z
+  have hdp := polarEliminate_distinct_pairs (phasePolar p) fuel (List.finRange n) identityMatrix hl0
+  have hc : ∀ j ∈ unpairedIndices (List.finRange n)
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2,
+      matrixApply (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l j = false := by
+    intro j hj
+    obtain ⟨i, hi⟩ := radicalIndex_covers_unpaired
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen hsize j hj
+    have hz := (recordedResidualLinearPart_eq_zero_iff_radicalCoordinates _ hsize _ l).mp hker i
+    rw [hi] at hz
+    exact hz
+  refine ⟨matrixApply (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1
+    (pairPartnerVector (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2
+      (matrixApply (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l)), ?_⟩
+  funext i
+  obtain ⟨v, hv⟩ := polarEliminate_surjective (phasePolar p) fuel (List.finRange n)
+    (coordinateUnit i)
+  simp only [sourcePolarVector]
+  rw [← hv, sourcePolar_all_vectors p fuel identityMatrix hdegree hbound,
+    recordedPairPhase_polar, recordedPairPolar_right_representation,
+    pairPolar_partner_coordinates _ hdp.2 hdp.1 _ hc,
+    ← binaryTranspose_character, hv, walshWireParity_coordinateUnit]
+
+/-- The kernel of the residual projection is exactly the image of the source quadratic
+polar form. -/
+theorem residualKernel_eq_sourcePolarImage {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (l : BinaryVector n) :
+    recordedResidualLinearPart
+      (recordedCoordinateAt
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+      hsize
+      (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l = zeroVector ↔
+      ∃ x, sourcePolarVector p x = l := by
+  constructor
+  · intro hker
+    exact residualKernel_sub_sourcePolarImage p fuel hdegree hbound hlen m hsize l hker
+  · intro himage
+    obtain ⟨x, hx⟩ := himage
+    rw [← hx]
+    exact sourcePolarVector_mem_residualKernel p fuel hdegree hbound hlen m hsize x
+
+/-- The exact source Walsh support is a coset of the source quadratic polar image:
+given one wire character with nonzero exact source Walsh sum, another has nonzero sum
+exactly when their difference is a source polar vector. -/
+theorem sourceWalshSum_support_polar_coset {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (l l' : BinaryVector n) (hne : sourceWalshSum p l ≠ 0) :
+    sourceWalshSum p l' ≠ 0 ↔ ∃ x, sourcePolarVector p x = vectorXor l l' := by
+  rw [sourceWalshSum_support_coset p fuel hdegree hbound hlen m hsize l l' hne]
+  exact residualKernel_eq_sourcePolarImage p fuel hdegree hbound hlen m hsize (vectorXor l l')
 end SectorSimulation
