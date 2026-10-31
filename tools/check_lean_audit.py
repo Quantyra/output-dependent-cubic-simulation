@@ -660,6 +660,11 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSum_inverse_layout_endpoints': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recordedPairPhase_pairEval': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedPair_assignment_reindexed': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_left': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_right': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_radical': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_assignment': {'propext', 'Quot.sound'},
+    'SectorSimulation.canonicalBlockOfInterleaved_phase': {'propext', 'Quot.sound'},
 }
 
 

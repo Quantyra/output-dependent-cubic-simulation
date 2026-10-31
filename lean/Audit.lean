@@ -1812,3 +1812,14 @@ import SectorSimulation
 
 #check SectorSimulation.recordedPair_assignment_reindexed
 #print axioms SectorSimulation.recordedPair_assignment_reindexed
+
+#check SectorSimulation.canonicalBlockOfInterleaved_left
+#print axioms SectorSimulation.canonicalBlockOfInterleaved_left
+#check SectorSimulation.canonicalBlockOfInterleaved_right
+#print axioms SectorSimulation.canonicalBlockOfInterleaved_right
+#check SectorSimulation.canonicalBlockOfInterleaved_radical
+#print axioms SectorSimulation.canonicalBlockOfInterleaved_radical
+#check SectorSimulation.canonicalBlockOfInterleaved_assignment
+#print axioms SectorSimulation.canonicalBlockOfInterleaved_assignment
+#check SectorSimulation.canonicalBlockOfInterleaved_phase
+#print axioms SectorSimulation.canonicalBlockOfInterleaved_phase
