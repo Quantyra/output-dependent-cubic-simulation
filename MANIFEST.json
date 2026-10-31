@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3727,
-      "sha256": "5a31624e1368dd4189d14360561b3517821aa3df4bf60568aa18680f2dd60ab3"
+      "bytes": 4173,
+      "sha256": "2ab84817437876b9b73038151226e9f8bdfd33d65aacd99b688b588af05bbd4c"
     },
     {
       "path": "REPRODUCING.md",
@@ -124,8 +124,8 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 71015,
-      "sha256": "72510fa20ff3ae4954ce1a9cc9bc7f3b0c7d7868934c5b03bdaefafd04f77eb1"
+      "bytes": 71819,
+      "sha256": "b97a02381bbb4cdb66e5c1a0f84a7fde236c6729cfe9629b3a6e3a93bfc1edbd"
     },
     {
       "path": "lean/CLAIMS.json",
@@ -239,8 +239,8 @@
     },
     {
       "path": "lean/SectorSimulation/CanonicalInterleavedLayout.lean",
-      "bytes": 2502,
-      "sha256": "a3075cd83bce723351f35d224f4676efb15e2360dcfbe75559e2025113e9a083"
+      "bytes": 7895,
+      "sha256": "f119d6714eb6181f7bf2b45bb14eeb02c22d39a241bbe51893602f1b5698b277"
     },
     {
       "path": "lean/SectorSimulation/CanonicalMaskNormalization.lean",
@@ -2098,6 +2098,16 @@
       "sha256": "771468f3b8b4e2eebc9ad4a5ef91b9b71aa7012cc85187a6970e5fc7b697c175"
     },
     {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261030/InterleavedBijection-02-evidence.tar",
+      "bytes": 522240,
+      "sha256": "0fff2c0f9f6bc33ee43ae09ae6d2c7506acc99c5068c48dfa1ba252d1e0ec6cf"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-52f4b4a-20261030/InterleavedBijection-02-evidence.tar.sha256",
+      "bytes": 103,
+      "sha256": "b5c09b3c7744e283764e76724b6e955318cdc48334a1714195850a0a8fd66b3a"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261030/integrated-a335d89-02-evidence.tar",
       "bytes": 440320,
       "sha256": "aea369dceaf160d120e5027654420c837033ce4c48980cb94c87f5fffadc5e22"
@@ -2589,8 +2599,8 @@
     },
     {
       "path": "publication/LEAN-PLAN.md",
-      "bytes": 3685,
-      "sha256": "9a9ca4a9f702e0b5d8d12d1b6f430eeeab7fe6fc70477fcb3942a310e87fd469"
+      "bytes": 4603,
+      "sha256": "517f11745c54f7048b4f69f7a5c488dac7c2d5016340c1a5e5eb1034cb2cf21e"
     },
     {
       "path": "publication/PUBLICATION-RECEIPT.md",
@@ -2954,8 +2964,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 55921,
-      "sha256": "4a6e4bf688577a34d73c2626683c87f2e9cb3be4bf18dbaca69f153d57426b24"
+      "bytes": 56504,
+      "sha256": "39392c5622914ca781b23d51aa53e62b1ba84cd7aa1f6e047510597ae0f10eb8"
     },
     {
       "path": "tools/check_metadata.py",
