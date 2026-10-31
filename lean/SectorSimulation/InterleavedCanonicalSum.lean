@@ -858,4 +858,13 @@ theorem polarEliminate_transpose_surjective {n : Nat}
     intro a b hab
     simpa [matrixApply, identityMatrix] using hab
   exact polarEliminate_preserves_injective B fuel indices identityMatrix hid hxy
+
+theorem recordedResidualLinearPart_surjective_for_polarEliminate {n k m : Nat}
+    (f : Fin n → Fin n) (hf : Function.Bijective f)
+    (h : n = (k + k) + m) (B : BinaryVector n → BinaryVector n → Bool)
+    (fuel : Nat) (indices : List (Fin n)) :
+    Function.Surjective (recordedResidualLinearPart f h
+      (transposeBinaryMatrix (polarEliminate B fuel indices identityMatrix).1)) := by
+  exact recordedResidualLinearPart_surjective f hf h _
+    (polarEliminate_transpose_surjective B fuel indices)
 end SectorSimulation
