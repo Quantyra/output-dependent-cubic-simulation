@@ -1730,3 +1730,8 @@ import SectorSimulation
 #print axioms SectorSimulation.pairDisjoint_symmetric
 #check SectorSimulation.pairOrthogonal_symmetric
 #print axioms SectorSimulation.pairOrthogonal_symmetric
+
+#check SectorSimulation.disjoint_pairs_unrelated_first
+#print axioms SectorSimulation.disjoint_pairs_unrelated_first
+#check SectorSimulation.sourcePolar_cross_first_units
+#print axioms SectorSimulation.sourcePolar_cross_first_units
