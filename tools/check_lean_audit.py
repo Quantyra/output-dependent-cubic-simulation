@@ -642,6 +642,7 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSum_recorded_character': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.pairEndpoints_nodup': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedCoordinateOrder_perm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recordedCoordinateAt_bijective': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

@@ -1763,3 +1763,6 @@ import SectorSimulation
 #print axioms SectorSimulation.pairEndpoints_nodup
 #check SectorSimulation.recordedCoordinateOrder_perm
 #print axioms SectorSimulation.recordedCoordinateOrder_perm
+
+#check SectorSimulation.recordedCoordinateAt_bijective
+#print axioms SectorSimulation.recordedCoordinateAt_bijective

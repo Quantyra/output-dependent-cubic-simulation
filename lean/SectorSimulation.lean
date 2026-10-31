@@ -304,3 +304,4 @@ import SectorSimulation.SourceRecordedAffine
 import SectorSimulation.SourceWalshRecorded
 import SectorSimulation.SourceWalshCharacter
 import SectorSimulation.RecordedCoordinateOrder
+import SectorSimulation.RecordedCoordinateMap
