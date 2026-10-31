@@ -590,7 +590,7 @@ def recordedResidualOffset {n k m : Nat} (f : Fin n → Fin n)
 
 /-- The linear residual-coordinate part of the transformed wire character. -/
 def recordedResidualLinearPart {n k m : Nat} (f : Fin n → Fin n)
-    (h : n = (k + k) + m) (a : BinaryVector n) (T : BinaryMatrix n)
+    (h : n = (k + k) + m) (T : BinaryMatrix n)
     (l : BinaryVector n) : BinaryVector m :=
   canonicalRadical (@coordinateReindex ((k + k) + m)
     (@interleavedIndexFromCanonical k m)
@@ -600,10 +600,26 @@ theorem recordedResidualCoordinates_eq_offset_xor_linearPart {n k m : Nat}
     (f : Fin n → Fin n) (h : n = (k + k) + m) (a : BinaryVector n)
     (T : BinaryMatrix n) (l : BinaryVector n) :
     recordedResidualCoordinates f h a T l =
-      vectorXor (recordedResidualLinearPart f h a T l) (recordedResidualOffset f h a) := by
+      vectorXor (recordedResidualLinearPart f h T l) (recordedResidualOffset f h a) := by
   funext i
   simp [recordedResidualCoordinates, recordedResidualOffset, recordedResidualLinearPart,
     canonicalRadical, coordinateReindex, binaryVectorCast, binaryShift, vectorXor]
+
+theorem recordedResidualLinearPart_vectorXor {n k m : Nat}
+    (f : Fin n → Fin n) (h : n = (k + k) + m) (T : BinaryMatrix n)
+    (x y : BinaryVector n) :
+    recordedResidualLinearPart f h T (vectorXor x y) =
+      vectorXor (recordedResidualLinearPart f h T x) (recordedResidualLinearPart f h T y) := by
+  funext i
+  simp [recordedResidualLinearPart, canonicalRadical, coordinateReindex,
+    binaryVectorCast, vectorXor, matrixApply_xor]
+
+theorem recordedResidualLinearPart_zeroVector {n k m : Nat}
+    (f : Fin n → Fin n) (h : n = (k + k) + m) (T : BinaryMatrix n) :
+    recordedResidualLinearPart f h T zeroVector = zeroVector := by
+  funext i
+  simp [recordedResidualLinearPart, canonicalRadical, coordinateReindex,
+    binaryVectorCast, zeroVector, matrixApply_zero]
 
 theorem vectorXor_eq_zero_iff {m : Nat} (x y : BinaryVector m) :
     vectorXor x y = zeroVector ↔ x = y := by
@@ -621,7 +637,7 @@ theorem recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset {n k m : Na
     (f : Fin n → Fin n) (h : n = (k + k) + m) (a : BinaryVector n)
     (T : BinaryMatrix n) (l : BinaryVector n) :
     recordedResidualCoordinates f h a T l = zeroVector ↔
-      recordedResidualLinearPart f h a T l = recordedResidualOffset f h a := by
+      recordedResidualLinearPart f h T l = recordedResidualOffset f h a := by
   rw [recordedResidualCoordinates_eq_offset_xor_linearPart]
   exact vectorXor_eq_zero_iff _ _
 
@@ -692,7 +708,7 @@ theorem sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquat
       (fun y => evalPhase p (matrixApply out.1 y))
       (fun y => evalPhase (recordedPairPhase pairs) y) (coordinateUnit i)
     sourceWalshSum p l ≠ 0 ↔
-      recordedResidualLinearPart f hsize a (transposeBinaryMatrix out.1) l =
+      recordedResidualLinearPart f hsize (transposeBinaryMatrix out.1) l =
         recordedResidualOffset f hsize a := by
   let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
   let pairs := out.2.2
@@ -722,7 +738,7 @@ theorem sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquat
   calc
     sourceWalshSum p l ≠ 0 ↔ coordinates = zeroVector := by
       exact hsupport.trans hzero.symm
-    _ ↔ recordedResidualLinearPart f hsize a (transposeBinaryMatrix out.1) l =
+    _ ↔ recordedResidualLinearPart f hsize (transposeBinaryMatrix out.1) l =
           recordedResidualOffset f hsize a :=
       recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset f hsize a
         (transposeBinaryMatrix out.1) l

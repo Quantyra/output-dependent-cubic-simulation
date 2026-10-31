@@ -9614,6 +9614,32 @@
       "axioms": ["propext", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-d52fcb7-20261031/README.md",
       "unresolved_bridge": "The kernel of the residual projection and its rank have not been identified with the source quadratic polar form."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedResidualLinearPart_vectorXor",
+      "section": "3",
+      "target": "SectorSimulation.recordedResidualLinearPart_vectorXor",
+      "assumptions": "None.",
+      "quantifiers": "All finite source, pair and residual dimensions, coordinate maps, binary matrices and wire characters.",
+      "statement": "The residual linear-character map preserves vector XOR.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "unresolved_bridge": "Its kernel still needs to be identified with the image of the source quadratic polar form."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedResidualLinearPart_zeroVector",
+      "section": "3",
+      "target": "SectorSimulation.recordedResidualLinearPart_zeroVector",
+      "assumptions": "None.",
+      "quantifiers": "All finite source, pair and residual dimensions, coordinate maps and binary matrices.",
+      "statement": "The residual linear-character map sends the zero character to the zero residual vector.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "unresolved_bridge": "Its kernel still needs to be identified with the image of the source quadratic polar form."
     }
   ],
   "paper_source": "manuscript/main.tex",
