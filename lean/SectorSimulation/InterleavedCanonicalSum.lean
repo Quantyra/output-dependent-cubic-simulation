@@ -813,24 +813,27 @@ theorem matrixApply_surjective_of_injective {n : Nat} (J : BinaryMatrix n)
   intro y
   exact ⟨runCNOTs (rowProgramCNOTs ops) y, matrixApply_inverse_forward J ops hops y⟩
 
+/-- Pairing a character against a coordinate unit reads off that coordinate. -/
+theorem walshWireParity_coordinateUnit {n : Nat} (v : BinaryVector n) (i : Fin n) :
+    walshWireParity (List.finRange n) v (coordinateUnit i) = v i := by
+  rw [walshWireParity_as_sum]
+  have hfun : (fun j => v j && coordinateUnit i j)
+      = (fun j => decide (j = i) && v j) := by
+    funext j
+    simp only [coordinateUnit]
+    exact Bool.and_comm (v j) (decide (j = i))
+  rw [hfun, booleanListSum_singleton _ i v (List.nodup_finRange n)]
+  simp
+
 theorem matrixApply_transpose_injective_of_surjective {n : Nat} (J : BinaryMatrix n)
     (hJ : Function.Surjective (matrixApply J)) :
     Function.Injective (matrixApply (transposeBinaryMatrix J)) := by
   intro x y hxy
   funext i
-  have hunit : ∀ v : BinaryVector n,
-      walshWireParity (List.finRange n) v (coordinateUnit i) = v i := by
-    intro v
-    rw [walshWireParity_as_sum]
-    have hfun : (fun j => v j && coordinateUnit i j)
-        = (fun j => decide (j = i) && v j) := by
-      funext j
-      simp only [coordinateUnit]
-      exact Bool.and_comm (v j) (decide (j = i))
-    rw [hfun, booleanListSum_singleton _ i v (List.nodup_finRange n)]
-    simp
-  have hxunit : walshWireParity (List.finRange n) x (coordinateUnit i) = x i := hunit x
-  have hyunit : walshWireParity (List.finRange n) y (coordinateUnit i) = y i := hunit y
+  have hxunit : walshWireParity (List.finRange n) x (coordinateUnit i) = x i :=
+    walshWireParity_coordinateUnit x i
+  have hyunit : walshWireParity (List.finRange n) y (coordinateUnit i) = y i :=
+    walshWireParity_coordinateUnit y i
   obtain ⟨z, hz⟩ := hJ (coordinateUnit i)
   have hp : walshWireParity (List.finRange n) x (coordinateUnit i) =
       walshWireParity (List.finRange n) y (coordinateUnit i) := by
@@ -1036,4 +1039,120 @@ theorem sourceWalshSum_support_coset {n : Nat}
   · intro hker
     have heq := (recordedResidualLinearPart_eq_iff_vectorXor_kernel _ hsize _ l l').mpr hker
     exact hiff'.mpr (heq.symm.trans hl)
+
+/-- The radical indices are exactly the unpaired indices of the polar elimination:
+the recorded coordinate order lists the pair endpoints first, so positions from twice
+the pair count onward are the unpaired block. -/
+theorem recordedRadicalIndex_mem_unpairedIndices {n m : Nat}
+    (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hsize : n = (pairs.length + pairs.length) + m) (i : Fin m) :
+    recordedRadicalIndex (recordedCoordinateAt pairs hlen) hsize i
+      ∈ unpairedIndices (List.finRange n) pairs := by
+  rw [recordedRadicalIndex_eq_cast_natAdd]
+  have hep : (pairs.flatMap (fun p => [p.1, p.2])).length = pairs.length + pairs.length := by
+    rw [pairEndpoints_length]
+    omega
+  have hidx : (Fin.cast hsize.symm (Fin.natAdd (pairs.length + pairs.length) i)).val
+      = (pairs.length + pairs.length) + i.val := rfl
+  show (recordedCoordinateOrder pairs).get
+    ⟨(Fin.cast hsize.symm (Fin.natAdd (pairs.length + pairs.length) i)).val, _⟩ ∈ _
+  rw [List.get_eq_getElem]
+  simp only [hidx, recordedCoordinateOrder]
+  rw [List.getElem_append_right (by omega)]
+  exact List.getElem_mem _
+
+/-- The source polar form as a vector of coordinate pairings. -/
+def sourcePolarVector {n : Nat} (p : PhaseANF n) (x : BinaryVector n) : BinaryVector n :=
+  fun i => phasePolar p x (coordinateUnit i)
+
+/-- The polar vector represents the polar functional through Walsh pairing. -/
+theorem sourcePolar_walsh_representation {n : Nat} (p : PhaseANF n)
+    (hdegree : phaseWithinDegree 2 p = true) (x y : BinaryVector n) :
+    phasePolar p x y = walshWireParity (List.finRange n) (sourcePolarVector p x) y := by
+  obtain ⟨ts, _, _, hp, _, _, hright⟩ := sourceQuadratic_hasPolar p hdegree
+  have hadd : ∀ u v, phasePolar p x (binaryShift u v)
+      = Bool.xor (phasePolar p x u) (phasePolar p x v) := by
+    intro u v
+    rw [hp, hp, hp]
+    exact hright x u v
+  have hzero : phasePolar p x (fun _ => false) = false := by
+    have h := hadd (fun _ => false) (fun _ => false)
+    have hb : binaryShift (fun _ : Fin n => false) (fun _ => false)
+        = (fun _ : Fin n => false) := by
+      funext i
+      simp [binaryShift]
+    rw [hb] at h
+    simpa using h
+  exact additive_coordinates (fun z => phasePolar p x z) hadd hzero y
+
+/-- A transpose coordinate is the character paired against the matching column. -/
+theorem matrixApply_transpose_apply_column {n : Nat} (J : BinaryMatrix n)
+    (l : BinaryVector n) (u : Fin n) :
+    matrixApply (transposeBinaryMatrix J) l u =
+      walshWireParity (List.finRange n) l (matrixColumn J u) := by
+  rw [← matrixApply_coordinateUnit, binaryTranspose_character,
+    walshWireParity_coordinateUnit]
+
+/-- The pair polar form vanishes against any unpaired coordinate unit, for every
+first argument. -/
+theorem recordedPairPolar_right_unit_absent {n : Nat} (pairs : List (Fin n × Fin n))
+    (u : BinaryVector n) (j : Fin n) (h : ∀ p ∈ pairs, j ≠ p.1 ∧ j ≠ p.2) :
+    recordedPairPolar pairs u (coordinateUnit j) = false := by
+  induction pairs with
+  | nil => rfl
+  | cons p ps ih =>
+    have hp := h p (by simp)
+    have htail : ∀ q ∈ ps, j ≠ q.1 ∧ j ≠ q.2 := by
+      intro q hq
+      exact h q (by simp [hq])
+    have h1 : coordinateUnit j p.2 = false := by
+      simp only [coordinateUnit, decide_eq_false_iff_not]
+      exact fun he => hp.2 he.symm
+    have h2 : coordinateUnit j p.1 = false := by
+      simp only [coordinateUnit, decide_eq_false_iff_not]
+      exact fun he => hp.1 he.symm
+    simp [recordedPairPolar, h1, h2, ih htail]
+
+/-- The polar-elimination matrix action is surjective. -/
+theorem polarEliminate_surjective {n : Nat}
+    (B : BinaryVector n → BinaryVector n → Bool) (fuel : Nat) (indices : List (Fin n)) :
+    Function.Surjective (matrixApply (polarEliminate B fuel indices identityMatrix).1) := by
+  apply matrixApply_surjective_of_injective
+  intro x y hxy
+  have hid : Function.Injective (matrixApply (identityMatrix : BinaryMatrix n)) := by
+    intro a b hab
+    simpa [matrixApply_identity] using hab
+  exact polarEliminate_preserves_injective B fuel indices (identityMatrix : BinaryMatrix n) hid hxy
+
+/-- Every source polar vector lies in the kernel of the residual projection: the image
+of the source quadratic polar form is contained in the kernel that cuts out the exact
+source Walsh support. -/
+theorem sourcePolarVector_mem_residualKernel {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (x : BinaryVector n) :
+    recordedResidualLinearPart
+      (recordedCoordinateAt
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+      hsize
+      (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)
+      (sourcePolarVector p x) = zeroVector := by
+  rw [recordedResidualLinearPart_eq_zero_iff_radicalCoordinates]
+  intro i
+  have humem := recordedRadicalIndex_mem_unpairedIndices
+    (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen hsize i
+  rw [matrixApply_transpose_apply_column, ← sourcePolar_walsh_representation p hdegree]
+  obtain ⟨w, hw⟩ := polarEliminate_surjective (phasePolar p) fuel (List.finRange n) x
+  rw [← hw, ← matrixApply_coordinateUnit,
+    sourcePolar_all_vectors p fuel identityMatrix hdegree hbound,
+    recordedPairPhase_polar]
+  exact recordedPairPolar_right_unit_absent _ w _
+    (unpairedIndices_absent (List.finRange n) _ _ humem)
 end SectorSimulation
