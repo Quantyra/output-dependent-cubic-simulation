@@ -854,10 +854,10 @@ theorem polarEliminate_transpose_surjective {n : Nat}
       (polarEliminate B fuel indices identityMatrix).1)) := by
   apply matrixApply_transpose_surjective_of_injective
   intro x y hxy
-  have hid : Function.Injective (matrixApply identityMatrix) := by
+  have hid : Function.Injective (matrixApply (identityMatrix : BinaryMatrix n)) := by
     intro a b hab
     simpa [matrixApply, identityMatrix] using hab
-  exact polarEliminate_preserves_injective B fuel indices identityMatrix hid hxy
+  exact polarEliminate_preserves_injective B fuel indices (identityMatrix : BinaryMatrix n) hid hxy
 
 theorem recordedResidualLinearPart_surjective_for_polarEliminate {n k m : Nat}
     (f : Fin n → Fin n) (hf : Function.Bijective f)
