@@ -9497,6 +9497,58 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-6ec77db-20261031/README.md",
       "unresolved_bridge": "This generated-coordinate support criterion is not yet the paper's affine-image/rank characterization; normalized sector identity, matched-sector bound, source costs and all labeled theorem bridges remain open."
+    },
+    {
+      "id": "source-walsh-interleaved-radicalCoefficientsXor_replicate_false",
+      "section": "3",
+      "target": "SectorSimulation.radicalCoefficientsXor_replicate_false",
+      "assumptions": "The coefficient list length equals the residual dimension.",
+      "quantifiers": "All natural residual dimensions and Boolean coefficient lists of matching length.",
+      "statement": "XORing a residual coefficient list with an equal-length all-false list leaves the list unchanged.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-6ec77db-20261031/README.md",
+      "unresolved_bridge": "This list simplification is only a helper for expressing the source support test coordinatewise."
+    },
+    {
+      "id": "source-walsh-interleaved-vectorAssignment_any_id_iff",
+      "section": "3",
+      "target": "SectorSimulation.vectorAssignment_any_id_iff",
+      "assumptions": "None.",
+      "quantifiers": "All finite dimensions and Boolean vectors.",
+      "statement": "The Boolean assignment list contains a true entry exactly when at least one vector coordinate is true.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-6ec77db-20261031/README.md",
+      "unresolved_bridge": "This list/vector correspondence does not itself characterize the affine image of the quadratic polar form."
+    },
+    {
+      "id": "source-walsh-interleaved-radicalCoefficientsXor_replicate_false_any",
+      "section": "3",
+      "target": "SectorSimulation.radicalCoefficientsXor_replicate_false_any",
+      "assumptions": "None.",
+      "quantifiers": "All finite residual dimensions and Boolean vectors.",
+      "statement": "XORing the residual character coordinates with zero yields a list containing true exactly when some residual vector coordinate is true.",
+      "dependencies": ["source-walsh-interleaved-radicalCoefficientsXor_replicate_false", "source-walsh-interleaved-vectorAssignment_any_id_iff"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-6ec77db-20261031/README.md",
+      "unresolved_bridge": "This identifies the finite support test in the chosen residual coordinates; the paper's affine image/rank statement remains open."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate",
+      "assumptions": "The source phase has degree at most two, polar-elimination fuel is sufficient, and the recorded-coordinate dimension witnesses are valid.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, binary characters, sufficient fuel bounds and valid dimension witnesses.",
+      "statement": "The source Walsh sum is zero exactly when at least one individual residual coordinate of the transported character is true.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_zero_iff_of_witness", "source-walsh-interleaved-radicalCoefficientsXor_replicate_false_any"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-6ec77db-20261031/README.md",
+      "unresolved_bridge": "This exposes the support constraints coordinatewise, but does not yet identify their affine solution set with l0 + im(Bq) or establish its rank."
     }
   ],
   "paper_source": "manuscript/main.tex",
