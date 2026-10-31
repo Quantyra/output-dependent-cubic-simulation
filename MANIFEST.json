@@ -1479,18 +1479,18 @@
     },
     {
       "path": "lean/evidence/gcp/sector-3920eca-20261031/SHA256SUMS",
-      "bytes": 781,
-      "sha256": "d0729ce94b8d3e5b941b86bffc2e45bfef5b1c0525f64302480f2439fa351e86"
+      "bytes": 704,
+      "sha256": "b5b70085435e8b69e5e1f315d09a6f0b0f2a6172bc01cf898d9ebad2ebba5d20"
     },
     {
       "path": "lean/evidence/gcp/sector-3920eca-20261031/sector-3920eca-evidence.tar",
       "bytes": 541184,
-      "sha256": "272de3a318e1cf5fded9d5dcdaba313da03373f780b94f6257d2eb1b8aadc87e"
+      "sha256": "d92c2e21f516080cd46bbd3aa3e06e4fecc40ee1bf88729aca020cec1d8a8c76"
     },
     {
       "path": "lean/evidence/gcp/sector-3920eca-20261031/sector-3920eca-evidence.tar.sha256",
       "bytes": 94,
-      "sha256": "4e2d350c7f8197484105b2248ef809b15a188868ab000577116e39f9fe028920"
+      "sha256": "1bb9766b2ff58e45ba8e41d2cf1449710d135e3793ea006c8b7f59630ce6cd3c"
     },
     {
       "path": "lean/evidence/gcp/sector-3920eca-20261031/sector-3920eca-lean-version.txt",
