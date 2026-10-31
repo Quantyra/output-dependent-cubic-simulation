@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6293,
-      "sha256": "1a2a1348c3979ba33541b35400afca948692166415870184885ba5621b3b03dd"
+      "bytes": 6589,
+      "sha256": "533596fa6f5587dcc96c7c3f6421b6400a83c8f118af98903ca4c0c077ac3769"
     },
     {
       "path": "REPRODUCING.md",
@@ -1468,6 +1468,16 @@
       "sha256": "90e64b8afb80aa046f64befa9984149eb2319529ae1855e6b838ab1a1ba55ff3"
     },
     {
+      "path": "lean/evidence/gcp/sector-4dc88e3-20261031/sector-4dc88e3-evidence.tar",
+      "bytes": 1198080,
+      "sha256": "7d6a25346bfd614d28f652edc9c0c69cbf032469e021bb0836e1c82691e4e962"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-4dc88e3-20261031/sector-4dc88e3-evidence.tar.sha256",
+      "bytes": 94,
+      "sha256": "1c1634a51bd913825497ed8fc6a39f21c44af287a30c5ce4c18ceb43d80f6c59"
+    },
+    {
       "path": "lean/evidence/gcp/sector-52f4b4a-20261029/PairPivotProbe-v2.lean",
       "bytes": 1801,
       "sha256": "6b95f44f961f349de3c67e5af14beab4aa9816e9014f80269b40e5fedf54579f"
@@ -2659,8 +2669,8 @@
     },
     {
       "path": "publication/LEAN-PLAN.md",
-      "bytes": 7551,
-      "sha256": "a5690f77a07af48d8020f98e3e8b1f40bf52a39535709ba34375e14963a4a5b4"
+      "bytes": 7768,
+      "sha256": "b96d19d741989cb05f38c85d24bb430589816c8253886af0ee32a7f3e3045d19"
     },
     {
       "path": "publication/PUBLICATION-RECEIPT.md",
