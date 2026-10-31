@@ -9317,6 +9317,26 @@
       "unresolved_bridge": "Connect this identity to the conditional source Walsh formula; construct arbitrary-source canonical coordinates and establish rank, support and costs."
     },
     {
+      "id": "recorded-interleaved-phase-recordedPairPhase_interleaved",
+      "section": "3",
+      "target": "SectorSimulation.recordedPairPhase_interleaved",
+      "assumptions": "The recorded coordinate order has the ambient length and its coordinate map is injective and surjective.",
+      "quantifiers": "All finite dimensions, disjoint-pair lists, bijective recorded-coordinate maps, interleaved assignments and Boolean offsets satisfying the hypotheses.",
+      "statement": "The recorded quadratic pair phase, evaluated through the inverse coordinate map, equals the pair phase on even/odd interleaved coordinates.",
+      "dependencies": [
+        "SectorSimulation.recordedPairPhase_pairEval",
+        "SectorSimulation.recordedPair_assignment_reindexed"
+      ],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/recorded-interleaved-phase.md",
+      "unresolved_bridge": "Apply this phase identity to the complete source Walsh sum and connect its generated coordinates to canonical Gaussian evaluation, normalization, boundedness and labeled manuscript statements."
+    },
+    {
       "id": "source-transpose-canonical-sourceWalshSum_transposedCanonical",
       "section": "3",
       "target": "SectorSimulation.sourceWalshSum_transposedCanonical",
@@ -9338,5 +9358,5 @@
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "Only explicitly identified derivative helper declarations are kernel checked; all published theorems and cost claims remain planned. Proposed target names are not declarations."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. Each helper's unresolved source and statement bridges remain explicit."
 }

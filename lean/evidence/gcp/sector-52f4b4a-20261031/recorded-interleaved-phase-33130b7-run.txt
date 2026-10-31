@@ -1,0 +1,15 @@
+Dedicated Google Cloud replay of manuscript source commit 33130b7d029893862fffe2d8361bb76b2ad62dbe
+VM: quantyra-sector-lean-builder-02 (quantyra-lean-cert-20260915/us-central1-a)
+Compiler: Lean 4.30.0, project-pinned dependencies
+Source archive SHA-256: 4504414473c5707e314f3621067dd8afa557778c9788cc7d83c84e5d8ff44b54
+
+Clean archive build: exit 0; 2,173 jobs. Final output:
+  ✔ [2170/2173] Built SectorSimulation.RecordedAssignment
+  ✔ [2171/2173] Built SectorSimulation.RecordedInterleavedPhase
+  ✔ [2172/2173] Built SectorSimulation
+  Build completed successfully (2173 jobs).
+
+Integrated Audit.lean: exit 0. Exact tools/check_lean_audit.py check: passed.
+The added helper reports propext, Classical.choice and Quot.sound; no sorryAx.
+
+Scope: this verifies the helper and project build only. It certifies none of the seven published theorem labels.
