@@ -1,0 +1,10 @@
+Source commit: 3920eca168649c06931b3e759202b7288bb34384
+Lean-source archive SHA-256 (excludes only lean/evidence/**): b32ab08bbff5891675ee8cc110f20b9f768339a7d026732fcbcd64088150220a
+Pinned lake-manifest SHA-256: ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642
+Lean: 4.30.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622
+Build: exit 0, 2,175 jobs
+Integrated Audit.lean: exit 0
+check_lean_audit.py: exit 0
+New declaration: sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow
+Axioms: propext, Classical.choice, Quot.sound
+Scope: source Walsh magnitude upper bound only; matched-sector and paper claims open

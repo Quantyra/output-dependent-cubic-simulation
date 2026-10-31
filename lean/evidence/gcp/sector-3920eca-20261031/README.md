@@ -1,0 +1,9 @@
+# Dedicated GCP Lean replay: `3920eca`
+
+Source commit: [`3920eca168649c06931b3e759202b7288bb34384`](https://github.com/Quantyra/output-dependent-cubic-simulation/commit/3920eca168649c06931b3e759202b7288bb34384).
+
+A Git archive of the complete Lean project and `tools/check_lean_audit.py` was replayed on `quantyra-sector-lean-builder-02`, project `quantyra-lean-cert-20260915`, zone `us-central1-a`, using Lean 4.30.0 (`d024af099ca4bf2c86f649261ebf59565dc8c622`) and the pinned Mathlib manifest. The archive omits only `lean/evidence/**` so prior binary evidence bundles are not duplicated in the source archive. Its SHA-256 is `b32ab08bbff5891675ee8cc110f20b9f768339a7d026732fcbcd64088150220a`; `source.tar.gz` is the compressed copy. `lake-manifest.json` SHA-256: `ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642`.
+
+The full build passed (2,175 jobs), as did integrated `Audit.lean` and `tools/check_lean_audit.py`. `sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow` proves `natAbs(sourceWalshSum p l) <= 2^n` for degree-at-most-two source phases; its audited axioms are `propext`, `Classical.choice`, and `Quot.sound`. Raw logs, checker output, toolchain version and source archive are included; hashes are in `SHA256SUMS`, and the evidence tar's hash is in its adjacent `.sha256` file.
+
+This establishes the elementary size bound for the source quadratic Walsh sum. It does not prove the paper's matched-sector overlap bound, `1-2p = average X_a`, literal circuit/sector interpretation, full `lem:walsh` support/rank algorithm, costs, or any of the seven labeled manuscript claims. No paper claim is certified.

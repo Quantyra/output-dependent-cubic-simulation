@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 74426,
-      "sha256": "18432bcf01c09b88a62507837628bb585fe1e04d82f0723c72d0e09d64777e1d"
+      "bytes": 74593,
+      "sha256": "5c1cd77cd5ee0787314786fe70d35b0b3698af2f3df05e7909d1e2fb78775568"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 517448,
-      "sha256": "cec01b3f9fbf7c03cecee78e93dc059e42a0c2b3a864007a525f699daf472d50"
+      "bytes": 518600,
+      "sha256": "9f5885d4dbf10a3f6054ced064f7e73eeea51d106a5f25d23e80697369686824"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -574,8 +574,8 @@
     },
     {
       "path": "lean/SectorSimulation/InterleavedCanonicalSum.lean",
-      "bytes": 22785,
-      "sha256": "d3f542c8878145312a062534f580dab26a040aa946a55b0407779f27b8434ba8"
+      "bytes": 23717,
+      "sha256": "85d082c8397190db63120eeb6205474a09181fd756ff235b19d8a25e7f6f45f7"
     },
     {
       "path": "lean/SectorSimulation/InterleavedCharacter.lean",
@@ -1466,6 +1466,46 @@
       "path": "lean/evidence/gaussian-checked-solver-audit.md",
       "bytes": 940,
       "sha256": "90e64b8afb80aa046f64befa9984149eb2319529ae1855e6b838ab1a1ba55ff3"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-3920eca-20261031/README.md",
+      "bytes": 1638,
+      "sha256": "9600869bfe0814cc2b641f88c1b64f889ccd7c8d4745677ed9104aac2d933dbb"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-3920eca-20261031/RESULTS.txt",
+      "bytes": 627,
+      "sha256": "61d72d363dc5108522c80c8e822f9873f903575b22f377e618aaba93e3b24b7b"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-3920eca-20261031/SHA256SUMS",
+      "bytes": 781,
+      "sha256": "d0729ce94b8d3e5b941b86bffc2e45bfef5b1c0525f64302480f2439fa351e86"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-3920eca-20261031/sector-3920eca-evidence.tar",
+      "bytes": 541184,
+      "sha256": "272de3a318e1cf5fded9d5dcdaba313da03373f780b94f6257d2eb1b8aadc87e"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-3920eca-20261031/sector-3920eca-evidence.tar.sha256",
+      "bytes": 94,
+      "sha256": "4e2d350c7f8197484105b2248ef809b15a188868ab000577116e39f9fe028920"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-3920eca-20261031/sector-3920eca-lean-version.txt",
+      "bytes": 106,
+      "sha256": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-3920eca-20261031/sector-3920eca-manifest.sha256",
+      "bytes": 85,
+      "sha256": "269e20db02de18443f26e9c41c784aaeead808141bb36542375b5bf9c8f5353e"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-3920eca-20261031/source.tar.gz",
+      "bytes": 168750,
+      "sha256": "c3993ab10e20e55c3aca09c6cd612fc8f1b6e76aeab0deeff47183136c5a41f5"
     },
     {
       "path": "lean/evidence/gcp/sector-420ac47-20261031/sector-420ac47-evidence.tar",
@@ -3179,8 +3219,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 58476,
-      "sha256": "dcf57e9070757d6d468c6188ada00a47c4e14c416ecf53916e691f1a8530a66c"
+      "bytes": 58603,
+      "sha256": "405ca75eb1a971d6e3f915fee06efde9e688f480f6d601b5d50100063c687951"
     },
     {
       "path": "tools/check_metadata.py",

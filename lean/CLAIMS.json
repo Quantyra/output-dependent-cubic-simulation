@@ -9457,7 +9457,20 @@
       "status": "proved and kernel checked",
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-ab93a2d-20261031/README.md",
-      "unresolved_bridge": "This exact magnitude helper does not prove the full affine-support/rank statement of lem:walsh, matched-sector boundedness, normalized sector identity, costs, or any labeled manuscript theorem."
+      "unresolved_bridge": "The source-space absolute bound is proved by sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow; the full affine-support/rank statement of lem:walsh, matched-sector boundedness, normalized sector identity, source costs, and labeled paper theorems remain open."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow",
+      "assumptions": "The source phase has degree at most two and polar-elimination fuel is at least the source dimension.",
+      "quantifiers": "All finite dimensions, source phase ANFs, binary characters, and sufficient fuel bounds.",
+      "statement": "The natural absolute value of the complete source integer Walsh sum is at most 2^n.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_naturalAbs"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-3920eca-20261031/README.md",
+      "unresolved_bridge": "This source Walsh bound does not prove the matched-sector overlap bound, full quadratic support/rank algorithm, normalized sector identity, source costs, or any labeled manuscript theorem."
     }
   ],
   "paper_source": "manuscript/main.tex",
