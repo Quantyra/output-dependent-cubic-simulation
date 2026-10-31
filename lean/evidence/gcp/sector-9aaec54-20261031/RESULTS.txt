@@ -1,0 +1,10 @@
+Source commit: 9aaec54aee252899cc44f2428ded4de5935d6d00
+Lean-source archive SHA-256 (excludes only lean/evidence/**): 9fdad1a068082108145f72beac289571c5f28fbf3efc6b03cdcef4e287cfe278
+Pinned lake-manifest SHA-256: ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642
+Lean: 4.30.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622
+Build: exit 0, 2,175 jobs
+Integrated Audit.lean: exit 0
+check_lean_audit.py: exit 0
+New source theorem: sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate
+New theorem axioms: propext, Classical.choice, Quot.sound
+Scope: coordinatewise support criterion in polar-elimination coordinates; affine image/rank and paper claims remain open
