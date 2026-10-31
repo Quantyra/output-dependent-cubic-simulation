@@ -1789,3 +1789,6 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_recorded_reindex
 #print axioms SectorSimulation.sourceWalshSum_recorded_reindex
+
+#check SectorSimulation.sourceWalshSum_recorded_reindex_complete
+#print axioms SectorSimulation.sourceWalshSum_recorded_reindex_complete

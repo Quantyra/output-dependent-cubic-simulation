@@ -310,3 +310,4 @@ import SectorSimulation.RecordedMapEndpoints
 import SectorSimulation.RecordedMapUnpaired
 import SectorSimulation.CoordinateReindex
 import SectorSimulation.SourceRecordedReindex
+import SectorSimulation.SourceReindexComplete
