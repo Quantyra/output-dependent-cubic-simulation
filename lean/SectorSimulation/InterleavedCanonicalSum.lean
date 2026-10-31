@@ -51,6 +51,52 @@ theorem interleavedIndexFromCanonical_leftInverse {k m : Nat} (i : Fin ((k + k) 
   · have hnotleft : ¬ i.val < k := by omega
     simp [canonicalIndexFromInterleaved, interleavedIndexFromCanonical, hpair, hnotleft]
 
+/-- Re-interleaving a canonical vector is the inverse index reindexing. -/
+theorem interleavedVectorOfCanonical_coordinateReindex {k m : Nat}
+    (x : BinaryVector ((k + k) + m)) :
+    interleavedVectorOfCanonical x =
+      coordinateReindex (@canonicalIndexFromInterleaved k m) x := by
+  funext i
+  by_cases hpair : i.val < 2 * k
+  · have hpaired : i.val < k + k := by omega
+    by_cases heven : i.val % 2 = 0
+    · simp [interleavedVectorOfCanonical, canonicalIndexFromInterleaved, coordinateReindex,
+        canonicalLeft, hpair, hpaired, heven]
+    · have hodd : i.val % 2 = 1 := by omega
+      have hdiv := Nat.mod_add_div i.val 2
+      simp [interleavedVectorOfCanonical, canonicalIndexFromInterleaved, coordinateReindex,
+        canonicalRight, hpair, hpaired, hodd]
+      apply congrArg x
+      apply Fin.ext
+      change i.val / 2 + k = k + i.val / 2
+      exact Nat.add_comm _ _
+  · have hpaired : ¬ i.val < k + k := by omega
+    have hidx : k + k + (i.val - 2 * k) = i.val := by omega
+    simp [interleavedVectorOfCanonical, canonicalIndexFromInterleaved, coordinateReindex,
+      canonicalRadical, hpair, hpaired, hidx]
+
+/-- The canonical block map is the coordinate reindexing from the interleaved layout. -/
+theorem canonicalBlockOfInterleaved_coordinateReindex {k m : Nat}
+    (y : BinaryVector ((k + k) + m)) :
+    canonicalBlockOfInterleaved y =
+      coordinateReindex (@interleavedIndexFromCanonical k m) y := by
+  let f := @canonicalIndexFromInterleaved k m
+  let g := @interleavedIndexFromCanonical k m
+  have hfg : ∀ i, f (g i) = i := canonicalIndexFromInterleaved_leftInverse
+  have hRf : coordinateReindex f (canonicalBlockOfInterleaved y) = y := by
+    simpa only [f, ← interleavedVectorOfCanonical_coordinateReindex] using
+      (interleavedVectorOfCanonical_leftInverse y)
+  have hcomp (x : BinaryVector ((k + k) + m)) :
+      coordinateReindex g (coordinateReindex f x) = x := by
+    funext i
+    change x (f (g i)) = x i
+    rw [hfg i]
+  calc
+    canonicalBlockOfInterleaved y =
+        coordinateReindex g (coordinateReindex f (canonicalBlockOfInterleaved y)) :=
+      (hcomp (canonicalBlockOfInterleaved y)).symm
+    _ = coordinateReindex g y := congrArg (coordinateReindex g) hRf
+
 /-- Pair and radical phases read directly from the interleaved even/odd coordinates. -/
 def interleavedCanonicalCharacterWalshSum {k m : Nat}
     (ps qs : List (Bool × Bool)) (bs ds : List Bool) (c : Bool) : Int :=
