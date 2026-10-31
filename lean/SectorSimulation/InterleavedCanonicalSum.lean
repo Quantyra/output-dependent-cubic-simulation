@@ -430,6 +430,27 @@ theorem sourceWalshSum_recorded_interleaved_cast_naturalAbs {n : Nat}
   · simp
   · simp [Int.natAbs_mul, integerWalshSign_naturalAbs]
 
+/-- The exact quadratic Walsh formula is bounded by the size of its input space. -/
+theorem sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel) :
+    Int.natAbs (sourceWalshSum p l) ≤ 2 ^ n := by
+  let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+  let pairs := out.2.2
+  have hexact := sourceWalshSum_recorded_interleaved_cast_naturalAbs
+    p l fuel hdegree hbound
+  dsimp only [out, pairs] at hexact
+  obtain ⟨hlen, m, hsize, habs⟩ := hexact
+  have hpairs :
+      ((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length =
+        pairs.length := by rfl
+  rw [hpairs] at hsize
+  have hmn : m + pairs.length ≤ n := by omega
+  rw [habs]
+  split_ifs
+  · exact Nat.zero_le _
+  · exact Nat.pow_le_pow_right (by decide : 0 < 2) hmn
+
 /-- Reindexing both arguments of the Walsh dot product by a permutation preserves it. -/
 theorem walshWireParity_coordinateReindex_both {n : Nat}
     (f g : Fin n → Fin n) (hfg : ∀ i, f (g i) = i) (hgf : ∀ i, g (f i) = i)
