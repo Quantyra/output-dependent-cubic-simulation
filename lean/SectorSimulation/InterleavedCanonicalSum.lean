@@ -572,6 +572,58 @@ theorem sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate {n 
   dsimp only [out, pairs, f, r, c, a, t, q, canonical] at h ⊢
   exact h.trans (radicalCoefficientsXor_replicate_false_any (canonicalRadical canonical))
 
+/-- Nonzero source-Walsh support is exactly the simultaneous vanishing of every
+residual transformed-character coordinate. -/
+theorem sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m)) :
+    let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+    let pairs := out.2.2
+    let f := recordedCoordinateAt pairs hlen
+    let r := fun x => evalPhase (recordedPairPhase pairs) x
+    let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+    let a := fun i => normalizedDifference
+      (fun y => evalPhase p (matrixApply out.1 y))
+      (fun y => evalPhase (recordedPairPhase pairs) y) (coordinateUnit i)
+    let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+    let q := binaryVectorCast hsize (coordinateReindex f t)
+    let canonical := coordinateReindex
+      (@interleavedIndexFromCanonical pairs.length m) q
+    sourceWalshSum p l ≠ 0 ↔ ∀ i : Fin m, canonicalRadical canonical i = false := by
+  let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+  let pairs := out.2.2
+  let f := recordedCoordinateAt pairs hlen
+  let r := fun x => evalPhase (recordedPairPhase pairs) x
+  let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+  let a := fun i => normalizedDifference
+    (fun y => evalPhase p (matrixApply out.1 y)) r (coordinateUnit i)
+  let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+  let q := binaryVectorCast hsize (coordinateReindex f t)
+  let canonical := coordinateReindex (@interleavedIndexFromCanonical pairs.length m) q
+  have hzero := sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate
+    p l fuel hdegree hbound hlen m hsize
+  dsimp only [out, pairs, f, r, c, a, t, q, canonical] at hzero ⊢
+  have hzero' : sourceWalshSum p l = 0 ↔
+      ∃ i : Fin m, canonicalRadical canonical i = true := by
+    simpa [canonical] using hzero
+  change (¬ sourceWalshSum p l = 0) ↔
+    ∀ i : Fin m, canonicalRadical canonical i = false
+  rw [hzero']
+  constructor
+  · intro h i
+    cases hi : canonicalRadical canonical i with
+    | false => rfl
+    | true => exact False.elim (h ⟨i, hi⟩)
+  · intro h hex
+    rcases hex with ⟨i, hi⟩
+    rw [h i] at hi
+    cases hi
+
 /-- The exact quadratic Walsh formula is bounded by the size of its input space. -/
 theorem sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow {n : Nat}
     (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)

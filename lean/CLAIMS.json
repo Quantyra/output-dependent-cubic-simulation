@@ -9549,6 +9549,19 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-6ec77db-20261031/README.md",
       "unresolved_bridge": "This exposes the support constraints coordinatewise, but does not yet identify their affine solution set with l0 + im(Bq) or establish its rank."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero",
+      "assumptions": "The source phase has degree at most two, polar-elimination fuel is sufficient, and the recorded-coordinate dimension witnesses are valid.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, binary characters, sufficient fuel bounds and valid dimension witnesses.",
+      "statement": "The source Walsh sum is nonzero exactly when every residual coordinate of the transported character is false.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-9aaec54-20261031/README.md",
+      "unresolved_bridge": "The simultaneous coordinate equations are not yet identified with the paper's affine image of the quadratic polar form or its rank."
     }
   ],
   "paper_source": "manuscript/main.tex",
