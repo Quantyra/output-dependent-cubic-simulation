@@ -659,6 +659,7 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSum_inverse_layout': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_inverse_layout_endpoints': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recordedPairPhase_pairEval': {'propext', 'Quot.sound'},
+    'SectorSimulation.recordedPair_assignment_reindexed': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

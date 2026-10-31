@@ -1809,3 +1809,6 @@ import SectorSimulation
 
 #check SectorSimulation.recordedPairPhase_pairEval
 #print axioms SectorSimulation.recordedPairPhase_pairEval
+
+#check SectorSimulation.recordedPair_assignment_reindexed
+#print axioms SectorSimulation.recordedPair_assignment_reindexed

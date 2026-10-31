@@ -316,3 +316,4 @@ import SectorSimulation.SourceInverseReindex
 import SectorSimulation.SourceInverseLayout
 import SectorSimulation.SourceInverseEndpoints
 import SectorSimulation.RecordedPhaseEval
+import SectorSimulation.RecordedAssignment
