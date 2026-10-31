@@ -1800,3 +1800,6 @@ import SectorSimulation
 
 #check SectorSimulation.sourceWalshSum_recorded_inverse_reindex
 #print axioms SectorSimulation.sourceWalshSum_recorded_inverse_reindex
+
+#check SectorSimulation.sourceWalshSum_inverse_layout
+#print axioms SectorSimulation.sourceWalshSum_inverse_layout
