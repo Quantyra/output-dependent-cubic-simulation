@@ -646,6 +646,8 @@ EXPECTED = {
     'SectorSimulation.pairEndpoints_length': {'propext'},
     'SectorSimulation.pairEndpoints_get_first': {'propext', 'Quot.sound'},
     'SectorSimulation.pairEndpoints_get_second': {'propext', 'Quot.sound'},
+    'SectorSimulation.recordedCoordinateAt_pair_first': {'propext', 'Quot.sound'},
+    'SectorSimulation.recordedCoordinateAt_pair_second': {'propext', 'Quot.sound'},
 }
 
 

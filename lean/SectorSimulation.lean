@@ -306,3 +306,4 @@ import SectorSimulation.SourceWalshCharacter
 import SectorSimulation.RecordedCoordinateOrder
 import SectorSimulation.RecordedCoordinateMap
 import SectorSimulation.PairEndpointIndex
+import SectorSimulation.RecordedMapEndpoints

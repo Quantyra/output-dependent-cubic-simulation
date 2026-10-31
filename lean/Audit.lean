@@ -1773,3 +1773,8 @@ import SectorSimulation
 #print axioms SectorSimulation.pairEndpoints_get_first
 #check SectorSimulation.pairEndpoints_get_second
 #print axioms SectorSimulation.pairEndpoints_get_second
+
+#check SectorSimulation.recordedCoordinateAt_pair_first
+#print axioms SectorSimulation.recordedCoordinateAt_pair_first
+#check SectorSimulation.recordedCoordinateAt_pair_second
+#print axioms SectorSimulation.recordedCoordinateAt_pair_second
