@@ -1766,3 +1766,10 @@ import SectorSimulation
 
 #check SectorSimulation.recordedCoordinateAt_bijective
 #print axioms SectorSimulation.recordedCoordinateAt_bijective
+
+#check SectorSimulation.pairEndpoints_length
+#print axioms SectorSimulation.pairEndpoints_length
+#check SectorSimulation.pairEndpoints_get_first
+#print axioms SectorSimulation.pairEndpoints_get_first
+#check SectorSimulation.pairEndpoints_get_second
+#print axioms SectorSimulation.pairEndpoints_get_second

@@ -643,6 +643,9 @@ EXPECTED = {
     'SectorSimulation.pairEndpoints_nodup': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedCoordinateOrder_perm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recordedCoordinateAt_bijective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.pairEndpoints_length': {'propext'},
+    'SectorSimulation.pairEndpoints_get_first': {'propext', 'Quot.sound'},
+    'SectorSimulation.pairEndpoints_get_second': {'propext', 'Quot.sound'},
 }
 
 
