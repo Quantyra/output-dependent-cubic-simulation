@@ -9432,6 +9432,19 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/source-walsh-interleaved.md",
       "unresolved_bridge": "Evaluate the interleaved quadratic Walsh sum in closed form, prove the required normalization and boundedness, establish costs, and connect the result to labeled manuscript statements."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_closed",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_recorded_interleaved_cast_closed",
+      "assumptions": "The source phase has degree at most two and polar-elimination fuel is at least the source dimension.",
+      "quantifiers": "All finite dimensions, source phase ANFs, binary characters, and sufficient fuel bounds.",
+      "statement": "The complete source integer Walsh sum is evaluated by transporting the recorded interleaved sum across the dimension witness and applying the arbitrary interleaved wire-character closed form.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved", "SectorSimulation.interleavedWireCharacterWalshSum_closed", "SectorSimulation.recordedCoordinateOrder_dimension_exists"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-492153b-20261031/README.md",
+      "unresolved_bridge": "This helper does not prove the normalized-sector identity, boundedness, source costs, or any labeled manuscript theorem; all seven published theorem claims remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",
