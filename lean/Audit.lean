@@ -1723,3 +1723,10 @@ import SectorSimulation
 
 #check SectorSimulation.sourcePolar_residual_pair_units
 #print axioms SectorSimulation.sourcePolar_residual_pair_units
+
+#check SectorSimulation.pairwise_symmetric_members
+#print axioms SectorSimulation.pairwise_symmetric_members
+#check SectorSimulation.pairDisjoint_symmetric
+#print axioms SectorSimulation.pairDisjoint_symmetric
+#check SectorSimulation.pairOrthogonal_symmetric
+#print axioms SectorSimulation.pairOrthogonal_symmetric
