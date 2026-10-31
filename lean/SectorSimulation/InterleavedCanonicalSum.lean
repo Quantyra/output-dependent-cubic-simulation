@@ -572,6 +572,59 @@ theorem sourceWalshSum_recorded_interleaved_cast_zero_iff_residualCoordinate {n 
   dsimp only [out, pairs, f, r, c, a, t, q, canonical] at h ⊢
   exact h.trans (radicalCoefficientsXor_replicate_false_any (canonicalRadical canonical))
 
+/-- Residual coordinates of an affine transformed character, after recorded and
+interleaved coordinate changes. -/
+def recordedResidualCoordinates {n k m : Nat} (f : Fin n → Fin n)
+    (h : n = (k + k) + m) (a : BinaryVector n) (T : BinaryMatrix n)
+    (l : BinaryVector n) : BinaryVector m :=
+  canonicalRadical (@coordinateReindex ((k + k) + m)
+    (@interleavedIndexFromCanonical k m)
+    (binaryVectorCast h (coordinateReindex f (binaryShift a (matrixApply T l)))))
+
+/-- The residual offset induced by the fixed affine character. -/
+def recordedResidualOffset {n k m : Nat} (f : Fin n → Fin n)
+    (h : n = (k + k) + m) (a : BinaryVector n) : BinaryVector m :=
+  canonicalRadical (@coordinateReindex ((k + k) + m)
+    (@interleavedIndexFromCanonical k m)
+    (binaryVectorCast h (coordinateReindex f a)))
+
+/-- The linear residual-coordinate part of the transformed wire character. -/
+def recordedResidualLinearPart {n k m : Nat} (f : Fin n → Fin n)
+    (h : n = (k + k) + m) (a : BinaryVector n) (T : BinaryMatrix n)
+    (l : BinaryVector n) : BinaryVector m :=
+  canonicalRadical (@coordinateReindex ((k + k) + m)
+    (@interleavedIndexFromCanonical k m)
+    (binaryVectorCast h (coordinateReindex f (matrixApply T l))))
+
+theorem recordedResidualCoordinates_eq_offset_xor_linearPart {n k m : Nat}
+    (f : Fin n → Fin n) (h : n = (k + k) + m) (a : BinaryVector n)
+    (T : BinaryMatrix n) (l : BinaryVector n) :
+    recordedResidualCoordinates f h a T l =
+      vectorXor (recordedResidualLinearPart f h a T l) (recordedResidualOffset f h a) := by
+  funext i
+  simp [recordedResidualCoordinates, recordedResidualOffset, recordedResidualLinearPart,
+    canonicalRadical, coordinateReindex, binaryVectorCast, binaryShift, vectorXor]
+
+theorem vectorXor_eq_zero_iff {m : Nat} (x y : BinaryVector m) :
+    vectorXor x y = zeroVector ↔ x = y := by
+  constructor
+  · intro h
+    funext i
+    have hi := congrFun h i
+    cases hx : x i <;> cases hy : y i <;>
+      simp [vectorXor, zeroVector, hx, hy] at hi ⊢
+  · rintro rfl
+    funext i
+    simp [vectorXor, zeroVector]
+
+theorem recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset {n k m : Nat}
+    (f : Fin n → Fin n) (h : n = (k + k) + m) (a : BinaryVector n)
+    (T : BinaryMatrix n) (l : BinaryVector n) :
+    recordedResidualCoordinates f h a T l = zeroVector ↔
+      recordedResidualLinearPart f h a T l = recordedResidualOffset f h a := by
+  rw [recordedResidualCoordinates_eq_offset_xor_linearPart]
+  exact vectorXor_eq_zero_iff _ _
+
 /-- Nonzero source-Walsh support is exactly the simultaneous vanishing of every
 residual transformed-character coordinate. -/
 theorem sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero {n : Nat}
@@ -623,6 +676,57 @@ theorem sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates
     rcases hex with ⟨i, hi⟩
     rw [h i] at hi
     cases hi
+
+theorem sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m)) :
+    let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+    let pairs := out.2.2
+    let f := recordedCoordinateAt pairs hlen
+    let a := fun i => normalizedDifference
+      (fun y => evalPhase p (matrixApply out.1 y))
+      (fun y => evalPhase (recordedPairPhase pairs) y) (coordinateUnit i)
+    sourceWalshSum p l ≠ 0 ↔
+      recordedResidualLinearPart f hsize a (transposeBinaryMatrix out.1) l =
+        recordedResidualOffset f hsize a := by
+  let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+  let pairs := out.2.2
+  let f := recordedCoordinateAt pairs hlen
+  let a := fun i => normalizedDifference
+    (fun y => evalPhase p (matrixApply out.1 y))
+    (fun y => evalPhase (recordedPairPhase pairs) y) (coordinateUnit i)
+  let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+  let q := binaryVectorCast hsize (coordinateReindex f t)
+  let canonical := coordinateReindex (@interleavedIndexFromCanonical pairs.length m) q
+  let coordinates := recordedResidualCoordinates f hsize a (transposeBinaryMatrix out.1) l
+  have hsupport := sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero
+    p l fuel hdegree hbound hlen m hsize
+  have hcoordinates : coordinates = canonicalRadical canonical := by
+    rfl
+  have hzero : coordinates = zeroVector ↔
+      ∀ i : Fin m, canonicalRadical canonical i = false := by
+    constructor
+    · intro hz i
+      have hi := congrFun (hcoordinates ▸ hz) i
+      simpa [zeroVector] using hi
+    · intro hi
+      rw [hcoordinates]
+      funext i
+      simpa [zeroVector] using hi i
+  dsimp only [out, pairs, f, a, t, q, canonical] at hsupport ⊢
+  calc
+    sourceWalshSum p l ≠ 0 ↔ coordinates = zeroVector := by
+      exact hsupport.trans hzero.symm
+    _ ↔ recordedResidualLinearPart f hsize a (transposeBinaryMatrix out.1) l =
+          recordedResidualOffset f hsize a :=
+      recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset f hsize a
+        (transposeBinaryMatrix out.1) l
+
 
 /-- The exact quadratic Walsh formula is bounded by the size of its input space. -/
 theorem sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow {n : Nat}
