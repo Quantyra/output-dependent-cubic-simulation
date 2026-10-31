@@ -1742,3 +1742,10 @@ import SectorSimulation
 #print axioms SectorSimulation.sourcePolar_cross_second_first_units
 #check SectorSimulation.sourcePolar_cross_second_second_units
 #print axioms SectorSimulation.sourcePolar_cross_second_second_units
+
+#check SectorSimulation.assemble_coordinate_cases
+#print axioms SectorSimulation.assemble_coordinate_cases
+#check SectorSimulation.sourcePolar_all_units
+#print axioms SectorSimulation.sourcePolar_all_units
+#check SectorSimulation.sourcePolar_all_vectors
+#print axioms SectorSimulation.sourcePolar_all_vectors

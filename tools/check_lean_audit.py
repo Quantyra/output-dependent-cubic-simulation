@@ -634,6 +634,9 @@ EXPECTED = {
     'SectorSimulation.sourcePolar_cross_first_second_units': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourcePolar_cross_second_first_units': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourcePolar_cross_second_second_units': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.assemble_coordinate_cases': set(),
+    'SectorSimulation.sourcePolar_all_units': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourcePolar_all_vectors': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
