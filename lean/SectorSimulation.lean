@@ -301,3 +301,4 @@ import SectorSimulation.SourceCrossUnits
 import SectorSimulation.SourceCrossAll
 import SectorSimulation.SourcePolarAll
 import SectorSimulation.SourceRecordedAffine
+import SectorSimulation.SourceWalshRecorded

@@ -1752,3 +1752,6 @@ import SectorSimulation
 
 #check SectorSimulation.sourcePolar_recorded_affine
 #print axioms SectorSimulation.sourcePolar_recorded_affine
+
+#check SectorSimulation.sourceWalshSum_recorded_affine
+#print axioms SectorSimulation.sourceWalshSum_recorded_affine
