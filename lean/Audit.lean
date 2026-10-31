@@ -1786,3 +1786,6 @@ import SectorSimulation
 #print axioms SectorSimulation.coordinateReindex_basis_perm
 #check SectorSimulation.coordinateReindex_sum
 #print axioms SectorSimulation.coordinateReindex_sum
+
+#check SectorSimulation.sourceWalshSum_recorded_reindex
+#print axioms SectorSimulation.sourceWalshSum_recorded_reindex
