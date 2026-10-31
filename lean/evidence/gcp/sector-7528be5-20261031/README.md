@@ -1,0 +1,13 @@
+# GCP certification evidence: pair-form coordinate algebra for the kernel converse
+
+Source/audit commit: `7528be50adf8a59b2eee2b340df89549a1dde0f2`.
+
+The exact Lean source archive is `sector-7528be5-source.tar` (SHA-256 `54a00f8363db5a348736f2babed0b357e928e287c5e912f0fda48b370e63a84f`, 1,474,560 bytes). It contains tracked Lean sources and the exact audit checker, excluding prior evidence archives; its hash was checked on the dedicated builder.
+
+The dedicated Google Cloud builder `quantyra-sector-lean-builder-02` used Lean 4.30.0, commit `d024af099ca4bf2c86f649261ebf59565dc8c622`, and pinned Lake manifest SHA-256 `ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642`. Full `lake build` completed (2,175 jobs). Integrated `Audit.lean` and the exact expected-axiom checker passed.
+
+Nine declarations are recorded here, with the supporting definition `pairPartnerVector`. `bool_recordedPair_xor` is the underlying Boolean identity. `recordedPairPolar_right_zero` and `recordedPairPolar_right_xor` establish that the recorded pair form is additive in its second argument and vanishes at zero, and `recordedPairPolar_right_representation` converts that into a coordinate representation under Walsh pairing. `recordedPairPolar_right_member_first` and `recordedPairPolar_right_member_second` evaluate the form at the two endpoints of a recorded pair for an arbitrary first argument, showing it reads the partner coordinate; both use pairwise disjointness and distinctness of the recorded pairs. `pairPartnerVector` assigns to each pair endpoint the value a given vector assigns to its partner, and `pairPartnerVector_absent`, `pairPartnerVector_first` and `pairPartnerVector_second` give its values off the pairs and at both endpoints.
+
+Together these invert the pair form on the paired block: given a target residual coordinate vector, the partner vector is the explicit preimage. This is the algebra needed for the converse of the kernel inclusion certified at `503cc56`, where the forward containment of the source polar image in the residual kernel was proved. The converse itself is not assembled here, so the kernel is still not identified with the polar image, and the polar rank, support fiber dimension, normalized sector identity and denominator, matched-sector boundedness, complete costs and every labeled paper theorem remain open. `bool_recordedPair_xor` and `recordedPairPolar_right_xor` depend on no axioms; the remaining declarations use `propext`, with `recordedPairPolar_right_representation` also using `Classical.choice` and `Quot.sound`. No declaration depends on `sorryAx`.
+
+These are helper results; no published manuscript theorem is certified here, and nothing here establishes quantum advantage or a complexity consequence.
