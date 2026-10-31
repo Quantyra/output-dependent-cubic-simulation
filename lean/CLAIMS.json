@@ -9625,7 +9625,7 @@
       "dependencies": [],
       "status": "proved and kernel checked",
       "axioms": ["propext", "Quot.sound"],
-      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "build_audit_receipt": "lean/evidence/gcp/sector-6ca49ab-20261031/README.md",
       "unresolved_bridge": "Its kernel still needs to be identified with the image of the source quadratic polar form."
     },
     {
@@ -9638,7 +9638,7 @@
       "dependencies": [],
       "status": "proved and kernel checked",
       "axioms": ["propext", "Quot.sound"],
-      "build_audit_receipt": "lean/evidence/gcp/sector-fcdc006-20261031/README.md",
+      "build_audit_receipt": "lean/evidence/gcp/sector-6ca49ab-20261031/README.md",
       "unresolved_bridge": "Its kernel still needs to be identified with the image of the source quadratic polar form."
     }
   ],
