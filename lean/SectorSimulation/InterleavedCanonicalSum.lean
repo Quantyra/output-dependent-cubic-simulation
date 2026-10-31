@@ -2,6 +2,9 @@ import SectorSimulation.InterleavedCharacter
 import SectorSimulation.CanonicalCharacterDot
 import SectorSimulation.CanonicalInterleavedLayout
 import Mathlib.Tactic.SplitIfs
+import SectorSimulation.ColumnAction
+import SectorSimulation.HadamardMatrixSum
+import SectorSimulation.PolarBasis
 import Mathlib.Logic.Equiv.Basic
 
 namespace SectorSimulation
@@ -801,4 +804,58 @@ theorem walshWireParity_coordinateReindex_both {n : Nat}
     exact congrArg u (hgf i)
   rw [hu]
 
+
+theorem matrixApply_surjective_of_injective {n : Nat} (J : BinaryMatrix n)
+    (hJ : Function.Injective (matrixApply J)) : Function.Surjective (matrixApply J) := by
+  obtain ⟨ops, hops⟩ := gaussianRowProgram_exists_of_injective J hJ
+  intro y
+  exact ⟨runCNOTs (rowProgramCNOTs ops) y, matrixApply_inverse_forward J ops hops y⟩
+
+theorem matrixApply_transpose_injective_of_surjective {n : Nat} (J : BinaryMatrix n)
+    (hJ : Function.Surjective (matrixApply J)) :
+    Function.Injective (matrixApply (transposeBinaryMatrix J)) := by
+  intro x y hxy
+  funext i
+  have hxunit : walshWireParity (List.finRange n) x (coordinateUnit i) = x i := by
+    rw [walshWireParity_as_sum]
+    change booleanListSum (List.finRange n) (fun j => decide (j = i) && x j) = x i
+    rw [booleanListSum_singleton _ i (fun j => x j) (List.nodup_finRange n)]
+    simp
+  have hyunit : walshWireParity (List.finRange n) y (coordinateUnit i) = y i := by
+    rw [walshWireParity_as_sum]
+    change booleanListSum (List.finRange n) (fun j => decide (j = i) && y j) = y i
+    rw [booleanListSum_singleton _ i (fun j => y j) (List.nodup_finRange n)]
+    simp
+  obtain ⟨z, hz⟩ := hJ (coordinateUnit i)
+  have hp : walshWireParity (List.finRange n) x (coordinateUnit i) =
+      walshWireParity (List.finRange n) y (coordinateUnit i) := by
+    calc
+      walshWireParity (List.finRange n) x (coordinateUnit i) =
+          walshWireParity (List.finRange n) x (matrixApply J z) := by rw [hz]
+      _ = walshWireParity (List.finRange n) (matrixApply (transposeBinaryMatrix J) x) z :=
+          binaryTranspose_character J x z
+      _ = walshWireParity (List.finRange n) (matrixApply (transposeBinaryMatrix J) y) z := by rw [hxy]
+      _ = walshWireParity (List.finRange n) y (matrixApply J z) :=
+          (binaryTranspose_character J y z).symm
+      _ = walshWireParity (List.finRange n) y (coordinateUnit i) := by rw [hz]
+  rw [hxunit, hyunit] at hp
+  exact hp
+
+theorem matrixApply_transpose_surjective_of_injective {n : Nat} (J : BinaryMatrix n)
+    (hJ : Function.Injective (matrixApply J)) :
+    Function.Surjective (matrixApply (transposeBinaryMatrix J)) := by
+  apply matrixApply_surjective_of_injective
+  exact matrixApply_transpose_injective_of_surjective J (matrixApply_surjective_of_injective J hJ)
+
+theorem polarEliminate_transpose_surjective {n : Nat}
+    (B : BinaryVector n → BinaryVector n → Bool) (fuel : Nat)
+    (indices : List (Fin n)) :
+    Function.Surjective (matrixApply (transposeBinaryMatrix
+      (polarEliminate B fuel indices identityMatrix).1)) := by
+  apply matrixApply_transpose_surjective_of_injective
+  intro x y hxy
+  have hid : Function.Injective (matrixApply identityMatrix) := by
+    intro a b hab
+    simpa [matrixApply, identityMatrix] using hab
+  exact polarEliminate_preserves_injective B fuel indices identityMatrix hid hxy
 end SectorSimulation
