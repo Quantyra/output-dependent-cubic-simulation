@@ -10108,6 +10108,58 @@
       "axioms": ["propext", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-a4e0173-20261031/README.md",
       "unresolved_bridge": "The even count is of free coordinates in an explicit parametrization stated through the recorded pair list, not a rank computed for the manuscript's polar form, since the formalization carries no module or dimension structure on binary vectors. The paper's rank-evenness and support-dimension clauses therefore remain uncertified pending that identification."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedCoordinateAt_mem_endpoints",
+      "section": "3",
+      "target": "SectorSimulation.recordedCoordinateAt_mem_endpoints",
+      "assumptions": "The recorded coordinate order has full length and the position is below twice the pair count.",
+      "quantifiers": "All finite dimensions, recorded pair lists, length proofs and recorded positions below twice the pair count.",
+      "statement": "A recorded position below twice the pair count carries an endpoint of a member pair.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-c93b120-20261031/README.md",
+      "unresolved_bridge": "An indexing fact about the recorded order; it carries no rank or dimension statement."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedCoordinateAt_not_mem_unpaired",
+      "section": "3",
+      "target": "SectorSimulation.recordedCoordinateAt_not_mem_unpaired",
+      "assumptions": "The recorded coordinate order has full length and the position is below twice the pair count.",
+      "quantifiers": "All finite dimensions, recorded pair lists, length proofs and recorded positions below twice the pair count.",
+      "statement": "A recorded pair endpoint is never an unpaired index.",
+      "dependencies": ["source-walsh-interleaved-recordedCoordinateAt_mem_endpoints"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-c93b120-20261031/README.md",
+      "unresolved_bridge": "Disjointness of the two index blocks only; no counting or rank consequence follows by itself."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedIndex_paired_or_unpaired",
+      "section": "3",
+      "target": "SectorSimulation.recordedIndex_paired_or_unpaired",
+      "assumptions": "The recorded pairs have distinct endpoints and are pairwise disjoint, the recorded coordinate order has full length, and a recorded dimension witness is supplied.",
+      "quantifiers": "All finite dimensions and residual dimensions, recorded pair lists, length proofs, dimension witnesses and coordinate indices.",
+      "statement": "Every coordinate index is either a recorded pair endpoint or an unpaired index.",
+      "dependencies": ["source-walsh-interleaved-unpairedIndices_length_eq_residual"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-c93b120-20261031/README.md",
+      "unresolved_bridge": "A partition of the index set; it does not compute the size of either block as a rank."
+    },
+    {
+      "id": "source-walsh-interleaved-residualKernel_determined_by_paired_coordinates",
+      "section": "3",
+      "target": "SectorSimulation.residualKernel_determined_by_paired_coordinates",
+      "assumptions": "The source phase has degree at most two, the recorded coordinate order has full length, a recorded dimension witness is supplied, both characters lie in the residual kernel, and their transformed characters agree on every pair endpoint.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, elimination fuel values, recorded dimension witnesses and pairs of kernel elements agreeing on the paired block.",
+      "statement": "Two residual kernel elements whose transformed characters agree on every recorded pair endpoint are equal, so the paired coordinates determine a kernel element.",
+      "dependencies": ["source-walsh-interleaved-recordedIndex_paired_or_unpaired", "source-walsh-interleaved-residualKernel_iff_transpose_unpaired_zero", "source-walsh-interleaved-matrixApply_transpose_injective_of_surjective"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-c93b120-20261031/README.md",
+      "unresolved_bridge": "This is the determination half of a dimension count, enumerated by recorded positions rather than computed as a rank of the manuscript's polar form. The chosen cardinality bridge, an explicit bijection between the kernel and binary vectors on a type of size twice the pair count, is not yet built, so the paper's rank-evenness and support-dimension clauses remain uncertified."
     }
   ],
   "paper_source": "manuscript/main.tex",
