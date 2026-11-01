@@ -1319,6 +1319,17 @@ theorem pairPartnerVector_second {n : Nat} (pairs : List (Fin n × Fin n))
       unfold pairPartnerVector at hrec' ⊢
       simp [hdis.2.2.1, hdis.2.2.2, hrec']
 
+/-- The unpaired block has exactly the residual dimension many indices. -/
+theorem unpairedIndices_length_eq_residual {n m : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hsize : n = (pairs.length + pairs.length) + m) :
+    (unpairedIndices (List.finRange n) pairs).length = m := by
+  have horder : (recordedCoordinateOrder pairs).length
+      = 2 * pairs.length + (unpairedIndices (List.finRange n) pairs).length := by
+    unfold recordedCoordinateOrder
+    rw [List.length_append, pairEndpoints_length]
+  omega
+
 /-- Every unpaired index is a radical index, so the residual coordinate equations
 constrain the transformed character at every unpaired coordinate. -/
 theorem radicalIndex_covers_unpaired {n m : Nat} (pairs : List (Fin n × Fin n))
@@ -1456,4 +1467,98 @@ theorem sourceWalshSum_support_polar_coset {n : Nat}
     sourceWalshSum p l' ≠ 0 ↔ ∃ x, sourcePolarVector p x = vectorXor l l' := by
   rw [sourceWalshSum_support_coset p fuel hdegree hbound hlen m hsize l l' hne]
   exact residualKernel_eq_sourcePolarImage p fuel hdegree hbound hlen m hsize (vectorXor l l')
+
+/-- Membership in the residual kernel is exactly vanishing of the transformed character
+on the unpaired block. -/
+theorem residualKernel_iff_transpose_unpaired_zero {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (l : BinaryVector n) :
+    recordedResidualLinearPart
+      (recordedCoordinateAt
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+      hsize
+      (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l = zeroVector ↔
+      ∀ j ∈ unpairedIndices (List.finRange n)
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2,
+        matrixApply (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l j = false := by
+  rw [recordedResidualLinearPart_eq_zero_iff_radicalCoordinates]
+  constructor
+  · intro h j hj
+    obtain ⟨i, hi⟩ := radicalIndex_covers_unpaired
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen hsize j hj
+    rw [← hi]
+    exact h i
+  · intro h i
+    exact h _ (recordedRadicalIndex_mem_unpairedIndices
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen hsize i)
+
+/-- The residual kernel is parametrized by the values of the transformed character on
+the paired block: every assignment vanishing on the unpaired block is realized by a
+unique kernel element. -/
+theorem residualKernel_parametrized_by_pairs {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (c : BinaryVector n)
+    (hc : ∀ j ∈ unpairedIndices (List.finRange n)
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2, c j = false) :
+    ∃! l, matrixApply (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l = c ∧
+      recordedResidualLinearPart
+        (recordedCoordinateAt
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+        hsize
+        (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l
+        = zeroVector := by
+  have hinj : Function.Injective (matrixApply (transposeBinaryMatrix
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)) :=
+    matrixApply_transpose_injective_of_surjective _
+      (polarEliminate_surjective (phasePolar p) fuel (List.finRange n))
+  obtain ⟨l, hl⟩ := polarEliminate_transpose_surjective (phasePolar p) fuel (List.finRange n) c
+  refine ⟨l, ⟨hl, ?_⟩, ?_⟩
+  · rw [residualKernel_iff_transpose_unpaired_zero p fuel hlen m hsize]
+    intro j hj
+    rw [hl]
+    exact hc j hj
+  · intro l' hl'
+    exact hinj (hl'.1.trans hl.symm)
+
+/-- The rank of the residual kernel's free coordinate block is twice the recorded pair
+count, hence even, and it is the codimension of the residual coordinate space. -/
+theorem residualKernel_rank_even {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m)) :
+    (unpairedIndices (List.finRange n)
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = m ∧
+      (List.finRange n).length - (unpairedIndices (List.finRange n)
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length
+        = (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length ∧
+      ∃ r, (List.finRange n).length - (unpairedIndices (List.finRange n)
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length
+        = r + r := by
+  have hu := unpairedIndices_length_eq_residual
+    (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen hsize
+  have hfr : (List.finRange n).length = n := List.length_finRange
+  refine ⟨hu, ?_, ?_⟩
+  · rw [hfr, hu]
+    omega
+  · refine ⟨(polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length, ?_⟩
+    rw [hfr, hu]
+    omega
 end SectorSimulation
