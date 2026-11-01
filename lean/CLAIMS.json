@@ -11210,9 +11210,77 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-b57d2f0-20261031/README.md",
       "unresolved_bridge": "Supplies the per-column input to the double sum. The composition into the matrix action identity, and hence the annihilator consequence and the matrix form of the support statement, are still not proved: the remaining step is reassociating inside the coupled double sum before distributing the tuple entry out."
+    },
+    {
+      "id": "source-walsh-action-transpose_matrixApply_supportBasisMatrix_extend",
+      "section": "2",
+      "target": "SectorSimulation.transpose_matrixApply_supportBasisMatrix_extend",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All such dimensions, phases, tuples and indices.",
+      "statement": "The transformed matrix product at any index is the Boolean sum of the transformed full columns weighted by the padded tuple.",
+      "dependencies": ["source-walsh-action-matrixApply_eq_booleanListSum", "source-walsh-action-transpose_supportBasisColumnN"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-8b20376-20261031/README.md",
+      "unresolved_bridge": "The computation that closes the coupled double sum: pointwise reassociation, then the swap. It is the step that was missing in the previous increment, now proved."
+    },
+    {
+      "id": "source-walsh-action-matrixApply_supportBasisMatrix_extend",
+      "section": "2",
+      "target": "SectorSimulation.matrixApply_supportBasisMatrix_extend",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All such dimensions, phases and padded coordinate tuples.",
+      "statement": "Applying the basis matrix to the padded coordinate tuple returns the coordinate element with that tuple.",
+      "dependencies": ["source-walsh-action-transpose_matrixApply_supportBasisMatrix_extend", "source-walsh-basis-transpose_kernelCoordinateElement"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-8b20376-20261031/README.md",
+      "unresolved_bridge": "The matrix action identity. It makes the basis matrix compute the coordinate element, so the matrix is a genuine parametrization and not only a column family. It does not prove that this matrix is literally the paper D, which is not formalized."
+    },
+    {
+      "id": "source-walsh-action-supportBasisMatrix_extend_annihilated",
+      "section": "2",
+      "target": "SectorSimulation.supportBasisMatrix_extend_annihilated",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All such dimensions, phases and padded coordinate tuples.",
+      "statement": "The annihilator of the polar image kills the basis matrix image of every padded coordinate tuple.",
+      "dependencies": ["source-walsh-action-matrixApply_supportBasisMatrix_extend", "source-walsh-basis-kernelCoordinateElement_mem"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-8b20376-20261031/README.md",
+      "unresolved_bridge": "The annihilator consequence: the matrix image lies in the polar image. It does not carry the paper matching offset or right-inverse structure into the sector construction."
+    },
+    {
+      "id": "source-walsh-action-sourceWalshSum_support_matrix",
+      "section": "2",
+      "target": "SectorSimulation.sourceWalshSum_support_matrix",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension. A supported base character is given.",
+      "quantifiers": "All such dimensions, phases and characters.",
+      "statement": "A character lies in the exact source Walsh support exactly when it is the base point translated by the basis matrix applied to some padded coordinate tuple, the matrix form of l0 + im(D).",
+      "dependencies": ["source-walsh-action-matrixApply_supportBasisMatrix_extend", "source-walsh-basis-supportBasisColumns_span_polarImage", "source-walsh-interleaved-sourceWalshSum_support_polar_coset"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-8b20376-20261031/README.md",
+      "unresolved_bridge": "The affine-support clause in matrix form. The paper matching offset, the annihilator offset structure and the computability cost trace remain outside this statement."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape. The matrix action identity, the annihilator consequence and the matrix form of the support statement are still not proved. The computability clause has no cost trace. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape, and the action entries now include the matrix action identity, its annihilator consequence and the matrix form of the affine support. The computability clause still has no cost trace. Each helper's unresolved source and statement bridges remain explicit."
 }
