@@ -2425,4 +2425,32 @@ theorem canonicalRight_recordedCanonicalCoordinates_pairedBlockExtend {n k m : N
       have := i.isLt
       omega)]
   exact pairedBlockExtend_apply pairs hd hp hlen hb b _
+
+theorem rowOperationCNOTs_length_le {n : Nat} (op : RowOperation n) :
+    (rowOperationCNOTs op).length ≤ 3 := by
+  cases op with
+  | swap a b =>
+    by_cases h : a = b <;> simp [rowOperationCNOTs, h]
+  | add target control =>
+    by_cases h : target = control <;> simp [rowOperationCNOTs, h]
+
+theorem rowProgramCNOTs_length_le {n : Nat} (ops : List (RowOperation n)) :
+    (rowProgramCNOTs ops).length ≤ 3 * ops.length := by
+  induction ops with
+  | nil => simp [rowProgramCNOTs]
+  | cons op rest ih =>
+    simp only [rowProgramCNOTs, List.flatMap_cons, List.length_append, List.length_cons]
+    have h := rowOperationCNOTs_length_le op
+    simp only [rowProgramCNOTs] at ih
+    omega
+
+/-- Operation-count cost bound for the executable inverse: the CNOT sequence that binary
+elimination runs to invert a square binary matrix action has at most three times the row
+program's length many gates, hence at most a quadratic number in the dimension. -/
+theorem gaussianInverseApply_gate_count_le {n : Nat} (J : BinaryMatrix n)
+    (ops : List (RowOperation n)) (hops : gaussianRowProgram J = some ops) :
+    (rowProgramCNOTs ops).length ≤ 3 * (n * (n + 1)) := by
+  have h1 := rowProgramCNOTs_length_le ops
+  have h2 := gaussianRowProgram_length J ops hops
+  exact Nat.le_trans h1 (Nat.mul_le_mul (Nat.le_refl 3) h2)
 end SectorSimulation
