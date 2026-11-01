@@ -10277,6 +10277,32 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-d49f040-20261031/README.md",
       "unresolved_bridge": "The exponent here is the recorded pair count, a quantity of the elimination output, while the paper's magnitude clause uses half the rank of the alternating polar form. The two agree only once the rank is identified with twice the pair count, which is the open modelling decision recorded in lean/SEMANTICS.md and not yet taken. The paper's magnitude, rank-evenness and support-dimension clauses therefore all remain uncertified, as do the quadratic sign and computability clauses and the correspondence between the formalized source Walsh sum and the paper's Walsh transform."
+    },
+    {
+      "id": "source-walsh-interleaved-hyperbolicSignature_as_pairProducts",
+      "section": "3",
+      "target": "SectorSimulation.hyperbolicSignature_as_pairProducts",
+      "assumptions": "None.",
+      "quantifiers": "All lists of Boolean coefficient pairs.",
+      "statement": "The hyperbolic signature is the parity of the products of paired coordinates, so the sign it controls is a quadratic function of those coordinates.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-e524527-20261031/README.md",
+      "unresolved_bridge": "Quadraticity is exhibited in the recorded interleaved coordinates, not in the manuscript's own support parametrization."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_support_value",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_support_value",
+      "assumptions": "The source phase has degree at most two, the elimination fuel is at least the dimension, and the exact source Walsh value is nonzero.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, sufficient elimination fuel values and wire characters with nonzero exact source Walsh sum.",
+      "statement": "A nonzero exact source Walsh coefficient equals two to the power of the dimension less the recorded pair count, times a sign determined by the recorded constant combined with the hyperbolic signature of the paired coordinates derived from the wire character.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_closed", "source-walsh-interleaved-hyperbolicSignature_as_pairProducts"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-e524527-20261031/README.md",
+      "unresolved_bridge": "The sign is expressed in the recorded interleaved coordinates produced by polar elimination, while the paper asserts quadraticity in coordinates on its own support parametrization; that coordinate bridge is unbuilt and is separate from the rank identification that blocks the magnitude, rank-evenness and support-dimension clauses. The computability clause and the correspondence between the formalized source Walsh sum and the paper's Walsh transform also remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",
