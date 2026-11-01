@@ -781,6 +781,8 @@ EXPECTED = {
     'SectorSimulation.rowOperationCNOTs_length_le': {'propext', 'Quot.sound'},
     'SectorSimulation.rowProgramCNOTs_length_le': {'propext', 'Quot.sound'},
     'SectorSimulation.gaussianInverseApply_gate_count_le': {'propext', 'Quot.sound'},
+    'SectorSimulation.two_lt_two_pow_succ': {'propext', 'Quot.sound'},
+    'SectorSimulation.familyProbabilityBound_scaled': {'propext', 'Quot.sound'},
     'SectorSimulation.vectorXor_eq_zero_iff': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset': {'propext', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation': {'propext', 'Classical.choice', 'Quot.sound'},

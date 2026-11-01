@@ -2068,3 +2068,7 @@ import SectorSimulation
 #print axioms SectorSimulation.rowProgramCNOTs_length_le
 #check SectorSimulation.gaussianInverseApply_gate_count_le
 #print axioms SectorSimulation.gaussianInverseApply_gate_count_le
+#check SectorSimulation.two_lt_two_pow_succ
+#print axioms SectorSimulation.two_lt_two_pow_succ
+#check SectorSimulation.familyProbabilityBound_scaled
+#print axioms SectorSimulation.familyProbabilityBound_scaled

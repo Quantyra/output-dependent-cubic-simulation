@@ -2453,4 +2453,28 @@ theorem gaussianInverseApply_gate_count_le {n : Nat} (J : BinaryMatrix n)
   have h1 := rowProgramCNOTs_length_le ops
   have h2 := gaussianRowProgram_length J ops hops
   exact Nat.le_trans h1 (Nat.mul_le_mul (Nat.le_refl 3) h2)
+
+theorem two_lt_two_pow_succ (t : Nat) (ht : 1 ≤ t) : (2 : Nat) < 2 ^ (t + 1) := by
+  induction t with
+  | zero => omega
+  | succ s ih =>
+    rcases Nat.eq_zero_or_pos s with hs | hs
+    · subst hs
+      decide
+    · have hprev := ih hs
+      have hstep : (2 : Nat) ^ (s + 1) ≤ 2 ^ (s + 1 + 1) :=
+        Nat.pow_le_pow_right (by omega) (by omega)
+      omega
+
+/-- Scaled form of the growing family's displayed probability bound. The manuscript's
+value one quarter less two to the minus dimension minus one plus two to the minus twice
+the dimension minus one is strictly below one quarter; multiplying through by two to the
+twice-dimension-plus-two clears denominators and leaves this integer inequality, which
+holds for every dimension at least one. This certifies the arithmetic step of that
+displayed bound only, not the identification of the family's output probability with
+that value, which needs the output-probability semantics. -/
+theorem familyProbabilityBound_scaled (t : Nat) (ht : 1 ≤ t) :
+    2 ^ (2 * t) + 2 < 2 ^ (2 * t) + 2 ^ (t + 1) := by
+  have h := two_lt_two_pow_succ t ht
+  omega
 end SectorSimulation
