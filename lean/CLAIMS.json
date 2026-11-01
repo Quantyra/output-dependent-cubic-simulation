@@ -10056,6 +10056,58 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-3171dd6-20261031/README.md",
       "unresolved_bridge": "This is the affine-space clause of the paper's Walsh lemma in the formalization's own terms. That lemma is not certified: polar rank evenness, the support dimension, the magnitude two to the minus half the rank, the quadratic sign on the support and computability by binary elimination are all unproved, and the correspondence between the formalized source Walsh sum and the manuscript's Walsh transform of the output-dependent quadratic is not established."
+    },
+    {
+      "id": "source-walsh-interleaved-unpairedIndices_length_eq_residual",
+      "section": "3",
+      "target": "SectorSimulation.unpairedIndices_length_eq_residual",
+      "assumptions": "The recorded coordinate order has full length and a recorded dimension witness is supplied.",
+      "quantifiers": "All finite dimensions and residual dimensions, recorded pair lists, length proofs and dimension witnesses.",
+      "statement": "The unpaired block has exactly the residual dimension many indices, from the length split of the recorded coordinate order.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-a4e0173-20261031/README.md",
+      "unresolved_bridge": "A list length count only; it carries no linear-algebraic rank or dimension statement."
+    },
+    {
+      "id": "source-walsh-interleaved-residualKernel_iff_transpose_unpaired_zero",
+      "section": "3",
+      "target": "SectorSimulation.residualKernel_iff_transpose_unpaired_zero",
+      "assumptions": "The recorded coordinate order has full length and a recorded dimension witness is supplied.",
+      "quantifiers": "All finite dimensions, source phases, elimination fuel values, recorded dimension witnesses and characters.",
+      "statement": "Membership in the residual kernel is exactly vanishing of the transformed character on the unpaired block.",
+      "dependencies": ["source-walsh-interleaved-radicalIndex_covers_unpaired", "source-walsh-interleaved-recordedRadicalIndex_mem_unpairedIndices"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-a4e0173-20261031/README.md",
+      "unresolved_bridge": "The characterization is coordinatewise and supplies no dimension count on its own."
+    },
+    {
+      "id": "source-walsh-interleaved-residualKernel_parametrized_by_pairs",
+      "section": "3",
+      "target": "SectorSimulation.residualKernel_parametrized_by_pairs",
+      "assumptions": "The recorded coordinate order has full length, a recorded dimension witness is supplied, and the target assignment vanishes on the unpaired block.",
+      "quantifiers": "All finite dimensions, source phases, elimination fuel values, recorded dimension witnesses and assignments vanishing on the unpaired block.",
+      "statement": "Every assignment vanishing on the unpaired block is realized by a unique residual kernel element, so the kernel is parametrized by the values of the transformed character on the paired block.",
+      "dependencies": ["source-walsh-interleaved-residualKernel_iff_transpose_unpaired_zero", "source-walsh-interleaved-polarEliminate_transpose_surjective", "source-walsh-interleaved-matrixApply_transpose_injective_of_surjective"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-a4e0173-20261031/README.md",
+      "unresolved_bridge": "This is a bijective parametrization by an index block, not a linear-algebraic dimension; identifying its coordinate count with the manuscript's polar rank requires a further bridge."
+    },
+    {
+      "id": "source-walsh-interleaved-residualKernel_rank_even",
+      "section": "3",
+      "target": "SectorSimulation.residualKernel_rank_even",
+      "assumptions": "The recorded coordinate order has full length and a recorded dimension witness is supplied.",
+      "quantifiers": "All finite dimensions, source phases, elimination fuel values and recorded dimension witnesses.",
+      "statement": "The unpaired block has the residual dimension, so the paired block that parametrizes the kernel has twice the recorded pair count many coordinates and that count is even.",
+      "dependencies": ["source-walsh-interleaved-unpairedIndices_length_eq_residual", "source-walsh-interleaved-residualKernel_parametrized_by_pairs"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-a4e0173-20261031/README.md",
+      "unresolved_bridge": "The even count is of free coordinates in an explicit parametrization stated through the recorded pair list, not a rank computed for the manuscript's polar form, since the formalization carries no module or dimension structure on binary vectors. The paper's rank-evenness and support-dimension clauses therefore remain uncertified pending that identification."
     }
   ],
   "paper_source": "manuscript/main.tex",
