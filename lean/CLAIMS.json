@@ -11490,9 +11490,88 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
       "unresolved_bridge": "The composed trace bound of the model. It is a bound on the stated charges, not on any executable end-to-end algorithm, and it does not prove the estimator accuracy or failure statements."
+    },
+    {
+      "id": "source-walsh-subst-evalPhaseCosted_fst",
+      "section": "2",
+      "target": "SectorSimulation.evalPhaseCosted_fst",
+      "assumptions": "A phase, an input vector and an initial accumulator bit.",
+      "quantifiers": "All phases, inputs and initial bits.",
+      "statement": "The counted evaluator value is the existing phase evaluator value.",
+      "dependencies": ["boolean-polynomial-semantics"],
+      "status": "proved and kernel checked",
+      "axioms": [
+
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-489eb22-20261031/README.md",
+      "unresolved_bridge": "Definitional value agreement for the counting wrapper. It does not prove that a separately instrumented loop computes the phase."
+    },
+    {
+      "id": "source-walsh-subst-foldl_monomialCount",
+      "section": "2",
+      "target": "SectorSimulation.foldl_monomialCount",
+      "assumptions": "A phase.",
+      "quantifiers": "All phases.",
+      "statement": "Counting the monomial operations of the evaluator fold returns exactly the monomial count.",
+      "dependencies": ["source-walsh-subst-evalPhaseCosted_fst"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-489eb22-20261031/README.md",
+      "unresolved_bridge": "An exact count of fold iterations. It counts monomial operations, not bit operations inside a monomial evaluation."
+    },
+    {
+      "id": "source-walsh-subst-evalPhaseCosted_snd",
+      "section": "2",
+      "target": "SectorSimulation.evalPhaseCosted_snd",
+      "assumptions": "A phase, an input vector and an initial accumulator bit.",
+      "quantifiers": "All phases, inputs and initial bits.",
+      "statement": "The counted evaluator spends exactly the monomial count.",
+      "dependencies": ["source-walsh-subst-foldl_monomialCount"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-489eb22-20261031/README.md",
+      "unresolved_bridge": "The counting component of the refined substitution stage."
+    },
+    {
+      "id": "source-walsh-subst-evalPhaseCosted_ops_le",
+      "section": "2",
+      "target": "SectorSimulation.evalPhaseCosted_ops_le",
+      "assumptions": "A phase whose monomial count matches the model parameter, and a dimension at least one.",
+      "quantifiers": "All such phases and parameters.",
+      "statement": "The phase evaluation count lies inside the model substitution charge.",
+      "dependencies": ["source-walsh-subst-evalPhaseCosted_snd"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-489eb22-20261031/README.md",
+      "unresolved_bridge": "Links the executable evaluation to the charged stage. The charge itself is still a modelling choice at the model level."
+    },
+    {
+      "id": "source-walsh-subst-substitution_refined_bitOps_le",
+      "section": "2",
+      "target": "SectorSimulation.substitution_refined_bitOps_le",
+      "assumptions": "A phase whose monomial count matches the model parameter, and a dimension at least one.",
+      "quantifiers": "All such phases and parameters.",
+      "statement": "The refined substitution stage is covered by the complete model total.",
+      "dependencies": ["source-walsh-subst-evalPhaseCosted_ops_le", "source-walsh-cost-totalBitOps_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-489eb22-20261031/README.md",
+      "unresolved_bridge": "The second stage refined from an executable computation, after elimination. It does not refine enumeration, random draws, Gauss sums, accumulation or rounding, and it does not prove the estimator accuracy statement."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape, and the source-walsh-cost entries now charge every stage the semantic contract lists with source size, precision and confidence parameters, with a composed trace bound. The stage charges are modelling choices and only elimination has a proved refinement from an executable program; the paper displayed bound, the estimator accuracy statements, the paper literal D identification and the sector structure remain unproved. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape; the cost entries charge every contract stage and now refine two of them, elimination and phase substitution, from executable computations. The remaining cost stages are specifications, the estimator accuracy and failure statements are unproved, and the paper literal D identification and sector structure remain open. Each helper's unresolved source and statement bridges remain explicit."
 }

@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 50507,
-      "sha256": "4284a8c3db3c643efc44f324ef4150d799c31785fe978393777f8f183ccd6f87"
+      "bytes": 51470,
+      "sha256": "2be6389677024677027750709c6a42dfe2c7bb38d45045138c1d84f5119161a1"
     },
     {
       "path": "REPRODUCING.md",
@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 92895,
-      "sha256": "a508194eff07e313efcf2f40551440925c89d1d59f79d387acb7eabf922ebecc"
+      "bytes": 93398,
+      "sha256": "9aac99d99b4cdabeefdd59e6ac9365fceb36619543037b57a55fb8ed737c3e96"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 672551,
-      "sha256": "9cefed8d8e12d78746369e17611f1169ca067b5e5ff0ab48fa3eb424825227ae"
+      "bytes": 676439,
+      "sha256": "cf6a1b76f0b4833b1ac3143ea4d3693d5d7d4b86169800ee088af1c4ecf758c5"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 8950,
-      "sha256": "5abc54cbd26710adf4007c6048c8862c2f62da8b4279410ed1dde747c21f39c1"
+      "bytes": 8996,
+      "sha256": "356449a7870237aa36e23894d0b57522c015f04a498eedb7fcfb9d687d454b46"
     },
     {
       "path": "lean/SectorSimulation/AffineCoordinates.lean",
@@ -1203,6 +1203,11 @@
       "sha256": "81a27ae6e68cac460ef5f1b1813082873cb31e34aab0a46ac913dbeea400bae8"
     },
     {
+      "path": "lean/SectorSimulation/WalshSubstitutionCost.lean",
+      "bytes": 3589,
+      "sha256": "137015f741e3f75c3d1f65a51c6b1f2df00a540731b913b859143d0d95847867"
+    },
+    {
       "path": "lean/SectorSimulation/ZeroWirePhaseBoundary.lean",
       "bytes": 1452,
       "sha256": "8e705f08406272a0ccbe1875fe6295d23c9895ea951c22b8f35a4930c078cbcc"
@@ -1996,6 +2001,46 @@
       "path": "lean/evidence/gcp/sector-420ac47-20261031/sector-420ac47-evidence.tar.sha256",
       "bytes": 94,
       "sha256": "be8a9783287bee93bd703fdb851811014516c1a46b5317855c1bccbf80805b35"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-489eb22-20261031/COMPONENTS.sha256",
+      "bytes": 563,
+      "sha256": "9d817b6b610a994af417bacc467d6fd5327316a29bd9a4a54fc0e3933ae43f02"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-489eb22-20261031/README.md",
+      "bytes": 2564,
+      "sha256": "ae9ab2228278d277dc4a1b4c90e2964a197e50a48491150f7e1416a3aa23de04"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-489eb22-20261031/lean-version.txt",
+      "bytes": 106,
+      "sha256": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-489eb22-20261031/manifest.sha256",
+      "bytes": 85,
+      "sha256": "269e20db02de18443f26e9c41c784aaeead808141bb36542375b5bf9c8f5353e"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-489eb22-20261031/sector-489eb22-evidence.tar.gz",
+      "bytes": 276443,
+      "sha256": "255e0c4706eb09d6848e8d0721b455b683437dca4050ec4fb032e1d1b12fcb4b"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-489eb22-20261031/sector-489eb22-evidence.tar.gz.sha256",
+      "bytes": 97,
+      "sha256": "225ec93fae9764c3f1c03e1104c92e4b37ada7346f8e64cef870ab6c4be4a796"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-489eb22-20261031/sector-489eb22-source.tar",
+      "bytes": 1809920,
+      "sha256": "ba111926762a5686c0f4dba3d56f4dd7d463f969dc8c690cdca324b8a0e86a13"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-489eb22-20261031/sector-489eb22-source.tar.sha256",
+      "bytes": 92,
+      "sha256": "16dc0672e318b25a7c5fef1fca3a848b12b68bc900752198bef4046eb0c18d7e"
     },
     {
       "path": "lean/evidence/gcp/sector-492153b-20261031/README.md",
@@ -5204,8 +5249,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 72519,
-      "sha256": "5dda08776939b5e51cd34e02ac71297b8c65f10422828fe27b82a46427c02c2c"
+      "bytes": 72868,
+      "sha256": "dd421228d4578631c1950593b09b4f6a5aff967cdb7621d4b3d645f5f06a1313"
     },
     {
       "path": "tools/check_metadata.py",
