@@ -10407,6 +10407,19 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-038f5dc-20261031/README.md",
       "unresolved_bridge": "Packages the sign as a computation with a correctness statement, but the paper's computability clause also requires attachment to the manuscript's own support parametrization and a bit-cost bound, and the quadratic-sign clause still needs the support-coordinate bridge."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_derivativeANF_eq_differenceTransform",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_derivativeANF_eq_differenceTransform",
+      "assumptions": "The source phase has degree at most three.",
+      "quantifiers": "All finite dimensions, degree-at-most-three source phases, displacements and characters.",
+      "statement": "For any displacement, the computed degree-at-most-two derivative ANF exists and its formalized source Walsh sum equals the signed sum over the full binary basis of the difference between the phase at a point and at its shift, taken against the character. The certified support, magnitude and sign results are therefore about the Walsh transform of that first difference.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_support_value", "source-walsh-interleaved-sourceWalshSum_support_polar_coset"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-baf371d-20261031/README.md",
+      "unresolved_bridge": "This is the shape of the correspondence, not the correspondence with the manuscript's transform. The manuscript forms its quadratic from the second-layer phase and the displacement obtained by inverting the pairing matrix on the output one-hot vector, and uses its own normalization and sign conventions. Fixing the displacement from the circuit, which the source output-derivative machinery supplies but which is not composed here, and checking the normalization convention remain outstanding. Until then the computability clause's subject is still not the computed object, and the magnitude, rank-evenness, support-dimension and quadratic-sign clauses remain blocked on the rank identification and the support-coordinate bridge."
     }
   ],
   "paper_source": "manuscript/main.tex",

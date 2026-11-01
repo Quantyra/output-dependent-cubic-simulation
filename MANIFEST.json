@@ -79,13 +79,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 84490,
-      "sha256": "5ae15911dc4e9c3f3be6926b71f49e1eb8470c640f9989b94e9ac008a14d4cd3"
+      "bytes": 84649,
+      "sha256": "18a574ff79e84a0ccc240b9a8a0619b9aed6470d236cb546c12c5f36bb93ce7c"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 596164,
-      "sha256": "bb06fedc94cc0970f8b3af17cd4dc325d4da6a54b32e1da11d41fd53bce0fcfe"
+      "bytes": 598048,
+      "sha256": "b07ea04c8b091dfc2680394c50df69534039cf5aae610c1c88028814cfd329f3"
     },
     {
       "path": "lean/evidence/anf-derivative-audit.md",
@@ -1948,6 +1948,61 @@
       "sha256": "5cafe672f6c88d60bb864ff5f8f84ed6ac180472c3bed43e047109515bbd3728"
     },
     {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/audit.log",
+      "bytes": 387875,
+      "sha256": "e7c09dd064df82fdccc32050377c79c272386c5331d916fae529f423996215cf"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/build.log",
+      "bytes": 36750,
+      "sha256": "2cc240eb15fba38ffe20003db279dd3107ea30bde53e1ee4899b3979d879a670"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/checker.log",
+      "bytes": 76,
+      "sha256": "4e25cf165e718de3d67cca6c5f099fed94f149d11181685a42abb0b34a6d83cb"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/COMPONENTS.sha256",
+      "bytes": 563,
+      "sha256": "e5f9a23e94ab8e0dce5a905244c69ca1b9137c6c3daf4a98e81043e2151e5b4c"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/lean-version.txt",
+      "bytes": 106,
+      "sha256": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/manifest.sha256",
+      "bytes": 85,
+      "sha256": "269e20db02de18443f26e9c41c784aaeead808141bb36542375b5bf9c8f5353e"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/README.md",
+      "bytes": 3327,
+      "sha256": "3f9771ff0899c80ceb983c0bf1d97ebfe624ad0d6cc328a87d6596c16dc20f39"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/sector-baf371d-evidence.tar.gz",
+      "bytes": 232868,
+      "sha256": "18a960c179e290f00c7ff3fd27b811f09dbcd6dbebfe949d03549966d4422914"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/sector-baf371d-evidence.tar.gz.sha256",
+      "bytes": 97,
+      "sha256": "a565a3cfedbf61f99afedda266cca5fa878ca4ecf3379d55257543f141938454"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/sector-baf371d-source.tar",
+      "bytes": 1576960,
+      "sha256": "63c88492775f81c1de93138f8ca6986f5c9833168c8c35e4ff3fb96328f4bd6f"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-baf371d-20261031/sector-baf371d-source.tar.sha256",
+      "bytes": 92,
+      "sha256": "683a547c8d6880689a9af519942ecca1c1c51a8d55e3789b9d5380eec4b15d06"
+    },
+    {
       "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/audit.log",
       "bytes": 377289,
       "sha256": "7ee4c0dd02e462dba2b10a57aa5ca75ec449bf0567de429a11f189ed3b5d24ba"
@@ -3289,8 +3344,8 @@
     },
     {
       "path": "lean/SectorSimulation/InterleavedCanonicalSum.lean",
-      "bytes": 107817,
-      "sha256": "53bd5df479fbf52ba317cadbb2bf75c6c0a987b8acfc6e5b729824e2b82fafb9"
+      "bytes": 109061,
+      "sha256": "59acd2070bb33322b104785c42dda55abd78c56c2bc5932e9ff2513b2d674c2e"
     },
     {
       "path": "lean/SectorSimulation/InterleavedCharacter.lean",
@@ -3959,8 +4014,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 30449,
-      "sha256": "af287b248a2a35da74fb24ab55df351bb9d999656c9cc1ed7d2c53aed0e6f3c2"
+      "bytes": 31785,
+      "sha256": "59f9f5b6e5172e42db18f4e688e277bf4d591778229e4215e055d3dbd058e7c9"
     },
     {
       "path": "REPRODUCING.md",
@@ -4319,8 +4374,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 66002,
-      "sha256": "44167de43e22451a0c957f6fd84f4378be830a34b8b2a67231dfa592655cb1c4"
+      "bytes": 66125,
+      "sha256": "b79d7a2b6097c14fe76c209b0d2ec439c88dacca3097e9f94612db660918d96a"
     },
     {
       "path": "tools/check_metadata.py",
