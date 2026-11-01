@@ -10864,9 +10864,77 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-d31393f-20261031/README.md",
       "unresolved_bridge": "The quadratic-sign clause of the paper Walsh lemma stated through the proved rank, with the coordinate count tied to the rank. The comparison with the paper own support basis matrix, which the manuscript states quadraticity against, is still unbuilt."
+    },
+    {
+      "id": "source-walsh-coordinates-supportCoordinateEquiv",
+      "section": "2",
+      "target": "SectorSimulation.supportCoordinateEquiv",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "The exact source Walsh support is equivalent to the recorded paired block, whose size is the proved polar rank, so the support is parametrized by rank many Boolean coordinates.",
+      "dependencies": ["source-walsh-rank-polarRank_eq_two_mul", "source-walsh-interleaved-sourceWalshSum_support_polar_coset", "source-walsh-interleaved-residualKernel_pairedBlock_bijective"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-1644a52-20261031/README.md",
+      "unresolved_bridge": "Composes the translation that carries the support onto the polar image with the existing bijection from that image onto the paired block. It gives an equivalence onto rank many coordinates, not a presentation of those coordinates as the columns of the manuscript basis matrix D."
+    },
+    {
+      "id": "source-walsh-coordinates-supportPoint_ne_zero",
+      "section": "2",
+      "target": "SectorSimulation.sourceWalshSum_supportPoint_ne_zero",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "Every coordinate tuple labels a supported character through supportPoint.",
+      "dependencies": ["source-walsh-coordinates-supportCoordinateEquiv"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-1644a52-20261031/README.md",
+      "unresolved_bridge": "The forward direction of the parametrization. It says the coordinates are consistent with the support, not that they are the manuscript coordinates."
+    },
+    {
+      "id": "source-walsh-coordinates-support_iff_coordinates",
+      "section": "2",
+      "target": "SectorSimulation.sourceWalshSum_support_iff_coordinates",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "A character lies in the exact source Walsh support exactly when it is the support point of some coordinate tuple.",
+      "dependencies": ["source-walsh-coordinates-supportCoordinateEquiv"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-1644a52-20261031/README.md",
+      "unresolved_bridge": "The affine-support clause in rank many coordinates. The comparison with the manuscript support basis matrix D, its annihilator C and right inverse R is still unbuilt."
+    },
+    {
+      "id": "source-walsh-coordinates-supportPoint_natAbs",
+      "section": "2",
+      "target": "SectorSimulation.sourceWalshSum_supportPoint_natAbs",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "Every character parametrized by a coordinate tuple has exact Walsh magnitude two to the dimension less the polar rank divided by two.",
+      "dependencies": ["source-walsh-coordinates-support_iff_coordinates", "source-walsh-clauses-sourceWalshSum_support_natAbs_rank"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-1644a52-20261031/README.md",
+      "unresolved_bridge": "The magnitude clause on the coordinate parametrization. The quadratic sign is not yet expressed in these coordinates, because that needs the transformed character canonical coordinates as affine functions of the tuple."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-rank entries identify the manuscript polar rank with twice the recorded pair count as a theorem about the module rank, and the source-walsh-clauses entries restate the rank-evenness, support-dimension, magnitude and quadratic-sign clauses of the Walsh lemma through that rank. The formalization still does not connect its paired-block coordinates to the paper own support basis matrix, and the computability clause cost trace is not built. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-rank entries identify the manuscript polar rank with twice the recorded pair count as a theorem about the module rank, the source-walsh-clauses entries restate the Walsh lemma clauses through that rank, and the source-walsh-coordinates entries parametrize the exact support by rank many coordinates with the magnitude clause restated on them. The formalization still does not present those coordinates as the manuscript basis matrix D, does not express the quadratic sign in them, and has no computability cost trace. Each helper's unresolved source and statement bridges remain explicit."
 }
