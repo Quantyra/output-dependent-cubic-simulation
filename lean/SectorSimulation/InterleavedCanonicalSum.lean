@@ -1997,4 +1997,45 @@ theorem residualKernel_explicit_preimage {n : Nat}
   intro j hj
   rw [hfwd]
   exact hc j hj
+
+/-- Executable inverse of the recorded coordinate permutation, by position lookup in the
+recorded coordinate order. -/
+def recordedCoordinateInverse {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n) (j : Fin n) : Fin n :=
+  if h : (recordedCoordinateOrder pairs).idxOf j < n then ⟨_, h⟩ else j
+
+/-- The computed inverse is a right inverse of the recorded coordinate map. -/
+theorem recordedCoordinateAt_recordedCoordinateInverse {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n) (j : Fin n) :
+    recordedCoordinateAt pairs hlen (recordedCoordinateInverse pairs hlen j) = j := by
+  have hperm := recordedCoordinateOrder_perm pairs hd hp
+  have hmem : j ∈ recordedCoordinateOrder pairs := hperm.mem_iff.mpr (List.mem_finRange j)
+  have hlt0 := List.idxOf_lt_length_of_mem hmem
+  have hlt : (recordedCoordinateOrder pairs).idxOf j < n := by omega
+  unfold recordedCoordinateInverse
+  rw [dif_pos hlt]
+  unfold recordedCoordinateAt
+  rw [List.get_eq_getElem]
+  exact List.getElem_idxOf (by omega)
+
+/-- The computed inverse is also a left inverse of the recorded coordinate map. -/
+theorem recordedCoordinateInverse_recordedCoordinateAt {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n) (i : Fin n) :
+    recordedCoordinateInverse pairs hlen (recordedCoordinateAt pairs hlen i) = i := by
+  have hinj := (recordedCoordinateAt_bijective pairs hd hp).1
+  apply hinj
+  exact recordedCoordinateAt_recordedCoordinateInverse pairs hd hp hlen
+    (recordedCoordinateAt pairs hlen i)
+
+/-- Reindexing by the computed inverse undoes reindexing by the recorded coordinate map. -/
+theorem coordinateReindex_recordedCoordinateInverse {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n) (y : BinaryVector n) :
+    coordinateReindex (recordedCoordinateAt pairs hlen)
+        (coordinateReindex (recordedCoordinateInverse pairs hlen) y) = y := by
+  funext i
+  show y (recordedCoordinateInverse pairs hlen (recordedCoordinateAt pairs hlen i)) = y i
+  rw [recordedCoordinateInverse_recordedCoordinateAt pairs hd hp hlen i]
 end SectorSimulation
