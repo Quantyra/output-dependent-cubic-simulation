@@ -2172,3 +2172,13 @@ import SectorSimulation
 #print axioms SectorSimulation.sourceStagesBitOps_le
 #check SectorSimulation.totalBitOps_le
 #print axioms SectorSimulation.totalBitOps_le
+#check SectorSimulation.evalPhaseCosted_fst
+#print axioms SectorSimulation.evalPhaseCosted_fst
+#check SectorSimulation.foldl_monomialCount
+#print axioms SectorSimulation.foldl_monomialCount
+#check SectorSimulation.evalPhaseCosted_snd
+#print axioms SectorSimulation.evalPhaseCosted_snd
+#check SectorSimulation.evalPhaseCosted_ops_le
+#print axioms SectorSimulation.evalPhaseCosted_ops_le
+#check SectorSimulation.substitution_refined_bitOps_le
+#print axioms SectorSimulation.substitution_refined_bitOps_le

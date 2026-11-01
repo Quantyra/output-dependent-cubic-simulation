@@ -838,6 +838,11 @@ EXPECTED = {
     'SectorSimulation.arithmeticBitOps_le_stageEnvelope': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceStagesBitOps_le': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.totalBitOps_le': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.evalPhaseCosted_fst': set(),
+    'SectorSimulation.foldl_monomialCount': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalPhaseCosted_snd': {'propext', 'Quot.sound'},
+    'SectorSimulation.evalPhaseCosted_ops_le': {'propext', 'Quot.sound'},
+    'SectorSimulation.substitution_refined_bitOps_le': {'propext', 'Quot.sound'},
 }
 
 
