@@ -10264,6 +10264,19 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-bc2b0ac-20261031/README.md",
       "unresolved_bridge": "A restatement for composition, not new mathematics. The paper's rank-evenness and support-dimension clauses stay uncertified: the bijection is onto an index block sized through the recorded pair list, the paper's rank is that of the alternating polar form, and binary vectors here have no module structure or Module.rank. The open modelling decision and why its two routes assert different things are recorded in lean/SEMANTICS.md under 'Rank of the polar form: open modelling decision'."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_support_natAbs",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_support_natAbs",
+      "assumptions": "The source phase has degree at most two, the elimination fuel is at least the dimension, and the exact source Walsh value is nonzero.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, sufficient elimination fuel values and wire characters with nonzero exact source Walsh sum.",
+      "statement": "A nonzero exact source Walsh value has magnitude exactly two to the power of the dimension less the recorded polar-elimination pair count, obtained by restricting the canonical magnitude identity to the support.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_recorded_interleaved_cast_naturalAbs"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-d49f040-20261031/README.md",
+      "unresolved_bridge": "The exponent here is the recorded pair count, a quantity of the elimination output, while the paper's magnitude clause uses half the rank of the alternating polar form. The two agree only once the rank is identified with twice the pair count, which is the open modelling decision recorded in lean/SEMANTICS.md and not yet taken. The paper's magnitude, rank-evenness and support-dimension clauses therefore all remain uncertified, as do the quadratic sign and computability clauses and the correspondence between the formalized source Walsh sum and the paper's Walsh transform."
     }
   ],
   "paper_source": "manuscript/main.tex",
