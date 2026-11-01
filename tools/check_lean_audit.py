@@ -760,6 +760,8 @@ EXPECTED = {
     'SectorSimulation.recordedCoordinateAt_recordedCoordinateInverse': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.recordedCoordinateInverse_recordedCoordinateAt': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.coordinateReindex_recordedCoordinateInverse': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recordedResidualPreimage_correct': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_support_value_as_sign': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.vectorXor_eq_zero_iff': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset': {'propext', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation': {'propext', 'Classical.choice', 'Quot.sound'},

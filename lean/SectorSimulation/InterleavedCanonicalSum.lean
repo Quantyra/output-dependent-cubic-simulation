@@ -2038,4 +2038,72 @@ theorem coordinateReindex_recordedCoordinateInverse {n : Nat} (pairs : List (Fin
   funext i
   show y (recordedCoordinateInverse pairs hlen (recordedCoordinateAt pairs hlen i)) = y i
   rw [recordedCoordinateInverse_recordedCoordinateAt pairs hd hp hlen i]
+
+/-- Computed preimage of a residual target under the residual projection: place the
+target in the canonical radical block, map through the interleaved layout, reindex by the
+computed coordinate inverse, and apply the executable Gaussian inverse. -/
+def recordedResidualPreimage {n k m : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (h : n = (k + k) + m) (T : BinaryMatrix n) (w : BinaryVector m) : BinaryVector n :=
+  gaussianInverseApply T
+    (coordinateReindex (recordedCoordinateInverse pairs hlen)
+      (binaryVectorCast h.symm
+        (interleavedVectorOfCanonical (canonicalJoin zeroVector zeroVector w))))
+
+/-- The computed preimage is correct: binary elimination and a coordinate lookup produce
+a character whose residual projection is the given target. -/
+theorem recordedResidualPreimage_correct {n k m : Nat} (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (h : n = (k + k) + m) (T : BinaryMatrix n)
+    (hTinj : Function.Injective (matrixApply T)) (w : BinaryVector m) :
+    recordedResidualLinearPart (recordedCoordinateAt pairs hlen) h T
+      (recordedResidualPreimage pairs hlen h T w) = w := by
+  subst h
+  have hfwd := gaussianInverseApply_forward T hTinj
+    (coordinateReindex (recordedCoordinateInverse pairs hlen)
+      (binaryVectorCast rfl
+        (interleavedVectorOfCanonical (canonicalJoin zeroVector zeroVector w))))
+  change canonicalRadical (@coordinateReindex ((k + k) + m)
+      (@interleavedIndexFromCanonical k m)
+      (binaryVectorCast rfl (coordinateReindex (recordedCoordinateAt pairs hlen)
+        (matrixApply T (recordedResidualPreimage pairs hlen rfl T w))))) = w
+  unfold recordedResidualPreimage
+  rw [hfwd, binaryVectorCast_refl, binaryVectorCast_refl,
+    coordinateReindex_recordedCoordinateInverse pairs hd hp hlen,
+    ← canonicalBlockOfInterleaved_coordinateReindex,
+    canonicalBlockOfInterleaved_rightInverse]
+  exact canonicalRadical_join zeroVector zeroVector w
+
+/-- The sign of a nonzero exact source Walsh coefficient, as a computation. -/
+def sourceWalshSupportSign {n k m : Nat} (p : PhaseANF n)
+    (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hsize : n = (k + k) + m) (J : BinaryMatrix n) (l : BinaryVector n) : Bool :=
+  let r := fun x => evalPhase (recordedPairPhase pairs) x
+  let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+  let a := fun i => normalizedDifference
+    (fun y => evalPhase p (matrixApply J y)) r (coordinateUnit i)
+  let t := binaryShift a (matrixApply (transposeBinaryMatrix J) l)
+  let q := binaryVectorCast hsize (coordinateReindex (recordedCoordinateAt pairs hlen) t)
+  let canonical := coordinateReindex (@interleavedIndexFromCanonical k m) q
+  let qs := vectorPairAssignment (canonicalLeft canonical) (canonicalRight canonical)
+  Bool.xor c (hyperbolicSignature
+    (pairCoefficientsXor (List.replicate pairs.length (false, false)) qs))
+
+/-- The computed sign is correct: a nonzero exact source Walsh coefficient is a fixed
+power of two times the integer Walsh sign of the computed value. -/
+theorem sourceWalshSum_support_value_as_sign {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hne : sourceWalshSum p l ≠ 0) :
+    let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+    let pairs := out.2.2
+    ∃ hlen : (recordedCoordinateOrder pairs).length = n,
+      ∃ m, ∃ hsize : n = (pairs.length + pairs.length) + m,
+        sourceWalshSum p l =
+          (2 : Int) ^ (n - pairs.length) *
+            integerWalshSign (sourceWalshSupportSign p pairs hlen hsize out.1 l) := by
+  obtain ⟨hlen, m, hsize, hval⟩ := sourceWalshSum_support_value p l fuel hdegree hbound hne
+  exact ⟨hlen, m, hsize, hval⟩
 end SectorSimulation

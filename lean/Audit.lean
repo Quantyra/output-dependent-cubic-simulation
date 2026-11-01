@@ -2026,3 +2026,7 @@ import SectorSimulation
 #print axioms SectorSimulation.recordedCoordinateInverse_recordedCoordinateAt
 #check SectorSimulation.coordinateReindex_recordedCoordinateInverse
 #print axioms SectorSimulation.coordinateReindex_recordedCoordinateInverse
+#check SectorSimulation.recordedResidualPreimage_correct
+#print axioms SectorSimulation.recordedResidualPreimage_correct
+#check SectorSimulation.sourceWalshSum_support_value_as_sign
+#print axioms SectorSimulation.sourceWalshSum_support_value_as_sign
