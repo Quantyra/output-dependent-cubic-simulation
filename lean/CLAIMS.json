@@ -10932,9 +10932,128 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-1644a52-20261031/README.md",
       "unresolved_bridge": "The magnitude clause on the coordinate parametrization. The quadratic sign is not yet expressed in these coordinates, because that needs the transformed character canonical coordinates as affine functions of the tuple."
+    },
+    {
+      "id": "source-walsh-basis-kernelCoordinateElement_spec",
+      "section": "2",
+      "target": "SectorSimulation.kernelCoordinateElement_spec",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "The coordinate element with prescribed recorded paired-block coordinates lies in the kernel and carries exactly those coordinates.",
+      "dependencies": ["source-walsh-interleaved-residualKernel_pairedBlock_bijective"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-2768e2c-20261031/README.md",
+      "unresolved_bridge": "Specification of the basis columns. It names the coordinate element and its two properties; the manuscript basis matrix D is not separately defined in the formalization."
+    },
+    {
+      "id": "source-walsh-basis-kernelCoordinateElement_mem",
+      "section": "2",
+      "target": "SectorSimulation.kernelCoordinateElement_mem",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "Every coordinate element lies in the polar image, i.e. in the kernel of the annihilator map.",
+      "dependencies": ["source-walsh-basis-kernelCoordinateElement_spec"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-2768e2c-20261031/README.md",
+      "unresolved_bridge": "The inclusion of the coordinate family in the image. The converse is recorded separately."
+    },
+    {
+      "id": "source-walsh-basis-kernelCoordinateElement_coordinates",
+      "section": "2",
+      "target": "SectorSimulation.kernelCoordinateElement_coordinates",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "The transformed coordinate element takes exactly the prescribed values at the recorded paired positions.",
+      "dependencies": ["source-walsh-basis-kernelCoordinateElement_spec"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-2768e2c-20261031/README.md",
+      "unresolved_bridge": "The coordinate readings on the paired block. It does not by itself identify the tuple with the paper D coordinates."
+    },
+    {
+      "id": "source-walsh-basis-transpose_eq_pairedBlockExtend_of_kernel",
+      "section": "2",
+      "target": "SectorSimulation.transpose_eq_pairedBlockExtend_of_kernel",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension. The vector lies in the kernel and its paired coordinates are given.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "On the transformed character, a kernel element with prescribed paired coordinates is exactly the paired-block extension of those coordinates.",
+      "dependencies": ["source-walsh-basis-kernelCoordinateElement_coordinates", "source-walsh-interleaved-residualKernel_iff_transpose_unpaired_zero"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-2768e2c-20261031/README.md",
+      "unresolved_bridge": "The keystone of the coordinate bridge: it makes the recorded tuple a genuine coordinate system on the image. It does not relate the manuscript pairing matrix to the polar-elimination matrix."
+    },
+    {
+      "id": "source-walsh-basis-transpose_kernelCoordinateElement",
+      "section": "2",
+      "target": "SectorSimulation.transpose_kernelCoordinateElement",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "The transformed coordinate element is the paired-block extension of its coordinates.",
+      "dependencies": ["source-walsh-basis-transpose_eq_pairedBlockExtend_of_kernel"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-2768e2c-20261031/README.md",
+      "unresolved_bridge": "The instance of the keystone used for the basis columns."
+    },
+    {
+      "id": "source-walsh-basis-supportBasisColumns_span_polarImage",
+      "section": "2",
+      "target": "SectorSimulation.supportBasisColumns_span_polarImage",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "A vector lies in the kernel of the annihilator exactly when it is the coordinate element of some tuple, so the basis columns span the polar image and the support is the manuscript l0 plus im(D).",
+      "dependencies": ["source-walsh-basis-kernelCoordinateElement_mem", "source-walsh-basis-transpose_kernelCoordinateElement"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-2768e2c-20261031/README.md",
+      "unresolved_bridge": "The spanning statement. The annihilator is the residual linear part of the transformed character; identifying it with the paper C is done by naming, not by proving the paper matrix equality."
+    },
+    {
+      "id": "source-walsh-basis-residualRightInverse_spec",
+      "section": "2",
+      "target": "SectorSimulation.residualRightInverse_spec",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "The computed residual preimage is a right inverse of the annihilator map: applying the annihilator to it returns the prescribed residual coordinate vector.",
+      "dependencies": ["source-walsh-interleaved-recordedResidualPreimage_correct"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-2768e2c-20261031/README.md",
+      "unresolved_bridge": "The right inverse R of the manuscript parametrization. The paper additionally fixes offset and matching conditions through C and eta, which are not stated here."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-rank entries identify the manuscript polar rank with twice the recorded pair count as a theorem about the module rank, the source-walsh-clauses entries restate the Walsh lemma clauses through that rank, and the source-walsh-coordinates entries parametrize the exact support by rank many coordinates with the magnitude clause restated on them. The formalization still does not present those coordinates as the manuscript basis matrix D, does not express the quadratic sign in them, and has no computability cost trace. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-rank entries identify the manuscript polar rank with twice the recorded pair count as a theorem about the module rank, the source-walsh-clauses entries restate the Walsh lemma clauses through that rank, the source-walsh-coordinates entries parametrize the exact support by rank many coordinates with the magnitude clause on them, and the source-walsh-basis entries supply the basis columns, the annihilator and a right inverse for the polar image. The formalization still does not define the manuscript basis matrix D itself, does not express the quadratic sign in the coordinates, and has no computability cost trace. Each helper's unresolved source and statement bridges remain explicit."
 }
