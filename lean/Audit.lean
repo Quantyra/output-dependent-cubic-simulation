@@ -2116,3 +2116,7 @@ import SectorSimulation
 #print axioms SectorSimulation.supportBasisColumns_span_polarImage
 #check SectorSimulation.residualRightInverse_spec
 #print axioms SectorSimulation.residualRightInverse_spec
+#check SectorSimulation.sourceWalshSupportSign_coordinates
+#print axioms SectorSimulation.sourceWalshSupportSign_coordinates
+#check SectorSimulation.booleanListSum_congr
+#print axioms SectorSimulation.booleanListSum_congr

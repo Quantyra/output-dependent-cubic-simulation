@@ -810,6 +810,8 @@ EXPECTED = {
     'SectorSimulation.transpose_kernelCoordinateElement': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.supportBasisColumns_span_polarImage': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.residualRightInverse_spec': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSupportSign_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.booleanListSum_congr': set(),
 }
 
 

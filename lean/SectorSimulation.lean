@@ -325,3 +325,4 @@ import SectorSimulation.WalshRank
 import SectorSimulation.WalshClauses
 import SectorSimulation.WalshCoordinates
 import SectorSimulation.WalshBasis
+import SectorSimulation.WalshSignCoordinates
