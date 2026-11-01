@@ -2030,3 +2030,5 @@ import SectorSimulation
 #print axioms SectorSimulation.recordedResidualPreimage_correct
 #check SectorSimulation.sourceWalshSum_support_value_as_sign
 #print axioms SectorSimulation.sourceWalshSum_support_value_as_sign
+#check SectorSimulation.sourceWalshSum_derivativeANF_eq_differenceTransform
+#print axioms SectorSimulation.sourceWalshSum_derivativeANF_eq_differenceTransform

@@ -2106,4 +2106,27 @@ theorem sourceWalshSum_support_value_as_sign {n : Nat}
             integerWalshSign (sourceWalshSupportSign p pairs hlen hsize out.1 l) := by
   obtain ⟨hlen, m, hsize, hval⟩ := sourceWalshSum_support_value p l fuel hdegree hbound hne
   exact ⟨hlen, m, hsize, hval⟩
+
+/-- Semantic bridge for the transform. For a degree-at-most-three source phase and any
+displacement, the computed degree-at-most-two derivative ANF has a formalized source
+Walsh sum equal to the manuscript's Walsh transform of the first difference, written
+directly as the signed sum of the difference of the phase at a point and at its shift
+against the character. Every certified statement about the formalized sum therefore
+applies to that transform. -/
+theorem sourceWalshSum_derivativeANF_eq_differenceTransform {n : Nat} (p : PhaseANF n)
+    (j : BinaryVector n) (hdegree : phaseWithinDegree 3 p = true) (l : BinaryVector n) :
+    ∃ q, cubicPhaseDerivativeANF p j = some q ∧ phaseWithinDegree 2 q = true ∧
+      sourceWalshSum q l =
+        ((binaryBasis n).map (fun x => integerWalshSign
+          (Bool.xor (Bool.xor (evalPhase p x) (evalPhase p (binaryShift j x)))
+            (walshWireParity (List.finRange n) l x)))).sum := by
+  obtain ⟨q, hq, hqdeg, hqeval⟩ := cubicPhaseDerivativeANF_correct p j hdegree
+  refine ⟨q, hq, hqdeg, ?_⟩
+  unfold sourceWalshSum
+  apply congrArg List.sum
+  apply List.map_congr_left
+  intro x _
+  apply congrArg integerWalshSign
+  rw [hqeval x]
+  simp [booleanDerivative, Bool.xor_assoc]
 end SectorSimulation
