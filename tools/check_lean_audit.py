@@ -803,6 +803,13 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSum_supportPoint_ne_zero': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_support_iff_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_supportPoint_natAbs': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.kernelCoordinateElement_spec': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.kernelCoordinateElement_mem': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.kernelCoordinateElement_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.transpose_eq_pairedBlockExtend_of_kernel': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.transpose_kernelCoordinateElement': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.supportBasisColumns_span_polarImage': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.residualRightInverse_spec': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
