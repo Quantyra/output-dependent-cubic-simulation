@@ -11131,9 +11131,88 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-7066a44-20261031/README.md",
       "unresolved_bridge": "Identifies the matrix columns with the basis columns. It does not prove that the matrix applied to the padded coordinate tuple returns the coordinate element: that action identity needs a Boolean fold-distribution lemma over the nested column fold, which the development does not have. So the matrix is defined and its columns identified, but the support is not yet stated as the affine image of the matrix."
+    },
+    {
+      "id": "source-walsh-action-matrixApply_eq_booleanListSum",
+      "section": "2",
+      "target": "SectorSimulation.matrixApply_eq_booleanListSum",
+      "assumptions": "A square binary matrix, a binary vector and one coordinate.",
+      "quantifiers": "All dimensions, matrices, vectors and coordinates.",
+      "statement": "Matrix application at a coordinate is a Boolean sum of column entries weighted by the argument.",
+      "dependencies": ["boolean-polynomial-semantics"],
+      "status": "proved and kernel checked",
+      "axioms": [
+
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-b57d2f0-20261031/README.md",
+      "unresolved_bridge": "A structural identity converting the matrix action into the formalization sum calculus. It carries no manuscript claim of its own."
+    },
+    {
+      "id": "source-walsh-action-booleanListSum_and_left",
+      "section": "2",
+      "target": "SectorSimulation.booleanListSum_and_left",
+      "assumptions": "A finite list, a Boolean constant and a Boolean-valued function.",
+      "quantifiers": "All lists, constants and summands.",
+      "statement": "A constant && distributes out of a Boolean sum on the left.",
+      "dependencies": ["source-walsh-action-matrixApply_eq_booleanListSum"],
+      "status": "proved and kernel checked",
+      "axioms": [
+
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-b57d2f0-20261031/README.md",
+      "unresolved_bridge": "A Boolean sum identity used to factor the tuple entry out of the column sum."
+    },
+    {
+      "id": "source-walsh-action-booleanListSum_and_right",
+      "section": "2",
+      "target": "SectorSimulation.booleanListSum_and_right",
+      "assumptions": "A finite list, a Boolean constant and a Boolean-valued function.",
+      "quantifiers": "All lists, constants and summands.",
+      "statement": "A constant && distributes out of a Boolean sum on the right.",
+      "dependencies": ["source-walsh-action-matrixApply_eq_booleanListSum"],
+      "status": "proved and kernel checked",
+      "axioms": [
+
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-b57d2f0-20261031/README.md",
+      "unresolved_bridge": "A Boolean sum identity used to factor the tuple entry out of the column sum."
+    },
+    {
+      "id": "source-walsh-action-supportBasisMatrix_apply_column",
+      "section": "2",
+      "target": "SectorSimulation.supportBasisMatrix_apply_column",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All such dimensions, phases and pairs of indices.",
+      "statement": "The entry of the basis matrix at any row and column is the corresponding entry of the full basis column.",
+      "dependencies": ["source-walsh-matrix-supportBasisMatrix_column"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-b57d2f0-20261031/README.md",
+      "unresolved_bridge": "Identifies the matrix entries with the full column family. It does not prove the matrix action on a tuple."
+    },
+    {
+      "id": "source-walsh-action-transpose_supportBasisColumnN",
+      "section": "2",
+      "target": "SectorSimulation.transpose_supportBasisColumnN",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All such dimensions, phases and column indices.",
+      "statement": "The transformed full column is the paired-block extension of the corresponding unit tuple below the pair count, and the zero vector past it.",
+      "dependencies": ["source-walsh-action-supportBasisMatrix_apply_column", "source-walsh-basis-transpose_kernelCoordinateElement"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-b57d2f0-20261031/README.md",
+      "unresolved_bridge": "Supplies the per-column input to the double sum. The composition into the matrix action identity, and hence the annihilator consequence and the matrix form of the support statement, are still not proved: the remaining step is reassociating inside the coupled double sum before distributing the tuple entry out."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis and sign entries build the Walsh lemma up in the manuscript shape; the source-walsh-matrix entries define the basis matrix as an object and identify its columns, but its action on the coordinate tuple and the matrix form of the support statement are not yet proved. The computability clause has no cost trace. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape. The matrix action identity, the annihilator consequence and the matrix form of the support statement are still not proved. The computability clause has no cost trace. Each helper's unresolved source and statement bridges remain explicit."
 }
