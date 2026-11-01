@@ -11083,9 +11083,57 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-4e062fd-20261031/README.md",
       "unresolved_bridge": "A congruence lemma for the finite sum used to state the sign. It carries no manuscript claim."
+    },
+    {
+      "id": "source-walsh-matrix-matrixApply_eq_vectorFoldlXor",
+      "section": "2",
+      "target": "SectorSimulation.matrixApply_eq_vectorFoldlXor",
+      "assumptions": "A square binary matrix and a binary vector of the same dimension.",
+      "quantifiers": "All dimensions, binary matrices and vectors.",
+      "statement": "Applying a binary matrix is the fold of its columns, each weighted by the corresponding entry of the argument.",
+      "dependencies": ["boolean-polynomial-semantics"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-7066a44-20261031/README.md",
+      "unresolved_bridge": "A structural identity about the formalization matrix action, not a manuscript statement. It is what allows a matrix to be reasoned about column by column."
+    },
+    {
+      "id": "source-walsh-matrix-vectorFoldlXor_apply",
+      "section": "2",
+      "target": "SectorSimulation.vectorFoldlXor_apply",
+      "assumptions": "A finite list of binary vectors and one coordinate.",
+      "quantifiers": "All dimensions, lists and coordinates.",
+      "statement": "Reading a folded XOR of binary vectors at one coordinate is the Boolean fold of the coordinate readings.",
+      "dependencies": ["source-walsh-matrix-matrixApply_eq_vectorFoldlXor"],
+      "status": "proved and kernel checked",
+      "axioms": [
+
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-7066a44-20261031/README.md",
+      "unresolved_bridge": "A structural identity about the fold used to read matrices column by column. It carries no manuscript claim."
+    },
+    {
+      "id": "source-walsh-matrix-supportBasisMatrix_column",
+      "section": "2",
+      "target": "SectorSimulation.supportBasisMatrix_column",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All such dimensions, phases and column indices.",
+      "statement": "The j-th column of the explicitly defined basis matrix is exactly the j-th basis column of the polar image.",
+      "dependencies": ["source-walsh-basis-supportBasisColumns_span_polarImage"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-7066a44-20261031/README.md",
+      "unresolved_bridge": "Identifies the matrix columns with the basis columns. It does not prove that the matrix applied to the padded coordinate tuple returns the coordinate element: that action identity needs a Boolean fold-distribution lemma over the nested column fold, which the development does not have. So the matrix is defined and its columns identified, but the support is not yet stated as the affine image of the matrix."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-rank entries identify the manuscript polar rank with twice the recorded pair count, the source-walsh-clauses entries restate the Walsh clauses through that rank, the source-walsh-coordinates entries parametrize the support, the source-walsh-basis entries supply basis columns, the annihilator and a right inverse, and the source-walsh-sign entry states the support sign as a function of the coordinate tuple. The formalization still does not define the manuscript basis matrix D itself and has no computability cost trace. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis and sign entries build the Walsh lemma up in the manuscript shape; the source-walsh-matrix entries define the basis matrix as an object and identify its columns, but its action on the coordinate tuple and the matrix form of the support statement are not yet proved. The computability clause has no cost trace. Each helper's unresolved source and statement bridges remain explicit."
 }
