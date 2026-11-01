@@ -1561,4 +1561,123 @@ theorem residualKernel_rank_even {n : Nat}
   · refine ⟨(polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length, ?_⟩
     rw [hfr, hu]
     omega
+
+/-- Recorded positions below twice the pair count carry pair endpoints. -/
+theorem recordedCoordinateAt_mem_endpoints {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n) (t : Fin n)
+    (ht : t.val < 2 * pairs.length) :
+    ∃ q ∈ pairs, recordedCoordinateAt pairs hlen t = q.1 ∨
+      recordedCoordinateAt pairs hlen t = q.2 := by
+  have htn := t.isLt
+  obtain ⟨s, hslt, hseq⟩ : ∃ s, s < pairs.length ∧ (t.val = 2 * s ∨ t.val = 2 * s + 1) :=
+    ⟨t.val / 2, by omega, by omega⟩
+  refine ⟨pairs[s], List.getElem_mem hslt, ?_⟩
+  rcases hseq with h0 | h1
+  · left
+    have hval : t = (⟨2 * s, by omega⟩ : Fin n) := by
+      apply Fin.ext
+      show t.val = 2 * s
+      omega
+    rw [hval]
+    exact recordedCoordinateAt_pair_first pairs hlen s hslt
+  · right
+    have hval : t = (⟨2 * s + 1, by omega⟩ : Fin n) := by
+      apply Fin.ext
+      show t.val = 2 * s + 1
+      omega
+    rw [hval]
+    exact recordedCoordinateAt_pair_second pairs hlen s hslt
+
+/-- A pair endpoint is never an unpaired index. -/
+theorem recordedCoordinateAt_not_mem_unpaired {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n) (t : Fin n)
+    (ht : t.val < 2 * pairs.length) :
+    recordedCoordinateAt pairs hlen t ∉ unpairedIndices (List.finRange n) pairs := by
+  intro hmem
+  obtain ⟨q, hq, hcase⟩ := recordedCoordinateAt_mem_endpoints pairs hlen t ht
+  have habs := unpairedIndices_absent (List.finRange n) pairs _ hmem q hq
+  rcases hcase with h1 | h2
+  · exact habs.1 h1
+  · exact habs.2 h2
+
+/-- Every coordinate index is either a recorded pair endpoint or an unpaired index. -/
+theorem recordedIndex_paired_or_unpaired {n m : Nat} (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hsize : n = (pairs.length + pairs.length) + m) (j : Fin n) :
+    (∃ t : Fin n, t.val < 2 * pairs.length ∧ recordedCoordinateAt pairs hlen t = j) ∨
+      j ∈ unpairedIndices (List.finRange n) pairs := by
+  have hb := recordedCoordinateAt_bijective pairs hd hp
+  obtain ⟨t, ht⟩ := hb.2 j
+  by_cases hlt : t.val < 2 * pairs.length
+  · exact Or.inl ⟨t, hlt, ht⟩
+  · refine Or.inr ?_
+    have hu := unpairedIndices_length_eq_residual pairs hlen hsize
+    have htn := t.isLt
+    obtain ⟨i, hilt, hieq⟩ : ∃ i, i < (unpairedIndices (List.finRange n) pairs).length ∧
+        t.val = 2 * pairs.length + i :=
+      ⟨t.val - 2 * pairs.length, by omega, by omega⟩
+    have heq := recordedCoordinateAt_unpaired pairs hlen i hilt
+    have hval : t = (⟨2 * pairs.length + i, by omega⟩ : Fin n) := by
+      apply Fin.ext
+      show t.val = 2 * pairs.length + i
+      omega
+    rw [← ht, hval, heq]
+    exact List.getElem_mem hilt
+
+/-- The paired coordinates determine a residual kernel element: two kernel elements whose
+transformed characters agree on every pair endpoint are equal. This is the dimension
+bound complementing the parametrization. -/
+theorem residualKernel_determined_by_paired_coordinates {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (l l' : BinaryVector n)
+    (hl : recordedResidualLinearPart
+      (recordedCoordinateAt
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+      hsize
+      (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l = zeroVector)
+    (hl' : recordedResidualLinearPart
+      (recordedCoordinateAt
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+      hsize
+      (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l' = zeroVector)
+    (hagree : ∀ t : Fin n,
+      t.val < 2 * (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length →
+      matrixApply (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l
+          (recordedCoordinateAt
+            (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen t)
+        = matrixApply (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l'
+          (recordedCoordinateAt
+            (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen t)) :
+    l = l' := by
+  obtain ⟨ts, _, _, hpolar, halt, _, _⟩ := sourceQuadratic_hasPolar p hdegree
+  have hl0 : ∀ z, phasePolar p z z = false := by
+    intro z
+    rw [hpolar]
+    exact halt z
+  have hdp := polarEliminate_distinct_pairs (phasePolar p) fuel (List.finRange n) identityMatrix hl0
+  have hinj : Function.Injective (matrixApply (transposeBinaryMatrix
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)) :=
+    matrixApply_transpose_injective_of_surjective _
+      (polarEliminate_surjective (phasePolar p) fuel (List.finRange n))
+  have hzl := (residualKernel_iff_transpose_unpaired_zero p fuel hlen m hsize l).mp hl
+  have hzl' := (residualKernel_iff_transpose_unpaired_zero p fuel hlen m hsize l').mp hl'
+  apply hinj
+  funext j
+  rcases recordedIndex_paired_or_unpaired
+    (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2
+    hdp.1 hdp.2 hlen hsize j with ⟨t, htlt, htj⟩ | hju
+  · rw [← htj]
+    exact hagree t htlt
+  · rw [hzl j hju, hzl' j hju]
 end SectorSimulation
