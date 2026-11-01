@@ -2154,3 +2154,21 @@ import SectorSimulation
 #print axioms SectorSimulation.inverseProgramBitOps_le_poly
 #check SectorSimulation.walshModelledStagesBitOps_le
 #print axioms SectorSimulation.walshModelledStagesBitOps_le
+#check SectorSimulation.totalBitOps_eq_stages
+#print axioms SectorSimulation.totalBitOps_eq_stages
+#check SectorSimulation.programBitOps_le_eliminationBitOps
+#print axioms SectorSimulation.programBitOps_le_eliminationBitOps
+#check SectorSimulation.le_stageEnvelope_of_le
+#print axioms SectorSimulation.le_stageEnvelope_of_le
+#check SectorSimulation.parseBitOps_le_stageEnvelope
+#print axioms SectorSimulation.parseBitOps_le_stageEnvelope
+#check SectorSimulation.eliminationBitOps_le_stageEnvelope
+#print axioms SectorSimulation.eliminationBitOps_le_stageEnvelope
+#check SectorSimulation.substitutionBitOps_le_stageEnvelope
+#print axioms SectorSimulation.substitutionBitOps_le_stageEnvelope
+#check SectorSimulation.arithmeticBitOps_le_stageEnvelope
+#print axioms SectorSimulation.arithmeticBitOps_le_stageEnvelope
+#check SectorSimulation.sourceStagesBitOps_le
+#print axioms SectorSimulation.sourceStagesBitOps_le
+#check SectorSimulation.totalBitOps_le
+#print axioms SectorSimulation.totalBitOps_le

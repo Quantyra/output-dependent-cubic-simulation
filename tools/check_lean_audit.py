@@ -829,6 +829,15 @@ EXPECTED = {
     'SectorSimulation.signPairBitOps_le': {'propext', 'Quot.sound'},
     'SectorSimulation.inverseProgramBitOps_le_poly': {'propext', 'Quot.sound'},
     'SectorSimulation.walshModelledStagesBitOps_le': {'propext', 'Quot.sound'},
+    'SectorSimulation.totalBitOps_eq_stages': {'propext'},
+    'SectorSimulation.programBitOps_le_eliminationBitOps': {'propext', 'Quot.sound'},
+    'SectorSimulation.le_stageEnvelope_of_le': set(),
+    'SectorSimulation.parseBitOps_le_stageEnvelope': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.eliminationBitOps_le_stageEnvelope': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.substitutionBitOps_le_stageEnvelope': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.arithmeticBitOps_le_stageEnvelope': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceStagesBitOps_le': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.totalBitOps_le': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
