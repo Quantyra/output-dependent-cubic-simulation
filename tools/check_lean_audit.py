@@ -795,6 +795,10 @@ EXPECTED = {
     'SectorSimulation.polarLinearMap_range_card': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.polarRank_eq_two_mul': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.polarRank_even': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.polarRank_even_nat': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSupport_card_eq_two_pow_rank': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_support_natAbs_rank': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSupportSign_quadratic_rank': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

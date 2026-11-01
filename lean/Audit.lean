@@ -2086,3 +2086,11 @@ import SectorSimulation
 #print axioms SectorSimulation.polarRank_eq_two_mul
 #check SectorSimulation.polarRank_even
 #print axioms SectorSimulation.polarRank_even
+#check SectorSimulation.polarRank_even_nat
+#print axioms SectorSimulation.polarRank_even_nat
+#check SectorSimulation.sourceWalshSupport_card_eq_two_pow_rank
+#print axioms SectorSimulation.sourceWalshSupport_card_eq_two_pow_rank
+#check SectorSimulation.sourceWalshSum_support_natAbs_rank
+#print axioms SectorSimulation.sourceWalshSum_support_natAbs_rank
+#check SectorSimulation.sourceWalshSupportSign_quadratic_rank
+#print axioms SectorSimulation.sourceWalshSupportSign_quadratic_rank
