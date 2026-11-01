@@ -2339,4 +2339,90 @@ theorem canonicalPairedCoordinates_shift {n k m : Nat} (f : Fin n → Fin n)
   rw [recordedCanonicalCoordinates_vectorXor, canonicalLeft_vectorXor,
     canonicalRight_vectorXor]
   exact ⟨rfl, rfl⟩
+
+theorem interleavedIndexFromCanonical_left_val {k m : Nat} (i : Fin k) :
+    (@interleavedIndexFromCanonical k m ((i.castAdd k).castAdd m)).val = 2 * i.val := by
+  have hlt : ((i.castAdd k).castAdd m : Fin ((k + k) + m)).val < k := by
+    show i.val < k
+    exact i.isLt
+  unfold interleavedIndexFromCanonical
+  rw [dif_pos hlt]
+  rfl
+
+theorem interleavedIndexFromCanonical_right_val {k m : Nat} (i : Fin k) :
+    (@interleavedIndexFromCanonical k m ((Fin.natAdd k i).castAdd m)).val = 2 * i.val + 1 := by
+  have hval : ((Fin.natAdd k i).castAdd m : Fin ((k + k) + m)).val = k + i.val := rfl
+  have hleft : ¬ (((Fin.natAdd k i).castAdd m : Fin ((k + k) + m)).val < k) := by
+    rw [hval]
+    omega
+  have hright : ((Fin.natAdd k i).castAdd m : Fin ((k + k) + m)).val < k + k := by
+    rw [hval]
+    have := i.isLt
+    omega
+  unfold interleavedIndexFromCanonical
+  rw [dif_neg hleft, dif_pos hright]
+  show 2 * (((Fin.natAdd k i).castAdd m : Fin ((k + k) + m)).val - k) + 1 = 2 * i.val + 1
+  rw [hval]
+  omega
+
+/-- The canonical left coordinate of an extended paired-block assignment returns the
+assignment at the even position of that pair. -/
+theorem canonicalLeft_recordedCanonicalCoordinates_pairedBlockExtend {n k m : Nat}
+    (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hsize : n = (k + k) + m) (hk : pairs.length = k)
+    (hb : 2 * pairs.length ≤ n) (b : Fin (2 * pairs.length) → Bool) (i : Fin k) :
+    canonicalLeft (recordedCanonicalCoordinates (recordedCoordinateAt pairs hlen) hsize
+        (pairedBlockExtend pairs hlen hb b)) i
+      = b ⟨2 * i.val, by have := i.isLt; omega⟩ := by
+  have hbound : (2 * i.val) < n := by
+    have := i.isLt
+    omega
+  have hidx : (Fin.cast hsize.symm
+      (@interleavedIndexFromCanonical k m ((i.castAdd k).castAdd m)))
+      = (⟨2 * i.val, hbound⟩ : Fin n) := by
+    apply Fin.ext
+    show (@interleavedIndexFromCanonical k m ((i.castAdd k).castAdd m)).val = 2 * i.val
+    exact interleavedIndexFromCanonical_left_val i
+  show pairedBlockExtend pairs hlen hb b
+      (recordedCoordinateAt pairs hlen (Fin.cast hsize.symm
+        (@interleavedIndexFromCanonical k m ((i.castAdd k).castAdd m)))) = _
+  rw [hidx, ← recordedPairedPos_eq_recordedCoordinateAt pairs hlen hb
+    (⟨2 * i.val, hbound⟩ : Fin n) (by
+      show 2 * i.val < 2 * pairs.length
+      have := i.isLt
+      omega)]
+  exact pairedBlockExtend_apply pairs hd hp hlen hb b _
+
+/-- The canonical right coordinate of an extended paired-block assignment returns the
+assignment at the odd position of that pair. -/
+theorem canonicalRight_recordedCanonicalCoordinates_pairedBlockExtend {n k m : Nat}
+    (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hsize : n = (k + k) + m) (hk : pairs.length = k)
+    (hb : 2 * pairs.length ≤ n) (b : Fin (2 * pairs.length) → Bool) (i : Fin k) :
+    canonicalRight (recordedCanonicalCoordinates (recordedCoordinateAt pairs hlen) hsize
+        (pairedBlockExtend pairs hlen hb b)) i
+      = b ⟨2 * i.val + 1, by have := i.isLt; omega⟩ := by
+  have hbound : (2 * i.val + 1) < n := by
+    have := i.isLt
+    omega
+  have hidx : (Fin.cast hsize.symm
+      (@interleavedIndexFromCanonical k m ((Fin.natAdd k i).castAdd m)))
+      = (⟨2 * i.val + 1, hbound⟩ : Fin n) := by
+    apply Fin.ext
+    show (@interleavedIndexFromCanonical k m ((Fin.natAdd k i).castAdd m)).val
+      = 2 * i.val + 1
+    exact interleavedIndexFromCanonical_right_val i
+  show pairedBlockExtend pairs hlen hb b
+      (recordedCoordinateAt pairs hlen (Fin.cast hsize.symm
+        (@interleavedIndexFromCanonical k m ((Fin.natAdd k i).castAdd m)))) = _
+  rw [hidx, ← recordedPairedPos_eq_recordedCoordinateAt pairs hlen hb
+    (⟨2 * i.val + 1, hbound⟩ : Fin n) (by
+      show 2 * i.val + 1 < 2 * pairs.length
+      have := i.isLt
+      omega)]
+  exact pairedBlockExtend_apply pairs hd hp hlen hb b _
 end SectorSimulation
