@@ -1938,4 +1938,63 @@ theorem sourceWalshSum_support_value {n : Nat}
   · exact absurd rfl hne
   · congr 2
     omega
+
+/-- Executable inverse of an invertible binary matrix action, computed by binary
+elimination: run the CNOT sequence of the matrix's Gaussian row program. -/
+def gaussianInverseApply {n : Nat} (J : BinaryMatrix n) (y : BinaryVector n) : BinaryVector n :=
+  match gaussianRowProgram J with
+  | some ops => runCNOTs (rowProgramCNOTs ops) y
+  | none => y
+
+/-- Binary elimination computes a preimage: the executable inverse is a right inverse of
+an injective matrix action. -/
+theorem gaussianInverseApply_forward {n : Nat} (J : BinaryMatrix n)
+    (hinj : Function.Injective (matrixApply J)) (y : BinaryVector n) :
+    matrixApply J (gaussianInverseApply J y) = y := by
+  obtain ⟨ops, hops⟩ := gaussianRowProgram_exists_of_injective J hinj
+  simp only [gaussianInverseApply, hops]
+  exact matrixApply_inverse_forward J ops hops y
+
+/-- The executable inverse applies to the transpose of the polar-elimination matrix. -/
+theorem polarEliminate_transpose_inverseApply {n : Nat}
+    (B : BinaryVector n → BinaryVector n → Bool) (fuel : Nat) (indices : List (Fin n))
+    (y : BinaryVector n) :
+    matrixApply (transposeBinaryMatrix (polarEliminate B fuel indices identityMatrix).1)
+      (gaussianInverseApply (transposeBinaryMatrix
+        (polarEliminate B fuel indices identityMatrix).1) y) = y := by
+  apply gaussianInverseApply_forward
+  exact matrixApply_transpose_injective_of_surjective _
+    (polarEliminate_surjective B fuel indices)
+
+/-- The residual kernel element realizing a given paired-block target is computed by
+binary elimination, with no appeal to choice in its construction. -/
+theorem residualKernel_explicit_preimage {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (c : BinaryVector n)
+    (hc : ∀ j ∈ unpairedIndices (List.finRange n)
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2, c j = false) :
+    matrixApply (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)
+        (gaussianInverseApply (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) c) = c ∧
+      recordedResidualLinearPart
+        (recordedCoordinateAt
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+        hsize
+        (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)
+        (gaussianInverseApply (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) c)
+        = zeroVector := by
+  have hfwd := polarEliminate_transpose_inverseApply (phasePolar p) fuel (List.finRange n) c
+  refine ⟨hfwd, ?_⟩
+  rw [residualKernel_iff_transpose_unpaired_zero p fuel hlen m hsize]
+  intro j hj
+  rw [hfwd]
+  exact hc j hj
 end SectorSimulation

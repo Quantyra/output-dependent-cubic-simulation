@@ -2014,3 +2014,9 @@ import SectorSimulation
 #print axioms SectorSimulation.hyperbolicSignature_as_pairProducts
 #check SectorSimulation.sourceWalshSum_support_value
 #print axioms SectorSimulation.sourceWalshSum_support_value
+#check SectorSimulation.gaussianInverseApply_forward
+#print axioms SectorSimulation.gaussianInverseApply_forward
+#check SectorSimulation.polarEliminate_transpose_inverseApply
+#print axioms SectorSimulation.polarEliminate_transpose_inverseApply
+#check SectorSimulation.residualKernel_explicit_preimage
+#print axioms SectorSimulation.residualKernel_explicit_preimage
