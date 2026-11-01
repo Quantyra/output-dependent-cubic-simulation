@@ -847,6 +847,10 @@ EXPECTED = {
     'SectorSimulation.uniformMean_le_one': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.uniformMean_mem_unit': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.uniformSecondMoment_le_mean': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sum_sq_dev': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.uniformVariance_eq': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.uniformVariance_le_quarter': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.uniformMean_signedReadout': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

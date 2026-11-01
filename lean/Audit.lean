@@ -2190,3 +2190,11 @@ import SectorSimulation
 #print axioms SectorSimulation.uniformMean_mem_unit
 #check SectorSimulation.uniformSecondMoment_le_mean
 #print axioms SectorSimulation.uniformSecondMoment_le_mean
+#check SectorSimulation.sum_sq_dev
+#print axioms SectorSimulation.sum_sq_dev
+#check SectorSimulation.uniformVariance_eq
+#print axioms SectorSimulation.uniformVariance_eq
+#check SectorSimulation.uniformVariance_le_quarter
+#print axioms SectorSimulation.uniformVariance_le_quarter
+#check SectorSimulation.uniformMean_signedReadout
+#print axioms SectorSimulation.uniformMean_signedReadout

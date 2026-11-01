@@ -7,15 +7,16 @@ import Mathlib.Tactic.Ring
 import Mathlib.Tactic.FieldSimp
 
 /-!
-# The finite-draw probability model: mean, second moment and variance
+# The finite-draw probability model: mean, variance and the signed readout
 
 A draw variable is a real-valued function on a finite nonempty outcome type, and its mean is the
-uniform average. This module proves the elementary facts the estimator argument uses: the mean of
-a `[0,1]`-valued draw variable lies in `[0,1]`, its second moment is at most its mean, and its
-variance is at most one quarter.
+uniform average. This module proves the variance identity, the one-quarter variance bound for
+`[0,1]`-valued draw variables, and the mean and variance of the signed readout `Y = 2 Z - 1` that
+the manuscript's probability relation `p = (1 - E) / 2` uses.
 
-What is not here: the paper's equatorial draw variable `Y`, concentration inequalities, the median
-argument and the rounding step. This is the bounded-draw core, not the estimator theorem, and no
+What is not here: the paper's own equatorial draw variable, built from the sector states and the
+Clifford observable. Its expectation is not proved, and neither is any concentration, median or
+rounding step. This is the abstract bounded draw model, not the estimator theorem, and no
 published theorem is certified.
 -/
 
@@ -34,6 +35,9 @@ noncomputable def uniformVariance {α : Type} [Fintype α] (f : α → ℝ) : �
 /-- The second moment of a real-valued function on a finite outcome type. -/
 noncomputable def uniformSecondMoment {α : Type} [Fintype α] (f : α → ℝ) : ℝ :=
   uniformMean (fun a => (f a) ^ 2)
+
+/-- The signed readout `Y = 2 Z - 1` attached to a `[0,1]`-valued draw variable. -/
+noncomputable def signedReadout {α : Type} (f : α → ℝ) : α → ℝ := fun a => 2 * f a - 1
 
 variable {α : Type} [Fintype α] [Nonempty α]
 
@@ -69,5 +73,55 @@ theorem uniformSecondMoment_le_mean (f : α → ℝ) (hf : ∀ a, 0 ≤ f a ∧ 
   have h1 := (hf a).1
   have h2 := (hf a).2
   nlinarith
+
+/-- Expanding the squared deviation inside the finite sum. -/
+theorem sum_sq_dev (f : α → ℝ) :
+    (∑ a, (f a - uniformMean f) ^ 2)
+      = (∑ a, (f a) ^ 2) - 2 * (uniformMean f) * (∑ a, f a)
+        + (Fintype.card α : ℝ) * (uniformMean f) ^ 2 := by
+  have hpt : ∀ a : α, (f a - uniformMean f) ^ 2
+      = (f a) ^ 2 - 2 * (uniformMean f) * (f a) + (uniformMean f) ^ 2 := by
+    intro a
+    ring
+  rw [Finset.sum_congr rfl (fun a _ => hpt a), Finset.sum_add_distrib, Finset.sum_sub_distrib]
+  rw [← Finset.mul_sum]
+  rw [Finset.sum_const, Finset.card_univ, nsmul_eq_mul]
+
+/-- The variance is the second moment minus the square of the mean. -/
+theorem uniformVariance_eq (f : α → ℝ) :
+    uniformVariance f = uniformSecondMoment f - (uniformMean f) ^ 2 := by
+  have hC : (Fintype.card α : ℝ) ≠ 0 := ne_of_gt card_pos
+  unfold uniformVariance uniformSecondMoment uniformMean
+  have hnum : (∑ a, (f a - (∑ b, f b) / (Fintype.card α : ℝ)) ^ 2)
+      = (∑ a, (f a) ^ 2) - 2 * ((∑ b, f b) / (Fintype.card α : ℝ)) * (∑ a, f a)
+        + (Fintype.card α : ℝ) * ((∑ b, f b) / (Fintype.card α : ℝ)) ^ 2 := by
+    have h := sum_sq_dev f
+    simpa [uniformMean] using h
+  rw [hnum, add_div, sub_div]
+  have h2 : 2 * ((∑ b, f b) / (Fintype.card α : ℝ)) * (∑ a, f a) / (Fintype.card α : ℝ)
+      = 2 * (((∑ b, f b) / (Fintype.card α : ℝ)) * ((∑ a, f a) / (Fintype.card α : ℝ))) := by
+    field_simp
+  have h3 : (Fintype.card α : ℝ) * ((∑ b, f b) / (Fintype.card α : ℝ)) ^ 2
+        / (Fintype.card α : ℝ)
+      = ((∑ b, f b) / (Fintype.card α : ℝ)) ^ 2 := by
+    field_simp
+  rw [h2, h3]
+  ring
+
+/-- A `[0,1]`-valued draw variable has variance at most one quarter. -/
+theorem uniformVariance_le_quarter (f : α → ℝ) (hf : ∀ a, 0 ≤ f a ∧ f a ≤ 1) :
+    uniformVariance f ≤ 1 / 4 := by
+  rw [uniformVariance_eq]
+  have h2 := uniformSecondMoment_le_mean f hf
+  have hμ := uniformMean_mem_unit f hf
+  nlinarith [hμ.1, hμ.2, sq_nonneg (uniformMean f - 1 / 2)]
+
+/-- The signed readout has mean twice the mean less one. -/
+theorem uniformMean_signedReadout (f : α → ℝ) :
+    uniformMean (signedReadout f) = 2 * uniformMean f - 1 := by
+  unfold uniformMean signedReadout
+  rw [Finset.sum_sub_distrib, ← Finset.mul_sum, Finset.sum_const, Finset.card_univ, nsmul_eq_mul]
+  have hC : (Fintype.card α : ℝ) ≠ 0 := ne_of_gt card_pos
+  field_simp
 
 end SectorSimulation
