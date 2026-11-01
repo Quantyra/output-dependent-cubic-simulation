@@ -815,6 +815,11 @@ EXPECTED = {
     'SectorSimulation.vectorFoldlXor_apply': set(),
     'SectorSimulation.matrixApply_eq_vectorFoldlXor': {'propext', 'Quot.sound'},
     'SectorSimulation.supportBasisMatrix_column': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.matrixApply_eq_booleanListSum': set(),
+    'SectorSimulation.booleanListSum_and_left': set(),
+    'SectorSimulation.booleanListSum_and_right': set(),
+    'SectorSimulation.supportBasisMatrix_apply_column': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.transpose_supportBasisColumnN': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

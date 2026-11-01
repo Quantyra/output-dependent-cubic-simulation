@@ -2126,3 +2126,13 @@ import SectorSimulation
 #print axioms SectorSimulation.matrixApply_eq_vectorFoldlXor
 #check SectorSimulation.supportBasisMatrix_column
 #print axioms SectorSimulation.supportBasisMatrix_column
+#check SectorSimulation.matrixApply_eq_booleanListSum
+#print axioms SectorSimulation.matrixApply_eq_booleanListSum
+#check SectorSimulation.booleanListSum_and_left
+#print axioms SectorSimulation.booleanListSum_and_left
+#check SectorSimulation.booleanListSum_and_right
+#print axioms SectorSimulation.booleanListSum_and_right
+#check SectorSimulation.supportBasisMatrix_apply_column
+#print axioms SectorSimulation.supportBasisMatrix_apply_column
+#check SectorSimulation.transpose_supportBasisColumnN
+#print axioms SectorSimulation.transpose_supportBasisColumnN
