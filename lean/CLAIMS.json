@@ -10615,6 +10615,45 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-10cacb9-20261031/README.md",
       "unresolved_bridge": "With the left-block companion this closes the formalization side of the sign clause, but the paper's clause compares against its own support basis matrix and remains blocked on the rank identification, as do the rank-evenness, support-dimension and magnitude clauses."
+    },
+    {
+      "id": "source-walsh-interleaved-rowOperationCNOTs_length_le",
+      "section": "3",
+      "target": "SectorSimulation.rowOperationCNOTs_length_le",
+      "assumptions": "None.",
+      "quantifiers": "All finite dimensions and row operations.",
+      "statement": "A single row operation expands to at most three CNOT records.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-88d2260-20261031/README.md",
+      "unresolved_bridge": "A gate count for one operation, with no bit-width accounting."
+    },
+    {
+      "id": "source-walsh-interleaved-rowProgramCNOTs_length_le",
+      "section": "3",
+      "target": "SectorSimulation.rowProgramCNOTs_length_le",
+      "assumptions": "None.",
+      "quantifiers": "All finite dimensions and row programs.",
+      "statement": "A row program expands to at most three times its operation count many CNOT records.",
+      "dependencies": ["source-walsh-interleaved-rowOperationCNOTs_length_le"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-88d2260-20261031/README.md",
+      "unresolved_bridge": "An operation count only; the manuscript's cost model is in bit operations."
+    },
+    {
+      "id": "source-walsh-interleaved-gaussianInverseApply_gate_count_le",
+      "section": "3",
+      "target": "SectorSimulation.gaussianInverseApply_gate_count_le",
+      "assumptions": "The matrix has a Gaussian row program.",
+      "quantifiers": "All finite dimensions, square binary matrices and their row programs.",
+      "statement": "The CNOT sequence that binary elimination runs to invert a square binary matrix action has at most three times the dimension times the dimension plus one many gates.",
+      "dependencies": ["source-walsh-interleaved-rowProgramCNOTs_length_le"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-88d2260-20261031/README.md",
+      "unresolved_bridge": "The first certified cost statement for a computed object here, but not the bit-cost bound the paper's computability clause needs. lean/SEMANTICS.md requires a bit-operation cost trace across parsing and replay, elimination, substitution, enumeration, random draws, Gauss sums, arithmetic, accumulation and rounding, with source size, dimensions, precision and confidence tracked. This bounds one gate count for one step, with no bit-width accounting and no coverage of the others, and the support, origin and sign computations remain unbounded."
     }
   ],
   "paper_source": "manuscript/main.tex",
