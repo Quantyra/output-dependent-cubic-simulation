@@ -11569,9 +11569,77 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-489eb22-20261031/README.md",
       "unresolved_bridge": "The second stage refined from an executable computation, after elimination. It does not refine enumeration, random draws, Gauss sums, accumulation or rounding, and it does not prove the estimator accuracy statement."
+    },
+    {
+      "id": "source-walsh-draw-uniformMean_nonneg",
+      "section": "3",
+      "target": "SectorSimulation.uniformMean_nonneg",
+      "assumptions": "A finite nonempty outcome type and a nonnegative draw variable.",
+      "quantifiers": "All finite nonempty outcome types and nonnegative variables.",
+      "statement": "The uniform mean of a nonnegative draw variable is nonnegative.",
+      "dependencies": ["source-walsh-estimator-contract"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-e6061ba-20261031/README.md",
+      "unresolved_bridge": "An elementary mean fact. It carries no estimator claim."
+    },
+    {
+      "id": "source-walsh-draw-uniformMean_le_one",
+      "section": "3",
+      "target": "SectorSimulation.uniformMean_le_one",
+      "assumptions": "A finite nonempty outcome type and a draw variable bounded by one.",
+      "quantifiers": "All such types and variables.",
+      "statement": "The uniform mean of a draw variable bounded by one is at most one.",
+      "dependencies": ["source-walsh-estimator-contract"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-e6061ba-20261031/README.md",
+      "unresolved_bridge": "An elementary mean fact. It carries no estimator claim."
+    },
+    {
+      "id": "source-walsh-draw-uniformMean_mem_unit",
+      "section": "3",
+      "target": "SectorSimulation.uniformMean_mem_unit",
+      "assumptions": "A finite nonempty outcome type and a [0,1]-valued draw variable.",
+      "quantifiers": "All such types and variables.",
+      "statement": "A [0,1]-valued draw variable has mean in [0,1].",
+      "dependencies": ["source-walsh-draw-uniformMean_nonneg", "source-walsh-draw-uniformMean_le_one"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-e6061ba-20261031/README.md",
+      "unresolved_bridge": "The bounded-mean fact used by the variance argument. It does not prove any concentration statement."
+    },
+    {
+      "id": "source-walsh-draw-uniformSecondMoment_le_mean",
+      "section": "3",
+      "target": "SectorSimulation.uniformSecondMoment_le_mean",
+      "assumptions": "A finite nonempty outcome type and a [0,1]-valued draw variable.",
+      "quantifiers": "All such types and variables.",
+      "statement": "For a [0,1]-valued draw variable the second moment is at most its mean.",
+      "dependencies": ["source-walsh-draw-uniformMean_mem_unit"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-e6061ba-20261031/README.md",
+      "unresolved_bridge": "The step that yields the one-quarter variance bound. The variance identity itself and the one-quarter bound did not close in this attempt, so the variance statement is absent, and concentration over the independent groups, the median argument and the rounding step are all absent."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape; the cost entries charge every contract stage and now refine two of them, elimination and phase substitution, from executable computations. The remaining cost stages are specifications, the estimator accuracy and failure statements are unproved, and the paper literal D identification and sector structure remain open. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape; the cost entries charge every contract stage and refine two stages from executable computations; and the source-walsh-draw entries begin the finite-draw probability model with mean and second-moment facts. The variance identity, concentration, the median argument, the rounding step and the paper equatorial variable itself are unproved, so the estimator and moments labels remain uncovered, as do the paper literal D identification and the sector structure. Each helper's unresolved source and statement bridges remain explicit."
 }
