@@ -10680,9 +10680,125 @@
       "axioms": ["propext", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-ad6ea01-20261031/README.md",
       "unresolved_bridge": "Certifies the arithmetic step of the displayed bound only. It does not identify the family's output probability with the manuscript's value, which is the substance of the growing-family proposition and requires the output-probability semantics, the family's construction, its support and rank claims and its control count, none of which is certified. This is the only declaration touching that proposition, and it touches only the final inequality of its proof."
+    },
+    {
+      "id": "source-walsh-rank-vectorXor_eq_binaryShift",
+      "section": "2",
+      "target": "SectorSimulation.vectorXor_eq_binaryShift",
+      "assumptions": "Two binary vectors of the same dimension.",
+      "quantifiers": "All dimensions and all pairs of binary vectors.",
+      "statement": "The pointwise XOR of two binary vectors is the derivative shift applied with the arguments exchanged.",
+      "dependencies": ["boolean-polynomial-semantics"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-148d800-20261031/README.md",
+      "unresolved_bridge": "A transport identity between two existing notations for the same pointwise operation; it carries no manuscript claim of its own."
+    },
+    {
+      "id": "source-walsh-rank-phasePolar_add_left",
+      "section": "2",
+      "target": "SectorSimulation.phasePolar_add_left",
+      "assumptions": "The phase has degree at most two.",
+      "quantifiers": "All dimensions, all degree-at-most-two phases and all binary vectors.",
+      "statement": "The source polar form of a degree-at-most-two phase is additive in its first argument.",
+      "dependencies": ["source-walsh-rank-vectorXor_eq_binaryShift"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-148d800-20261031/README.md",
+      "unresolved_bridge": "Supplies the additivity that makes the polar form a linear map over the two-element field. It is an ingredient of the rank identification, not a manuscript statement."
+    },
+    {
+      "id": "source-walsh-rank-sourcePolarVector_zero",
+      "section": "2",
+      "target": "SectorSimulation.sourcePolarVector_zero",
+      "assumptions": "The phase has degree at most two.",
+      "quantifiers": "All dimensions and all degree-at-most-two phases.",
+      "statement": "The source polar form of a degree-at-most-two phase vanishes on the zero vector.",
+      "dependencies": ["source-walsh-rank-phasePolar_add_left"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-148d800-20261031/README.md",
+      "unresolved_bridge": "Supplies the zero law needed to make the transported polar form a linear map. No manuscript claim depends on it alone."
+    },
+    {
+      "id": "source-walsh-rank-sourcePolarImage_card_eq_two_pow",
+      "section": "2",
+      "target": "SectorSimulation.sourcePolarImage_card_eq_two_pow",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "The image of the source polar form has exactly two to the power of twice the recorded polar-elimination pair count many elements.",
+      "dependencies": ["source-walsh-interleaved-residualKernel_eq_sourcePolarImage", "source-walsh-interleaved-residualKernel_pairedBlock_bijective"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-148d800-20261031/README.md",
+      "unresolved_bridge": "The cardinality half of the manuscript rank identification. It counts the image through the formalization bijection onto the paired block; the paper states a rank rather than a cardinality, so this alone does not certify the rank clauses."
+    },
+    {
+      "id": "source-walsh-rank-polarLinearMap_range_card",
+      "section": "2",
+      "target": "SectorSimulation.polarLinearMap_range_card",
+      "assumptions": "The phase has degree at most two.",
+      "quantifiers": "All dimensions and all degree-at-most-two phases.",
+      "statement": "The range of the transported polar linear map over the two-element field has the cardinality of the polar image.",
+      "dependencies": ["source-walsh-rank-phasePolar_add_left", "source-walsh-rank-sourcePolarVector_zero"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-148d800-20261031/README.md",
+      "unresolved_bridge": "Transfers the counting from the formalization image to the module-theoretic range. It is the step that lets a cardinality be read as a finrank, and states nothing about the paper support basis."
+    },
+    {
+      "id": "source-walsh-rank-polarRank_eq_two_mul",
+      "section": "2",
+      "target": "SectorSimulation.polarRank_eq_two_mul",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "The module-theoretic rank over the two-element field of the transported source polar form equals twice the recorded polar-elimination pair count.",
+      "dependencies": ["source-walsh-rank-sourcePolarImage_card_eq_two_pow", "source-walsh-rank-polarLinearMap_range_card"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-148d800-20261031/README.md",
+      "unresolved_bridge": "This is the rank identification recorded as option 1 in lean/SEMANTICS.md, proved rather than assumed, so the paper rank is related to the formalization by a theorem and not by a definitional stance. It does not restate the Walsh lemma clauses in terms of that rank, does not relate the paired-block coordinates to the paper support basis matrix beyond the rank, and does not touch the computability clause cost trace."
+    },
+    {
+      "id": "source-walsh-rank-polarRank_even",
+      "section": "2",
+      "target": "SectorSimulation.polarRank_even",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels and residual dimensions satisfying those hypotheses.",
+      "statement": "The module-theoretic rank of the transported source polar form is even, with half-rank the recorded polar-elimination pair count.",
+      "dependencies": ["source-walsh-rank-polarRank_eq_two_mul"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-148d800-20261031/README.md",
+      "unresolved_bridge": "The evenness half of the manuscript rank clauses, in the formalization own terms. The support-dimension and magnitude clauses still have to be restated through this rank, and the paper support basis comparison remains to be built."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-rank entries identify the manuscript polar rank with twice the recorded pair count as a theorem about the module rank, but the Walsh lemma clauses are not yet restated through it. Each helper's unresolved source and statement bridges remain explicit."
 }
