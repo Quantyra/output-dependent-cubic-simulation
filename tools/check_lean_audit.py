@@ -820,6 +820,10 @@ EXPECTED = {
     'SectorSimulation.booleanListSum_and_right': set(),
     'SectorSimulation.supportBasisMatrix_apply_column': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.transpose_supportBasisColumnN': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.transpose_matrixApply_supportBasisMatrix_extend': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.matrixApply_supportBasisMatrix_extend': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.supportBasisMatrix_extend_annihilated': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_support_matrix': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
