@@ -10420,6 +10420,32 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-baf371d-20261031/README.md",
       "unresolved_bridge": "This is the shape of the correspondence, not the correspondence with the manuscript's transform. The manuscript forms its quadratic from the second-layer phase and the displacement obtained by inverting the pairing matrix on the output one-hot vector, and uses its own normalization and sign conventions. Fixing the displacement from the circuit, which the source output-derivative machinery supplies but which is not composed here, and checking the normalization convention remain outstanding. Until then the computability clause's subject is still not the computed object, and the magnitude, rank-evenness, support-dimension and quadratic-sign clauses remain blocked on the rank identification and the support-coordinate bridge."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_outputDerivative_eq_differenceTransform",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_outputDerivative_eq_differenceTransform",
+      "assumptions": "The descriptor's phases are cubic and its pairing action is surjective.",
+      "quantifiers": "All finite dimensions, cubic descriptors with surjective pairing and characters.",
+      "statement": "For a cubic descriptor with surjective pairing, the construction produces the displacement solving the pairing against the output unit together with a degree-at-most-two quadratic, and the formalized source Walsh sum of that quadratic equals the signed sum over the full binary basis of the second-layer phase difference along that displacement, taken against the character. The displacement is characterized by the pairing equation rather than quantified freely, so this is the circuit's own displacement.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_derivativeANF_eq_differenceTransform"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-b839295-20261031/README.md",
+      "unresolved_bridge": "Attaches the certified support, magnitude and sign results to the Walsh transform of the manuscript's output-dependent quadratic, before the manuscript's factor of two to the minus the dimension. The paper's Walsh lemma is still uncertified: the rank-evenness, support-dimension and magnitude clauses rest on the open rank identification in lean/SEMANTICS.md, the quadratic-sign clause on the support-coordinate bridge, and the computability clause on a bit-cost bound that lean/SEMANTICS.md requires and that is not proved."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_support_natAbs_mul_two_pow",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_support_natAbs_mul_two_pow",
+      "assumptions": "The source phase has degree at most two, the elimination fuel is at least the dimension, and the exact source Walsh value is nonzero.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, sufficient elimination fuel values and wire characters with nonzero exact source Walsh sum.",
+      "statement": "The magnitude of a nonzero exact source Walsh value times two to the recorded pair count equals two to the dimension, which expresses the normalized magnitude as exactly two to the minus the recorded pair count without introducing rationals.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_support_natAbs"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-b839295-20261031/README.md",
+      "unresolved_bridge": "Carries the manuscript's normalization factor multiplicatively, but the exponent is still the recorded pair count rather than half the polar form's rank, so the paper's magnitude clause remains blocked on the rank identification."
     }
   ],
   "paper_source": "manuscript/main.tex",
