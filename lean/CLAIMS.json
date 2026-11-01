@@ -10563,6 +10563,58 @@
       "axioms": ["propext", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-9e529c9-20261031/README.md",
       "unresolved_bridge": "Supplies the algebraic input for expressing the sign in the support coordinates. One formalization step remains: evaluating the canonical left and right blocks of a computed kernel element in terms of the paired-block assignment that produced it. Beyond that the paper's sign clause compares against its own support basis matrix, which needs the rank identification in lean/SEMANTICS.md."
+    },
+    {
+      "id": "source-walsh-interleaved-interleavedIndexFromCanonical_left_val",
+      "section": "3",
+      "target": "SectorSimulation.interleavedIndexFromCanonical_left_val",
+      "assumptions": "None.",
+      "quantifiers": "All pair and residual dimensions and pair indices.",
+      "statement": "The interleaved layout permutation sends a canonical left block index to twice the pair index.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-10cacb9-20261031/README.md",
+      "unresolved_bridge": "An index computation with no sector content."
+    },
+    {
+      "id": "source-walsh-interleaved-interleavedIndexFromCanonical_right_val",
+      "section": "3",
+      "target": "SectorSimulation.interleavedIndexFromCanonical_right_val",
+      "assumptions": "None.",
+      "quantifiers": "All pair and residual dimensions and pair indices.",
+      "statement": "The interleaved layout permutation sends a canonical right block index to twice the pair index plus one.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-10cacb9-20261031/README.md",
+      "unresolved_bridge": "An index computation with no sector content."
+    },
+    {
+      "id": "source-walsh-interleaved-canonicalLeft_recordedCanonicalCoordinates_pairedBlockExtend",
+      "section": "3",
+      "target": "SectorSimulation.canonicalLeft_recordedCanonicalCoordinates_pairedBlockExtend",
+      "assumptions": "The recorded pairs have distinct endpoints and are pairwise disjoint, the recorded coordinate order has full length, a dimension witness and paired-block bound are supplied, and the pair count matches the witness.",
+      "quantifiers": "All finite source, pair and residual dimensions, recorded pair lists, length proofs, dimension witnesses, bounds, paired-block assignments and pair indices.",
+      "statement": "The canonical left coordinate of an extended paired-block assignment returns that assignment at the even position of the corresponding pair.",
+      "dependencies": ["source-walsh-interleaved-interleavedIndexFromCanonical_left_val", "source-walsh-interleaved-pairedBlockExtend_apply", "source-walsh-interleaved-recordedPairedPos_eq_recordedCoordinateAt"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-10cacb9-20261031/README.md",
+      "unresolved_bridge": "Completes the formalization side of the sign clause when combined with the sign form and the canonical linearity, but quadraticity then holds in the formalization's support coordinates, not against the manuscript's support basis matrix, which needs the rank identification in lean/SEMANTICS.md."
+    },
+    {
+      "id": "source-walsh-interleaved-canonicalRight_recordedCanonicalCoordinates_pairedBlockExtend",
+      "section": "3",
+      "target": "SectorSimulation.canonicalRight_recordedCanonicalCoordinates_pairedBlockExtend",
+      "assumptions": "The recorded pairs have distinct endpoints and are pairwise disjoint, the recorded coordinate order has full length, a dimension witness and paired-block bound are supplied, and the pair count matches the witness.",
+      "quantifiers": "All finite source, pair and residual dimensions, recorded pair lists, length proofs, dimension witnesses, bounds, paired-block assignments and pair indices.",
+      "statement": "The canonical right coordinate of an extended paired-block assignment returns that assignment at the odd position of the corresponding pair.",
+      "dependencies": ["source-walsh-interleaved-interleavedIndexFromCanonical_right_val", "source-walsh-interleaved-pairedBlockExtend_apply", "source-walsh-interleaved-recordedPairedPos_eq_recordedCoordinateAt"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-10cacb9-20261031/README.md",
+      "unresolved_bridge": "With the left-block companion this closes the formalization side of the sign clause, but the paper's clause compares against its own support basis matrix and remains blocked on the rank identification, as do the rank-evenness, support-dimension and magnitude clauses."
     }
   ],
   "paper_source": "manuscript/main.tex",
