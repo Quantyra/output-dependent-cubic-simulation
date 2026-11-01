@@ -799,6 +799,10 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSupport_card_eq_two_pow_rank': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_support_natAbs_rank': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSupportSign_quadratic_rank': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.supportCoordinateEquiv': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_supportPoint_ne_zero': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_support_iff_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_supportPoint_natAbs': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

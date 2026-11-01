@@ -2094,3 +2094,11 @@ import SectorSimulation
 #print axioms SectorSimulation.sourceWalshSum_support_natAbs_rank
 #check SectorSimulation.sourceWalshSupportSign_quadratic_rank
 #print axioms SectorSimulation.sourceWalshSupportSign_quadratic_rank
+#check SectorSimulation.supportCoordinateEquiv
+#print axioms SectorSimulation.supportCoordinateEquiv
+#check SectorSimulation.sourceWalshSum_supportPoint_ne_zero
+#print axioms SectorSimulation.sourceWalshSum_supportPoint_ne_zero
+#check SectorSimulation.sourceWalshSum_support_iff_coordinates
+#print axioms SectorSimulation.sourceWalshSum_support_iff_coordinates
+#check SectorSimulation.sourceWalshSum_supportPoint_natAbs
+#print axioms SectorSimulation.sourceWalshSum_supportPoint_natAbs

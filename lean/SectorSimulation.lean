@@ -323,3 +323,4 @@ import SectorSimulation.InterleavedCharacter
 import SectorSimulation.InterleavedCanonicalSum
 import SectorSimulation.WalshRank
 import SectorSimulation.WalshClauses
+import SectorSimulation.WalshCoordinates
