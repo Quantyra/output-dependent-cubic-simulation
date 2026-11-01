@@ -10303,6 +10303,45 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-e524527-20261031/README.md",
       "unresolved_bridge": "The sign is expressed in the recorded interleaved coordinates produced by polar elimination, while the paper asserts quadraticity in coordinates on its own support parametrization; that coordinate bridge is unbuilt and is separate from the rank identification that blocks the magnitude, rank-evenness and support-dimension clauses. The computability clause and the correspondence between the formalized source Walsh sum and the paper's Walsh transform also remain open."
+    },
+    {
+      "id": "source-walsh-interleaved-gaussianInverseApply_forward",
+      "section": "3",
+      "target": "SectorSimulation.gaussianInverseApply_forward",
+      "assumptions": "The square binary matrix action is injective.",
+      "quantifiers": "All finite dimensions, square binary matrices with injective action and target vectors.",
+      "statement": "The executable inverse, defined as the CNOT sequence of the matrix's Gaussian row program, is a right inverse of an injective binary matrix action, so binary elimination computes preimages.",
+      "dependencies": ["source-walsh-interleaved-matrixApply_surjective_of_injective"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-f932679-20261031/README.md",
+      "unresolved_bridge": "Computes matrix preimages only; the support origin and the sign are not packaged as computations here."
+    },
+    {
+      "id": "source-walsh-interleaved-polarEliminate_transpose_inverseApply",
+      "section": "3",
+      "target": "SectorSimulation.polarEliminate_transpose_inverseApply",
+      "assumptions": "The polar elimination starts from the identity matrix.",
+      "quantifiers": "All finite dimensions, source polar forms, elimination fuel values, index lists and target vectors.",
+      "statement": "The executable inverse is a right inverse of the transpose of the polar-elimination matrix.",
+      "dependencies": ["source-walsh-interleaved-gaussianInverseApply_forward", "source-walsh-interleaved-polarEliminate_surjective"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-f932679-20261031/README.md",
+      "unresolved_bridge": "An instantiation of the executable inverse; it carries no sector, support-origin or cost statement."
+    },
+    {
+      "id": "source-walsh-interleaved-residualKernel_explicit_preimage",
+      "section": "3",
+      "target": "SectorSimulation.residualKernel_explicit_preimage",
+      "assumptions": "The recorded coordinate order has full length, a recorded dimension witness is supplied, and the target assignment vanishes on the unpaired block.",
+      "quantifiers": "All finite dimensions, source phases, elimination fuel values, recorded dimension witnesses and assignments vanishing on the unpaired block.",
+      "statement": "The residual kernel element realizing a given paired-block target is the value of the executable Gaussian inverse, so that element is computed by binary elimination rather than only shown to exist.",
+      "dependencies": ["source-walsh-interleaved-polarEliminate_transpose_inverseApply", "source-walsh-interleaved-residualKernel_iff_transpose_unpaired_zero"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-f932679-20261031/README.md",
+      "unresolved_bridge": "The paper's computability clause covers the support, its origin and the sign. Only kernel preimages are computed here. The support origin additionally requires solving against the residual offset, whose current construction routes through coordinateInverse of the recorded coordinate map, obtained from a surjectivity proof rather than computed; an executable inverse of that permutation is admitted by the recorded order but not yet built. The sign is a closed expression in computable terms but is not packaged as a computation with a correctness statement."
     }
   ],
   "paper_source": "manuscript/main.tex",
