@@ -1872,4 +1872,25 @@ theorem residualKernel_pairedBlock_bijective {n : Nat}
   · intro b
     obtain ⟨l, hl, _⟩ := residualKernel_paired_block_bijection p fuel hdegree hlen m hsize hb b
     exact ⟨⟨l, hl.1⟩, funext hl.2⟩
+
+/-- Every nonzero exact source Walsh value has magnitude exactly two to the power of the
+dimension less the recorded pair count. Since the recorded pair count is half the paired
+block size, this is the normalized magnitude of the manuscript's Walsh lemma expressed in
+the formalization's own terms. -/
+theorem sourceWalshSum_support_natAbs {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hne : sourceWalshSum p l ≠ 0) :
+    Int.natAbs (sourceWalshSum p l) = 2 ^ (n -
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) := by
+  obtain ⟨hlen, m, hsize, habs⟩ :=
+    sourceWalshSum_recorded_interleaved_cast_naturalAbs p l fuel hdegree hbound
+  have hnz : Int.natAbs (sourceWalshSum p l) ≠ 0 := by
+    intro h
+    exact hne (Int.natAbs_eq_zero.mp h)
+  rw [habs] at hnz ⊢
+  split_ifs at hnz ⊢ with hcond
+  · exact absurd rfl hnz
+  · congr 1
+    omega
 end SectorSimulation

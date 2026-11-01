@@ -2008,3 +2008,5 @@ import SectorSimulation
 #print axioms SectorSimulation.recordedPairedPos_eq_recordedCoordinateAt
 #check SectorSimulation.residualKernel_pairedBlock_bijective
 #print axioms SectorSimulation.residualKernel_pairedBlock_bijective
+#check SectorSimulation.sourceWalshSum_support_natAbs
+#print axioms SectorSimulation.sourceWalshSum_support_natAbs
