@@ -2198,3 +2198,7 @@ import SectorSimulation
 #print axioms SectorSimulation.uniformVariance_le_quarter
 #check SectorSimulation.uniformMean_signedReadout
 #print axioms SectorSimulation.uniformMean_signedReadout
+#check SectorSimulation.markov_count
+#print axioms SectorSimulation.markov_count
+#check SectorSimulation.markov_prob
+#print axioms SectorSimulation.markov_prob
