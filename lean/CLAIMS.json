@@ -10381,6 +10381,32 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-4aa343d-20261031/README.md",
       "unresolved_bridge": "With the executable Gaussian inverse this supplies the ingredients for a computed support origin, but that origin is not assembled and the paper's computability clause remains uncertified, as does the sign as a checked computation."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedResidualPreimage_correct",
+      "section": "3",
+      "target": "SectorSimulation.recordedResidualPreimage_correct",
+      "assumptions": "The recorded pairs have distinct endpoints and are pairwise disjoint, the recorded coordinate order has full length, a dimension witness is supplied, and the matrix action is injective.",
+      "quantifiers": "All finite source, pair and residual dimensions, recorded pair lists, length proofs, dimension witnesses, injective binary matrices and residual targets.",
+      "statement": "The computed preimage, built from the canonical radical placement, the interleaved layout, the computed coordinate inverse and the executable Gaussian inverse, has the given residual target as its residual projection.",
+      "dependencies": ["source-walsh-interleaved-gaussianInverseApply_forward", "source-walsh-interleaved-coordinateReindex_recordedCoordinateInverse"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-038f5dc-20261031/README.md",
+      "unresolved_bridge": "Produces residual preimages by computation, but is not attached to the manuscript's own support objects and carries no bit-cost bound, both of which the paper's computability clause needs."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_support_value_as_sign",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_support_value_as_sign",
+      "assumptions": "The source phase has degree at most two, the elimination fuel is at least the dimension, and the exact source Walsh value is nonzero.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, sufficient elimination fuel values and wire characters with nonzero exact source Walsh sum.",
+      "statement": "A nonzero exact source Walsh coefficient equals a fixed power of two times the integer Walsh sign of a named computed sign function of the source, the recorded pairs and the wire character.",
+      "dependencies": ["source-walsh-interleaved-sourceWalshSum_support_value"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-038f5dc-20261031/README.md",
+      "unresolved_bridge": "Packages the sign as a computation with a correctness statement, but the paper's computability clause also requires attachment to the manuscript's own support parametrization and a bit-cost bound, and the quadratic-sign clause still needs the support-coordinate bridge."
     }
   ],
   "paper_source": "manuscript/main.tex",
