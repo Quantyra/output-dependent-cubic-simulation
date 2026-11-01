@@ -2129,4 +2129,50 @@ theorem sourceWalshSum_derivativeANF_eq_differenceTransform {n : Nat} (p : Phase
   apply congrArg integerWalshSign
   rw [hqeval x]
   simp [booleanDerivative, Bool.xor_assoc]
+
+/-- Transform correspondence for the circuit's own displacement. For a cubic descriptor
+with surjective pairing, the construction produces the displacement solving the pairing
+against the output unit together with a degree-at-most-two quadratic, and the formalized
+source Walsh sum of that quadratic is the signed sum over the full binary basis of the
+second-layer phase difference along that displacement, taken against the character. This
+is the manuscript's Walsh transform of its output-dependent quadratic, before the
+manuscript's factor of two to the minus the dimension. -/
+theorem sourceWalshSum_outputDerivative_eq_differenceTransform {n : Nat}
+    (d : CircuitDescriptor n) (hcubic : phasesAreCubic d = true)
+    (hsurj : ∀ target, ∃ v, matrixApply d.pairing v = target) (l : BinaryVector n) :
+    ∃ j q, sourceOutputDerivativeExhaustive d = some (j, q) ∧
+      matrixApply d.pairing j = outputUnit d ∧
+      phaseWithinDegree 2 q = true ∧
+      sourceWalshSum q l =
+        ((binaryBasis n).map (fun x => integerWalshSign
+          (Bool.xor (Bool.xor (evalPhase d.secondPhase x)
+            (evalPhase d.secondPhase (binaryShift j x)))
+            (walshWireParity (List.finRange n) l x)))).sum := by
+  obtain ⟨j, q, hsome, hmatrix, hqdeg, _, hqeval⟩ :=
+    sourceOutputDerivativeExhaustive_correct d hcubic hsurj
+  refine ⟨j, q, hsome, hmatrix, hqdeg, ?_⟩
+  unfold sourceWalshSum
+  apply congrArg List.sum
+  apply List.map_congr_left
+  intro x _
+  apply congrArg integerWalshSign
+  rw [hqeval x]
+  simp [secondPhaseDerivative, booleanDerivative, Bool.xor_assoc]
+
+/-- The normalized magnitude, stated without rationals: the magnitude of a nonzero exact
+source Walsh value times two to the recorded pair count is two to the dimension. Dividing
+by two to the dimension, this says the normalized magnitude is exactly two to the minus
+the recorded pair count. -/
+theorem sourceWalshSum_support_natAbs_mul_two_pow {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hne : sourceWalshSum p l ≠ 0) :
+    Int.natAbs (sourceWalshSum p l) *
+      2 ^ (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length
+      = 2 ^ n := by
+  obtain ⟨hlen, m, hsize, _⟩ :=
+    sourceWalshSum_recorded_interleaved_cast_naturalAbs p l fuel hdegree hbound
+  rw [sourceWalshSum_support_natAbs p l fuel hdegree hbound hne, ← Nat.pow_add]
+  congr 1
+  omega
 end SectorSimulation
