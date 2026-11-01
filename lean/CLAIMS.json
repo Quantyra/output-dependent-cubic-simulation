@@ -10472,6 +10472,45 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-6e62752-20261031/README.md",
       "unresolved_bridge": "Fixes the coordinate system in which the sign clause's quadraticity must be expressed, which was the missing prerequisite for the support-coordinate bridge, but does not express the sign in those coordinates. The parametrization is by the formalization's paired block indexed through the recorded coordinate order, while the manuscript uses a basis matrix for its own support space; relating them needs the rank identification in lean/SEMANTICS.md. The rank-evenness, support-dimension and magnitude clauses remain blocked on that identification, and the computability clause on an unproved bit-cost bound."
+    },
+    {
+      "id": "source-walsh-interleaved-pairCoefficientsXor_replicate_false",
+      "section": "3",
+      "target": "SectorSimulation.pairCoefficientsXor_replicate_false",
+      "assumptions": "The pair-coefficient list has the stated length.",
+      "quantifiers": "All lengths and pair-coefficient lists of that length.",
+      "statement": "Xoring a pair-coefficient list with the all-false list of the same length is the identity, the pair analogue of the radical coefficient law.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-4b08afc-20261031/README.md",
+      "unresolved_bridge": "A list identity used to simplify the recorded sign; it has no sector or cost content."
+    },
+    {
+      "id": "source-walsh-interleaved-hyperbolicSignature_vectorPairAssignment",
+      "section": "3",
+      "target": "SectorSimulation.hyperbolicSignature_vectorPairAssignment",
+      "assumptions": "None.",
+      "quantifiers": "All finite dimensions and pairs of coordinate vectors.",
+      "statement": "The hyperbolic signature of a coordinate pair assignment is the parity of the coordinatewise products, an explicit quadratic form in those coordinates. The declaration depends on no axioms.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [],
+      "build_audit_receipt": "lean/evidence/gcp/sector-4b08afc-20261031/README.md",
+      "unresolved_bridge": "Evaluates the signature only; attaching it to the source sign is done separately."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSupportSign_as_quadratic",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSupportSign_as_quadratic",
+      "assumptions": "The recorded coordinate order has full length, a dimension witness is supplied, and the pair count matches the witness.",
+      "quantifiers": "All finite source, pair and residual dimensions, source phases, recorded pair lists, length proofs, dimension witnesses, binary matrices and characters.",
+      "statement": "The support sign is the recorded constant xored with the parity of the products of the canonical left and right coordinates of the transformed character, so it is an explicit quadratic form: a constant plus a sum of products of pairs of coordinates.",
+      "dependencies": ["source-walsh-interleaved-pairCoefficientsXor_replicate_false", "source-walsh-interleaved-hyperbolicSignature_vectorPairAssignment", "source-walsh-interleaved-sourceWalshSum_support_value_as_sign"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-4b08afc-20261031/README.md",
+      "unresolved_bridge": "This is the quadraticity the paper's sign clause describes, in the formalization's own coordinates, but the clause is not certified. The form is in the canonical left and right coordinates of the transformed character while the support parametrization is by paired-block assignments; both are natural and related by the interleaved layout, but the composition expressing this form directly in the support coordinates is unproved. The paper states quadraticity against its own support basis matrix, which needs the rank identification in lean/SEMANTICS.md to relate to either coordinate system."
     }
   ],
   "paper_source": "manuscript/main.tex",
