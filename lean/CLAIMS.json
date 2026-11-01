@@ -11637,9 +11637,77 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-e6061ba-20261031/README.md",
       "unresolved_bridge": "The step that yields the one-quarter variance bound. The variance identity itself and the one-quarter bound did not close in this attempt, so the variance statement is absent, and concentration over the independent groups, the median argument and the rounding step are all absent."
+    },
+    {
+      "id": "source-walsh-draw-sum_sq_dev",
+      "section": "3",
+      "target": "SectorSimulation.sum_sq_dev",
+      "assumptions": "A finite nonempty outcome type and a real-valued draw variable.",
+      "quantifiers": "All such types and variables.",
+      "statement": "The finite sum of squared deviations from the mean expands into the second-moment sum, less twice the mean times the total, plus the count times the squared mean.",
+      "dependencies": ["source-walsh-draw-uniformMean_mem_unit"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-59fd107-20261031/README.md",
+      "unresolved_bridge": "The expansion step of the variance identity. It is a finite-sum identity, not a probabilistic statement."
+    },
+    {
+      "id": "source-walsh-draw-uniformVariance_eq",
+      "section": "3",
+      "target": "SectorSimulation.uniformVariance_eq",
+      "assumptions": "A finite nonempty outcome type and a real-valued draw variable.",
+      "quantifiers": "All such types and variables.",
+      "statement": "The uniform variance equals the second moment minus the square of the mean.",
+      "dependencies": ["source-walsh-draw-sum_sq_dev"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-59fd107-20261031/README.md",
+      "unresolved_bridge": "The variance identity for the abstract draw model. The paper equatorial variable is not defined, so this does not give its variance."
+    },
+    {
+      "id": "source-walsh-draw-uniformVariance_le_quarter",
+      "section": "3",
+      "target": "SectorSimulation.uniformVariance_le_quarter",
+      "assumptions": "A finite nonempty outcome type and a [0,1]-valued draw variable.",
+      "quantifiers": "All such types and variables.",
+      "statement": "A [0,1]-valued draw variable has variance at most one quarter.",
+      "dependencies": ["source-walsh-draw-uniformVariance_eq", "source-walsh-draw-uniformSecondMoment_le_mean", "source-walsh-draw-uniformMean_mem_unit"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-59fd107-20261031/README.md",
+      "unresolved_bridge": "The classical one-quarter bound for the abstract model. A variance bound alone gives no accuracy or failure statement: concentration, the median argument and rounding are absent."
+    },
+    {
+      "id": "source-walsh-draw-uniformMean_signedReadout",
+      "section": "3",
+      "target": "SectorSimulation.uniformMean_signedReadout",
+      "assumptions": "A finite nonempty outcome type and a real-valued draw variable.",
+      "quantifiers": "All such types and variables.",
+      "statement": "The signed readout Y = 2Z - 1 has mean twice the mean of Z less one, the form of the manuscript relation p = (1 - E)/2.",
+      "dependencies": ["source-walsh-draw-uniformVariance_eq"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-59fd107-20261031/README.md",
+      "unresolved_bridge": "The affine relation between the readout and the probability. It does not prove E[Y] = 1 - 2p for the paper variable, which is not defined, and does not prove the variance of Y."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape; the cost entries charge every contract stage and refine two stages from executable computations; and the source-walsh-draw entries begin the finite-draw probability model with mean and second-moment facts. The variance identity, concentration, the median argument, the rounding step and the paper equatorial variable itself are unproved, so the estimator and moments labels remain uncovered, as do the paper literal D identification and the sector structure. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape; the cost entries charge every contract stage and refine two stages from executable computations; and the source-walsh-draw entries now include the variance identity, the one-quarter bound and the signed readout mean. The paper equatorial draw variable and its expectation, concentration, the median argument and the rounding step remain unproved, so the estimator and moments labels stay uncovered, as do the paper literal D identification and the sector structure. Each helper's unresolved source and statement bridges remain explicit."
 }
