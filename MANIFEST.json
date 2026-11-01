@@ -79,13 +79,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 82811,
-      "sha256": "16e6eaa1497698321eefa3556156aa3d7c64ce7b895af3748934cdb3739ee97b"
+      "bytes": 83079,
+      "sha256": "c2a74cbad9afb1819fccc7f4e461546c712c59dc36174eb0ce309e5fe08a2e19"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 580151,
-      "sha256": "0f8a33209223c0893fd96234f08863d5b8976846aa7b78859f1ed879139cb49a"
+      "bytes": 582796,
+      "sha256": "4d7c6c4b712b16db5bb716e957dc673b1c94a39fa46d5ba53f47e86a54af38da"
     },
     {
       "path": "lean/evidence/anf-derivative-audit.md",
@@ -1838,6 +1838,61 @@
       "sha256": "5cafe672f6c88d60bb864ff5f8f84ed6ac180472c3bed43e047109515bbd3728"
     },
     {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/audit.log",
+      "bytes": 377289,
+      "sha256": "7ee4c0dd02e462dba2b10a57aa5ca75ec449bf0567de429a11f189ed3b5d24ba"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/build.log",
+      "bytes": 36271,
+      "sha256": "d300b6059536c287abc04ac55fa567312758f60bc8209f9a739b20a703f98383"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/checker.log",
+      "bytes": 76,
+      "sha256": "4e25cf165e718de3d67cca6c5f099fed94f149d11181685a42abb0b34a6d83cb"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/COMPONENTS.sha256",
+      "bytes": 563,
+      "sha256": "2a92624f4abed15e5e6df128b1d9b2d0e234a8ab5a4fd812c39136687a4b6e20"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/lean-version.txt",
+      "bytes": 106,
+      "sha256": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/manifest.sha256",
+      "bytes": 85,
+      "sha256": "269e20db02de18443f26e9c41c784aaeead808141bb36542375b5bf9c8f5353e"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/README.md",
+      "bytes": 3002,
+      "sha256": "9aa2c2d6439887b6377e78024f2a91ab7d18955831bdedec519d8b6b8498b70c"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/sector-bc2b0ac-evidence.tar.gz",
+      "bytes": 226384,
+      "sha256": "9677e94a568a1c3de11849ab118211a31e29bfba9b51e2f0a01b0b51cafc1c65"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/sector-bc2b0ac-evidence.tar.gz.sha256",
+      "bytes": 97,
+      "sha256": "a1c5def40790beea2330685791a9660c46e5ef68b5912a6f8d29a47f09d557ce"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/sector-bc2b0ac-source.tar",
+      "bytes": 1536000,
+      "sha256": "b1f5596b19ec0ee03f57f3b484f895e088eecca4239ffb0846a38e025edb2529"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-bc2b0ac-20261031/sector-bc2b0ac-source.tar.sha256",
+      "bytes": 92,
+      "sha256": "819af64f3fd236bffb2016b5ee1de193210cd638a792578141fd202893e3b0b5"
+    },
+    {
       "path": "lean/evidence/gcp/sector-c93b120-20261031/audit.log",
       "bytes": 370581,
       "sha256": "79a7bd882b958de6a91e75531cce2bf157e4dba6cb487e4be28ba80e7a53bf2d"
@@ -2959,8 +3014,8 @@
     },
     {
       "path": "lean/SectorSimulation/InterleavedCanonicalSum.lean",
-      "bytes": 92568,
-      "sha256": "3a4bf683ef577780fbb88178583ccd7eabcca9afb1c936d945e418aa96c4c76f"
+      "bytes": 94922,
+      "sha256": "a1e582f3f98e8e4ccc78649d47d1f893bcb5c50681d72040901787af4baa3b1f"
     },
     {
       "path": "lean/SectorSimulation/InterleavedCharacter.lean",
@@ -3549,8 +3604,8 @@
     },
     {
       "path": "lean/SEMANTICS.md",
-      "bytes": 5753,
-      "sha256": "d8a95f133fa064f1b4d862776aad88eaa83124dffdebcc263fcd1ee814d225a6"
+      "bytes": 7516,
+      "sha256": "8545c0fa5c23f588e7d6e35d515e471c30df902be53e9627daf7e7da50b7c9b9"
     },
     {
       "path": "lean/SourceExamples.lean",
@@ -3629,8 +3684,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 23012,
-      "sha256": "ce4e3573d6b7f7bcdc204a057ba82a5bb1334a4af770a59c2681af2798031925"
+      "bytes": 24194,
+      "sha256": "fe7d2f92eafe542d6a64141db23db87e0b73043509af29008cfc008f417484ca"
     },
     {
       "path": "REPRODUCING.md",
@@ -3989,8 +4044,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 64651,
-      "sha256": "241d644f70bbd578436da6ddcbc61f12d950a7260126fed3cf45b5126673f1f5"
+      "bytes": 64852,
+      "sha256": "e3d4fa07716780d723438edba7927cee8bffda2ea24582a0d5f393b9f85f1325"
     },
     {
       "path": "tools/check_metadata.py",

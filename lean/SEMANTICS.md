@@ -31,3 +31,16 @@ The readout uses `L = 32*4^b`, `K = 2h+3`, and `N = LK` independent joint draws 
 Give executable small-step or otherwise justified operational semantics over finite encodings and a cost trace for parsing/replay, elimination, tensor and phase substitution, candidate enumeration, random-bit draws, real quadratic Gauss sums, integer arithmetic, accumulation and rounding. Track source size `B`, dimensions `n,r`, cap `q`, precision `b`, confidence `h`, sample count, peak storage and bit widths. Prove the paper's conservative displayed upper bounds for every random tape and the exact shortcut; state any machine-model conversion. Big-O notation without a verified bound connecting these operations to source-level algorithms does not close the resource theorem.
 
 The intended trusted axiom baseline is `propext`, `Classical.choice`, `Quot.sound`; `sorryAx`, additional project axioms and native-evaluation trust are not accepted as a proof. Inspect elaborated declarations and `#print axioms` transitively. A finite sample check, successful build, DOI, or proof of a helper alone is not manuscript certification. Formal equivalence to Python execution requires a separate refinement bridge and is not presently asserted.
+
+## Rank of the polar form: open modelling decision
+
+The sector construction above speaks of the even rank `r` of the alternating polar form and of an affine support of dimension `r`. The formalization has reached the point where this wording must be pinned down, and it is not yet pinned down.
+
+What is proved is that the kernel of the residual linear-character projection equals the image of the source quadratic polar form, and that this image admits a bijection onto assignments on a block of twice the recorded polar-elimination pair count. The size of that block is expressed through the recorded pair list.
+
+Binary vectors here are plain functions from `Fin n` to `Bool`, with no module structure over the two-element field and so no `Module.rank`. Two routes can close the gap, and they are not equivalent in what they assert:
+
+1. Introduce the module structure and prove the paper's `r` equals `Module.rank` of the polar form, then relate that to the bijection. This is a theorem and would discharge the clause outright.
+2. Define `r` as the binary logarithm of the image cardinality, which for a linear map over the two-element field agrees with the usual rank. This is cheaper, but adopting it is a definitional stance about what the manuscript's `r` denotes, not a proof of the manuscript's claim.
+
+Until one route is carried out, the rank-evenness and support-dimension clauses of the paper's Walsh lemma are to be recorded as uncertified, and the claim inventory must not mark them or that lemma as proved. If route 2 is taken, the stance must be stated here and in the inventory entry rather than presented as a proof, because a reader comparing the Lean statement with the paper is entitled to know that the identification of `r` is definitional.

@@ -10238,6 +10238,32 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-13348ec-20261031/README.md",
       "unresolved_bridge": "This closes the chosen cardinality parametrization, but the paper's rank-evenness and support-dimension clauses remain uncertified: the bijection is with an index block sized through the recorded pair list, while the paper's rank is that of the bilinear polar form, and binary vectors here carry no module, rank or dimension structure. Tying the two is an unbuilt statement bridge, and the magnitude, quadratic sign and computability clauses plus the source-Walsh-to-paper-transform correspondence are also open."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedPairedPos_eq_recordedCoordinateAt",
+      "section": "3",
+      "target": "SectorSimulation.recordedPairedPos_eq_recordedCoordinateAt",
+      "assumptions": "The recorded coordinate order has full length, twice the pair count is within the dimension, and the position is below twice the pair count.",
+      "quantifiers": "All finite dimensions, recorded pair lists, length proofs, bounds and recorded positions below twice the pair count.",
+      "statement": "The paired-block enumeration agrees with the recorded coordinate map at the same position.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-bc2b0ac-20261031/README.md",
+      "unresolved_bridge": "An indexing reconciliation used to compose earlier results; it has no rank or sector content."
+    },
+    {
+      "id": "source-walsh-interleaved-residualKernel_pairedBlock_bijective",
+      "section": "3",
+      "target": "SectorSimulation.residualKernel_pairedBlock_bijective",
+      "assumptions": "The source phase has degree at most two, the recorded coordinate order has full length, a recorded dimension witness is supplied, and twice the pair count is within the dimension.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, elimination fuel values, recorded dimension witnesses and bounds.",
+      "statement": "The map sending a residual kernel element to the values of its transformed character on the paired block is a bijection onto assignments on that block, packaging the closed parametrization as one statement.",
+      "dependencies": ["source-walsh-interleaved-residualKernel_paired_block_bijection", "source-walsh-interleaved-residualKernel_determined_by_paired_coordinates", "source-walsh-interleaved-recordedPairedPos_eq_recordedCoordinateAt"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-bc2b0ac-20261031/README.md",
+      "unresolved_bridge": "A restatement for composition, not new mathematics. The paper's rank-evenness and support-dimension clauses stay uncertified: the bijection is onto an index block sized through the recorded pair list, the paper's rank is that of the alternating polar form, and binary vectors here have no module structure or Module.rank. The open modelling decision and why its two routes assert different things are recorded in lean/SEMANTICS.md under 'Rank of the polar form: open modelling decision'."
     }
   ],
   "paper_source": "manuscript/main.tex",

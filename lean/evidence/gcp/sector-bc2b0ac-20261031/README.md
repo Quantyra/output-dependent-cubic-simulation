@@ -1,0 +1,15 @@
+# GCP certification evidence: the kernel paired-block correspondence as a bijection
+
+Source/audit commit: `bc2b0ac3070c6edd1122e51c1416af79fdc1bb33`.
+
+The exact Lean source archive is `sector-bc2b0ac-source.tar` (SHA-256 `b1f5596b19ec0ee03f57f3b484f895e088eecca4239ffb0846a38e025edb2529`, 1,536,000 bytes). It contains tracked Lean sources and the exact audit checker, excluding prior evidence archives; its hash was checked on the dedicated builder.
+
+The dedicated Google Cloud builder `quantyra-sector-lean-builder-02` used Lean 4.30.0, commit `d024af099ca4bf2c86f649261ebf59565dc8c622`, and pinned Lake manifest SHA-256 `ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642`. Full `lake build` completed (2,175 jobs). Integrated `Audit.lean` and the exact expected-axiom checker passed.
+
+Two declarations are recorded here. `recordedPairedPos_eq_recordedCoordinateAt` reconciles the paired-block enumeration with the recorded coordinate map at the same position. `residualKernel_pairedBlock_bijective` states the closed parametrization as a single `Function.Bijective` fact: the map sending a residual kernel element to the values of its transformed character on the paired block is a bijection onto assignments on that block. Injectivity is the determination result and surjectivity is the extension result, both certified earlier. Both declarations use `propext` and `Quot.sound`, with the bijection also using `Classical.choice`. No declaration depends on `sorryAx`.
+
+This is a restatement for use, not new mathematics: it packages the uniqueness family from `13348ec` as one bijection so later work can compose it directly.
+
+The manuscript's rank-evenness and support-dimension clauses remain uncertified, and this evidence does not certify them. The bijection is onto assignments on an index block whose size is expressed through the recorded pair list, while the paper's `r` is the rank of the alternating polar form. Binary vectors in this formalization are plain functions into `Bool` with no module structure and so no `Module.rank`. The open modelling decision, and the reason the two available routes are not equivalent in what they assert, is now recorded in `lean/SEMANTICS.md` under "Rank of the polar form: open modelling decision". Until one route is carried out those clauses stay uncertified.
+
+The remaining clauses of the lemma are untouched: the normalized magnitude two to the minus half the rank, the quadratic sign on the support, and computability of the support, its origin and that sign by binary elimination. The correspondence between the formalized source Walsh sum and the manuscript's Walsh transform of the output-dependent quadratic is also not established. The normalized sector identity and denominator, matched-sector boundedness, complete costs and every labeled paper theorem remain uncertified. These are helper results; no published manuscript theorem is certified here, and nothing here establishes quantum advantage or a complexity consequence.
