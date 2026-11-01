@@ -1992,3 +1992,15 @@ import SectorSimulation
 #print axioms SectorSimulation.recordedIndex_paired_or_unpaired
 #check SectorSimulation.residualKernel_determined_by_paired_coordinates
 #print axioms SectorSimulation.residualKernel_determined_by_paired_coordinates
+#check SectorSimulation.recordedPairedPos_injective
+#print axioms SectorSimulation.recordedPairedPos_injective
+#check SectorSimulation.recordedPairedPos_not_mem_unpaired
+#print axioms SectorSimulation.recordedPairedPos_not_mem_unpaired
+#check SectorSimulation.booleanListSum_const_false
+#print axioms SectorSimulation.booleanListSum_const_false
+#check SectorSimulation.pairedBlockExtend_apply
+#print axioms SectorSimulation.pairedBlockExtend_apply
+#check SectorSimulation.pairedBlockExtend_unpaired
+#print axioms SectorSimulation.pairedBlockExtend_unpaired
+#check SectorSimulation.residualKernel_paired_block_bijection
+#print axioms SectorSimulation.residualKernel_paired_block_bijection

@@ -1680,4 +1680,149 @@ theorem residualKernel_determined_by_paired_coordinates {n : Nat}
   · rw [← htj]
     exact hagree t htlt
   · rw [hzl j hju, hzl' j hju]
+
+/-- The recorded position of the `i`-th paired coordinate. -/
+def recordedPairedPos {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hb : 2 * pairs.length ≤ n) (i : Fin (2 * pairs.length)) : Fin n :=
+  recordedCoordinateAt pairs hlen ⟨i.val, by have := i.isLt; omega⟩
+
+theorem recordedPairedPos_injective {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hb : 2 * pairs.length ≤ n) :
+    Function.Injective (recordedPairedPos pairs hlen hb) := by
+  intro i j hij
+  have hinj := (recordedCoordinateAt_bijective pairs hd hp).1
+  have heq := hinj hij
+  have hval : i.val = j.val := by
+    have hc := congrArg Fin.val heq
+    simpa using hc
+  exact Fin.ext hval
+
+theorem recordedPairedPos_not_mem_unpaired {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hb : 2 * pairs.length ≤ n) (i : Fin (2 * pairs.length)) :
+    recordedPairedPos pairs hlen hb i ∉ unpairedIndices (List.finRange n) pairs := by
+  apply recordedCoordinateAt_not_mem_unpaired
+  show i.val < 2 * pairs.length
+  exact i.isLt
+
+theorem booleanListSum_const_false {α : Type} (xs : List α) :
+    booleanListSum xs (fun _ => false) = false := by
+  induction xs with
+  | nil => rfl
+  | cons a rest ih =>
+    show Bool.xor false (booleanListSum rest (fun _ => false)) = false
+    rw [ih]
+    rfl
+
+/-- Extend an assignment on the paired block to a full character vanishing off the
+pairs. This is the preimage construction for the kernel cardinality bijection. -/
+def pairedBlockExtend {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hb : 2 * pairs.length ≤ n) (b : Fin (2 * pairs.length) → Bool) : BinaryVector n :=
+  fun j => booleanListSum (List.finRange (2 * pairs.length))
+    (fun i => decide (recordedPairedPos pairs hlen hb i = j) && b i)
+
+theorem pairedBlockExtend_apply {n : Nat} (pairs : List (Fin n × Fin n))
+    (hd : ∀ p ∈ pairs, p.1 ≠ p.2) (hp : pairs.Pairwise pairDisjoint)
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hb : 2 * pairs.length ≤ n) (b : Fin (2 * pairs.length) → Bool)
+    (i₀ : Fin (2 * pairs.length)) :
+    pairedBlockExtend pairs hlen hb b (recordedPairedPos pairs hlen hb i₀) = b i₀ := by
+  unfold pairedBlockExtend
+  have hfun : (fun i => decide (recordedPairedPos pairs hlen hb i
+        = recordedPairedPos pairs hlen hb i₀) && b i)
+      = (fun i => decide (i = i₀) && b i) := by
+    funext i
+    have hiff : (recordedPairedPos pairs hlen hb i = recordedPairedPos pairs hlen hb i₀)
+        ↔ (i = i₀) := by
+      constructor
+      · intro h
+        exact recordedPairedPos_injective pairs hd hp hlen hb h
+      · intro h
+        rw [h]
+    simp [hiff]
+  rw [hfun, booleanListSum_singleton _ i₀ b (List.nodup_finRange _)]
+  simp
+
+theorem pairedBlockExtend_unpaired {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hb : 2 * pairs.length ≤ n) (b : Fin (2 * pairs.length) → Bool)
+    (j : Fin n) (hj : j ∈ unpairedIndices (List.finRange n) pairs) :
+    pairedBlockExtend pairs hlen hb b j = false := by
+  unfold pairedBlockExtend
+  have hfun : (fun i => decide (recordedPairedPos pairs hlen hb i = j) && b i)
+      = (fun _ : Fin (2 * pairs.length) => false) := by
+    funext i
+    have hne : recordedPairedPos pairs hlen hb i ≠ j := by
+      intro he
+      exact (recordedPairedPos_not_mem_unpaired pairs hlen hb i) (he ▸ hj)
+    simp [hne]
+  rw [hfun, booleanListSum_const_false]
+
+/-- The residual kernel is in bijective correspondence with assignments on the paired
+block: every assignment on the twice-the-pair-count many paired coordinates is realized
+by a unique kernel element. This closes the cardinality parametrization of the kernel,
+which the identification at `3171dd6` proved equal to the source polar image. -/
+theorem residualKernel_paired_block_bijection {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (hb : 2 * (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length ≤ n)
+    (b : Fin (2 * (polarEliminate (phasePolar p) fuel
+      (List.finRange n) identityMatrix).2.2.length) → Bool) :
+    ∃! l, recordedResidualLinearPart
+        (recordedCoordinateAt
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+        hsize
+        (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l
+        = zeroVector ∧
+      ∀ i, matrixApply (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l
+          (recordedPairedPos
+            (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2
+            hlen hb i) = b i := by
+  obtain ⟨ts, _, _, hpolar, halt, _, _⟩ := sourceQuadratic_hasPolar p hdegree
+  have hl0 : ∀ z, phasePolar p z z = false := by
+    intro z
+    rw [hpolar]
+    exact halt z
+  have hdp := polarEliminate_distinct_pairs (phasePolar p) fuel (List.finRange n) identityMatrix hl0
+  have hc : ∀ j ∈ unpairedIndices (List.finRange n)
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2,
+      pairedBlockExtend (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2
+        hlen hb b j = false := by
+    intro j hj
+    exact pairedBlockExtend_unpaired _ hlen hb b j hj
+  obtain ⟨l, hl, huniq⟩ := residualKernel_parametrized_by_pairs p fuel hlen m hsize _ hc
+  refine ⟨l, ⟨hl.2, ?_⟩, ?_⟩
+  · intro i
+    rw [hl.1]
+    exact pairedBlockExtend_apply _ hdp.1 hdp.2 hlen hb b i
+  · intro l' hl'
+    refine residualKernel_determined_by_paired_coordinates p fuel hdegree hlen m hsize l' l
+      hl'.1 hl.2 ?_
+    intro t htlt
+    have hi : t = (⟨(⟨t.val, htlt⟩ : Fin (2 * (polarEliminate (phasePolar p) fuel
+        (List.finRange n) identityMatrix).2.2.length)).val, by
+          have := t.isLt; omega⟩ : Fin n) := by
+      apply Fin.ext
+      rfl
+    rw [hi]
+    have hleft := hl'.2 ⟨t.val, htlt⟩
+    have hright : matrixApply (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l
+        (recordedPairedPos
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2
+          hlen hb ⟨t.val, htlt⟩) = b ⟨t.val, htlt⟩ := by
+      rw [hl.1]
+      exact pairedBlockExtend_apply _ hdp.1 hdp.2 hlen hb b _
+    exact hleft.trans hright.symm
 end SectorSimulation
