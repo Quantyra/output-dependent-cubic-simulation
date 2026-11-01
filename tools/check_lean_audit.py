@@ -812,6 +812,9 @@ EXPECTED = {
     'SectorSimulation.residualRightInverse_spec': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSupportSign_coordinates': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.booleanListSum_congr': set(),
+    'SectorSimulation.vectorFoldlXor_apply': set(),
+    'SectorSimulation.matrixApply_eq_vectorFoldlXor': {'propext', 'Quot.sound'},
+    'SectorSimulation.supportBasisMatrix_column': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

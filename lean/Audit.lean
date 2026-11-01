@@ -2120,3 +2120,9 @@ import SectorSimulation
 #print axioms SectorSimulation.sourceWalshSupportSign_coordinates
 #check SectorSimulation.booleanListSum_congr
 #print axioms SectorSimulation.booleanListSum_congr
+#check SectorSimulation.vectorFoldlXor_apply
+#print axioms SectorSimulation.vectorFoldlXor_apply
+#check SectorSimulation.matrixApply_eq_vectorFoldlXor
+#print axioms SectorSimulation.matrixApply_eq_vectorFoldlXor
+#check SectorSimulation.supportBasisMatrix_column
+#print axioms SectorSimulation.supportBasisMatrix_column

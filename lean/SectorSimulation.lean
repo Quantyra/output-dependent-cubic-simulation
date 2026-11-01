@@ -326,3 +326,4 @@ import SectorSimulation.WalshClauses
 import SectorSimulation.WalshCoordinates
 import SectorSimulation.WalshBasis
 import SectorSimulation.WalshSignCoordinates
+import SectorSimulation.WalshMatrix
