@@ -10342,6 +10342,45 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-f932679-20261031/README.md",
       "unresolved_bridge": "The paper's computability clause covers the support, its origin and the sign. Only kernel preimages are computed here. The support origin additionally requires solving against the residual offset, whose current construction routes through coordinateInverse of the recorded coordinate map, obtained from a surjectivity proof rather than computed; an executable inverse of that permutation is admitted by the recorded order but not yet built. The sign is a closed expression in computable terms but is not packaged as a computation with a correctness statement."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedCoordinateAt_recordedCoordinateInverse",
+      "section": "3",
+      "target": "SectorSimulation.recordedCoordinateAt_recordedCoordinateInverse",
+      "assumptions": "The recorded pairs have distinct endpoints and are pairwise disjoint, and the recorded coordinate order has full length.",
+      "quantifiers": "All finite dimensions, recorded pair lists, length proofs and coordinate indices.",
+      "statement": "The inverse computed by position lookup in the recorded coordinate order is a right inverse of the recorded coordinate map.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-4aa343d-20261031/README.md",
+      "unresolved_bridge": "Supplies a computed coordinate inverse; the support origin itself is not assembled here."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedCoordinateInverse_recordedCoordinateAt",
+      "section": "3",
+      "target": "SectorSimulation.recordedCoordinateInverse_recordedCoordinateAt",
+      "assumptions": "The recorded pairs have distinct endpoints and are pairwise disjoint, and the recorded coordinate order has full length.",
+      "quantifiers": "All finite dimensions, recorded pair lists, length proofs and recorded positions.",
+      "statement": "The computed inverse is also a left inverse of the recorded coordinate map, by that map's injectivity.",
+      "dependencies": ["source-walsh-interleaved-recordedCoordinateAt_recordedCoordinateInverse"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-4aa343d-20261031/README.md",
+      "unresolved_bridge": "A round-trip property of the computed inverse; no sector or cost consequence follows alone."
+    },
+    {
+      "id": "source-walsh-interleaved-coordinateReindex_recordedCoordinateInverse",
+      "section": "3",
+      "target": "SectorSimulation.coordinateReindex_recordedCoordinateInverse",
+      "assumptions": "The recorded pairs have distinct endpoints and are pairwise disjoint, and the recorded coordinate order has full length.",
+      "quantifiers": "All finite dimensions, recorded pair lists, length proofs and binary vectors.",
+      "statement": "Reindexing by the computed inverse undoes reindexing by the recorded coordinate map.",
+      "dependencies": ["source-walsh-interleaved-recordedCoordinateInverse_recordedCoordinateAt"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-4aa343d-20261031/README.md",
+      "unresolved_bridge": "With the executable Gaussian inverse this supplies the ingredients for a computed support origin, but that origin is not assembled and the paper's computability clause remains uncertified, as does the sign as a checked computation."
     }
   ],
   "paper_source": "manuscript/main.tex",
