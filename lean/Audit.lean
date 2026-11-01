@@ -2144,3 +2144,13 @@ import SectorSimulation
 #print axioms SectorSimulation.supportBasisMatrix_extend_annihilated
 #check SectorSimulation.sourceWalshSum_support_matrix
 #print axioms SectorSimulation.sourceWalshSum_support_matrix
+#check SectorSimulation.inverseProgramBitOps_le
+#print axioms SectorSimulation.inverseProgramBitOps_le
+#check SectorSimulation.matrixApplyBitOps_le
+#print axioms SectorSimulation.matrixApplyBitOps_le
+#check SectorSimulation.signPairBitOps_le
+#print axioms SectorSimulation.signPairBitOps_le
+#check SectorSimulation.inverseProgramBitOps_le_poly
+#print axioms SectorSimulation.inverseProgramBitOps_le_poly
+#check SectorSimulation.walshModelledStagesBitOps_le
+#print axioms SectorSimulation.walshModelledStagesBitOps_le

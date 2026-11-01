@@ -824,6 +824,11 @@ EXPECTED = {
     'SectorSimulation.matrixApply_supportBasisMatrix_extend': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.supportBasisMatrix_extend_annihilated': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_support_matrix': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.inverseProgramBitOps_le': {'propext', 'Quot.sound'},
+    'SectorSimulation.matrixApplyBitOps_le': set(),
+    'SectorSimulation.signPairBitOps_le': {'propext', 'Quot.sound'},
+    'SectorSimulation.inverseProgramBitOps_le_poly': {'propext', 'Quot.sound'},
+    'SectorSimulation.walshModelledStagesBitOps_le': {'propext', 'Quot.sound'},
 }
 
 
