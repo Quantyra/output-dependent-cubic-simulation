@@ -2072,3 +2072,17 @@ import SectorSimulation
 #print axioms SectorSimulation.two_lt_two_pow_succ
 #check SectorSimulation.familyProbabilityBound_scaled
 #print axioms SectorSimulation.familyProbabilityBound_scaled
+#check SectorSimulation.vectorXor_eq_binaryShift
+#print axioms SectorSimulation.vectorXor_eq_binaryShift
+#check SectorSimulation.phasePolar_add_left
+#print axioms SectorSimulation.phasePolar_add_left
+#check SectorSimulation.sourcePolarVector_zero
+#print axioms SectorSimulation.sourcePolarVector_zero
+#check SectorSimulation.sourcePolarImage_card_eq_two_pow
+#print axioms SectorSimulation.sourcePolarImage_card_eq_two_pow
+#check SectorSimulation.polarLinearMap_range_card
+#print axioms SectorSimulation.polarLinearMap_range_card
+#check SectorSimulation.polarRank_eq_two_mul
+#print axioms SectorSimulation.polarRank_eq_two_mul
+#check SectorSimulation.polarRank_even
+#print axioms SectorSimulation.polarRank_even

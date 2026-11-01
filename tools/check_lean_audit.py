@@ -788,6 +788,13 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_abs_le_two_pow': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.walshWireParity_coordinateReindex_both': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.vectorXor_eq_binaryShift': {'propext', 'Quot.sound'},
+    'SectorSimulation.phasePolar_add_left': {'propext', 'Quot.sound'},
+    'SectorSimulation.sourcePolarVector_zero': {'propext', 'Quot.sound'},
+    'SectorSimulation.sourcePolarImage_card_eq_two_pow': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.polarLinearMap_range_card': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.polarRank_eq_two_mul': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.polarRank_even': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

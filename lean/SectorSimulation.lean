@@ -321,3 +321,4 @@ import SectorSimulation.CanonicalInterleavedLayout
 import SectorSimulation.RecordedInterleavedPhase
 import SectorSimulation.InterleavedCharacter
 import SectorSimulation.InterleavedCanonicalSum
+import SectorSimulation.WalshRank
