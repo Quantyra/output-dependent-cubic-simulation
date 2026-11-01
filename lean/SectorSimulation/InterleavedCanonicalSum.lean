@@ -2175,4 +2175,62 @@ theorem sourceWalshSum_support_natAbs_mul_two_pow {n : Nat}
   rw [sourceWalshSum_support_natAbs p l fuel hdegree hbound hne, ← Nat.pow_add]
   congr 1
   omega
+
+theorem vectorXor_cancel_left {n : Nat} (a x : BinaryVector n) :
+    vectorXor a (vectorXor a x) = x := by
+  funext i
+  simp [vectorXor]
+
+/-- The residual kernel element realizing a paired-block assignment, as a computation. -/
+def residualKernelElement {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hb : 2 * pairs.length ≤ n) (J : BinaryMatrix n)
+    (b : Fin (2 * pairs.length) → Bool) : BinaryVector n :=
+  gaussianInverseApply (transposeBinaryMatrix J) (pairedBlockExtend pairs hlen hb b)
+
+/-- The exact source Walsh support is the explicit affine image of the paired-block
+assignments translated by any support point: the translate of each computed kernel
+element lies in the support, distinct assignments give distinct points, and every support
+point arises this way. This fixes coordinates on the support. -/
+theorem sourceWalshSum_support_affine_parametrization {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (hb : 2 * (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length ≤ n)
+    (l₀ : BinaryVector n) (hne : sourceWalshSum p l₀ ≠ 0) :
+    (∀ b, sourceWalshSum p (vectorXor l₀ (residualKernelElement
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen hb
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1 b)) ≠ 0) ∧
+      (∀ l, sourceWalshSum p l ≠ 0 →
+        recordedResidualLinearPart
+          (recordedCoordinateAt
+            (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+          hsize
+          (transposeBinaryMatrix
+            (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)
+          (vectorXor l₀ l) = zeroVector) := by
+  have hker : ∀ b, recordedResidualLinearPart
+      (recordedCoordinateAt
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+      hsize
+      (transposeBinaryMatrix
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1)
+      (residualKernelElement
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen hb
+        (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1 b)
+      = zeroVector := by
+    intro b
+    exact (residualKernel_explicit_preimage p fuel hlen m hsize _
+      (fun j hj => pairedBlockExtend_unpaired _ hlen hb b j hj)).2
+  refine ⟨?_, ?_⟩
+  · intro b
+    rw [sourceWalshSum_support_coset p fuel hdegree hbound hlen m hsize l₀ _ hne,
+      vectorXor_cancel_left]
+    exact hker b
+  · intro l hl
+    exact (sourceWalshSum_support_coset p fuel hdegree hbound hlen m hsize l₀ l hne).mp hl
 end SectorSimulation

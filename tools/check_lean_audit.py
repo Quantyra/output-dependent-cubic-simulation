@@ -765,6 +765,8 @@ EXPECTED = {
     'SectorSimulation.sourceWalshSum_derivativeANF_eq_differenceTransform': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_outputDerivative_eq_differenceTransform': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_support_natAbs_mul_two_pow': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.vectorXor_cancel_left': {'propext', 'Quot.sound'},
+    'SectorSimulation.sourceWalshSum_support_affine_parametrization': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.vectorXor_eq_zero_iff': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset': {'propext', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation': {'propext', 'Classical.choice', 'Quot.sound'},

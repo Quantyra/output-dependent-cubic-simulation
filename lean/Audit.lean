@@ -2036,3 +2036,7 @@ import SectorSimulation
 #print axioms SectorSimulation.sourceWalshSum_outputDerivative_eq_differenceTransform
 #check SectorSimulation.sourceWalshSum_support_natAbs_mul_two_pow
 #print axioms SectorSimulation.sourceWalshSum_support_natAbs_mul_two_pow
+#check SectorSimulation.vectorXor_cancel_left
+#print axioms SectorSimulation.vectorXor_cancel_left
+#check SectorSimulation.sourceWalshSum_support_affine_parametrization
+#print axioms SectorSimulation.sourceWalshSum_support_affine_parametrization
