@@ -2004,3 +2004,7 @@ import SectorSimulation
 #print axioms SectorSimulation.pairedBlockExtend_unpaired
 #check SectorSimulation.residualKernel_paired_block_bijection
 #print axioms SectorSimulation.residualKernel_paired_block_bijection
+#check SectorSimulation.recordedPairedPos_eq_recordedCoordinateAt
+#print axioms SectorSimulation.recordedPairedPos_eq_recordedCoordinateAt
+#check SectorSimulation.residualKernel_pairedBlock_bijective
+#print axioms SectorSimulation.residualKernel_pairedBlock_bijective

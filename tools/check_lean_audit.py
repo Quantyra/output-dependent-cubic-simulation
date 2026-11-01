@@ -749,6 +749,8 @@ EXPECTED = {
     'SectorSimulation.pairedBlockExtend_apply': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.pairedBlockExtend_unpaired': {'propext', 'Quot.sound'},
     'SectorSimulation.residualKernel_paired_block_bijection': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.recordedPairedPos_eq_recordedCoordinateAt': {'propext', 'Quot.sound'},
+    'SectorSimulation.residualKernel_pairedBlock_bijective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.vectorXor_eq_zero_iff': {'propext', 'Quot.sound'},
     'SectorSimulation.recordedResidualCoordinates_eq_zero_iff_linearPart_eq_offset': {'propext', 'Quot.sound'},
     'SectorSimulation.sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_affineResidualEquation': {'propext', 'Classical.choice', 'Quot.sound'},

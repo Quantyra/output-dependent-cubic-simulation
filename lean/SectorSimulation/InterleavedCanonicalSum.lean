@@ -1825,4 +1825,51 @@ theorem residualKernel_paired_block_bijection {n : Nat}
       rw [hl.1]
       exact pairedBlockExtend_apply _ hdp.1 hdp.2 hlen hb b _
     exact hleft.trans hright.symm
+
+theorem recordedPairedPos_eq_recordedCoordinateAt {n : Nat} (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hb : 2 * pairs.length ≤ n) (t : Fin n) (htlt : t.val < 2 * pairs.length) :
+    recordedPairedPos pairs hlen hb ⟨t.val, htlt⟩ = recordedCoordinateAt pairs hlen t := by
+  unfold recordedPairedPos
+  congr 1
+
+/-- The residual kernel is bijective onto assignments on the paired block. This is the
+closed cardinality parametrization in bijection form. -/
+theorem residualKernel_pairedBlock_bijective {n : Nat}
+    (p : PhaseANF n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true)
+    (hlen : (recordedCoordinateOrder
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2).length = n)
+    (m : Nat)
+    (hsize : n = (((polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length +
+      (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length) + m))
+    (hb : 2 * (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2.length ≤ n) :
+    Function.Bijective (fun l : {l : BinaryVector n //
+        recordedResidualLinearPart
+          (recordedCoordinateAt
+            (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2 hlen)
+          hsize
+          (transposeBinaryMatrix
+            (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l
+          = zeroVector} =>
+      fun i : Fin (2 * (polarEliminate (phasePolar p) fuel
+          (List.finRange n) identityMatrix).2.2.length) =>
+        matrixApply (transposeBinaryMatrix
+          (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).1) l.1
+          (recordedPairedPos
+            (polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix).2.2
+            hlen hb i)) := by
+  constructor
+  · intro l l' hll
+    apply Subtype.ext
+    refine residualKernel_determined_by_paired_coordinates p fuel hdegree hlen m hsize
+      l.1 l'.1 l.2 l'.2 ?_
+    intro t htlt
+    have hc := congrFun hll ⟨t.val, htlt⟩
+    dsimp only at hc
+    rw [recordedPairedPos_eq_recordedCoordinateAt _ hlen hb t htlt] at hc
+    exact hc
+  · intro b
+    obtain ⟨l, hl, _⟩ := residualKernel_paired_block_bijection p fuel hdegree hlen m hsize hb b
+    exact ⟨⟨l, hl.1⟩, funext hl.2⟩
 end SectorSimulation
