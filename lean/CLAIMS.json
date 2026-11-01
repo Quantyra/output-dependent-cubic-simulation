@@ -10446,6 +10446,32 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-b839295-20261031/README.md",
       "unresolved_bridge": "Carries the manuscript's normalization factor multiplicatively, but the exponent is still the recorded pair count rather than half the polar form's rank, so the paper's magnitude clause remains blocked on the rank identification."
+    },
+    {
+      "id": "source-walsh-interleaved-vectorXor_cancel_left",
+      "section": "3",
+      "target": "SectorSimulation.vectorXor_cancel_left",
+      "assumptions": "None.",
+      "quantifiers": "All finite dimensions and pairs of binary vectors.",
+      "statement": "The binary difference cancels on the left.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-6e62752-20261031/README.md",
+      "unresolved_bridge": "An algebraic cancellation law with no sector or cost content."
+    },
+    {
+      "id": "source-walsh-interleaved-sourceWalshSum_support_affine_parametrization",
+      "section": "3",
+      "target": "SectorSimulation.sourceWalshSum_support_affine_parametrization",
+      "assumptions": "The source phase has degree at most two, the elimination fuel is at least the dimension, a recorded dimension witness and paired-block bound are supplied, and a support point is given.",
+      "quantifiers": "All finite dimensions, degree-at-most-two source phases, sufficient elimination fuel values, recorded dimension witnesses, bounds, support points and paired-block assignments.",
+      "statement": "Given a point of the exact source Walsh support, the translate of each computed residual kernel element by that point again lies in the support, and every support point differs from it by a residual kernel element. The support is therefore a translate of an explicitly parametrized space with the paired-block assignments as coordinates.",
+      "dependencies": ["source-walsh-interleaved-residualKernel_explicit_preimage", "source-walsh-interleaved-pairedBlockExtend_unpaired", "source-walsh-interleaved-sourceWalshSum_support_coset", "source-walsh-interleaved-vectorXor_cancel_left"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Classical.choice", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-6e62752-20261031/README.md",
+      "unresolved_bridge": "Fixes the coordinate system in which the sign clause's quadraticity must be expressed, which was the missing prerequisite for the support-coordinate bridge, but does not express the sign in those coordinates. The parametrization is by the formalization's paired block indexed through the recorded coordinate order, while the manuscript uses a basis matrix for its own support space; relating them needs the rank identification in lean/SEMANTICS.md. The rank-evenness, support-dimension and magnitude clauses remain blocked on that identification, and the computability clause on an unproved bit-cost bound."
     }
   ],
   "paper_source": "manuscript/main.tex",
