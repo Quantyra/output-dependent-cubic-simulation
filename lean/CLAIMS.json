@@ -11051,9 +11051,41 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-2768e2c-20261031/README.md",
       "unresolved_bridge": "The right inverse R of the manuscript parametrization. The paper additionally fixes offset and matching conditions through C and eta, which are not stated here."
+    },
+    {
+      "id": "source-walsh-sign-sourceWalshSupportSign_coordinates",
+      "section": "2",
+      "target": "SectorSimulation.sourceWalshSupportSign_coordinates",
+      "assumptions": "The phase has degree at most two, the fuel bound holds, the recorded coordinate order has full length, the dimension splits as twice the pair count plus a residual, and twice the pair count is at most the dimension.",
+      "quantifiers": "All dimensions, phases, fuels, residual dimensions, coordinate tuples and base characters satisfying those hypotheses.",
+      "statement": "For the polar-elimination matrix as pairing matrix and a support character l0 xor kernelCoordinateElement y, the support sign equals the recorded constant xored with the parity over coordinate pairs of (alpha_i xor y(2i)) && (beta_i xor y(2i+1)), where alpha and beta are the canonical coordinates of the affine base.",
+      "dependencies": ["source-walsh-basis-transpose_kernelCoordinateElement", "source-walsh-interleaved-recordedCanonicalCoordinates_vectorXor", "source-walsh-interleaved-canonicalLeft_recordedCanonicalCoordinates_pairedBlockExtend"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-4e062fd-20261031/README.md",
+      "unresolved_bridge": "The quadratic-sign clause as a function of the formalization coordinate tuple. It does not prove that this coordinate system is the manuscript basis matrix D, and it does not supply the computability cost trace."
+    },
+    {
+      "id": "source-walsh-sign-booleanListSum_congr",
+      "section": "2",
+      "target": "SectorSimulation.booleanListSum_congr",
+      "assumptions": "A Boolean list sum over a finite list.",
+      "quantifiers": "All lists and pointwise-equal summands.",
+      "statement": "A Boolean list sum respects pointwise equality of its summand on the list.",
+      "dependencies": ["boolean-polynomial-semantics"],
+      "status": "proved and kernel checked",
+      "axioms": [
+
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-4e062fd-20261031/README.md",
+      "unresolved_bridge": "A congruence lemma for the finite sum used to state the sign. It carries no manuscript claim."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-rank entries identify the manuscript polar rank with twice the recorded pair count as a theorem about the module rank, the source-walsh-clauses entries restate the Walsh lemma clauses through that rank, the source-walsh-coordinates entries parametrize the exact support by rank many coordinates with the magnitude clause on them, and the source-walsh-basis entries supply the basis columns, the annihilator and a right inverse for the polar image. The formalization still does not define the manuscript basis matrix D itself, does not express the quadratic sign in the coordinates, and has no computability cost trace. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-rank entries identify the manuscript polar rank with twice the recorded pair count, the source-walsh-clauses entries restate the Walsh clauses through that rank, the source-walsh-coordinates entries parametrize the support, the source-walsh-basis entries supply basis columns, the annihilator and a right inverse, and the source-walsh-sign entry states the support sign as a function of the coordinate tuple. The formalization still does not define the manuscript basis matrix D itself and has no computability cost trace. Each helper's unresolved source and statement bridges remain explicit."
 }
