@@ -2046,3 +2046,11 @@ import SectorSimulation
 #print axioms SectorSimulation.hyperbolicSignature_vectorPairAssignment
 #check SectorSimulation.sourceWalshSupportSign_as_quadratic
 #print axioms SectorSimulation.sourceWalshSupportSign_as_quadratic
+#check SectorSimulation.recordedCanonicalCoordinates_vectorXor
+#print axioms SectorSimulation.recordedCanonicalCoordinates_vectorXor
+#check SectorSimulation.canonicalLeft_vectorXor
+#print axioms SectorSimulation.canonicalLeft_vectorXor
+#check SectorSimulation.canonicalRight_vectorXor
+#print axioms SectorSimulation.canonicalRight_vectorXor
+#check SectorSimulation.canonicalPairedCoordinates_shift
+#print axioms SectorSimulation.canonicalPairedCoordinates_shift

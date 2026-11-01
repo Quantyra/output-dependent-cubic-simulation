@@ -2297,4 +2297,46 @@ theorem sourceWalshSupportSign_as_quadratic {n k m : Nat} (p : PhaseANF n)
     rw [vectorPairAssignment_length]
     exact hk.symm)]
   rw [hyperbolicSignature_vectorPairAssignment]
+
+/-- The canonical coordinates of a character: recorded reindexing, dimension cast and
+interleaved layout composed. -/
+def recordedCanonicalCoordinates {n k m : Nat} (f : Fin n → Fin n)
+    (h : n = (k + k) + m) (t : BinaryVector n) : BinaryVector ((k + k) + m) :=
+  coordinateReindex (@interleavedIndexFromCanonical k m)
+    (binaryVectorCast h (coordinateReindex f t))
+
+/-- The canonical coordinate map is linear in the character. -/
+theorem recordedCanonicalCoordinates_vectorXor {n k m : Nat} (f : Fin n → Fin n)
+    (h : n = (k + k) + m) (x y : BinaryVector n) :
+    recordedCanonicalCoordinates f h (vectorXor x y)
+      = vectorXor (recordedCanonicalCoordinates f h x)
+          (recordedCanonicalCoordinates f h y) := by
+  funext i
+  simp [recordedCanonicalCoordinates, coordinateReindex, binaryVectorCast, vectorXor]
+
+theorem canonicalLeft_vectorXor {k m : Nat} (x y : BinaryVector ((k + k) + m)) :
+    canonicalLeft (vectorXor x y) = vectorXor (canonicalLeft x) (canonicalLeft y) := by
+  funext i
+  simp [canonicalLeft, vectorXor]
+
+theorem canonicalRight_vectorXor {k m : Nat} (x y : BinaryVector ((k + k) + m)) :
+    canonicalRight (vectorXor x y) = vectorXor (canonicalRight x) (canonicalRight y) := by
+  funext i
+  simp [canonicalRight, vectorXor]
+
+/-- Shifting the character shifts its canonical paired coordinates additively, so the
+support sign's quadratic form separates into a base part and the perturbation's
+coordinates. This is the algebraic input for expressing the sign in the support
+coordinates. -/
+theorem canonicalPairedCoordinates_shift {n k m : Nat} (f : Fin n → Fin n)
+    (h : n = (k + k) + m) (t δ : BinaryVector n) (i : Fin k) :
+    canonicalLeft (recordedCanonicalCoordinates f h (vectorXor t δ)) i
+        = Bool.xor (canonicalLeft (recordedCanonicalCoordinates f h t) i)
+            (canonicalLeft (recordedCanonicalCoordinates f h δ) i) ∧
+      canonicalRight (recordedCanonicalCoordinates f h (vectorXor t δ)) i
+        = Bool.xor (canonicalRight (recordedCanonicalCoordinates f h t) i)
+            (canonicalRight (recordedCanonicalCoordinates f h δ) i) := by
+  rw [recordedCanonicalCoordinates_vectorXor, canonicalLeft_vectorXor,
+    canonicalRight_vectorXor]
+  exact ⟨rfl, rfl⟩
 end SectorSimulation
