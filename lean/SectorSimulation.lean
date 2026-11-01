@@ -331,3 +331,4 @@ import SectorSimulation.WalshMatrixAction
 import SectorSimulation.WalshCost
 import SectorSimulation.WalshCostComplete
 import SectorSimulation.WalshSubstitutionCost
+import SectorSimulation.WalshDrawModel

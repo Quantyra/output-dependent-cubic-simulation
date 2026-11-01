@@ -843,6 +843,10 @@ EXPECTED = {
     'SectorSimulation.evalPhaseCosted_snd': {'propext', 'Quot.sound'},
     'SectorSimulation.evalPhaseCosted_ops_le': {'propext', 'Quot.sound'},
     'SectorSimulation.substitution_refined_bitOps_le': {'propext', 'Quot.sound'},
+    'SectorSimulation.uniformMean_nonneg': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.uniformMean_le_one': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.uniformMean_mem_unit': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.uniformSecondMoment_le_mean': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

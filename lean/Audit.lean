@@ -2182,3 +2182,11 @@ import SectorSimulation
 #print axioms SectorSimulation.evalPhaseCosted_ops_le
 #check SectorSimulation.substitution_refined_bitOps_le
 #print axioms SectorSimulation.substitution_refined_bitOps_le
+#check SectorSimulation.uniformMean_nonneg
+#print axioms SectorSimulation.uniformMean_nonneg
+#check SectorSimulation.uniformMean_le_one
+#print axioms SectorSimulation.uniformMean_le_one
+#check SectorSimulation.uniformMean_mem_unit
+#print axioms SectorSimulation.uniformMean_mem_unit
+#check SectorSimulation.uniformSecondMoment_le_mean
+#print axioms SectorSimulation.uniformSecondMoment_le_mean
