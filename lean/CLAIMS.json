@@ -11278,9 +11278,88 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-8b20376-20261031/README.md",
       "unresolved_bridge": "The affine-support clause in matrix form. The paper matching offset, the annihilator offset structure and the computability cost trace remain outside this statement."
+    },
+    {
+      "id": "source-walsh-cost-inverseProgramBitOps_le",
+      "section": "2",
+      "target": "SectorSimulation.inverseProgramBitOps_le",
+      "assumptions": "A square binary matrix with a Gaussian row program.",
+      "quantifiers": "All dimensions and Gaussian row programs.",
+      "statement": "The elimination program charged at three bits per CNOT record costs at most three times its gate bound, i.e. nine times the dimension times the dimension plus one.",
+      "dependencies": ["source-walsh-interleaved-gaussianInverseApply_gate_count_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-5805957-20261031/README.md",
+      "unresolved_bridge": "A first charged stage of the cost model, under the stated per-record charge. Parsing and replay, substitution, enumeration, random draws, Gauss sums, rational accumulation and rounding are not modelled, and the per-record charge is a modelling choice rather than a derived machine cost."
+    },
+    {
+      "id": "source-walsh-cost-matrixApplyBitOps_le",
+      "section": "2",
+      "target": "SectorSimulation.matrixApplyBitOps_le",
+      "assumptions": "A dimension.",
+      "quantifiers": "All dimensions.",
+      "statement": "One matrix application charged at one AND and one XOR per entry costs at most twice the squared dimension.",
+      "dependencies": ["boolean-polynomial-semantics"],
+      "status": "proved and kernel checked",
+      "axioms": [
+
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-5805957-20261031/README.md",
+      "unresolved_bridge": "A charge for one matrix application under the stated per-entry cost. It carries no manuscript claim on its own."
+    },
+    {
+      "id": "source-walsh-cost-signPairBitOps_le",
+      "section": "2",
+      "target": "SectorSimulation.signPairBitOps_le",
+      "assumptions": "A pair count bounded by half the dimension.",
+      "quantifiers": "All dimensions and pair counts satisfying the bound.",
+      "statement": "The sign parity charged at one AND and one XOR per pair costs at most twice the dimension.",
+      "dependencies": ["source-walsh-interleaved-booleanListSum_xor"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-5805957-20261031/README.md",
+      "unresolved_bridge": "A charge for the sign parity. It does not cover the phase evaluation, the affine normalization or the canonical coordinate reads that precede the parity."
+    },
+    {
+      "id": "source-walsh-cost-inverseProgramBitOps_le_poly",
+      "section": "2",
+      "target": "SectorSimulation.inverseProgramBitOps_le_poly",
+      "assumptions": "A square binary matrix with a Gaussian row program.",
+      "quantifiers": "All dimensions and Gaussian row programs.",
+      "statement": "The elimination stage charge is at most nine times the squared dimension plus one, so it is quadratic in the dimension.",
+      "dependencies": ["source-walsh-cost-inverseProgramBitOps_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-5805957-20261031/README.md",
+      "unresolved_bridge": "The quadratic form of the elimination charge. Quadratic in the dimension only, with no source size, precision or confidence parameter."
+    },
+    {
+      "id": "source-walsh-cost-walshModelledStagesBitOps_le",
+      "section": "2",
+      "target": "SectorSimulation.walshModelledStagesBitOps_le",
+      "assumptions": "A square binary matrix with a Gaussian row program and a pair count bounded by half the dimension.",
+      "quantifiers": "All dimensions, row programs and pair counts satisfying those bounds.",
+      "statement": "The three modelled stages together cost at most thirteen times the squared dimension plus one.",
+      "dependencies": ["source-walsh-cost-inverseProgramBitOps_le_poly", "source-walsh-cost-matrixApplyBitOps_le", "source-walsh-cost-signPairBitOps_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-5805957-20261031/README.md",
+      "unresolved_bridge": "A combined quadratic bound for the modelled part of the Walsh computation. It is not the computability clause: parsing and replay, substitution, enumeration, random draws, Gauss sums, integer and rational arithmetic, accumulation, rounding, source size, precision and confidence are all absent, and the per-operation charges are modelling choices."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape, and the action entries now include the matrix action identity, its annihilator consequence and the matrix form of the affine support. The computability clause still has no cost trace. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape. The source-walsh-cost entries begin a bit-operation model for three stages only; the computability clause also needs parsing and replay, substitution, enumeration, random draws, Gauss sums, integer and rational arithmetic, accumulation, rounding and the precision and confidence parameters. Each helper's unresolved source and statement bridges remain explicit."
 }
