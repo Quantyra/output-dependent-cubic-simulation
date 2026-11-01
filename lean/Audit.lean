@@ -2010,3 +2010,7 @@ import SectorSimulation
 #print axioms SectorSimulation.residualKernel_pairedBlock_bijective
 #check SectorSimulation.sourceWalshSum_support_natAbs
 #print axioms SectorSimulation.sourceWalshSum_support_natAbs
+#check SectorSimulation.hyperbolicSignature_as_pairProducts
+#print axioms SectorSimulation.hyperbolicSignature_as_pairProducts
+#check SectorSimulation.sourceWalshSum_support_value
+#print axioms SectorSimulation.sourceWalshSum_support_value

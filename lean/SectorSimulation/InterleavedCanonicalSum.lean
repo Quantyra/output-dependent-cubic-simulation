@@ -1893,4 +1893,49 @@ theorem sourceWalshSum_support_natAbs {n : Nat}
   · exact absurd rfl hnz
   · congr 1
     omega
+
+/-- The hyperbolic signature is the parity of the products of paired coordinates, so the
+sign it controls is a quadratic function of those coordinates. -/
+theorem hyperbolicSignature_as_pairProducts (params : List (Bool × Bool)) :
+    hyperbolicSignature params
+      = (params.map (fun ab => ab.1 && ab.2)).foldr Bool.xor false := by
+  induction params with
+  | nil => rfl
+  | cons ab rest ih => simp [hyperbolicSignature, ih]
+
+/-- Exact value of a nonzero exact source Walsh coefficient: a fixed power of two times
+a sign controlled by the recorded constant and the hyperbolic signature of the paired
+coordinates. With the previous lemma that signature is the parity of products of paired
+coordinates, so the sign is a quadratic function of coordinates on the support. -/
+theorem sourceWalshSum_support_value {n : Nat}
+    (p : PhaseANF n) (l : BinaryVector n) (fuel : Nat)
+    (hdegree : phaseWithinDegree 2 p = true) (hbound : n ≤ fuel)
+    (hne : sourceWalshSum p l ≠ 0) :
+    let out := polarEliminate (phasePolar p) fuel (List.finRange n) identityMatrix
+    let pairs := out.2.2
+    ∃ hlen : (recordedCoordinateOrder pairs).length = n,
+      ∃ m, ∃ hsize : n = (pairs.length + pairs.length) + m,
+        let f := recordedCoordinateAt pairs hlen
+        let r := fun x => evalPhase (recordedPairPhase pairs) x
+        let c := Bool.xor (evalPhase p (fun _ => false)) (r (fun _ => false))
+        let a := fun i => normalizedDifference
+          (fun y => evalPhase p (matrixApply out.1 y)) r (coordinateUnit i)
+        let t := binaryShift a (matrixApply (transposeBinaryMatrix out.1) l)
+        let q := binaryVectorCast hsize (coordinateReindex f t)
+        let canonical := coordinateReindex
+          (@interleavedIndexFromCanonical pairs.length m) q
+        let qs := vectorPairAssignment (canonicalLeft canonical) (canonicalRight canonical)
+        sourceWalshSum p l =
+          (2 : Int) ^ (n - pairs.length) * integerWalshSign
+            (Bool.xor c (hyperbolicSignature
+              (pairCoefficientsXor (List.replicate pairs.length (false, false)) qs))) := by
+  obtain ⟨hlen, m, hsize, hclosed⟩ :=
+    sourceWalshSum_recorded_interleaved_cast_closed p l fuel hdegree hbound
+  refine ⟨hlen, m, hsize, ?_⟩
+  dsimp only at hclosed ⊢
+  rw [hclosed] at hne ⊢
+  split_ifs at hne ⊢ with hcond
+  · exact absurd rfl hne
+  · congr 2
+    omega
 end SectorSimulation
