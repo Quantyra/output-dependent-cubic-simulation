@@ -10511,6 +10511,58 @@
       "axioms": ["propext", "Classical.choice", "Quot.sound"],
       "build_audit_receipt": "lean/evidence/gcp/sector-4b08afc-20261031/README.md",
       "unresolved_bridge": "This is the quadraticity the paper's sign clause describes, in the formalization's own coordinates, but the clause is not certified. The form is in the canonical left and right coordinates of the transformed character while the support parametrization is by paired-block assignments; both are natural and related by the interleaved layout, but the composition expressing this form directly in the support coordinates is unproved. The paper states quadraticity against its own support basis matrix, which needs the rank identification in lean/SEMANTICS.md to relate to either coordinate system."
+    },
+    {
+      "id": "source-walsh-interleaved-recordedCanonicalCoordinates_vectorXor",
+      "section": "3",
+      "target": "SectorSimulation.recordedCanonicalCoordinates_vectorXor",
+      "assumptions": "A dimension witness is supplied.",
+      "quantifiers": "All finite source, pair and residual dimensions, coordinate maps, dimension witnesses and pairs of characters.",
+      "statement": "The canonical coordinate map, composing the recorded reindexing, the dimension cast and the interleaved layout, is linear in the character.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-9e529c9-20261031/README.md",
+      "unresolved_bridge": "Linearity of a coordinate change; it carries no sector, rank or cost statement."
+    },
+    {
+      "id": "source-walsh-interleaved-canonicalLeft_vectorXor",
+      "section": "3",
+      "target": "SectorSimulation.canonicalLeft_vectorXor",
+      "assumptions": "None.",
+      "quantifiers": "All pair and residual dimensions and pairs of canonical vectors.",
+      "statement": "The canonical left block is linear.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-9e529c9-20261031/README.md",
+      "unresolved_bridge": "A block projection law with no sector content."
+    },
+    {
+      "id": "source-walsh-interleaved-canonicalRight_vectorXor",
+      "section": "3",
+      "target": "SectorSimulation.canonicalRight_vectorXor",
+      "assumptions": "None.",
+      "quantifiers": "All pair and residual dimensions and pairs of canonical vectors.",
+      "statement": "The canonical right block is linear.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-9e529c9-20261031/README.md",
+      "unresolved_bridge": "A block projection law with no sector content."
+    },
+    {
+      "id": "source-walsh-interleaved-canonicalPairedCoordinates_shift",
+      "section": "3",
+      "target": "SectorSimulation.canonicalPairedCoordinates_shift",
+      "assumptions": "A dimension witness is supplied.",
+      "quantifiers": "All finite source, pair and residual dimensions, coordinate maps, dimension witnesses, characters, perturbations and pair indices.",
+      "statement": "Shifting the character shifts its canonical paired coordinates additively and coordinatewise, so the sign's quadratic form separates into a base part and the perturbation's coordinates.",
+      "dependencies": ["source-walsh-interleaved-recordedCanonicalCoordinates_vectorXor", "source-walsh-interleaved-canonicalLeft_vectorXor", "source-walsh-interleaved-canonicalRight_vectorXor"],
+      "status": "proved and kernel checked",
+      "axioms": ["propext", "Quot.sound"],
+      "build_audit_receipt": "lean/evidence/gcp/sector-9e529c9-20261031/README.md",
+      "unresolved_bridge": "Supplies the algebraic input for expressing the sign in the support coordinates. One formalization step remains: evaluating the canonical left and right blocks of a computed kernel element in terms of the paired-block assignment that produced it. Beyond that the paper's sign clause compares against its own support basis matrix, which needs the rank identification in lean/SEMANTICS.md."
     }
   ],
   "paper_source": "manuscript/main.tex",
