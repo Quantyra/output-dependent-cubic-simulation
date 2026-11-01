@@ -11357,9 +11357,142 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-5805957-20261031/README.md",
       "unresolved_bridge": "A combined quadratic bound for the modelled part of the Walsh computation. It is not the computability clause: parsing and replay, substitution, enumeration, random draws, Gauss sums, integer and rational arithmetic, accumulation, rounding, source size, precision and confidence are all absent, and the per-operation charges are modelling choices."
+    },
+    {
+      "id": "source-walsh-cost-totalBitOps_eq_stages",
+      "section": "2",
+      "target": "SectorSimulation.totalBitOps_eq_stages",
+      "assumptions": "A cost-parameter record.",
+      "quantifiers": "All parameter records.",
+      "statement": "The complete model total is exactly the sum of its charged stages.",
+      "dependencies": ["source-walsh-cost-walshModelledStagesBitOps_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
+      "unresolved_bridge": "A definitional identity stating the model shape. It is not a cost claim about any algorithm."
+    },
+    {
+      "id": "source-walsh-cost-programBitOps_le_eliminationBitOps",
+      "section": "2",
+      "target": "SectorSimulation.programBitOps_le_eliminationBitOps",
+      "assumptions": "A square binary matrix with a Gaussian row program and a parameter record of the same dimension.",
+      "quantifiers": "All parameter records.",
+      "statement": "The charged elimination program is dominated by the model elimination stage.",
+      "dependencies": ["source-walsh-cost-inverseProgramBitOps_le_poly"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
+      "unresolved_bridge": "The only stage with a proved refinement from an executable program. The other stages remain specifications."
+    },
+    {
+      "id": "source-walsh-cost-parseBitOps_le_stageEnvelope",
+      "section": "2",
+      "target": "SectorSimulation.parseBitOps_le_stageEnvelope",
+      "assumptions": "A cost-parameter record.",
+      "quantifiers": "All parameter records.",
+      "statement": "The parsing and replay charge lies inside the polynomial envelope.",
+      "dependencies": ["source-walsh-cost-le_stageEnvelope_of_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
+      "unresolved_bridge": "An arithmetic membership in the envelope, not a measured parsing cost."
+    },
+    {
+      "id": "source-walsh-cost-eliminationBitOps_le_stageEnvelope",
+      "section": "2",
+      "target": "SectorSimulation.eliminationBitOps_le_stageEnvelope",
+      "assumptions": "A cost-parameter record.",
+      "quantifiers": "All parameter records.",
+      "statement": "The elimination charge lies inside the polynomial envelope.",
+      "dependencies": ["source-walsh-cost-le_stageEnvelope_of_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
+      "unresolved_bridge": "An arithmetic membership in the envelope, resting on the proved gate bound."
+    },
+    {
+      "id": "source-walsh-cost-substitutionBitOps_le_stageEnvelope",
+      "section": "2",
+      "target": "SectorSimulation.substitutionBitOps_le_stageEnvelope",
+      "assumptions": "A cost-parameter record.",
+      "quantifiers": "All parameter records.",
+      "statement": "The phase substitution charge lies inside the polynomial envelope.",
+      "dependencies": ["source-walsh-cost-le_stageEnvelope_of_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
+      "unresolved_bridge": "An arithmetic membership in the envelope. The charge itself is a modelling choice, not a measured substitution cost."
+    },
+    {
+      "id": "source-walsh-cost-arithmeticBitOps_le_stageEnvelope",
+      "section": "2",
+      "target": "SectorSimulation.arithmeticBitOps_le_stageEnvelope",
+      "assumptions": "A cost-parameter record.",
+      "quantifiers": "All parameter records.",
+      "statement": "The integer and rational arithmetic charge lies inside the polynomial envelope.",
+      "dependencies": ["source-walsh-cost-le_stageEnvelope_of_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
+      "unresolved_bridge": "An arithmetic membership in the envelope. The charge itself is a modelling choice, not a measured arithmetic cost."
+    },
+    {
+      "id": "source-walsh-cost-sourceStagesBitOps_le",
+      "section": "2",
+      "target": "SectorSimulation.sourceStagesBitOps_le",
+      "assumptions": "A cost-parameter record.",
+      "quantifiers": "All parameter records.",
+      "statement": "The non-exponential stages together lie inside four polynomial envelopes scaled by the working precision.",
+      "dependencies": ["source-walsh-cost-parseBitOps_le_stageEnvelope", "source-walsh-cost-eliminationBitOps_le_stageEnvelope", "source-walsh-cost-substitutionBitOps_le_stageEnvelope", "source-walsh-cost-arithmeticBitOps_le_stageEnvelope"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
+      "unresolved_bridge": "The paper shape for the polynomial part: polynomial in source size and dimension, with the exponential factors carried separately. It is not the paper displayed bound and no stage is a traced cost except elimination."
+    },
+    {
+      "id": "source-walsh-cost-totalBitOps_le",
+      "section": "2",
+      "target": "SectorSimulation.totalBitOps_le",
+      "assumptions": "A cost-parameter record.",
+      "quantifiers": "All parameter records.",
+      "statement": "The complete model is bounded by the four enveloped stages plus the enumeration, draw, Gauss, accumulation and rounding stages.",
+      "dependencies": ["source-walsh-cost-sourceStagesBitOps_le"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-26e8098-20261031/README.md",
+      "unresolved_bridge": "The composed trace bound of the model. It is a bound on the stated charges, not on any executable end-to-end algorithm, and it does not prove the estimator accuracy or failure statements."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape. The source-walsh-cost entries begin a bit-operation model for three stages only; the computability clause also needs parsing and replay, substitution, enumeration, random draws, Gauss sums, integer and rational arithmetic, accumulation, rounding and the precision and confidence parameters. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape, and the source-walsh-cost entries now charge every stage the semantic contract lists with source size, precision and confidence parameters, with a composed trace bound. The stage charges are modelling choices and only elimination has a proved refinement from an executable program; the paper displayed bound, the estimator accuracy statements, the paper literal D identification and the sector structure remain unproved. Each helper's unresolved source and statement bridges remain explicit."
 }
