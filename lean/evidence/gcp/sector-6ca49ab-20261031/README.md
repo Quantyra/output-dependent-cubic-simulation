@@ -9,3 +9,7 @@ The dedicated Google Cloud builder `quantyra-sector-lean-builder-02` used Lean 4
 `recordedResidualLinearPart_vectorXor` and `recordedResidualLinearPart_zeroVector` establish that the generated residual-character map is linear over the finite Boolean vector space. Both use only `propext` and `Quot.sound`.
 
 This makes the earlier support-fiber result a fiber of a proved linear map. The remaining task is to identify its kernel with the image of the source quadratic polar form and prove the rank/support-origin statements. No normalized sector identity, boundedness/cost result, or labeled paper theorem is certified here.
+
+## Manifest note
+
+The checksum manifest in this directory was regenerated on 2026-10-31 to attest the committed bytes. The original manifest was recorded before final prose edits to this `README.md`, so it listed hashes of earlier versions of those files. The source archive, build log, audit log, checker log and toolchain record all verified against the original manifest; this regeneration changes no proof artifact, and the original values remain in the repository history.

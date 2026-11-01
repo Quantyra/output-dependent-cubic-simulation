@@ -2750,12 +2750,12 @@
     {
       "path": "lean/evidence/gcp/sector-6ca49ab-20261031/COMPONENTS.sha256",
       "bytes": 563,
-      "sha256": "ddd12d9ca3573dbc6df6f2c25793bb46a14f997bf39f1b45c0987efdc9b71772"
+      "sha256": "53e3d03869c73c0fb2c2c8059aea8f57279dd678b7c6180bd1f128669ea71c51"
     },
     {
       "path": "lean/evidence/gcp/sector-6ca49ab-20261031/README.md",
-      "bytes": 1321,
-      "sha256": "0347b06d3c84d9e1486035c36428a0d8dbf8758547a1aa6374f3ef65ba95d081"
+      "bytes": 1800,
+      "sha256": "4789a1f4533486cb38dbf84227e410f7c7de39a8edf17b1241e0bfdd6c880188"
     },
     {
       "path": "lean/evidence/gcp/sector-6ca49ab-20261031/audit.log",
@@ -3035,12 +3035,12 @@
     {
       "path": "lean/evidence/gcp/sector-901b1ff-20261031/COMPONENTS.sha256",
       "bytes": 563,
-      "sha256": "698e4329f93bfaf5b572437567f01aa13104ab0e96debb48163001af329a794e"
+      "sha256": "8659f43422424e69e9fd774fbfd50fe5bf7db85e68e27c862ba065f20b013cd3"
     },
     {
       "path": "lean/evidence/gcp/sector-901b1ff-20261031/README.md",
-      "bytes": 1402,
-      "sha256": "d5ee0094796f51705ed2a58ce394a6baddc824f53ff8f47740d2400c37381753"
+      "bytes": 1881,
+      "sha256": "05c186904af1553835639ad48e1f321e4c3f6f4f5a44556cd3727318b83e5cef"
     },
     {
       "path": "lean/evidence/gcp/sector-901b1ff-20261031/audit.log",
@@ -3144,8 +3144,8 @@
     },
     {
       "path": "lean/evidence/gcp/sector-9aaec54-20261031/README.md",
-      "bytes": 1929,
-      "sha256": "350432b8030a615cc61ec3b3f2714113e7f78fb10427e393b10c28a41709a31d"
+      "bytes": 2449,
+      "sha256": "677b7864586a38c07b7df3703f79d3eaca0c541bf3ac953064960796a8b8cb09"
     },
     {
       "path": "lean/evidence/gcp/sector-9aaec54-20261031/RESULTS.txt",
@@ -3155,7 +3155,7 @@
     {
       "path": "lean/evidence/gcp/sector-9aaec54-20261031/SHA256SUMS",
       "bytes": 704,
-      "sha256": "482a6357c496da6d1af3a06116372f95882d2f07b6d2bb0712150d38db7cfec6"
+      "sha256": "c0891f7c29054708aba96f1a241adc292425d6dff162aee103c5bb5a792f5e50"
     },
     {
       "path": "lean/evidence/gcp/sector-9aaec54-20261031/sector-9aaec54-audit.log",
@@ -3680,12 +3680,12 @@
     {
       "path": "lean/evidence/gcp/sector-d52fcb7-20261031/COMPONENTS.sha256",
       "bytes": 563,
-      "sha256": "d931179cf73c0db8883d74334d2a05974234f2cd915acdd970875916d0c504a8"
+      "sha256": "20063d9946406d8299c366de7e755fa0a64eff25807ed705e6872632da60137f"
     },
     {
       "path": "lean/evidence/gcp/sector-d52fcb7-20261031/README.md",
-      "bytes": 1577,
-      "sha256": "b8cfbe9911df688c4e791aab298488bd043b5829115c9cd555043070f8d09bca"
+      "bytes": 2056,
+      "sha256": "9c76e7fc18e6acd71db86cbfa0fce5a6e7ba08ed482fa84706b6c8c6b5631ac8"
     },
     {
       "path": "lean/evidence/gcp/sector-d52fcb7-20261031/audit.log",

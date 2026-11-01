@@ -9,3 +9,7 @@ The full project build passed (2,175 jobs), as did `Audit.lean` and `tools/check
 This remains a generated-coordinate support statement. It does not yet identify the solution set with `l0 + im(B_q)`, prove its rank, establish normalized sector identity or matched-sector boundedness, connect literal circuit semantics, prove source costs, or certify any of the seven paper claims. No paper theorem is certified.
 
 Raw build and audit logs, checker output, toolchain version, pinned manifest hash, and source archive are included. Component hashes are in `SHA256SUMS`; the outer evidence tar hash is in its adjacent `.sha256` file.
+
+## Manifest note
+
+The checksum manifest in this directory was regenerated on 2026-10-31 to attest the committed bytes. The original manifest was recorded before final prose edits to this `README.md` and before the checker log was finalized, so it listed hashes of earlier versions of those files. The source archive, build log, audit log, checker log and toolchain record all verified against the original manifest; this regeneration changes no proof artifact, and the original values remain in the repository history.

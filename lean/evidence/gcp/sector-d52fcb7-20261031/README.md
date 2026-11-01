@@ -9,3 +9,7 @@ The dedicated Google Cloud builder `quantyra-sector-lean-builder-02` used Lean 4
 The new source theorem states that nonzero Walsh support is exactly the fiber where the linear residual-character component equals its fixed offset. It follows from the proved decomposition of the generated residual vector into that linear component XOR the offset. New theorem axiom dependencies are within the existing baseline: the decomposition, XOR-zero equivalence, and zero-fiber equivalence use `propext` and `Quot.sound`; the source-specific support theorem also uses `Classical.choice`.
 
 This identifies support as a generated-coordinate affine fiber, but does not prove that its kernel equals `im(Bq)`, establish the polar rank or support nonemptiness, normalize the Walsh values, establish matched-sector bounds or costs, or certify a labeled paper theorem.
+
+## Manifest note
+
+The checksum manifest in this directory was regenerated on 2026-10-31 to attest the committed bytes. The original manifest was recorded before final prose edits to this `README.md`, so it listed hashes of earlier versions of those files. The source archive, build log, audit log, checker log and toolchain record all verified against the original manifest; this regeneration changes no proof artifact, and the original values remain in the repository history.

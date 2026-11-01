@@ -7,3 +7,7 @@ The exact Lean source archive is `sector-901b1ff-source.tar` (SHA-256 `a96acbbe3
 The dedicated GCP builder `quantyra-sector-lean-builder-02` used Lean 4.30.0, commit `d024af099ca4bf2c86f649261ebf59565dc8c622`; the pinned `lake-manifest.json` SHA-256 is `ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642`. A full `lake build` completed successfully (2,175 jobs). `lake env lean Audit.lean` and `tools/check_lean_audit.py` both passed. The theorem `sourceWalshSum_recorded_interleaved_cast_ne_zero_iff_residualCoordinates_zero` has transitive axioms `propext`, `Classical.choice`, and `Quot.sound`, within the established audit baseline.
 
 The result states that the source Walsh sum is nonzero exactly when all residual transformed-character coordinates vanish. This is a coordinate-equation characterization only. It does not identify the solution set with `l0 + im(Bq)`, prove the rank formula, normalize the Walsh values, establish sector bounds or costs, or certify any of the seven published paper theorems.
+
+## Manifest note
+
+The checksum manifest in this directory was regenerated on 2026-10-31 to attest the committed bytes. The original manifest was recorded before final prose edits to this `README.md`, so it listed hashes of earlier versions of those files. The source archive, build log, audit log, checker log and toolchain record all verified against the original manifest; this regeneration changes no proof artifact, and the original values remain in the repository history.
