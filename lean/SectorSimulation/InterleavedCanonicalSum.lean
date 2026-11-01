@@ -2233,4 +2233,68 @@ theorem sourceWalshSum_support_affine_parametrization {n : Nat}
     exact hker b
   · intro l hl
     exact (sourceWalshSum_support_coset p fuel hdegree hbound hlen m hsize l₀ l hne).mp hl
+
+/-- Xoring a pair-coefficient list with the all-false list of the same length is the
+identity, the pair analogue of the radical coefficient law. -/
+theorem pairCoefficientsXor_replicate_false {k : Nat} (qs : List (Bool × Bool))
+    (hqs : qs.length = k) :
+    pairCoefficientsXor (List.replicate k (false, false)) qs = qs := by
+  induction k generalizing qs with
+  | zero =>
+    cases qs with
+    | nil => rfl
+    | cons q qs => simp at hqs
+  | succ k ih =>
+    cases qs with
+    | nil => simp at hqs
+    | cons q qs =>
+      rcases q with ⟨a, b⟩
+      simp only [List.replicate_succ, pairCoefficientsXor, Bool.false_xor]
+      rw [ih qs (by simpa using hqs)]
+
+/-- The hyperbolic signature of a coordinate pair assignment is the parity of the
+coordinatewise products, an explicit quadratic form in those coordinates. -/
+theorem hyperbolicSignature_vectorPairAssignment {k : Nat} (u v : BinaryVector k) :
+    hyperbolicSignature (vectorPairAssignment u v)
+      = booleanListSum (List.finRange k) (fun i => u i && v i) := by
+  unfold vectorPairAssignment
+  induction (List.finRange k) with
+  | nil => rfl
+  | cons i rest ih =>
+    show Bool.xor (u i && v i)
+        (hyperbolicSignature (List.map (fun j => (u j, v j)) rest))
+      = Bool.xor (u i && v i) (booleanListSum rest (fun j => u j && v j))
+    rw [ih]
+
+/-- The support sign is an explicit quadratic form: the recorded constant xored with the
+parity of the products of the canonical left and right coordinates of the character.
+Together with the fixed support coordinates this is the quadraticity the sign clause
+asks for, in the formalization's own coordinates. -/
+theorem sourceWalshSupportSign_as_quadratic {n k m : Nat} (p : PhaseANF n)
+    (pairs : List (Fin n × Fin n))
+    (hlen : (recordedCoordinateOrder pairs).length = n)
+    (hsize : n = (k + k) + m) (hk : pairs.length = k)
+    (J : BinaryMatrix n) (l : BinaryVector n) :
+    sourceWalshSupportSign p pairs hlen hsize J l =
+      Bool.xor
+        (Bool.xor (evalPhase p (fun _ => false))
+          (evalPhase (recordedPairPhase pairs) (fun _ => false)))
+        (booleanListSum (List.finRange k) (fun i =>
+          canonicalLeft (coordinateReindex (@interleavedIndexFromCanonical k m)
+            (binaryVectorCast hsize (coordinateReindex (recordedCoordinateAt pairs hlen)
+              (binaryShift (fun i => normalizedDifference
+                (fun y => evalPhase p (matrixApply J y))
+                (fun x => evalPhase (recordedPairPhase pairs) x) (coordinateUnit i))
+                (matrixApply (transposeBinaryMatrix J) l))))) i &&
+          canonicalRight (coordinateReindex (@interleavedIndexFromCanonical k m)
+            (binaryVectorCast hsize (coordinateReindex (recordedCoordinateAt pairs hlen)
+              (binaryShift (fun i => normalizedDifference
+                (fun y => evalPhase p (matrixApply J y))
+                (fun x => evalPhase (recordedPairPhase pairs) x) (coordinateUnit i))
+                (matrixApply (transposeBinaryMatrix J) l))))) i)) := by
+  dsimp only [sourceWalshSupportSign]
+  rw [pairCoefficientsXor_replicate_false _ (by
+    rw [vectorPairAssignment_length]
+    exact hk.symm)]
+  rw [hyperbolicSignature_vectorPairAssignment]
 end SectorSimulation
