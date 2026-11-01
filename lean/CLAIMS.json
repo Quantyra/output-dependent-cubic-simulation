@@ -11705,9 +11705,43 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-59fd107-20261031/README.md",
       "unresolved_bridge": "The affine relation between the readout and the probability. It does not prove E[Y] = 1 - 2p for the paper variable, which is not defined, and does not prove the variance of Y."
+    },
+    {
+      "id": "source-walsh-concentration-markov_count",
+      "section": "3",
+      "target": "SectorSimulation.markov_count",
+      "assumptions": "A finite nonempty outcome type, a nonnegative draw variable and a positive threshold.",
+      "quantifiers": "All such data.",
+      "statement": "Markov inequality in counting form: the number of outcomes where the variable reaches the threshold, times the threshold, is at most the total.",
+      "dependencies": ["source-walsh-draw-uniformMean_nonneg"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-d309548-20261031/README.md",
+      "unresolved_bridge": "A counting concentration inequality. It does not give the estimator accuracy statement, which also needs Chebyshev on the squared deviation, the median argument and rounding."
+    },
+    {
+      "id": "source-walsh-concentration-markov_prob",
+      "section": "3",
+      "target": "SectorSimulation.markov_prob",
+      "assumptions": "A finite nonempty outcome type, a nonnegative draw variable and a positive threshold.",
+      "quantifiers": "All such data.",
+      "statement": "Markov inequality in probability form on the finite model: the fraction of outcomes reaching the threshold is at most the mean over the threshold.",
+      "dependencies": ["source-walsh-concentration-markov_count"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-d309548-20261031/README.md",
+      "unresolved_bridge": "One concentration ingredient of the estimator argument. The paper equatorial draw variable is not defined, so this does not yield an accuracy or failure bound for the manuscript estimator."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape; the cost entries charge every contract stage and refine two stages from executable computations; and the source-walsh-draw entries now include the variance identity, the one-quarter bound and the signed readout mean. The paper equatorial draw variable and its expectation, concentration, the median argument and the rounding step remain unproved, so the estimator and moments labels stay uncovered, as do the paper literal D identification and the sector structure. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape; the cost entries charge every contract stage and refine two stages from executable computations; and the draw and concentration entries give the abstract bounded-draw mean, variance and Markov facts. The paper equatorial draw variable is not defined because the sector states and Clifford observable do not exist in the development, so the estimator and moments labels stay uncovered, as do the paper literal D identification and the sector structure. Each helper's unresolved source and statement bridges remain explicit."
 }

@@ -1,0 +1,11 @@
+# GCP certification evidence: Markov concentration on the finite draw model
+
+Source/audit commit: `d30954825784fc338f4072a1e4efb2eff7c19f20`.
+
+The exact Lean source archive is `sector-d309548-source.tar` (SHA-256 `0840cd72fdfdad319d388c44782cad5ef7cf4491dd2ebddc0c242b054318e671`, 1,832,960 bytes). It contains tracked Lean sources and the exact audit checker, excluding prior evidence archives; its hash was checked on the builder.
+
+The dedicated Google Cloud builder `quantyra-sector-lean-builder-01` used Lean 4.30.0, commit `d024af099ca4bf2c86f649261ebf59565dc8c622`, and pinned Lake manifest SHA-256 `ab0911ef870c1e4193db513c9766a9be167085f6222f4381f7a2aae4a0094642`. Full `lake build` completed (2,249 jobs). Integrated `Audit.lean` and the exact expected-axiom checker passed.
+
+Two declarations are recorded. `markov_count` is Markov's inequality in counting form: for a nonnegative draw variable, the outcomes where it reaches `ε` cost at least `ε` each in the total, so the count times `ε` is at most the sum. `markov_prob` is its probability form on the finite model, obtained by dividing by the outcome count and the threshold. Both use `propext`, `Classical.choice` and `Quot.sound`, and neither depends on `sorryAx`.
+
+The scope is one concentration ingredient, and the estimator is not reached. Chebyshev applied to the squared deviation is not derived here; the median argument over the `2h+3` independent groups is absent; the rounding and projection step is absent; and the paper's equatorial draw variable is **not defined**, because the sector states and the Clifford observable it is built from do not exist anywhere in the development — a search for `psi`, `O`, or any sector-state definition returns nothing, since the matched-sector proposition `prop:sector` has no coverage. Its expectation `E[Y] = 1 - 2p` is therefore not proved and cannot be with the current prerequisites. The formalization matrix is still not proved identical to the paper literal `D`, the matching offset and right-inverse structure are not carried into the sector construction, and the matched-sector proposition, conditional quadratic branches, discovery theorem, equatorial moments, estimator theorem and family propositions have no coverage. Every labeled paper theorem remains uncertified, and nothing here establishes quantum advantage or a complexity consequence.
