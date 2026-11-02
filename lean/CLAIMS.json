@@ -12009,9 +12009,94 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
       "unresolved_bridge": "The strongest statement available about the parametrization. It makes sector orthogonality statable; it does not prove it, and it does not establish that the sector states form a basis."
+    },
+    {
+      "id": "source-walsh-sector-sectorAmplitude",
+      "section": "2",
+      "target": "SectorSimulation.sectorAmplitude",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, for every sector label, as a function on the character space.",
+      "statement": "The sector state extended by zero off its affine coset in the character space, with the value at a character taken at a classically chosen coordinate tuple.",
+      "dependencies": ["source-walsh-sector-sectorSupportPoint", "source-walsh-sector-sectorState"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-orthogonal-910fac3-20261101/README.md",
+      "unresolved_bridge": "A definition, not a correspondence. It encodes the coset support of the sector state; it does not identify the cosets with the manuscript sectors."
+    },
+    {
+      "id": "source-walsh-sector-sectorAmplitude_support",
+      "section": "2",
+      "target": "SectorSimulation.sectorAmplitude_support",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every sector label and coordinate tuple.",
+      "statement": "On its own coset the extended sector state agrees with the sector state.",
+      "dependencies": ["source-walsh-sector-sectorAmplitude", "source-walsh-sector-sectorSupportPoint_injective"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-orthogonal-910fac3-20261101/README.md",
+      "unresolved_bridge": "The chosen witness is unique by point-map injectivity at a fixed label. No phase content."
+    },
+    {
+      "id": "source-walsh-sector-sectorAmplitude_eq_zero_of_not_support",
+      "section": "2",
+      "target": "SectorSimulation.sectorAmplitude_eq_zero_of_not_support",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every sector label and character not on the coset.",
+      "statement": "Off its coset the extended sector state is zero.",
+      "dependencies": ["source-walsh-sector-sectorAmplitude"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-orthogonal-910fac3-20261101/README.md",
+      "unresolved_bridge": "The vanishing half of the support property."
+    },
+    {
+      "id": "source-walsh-sector-sectorAmplitude_disjoint",
+      "section": "2",
+      "target": "SectorSimulation.sectorAmplitude_disjoint",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every pair of distinct sector labels and every character.",
+      "statement": "Distinct sector labels have disjoint supports: at any character at least one of the two extended sector states vanishes.",
+      "dependencies": ["source-walsh-sector-residualAnnihilator_sectorSupportPoint", "source-walsh-sector-sectorAmplitude_eq_zero_of_not_support"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-orthogonal-910fac3-20261101/README.md",
+      "unresolved_bridge": "Proved from the annihilator recovering the label. It is combinatorial: the amplitudes never enter, so it says nothing about the phase."
+    },
+    {
+      "id": "source-walsh-sector-sectorStates_orthogonal",
+      "section": "2",
+      "target": "SectorSimulation.sectorStates_orthogonal",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every pair of distinct sector labels.",
+      "statement": "Sector states at distinct labels are orthogonal in the character space: the summed product of one with the star of the other is zero.",
+      "dependencies": ["source-walsh-sector-sectorAmplitude_disjoint"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-orthogonal-910fac3-20261101/README.md",
+      "unresolved_bridge": "Termwise orthogonality from disjoint supports. It is not the false same-index reading, which is refuted; it does not identify the sectors with the manuscript, and the offset structure eta, the observable, the matched vector and the overlap clauses remain open."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix, action, cost and draw entries build the Walsh lemma and the cost and draw models; the source-walsh-sector entries define the paper sector state, prove its unit-norm clause, and prove that its support point is a bijective parametrization by labels and coordinates. The Clifford observable, the matched vector, the overlap clauses, sector orthogonality, the estimator statements, the paper literal D identification and the sector offset structure remain unproved, and the sector state is not yet identified with the paper own object. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix, action, cost and draw entries build the Walsh lemma and the cost and draw models; the source-walsh-sector entries define the paper sector state, prove its unit-norm clause, prove that its support point is a bijective parametrization by labels and coordinates, and prove that distinct sector labels have disjoint supports and hence orthogonal character-space states. The same-index reading of sector orthogonality is false and is refuted in the lane records. The Clifford observable, the matched vector, the overlap clauses, the estimator statements, the paper literal D identification and the sector offset structure remain unproved, and the sector state is not yet identified with the paper own object. Each helper's unresolved source and statement bridges remain explicit."
 }
