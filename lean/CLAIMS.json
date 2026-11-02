@@ -11773,9 +11773,94 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-71328b4-20261031/README.md",
       "unresolved_bridge": "A definitional unfolding lemma recorded so later sector statements can rewrite without unfolding. It establishes no mathematical fact beyond the definition."
+    },
+    {
+      "id": "source-walsh-sector-exactComplex_dyadicPow",
+      "section": "2",
+      "target": "SectorSimulation.exactComplex_dyadicPow",
+      "assumptions": "A natural number exponent.",
+      "quantifiers": "All natural exponents.",
+      "statement": "The exact dyadic two to the minus k, read through the complex semantics, equals one over two to the k.",
+      "dependencies": ["source-walsh-sector-sectorState"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/unit-norm-4e8f07a-20261101/README.md",
+      "unresolved_bridge": "A bridge lemma between the exact dyadic quotient and its complex interpretation. It is the piece that lets an exact normalization be compared with a complex modulus."
+    },
+    {
+      "id": "source-walsh-sector-normSq_complexSigned_one",
+      "section": "2",
+      "target": "SectorSimulation.normSq_complexSigned_one",
+      "assumptions": "A boolean sign.",
+      "quantifiers": "Both signs.",
+      "statement": "A signed one has squared complex modulus one.",
+      "dependencies": ["source-walsh-sector-exactComplex_dyadicPow"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/unit-norm-4e8f07a-20261101/README.md",
+      "unresolved_bridge": "Elementary complex arithmetic. It is the sign half of the unit-norm argument and carries no phase content."
+    },
+    {
+      "id": "source-walsh-sector-normSq_exactComplex_signed_one",
+      "section": "2",
+      "target": "SectorSimulation.normSq_exactComplex_signed_one",
+      "assumptions": "A boolean sign.",
+      "quantifiers": "Both signs.",
+      "statement": "The exact sign applied to the exact unit has squared complex modulus one.",
+      "dependencies": ["source-walsh-sector-normSq_complexSigned_one", "source-walsh-sector-exactComplex_dyadicPow"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/unit-norm-4e8f07a-20261101/README.md",
+      "unresolved_bridge": "Transfers the sign modulus through the complex semantics using the proved multiplicativity of exactComplex."
+    },
+    {
+      "id": "source-walsh-sector-sectorState_normSq",
+      "section": "2",
+      "target": "SectorSimulation.sectorState_normSq",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound, a sector label in the residual space and a coordinate tuple.",
+      "quantifiers": "All such data, including zero rank and zero residual dimension.",
+      "statement": "Every sector amplitude has squared complex modulus two to the minus twice the pair count, independently of the sign.",
+      "dependencies": ["source-walsh-sector-sectorState_eq", "source-walsh-sector-normSq_exactComplex_signed_one", "source-walsh-sector-exactComplex_dyadicPow"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/unit-norm-4e8f07a-20261101/README.md",
+      "unresolved_bridge": "Pointwise modulus of the constructed state. It is phase independent by construction: the sign drops out of the modulus."
+    },
+    {
+      "id": "source-walsh-sector-sectorState_unit_norm",
+      "section": "2",
+      "target": "SectorSimulation.sectorState_unit_norm",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound, a sector label in the residual space and a coordinate tuple.",
+      "quantifiers": "All such data, including zero rank and zero residual dimension, for every sector label.",
+      "statement": "The paper unit-norm clause for the sector state: summed over the coordinate index, the squared complex moduli of the amplitudes total one, at the paper normalization two to the minus r over two with r twice the pair count.",
+      "dependencies": ["source-walsh-sector-sectorState_normSq"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/unit-norm-4e8f07a-20261101/README.md",
+      "unresolved_bridge": "Normalization only. The modulus is phase independent, so nothing about the phase is certified; the object is not identified with the paper own psi_a, and the coordinate map is not proved injective, so this is a statement about the indexed amplitude vector rather than about a vector in a physical sector basis."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix, action, cost and draw entries build the Walsh lemma and the cost and draw models; the source-walsh-sector entries now define the paper sector state, which is the first object of the sector layer and a definition only. The Clifford observable, the matched vector, the overlap clauses, the estimator statements, the paper literal D identification and the sector offset structure remain unproved. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix, action, cost and draw entries build the Walsh lemma and the cost and draw models; the source-walsh-sector entries define the paper sector state and prove its unit-norm clause, which is the first sector-layer theorem and a normalization statement only. The Clifford observable, the matched vector, the overlap clauses, the estimator statements, the paper literal D identification and the sector offset structure remain unproved, and the sector state is not yet identified with the paper own object. Each helper's unresolved source and statement bridges remain explicit."
 }
