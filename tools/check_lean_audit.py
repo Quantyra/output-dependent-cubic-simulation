@@ -885,6 +885,13 @@ EXPECTED = {
     'SectorSimulation.sectorDiag_normSq': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorDiag_unit_norm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorDiag_disjoint': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.characterFourier': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.characterDelta': {'propext', 'Quot.sound'},
+    'SectorSimulation.characterFourier_replay': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.foldr_if_eq_eq': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.characterFourier_basisTerm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.characterFourier_delta': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.characterFourier_delta_complex': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

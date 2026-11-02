@@ -2266,3 +2266,17 @@ import SectorSimulation
 #print axioms SectorSimulation.sectorDiag_unit_norm
 #check SectorSimulation.sectorDiag_disjoint
 #print axioms SectorSimulation.sectorDiag_disjoint
+#check SectorSimulation.characterFourier
+#print axioms SectorSimulation.characterFourier
+#check SectorSimulation.characterDelta
+#print axioms SectorSimulation.characterDelta
+#check SectorSimulation.characterFourier_replay
+#print axioms SectorSimulation.characterFourier_replay
+#check SectorSimulation.foldr_if_eq_eq
+#print axioms SectorSimulation.foldr_if_eq_eq
+#check SectorSimulation.characterFourier_basisTerm
+#print axioms SectorSimulation.characterFourier_basisTerm
+#check SectorSimulation.characterFourier_delta
+#print axioms SectorSimulation.characterFourier_delta
+#check SectorSimulation.characterFourier_delta_complex
+#print axioms SectorSimulation.characterFourier_delta_complex
