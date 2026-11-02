@@ -12280,9 +12280,127 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
       "unresolved_bridge": "Support-level persistence of disjointness under a diagonal sign."
+    },
+    {
+      "id": "source-walsh-fourier-characterFourier",
+      "section": "2",
+      "target": "SectorSimulation.characterFourier",
+      "assumptions": "A pairing matrix and a character-space amplitude function.",
+      "quantifiers": "Every matrix, every amplitude function and every character.",
+      "statement": "The Fourier factor F_J on character-space functions, with the paper normalization (sqrt 2 / 2)^n = 2^(-n/2) carried exactly.",
+      "dependencies": ["source-walsh-fourier-characterFourier_replay"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-factor-3092e76-20261101/README.md",
+      "unresolved_bridge": "The operator the observable needs, since the existing replay theorems only cover SharedDyadicState inputs and the sector amplitude is zero off a coset. It is a definition; the manuscript correspondence is not claimed."
+    },
+    {
+      "id": "source-walsh-fourier-characterDelta",
+      "section": "2",
+      "target": "SectorSimulation.characterDelta",
+      "assumptions": "A character.",
+      "quantifiers": "Every character.",
+      "statement": "The character-space delta at that character.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-factor-3092e76-20261101/README.md",
+      "unresolved_bridge": "A basis vector used to check the operator kernel. It is not a sector amplitude."
+    },
+    {
+      "id": "source-walsh-fourier-characterFourier_replay",
+      "section": "2",
+      "target": "SectorSimulation.characterFourier_replay",
+      "assumptions": "A pairing matrix with a Gaussian row program, and a shared dyadic state.",
+      "quantifiers": "All such matrices, programs and states.",
+      "statement": "On a shared dyadic state the Fourier factor computes exactly what the replayed native program computes.",
+      "dependencies": ["source-walsh-fourier-characterFourier", "source-walsh-fourier-nativePythonFourier_normalized_sum"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-factor-3092e76-20261101/README.md",
+      "unresolved_bridge": "The bridge that ties the new operator to the certified replay, so it is not a second unlinked transform. It does not itself assert any paper correspondence."
+    },
+    {
+      "id": "source-walsh-fourier-foldr_if_eq_eq",
+      "section": "2",
+      "target": "SectorSimulation.foldr_if_eq_eq",
+      "assumptions": "A nodup list of characters, a character and an amplitude.",
+      "quantifiers": "All such data.",
+      "statement": "A list sum whose only nonzero term is at a given character equals that term if the character occurs and zero otherwise.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-factor-3092e76-20261101/README.md",
+      "unresolved_bridge": "Combinatorial helper for the delta collapse."
+    },
+    {
+      "id": "source-walsh-fourier-characterFourier_basisTerm",
+      "section": "2",
+      "target": "SectorSimulation.characterFourier_basisTerm",
+      "assumptions": "A pairing matrix, an amplitude function, a basis character and an output character.",
+      "quantifiers": "All such data.",
+      "statement": "On a basis term the Fourier factor returns only the term at its own character, normalized and signed.",
+      "dependencies": ["source-walsh-fourier-characterFourier", "source-walsh-fourier-foldr_if_eq_eq"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-factor-3092e76-20261101/README.md",
+      "unresolved_bridge": "Checks the kernel of the operator. It says nothing about a coset sum."
+    },
+    {
+      "id": "source-walsh-fourier-characterFourier_delta",
+      "section": "2",
+      "target": "SectorSimulation.characterFourier_delta",
+      "assumptions": "A pairing matrix and two characters.",
+      "quantifiers": "All such data.",
+      "statement": "The Fourier factor on a delta is the normalized sign at the delta point.",
+      "dependencies": ["source-walsh-fourier-characterFourier_basisTerm"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-factor-3092e76-20261101/README.md",
+      "unresolved_bridge": "A definitional sanity check of the operator, not a step of the observable computation."
+    },
+    {
+      "id": "source-walsh-fourier-characterFourier_delta_complex",
+      "section": "2",
+      "target": "SectorSimulation.characterFourier_delta_complex",
+      "assumptions": "A pairing matrix and two characters.",
+      "quantifiers": "All such data.",
+      "statement": "In the complex embedding the Fourier factor on a delta is the paper kernel two to the minus n over two times the sign of the pairing.",
+      "dependencies": ["source-walsh-fourier-characterFourier_delta", "source-walsh-fourier-realFourierScale_rpow"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-factor-3092e76-20261101/README.md",
+      "unresolved_bridge": "The paper kernel as a corollary, confirming kernel and normalization. It is still the delta, not a sector state, and the coset Gauss sum remains untouched."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-sector entries define the paper sector state, prove its unit-norm clause in coordinates and in the character space, prove that its support point is a bijective parametrization, prove disjoint-support orthogonality across labels, and define the character-basis diagonal phase factor together with the helper facts that it preserves support, squared moduli and unit norm. None of that is the observable: no Fourier factor, no Z_e, no offset eta, no 2^(-n/2) normalization, no matched-sector identity, no overlap clause, no paper literal D and no manuscript correspondence is proved, and the diagonal facts hold for any unimodular phase. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-sector entries define the paper sector state, prove its unit-norm clauses, its bijective support parametrization, disjoint-support orthogonality, and the character-basis diagonal phase factor. The source-walsh-fourier entries define the Fourier factor on character-space vectors, tie it to the certified native replay, and prove its action on a basis vector including the paper kernel in the complex embedding. None of that is the observable: no Fourier-of-Fourier, no unitarity, no Z_e, no offset eta, no matched-sector identity, no overlap clause, no paper literal D and no manuscript correspondence is proved, and the coset Gauss sum is untouched. Each helper's unresolved source and statement bridges remain explicit."
 }
