@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 56915,
-      "sha256": "da3bf262ea7714823d172d6cc953dcebb55bc3e150dfb24e433d4c4cdd747233"
+      "bytes": 58263,
+      "sha256": "34809bbce7ab7cbf557671b9fbeddc5a314bedd7436cb0521888f22cb7720737"
     },
     {
       "path": "REPRODUCING.md",
@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 95017,
-      "sha256": "9bf2424bc700083ce09e451ff3195bdf3473ece5b873795c7d98b7f048b05303"
+      "bytes": 96032,
+      "sha256": "9e35b49d62bb8c5b64e00f4dfcee02b12513c1ac0c9bc25017f6ac45691f18d2"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 692726,
-      "sha256": "63516371fc5aabbf9e3033ad52e56521b1db8bea2ddf8ad0f2f145e9b5f529e9"
+      "bytes": 701683,
+      "sha256": "ce970250d16a44269c3b53732ed64bf9f816e6ab74b49c9aff6cdb5aa7a9ef43"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 9154,
-      "sha256": "0cd0fd40d2a411a26c9c24d7bcaced0cb9710214a10851669ea7c43de9b3f3ae"
+      "bytes": 9197,
+      "sha256": "2e1c944dfb44fbdedbed694e228cd548eb87890d2c9fe68697c87535060e7cd0"
     },
     {
       "path": "lean/SectorSimulation/AffineCoordinates.lean",
@@ -1216,6 +1216,11 @@
       "path": "lean/SectorSimulation/WalshSectorNorm.lean",
       "bytes": 6557,
       "sha256": "a14023a823c6783d521c5e3e842835354a18a5d0cf218dc359cc201c7627f812"
+    },
+    {
+      "path": "lean/SectorSimulation/WalshSectorSupport.lean",
+      "bytes": 12316,
+      "sha256": "c96d4fd0412111a2e020cfa6bab7853341ccbbeb59cdee65ea2c64bcb78019df"
     },
     {
       "path": "lean/SectorSimulation/WalshSignCoordinates.lean",
@@ -4573,6 +4578,46 @@
       "sha256": "82b7918bef146a89b955dd8b5aad75f07a93bad2994fa03ca829e7426fea1ec5"
     },
     {
+      "path": "lean/evidence/gcp/sector-injective-5e9600d-20261101/COMPONENTS.sha256",
+      "bytes": 564,
+      "sha256": "0225676a15837d809cb554114ae9333fdb7d7c69436261e1a2c57d7a2ea8dfa7"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "bytes": 3524,
+      "sha256": "bc14f940a982aa17b88e2904cd9a00b83ae370f0afa42f5892ad5cffb6c05369"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-injective-5e9600d-20261101/lean-version.txt",
+      "bytes": 106,
+      "sha256": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-injective-5e9600d-20261101/manifest.sha256",
+      "bytes": 85,
+      "sha256": "269e20db02de18443f26e9c41c784aaeead808141bb36542375b5bf9c8f5353e"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-injective-5e9600d-20261101/support-5e9600d-evidence.tar.gz",
+      "bytes": 287894,
+      "sha256": "61aeebd628161d7157a9b823e9cf5631578d049962133f4cb741d7b1e8f93f56"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-injective-5e9600d-20261101/support-5e9600d-evidence.tar.gz.sha256",
+      "bytes": 98,
+      "sha256": "6565a996cd01a9409a924646c63928d1780490b97dfe9fe39199c0ec7e51abb4"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-injective-5e9600d-20261101/support-5e9600d-source.tar",
+      "bytes": 1871360,
+      "sha256": "44f157d2d4d36911fdf13d30c3eb5f90476ff709882d4a7396298d80db322c94"
+    },
+    {
+      "path": "lean/evidence/gcp/sector-injective-5e9600d-20261101/support-5e9600d-source.tar.sha256",
+      "bytes": 93,
+      "sha256": "bb35036fed27616e94878d56432c43db0c4ddc4e524fcb1970de1e30cb8ac973"
+    },
+    {
       "path": "lean/evidence/gcp/unit-norm-4e8f07a-20261101/COMPONENTS.sha256",
       "bytes": 566,
       "sha256": "0d1b82c4b27d7be2f9b9c314746fea738f904166e20d7178e81719088beecd79"
@@ -5469,8 +5514,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 74417,
-      "sha256": "23703e622c7973bac724cd38c604a385d559ebb2cdf7a5f0e0f1f6aa82d4c6e5"
+      "bytes": 75276,
+      "sha256": "19af852c1612862152be942c2b4b2505cfa9c9067ccf47ebbfe2e3a546281a7e"
     },
     {
       "path": "tools/check_metadata.py",

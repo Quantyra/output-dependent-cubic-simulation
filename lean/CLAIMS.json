@@ -11858,9 +11858,160 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/unit-norm-4e8f07a-20261101/README.md",
       "unresolved_bridge": "Normalization only. The modulus is phase independent, so nothing about the phase is certified; the object is not identified with the paper own psi_a, and the coordinate map is not proved injective, so this is a statement about the indexed amplitude vector rather than about a vector in a physical sector basis."
+    },
+    {
+      "id": "source-walsh-sector-sectorSupportPoint",
+      "section": "2",
+      "target": "SectorSimulation.sectorSupportPoint",
+      "assumptions": "A degree-at-most-two quadratic phase, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, for every sector label and coordinate tuple.",
+      "statement": "The paper sector support point R a + D y, as the formal coset representative built from the computed right inverse and basis matrix.",
+      "dependencies": ["source-walsh-sector-sectorState"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "A definition, not a correspondence. It is deliberately distinct from the existing physical supportPoint, which needs the rank bound hbound and is built from the source Walsh sum."
+    },
+    {
+      "id": "source-walsh-sector-sectorState_eq_sectorSupportPoint",
+      "section": "2",
+      "target": "SectorSimulation.sectorState_eq_sectorSupportPoint",
+      "assumptions": "The same data plus the first phase, the pairing matrix and the basis input.",
+      "quantifiers": "All such data.",
+      "statement": "The sector state is the exact dyadic normalization times the sign evaluated at the sector support point.",
+      "dependencies": ["source-walsh-sector-sectorState", "source-walsh-sector-sectorSupportPoint"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "A definitional rewrite that keeps the state and the support point in sync. It carries no independent mathematical content and does not identify the point with the manuscript support."
+    },
+    {
+      "id": "source-walsh-sector-residualAnnihilator_vectorXor",
+      "section": "2",
+      "target": "SectorSimulation.residualAnnihilator_vectorXor",
+      "assumptions": "A degree-at-most-two quadratic phase, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data and all character pairs.",
+      "statement": "The residual annihilator is additive over the pointwise xor of characters.",
+      "dependencies": ["source-walsh-sector-sectorSupportPoint"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "Helper linearity fact. It is stated about the computed annihilator, not the manuscript C."
+    },
+    {
+      "id": "source-walsh-sector-vectorXor_zeroVector",
+      "section": "2",
+      "target": "SectorSimulation.vectorXor_zeroVector",
+      "assumptions": "A character.",
+      "quantifiers": "All characters.",
+      "statement": "Xor with the zero vector is the identity.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "Elementary xor fact, recorded because the sector argument needs it."
+    },
+    {
+      "id": "source-walsh-sector-residualAnnihilator_sectorSupportPoint",
+      "section": "2",
+      "target": "SectorSimulation.residualAnnihilator_sectorSupportPoint",
+      "assumptions": "The same data, a sector label in the residual space and a coordinate tuple.",
+      "quantifiers": "All such data, every sector label and coordinate tuple.",
+      "statement": "The residual annihilator sends a sector support point to its sector label.",
+      "dependencies": ["source-walsh-sector-residualAnnihilator_vectorXor", "source-walsh-sector-sectorSupportPoint"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "Holds under the recorded degree hypothesis, because it invokes the right-inverse specification. It separates formal sector labels; it does not identify them with the paper labels modulo the offset eta."
+    },
+    {
+      "id": "source-walsh-sector-supportCoordinates_injective",
+      "section": "2",
+      "target": "SectorSimulation.supportCoordinates_injective",
+      "assumptions": "A degree-at-most-two quadratic phase, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, and the coordinate space of the given pair count.",
+      "statement": "The basis matrix is injective on the coordinate space: equal images imply equal coordinate tuples.",
+      "dependencies": ["source-walsh-basis-matrixApply_supportBasisMatrix_extend", "source-walsh-basis-kernelCoordinateElement_coordinates"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "Proved by recovering every recorded coordinate from the image. It states injectivity of a computed basis, not the manuscript basis and not linear independence in a module sense, since BinaryVector carries no module structure."
+    },
+    {
+      "id": "source-walsh-sector-sectorSupportPoint_injective",
+      "section": "2",
+      "target": "SectorSimulation.sectorSupportPoint_injective",
+      "assumptions": "A degree-at-most-two quadratic phase, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, over labels and coordinate tuples.",
+      "statement": "The sector support point parametrization is injective: distinct labels and coordinate tuples give distinct points.",
+      "dependencies": ["source-walsh-sector-residualAnnihilator_sectorSupportPoint", "source-walsh-sector-supportCoordinates_injective"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "Injectivity is about the point, not about the sector state, which is not injective because distinct points can carry the same sign. It says nothing about orthogonality."
+    },
+    {
+      "id": "source-walsh-sector-sectorSupportPoint_surjective",
+      "section": "2",
+      "target": "SectorSimulation.sectorSupportPoint_surjective",
+      "assumptions": "A degree-at-most-two quadratic phase, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every character.",
+      "statement": "Every character is a sector support point, with the annihilator supplying the label and the kernel-image identity supplying the coordinate tuple.",
+      "dependencies": ["source-walsh-sector-residualAnnihilator_sectorSupportPoint", "source-walsh-basis-supportBasisColumns_span_polarImage"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "Parametrizes the formal character space. The exhaustiveness does not extend to the manuscript support coset, which is a single coset labelled by the offset eta."
+    },
+    {
+      "id": "source-walsh-sector-sectorSupportPoint_bijective",
+      "section": "2",
+      "target": "SectorSimulation.sectorSupportPoint_bijective",
+      "assumptions": "A degree-at-most-two quadratic phase, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data.",
+      "statement": "The map from sector labels and coordinate tuples to characters is a bijection.",
+      "dependencies": ["source-walsh-sector-sectorSupportPoint_injective", "source-walsh-sector-sectorSupportPoint_surjective"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-injective-5e9600d-20261101/README.md",
+      "unresolved_bridge": "The strongest statement available about the parametrization. It makes sector orthogonality statable; it does not prove it, and it does not establish that the sector states form a basis."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix, action, cost and draw entries build the Walsh lemma and the cost and draw models; the source-walsh-sector entries define the paper sector state and prove its unit-norm clause, which is the first sector-layer theorem and a normalization statement only. The Clifford observable, the matched vector, the overlap clauses, the estimator statements, the paper literal D identification and the sector offset structure remain unproved, and the sector state is not yet identified with the paper own object. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix, action, cost and draw entries build the Walsh lemma and the cost and draw models; the source-walsh-sector entries define the paper sector state, prove its unit-norm clause, and prove that its support point is a bijective parametrization by labels and coordinates. The Clifford observable, the matched vector, the overlap clauses, sector orthogonality, the estimator statements, the paper literal D identification and the sector offset structure remain unproved, and the sector state is not yet identified with the paper own object. Each helper's unresolved source and statement bridges remain explicit."
 }
