@@ -11739,9 +11739,43 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-d309548-20261031/README.md",
       "unresolved_bridge": "One concentration ingredient of the estimator argument. The paper equatorial draw variable is not defined, so this does not yield an accuracy or failure bound for the manuscript estimator."
+    },
+    {
+      "id": "source-walsh-sector-sectorState",
+      "section": "2",
+      "target": "SectorSimulation.sectorState",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound, a sector label in the residual space and a coordinate tuple.",
+      "quantifiers": "All such data, including zero rank and zero residual dimension.",
+      "statement": "The paper sector state psi_a in exact amplitudes: the exact dyadic two to the minus pair count times the sign set by the first phase on the support point and the matrix pairing of the input character against it.",
+      "dependencies": ["source-walsh-basis-transpose_kernelCoordinateElement", "source-walsh-action-matrixApply_supportBasisMatrix_extend", "source-walsh-rank-polarRank_eq_two_mul", "source-walsh-sign-sourceWalshSupportSign_coordinates"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-71328b4-20261031/README.md",
+      "unresolved_bridge": "The first sector-layer object in the development, where none existed before. It is a definition only: no theorem is claimed, and its correspondence with the paper own psi_a is deferred to the sector proposition, which needs the rank identification with hbound, the pairing symmetry and invertibility, and the cubic phases."
+    },
+    {
+      "id": "source-walsh-sector-sectorState_eq",
+      "section": "2",
+      "target": "SectorSimulation.sectorState_eq",
+      "assumptions": "The same data as sectorState.",
+      "quantifiers": "All such data.",
+      "statement": "Unfolding form of the sector state: the exact dyadic normalization times the sign on the support point.",
+      "dependencies": ["source-walsh-sector-sectorState"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/sector-71328b4-20261031/README.md",
+      "unresolved_bridge": "A definitional unfolding lemma recorded so later sector statements can rewrite without unfolding. It establishes no mathematical fact beyond the definition."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix and action entries build the Walsh lemma up in the manuscript shape; the cost entries charge every contract stage and refine two stages from executable computations; and the draw and concentration entries give the abstract bounded-draw mean, variance and Markov facts. The paper equatorial draw variable is not defined because the sector states and Clifford observable do not exist in the development, so the estimator and moments labels stay uncovered, as do the paper literal D identification and the sector structure. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix, action, cost and draw entries build the Walsh lemma and the cost and draw models; the source-walsh-sector entries now define the paper sector state, which is the first object of the sector layer and a definition only. The Clifford observable, the matched vector, the overlap clauses, the estimator statements, the paper literal D identification and the sector offset structure remain unproved. Each helper's unresolved source and statement bridges remain explicit."
 }
