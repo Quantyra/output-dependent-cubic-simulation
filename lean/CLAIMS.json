@@ -12398,9 +12398,157 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/fourier-factor-3092e76-20261101/README.md",
       "unresolved_bridge": "The paper kernel as a corollary, confirming kernel and normalization. It is still the delta, not a sector state, and the coset Gauss sum remains untouched."
+    },
+    {
+      "id": "source-walsh-fourier-sector-dropFirst",
+      "section": "2",
+      "target": "SectorSimulation.dropFirst",
+      "assumptions": "A list of characters and a character.",
+      "quantifiers": "All such data.",
+      "statement": "Remove the first occurrence of a character from a character list.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "A local replacement for the core List.erase, which needs a BEq instance the function type does not have. Pure list bookkeeping."
+    },
+    {
+      "id": "source-walsh-fourier-sector-mem_dropFirst_subset",
+      "section": "2",
+      "target": "SectorSimulation.mem_dropFirst_subset",
+      "assumptions": "A character in the list obtained by removing an element.",
+      "quantifiers": "All such data.",
+      "statement": "Membership in the shortened list implies membership in the original list.",
+      "dependencies": ["source-walsh-fourier-sector-dropFirst"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "Structural list fact."
+    },
+    {
+      "id": "source-walsh-fourier-sector-mem_dropFirst_of_ne",
+      "section": "2",
+      "target": "SectorSimulation.mem_dropFirst_of_ne",
+      "assumptions": "A character different from the one removed, and a list containing it.",
+      "quantifiers": "All such data.",
+      "statement": "A member distinct from the removed character survives the removal.",
+      "dependencies": ["source-walsh-fourier-sector-dropFirst"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "Structural list fact."
+    },
+    {
+      "id": "source-walsh-fourier-sector-not_mem_dropFirst_self",
+      "section": "2",
+      "target": "SectorSimulation.not_mem_dropFirst_self",
+      "assumptions": "A nodup character list and a character.",
+      "quantifiers": "All such data.",
+      "statement": "Removing the first occurrence of a character from a nodup list leaves no occurrence of it.",
+      "dependencies": ["source-walsh-fourier-sector-dropFirst"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "Structural list fact used to prove the sectors disjoint in the reindexing."
+    },
+    {
+      "id": "source-walsh-fourier-sector-nodup_dropFirst",
+      "section": "2",
+      "target": "SectorSimulation.nodup_dropFirst",
+      "assumptions": "A nodup character list and a character.",
+      "quantifiers": "All such data.",
+      "statement": "The shortened list is nodup.",
+      "dependencies": ["source-walsh-fourier-sector-dropFirst"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "Structural list fact."
+    },
+    {
+      "id": "source-walsh-fourier-sector-foldr_dropFirst",
+      "section": "2",
+      "target": "SectorSimulation.foldr_dropFirst",
+      "assumptions": "A character list, a member of it, and an exact-amplitude summand.",
+      "quantifiers": "All such data.",
+      "statement": "A list sum splits at any occurring element into that element term plus the sum over the shortened list.",
+      "dependencies": ["source-walsh-fourier-sector-dropFirst"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "List-sum splitting under the exact addition, which is associative, commutative and has zero."
+    },
+    {
+      "id": "source-walsh-fourier-sector-foldr_zero_of_all",
+      "section": "2",
+      "target": "SectorSimulation.foldr_zero_of_all",
+      "assumptions": "A character list and a summand vanishing on it.",
+      "quantifiers": "All such data.",
+      "statement": "A list sum all of whose terms vanish is the exact zero.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "List-sum helper."
+    },
+    {
+      "id": "source-walsh-fourier-sector-foldr_reindex_of_injective",
+      "section": "2",
+      "target": "SectorSimulation.foldr_reindex_of_injective",
+      "assumptions": "An injective map into the character space, a nodup index list, a nodup character list containing the whole image, and a summand vanishing off the image.",
+      "quantifiers": "All such data.",
+      "statement": "Summing the summand over the character list equals summing it along the injection over the index list.",
+      "dependencies": ["source-walsh-fourier-sector-foldr_dropFirst", "source-walsh-fourier-sector-foldr_zero_of_all"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "The sum-over-the-image step, built by hand because the exact amplitude quotient carries no additive monoid instance and all sums are List.foldr over binaryBasis. Combinatorial, not analytic."
+    },
+    {
+      "id": "source-walsh-fourier-sector-characterFourier_sectorAmplitude",
+      "section": "2",
+      "target": "SectorSimulation.characterFourier_sectorAmplitude",
+      "assumptions": "An admitted source with its hypothesis block, a sector label and a character.",
+      "quantifiers": "All such data.",
+      "statement": "The Fourier factor applied to a sector state equals the paper normalization times the signed sector amplitudes summed over the coordinate space.",
+      "dependencies": ["source-walsh-fourier-characterFourier", "source-walsh-fourier-sector-foldr_reindex_of_injective", "source-walsh-sector-sectorAmplitude_support"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
+      "unresolved_bridge": "Names the object the matched-sector identity must evaluate; it does not evaluate it. No Gauss-sum value, no 2^(r/2) scaling, no support on the neighbouring coset, no phase theta_a, and no identification with the manuscript psi_a."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-sector entries define the paper sector state, prove its unit-norm clauses, its bijective support parametrization, disjoint-support orthogonality, and the character-basis diagonal phase factor. The source-walsh-fourier entries define the Fourier factor on character-space vectors, tie it to the certified native replay, and prove its action on a basis vector including the paper kernel in the complex embedding. None of that is the observable: no Fourier-of-Fourier, no unitarity, no Z_e, no offset eta, no matched-sector identity, no overlap clause, no paper literal D and no manuscript correspondence is proved, and the coset Gauss sum is untouched. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-sector entries define the paper sector state, prove its unit-norm clauses, its bijective support parametrization, disjoint-support orthogonality, and the character-basis diagonal phase; the source-walsh-fourier entries define the Fourier factor, tie it to the certified native replay, prove its action on a basis vector, and reindex it onto the sector coset in the exact quotient. None of that is the observable: the coset sum is named but never evaluated, so no Gauss-sum value, no 2^(r/2) scaling, no neighbouring-coset support, no Fourier-of-Fourier, no unitarity, no Z_e, no offset eta, no matched-sector identity, no overlap clause, no paper literal D and no manuscript correspondence is proved. Each helper's unresolved source and statement bridges remain explicit."
 }
