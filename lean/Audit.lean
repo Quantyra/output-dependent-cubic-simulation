@@ -2202,3 +2202,7 @@ import SectorSimulation
 #print axioms SectorSimulation.markov_count
 #check SectorSimulation.markov_prob
 #print axioms SectorSimulation.markov_prob
+#check SectorSimulation.sectorState
+#print axioms SectorSimulation.sectorState
+#check SectorSimulation.sectorState_eq
+#print axioms SectorSimulation.sectorState_eq

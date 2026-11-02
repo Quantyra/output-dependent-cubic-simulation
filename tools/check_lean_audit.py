@@ -853,6 +853,8 @@ EXPECTED = {
     'SectorSimulation.uniformMean_signedReadout': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.markov_count': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.markov_prob': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorState': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorState_eq': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
