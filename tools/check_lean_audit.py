@@ -874,6 +874,17 @@ EXPECTED = {
     'SectorSimulation.sectorAmplitude_eq_zero_of_not_support': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorAmplitude_disjoint': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorStates_orthogonal': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorSupportPoint_injective_at_label': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.normSq_complexSigned': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactSigned_zero': {'propext', 'Quot.sound'},
+    'SectorSimulation.sectorAmplitude_sum_normSq': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorAmplitude_unit_norm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorDiag': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorDiag_support': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorDiag_eq_zero_of_not_support': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorDiag_normSq': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorDiag_unit_norm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorDiag_disjoint': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

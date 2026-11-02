@@ -337,3 +337,4 @@ import SectorSimulation.WalshSector
 import SectorSimulation.WalshSectorNorm
 import SectorSimulation.WalshSectorSupport
 import SectorSimulation.WalshSectorOrthogonal
+import SectorSimulation.WalshSectorObservable

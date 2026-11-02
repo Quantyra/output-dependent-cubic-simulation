@@ -2244,3 +2244,25 @@ import SectorSimulation
 #print axioms SectorSimulation.sectorAmplitude_disjoint
 #check SectorSimulation.sectorStates_orthogonal
 #print axioms SectorSimulation.sectorStates_orthogonal
+#check SectorSimulation.sectorSupportPoint_injective_at_label
+#print axioms SectorSimulation.sectorSupportPoint_injective_at_label
+#check SectorSimulation.normSq_complexSigned
+#print axioms SectorSimulation.normSq_complexSigned
+#check SectorSimulation.exactSigned_zero
+#print axioms SectorSimulation.exactSigned_zero
+#check SectorSimulation.sectorAmplitude_sum_normSq
+#print axioms SectorSimulation.sectorAmplitude_sum_normSq
+#check SectorSimulation.sectorAmplitude_unit_norm
+#print axioms SectorSimulation.sectorAmplitude_unit_norm
+#check SectorSimulation.sectorDiag
+#print axioms SectorSimulation.sectorDiag
+#check SectorSimulation.sectorDiag_support
+#print axioms SectorSimulation.sectorDiag_support
+#check SectorSimulation.sectorDiag_eq_zero_of_not_support
+#print axioms SectorSimulation.sectorDiag_eq_zero_of_not_support
+#check SectorSimulation.sectorDiag_normSq
+#print axioms SectorSimulation.sectorDiag_normSq
+#check SectorSimulation.sectorDiag_unit_norm
+#print axioms SectorSimulation.sectorDiag_unit_norm
+#check SectorSimulation.sectorDiag_disjoint
+#print axioms SectorSimulation.sectorDiag_disjoint
