@@ -855,6 +855,11 @@ EXPECTED = {
     'SectorSimulation.markov_prob': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorState': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorState_eq': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.exactComplex_dyadicPow': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.normSq_complexSigned_one': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.normSq_exactComplex_signed_one': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorState_normSq': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorState_unit_norm': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

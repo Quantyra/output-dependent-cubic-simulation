@@ -334,3 +334,4 @@ import SectorSimulation.WalshSubstitutionCost
 import SectorSimulation.WalshDrawModel
 import SectorSimulation.WalshConcentration
 import SectorSimulation.WalshSector
+import SectorSimulation.WalshSectorNorm

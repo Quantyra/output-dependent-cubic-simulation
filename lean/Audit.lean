@@ -2206,3 +2206,13 @@ import SectorSimulation
 #print axioms SectorSimulation.sectorState
 #check SectorSimulation.sectorState_eq
 #print axioms SectorSimulation.sectorState_eq
+#check SectorSimulation.exactComplex_dyadicPow
+#print axioms SectorSimulation.exactComplex_dyadicPow
+#check SectorSimulation.normSq_complexSigned_one
+#print axioms SectorSimulation.normSq_complexSigned_one
+#check SectorSimulation.normSq_exactComplex_signed_one
+#print axioms SectorSimulation.normSq_exactComplex_signed_one
+#check SectorSimulation.sectorState_normSq
+#print axioms SectorSimulation.sectorState_normSq
+#check SectorSimulation.sectorState_unit_norm
+#print axioms SectorSimulation.sectorState_unit_norm
