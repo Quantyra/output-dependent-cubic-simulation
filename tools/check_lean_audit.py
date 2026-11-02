@@ -860,6 +860,15 @@ EXPECTED = {
     'SectorSimulation.normSq_exactComplex_signed_one': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorState_normSq': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorState_unit_norm': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorSupportPoint': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorState_eq_sectorSupportPoint': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.residualAnnihilator_vectorXor': {'propext', 'Quot.sound'},
+    'SectorSimulation.vectorXor_zeroVector': {'propext', 'Quot.sound'},
+    'SectorSimulation.residualAnnihilator_sectorSupportPoint': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.supportCoordinates_injective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorSupportPoint_injective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorSupportPoint_surjective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorSupportPoint_bijective': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 

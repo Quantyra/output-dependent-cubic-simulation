@@ -2216,3 +2216,21 @@ import SectorSimulation
 #print axioms SectorSimulation.sectorState_normSq
 #check SectorSimulation.sectorState_unit_norm
 #print axioms SectorSimulation.sectorState_unit_norm
+#check SectorSimulation.sectorSupportPoint
+#print axioms SectorSimulation.sectorSupportPoint
+#check SectorSimulation.sectorState_eq_sectorSupportPoint
+#print axioms SectorSimulation.sectorState_eq_sectorSupportPoint
+#check SectorSimulation.residualAnnihilator_vectorXor
+#print axioms SectorSimulation.residualAnnihilator_vectorXor
+#check SectorSimulation.vectorXor_zeroVector
+#print axioms SectorSimulation.vectorXor_zeroVector
+#check SectorSimulation.residualAnnihilator_sectorSupportPoint
+#print axioms SectorSimulation.residualAnnihilator_sectorSupportPoint
+#check SectorSimulation.supportCoordinates_injective
+#print axioms SectorSimulation.supportCoordinates_injective
+#check SectorSimulation.sectorSupportPoint_injective
+#print axioms SectorSimulation.sectorSupportPoint_injective
+#check SectorSimulation.sectorSupportPoint_surjective
+#print axioms SectorSimulation.sectorSupportPoint_surjective
+#check SectorSimulation.sectorSupportPoint_bijective
+#print axioms SectorSimulation.sectorSupportPoint_bijective
