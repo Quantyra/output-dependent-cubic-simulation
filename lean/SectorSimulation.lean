@@ -336,3 +336,4 @@ import SectorSimulation.WalshConcentration
 import SectorSimulation.WalshSector
 import SectorSimulation.WalshSectorNorm
 import SectorSimulation.WalshSectorSupport
+import SectorSimulation.WalshSectorOrthogonal

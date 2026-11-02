@@ -2234,3 +2234,13 @@ import SectorSimulation
 #print axioms SectorSimulation.sectorSupportPoint_surjective
 #check SectorSimulation.sectorSupportPoint_bijective
 #print axioms SectorSimulation.sectorSupportPoint_bijective
+#check SectorSimulation.sectorAmplitude
+#print axioms SectorSimulation.sectorAmplitude
+#check SectorSimulation.sectorAmplitude_support
+#print axioms SectorSimulation.sectorAmplitude_support
+#check SectorSimulation.sectorAmplitude_eq_zero_of_not_support
+#print axioms SectorSimulation.sectorAmplitude_eq_zero_of_not_support
+#check SectorSimulation.sectorAmplitude_disjoint
+#print axioms SectorSimulation.sectorAmplitude_disjoint
+#check SectorSimulation.sectorStates_orthogonal
+#print axioms SectorSimulation.sectorStates_orthogonal

@@ -869,6 +869,11 @@ EXPECTED = {
     'SectorSimulation.sectorSupportPoint_injective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorSupportPoint_surjective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.sectorSupportPoint_bijective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorAmplitude': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorAmplitude_support': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorAmplitude_eq_zero_of_not_support': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorAmplitude_disjoint': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.sectorStates_orthogonal': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
