@@ -2280,3 +2280,21 @@ import SectorSimulation
 #print axioms SectorSimulation.characterFourier_delta
 #check SectorSimulation.characterFourier_delta_complex
 #print axioms SectorSimulation.characterFourier_delta_complex
+#check SectorSimulation.dropFirst
+#print axioms SectorSimulation.dropFirst
+#check SectorSimulation.mem_dropFirst_subset
+#print axioms SectorSimulation.mem_dropFirst_subset
+#check SectorSimulation.mem_dropFirst_of_ne
+#print axioms SectorSimulation.mem_dropFirst_of_ne
+#check SectorSimulation.not_mem_dropFirst_self
+#print axioms SectorSimulation.not_mem_dropFirst_self
+#check SectorSimulation.nodup_dropFirst
+#print axioms SectorSimulation.nodup_dropFirst
+#check SectorSimulation.foldr_dropFirst
+#print axioms SectorSimulation.foldr_dropFirst
+#check SectorSimulation.foldr_zero_of_all
+#print axioms SectorSimulation.foldr_zero_of_all
+#check SectorSimulation.foldr_reindex_of_injective
+#print axioms SectorSimulation.foldr_reindex_of_injective
+#check SectorSimulation.characterFourier_sectorAmplitude
+#print axioms SectorSimulation.characterFourier_sectorAmplitude

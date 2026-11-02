@@ -892,6 +892,15 @@ EXPECTED = {
     'SectorSimulation.characterFourier_basisTerm': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.characterFourier_delta': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.characterFourier_delta_complex': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.dropFirst': {'propext', 'Quot.sound'},
+    'SectorSimulation.mem_dropFirst_subset': {'propext', 'Quot.sound'},
+    'SectorSimulation.mem_dropFirst_of_ne': {'propext', 'Quot.sound'},
+    'SectorSimulation.not_mem_dropFirst_self': {'propext', 'Quot.sound'},
+    'SectorSimulation.nodup_dropFirst': {'propext', 'Quot.sound'},
+    'SectorSimulation.foldr_dropFirst': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.foldr_zero_of_all': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.foldr_reindex_of_injective': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.characterFourier_sectorAmplitude': {'propext', 'Classical.choice', 'Quot.sound'},
 }
 
 
