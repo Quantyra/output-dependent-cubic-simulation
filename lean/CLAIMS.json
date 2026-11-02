@@ -12094,9 +12094,195 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/sector-orthogonal-910fac3-20261101/README.md",
       "unresolved_bridge": "Termwise orthogonality from disjoint supports. It is not the false same-index reading, which is refuted; it does not identify the sectors with the manuscript, and the offset structure eta, the observable, the matched vector and the overlap clauses remain open."
+    },
+    {
+      "id": "source-walsh-sector-sectorSupportPoint_injective_at_label",
+      "section": "2",
+      "target": "SectorSimulation.sectorSupportPoint_injective_at_label",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, a fixed sector label and two coordinate tuples.",
+      "statement": "The point map is injective at a fixed sector label.",
+      "dependencies": ["source-walsh-sector-sectorSupportPoint_injective"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "Derived from pair injectivity. Structural helper."
+    },
+    {
+      "id": "source-walsh-sector-normSq_complexSigned",
+      "section": "2",
+      "target": "SectorSimulation.normSq_complexSigned",
+      "assumptions": "A boolean sign and a complex number.",
+      "quantifiers": "All signs and complex numbers.",
+      "statement": "A signed complex number has the same squared modulus as the unsigned one.",
+      "dependencies": ["source-walsh-sector-normSq_complexSigned_one"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "Elementary complex arithmetic, generalizing the earlier unit-value lemma."
+    },
+    {
+      "id": "source-walsh-sector-exactSigned_zero",
+      "section": "2",
+      "target": "SectorSimulation.exactSigned_zero",
+      "assumptions": "A boolean sign.",
+      "quantifiers": "Both signs.",
+      "statement": "Signing the exact zero gives the exact zero.",
+      "dependencies": ["source-walsh-sector-sectorState"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "Elementary exact-quotient fact used to show the diagonal factor cannot move support."
+    },
+    {
+      "id": "source-walsh-sector-sectorAmplitude_sum_normSq",
+      "section": "2",
+      "target": "SectorSimulation.sectorAmplitude_sum_normSq",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data and every sector label.",
+      "statement": "The character-space sum of squared moduli equals the coordinate-space sum, because the extension vanishes off the coset and the point map is injective at a fixed label.",
+      "dependencies": ["source-walsh-sector-sectorAmplitude_support", "source-walsh-sector-sectorAmplitude_eq_zero_of_not_support", "source-walsh-sector-sectorSupportPoint_injective_at_label"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "The genuine content of the increment: it transports the norm to the space where a Fourier factor could act. It does not itself involve any Fourier factor."
+    },
+    {
+      "id": "source-walsh-sector-sectorAmplitude_unit_norm",
+      "section": "2",
+      "target": "SectorSimulation.sectorAmplitude_unit_norm",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data and every sector label.",
+      "statement": "The character-space sector vector is a unit vector.",
+      "dependencies": ["source-walsh-sector-sectorAmplitude_sum_normSq", "source-walsh-sector-sectorState_unit_norm"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "Corollary of the transport and the coordinate-space unit-norm clause."
+    },
+    {
+      "id": "source-walsh-sector-sectorDiag",
+      "section": "2",
+      "target": "SectorSimulation.sectorDiag",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, a diagonal phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every sector label, as a function on the character space.",
+      "statement": "The character-basis diagonal phase factor D_f1 applied to the extended sector state.",
+      "dependencies": ["source-walsh-sector-sectorAmplitude"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "A definition of a component of the manuscript observable, not the observable and not its action on a sector state."
+    },
+    {
+      "id": "source-walsh-sector-sectorDiag_support",
+      "section": "2",
+      "target": "SectorSimulation.sectorDiag_support",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, a diagonal phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every sector label and coordinate tuple.",
+      "statement": "On its coset the diagonal factor is the signed sector state.",
+      "dependencies": ["source-walsh-sector-sectorDiag", "source-walsh-sector-sectorAmplitude_support"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "Support is unchanged; no phase content."
+    },
+    {
+      "id": "source-walsh-sector-sectorDiag_eq_zero_of_not_support",
+      "section": "2",
+      "target": "SectorSimulation.sectorDiag_eq_zero_of_not_support",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, a diagonal phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every sector label and character off the coset.",
+      "statement": "Off its coset the diagonal factor vanishes.",
+      "dependencies": ["source-walsh-sector-sectorDiag", "source-walsh-sector-exactSigned_zero"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "The diagonal factor cannot move a sector off its coset."
+    },
+    {
+      "id": "source-walsh-sector-sectorDiag_normSq",
+      "section": "2",
+      "target": "SectorSimulation.sectorDiag_normSq",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, a diagonal phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every sector label and character.",
+      "statement": "The diagonal factor leaves every squared modulus unchanged.",
+      "dependencies": ["source-walsh-sector-sectorDiag", "source-walsh-sector-normSq_complexSigned"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "Holds because the diagonal factor is a sign, which is unimodular. It therefore says nothing about whether the phase is the manuscript one."
+    },
+    {
+      "id": "source-walsh-sector-sectorDiag_unit_norm",
+      "section": "2",
+      "target": "SectorSimulation.sectorDiag_unit_norm",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, a diagonal phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data and every sector label.",
+      "statement": "The diagonal factor preserves the unit norm of the character-space sector vector.",
+      "dependencies": ["source-walsh-sector-sectorDiag_normSq", "source-walsh-sector-sectorAmplitude_unit_norm"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "A helper consecutively following from unimodularity. It is not a step of the matched-sector computation and does not validate the phase."
+    },
+    {
+      "id": "source-walsh-sector-sectorDiag_disjoint",
+      "section": "2",
+      "target": "SectorSimulation.sectorDiag_disjoint",
+      "assumptions": "A degree-at-most-two quadratic phase, the first phase, a diagonal phase, the pairing matrix, a basis input, the fuel bound, the recorded coordinate order, the residual dimension and its bound.",
+      "quantifiers": "All such data, every pair of distinct sector labels and every character.",
+      "statement": "Distinct sector labels remain disjoint after the diagonal factor is applied.",
+      "dependencies": ["source-walsh-sector-sectorDiag_eq_zero_of_not_support", "source-walsh-sector-sectorAmplitude_disjoint"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/observable-diagonal-a95804c-20261101/README.md",
+      "unresolved_bridge": "Support-level persistence of disjointness under a diagonal sign."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The rank, clause, coordinate, basis, sign, matrix, action, cost and draw entries build the Walsh lemma and the cost and draw models; the source-walsh-sector entries define the paper sector state, prove its unit-norm clause, prove that its support point is a bijective parametrization by labels and coordinates, and prove that distinct sector labels have disjoint supports and hence orthogonal character-space states. The same-index reading of sector orthogonality is false and is refuted in the lane records. The Clifford observable, the matched vector, the overlap clauses, the estimator statements, the paper literal D identification and the sector offset structure remain unproved, and the sector state is not yet identified with the paper own object. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-sector entries define the paper sector state, prove its unit-norm clause in coordinates and in the character space, prove that its support point is a bijective parametrization, prove disjoint-support orthogonality across labels, and define the character-basis diagonal phase factor together with the helper facts that it preserves support, squared moduli and unit norm. None of that is the observable: no Fourier factor, no Z_e, no offset eta, no 2^(-n/2) normalization, no matched-sector identity, no overlap clause, no paper literal D and no manuscript correspondence is proved, and the diagonal facts hold for any unimodular phase. Each helper's unresolved source and statement bridges remain explicit."
 }
