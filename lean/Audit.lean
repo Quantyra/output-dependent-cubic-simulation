@@ -2298,3 +2298,11 @@ import SectorSimulation
 #print axioms SectorSimulation.foldr_reindex_of_injective
 #check SectorSimulation.characterFourier_sectorAmplitude
 #print axioms SectorSimulation.characterFourier_sectorAmplitude
+#check SectorSimulation.characterZ
+#print axioms SectorSimulation.characterZ
+#check SectorSimulation.characterZ_apply
+#print axioms SectorSimulation.characterZ_apply
+#check SectorSimulation.exactSigned_involutive
+#print axioms SectorSimulation.exactSigned_involutive
+#check SectorSimulation.characterZ_involutive
+#print axioms SectorSimulation.characterZ_involutive

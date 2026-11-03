@@ -901,6 +901,10 @@ EXPECTED = {
     'SectorSimulation.foldr_zero_of_all': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.foldr_reindex_of_injective': {'propext', 'Classical.choice', 'Quot.sound'},
     'SectorSimulation.characterFourier_sectorAmplitude': {'propext', 'Classical.choice', 'Quot.sound'},
+    'SectorSimulation.characterZ': {'propext', 'Quot.sound'},
+    'SectorSimulation.characterZ_apply': {'propext', 'Quot.sound'},
+    'SectorSimulation.exactSigned_involutive': {'propext', 'Quot.sound'},
+    'SectorSimulation.characterZ_involutive': {'propext', 'Quot.sound'},
 }
 
 
