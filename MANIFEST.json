@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 63917,
-      "sha256": "acc94af17a9e98a2b4a89544e3e68eb680d99828193f15471af36b3c84df76c2"
+      "bytes": 65361,
+      "sha256": "37504af6df77bf83fea764701f598a8d01d0d6025db777fafc5ee893e4c1a37e"
     },
     {
       "path": "REPRODUCING.md",
@@ -124,13 +124,13 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 99224,
-      "sha256": "917f1a82f597e8d0eb28e66bb58858ec7546ce22e5e57249112ac89e222516b9"
+      "bytes": 99590,
+      "sha256": "a9b7793dd71c767dfe6547c8e78110fee4d75c3f90bbe51a8a2a64094c01baa6"
     },
     {
       "path": "lean/CLAIMS.json",
-      "bytes": 730810,
-      "sha256": "16b84cf517ef5bc4e5a817e434774271db5810e25932fb981998eb02ea0b60ae"
+      "bytes": 733763,
+      "sha256": "21e1b2d0d3daf56469827c54387dd495aaf9d775bf03cd366ccfb01cf5c3079e"
     },
     {
       "path": "lean/ExactNativeExamples.lean",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 9381,
-      "sha256": "70dc58346618eec78329b33025f4ce1fe38ee8bee37aae10d958920c3f98c691"
+      "bytes": 9418,
+      "sha256": "aafca5eb1fbc4de0ccc15ae86e7fe77801c8c90b763bc60aedb5d25bc036128e"
     },
     {
       "path": "lean/SectorSimulation/AffineCoordinates.lean",
@@ -1241,6 +1241,11 @@
       "path": "lean/SectorSimulation/WalshSectorSupport.lean",
       "bytes": 12316,
       "sha256": "c96d4fd0412111a2e020cfa6bab7853341ccbbeb59cdee65ea2c64bcb78019df"
+    },
+    {
+      "path": "lean/SectorSimulation/WalshSectorZ.lean",
+      "bytes": 2218,
+      "sha256": "8e2951805470ee39a778fd46278e071bd955b513e97fd744036f8d7247a9ef7c"
     },
     {
       "path": "lean/SectorSimulation/WalshSignCoordinates.lean",
@@ -4838,6 +4843,46 @@
       "sha256": "49764976852a6e73ae610faf769d9f180dc692ac13eb9691b971eb3522b79ed2"
     },
     {
+      "path": "lean/evidence/gcp/ze-definition-d7d272d-20261102/COMPONENTS.sha256",
+      "bytes": 558,
+      "sha256": "2f12dc636b135af595bd74d7d0b2e3812979697cd9bed26e9f3420aa020ce117"
+    },
+    {
+      "path": "lean/evidence/gcp/ze-definition-d7d272d-20261102/README.md",
+      "bytes": 3515,
+      "sha256": "dcc0b5a537f23623af21a904a4c18ad349e52ffd684f6c8e8275690ff4415d3c"
+    },
+    {
+      "path": "lean/evidence/gcp/ze-definition-d7d272d-20261102/lean-version.txt",
+      "bytes": 106,
+      "sha256": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55"
+    },
+    {
+      "path": "lean/evidence/gcp/ze-definition-d7d272d-20261102/manifest.sha256",
+      "bytes": 85,
+      "sha256": "269e20db02de18443f26e9c41c784aaeead808141bb36542375b5bf9c8f5353e"
+    },
+    {
+      "path": "lean/evidence/gcp/ze-definition-d7d272d-20261102/z-d7d272d-evidence.tar.gz",
+      "bytes": 302585,
+      "sha256": "32905b13effab180bb1298ce51ce4c323665d66cf23a5e900a6c39ab63aa3b3e"
+    },
+    {
+      "path": "lean/evidence/gcp/ze-definition-d7d272d-20261102/z-d7d272d-evidence.tar.gz.sha256",
+      "bytes": 92,
+      "sha256": "87e3f27164119b63bf166ae775dcd76564095a8ed5548b66c387626c69faab57"
+    },
+    {
+      "path": "lean/evidence/gcp/ze-definition-d7d272d-20261102/z-d7d272d-source.tar",
+      "bytes": 1962496,
+      "sha256": "432790aa5e6bc02f72ad27d3e8d8b29170e5faf14df41a7688032d1cc6ba1cf4"
+    },
+    {
+      "path": "lean/evidence/gcp/ze-definition-d7d272d-20261102/z-d7d272d-source.tar.sha256",
+      "bytes": 87,
+      "sha256": "f95f1b7a87f482130a1b19d84ef295e5275fdd38871a945c6d525826d6e01f1f"
+    },
+    {
       "path": "lean/evidence/general-hadamard-commutation-audit.md",
       "bytes": 856,
       "sha256": "b30cd2e712ebe4d0b1d5e8155eb15ad79100343e3499c1727c35bab2adb808dc"
@@ -5694,8 +5739,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 78124,
-      "sha256": "c1e138947458da22a8c962083ba39e1b625de93b5d844744ea408e34c9ad21a8"
+      "bytes": 78401,
+      "sha256": "a22f03b286709f41805668b94acfd1cfcce3da7fce1cdaa0196d91569dba0fa2"
     },
     {
       "path": "tools/check_metadata.py",

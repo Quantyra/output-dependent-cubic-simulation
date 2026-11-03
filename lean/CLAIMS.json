@@ -12546,9 +12546,73 @@
       ],
       "build_audit_receipt": "lean/evidence/gcp/fourier-sector-b3f5477-20261101/README.md",
       "unresolved_bridge": "Names the object the matched-sector identity must evaluate; it does not evaluate it. No Gauss-sum value, no 2^(r/2) scaling, no support on the neighbouring coset, no phase theta_a, and no identification with the manuscript psi_a."
+    },
+    {
+      "id": "source-walsh-z-characterZ",
+      "section": "2",
+      "target": "SectorSimulation.characterZ",
+      "assumptions": "An output wire and a computational-basis amplitude function.",
+      "quantifiers": "Every wire and every amplitude function.",
+      "statement": "The Pauli Z factor on the given wire, acting diagonally in the computational basis.",
+      "dependencies": [],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/ze-definition-d7d272d-20261102/README.md",
+      "unresolved_bridge": "One factor of the manuscript observable, not the observable. The surrounding Fourier factors carry the basis change, so no Fourier conjugation belongs in the definition."
+    },
+    {
+      "id": "source-walsh-z-characterZ_apply",
+      "section": "2",
+      "target": "SectorSimulation.characterZ_apply",
+      "assumptions": "An output wire, an amplitude function and a basis label.",
+      "quantifiers": "All such data.",
+      "statement": "Unfolding lemma: the Z factor multiplies the amplitude at that label by the sign of the label coordinate on the wire.",
+      "dependencies": ["source-walsh-z-characterZ"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/ze-definition-d7d272d-20261102/README.md",
+      "unresolved_bridge": "A definitional unfolding, carrying no independent content."
+    },
+    {
+      "id": "source-walsh-z-exactSigned_involutive",
+      "section": "2",
+      "target": "SectorSimulation.exactSigned_involutive",
+      "assumptions": "A boolean sign and an exact amplitude.",
+      "quantifiers": "All signs and amplitudes.",
+      "statement": "Signing twice by the same sign cancels.",
+      "dependencies": ["source-walsh-sector-normSq_exactComplex_signed_one"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/ze-definition-d7d272d-20261102/README.md",
+      "unresolved_bridge": "Elementary exact-quotient fact."
+    },
+    {
+      "id": "source-walsh-z-characterZ_involutive",
+      "section": "2",
+      "target": "SectorSimulation.characterZ_involutive",
+      "assumptions": "An output wire and an amplitude function.",
+      "quantifiers": "All such data.",
+      "statement": "The Z factor is its own inverse.",
+      "dependencies": ["source-walsh-z-characterZ", "source-walsh-z-exactSigned_involutive"],
+      "status": "proved and kernel checked",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "build_audit_receipt": "lean/evidence/gcp/ze-definition-d7d272d-20261102/README.md",
+      "unresolved_bridge": "Both reviews called this close to vacuous; it is recorded as a helper for the observable composition, not as a result, and it proves nothing about the Fourier involution, unitarity or the manuscript."
     }
   ],
   "paper_source": "manuscript/main.tex",
   "paper_pdf_sha256": "417256a6dcbe3b42562104a2cf7302500c713257e13c5e0f5420b179f6dd0c6d",
-  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-sector entries define the paper sector state, prove its unit-norm clauses, its bijective support parametrization, disjoint-support orthogonality, and the character-basis diagonal phase; the source-walsh-fourier entries define the Fourier factor, tie it to the certified native replay, prove its action on a basis vector, and reindex it onto the sector coset in the exact quotient. None of that is the observable: the coset sum is named but never evaluated, so no Gauss-sum value, no 2^(r/2) scaling, no neighbouring-coset support, no Fourier-of-Fourier, no unitarity, no Z_e, no offset eta, no matched-sector identity, no overlap clause, no paper literal D and no manuscript correspondence is proved. Each helper's unresolved source and statement bridges remain explicit."
+  "coverage_note": "The listed helper declarations are kernel checked only under their recorded hypotheses; none of the seven published theorem labels is certified. The source-walsh-sector entries define the paper sector state and prove structural facts about it; the source-walsh-fourier entries define the Fourier factor, tie it to the certified native replay, prove its basis action and reindex it onto the coset; the source-walsh-z entries define the Pauli Z factor. The observable is not assembled: no Fourier involution, no character orthogonality (a listed unproved dependency of thm:estimator), no F_J Z_e F_J identity, no Gauss-sum evaluation, no offset eta, no matched-sector action, no matched vector, no overlap clause, no paper literal D and no manuscript correspondence is proved. Each helper's unresolved source and statement bridges remain explicit."
 }
