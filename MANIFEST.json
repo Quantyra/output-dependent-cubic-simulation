@@ -124,8 +124,8 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 99224,
-      "sha256": "917f1a82f597e8d0eb28e66bb58858ec7546ce22e5e57249112ac89e222516b9"
+      "bytes": 99590,
+      "sha256": "a9b7793dd71c767dfe6547c8e78110fee4d75c3f90bbe51a8a2a64094c01baa6"
     },
     {
       "path": "lean/CLAIMS.json",
@@ -169,8 +169,8 @@
     },
     {
       "path": "lean/SectorSimulation.lean",
-      "bytes": 9381,
-      "sha256": "70dc58346618eec78329b33025f4ce1fe38ee8bee37aae10d958920c3f98c691"
+      "bytes": 9418,
+      "sha256": "aafca5eb1fbc4de0ccc15ae86e7fe77801c8c90b763bc60aedb5d25bc036128e"
     },
     {
       "path": "lean/SectorSimulation/AffineCoordinates.lean",
@@ -1241,6 +1241,11 @@
       "path": "lean/SectorSimulation/WalshSectorSupport.lean",
       "bytes": 12316,
       "sha256": "c96d4fd0412111a2e020cfa6bab7853341ccbbeb59cdee65ea2c64bcb78019df"
+    },
+    {
+      "path": "lean/SectorSimulation/WalshSectorZ.lean",
+      "bytes": 2218,
+      "sha256": "8e2951805470ee39a778fd46278e071bd955b513e97fd744036f8d7247a9ef7c"
     },
     {
       "path": "lean/SectorSimulation/WalshSignCoordinates.lean",
@@ -5694,8 +5699,8 @@
     },
     {
       "path": "tools/check_lean_audit.py",
-      "bytes": 78124,
-      "sha256": "c1e138947458da22a8c962083ba39e1b625de93b5d844744ea408e34c9ad21a8"
+      "bytes": 78401,
+      "sha256": "a22f03b286709f41805668b94acfd1cfcce3da7fce1cdaa0196d91569dba0fa2"
     },
     {
       "path": "tools/check_metadata.py",
